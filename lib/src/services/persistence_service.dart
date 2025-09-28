@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/user_reading_progress.dart';
+import '../models/user_profile.dart';
 
 import '../models/daily_practice.dart';
 import '../models/streak_data.dart';
@@ -13,6 +14,7 @@ class PersistenceService {
   static const _streakKey = 'streak_data';
   static const _readingPlanProgressKey = 'reading_plan_progress_v1';
   static const _collectionProgressKey = 'collection_progress_v1';
+  static const _userProfileKey = 'user_profile_v1';
 
   Future<DailyPractice?> loadDailyPractice(DateTime date) async {
     final prefs = await SharedPreferences.getInstance();
@@ -55,6 +57,7 @@ class PersistenceService {
   Future<void> clearAll() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_streakKey);
+    await prefs.remove(_userProfileKey);
     final keys = prefs.getKeys().where((k) => k.startsWith(_dailyPrefix)).toList();
     for (final k in keys) {
       await prefs.remove(k);
@@ -120,5 +123,25 @@ extension CollectionPersistence on PersistenceService {
     final list = map.values.map((e) => e.toJson()).toList();
     await prefs.setString(
         PersistenceService._collectionProgressKey, jsonEncode(list));
+  }
+}
+
+extension UserProfilePersistence on PersistenceService {
+  Future<UserProfile?> loadUserProfile() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(PersistenceService._userProfileKey);
+    if (raw == null || raw.isEmpty) return null;
+    try {
+      final map = jsonDecode(raw) as Map<String, dynamic>;
+      return UserProfile.fromJson(map);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Future<void> saveUserProfile(UserProfile profile) async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = jsonEncode(profile.toJson());
+    await prefs.setString(PersistenceService._userProfileKey, raw);
   }
 }

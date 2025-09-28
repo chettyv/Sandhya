@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/app_constants.dart';
 import '../providers/daily_content_provider.dart';
+import '../providers/user_profile_provider.dart';
 import '../providers/daily_practice_provider.dart';
 import '../providers/progress_provider.dart';
 import '../providers/streak_provider.dart';
@@ -25,6 +26,7 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final featured = ref.watch(featuredVerseProvider);
+    final personalized = ref.watch(shouldUsePersonalizationProvider);
     final todayIndex = DateTime.now().weekday % 7;
 
     final streak = ref.watch(streakProvider);
@@ -81,11 +83,33 @@ class HomePage extends ConsumerWidget {
                 ],
               ),
               const SizedBox(height: 24),
+              if (!ref.watch(isProfileCompleteProvider))
+                Card(
+                  child: ListTile(
+                    leading: const Icon(Icons.tips_and_updates_outlined),
+                    title: const Text('Get tailored daily content'),
+                    subtitle: const Text('Complete your profile to personalize verses and practices.'),
+                    trailing: const Icon(Icons.chevron_right),
+                    onTap: () => Navigator.of(context).pushNamed('/profile-setup'),
+                  ),
+                ),
+              if (!ref.watch(isProfileCompleteProvider)) const SizedBox(height: 16),
               DailyProgressBar(
                 progress: progress,
                 segments: segments,
               ),
               const SizedBox(height: 24),
+              if (personalized)
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Row(
+                    children: [
+                      Icon(Icons.auto_awesome, size: 16, color: Theme.of(context).colorScheme.primary),
+                      const SizedBox(width: 6),
+                      Text('Personalized for you', style: Theme.of(context).textTheme.labelMedium),
+                    ],
+                  ),
+                ),
               GestureDetector(
                 onTap: () => _openShlokaModal(context, ref, featured),
                 child: DailyShlokaCard(

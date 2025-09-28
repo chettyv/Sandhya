@@ -1,0 +1,127 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../core/personalization_constants.dart';
+import '../models/user_profile.dart';
+import '../services/persistence_service.dart';
+
+final userProfileProvider =
+    StateNotifierProvider<UserProfileNotifier, UserProfile>((ref) {
+  return UserProfileNotifier(ref);
+});
+
+class UserProfileNotifier extends StateNotifier<UserProfile> {
+  UserProfileNotifier(this.ref) : super(UserProfile.defaults()) {
+    Future.microtask(_load);
+  }
+
+  final Ref ref;
+
+  PersistenceService get _store => ref.read(persistenceServiceProvider);
+
+  Future<void> _load() async {
+    final stored = await _store.loadUserProfile();
+    state = stored ?? UserProfile.defaults();
+  }
+
+  Future<void> _persist() async {
+    await _store.saveUserProfile(state);
+  }
+
+  Future<void> updateBasicInfo({required String name, required String email}) async {
+    final trimmedName = name.trim();
+    final trimmedEmail = email.trim();
+    // Simple email sanity check (optional field)
+    final emailOk = trimmedEmail.isEmpty || RegExp(r'^.+@.+\..+$').hasMatch(trimmedEmail);
+    if (!emailOk) {
+      throw ArgumentError('Invalid email address');
+    }
+    state = state.copyWith(name: trimmedName, email: trimmedEmail);
+    await _persist();
+  }
+
+  Future<void> updateAge(int age) async {
+    if (!isValidAge(age)) throw ArgumentError('Age must be between 13 and 100');
+    state = state.copyWith(age: age);
+    await _persist();
+  }
+
+  Future<void> updateDeityPreferences(List<String> deities) async {
+    final cleaned = deities
+        .map((d) => d.trim())
+        .where((d) => d.isNotEmpty)
+        .map((d) => parseDeity(d)?.displayName ?? d)
+        .toSet()
+        .toList();
+    state = state.copyWith(deityPreferences: cleaned);
+    await _persist();
+  }
+
+  Future<void> updateSpiritualTradition(String? tradition) async {
+    if (tradition == null || tradition.trim().isEmpty) {
+      state = state.copyWith(spiritualTradition: null);
+    } else {
+      final t = parseTradition(tradition);
+      state = state.copyWith(spiritualTradition: (t?.displayName ?? tradition.trim()));
+    }
+    await _persist();
+  }
+
+  Future<void> updatePreferredLanguage(String languageCode) async {
+    if (!isValidLanguageCode(languageCode)) {
+      throw ArgumentError('Unsupported language: $languageCode');
+    }
+    state = state.copyWith(preferredLanguage: languageCode.toLowerCase());
+    await _persist();
+  }
+
+  Future<void> updateSpiritualGoals(List<String> goals) async {
+    final cleaned = goals
+        .map((g) => g.trim())
+        .where((g) => g.isNotEmpty)
+        .map((g) => parseGoal(g)?.displayName ?? g)
+        .toSet()
+        .toList();
+    state = state.copyWith(spiritualGoals: cleaned);
+    await _persist();
+  }
+
+  Future<void> updateNotificationSettings({
+    TimeOfDay? time,
+    bool? audioEnabled,
+  }) async {
+    state = state.copyWith(
+      notificationTime: time ?? state.notificationTime,
+      audioEnabled: audioEnabled ?? state.audioEnabled,
+    );
+    await _persist();
+  }
+
+  // --- Computed helpers ---
+
+  /// Validation status reflecting essential fields filled for personalization.
+  bool get isValidForPersonalization => state.isComplete;
+
+  /// Rough completion percentage across key fields.
+  double get completionPercent {
+    final checks = <bool>[
+      state.hasName,
+      state.hasAge,
+      state.hasLanguage,
+      state.deityPreferences.isNotEmpty,
+      state.spiritualGoals.isNotEmpty,
+      (state.spiritualTradition != null && state.spiritualTradition!.trim().isNotEmpty),
+    ];
+    final completed = checks.where((e) => e).length;
+    return completed / checks.length;
+  }
+}
+
+final isProfileCompleteProvider = Provider<bool>((ref) {
+  return ref.watch(userProfileProvider.select((p) => p.isComplete));
+});
+
+final profileCompletionPercentProvider = Provider<double>((ref) {
+  final notifier = ref.read(userProfileProvider.notifier);
+  return notifier.completionPercent;
+});

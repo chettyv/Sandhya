@@ -4,6 +4,7 @@ import '../pages/main_navigation_page.dart';
 import '../pages/scripture_detail_page.dart';
 import '../pages/reading_plan_detail_page.dart';
 import '../pages/collection_detail_page.dart';
+import '../pages/profile_setup_page.dart';
 
 /// Handles page resolution in a single place for scalability.
 class AppRouter {
@@ -16,6 +17,11 @@ class AppRouter {
         return MaterialPageRoute<void>(
           settings: settings,
           builder: (_) => const MainNavigationPage(),
+        );
+      case ProfileSetupPage.routeName:
+        return MaterialPageRoute<void>(
+          settings: settings,
+          builder: (_) => const ProfileSetupPage(),
         );
       default:
         final name = settings.name ?? '';
