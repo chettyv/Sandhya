@@ -229,7 +229,7 @@ class __$$DailyVerseImplCopyWithImpl<$Res>
           : commentary // ignore: cast_nullable_to_non_nullable
               as String?,
       translations: freezed == translations
-          ? _value.translations
+          ? _value._translations
           : translations // ignore: cast_nullable_to_non_nullable
               as Map<String, String>?,
       devotionalTitle: freezed == devotionalTitle
@@ -270,7 +270,7 @@ class _$DailyVerseImpl implements _DailyVerse {
       this.transliteration,
       required this.reference,
       this.commentary,
-      Map<String, String>? translations,
+      final Map<String, String>? translations,
       this.devotionalTitle,
       this.devotionalReflection,
       this.prayerTitle,
@@ -299,10 +299,11 @@ class _$DailyVerseImpl implements _DailyVerse {
   Map<String, String>? get translations {
     final value = _translations;
     if (value == null) return null;
-    if (value is EqualUnmodifiableMapView) return value;
+    if (_translations is EqualUnmodifiableMapView) return _translations;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
+
   @override
   final String? devotionalTitle;
   @override
@@ -329,18 +330,30 @@ class _$DailyVerseImpl implements _DailyVerse {
             other is _$DailyVerseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.scripture, scripture) || other.scripture == scripture) &&
-            (identical(other.transliteration, transliteration) || other.transliteration == transliteration) &&
-            (identical(other.reference, reference) || other.reference == reference) &&
-            (identical(other.commentary, commentary) || other.commentary == commentary) &&
-            const DeepCollectionEquality().equals(other._translations, _translations) &&
-            (identical(other.devotionalTitle, devotionalTitle) || other.devotionalTitle == devotionalTitle) &&
-            (identical(other.devotionalReflection, devotionalReflection) || other.devotionalReflection == devotionalReflection) &&
-            (identical(other.prayerTitle, prayerTitle) || other.prayerTitle == prayerTitle) &&
-            (identical(other.prayerText, prayerText) || other.prayerText == prayerText) &&
-            (identical(other.journalPrompt, journalPrompt) || other.journalPrompt == journalPrompt) &&
-            (identical(other.recommendedMeditationMinutes, recommendedMeditationMinutes) ||
-                other.recommendedMeditationMinutes == recommendedMeditationMinutes));
+            (identical(other.scripture, scripture) ||
+                other.scripture == scripture) &&
+            (identical(other.transliteration, transliteration) ||
+                other.transliteration == transliteration) &&
+            (identical(other.reference, reference) ||
+                other.reference == reference) &&
+            (identical(other.commentary, commentary) ||
+                other.commentary == commentary) &&
+            const DeepCollectionEquality()
+                .equals(other._translations, _translations) &&
+            (identical(other.devotionalTitle, devotionalTitle) ||
+                other.devotionalTitle == devotionalTitle) &&
+            (identical(other.devotionalReflection, devotionalReflection) ||
+                other.devotionalReflection == devotionalReflection) &&
+            (identical(other.prayerTitle, prayerTitle) ||
+                other.prayerTitle == prayerTitle) &&
+            (identical(other.prayerText, prayerText) ||
+                other.prayerText == prayerText) &&
+            (identical(other.journalPrompt, journalPrompt) ||
+                other.journalPrompt == journalPrompt) &&
+            (identical(other.recommendedMeditationMinutes,
+                    recommendedMeditationMinutes) ||
+                other.recommendedMeditationMinutes ==
+                    recommendedMeditationMinutes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -430,4 +443,3 @@ abstract class _DailyVerse implements DailyVerse {
   _$$DailyVerseImplCopyWith<_$DailyVerseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'src/config/app_router.dart';
 import 'src/config/app_theme.dart';
-import 'src/pages/home_page.dart';
+import 'src/pages/main_navigation_page.dart';
 
 void main() {
   runApp(const ProviderScope(child: DharmaDailyApp()));
@@ -18,7 +18,7 @@ class DharmaDailyApp extends StatelessWidget {
       title: 'DharmaDaily',
       theme: AppTheme.light,
       onGenerateRoute: AppRouter.onGenerateRoute,
-      initialRoute: HomePage.routeName,
+      initialRoute: MainNavigationPage.routeName,
       debugShowCheckedModeBanner: false,
     );
   }

@@ -14,10 +14,9 @@ _$DailyVerseImpl _$$DailyVerseImplFromJson(Map<String, dynamic> json) =>
       transliteration: json['transliteration'] as String?,
       reference: json['reference'] as String,
       commentary: json['commentary'] as String?,
-      translations: (json['translations'] as Map<String, dynamic>?)
-          ?.map(
-            (k, e) => MapEntry(k, e as String),
-          ),
+      translations: (json['translations'] as Map<String, dynamic>?)?.map(
+        (k, e) => MapEntry(k, e as String),
+      ),
       devotionalTitle: json['devotionalTitle'] as String?,
       devotionalReflection: json['devotionalReflection'] as String?,
       prayerTitle: json['prayerTitle'] as String?,

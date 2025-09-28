@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../models/daily_verse.dart';
+import '../core/locale_utils.dart';
 
 class VerseCard extends StatelessWidget {
   const VerseCard({super.key, required this.verse, this.highlight = false});
@@ -12,6 +13,7 @@ class VerseCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final colorScheme = theme.colorScheme;
+    final locale = Localizations.maybeLocaleOf(context) ?? const Locale('en');
 
     final cardColor =
         highlight ? colorScheme.primaryContainer : theme.cardColor;
@@ -49,7 +51,7 @@ class VerseCard extends StatelessWidget {
                 letterSpacing: 0.6,
               ),
             ),
-            if (verse.commentary case final commentary?) ...[
+            if (verseTranslationForLocale(verse, locale) case final commentary?) ...[
               const SizedBox(height: 12),
               Text(
                 commentary,

@@ -1,12 +1,11 @@
 import 'package:dharma_daily/main.dart';
-import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  testWidgets('renders featured verse card', (tester) async {
+  testWidgets('Home loads and shows header', (tester) async {
     await tester.pumpWidget(const ProviderScope(child: DharmaDailyApp()));
-
-    expect(find.text("Today's Verse"), findsOneWidget);
-    expect(find.textContaining('Recommended meditation'), findsWidgets);
+    await tester.pumpAndSettle();
+    expect(find.text('Weekly Streak'), findsOneWidget);
   });
 }

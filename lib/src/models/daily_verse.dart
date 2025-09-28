@@ -10,8 +10,15 @@ class DailyVerse with _$DailyVerse {
     required String id,
     required String title,
     required String scripture,
+    String? transliteration,
     required String reference,
     String? commentary,
+    Map<String, String>? translations,
+    String? devotionalTitle,
+    String? devotionalReflection,
+    String? prayerTitle,
+    String? prayerText,
+    String? journalPrompt,
     @Default(10) int recommendedMeditationMinutes,
   }) = _DailyVerse;
 

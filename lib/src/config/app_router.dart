@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../pages/home_page.dart';
+import '../pages/main_navigation_page.dart';
 
 /// Handles page resolution in a single place for scalability.
 class AppRouter {
@@ -8,12 +8,34 @@ class AppRouter {
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case HomePage.routeName:
+      case MainNavigationPage.routeName:
       case null:
         return MaterialPageRoute<void>(
           settings: settings,
-          builder: (_) => const HomePage(),
+          builder: (_) => const MainNavigationPage(),
         );
+
+      // Future: Uncomment these to enable tab-level deep links
+      // case MainNavigationPage.homeRoute:
+      //   return MaterialPageRoute<void>(
+      //     settings: settings,
+      //     builder: (_) => const MainNavigationPage(initialIndex: 0),
+      //   );
+      // case MainNavigationPage.exploreRoute:
+      //   return MaterialPageRoute<void>(
+      //     settings: settings,
+      //     builder: (_) => const MainNavigationPage(initialIndex: 1),
+      //   );
+      // case MainNavigationPage.journalRoute:
+      //   return MaterialPageRoute<void>(
+      //     settings: settings,
+      //     builder: (_) => const MainNavigationPage(initialIndex: 2),
+      //   );
+      // case MainNavigationPage.profileRoute:
+      //   return MaterialPageRoute<void>(
+      //     settings: settings,
+      //     builder: (_) => const MainNavigationPage(initialIndex: 3),
+      //   );
       default:
         return MaterialPageRoute<void>(
           settings: settings,
