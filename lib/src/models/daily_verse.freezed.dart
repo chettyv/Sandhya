@@ -23,8 +23,15 @@ mixin _$DailyVerse {
   String get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
   String get scripture => throw _privateConstructorUsedError;
+  String? get transliteration => throw _privateConstructorUsedError;
   String get reference => throw _privateConstructorUsedError;
   String? get commentary => throw _privateConstructorUsedError;
+  Map<String, String>? get translations => throw _privateConstructorUsedError;
+  String? get devotionalTitle => throw _privateConstructorUsedError;
+  String? get devotionalReflection => throw _privateConstructorUsedError;
+  String? get prayerTitle => throw _privateConstructorUsedError;
+  String? get prayerText => throw _privateConstructorUsedError;
+  String? get journalPrompt => throw _privateConstructorUsedError;
   int get recommendedMeditationMinutes => throw _privateConstructorUsedError;
 
   /// Serializes this DailyVerse to a JSON map.
@@ -47,8 +54,15 @@ abstract class $DailyVerseCopyWith<$Res> {
       {String id,
       String title,
       String scripture,
+      String? transliteration,
       String reference,
       String? commentary,
+      Map<String, String>? translations,
+      String? devotionalTitle,
+      String? devotionalReflection,
+      String? prayerTitle,
+      String? prayerText,
+      String? journalPrompt,
       int recommendedMeditationMinutes});
 }
 
@@ -70,8 +84,15 @@ class _$DailyVerseCopyWithImpl<$Res, $Val extends DailyVerse>
     Object? id = null,
     Object? title = null,
     Object? scripture = null,
+    Object? transliteration = freezed,
     Object? reference = null,
     Object? commentary = freezed,
+    Object? translations = freezed,
+    Object? devotionalTitle = freezed,
+    Object? devotionalReflection = freezed,
+    Object? prayerTitle = freezed,
+    Object? prayerText = freezed,
+    Object? journalPrompt = freezed,
     Object? recommendedMeditationMinutes = null,
   }) {
     return _then(_value.copyWith(
@@ -87,6 +108,10 @@ class _$DailyVerseCopyWithImpl<$Res, $Val extends DailyVerse>
           ? _value.scripture
           : scripture // ignore: cast_nullable_to_non_nullable
               as String,
+      transliteration: freezed == transliteration
+          ? _value.transliteration
+          : transliteration // ignore: cast_nullable_to_non_nullable
+              as String?,
       reference: null == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
@@ -94,6 +119,30 @@ class _$DailyVerseCopyWithImpl<$Res, $Val extends DailyVerse>
       commentary: freezed == commentary
           ? _value.commentary
           : commentary // ignore: cast_nullable_to_non_nullable
+              as String?,
+      translations: freezed == translations
+          ? _value.translations
+          : translations // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+      devotionalTitle: freezed == devotionalTitle
+          ? _value.devotionalTitle
+          : devotionalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      devotionalReflection: freezed == devotionalReflection
+          ? _value.devotionalReflection
+          : devotionalReflection // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prayerTitle: freezed == prayerTitle
+          ? _value.prayerTitle
+          : prayerTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prayerText: freezed == prayerText
+          ? _value.prayerText
+          : prayerText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      journalPrompt: freezed == journalPrompt
+          ? _value.journalPrompt
+          : journalPrompt // ignore: cast_nullable_to_non_nullable
               as String?,
       recommendedMeditationMinutes: null == recommendedMeditationMinutes
           ? _value.recommendedMeditationMinutes
@@ -115,8 +164,15 @@ abstract class _$$DailyVerseImplCopyWith<$Res>
       {String id,
       String title,
       String scripture,
+      String? transliteration,
       String reference,
       String? commentary,
+      Map<String, String>? translations,
+      String? devotionalTitle,
+      String? devotionalReflection,
+      String? prayerTitle,
+      String? prayerText,
+      String? journalPrompt,
       int recommendedMeditationMinutes});
 }
 
@@ -136,8 +192,15 @@ class __$$DailyVerseImplCopyWithImpl<$Res>
     Object? id = null,
     Object? title = null,
     Object? scripture = null,
+    Object? transliteration = freezed,
     Object? reference = null,
     Object? commentary = freezed,
+    Object? translations = freezed,
+    Object? devotionalTitle = freezed,
+    Object? devotionalReflection = freezed,
+    Object? prayerTitle = freezed,
+    Object? prayerText = freezed,
+    Object? journalPrompt = freezed,
     Object? recommendedMeditationMinutes = null,
   }) {
     return _then(_$DailyVerseImpl(
@@ -153,6 +216,10 @@ class __$$DailyVerseImplCopyWithImpl<$Res>
           ? _value.scripture
           : scripture // ignore: cast_nullable_to_non_nullable
               as String,
+      transliteration: freezed == transliteration
+          ? _value.transliteration
+          : transliteration // ignore: cast_nullable_to_non_nullable
+              as String?,
       reference: null == reference
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
@@ -160,6 +227,30 @@ class __$$DailyVerseImplCopyWithImpl<$Res>
       commentary: freezed == commentary
           ? _value.commentary
           : commentary // ignore: cast_nullable_to_non_nullable
+              as String?,
+      translations: freezed == translations
+          ? _value.translations
+          : translations // ignore: cast_nullable_to_non_nullable
+              as Map<String, String>?,
+      devotionalTitle: freezed == devotionalTitle
+          ? _value.devotionalTitle
+          : devotionalTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      devotionalReflection: freezed == devotionalReflection
+          ? _value.devotionalReflection
+          : devotionalReflection // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prayerTitle: freezed == prayerTitle
+          ? _value.prayerTitle
+          : prayerTitle // ignore: cast_nullable_to_non_nullable
+              as String?,
+      prayerText: freezed == prayerText
+          ? _value.prayerText
+          : prayerText // ignore: cast_nullable_to_non_nullable
+              as String?,
+      journalPrompt: freezed == journalPrompt
+          ? _value.journalPrompt
+          : journalPrompt // ignore: cast_nullable_to_non_nullable
               as String?,
       recommendedMeditationMinutes: null == recommendedMeditationMinutes
           ? _value.recommendedMeditationMinutes
@@ -176,9 +267,17 @@ class _$DailyVerseImpl implements _DailyVerse {
       {required this.id,
       required this.title,
       required this.scripture,
+      this.transliteration,
       required this.reference,
       this.commentary,
-      this.recommendedMeditationMinutes = 10});
+      Map<String, String>? translations,
+      this.devotionalTitle,
+      this.devotionalReflection,
+      this.prayerTitle,
+      this.prayerText,
+      this.journalPrompt,
+      this.recommendedMeditationMinutes = 10})
+      : _translations = translations;
 
   factory _$DailyVerseImpl.fromJson(Map<String, dynamic> json) =>
       _$$DailyVerseImplFromJson(json);
@@ -190,16 +289,37 @@ class _$DailyVerseImpl implements _DailyVerse {
   @override
   final String scripture;
   @override
+  final String? transliteration;
+  @override
   final String reference;
   @override
   final String? commentary;
+  final Map<String, String>? _translations;
+  @override
+  Map<String, String>? get translations {
+    final value = _translations;
+    if (value == null) return null;
+    if (value is EqualUnmodifiableMapView) return value;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+  @override
+  final String? devotionalTitle;
+  @override
+  final String? devotionalReflection;
+  @override
+  final String? prayerTitle;
+  @override
+  final String? prayerText;
+  @override
+  final String? journalPrompt;
   @override
   @JsonKey()
   final int recommendedMeditationMinutes;
 
   @override
   String toString() {
-    return 'DailyVerse(id: $id, title: $title, scripture: $scripture, reference: $reference, commentary: $commentary, recommendedMeditationMinutes: $recommendedMeditationMinutes)';
+    return 'DailyVerse(id: $id, title: $title, scripture: $scripture, transliteration: $transliteration, reference: $reference, commentary: $commentary, translations: $translations, devotionalTitle: $devotionalTitle, devotionalReflection: $devotionalReflection, prayerTitle: $prayerTitle, prayerText: $prayerText, journalPrompt: $journalPrompt, recommendedMeditationMinutes: $recommendedMeditationMinutes)';
   }
 
   @override
@@ -209,22 +329,37 @@ class _$DailyVerseImpl implements _DailyVerse {
             other is _$DailyVerseImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.scripture, scripture) ||
-                other.scripture == scripture) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
-            (identical(other.commentary, commentary) ||
-                other.commentary == commentary) &&
-            (identical(other.recommendedMeditationMinutes,
-                    recommendedMeditationMinutes) ||
-                other.recommendedMeditationMinutes ==
-                    recommendedMeditationMinutes));
+            (identical(other.scripture, scripture) || other.scripture == scripture) &&
+            (identical(other.transliteration, transliteration) || other.transliteration == transliteration) &&
+            (identical(other.reference, reference) || other.reference == reference) &&
+            (identical(other.commentary, commentary) || other.commentary == commentary) &&
+            const DeepCollectionEquality().equals(other._translations, _translations) &&
+            (identical(other.devotionalTitle, devotionalTitle) || other.devotionalTitle == devotionalTitle) &&
+            (identical(other.devotionalReflection, devotionalReflection) || other.devotionalReflection == devotionalReflection) &&
+            (identical(other.prayerTitle, prayerTitle) || other.prayerTitle == prayerTitle) &&
+            (identical(other.prayerText, prayerText) || other.prayerText == prayerText) &&
+            (identical(other.journalPrompt, journalPrompt) || other.journalPrompt == journalPrompt) &&
+            (identical(other.recommendedMeditationMinutes, recommendedMeditationMinutes) ||
+                other.recommendedMeditationMinutes == recommendedMeditationMinutes));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, id, title, scripture, reference,
-      commentary, recommendedMeditationMinutes);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      title,
+      scripture,
+      transliteration,
+      reference,
+      commentary,
+      const DeepCollectionEquality().hash(_translations),
+      devotionalTitle,
+      devotionalReflection,
+      prayerTitle,
+      prayerText,
+      journalPrompt,
+      recommendedMeditationMinutes);
 
   /// Create a copy of DailyVerse
   /// with the given fields replaced by the non-null parameter values.
@@ -247,8 +382,15 @@ abstract class _DailyVerse implements DailyVerse {
       {required final String id,
       required final String title,
       required final String scripture,
+      final String? transliteration,
       required final String reference,
       final String? commentary,
+      final Map<String, String>? translations,
+      final String? devotionalTitle,
+      final String? devotionalReflection,
+      final String? prayerTitle,
+      final String? prayerText,
+      final String? journalPrompt,
       final int recommendedMeditationMinutes}) = _$DailyVerseImpl;
 
   factory _DailyVerse.fromJson(Map<String, dynamic> json) =
@@ -261,9 +403,23 @@ abstract class _DailyVerse implements DailyVerse {
   @override
   String get scripture;
   @override
+  String? get transliteration;
+  @override
   String get reference;
   @override
   String? get commentary;
+  @override
+  Map<String, String>? get translations;
+  @override
+  String? get devotionalTitle;
+  @override
+  String? get devotionalReflection;
+  @override
+  String? get prayerTitle;
+  @override
+  String? get prayerText;
+  @override
+  String? get journalPrompt;
   @override
   int get recommendedMeditationMinutes;
 
@@ -274,3 +430,4 @@ abstract class _DailyVerse implements DailyVerse {
   _$$DailyVerseImplCopyWith<_$DailyVerseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
