@@ -3,12 +3,16 @@ import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../models/user_reading_progress.dart';
+
 import '../models/daily_practice.dart';
 import '../models/streak_data.dart';
 
 class PersistenceService {
   static const _dailyPrefix = 'daily_practice_';
   static const _streakKey = 'streak_data';
+  static const _readingPlanProgressKey = 'reading_plan_progress_v1';
+  static const _collectionProgressKey = 'collection_progress_v1';
 
   Future<DailyPractice?> loadDailyPractice(DateTime date) async {
     final prefs = await SharedPreferences.getInstance();
@@ -68,3 +72,53 @@ class PersistenceService {
 final persistenceServiceProvider = Provider<PersistenceService>((ref) {
   return PersistenceService();
 });
+
+extension ReadingPlanPersistence on PersistenceService {
+  Future<Map<String, ReadingPlanProgress>> loadReadingPlanProgressMap() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(PersistenceService._readingPlanProgressKey);
+    if (raw == null || raw.isEmpty) return {};
+    try {
+      final list = (jsonDecode(raw) as List<dynamic>)
+          .cast<Map<String, dynamic>>()
+          .map(ReadingPlanProgress.fromJson)
+          .toList();
+      return {for (final p in list) p.planId: p};
+    } catch (_) {
+      return {};
+    }
+  }
+
+  Future<void> saveReadingPlanProgressMap(
+      Map<String, ReadingPlanProgress> map) async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = map.values.map((e) => e.toJson()).toList();
+    await prefs.setString(
+        PersistenceService._readingPlanProgressKey, jsonEncode(list));
+  }
+}
+
+extension CollectionPersistence on PersistenceService {
+  Future<Map<String, CollectionProgress>> loadCollectionProgressMap() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(PersistenceService._collectionProgressKey);
+    if (raw == null || raw.isEmpty) return {};
+    try {
+      final list = (jsonDecode(raw) as List<dynamic>)
+          .cast<Map<String, dynamic>>()
+          .map(CollectionProgress.fromJson)
+          .toList();
+      return {for (final c in list) c.collectionId: c};
+    } catch (_) {
+      return {};
+    }
+  }
+
+  Future<void> saveCollectionProgressMap(
+      Map<String, CollectionProgress> map) async {
+    final prefs = await SharedPreferences.getInstance();
+    final list = map.values.map((e) => e.toJson()).toList();
+    await prefs.setString(
+        PersistenceService._collectionProgressKey, jsonEncode(list));
+  }
+}

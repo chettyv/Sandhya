@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../pages/main_navigation_page.dart';
+import '../pages/scripture_detail_page.dart';
+import '../pages/reading_plan_detail_page.dart';
+import '../pages/collection_detail_page.dart';
 
 /// Handles page resolution in a single place for scalability.
 class AppRouter {
@@ -14,8 +17,30 @@ class AppRouter {
           settings: settings,
           builder: (_) => const MainNavigationPage(),
         );
-
-      // Future: Uncomment these to enable tab-level deep links
+      default:
+        final name = settings.name ?? '';
+        if (name.startsWith('/scripture/')) {
+          final id = name.substring('/scripture/'.length);
+          return MaterialPageRoute<void>(
+            settings: settings,
+            builder: (_) => ScriptureDetailPage(verseId: id),
+          );
+        }
+        if (name.startsWith('/reading-plan/')) {
+          final id = name.substring('/reading-plan/'.length);
+          return MaterialPageRoute<void>(
+            settings: settings,
+            builder: (_) => ReadingPlanDetailPage(planId: id),
+          );
+        }
+        if (name.startsWith('/collection/')) {
+          final id = name.substring('/collection/'.length);
+          return MaterialPageRoute<void>(
+            settings: settings,
+            builder: (_) => CollectionDetailPage(collectionId: id),
+          );
+        }
+        // Future: Uncomment these to enable tab-level deep links
       // case MainNavigationPage.homeRoute:
       //   return MaterialPageRoute<void>(
       //     settings: settings,
@@ -36,7 +61,6 @@ class AppRouter {
       //     settings: settings,
       //     builder: (_) => const MainNavigationPage(initialIndex: 3),
       //   );
-      default:
         return MaterialPageRoute<void>(
           settings: settings,
           builder: (_) => const UnknownRoutePage(),
