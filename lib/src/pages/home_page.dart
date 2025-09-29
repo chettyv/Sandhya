@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../core/app_constants.dart';
 import '../providers/daily_content_provider.dart';
+import '../providers/content_cache_provider.dart';
 import '../providers/user_profile_provider.dart';
 import '../providers/daily_practice_provider.dart';
 import '../providers/progress_provider.dart';
@@ -17,6 +18,21 @@ import '../widgets/spiritual_journal_card.dart';
 import '../widgets/streak_bubbles.dart';
 import '../widgets/tts_player.dart';
 import '../core/locale_utils.dart';
+import '../widgets/offline_indicator.dart';
+import '../providers/daily_content_provider.dart' show verseFeedProvider; // ensure visibility
+import '../providers/app_lifecycle_provider.dart';
+import '../providers/day_provider.dart';
+
+final _fallbackFeaturedProvider = Provider<DailyVerse>((ref) {
+  final verses = ref.watch(verseFeedProvider);
+  if (verses.isEmpty) {
+    throw StateError('No verses configured.');
+  }
+  final now = DateTime.now().toUtc();
+  final dayOfYear = now.difference(DateTime.utc(now.year)).inDays;
+  final index = dayOfYear % verses.length;
+  return verses[index];
+});
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
@@ -25,7 +41,8 @@ class HomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final featured = ref.watch(featuredVerseProvider);
+    final featuredAsync = ref.watch(featuredVerseProvider);
+    final featured = featuredAsync.maybeWhen(data: (v) => v, orElse: () => ref.read(_fallbackFeaturedProvider));
     final personalized = ref.watch(shouldUsePersonalizationProvider);
     final todayIndex = DateTime.now().weekday % 7;
 
@@ -38,16 +55,56 @@ class HomePage extends ConsumerWidget {
     // Only show overall progress, no per-segment chips
     const segments = <DailyProgressSegment>[];
 
+    final offline = ref.watch(offlineStatusProvider).maybeWhen(
+          data: (s) => !s.isOnline,
+          orElse: () => false,
+        );
+
+    // Invalidate day tick on app resume (covers sleep past midnight)
+    ref.listen(appLifecycleStreamProvider, (_, next) {
+      next.whenData((state) {
+        if (state == AppLifecycleState.resumed) {
+          ref.invalidate(currentDayProvider);
+        }
+      });
+    });
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(AppConstants.appTitle),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 12),
+            child: Center(child: OfflineIndicator(compact: true)),
+          ),
+        ],
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
+        child: RefreshIndicator(
+          onRefresh: () async {
+            await ref.read(cachedIndexProvider.notifier).clearExpired();
+            ref.invalidate(currentDayProvider);
+            ref.invalidate(featuredVerseProvider);
+          },
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+              if (offline)
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(12),
+                  margin: const EdgeInsets.only(bottom: 12),
+                  decoration: BoxDecoration(
+                    color: Theme.of(context).colorScheme.errorContainer,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Text(
+                    'You are offline — please connect',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

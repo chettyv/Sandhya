@@ -4,6 +4,8 @@ import '../core/sample_data.dart';
 import '../models/daily_verse.dart';
 import 'personalized_content_provider.dart';
 import 'user_profile_provider.dart';
+import 'content_cache_provider.dart';
+import 'day_provider.dart';
 
 final verseFeedProvider = Provider<List<DailyVerse>>((ref) => sampleVerses);
 
@@ -12,22 +14,47 @@ final shouldUsePersonalizationProvider = Provider<bool>((ref) {
 });
 
 final _defaultFeaturedVerseProvider = Provider<DailyVerse>((ref) {
+  // Recompute at local midnight
+  ref.watch(currentDayProvider);
   final verses = ref.watch(verseFeedProvider);
   if (verses.isEmpty) {
     throw StateError('No verses configured.');
   }
-  final now = DateTime.now().toUtc();
-  final dayOfYear = now.difference(DateTime.utc(now.year)).inDays;
+  final now = DateTime.now();
+  final dayOfYear = now.difference(DateTime(now.year)).inDays;
   final index = dayOfYear % verses.length;
   return verses[index];
 });
 
-final featuredVerseProvider = Provider<DailyVerse>((ref) {
+final featuredVerseProvider = FutureProvider<DailyVerse>((ref) async {
+  // Recompute at local midnight
+  ref.watch(currentDayProvider);
   final usePersonalization = ref.watch(shouldUsePersonalizationProvider);
-  if (usePersonalization) {
-    return ref.watch(personalizedFeaturedVerseProvider);
+  final candidate = usePersonalization
+      ? ref.watch(personalizedFeaturedVerseProvider)
+      : ref.watch(_defaultFeaturedVerseProvider);
+  // Try cache first
+  if (await ref.read(contentCacheServiceProvider).getCachedVerse(candidate.id)
+      case final cached?) {
+    return cached;
   }
-  return ref.watch(_defaultFeaturedVerseProvider);
+  // Background-preload next 7 days based on the active feed
+  final feed = usePersonalization
+      ? ref.read(personalizedVerseFeedProvider)
+      : ref.read(verseFeedProvider);
+  if (feed.isNotEmpty) {
+    final now = DateTime.now().toUtc();
+    final dayOfYear = now.difference(DateTime.utc(now.year)).inDays;
+    final startIndex = dayOfYear % feed.length;
+    final next = <DailyVerse>[];
+    for (var i = 1; i <= 7 && i < feed.length; i++) {
+      next.add(feed[(startIndex + i) % feed.length]);
+    }
+    // fire-and-forget
+    // ignore: discarded_futures
+    ref.read(contentCacheServiceProvider).preloadEssentialContent(next);
+  }
+  return candidate;
 });
 
 final recommendationsProvider = Provider<List<DailyVerse>>((ref) {

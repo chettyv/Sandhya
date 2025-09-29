@@ -4,6 +4,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/reading_plan.dart';
 import '../models/reading_plan_entry.dart';
 import '../providers/reading_plan_provider.dart';
+import '../providers/scripture_library_provider.dart';
+import '../services/content_cache_service.dart';
 
 class ReadingPlanDetailPage extends ConsumerWidget {
   const ReadingPlanDetailPage({super.key, required this.planId});
@@ -36,7 +38,24 @@ class ReadingPlanDetailPage extends ConsumerWidget {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(plan.title)),
+      appBar: AppBar(title: Text(plan.title), actions: [
+        IconButton(
+          tooltip: 'Download plan',
+          icon: const Icon(Icons.download_for_offline_outlined),
+          onPressed: () async {
+            final verses = [
+              for (final e in plan.entries)
+                if (ref.read(resolveVerseProvider(e.verseId)) case final v?) v,
+            ];
+            if (verses.isNotEmpty) {
+              await ref.read(contentCacheServiceProvider).preloadEssentialContent(verses);
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(content: Text('Plan cached for offline use')),
+              );
+            }
+          },
+        )
+      ]),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -157,4 +176,3 @@ class _EntriesList extends StatelessWidget {
     );
   }
 }
-

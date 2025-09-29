@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/scripture_reference.dart';
 import '../providers/scripture_library_provider.dart';
 import '../widgets/verse_card.dart';
+import '../services/content_cache_service.dart';
 
 class ScriptureDetailPage extends ConsumerWidget {
   const ScriptureDetailPage({super.key, required this.verseId});
@@ -27,6 +28,20 @@ class ScriptureDetailPage extends ConsumerWidget {
       appBar: AppBar(
         title: Text(reference.title),
         actions: [
+          IconButton(
+            onPressed: verse == null
+                ? null
+                : () async {
+                    if (verse != null) {
+                      await ref.read(contentCacheServiceProvider).cacheVerse(verse!, source: CacheSource.downloaded);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Saved for offline use')),
+                      );
+                    }
+                  },
+            icon: const Icon(Icons.download_for_offline_outlined),
+            tooltip: 'Download',
+          ),
           IconButton(
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -139,4 +154,3 @@ class _InfoChip extends StatelessWidget {
     );
   }
 }
-

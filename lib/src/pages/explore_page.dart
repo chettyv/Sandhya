@@ -9,6 +9,8 @@ import '../widgets/scripture_card.dart';
 import '../widgets/collection_card.dart';
 import '../widgets/reading_plan_card.dart';
 import '../models/reading_plan.dart';
+import '../models/daily_verse.dart';
+import '../services/content_cache_service.dart';
 
 // Uses app-wide Material 3 theme configured in AppTheme via MaterialApp
 
@@ -63,10 +65,28 @@ class ExplorePage extends ConsumerWidget {
                   itemCount: filtered.length,
                   itemBuilder: (context, index) {
                     final refItem = filtered[index];
-                    return ScriptureCard(
-                      reference: refItem,
-                      onTap: () => Navigator.of(context)
-                          .pushNamed('/scripture/${refItem.verseId}'),
+                    final verse = ref.watch(resolveVerseProvider(refItem.verseId));
+                    return Stack(
+                      children: [
+                        ScriptureCard(
+                          reference: refItem,
+                          onTap: () => Navigator.of(context)
+                              .pushNamed('/scripture/${refItem.verseId}'),
+                        ),
+                        if (verse != null)
+                          Positioned(
+                            right: 6,
+                            top: 6,
+                            child: Material(
+                              color: Colors.transparent,
+                              child: IconButton(
+                                icon: const Icon(Icons.download_for_offline_outlined),
+                                tooltip: 'Download',
+                                onPressed: () => _downloadVerse(context, ref, verse),
+                              ),
+                            ),
+                          ),
+                      ],
                     );
                   },
                 ),
@@ -113,13 +133,40 @@ class ExplorePage extends ConsumerWidget {
                 separatorBuilder: (_, __) => const SizedBox(height: 8),
                 itemBuilder: (context, index) {
                   final col = collections[index];
-                  return CollectionCard(
-                    collection: col,
-                    progress: null, // browsing-only; no progress meter
-                    onTap: () {
-                      Navigator.of(context)
-                          .pushNamed('/collection/${col.id}');
-                    },
+                  return Stack(
+                    children: [
+                      CollectionCard(
+                        collection: col,
+                        progress: null, // browsing-only; no progress meter
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushNamed('/collection/${col.id}');
+                        },
+                      ),
+                      Positioned(
+                        top: 6,
+                        right: 6,
+                        child: Material(
+                          color: Colors.transparent,
+                          child: IconButton(
+                            icon: const Icon(Icons.cloud_download_outlined),
+                            tooltip: 'Download collection',
+                            onPressed: () async {
+                              final verses = <DailyVerse>[];
+                              for (final rid in col.referenceIds) {
+                                if (ref.read(resolveVerseProvider(rid)) case final v?) verses.add(v);
+                              }
+                              if (verses.isNotEmpty) {
+                                await ref.read(contentCacheServiceProvider).preloadEssentialContent(verses);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Downloaded ${verses.length} items')),
+                                );
+                              }
+                            },
+                          ),
+                        ),
+                      ),
+                    ],
                   );
                 },
               ),
@@ -127,6 +174,14 @@ class ExplorePage extends ConsumerWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Future<void> _downloadVerse(BuildContext context, WidgetRef ref, DailyVerse verse) async {
+    final svc = ref.read(contentCacheServiceProvider);
+    await svc.cacheVerse(verse, source: CacheSource.downloaded);
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(content: Text('Saved for offline use')),
     );
   }
 }

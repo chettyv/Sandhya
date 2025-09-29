@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/personalization_constants.dart';
 import '../providers/user_profile_provider.dart';
 import 'profile_setup_page.dart';
+import 'cache_management_page.dart';
 
 class ProfilePage extends ConsumerWidget {
   const ProfilePage({super.key});
@@ -178,6 +179,17 @@ class ProfilePage extends ConsumerWidget {
               const _SectionHeader('App Settings'),
               const _StaticTile(icon: Icons.color_lens_outlined, title: 'Theme', subtitle: 'System default'),
               const _StaticTile(icon: Icons.info_outline, title: 'About', subtitle: 'Version and acknowledgements'),
+
+              const SizedBox(height: 16),
+              const _SectionHeader('Offline & Storage'),
+              ListTile(
+                contentPadding: const EdgeInsets.symmetric(horizontal: 8),
+                leading: const Icon(Icons.offline_bolt_outlined),
+                title: const Text('Offline & Storage'),
+                subtitle: const Text('Manage cached content and download preferences'),
+                trailing: const Icon(Icons.chevron_right),
+                onTap: () => Navigator.of(context).pushNamed(CacheManagementPage.routeName),
+              ),
             ],
           ),
         ),

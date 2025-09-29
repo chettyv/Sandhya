@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../core/personalization_constants.dart';
 import '../core/sample_data.dart';
 import '../models/daily_verse.dart';
+import 'day_provider.dart';
 import 'user_profile_provider.dart';
 
 /// Builds a personalized verse feed by ranking the base content list according
@@ -118,12 +119,14 @@ final personalizedVerseFeedProvider = Provider<List<DailyVerse>>((ref) {
 });
 
 final personalizedFeaturedVerseProvider = Provider<DailyVerse>((ref) {
+  // Recompute at local midnight
+  ref.watch(currentDayProvider);
   final feed = ref.watch(personalizedVerseFeedProvider);
   if (feed.isEmpty) {
     throw StateError('No verses configured.');
   }
-  final now = DateTime.now().toUtc();
-  final dayOfYear = now.difference(DateTime.utc(now.year)).inDays;
+  final now = DateTime.now();
+  final dayOfYear = now.difference(DateTime(now.year)).inDays;
   final index = dayOfYear % feed.length;
   return feed[index];
 });
@@ -133,4 +136,3 @@ final personalizedRecommendationsProvider = Provider<List<DailyVerse>>((ref) {
   if (feed.isEmpty) return const <DailyVerse>[];
   return feed.take(10).toList();
 });
-
