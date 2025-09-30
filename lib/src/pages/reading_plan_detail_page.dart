@@ -32,7 +32,7 @@ class ReadingPlanDetailPage extends ConsumerWidget {
 
     DateTime? estimatedCompletionDate() {
       if (!started) return null;
-      final startedAt = progress!.startedAt;
+      final startedAt = progress.startedAt;
       final remaining = plan.durationDays - completedDays.length;
       return startedAt.add(Duration(days: remaining));
     }
@@ -48,7 +48,10 @@ class ReadingPlanDetailPage extends ConsumerWidget {
                 if (ref.read(resolveVerseProvider(e.verseId)) case final v?) v,
             ];
             if (verses.isNotEmpty) {
-              await ref.read(contentCacheServiceProvider).preloadEssentialContent(verses);
+              await ref
+                  .read(contentCacheServiceProvider)
+                  .preloadEssentialContent(verses);
+              if (!context.mounted) return;
               ScaffoldMessenger.of(context).showSnackBar(
                 const SnackBar(content: Text('Plan cached for offline use')),
               );
@@ -61,7 +64,8 @@ class ReadingPlanDetailPage extends ConsumerWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(plan.description, style: Theme.of(context).textTheme.bodyLarge),
+            Text(plan.description,
+                style: Theme.of(context).textTheme.bodyLarge),
             const SizedBox(height: 12),
             Wrap(
               spacing: 8,
@@ -117,12 +121,14 @@ class ReadingPlanDetailPage extends ConsumerWidget {
               ],
             ),
             const SizedBox(height: 24),
-            Text('Daily Entries', style: Theme.of(context).textTheme.titleMedium),
+            Text('Daily Entries',
+                style: Theme.of(context).textTheme.titleMedium),
             const SizedBox(height: 8),
             _EntriesList(
               entries: plan.entries,
               completedDays: completedDays,
-              onToggleComplete: (e) => notifier.markEntryCompleted(plan.id, e.dayNumber),
+              onToggleComplete: (e) =>
+                  notifier.markEntryCompleted(plan.id, e.dayNumber),
             ),
           ],
         ),

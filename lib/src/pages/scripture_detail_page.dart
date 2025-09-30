@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../models/cached_content.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../models/scripture_reference.dart';
@@ -32,12 +33,13 @@ class ScriptureDetailPage extends ConsumerWidget {
             onPressed: verse == null
                 ? null
                 : () async {
-                    if (verse != null) {
-                      await ref.read(contentCacheServiceProvider).cacheVerse(verse!, source: CacheSource.downloaded);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Saved for offline use')),
-                      );
-                    }
+                    await ref
+                        .read(contentCacheServiceProvider)
+                        .cacheVerse(verse, source: CacheSource.downloaded);
+                    if (!context.mounted) return;
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Saved for offline use')),
+                    );
                   },
             icon: const Icon(Icons.download_for_offline_outlined),
             tooltip: 'Download',
@@ -82,14 +84,14 @@ class ScriptureDetailPage extends ConsumerWidget {
                           icon: Icons.timer,
                           label: '${reference.estimatedMinutes} min'),
                       _InfoChip(
-                          icon: Icons.bolt,
-                          label: reference.difficulty.name),
+                          icon: Icons.bolt, label: reference.difficulty.name),
                       for (final t in reference.tags) _InfoChip(label: t),
                     ],
                   ),
                   const SizedBox(height: 24),
                   if (related.isNotEmpty) ...[
-                    Text('Related', style: Theme.of(context).textTheme.titleMedium),
+                    Text('Related',
+                        style: Theme.of(context).textTheme.titleMedium),
                     const SizedBox(height: 8),
                     Column(
                       children: [
@@ -101,8 +103,8 @@ class ScriptureDetailPage extends ConsumerWidget {
                             title: Text(r.title),
                             subtitle: Text(_sourceLabel(r.source)),
                             onTap: () {
-                              Navigator.of(context)
-                                  .pushReplacementNamed('/scripture/${r.verseId}');
+                              Navigator.of(context).pushReplacementNamed(
+                                  '/scripture/${r.verseId}');
                             },
                           ),
                       ],

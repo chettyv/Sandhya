@@ -28,10 +28,10 @@ class ReadingPlan with _$ReadingPlan {
 
 extension ReadingPlanX on ReadingPlan {
   ReadingPlanEntry? entryForDay(int day) {
-    return entries.firstWhere(
-      (e) => e.dayNumber == day,
-      orElse: () => entries.isEmpty ? null as ReadingPlanEntry : entries.first,
-    );
+    for (final e in entries) {
+      if (e.dayNumber == day) return e;
+    }
+    return null;
   }
 
   bool isComplete(Set<int> completedDays) {
@@ -46,4 +46,3 @@ extension ReadingPlanX on ReadingPlan {
     return completed / entries.length;
   }
 }
-

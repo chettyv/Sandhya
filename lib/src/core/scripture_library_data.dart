@@ -7,7 +7,7 @@ import '../models/reading_plan_entry.dart';
 /// IDs must match verse IDs from sample_data.dart.
 final List<ScriptureReference> scriptureReferences = [
   // Bhagavad Gita selections
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-2-47',
     verseId: 'bg-2-47',
     title: 'Focus on Duty',
@@ -16,7 +16,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 8,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-4-7-8',
     verseId: 'bg-4-7-8',
     title: 'Divine Descent',
@@ -25,7 +25,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-6-26',
     verseId: 'bg-6-26',
     title: 'Gently Return the Mind',
@@ -34,7 +34,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 12,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-9-22',
     verseId: 'bg-9-22',
     title: 'Surrender and Support',
@@ -43,7 +43,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 8,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-12-13-14',
     verseId: 'bg-12-13-14',
     title: 'Marks of a Devotee',
@@ -52,7 +52,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.intermediate,
     estimatedMinutes: 12,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-12-15',
     verseId: 'bg-12-15',
     title: 'Unshakable Devotee',
@@ -61,7 +61,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.intermediate,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-18-66',
     verseId: 'bg-18-66',
     title: 'Supreme Surrender',
@@ -70,7 +70,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.intermediate,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-3-19',
     verseId: 'bg-3-19',
     title: 'Selfless Action',
@@ -79,7 +79,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 8,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-4-39',
     verseId: 'bg-4-39',
     title: 'Faith and Knowledge',
@@ -88,7 +88,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.intermediate,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'bg-6-47',
     verseId: 'bg-6-47',
     title: 'The Supreme Yogi',
@@ -99,7 +99,7 @@ final List<ScriptureReference> scriptureReferences = [
   ),
 
   // Upanishads
-  ScriptureReference(
+  const ScriptureReference(
     id: 'isha-1',
     verseId: 'isha-1',
     title: 'Isha Upanishad 1',
@@ -108,7 +108,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.advanced,
     estimatedMinutes: 12,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'brhad-1-3-28',
     verseId: 'brhad-1-3-28',
     title: 'Asato Ma',
@@ -117,7 +117,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.intermediate,
     estimatedMinutes: 8,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'mundaka-3-1-6',
     verseId: 'mundaka-3-1-6',
     title: 'Mundaka 3.1.6',
@@ -126,7 +126,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.advanced,
     estimatedMinutes: 12,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'kena-1-1',
     verseId: 'kena-1-1',
     title: 'Kena 1.1',
@@ -135,7 +135,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.advanced,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'katha-1-2-23',
     verseId: 'katha-1-2-23',
     title: 'Katha 1.2.23',
@@ -144,7 +144,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.advanced,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'taittiriya-1-11-1',
     verseId: 'taittiriya-1-11-1',
     title: 'Taittiriya 1.11.1',
@@ -153,7 +153,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.intermediate,
     estimatedMinutes: 10,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'mandukya-1',
     verseId: 'mandukya-1',
     title: 'Mandukya 1',
@@ -162,7 +162,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.advanced,
     estimatedMinutes: 12,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'chandogya-6-8-7',
     verseId: 'chandogya-6-8-7',
     title: 'Tat Tvam Asi',
@@ -171,7 +171,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.advanced,
     estimatedMinutes: 12,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'isha-shanti',
     verseId: 'isha-shanti',
     title: 'Shanti Mantra (Isha)',
@@ -180,7 +180,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 6,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'svetasvatara-6-23',
     verseId: 'svetasvatara-6-23',
     title: 'Sveta?vatara 6.23',
@@ -191,7 +191,7 @@ final List<ScriptureReference> scriptureReferences = [
   ),
 
   // Mantras / devotional prayers
-  ScriptureReference(
+  const ScriptureReference(
     id: 'gayatri-mantra',
     verseId: 'gayatri-mantra',
     title: 'Gayatri Mantra',
@@ -200,7 +200,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 5,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'mahamrityunjaya',
     verseId: 'mahamrityunjaya',
     title: 'Mahamrityunjaya Mantra',
@@ -209,7 +209,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 6,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'ganesha-vakratunda',
     verseId: 'ganesha-vakratunda',
     title: 'Vakratunda Mahakaya',
@@ -218,7 +218,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 4,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'vishnu-shantakaram',
     verseId: 'vishnu-shantakaram',
     title: 'Shantakaram Bhujagashayanam',
@@ -227,7 +227,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 6,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'shiva-panchakshari',
     verseId: 'shiva-panchakshari',
     title: 'Panchakshari Mantra',
@@ -236,7 +236,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 4,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'devi-sarva-mangala',
     verseId: 'devi-sarva-mangala',
     title: 'Sarva Mangala Maangalye',
@@ -245,7 +245,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 5,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'hanuman-buddhir-balam',
     verseId: 'hanuman-buddhir-balam',
     title: 'Buddhir Balam',
@@ -254,7 +254,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 4,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'navarna-mantra',
     verseId: 'navarna-mantra',
     title: 'Navarna Mantra',
@@ -263,7 +263,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 4,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'saraswati-vandana',
     verseId: 'saraswati-vandana',
     title: 'Saraswati Vandana',
@@ -272,7 +272,7 @@ final List<ScriptureReference> scriptureReferences = [
     difficulty: DifficultyLevel.beginner,
     estimatedMinutes: 5,
   ),
-  ScriptureReference(
+  const ScriptureReference(
     id: 'hare-krishna-mahamantra',
     verseId: 'hare-krishna-mahamantra',
     title: 'Hare Krishna Mahamantra',
@@ -287,7 +287,9 @@ List<ScriptureCollection> get scriptureCollections {
   // Helpers to compute estimated totals by summing reference minutes.
   int sumMinutes(Iterable<String> ids) {
     final byId = {for (final r in scriptureReferences) r.id: r};
-    return ids.map((id) => byId[id]?.estimatedMinutes ?? 0).fold(0, (a, b) => a + b);
+    return ids
+        .map((id) => byId[id]?.estimatedMinutes ?? 0)
+        .fold(0, (a, b) => a + b);
   }
 
   final gitaRefs = scriptureReferences
@@ -364,7 +366,7 @@ List<ScriptureCollection> get scriptureCollections {
 
 List<ReadingPlan> get readingPlans {
   // Helper to build a sequence cycling through a list to match duration.
-  List<ReadingPlanEntry> _cycle(List<String> ids, int duration,
+  List<ReadingPlanEntry> cycle(List<String> ids, int duration,
       {int minutes = 10, String? guidancePrefix}) {
     final entries = <ReadingPlanEntry>[];
     for (var i = 0; i < duration; i++) {
@@ -373,9 +375,8 @@ List<ReadingPlan> get readingPlans {
         dayNumber: i + 1,
         verseId: verseId,
         estimatedMinutes: minutes,
-        guidance: guidancePrefix == null
-            ? null
-            : '$guidancePrefix Day ${i + 1}',
+        guidance:
+            guidancePrefix == null ? null : '$guidancePrefix Day ${i + 1}',
       ));
     }
     return entries;
@@ -423,7 +424,8 @@ List<ReadingPlan> get readingPlans {
       difficulty: DifficultyLevel.beginner,
       estimatedDailyMinutes: 10,
       type: PlanType.beginner,
-      entries: _cycle(foundationIds, 7, minutes: 10, guidancePrefix: 'Reflect on'),
+      entries:
+          cycle(foundationIds, 7, minutes: 10, guidancePrefix: 'Reflect on'),
     ),
     ReadingPlan(
       id: 'plan-21-gita',
@@ -434,7 +436,7 @@ List<ReadingPlan> get readingPlans {
       difficulty: DifficultyLevel.intermediate,
       estimatedDailyMinutes: 12,
       type: PlanType.intermediate,
-      entries: _cycle(gitaIds, 21, minutes: 12, guidancePrefix: 'Study'),
+      entries: cycle(gitaIds, 21, minutes: 12, guidancePrefix: 'Study'),
     ),
     ReadingPlan(
       id: 'plan-beginner-dharma',
@@ -445,8 +447,7 @@ List<ReadingPlan> get readingPlans {
       difficulty: DifficultyLevel.beginner,
       estimatedDailyMinutes: 8,
       type: PlanType.beginner,
-      entries: _cycle(beginnerIds, 14, minutes: 8, guidancePrefix: 'Practice'),
+      entries: cycle(beginnerIds, 14, minutes: 8, guidancePrefix: 'Practice'),
     ),
   ];
 }
-

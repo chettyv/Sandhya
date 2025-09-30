@@ -11,6 +11,7 @@ import '../widgets/reading_plan_card.dart';
 import '../models/reading_plan.dart';
 import '../models/daily_verse.dart';
 import '../services/content_cache_service.dart';
+import '../models/cached_content.dart';
 
 // Uses app-wide Material 3 theme configured in AppTheme via MaterialApp
 
@@ -158,6 +159,7 @@ class ExplorePage extends ConsumerWidget {
                               }
                               if (verses.isNotEmpty) {
                                 await ref.read(contentCacheServiceProvider).preloadEssentialContent(verses);
+                                if (!context.mounted) return;
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(content: Text('Downloaded ${verses.length} items')),
                                 );
@@ -180,6 +182,7 @@ class ExplorePage extends ConsumerWidget {
   Future<void> _downloadVerse(BuildContext context, WidgetRef ref, DailyVerse verse) async {
     final svc = ref.read(contentCacheServiceProvider);
     await svc.cacheVerse(verse, source: CacheSource.downloaded);
+    if (!context.mounted) return;
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(content: Text('Saved for offline use')),
     );
@@ -239,7 +242,7 @@ class _Filters extends ConsumerWidget {
 
     return Wrap(
       spacing: 8,
-      runSpacing: -8,
+      runSpacing: 8,
       children: [
         chip(
           label: 'Bhagavad Gita',

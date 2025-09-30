@@ -19,7 +19,7 @@ import '../widgets/streak_bubbles.dart';
 import '../widgets/tts_player.dart';
 import '../core/locale_utils.dart';
 import '../widgets/offline_indicator.dart';
-import '../providers/daily_content_provider.dart' show verseFeedProvider; // ensure visibility
+// ensure visibility
 import '../providers/app_lifecycle_provider.dart';
 import '../providers/day_provider.dart';
 
@@ -197,7 +197,7 @@ class HomePage extends ConsumerWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 
   Future<void> _openShlokaModal(BuildContext context, WidgetRef ref, DailyVerse verse) async {

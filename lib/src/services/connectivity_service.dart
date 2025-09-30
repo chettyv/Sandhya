@@ -8,7 +8,7 @@ class ConnectivityService {
   static const _keyLastOnline = 'connectivity_last_online';
 
   final _controller = StreamController<bool>.broadcast();
-  StreamSubscription<List<ConnectivityResult>>? _sub;
+  StreamSubscription<ConnectivityResult>? _sub;
 
   bool _isOnline = true;
   bool get isOnline => _isOnline;
@@ -18,8 +18,8 @@ class ConnectivityService {
   Future<void> start() async {
     _isOnline = await _checkNow();
     _controller.add(_isOnline);
-    _sub = Connectivity().onConnectivityChanged.listen((results) async {
-      final online = results.any((r) => r == ConnectivityResult.wifi || r == ConnectivityResult.mobile || r == ConnectivityResult.ethernet);
+    _sub = Connectivity().onConnectivityChanged.listen((result) async {
+      final online = _isOnlineResult(result);
       if (online != _isOnline) {
         _isOnline = online;
         _controller.add(online);
@@ -37,8 +37,14 @@ class ConnectivityService {
   }
 
   Future<bool> _checkNow() async {
-    final results = await Connectivity().checkConnectivity();
-    return results.any((r) => r == ConnectivityResult.wifi || r == ConnectivityResult.mobile || r == ConnectivityResult.ethernet);
+    final result = await Connectivity().checkConnectivity();
+    return _isOnlineResult(result);
+  }
+
+  bool _isOnlineResult(ConnectivityResult result) {
+    return result == ConnectivityResult.wifi ||
+        result == ConnectivityResult.mobile ||
+        result == ConnectivityResult.ethernet;
   }
 
   Future<DateTime?> lastOnlineAt() async {
@@ -57,4 +63,3 @@ final connectivityServiceProvider = Provider<ConnectivityService>((ref) {
   ref.onDispose(() => svc.stop());
   return svc;
 });
-

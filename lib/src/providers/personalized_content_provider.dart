@@ -10,7 +10,7 @@ import 'user_profile_provider.dart';
 /// to the user's profile preferences. Uses a soft scoring system to preserve variety.
 final personalizedVerseFeedProvider = Provider<List<DailyVerse>>((ref) {
   final profile = ref.watch(userProfileProvider);
-  final base = sampleVerses; // Using sample data as the base feed.
+  const base = sampleVerses; // Using sample data as the base feed.
   if (base.isEmpty) return const <DailyVerse>[];
 
   String aggregate(DailyVerse v) {
@@ -26,7 +26,10 @@ final personalizedVerseFeedProvider = Provider<List<DailyVerse>>((ref) {
       v.prayerText,
       v.journalPrompt,
     ];
-    return parts.where((e) => e != null && e!.trim().isNotEmpty).map((e) => e!.toLowerCase()).join(' \n ');
+    return parts
+        .where((e) => e != null && e.trim().isNotEmpty)
+        .map((e) => e!.toLowerCase())
+        .join(' \n ');
   }
 
   final tradition = profile.traditionEnum;
@@ -36,9 +39,19 @@ final personalizedVerseFeedProvider = Provider<List<DailyVerse>>((ref) {
       case SpiritualTradition.shaivism:
         return const [DeityPreference.shiva];
       case SpiritualTradition.vaishnavism:
-        return const [DeityPreference.vishnu, DeityPreference.krishna, DeityPreference.rama, DeityPreference.narayana];
+        return const [
+          DeityPreference.vishnu,
+          DeityPreference.krishna,
+          DeityPreference.rama,
+          DeityPreference.narayana
+        ];
       case SpiritualTradition.shaktism:
-        return const [DeityPreference.devi, DeityPreference.durga, DeityPreference.lakshmi, DeityPreference.saraswati];
+        return const [
+          DeityPreference.devi,
+          DeityPreference.durga,
+          DeityPreference.lakshmi,
+          DeityPreference.saraswati
+        ];
       case SpiritualTradition.smartism:
         return const [
           DeityPreference.ganesha,
@@ -98,10 +111,8 @@ final personalizedVerseFeedProvider = Provider<List<DailyVerse>>((ref) {
     return s;
   }
 
-  final ranked = base
-      .map((v) => (verse: v, sc: score(v)))
-      .toList()
-      ..sort((a, b) => b.sc.compareTo(a.sc));
+  final ranked = base.map((v) => (verse: v, sc: score(v))).toList()
+    ..sort((a, b) => b.sc.compareTo(a.sc));
 
   // Preserve variety by interleaving: top 1/3, mid 1/3, low 1/3
   final third = (ranked.length / 3).ceil();
@@ -109,7 +120,8 @@ final personalizedVerseFeedProvider = Provider<List<DailyVerse>>((ref) {
   final mid = ranked.skip(third).take(third).map((e) => e.verse).toList();
   final low = ranked.skip(third * 2).map((e) => e.verse).toList();
   final output = <DailyVerse>[];
-  final maxLen = [top.length, mid.length, low.length].reduce((a, b) => a > b ? a : b);
+  final maxLen =
+      [top.length, mid.length, low.length].reduce((a, b) => a > b ? a : b);
   for (var i = 0; i < maxLen; i++) {
     if (i < top.length) output.add(top[i]);
     if (i < mid.length) output.add(mid[i]);

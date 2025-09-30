@@ -186,6 +186,7 @@ class _ProfileSetupPageState extends ConsumerState<ProfileSetupPage> {
                     OutlinedButton(
                       onPressed: () async {
                         if (!_formKey.currentState!.validate()) return;
+                        final navigator = Navigator.of(context);
                         await notifier.updateBasicInfo(
                           name: _nameController.text.trim(),
                           email: _emailController.text.trim(),
@@ -201,7 +202,8 @@ class _ProfileSetupPageState extends ConsumerState<ProfileSetupPage> {
                           time: _notifTime,
                           audioEnabled: _audioEnabled,
                         );
-                        if (mounted) Navigator.of(context).pop();
+                        if (!context.mounted) return;
+                        navigator.pop();
                       },
                       child: const Text('Save & Continue'),
                     ),
@@ -220,4 +222,3 @@ class _ProfileSetupPageState extends ConsumerState<ProfileSetupPage> {
     );
   }
 }
-

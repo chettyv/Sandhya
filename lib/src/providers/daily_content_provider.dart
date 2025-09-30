@@ -4,8 +4,8 @@ import '../core/sample_data.dart';
 import '../models/daily_verse.dart';
 import 'personalized_content_provider.dart';
 import 'user_profile_provider.dart';
-import 'content_cache_provider.dart';
 import 'day_provider.dart';
+import '../services/content_cache_service.dart';
 
 final verseFeedProvider = Provider<List<DailyVerse>>((ref) => sampleVerses);
 

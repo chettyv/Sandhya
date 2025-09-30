@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -49,7 +48,8 @@ class ContentCacheService {
 
   Future<void> _saveIndex(List<CachedContent> items) async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_indexKey, jsonEncode(items.map((e) => e.toJson()).toList()));
+    await prefs.setString(
+        _indexKey, jsonEncode(items.map((e) => e.toJson()).toList()));
   }
 
   Future<int> _currentSizeBytes(List<CachedContent>? idx) async {
@@ -91,7 +91,8 @@ class ContentCacheService {
     await _saveIndex(index);
   }
 
-  Future<CachedContent?> _findMeta(String verseId, List<CachedContent> idx) async {
+  Future<CachedContent?> _findMeta(
+      String verseId, List<CachedContent> idx) async {
     try {
       return idx.firstWhere((e) => e.verseId == verseId);
     } catch (_) {
@@ -99,7 +100,8 @@ class ContentCacheService {
     }
   }
 
-  Future<void> cacheVerse(DailyVerse verse, {CacheSource source = CacheSource.embedded, Duration? ttl}) async {
+  Future<void> cacheVerse(DailyVerse verse,
+      {CacheSource source = CacheSource.embedded, Duration? ttl}) async {
     final file = await _fileForVerse(verse.id);
     final payload = jsonEncode(verse.toJson());
     await file.writeAsString(payload, flush: true);
@@ -174,4 +176,3 @@ class ContentCacheService {
 final contentCacheServiceProvider = Provider<ContentCacheService>((ref) {
   return ContentCacheService();
 });
-

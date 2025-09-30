@@ -29,16 +29,18 @@ class _Chip extends StatelessWidget {
     Color bg;
     if (!status.isOnline && !status.canOperateOffline) {
       bg = cs.errorContainer;
-    } else if (status.cacheStatus == CacheHealth.fullyCached || status.essentialContentCached) {
+    } else if (status.cacheStatus == CacheHealth.fullyCached ||
+        status.essentialContentCached) {
       bg = cs.tertiaryContainer;
     } else if (status.cacheStatus == CacheHealth.partiallyCached) {
       bg = cs.secondaryContainer;
     } else {
-      bg = cs.surfaceVariant;
+      bg = cs.surfaceContainerHighest;
     }
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-      decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(999)),
+      decoration:
+          BoxDecoration(color: bg, borderRadius: BorderRadius.circular(999)),
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -70,14 +72,17 @@ class _Card extends StatelessWidget {
               children: [
                 Icon(status.isOnline ? Icons.wifi : Icons.wifi_off),
                 const SizedBox(width: 8),
-                Text(status.statusMessage, style: Theme.of(context).textTheme.titleSmall),
+                Text(status.statusMessage,
+                    style: Theme.of(context).textTheme.titleSmall),
               ],
             ),
             const SizedBox(height: 8),
-            Text('Cached items: ${status.totalCachedItems}', style: Theme.of(context).textTheme.bodySmall),
+            Text('Cached items: ${status.totalCachedItems}',
+                style: Theme.of(context).textTheme.bodySmall),
             if (status.lastOnlineAt case final d?) ...[
               const SizedBox(height: 4),
-              Text('Last online: ${d.toLocal()}', style: Theme.of(context).textTheme.bodySmall),
+              Text('Last online: ${d.toLocal()}',
+                  style: Theme.of(context).textTheme.bodySmall),
             ],
           ],
         ),
@@ -85,4 +90,3 @@ class _Card extends StatelessWidget {
     );
   }
 }
-

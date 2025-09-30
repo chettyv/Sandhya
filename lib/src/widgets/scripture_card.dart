@@ -80,7 +80,7 @@ class ScriptureCard extends StatelessWidget {
               const SizedBox(height: 10),
               Wrap(
                 spacing: 8,
-                runSpacing: -8,
+                runSpacing: 8,
                 children: [
                   Container(
                     padding:
@@ -123,4 +123,3 @@ class ScriptureCard extends StatelessWidget {
     );
   }
 }
-

@@ -15,6 +15,9 @@ class UserProfileNotifier extends StateNotifier<UserProfile> {
     Future.microtask(_load);
   }
 
+  // Test-only constructor: initializes state without scheduling any async loads.
+  UserProfileNotifier.test(this.ref, UserProfile initial) : super(initial);
+
   final Ref ref;
 
   PersistenceService get _store => ref.read(persistenceServiceProvider);
