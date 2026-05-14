@@ -83,12 +83,13 @@ Husky hooks are installed automatically by the `prepare` script that runs after 
 ## Common commands
 
 ```bash
-pnpm build         # Build every workspace
-pnpm typecheck     # Typecheck every workspace
-pnpm lint          # ESLint across the repo
-pnpm format        # Prettier write
-pnpm format:check  # Prettier check (CI uses this)
-pnpm test          # Vitest in every workspace
+pnpm build          # Build every workspace
+pnpm typecheck      # Typecheck every workspace
+pnpm lint           # ESLint across the repo
+pnpm format         # Prettier write
+pnpm format:check   # Prettier check (CI uses this)
+pnpm test           # Vitest in every workspace
+pnpm secrets:scan   # secretlint over the whole repo (also runs on staged files pre-commit)
 
 # Per-package, e.g.:
 pnpm --filter @dharma-daily/shared-types build

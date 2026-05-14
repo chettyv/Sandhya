@@ -49,10 +49,13 @@ Subject is lowercase, imperative, no trailing period. Examples:
 
 Installed automatically by `pnpm install` (via Husky's `prepare` script). They run:
 
-- `lint-staged` → ESLint --fix and Prettier on staged files
+- `lint-staged` → on every staged file:
+  - **`secretlint`** — scans for API keys, tokens, and project-specific secret patterns (Supabase, Anthropic, OpenAI, Google, RevenueCat). Configured in `.secretlintrc.json`.
+  - `eslint --fix` on TS/JS files
+  - `prettier --write` on TS/JS and JSON/MD/YAML files
 - `commitlint` → validates commit messages
 
-Do not bypass them (`--no-verify`) unless explicitly approved.
+Do not bypass them (`--no-verify`) unless explicitly approved. If secretlint flags a false positive on a known-safe value, add the file or the specific line to `.secretlintignore` (create it if missing) — do not commit by skipping the hook.
 
 ## Hard rules (from `CLAUDE.md` — apply to humans and AI alike)
 

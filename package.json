@@ -17,6 +17,7 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "test": "pnpm -r run test",
+    "secrets:scan": "secretlint \"**/*\" --secretlintignore .gitignore",
     "clean": "pnpm -r exec rimraf dist .turbo coverage && rimraf node_modules",
     "prepare": "husky"
   },
@@ -24,6 +25,8 @@
     "@commitlint/cli": "^19.6.0",
     "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.39.4",
+    "@secretlint/secretlint-rule-pattern": "^13.0.0",
+    "@secretlint/secretlint-rule-preset-recommend": "^13.0.0",
     "@types/node": "^22.10.0",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
@@ -35,11 +38,15 @@
     "lint-staged": "^15.2.11",
     "prettier": "^3.4.2",
     "rimraf": "^6.0.1",
+    "secretlint": "^13.0.0",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0",
     "vitest": "^2.1.8"
   },
   "lint-staged": {
+    "*": [
+      "secretlint --secretlintignore .gitignore"
+    ],
     "*.{ts,tsx,js,jsx}": [
       "eslint --fix",
       "prettier --write"
