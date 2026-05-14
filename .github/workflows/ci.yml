@@ -22,11 +22,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 11.0.8
-          run_install: false
+      # Corepack reads the `packageManager` field in package.json and installs
+      # the pinned pnpm version. Must run before setup-node so pnpm is on PATH
+      # when setup-node configures its cache.
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare --activate
 
       - name: Setup Node
         uses: actions/setup-node@v4
