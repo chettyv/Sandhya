@@ -1,0 +1,11 @@
+{
+  "name": "@dharma-daily/admin",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Placeholder. Real Next.js admin dashboard is scaffolded in Phase 8.",
+  "scripts": {
+    "build": "echo 'admin build: scaffolded in Phase 8 (developer plan §8)'",
+    "typecheck": "echo 'admin typecheck: scaffolded in Phase 8'",
+    "test": "echo 'admin tests: scaffolded in Phase 8'"
+  }
+}

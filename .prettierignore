@@ -1,0 +1,23 @@
+node_modules
+dist
+build
+out
+coverage
+.next
+.expo
+.expo-shared
+*.tsbuildinfo
+pnpm-lock.yaml
+apps/mobile/ios
+apps/mobile/android
+supabase/.branches
+supabase/.temp
+content/.cache
+content/.tmp
+*.docx
+*.svg
+
+# User-authored rules docs — do not reformat.
+CLAUDE.md
+**/AGENTS.md
+supabase/migrations/migration_checklist.md

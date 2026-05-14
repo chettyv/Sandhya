@@ -1,0 +1,8 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+# Allowlist for native post-install scripts (pnpm 11+ requires explicit approval).
+# Vitest depends on esbuild's native binary — approved.
+allowBuilds:
+  esbuild: true

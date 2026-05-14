@@ -1,0 +1,11 @@
+{
+  "name": "@dharma-daily/mobile",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Placeholder. Real Expo + React Native app is scaffolded in Phase 6.",
+  "scripts": {
+    "build": "echo 'mobile build: scaffolded in Phase 6 (developer plan §6)'",
+    "typecheck": "echo 'mobile typecheck: scaffolded in Phase 6'",
+    "test": "echo 'mobile tests: scaffolded in Phase 6'"
+  }
+}
