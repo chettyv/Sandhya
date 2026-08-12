@@ -231,3 +231,5 @@ All 80 live verses now carry Hindi verse translations and prose meanings (18.66 
 - Extracted, awaiting content passes: remaining 620 Gita verses (skeletons with correct Devanagari+IAST) — rolling writer waves next.
 - Next extraction queue: Katha, Prashna, Shvetashvatara, Taittiriya, Aitareya (Wikisource subpage texts — extend extractor with subpage fetching); Gayatri/Mahamrityunjaya/shanti mantras; Bhaja Govindam, Shiva Mahimna, Soundarya Lahari, Aditya Hridayam, Lalita Sahasranama (staged ITX — non-commercial terms OK in free mode).
 - Epics (Ramayana/Ramcharitmanas/Mahabharata): verse-bank format does not scale to 100k+ verses — bulk reader backed by the existing RAG corpus pipeline is the architecture; design next once Upanishads land.
+
+**Session-limit interruption (12 Aug):** the three Upanishad content-pass writers (Kena, Mundaka 1-2, Mundaka 3 + Mandukya) were terminated by the usage limit (resets 14:30 Europe/London) before writing any files. The 114 extracted skeletons are intact and committed. RELAUNCH the three writers with the same prompts after reset — prompts are reproducible from cycle 16.
