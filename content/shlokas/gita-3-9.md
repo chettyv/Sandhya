@@ -18,6 +18,7 @@ reviewed_by: Vaibhav Chetty
 **IAST:** yajñārthātkarmaṇo'nyatra loko'yaṃ karmabandhanaḥ । / tadarthaṃ karma kaunteya muktasaṅgaḥ samācara ॥3.9॥
 **Say it:** yug-YAAR-thaat kar-ma-NO-nya-tra lo-KO-yum KAR-ma-BUN-dha-nah / ta-DAR-thum KAR-ma kaun-TAY-ya mook-ta-SUN-gah sa-MAA-cha-ra
 **Meaning:** Except for action done as sacrifice, this world is bound by action; so act for that purpose, son of Kunti, free from attachment.
+**Meaning (hi):** यज्ञ के लिए किए गए कर्म को छोड़कर यह संसार कर्म से बँधा हुआ है; इसलिए हे कुन्तीपुत्र, आसक्ति से मुक्त होकर उसी उद्देश्य से कर्म करो।
 **Source:** Bhagavad Gita 3.9, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
