@@ -18,6 +18,7 @@ reviewed_by: Vaibhav Chetty
 **IAST:** yatkaroṣi yadaśnāsi yajjuhoṣi dadāsi yat । / yattapasyasi kaunteya tatkuruṣva madarpaṇam ॥9.27॥
 **Say it:** yut ka-ROH-shi ya-dush-NAA-si yuj joo-HOH-shi da-DAA-si yut / yut ta-PUS-ya-si kown-TAY-ya tut koo-ROOSH-va ma-DAR-pa-num
 **Meaning:** Whatever you do, whatever you eat, whatever you offer in sacrifice, whatever you give, whatever austerity you practise, O son of Kunti — do it as an offering to me.
+**Meaning (hi):** जो भी तुम करते हो, जो भी खाते हो, जो भी हवन में अर्पित करते हो, जो भी दान देते हो, जो भी तप करते हो, हे कुन्तीपुत्र — उसे मुझे अर्पण करके करो।
 **Source:** Bhagavad Gita 9.27, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%97%E0%A5%81%E0%A4%B9%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
@@ -35,6 +36,10 @@ reviewed_by: Vaibhav Chetty
 ## Meaning
 
 Where 9.26 blessed the small formal offering, this verse dissolves the boundary between worship and everything else. Work, meals, giving, discipline — the whole texture of an ordinary day — can be turned into offering by a shift of intention. Nothing new is added to the to-do list; what changes is the direction the action faces. This is the seed of what later devotional traditions systematise as arpaṇa or dedicating the fruits of action, and it pairs naturally with 2.47: act fully, release the result, and here, hand the result somewhere. For daily practice, pick one routine act — cooking, commuting, a meeting — and do it consciously as an offering.
+
+## Meaning (hi)
+
+जहाँ 9.26 ने छोटे औपचारिक अर्पण को आशीर्वाद दिया, वहीं यह श्लोक पूजा और बाक़ी सब कुछ के बीच की सीमा ही घोल देता है। काम, भोजन, दान, तप — एक साधारण दिन की पूरी बुनावट — नीयत के एक बदलाव से अर्पण बन सकती है। काम की सूची में कुछ नया नहीं जुड़ता; बदलती है वह दिशा जिसकी ओर कर्म का मुँह है। यही उस विचार का बीज है जिसे बाद की भक्ति परम्पराओं ने अर्पण — कर्मफल के समर्पण — के रूप में व्यवस्थित किया, और यह 2.47 के साथ सहज जोड़ी बनाता है: पूरा कर्म करो, परिणाम छोड़ो, और यहाँ, परिणाम को कहीं सौंप दो। दैनिक अभ्यास के लिए एक रोज़ का काम चुनिए — खाना बनाना, आना-जाना, एक मीटिंग — और उसे सचेत होकर अर्पण की तरह कीजिए।
 
 ## Reflection
 

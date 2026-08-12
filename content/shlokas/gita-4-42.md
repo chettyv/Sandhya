@@ -18,6 +18,7 @@ reviewed_by: Vaibhav Chetty
 **IAST:** tasmādajñānasambhūtaṃ hṛtsthaṃ jñānāsinātmanaḥ । / chittvainaṃ saṃśayaṃ yogamātiṣṭhottiṣṭha bhārata ॥4.42॥
 **Say it:** tas-MAAD ag-yaa-na-sam-BHOO-tam HRIT-stham gyaa-NAA-si-NAAT-ma-nah / chit-TVAI-nam san-SHA-yam YO-gam aa-TISH-thot-TISH-tha BHAA-ra-ta
 **Meaning:** Therefore, with the sword of knowledge cut this doubt of yours, born of ignorance and seated in the heart; take your stand in yoga and arise, O Bharata.
+**Meaning (hi):** इसलिए अज्ञान से उपजे, हृदय में बैठे अपने इस संशय को ज्ञान की तलवार से काट डालो; योग में खड़े हो जाओ और हे भारत, उठो।
 **Source:** Bhagavad Gita 4.42, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
@@ -38,6 +39,10 @@ reviewed_by: Vaibhav Chetty
 ## Meaning
 
 The closing verse of chapter four, and it ends in two commands: cut, then rise. The doubt Krishna targets is not honest inquiry — the whole chapter has encouraged questions — but the corrosive, heart-lodged hesitation born of ignorance, the kind that keeps you circling instead of acting. Its remedy is a sword, and the sword is knowledge: doubt of this kind is not soothed away, it is cut through by understanding clearly enough to decide. And then the verse refuses to let clarity stay theoretical — uttiṣṭha, stand up. For daily practice: when a decision has been examined enough, further deliberation is just doubt wearing a thoughtful mask. Cut it, take your stand, and move.
+
+## Meaning (hi)
+
+चौथे अध्याय का समापन श्लोक, और यह दो आदेशों पर ख़त्म होता है: काटो, फिर उठो। कृष्ण जिस संशय को निशाना बनाते हैं वह ईमानदार जिज्ञासा नहीं है — पूरा अध्याय सवालों को बढ़ावा देता रहा है — बल्कि अज्ञान से उपजी, दिल में धँसी वह गलाने वाली हिचक है जो तुम्हें कर्म के बजाय चक्कर कटवाती रहती है। उसका इलाज तलवार है, और तलवार है ज्ञान: इस क़िस्म का संशय पुचकारकर शांत नहीं किया जाता, उसे इतनी साफ़ समझ से काटा जाता है कि फ़ैसला हो सके। और फिर श्लोक स्पष्टता को सैद्धांतिक रह जाने नहीं देता — उत्तिष्ठ, खड़े हो जाओ। दैनिक अभ्यास के लिए: जब किसी फ़ैसले को काफ़ी परख लिया गया हो, तो आगे का विचार-विमर्श बस सोच-विचार का मुखौटा पहने संशय है। उसे काटो, अपना पक्ष लो, और चलो।
 
 ## Reflection
 

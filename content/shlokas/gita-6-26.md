@@ -18,6 +18,7 @@ reviewed_by: Vaibhav Chetty
 **IAST:** yato yato niścarati manaścañcalamasthiram । / tatastato niyamyaitadātmanyeva vaśaṃ nayet ॥6.26॥
 **Say it:** ya-TO ya-TO nish-CHA-ra-ti ma-nush-CHUN-cha-la-mus-THI-rum / ta-tus-ta-TO ni-yum-YAI-ta-DAAT-mun-YAY-va VA-shum na-yet
 **Meaning:** Wherever the restless, unsteady mind wanders off, from precisely there let one rein it in and bring it back under the control of the self alone.
+**Meaning (hi):** यह चंचल, अस्थिर मन जहाँ-जहाँ भटक जाए, वहीं-वहीं से उसे रोककर आत्मा के ही वश में वापस ले आए।
 **Source:** Bhagavad Gita 6.26, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
@@ -37,6 +38,10 @@ reviewed_by: Vaibhav Chetty
 ## Meaning
 
 The most forgiving instruction in the chapter. The mind is called cañcala and asthira — restless and unsteady — as a statement of fact, not a scolding. The practice is simply this: wherever the mind wanders off, from precisely there bring it back, and bring it back again. Every wandering is another repetition of the exercise, not proof of failure. Where the mind is to be brought — "into the self" — is read differently: Advaita hears resting the mind in the one Self, awareness itself, while Vishishtadvaita and Dvaita hear fixing it on the Lord as the object of meditation, and the verse gives room to both. What no tradition disputes: returning, without drama, is the whole technique.
+
+## Meaning (hi)
+
+इस अध्याय का सबसे क्षमाशील निर्देश। मन को चंचल और अस्थिर कहा गया है — यह तथ्य का बयान है, डाँट नहीं। अभ्यास बस इतना है: मन जहाँ-जहाँ भटक जाए, ठीक वहीं से उसे वापस ले आइए, और फिर से ले आइए। हर भटकन इस कसरत की एक और आवृत्ति है, असफलता का सबूत नहीं। मन को कहाँ लाना है — "आत्मा में" — इसे परम्पराएँ अलग-अलग पढ़ती हैं: अद्वैत को इसमें मन का एक ही आत्मा में, स्वयं बोध में, विश्राम सुनाई देता है, जबकि विशिष्टाद्वैत और द्वैत को ध्यान के विषय के रूप में भगवान पर मन को टिकाना — और श्लोक दोनों को जगह देता है। जिस बात पर कोई परम्परा विवाद नहीं करती: बिना नाटक के लौट आना ही पूरी तकनीक है।
 
 ## Reflection
 

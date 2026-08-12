@@ -18,6 +18,7 @@ reviewed_by: Vaibhav Chetty
 **IAST:** saktāḥ karmaṇyavidvāṃso yathā kurvanti bhārata । / kuryādvidvāṃstathāsaktaścikīrṣurlokasaṃgraham ॥3.25॥
 **Say it:** suk-TAAH kar-mun-ya-vid-VAAM-so ya-THAA koor-VUN-ti BHAA-ra-ta / koor-YAAD vid-VAAMS ta-THAA-suk-tush chi-KEER-shoor LO-ka-SUN-gra-hum
 **Meaning:** As the unwise act, attached to their work, Bharata, so should the wise act — unattached, wishing to hold the world together.
+**Meaning (hi):** हे भारत, जैसे अज्ञानी अपने कर्म में आसक्त होकर कर्म करते हैं, वैसे ही ज्ञानी को अनासक्त होकर, लोकसंग्रह की इच्छा से कर्म करना चाहिए।
 **Source:** Bhagavad Gita 3.25, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
@@ -38,6 +39,10 @@ reviewed_by: Vaibhav Chetty
 ## Meaning
 
 Watch how someone who deeply wants a result works: energetic, careful, thorough. Krishna says the wise should work with exactly that intensity — minus the clinging. Nothing about detachment licenses half-effort; the outward diligence stays identical, and only the inner motive changes, from personal gain to lokasangraha, holding the world together. For daily practice, this dissolves the excuse that spiritual maturity means caring less about doing things well. Traditions differ on who this "wise one" is — in Advaita, the knower has nothing left to gain and acts purely for the world's benefit, while Vishishtadvaita and Dvaita see even the realised soul continuing to act as loving service to the Lord — yet all agree the wise keep working.
+
+## Meaning (hi)
+
+देखो, जो किसी नतीजे को गहराई से चाहता है वह कैसे काम करता है: ऊर्जा से, सावधानी से, पूरी तरह। कृष्ण कहते हैं कि ज्ञानी को ठीक उसी तीव्रता से काम करना चाहिए — बस चिपकाव हटाकर। वैराग्य आधे-अधूरे प्रयास की छूट नहीं देता; बाहरी मेहनत ज्यों की त्यों रहती है, बदलता केवल भीतरी उद्देश्य है — निजी लाभ से लोकसंग्रह की ओर, संसार को जोड़े रखने की ओर। दैनिक अभ्यास के लिए यह वह बहाना गला देता है कि आध्यात्मिक परिपक्वता का मतलब काम को अच्छे से करने की परवाह कम करना है। यह "ज्ञानी" कौन है, इस पर परंपराएँ अलग हैं — अद्वैत में ज्ञाता के पास पाने को कुछ बचा नहीं, वह शुद्ध रूप से संसार के हित में कर्म करता है, जबकि विशिष्टाद्वैत और द्वैत में सिद्ध आत्मा भी भगवान की प्रेमपूर्ण सेवा के रूप में कर्म करती रहती है — फिर भी सब सहमत हैं कि ज्ञानी काम करते रहते हैं।
 
 ## Reflection
 

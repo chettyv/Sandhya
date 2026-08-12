@@ -18,6 +18,7 @@ reviewed_by: Vaibhav Chetty
 **IAST:** yadyadācarati śreṣṭhastattadevetaro janaḥ । / sa yatpramāṇaṃ kurute lokastadanuvartate ॥3.21॥
 **Say it:** yud-ya-DAA-cha-ra-ti SHRAYSH-thus tat-ta-DAY-vay-ta-ro ja-nah / sa yat pra-MAA-num koo-roo-tay LO-kas ta-da-noo-VAR-ta-tay
 **Meaning:** Whatever a great person does, other people do the same; whatever standard such a person sets, the world follows.
+**Meaning (hi):** श्रेष्ठ व्यक्ति जो-जो करता है, दूसरे लोग वही करते हैं; वह जो मानक स्थापित करता है, संसार उसी का अनुसरण करता है।
 **Source:** Bhagavad Gita 3.21, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
@@ -37,6 +38,10 @@ reviewed_by: Vaibhav Chetty
 ## Meaning
 
 People do not follow instructions; they follow examples. Whoever is looked up to — a parent, a manager, an elder sibling, anyone with even a little standing — is quietly setting the standard others live by, whether or not they intend to. Krishna offers this as a reason to keep acting even after personal need has fallen away: your conduct is never only yours. For daily practice, it turns influence into responsibility — notice who watches you, and let that sharpen how you show up. Commentators across Advaita, Vishishtadvaita, and Dvaita read this verse in essentially the same way, as the foundation for lokasangraha, acting for the world's cohesion — a rare point of broad agreement.
+
+## Meaning (hi)
+
+लोग निर्देशों का नहीं, उदाहरणों का पालन करते हैं। जिसे भी लोग आदर से देखते हैं — माता-पिता, मैनेजर, बड़ा भाई या बहन, थोड़ी भी प्रतिष्ठा वाला कोई भी — वह चुपचाप वह मानक तय कर रहा है जिस पर दूसरे जीते हैं, चाहे उसका इरादा हो या न हो। कृष्ण इसे इस बात की वजह बताते हैं कि निजी ज़रूरत ख़त्म हो जाने के बाद भी कर्म जारी रखो: तुम्हारा आचरण कभी सिर्फ़ तुम्हारा नहीं होता। दैनिक अभ्यास के लिए यह प्रभाव को ज़िम्मेदारी में बदल देता है — देखो कौन तुम्हें देखता है, और उसी से अपनी उपस्थिति को और सजग बनाओ। अद्वैत, विशिष्टाद्वैत और द्वैत के टीकाकार इस श्लोक को मूलतः एक ही तरह पढ़ते हैं — लोकसंग्रह की, यानी संसार को जोड़े रखने के लिए कर्म की नींव के रूप में — जो व्यापक सहमति का एक दुर्लभ बिंदु है।
 
 ## Reflection
 

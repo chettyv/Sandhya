@@ -38,6 +38,10 @@ reviewed_by: Vaibhav Chetty
 
 Work binds — unless it is done as an offering. The same task can chain you or free you; what changes is not the task but its direction. Action performed as yajna, as sacrifice, escapes the machinery of accumulating karma because it is not done to feed the self. For daily practice this reframes ordinary work: the email, the cooking, the caregiving can each be turned into an offering by dropping the grasping and dedicating the act. Traditions read yajna differently — Advaita commentators take it broadly as duty done for the Lord and cosmic order as purification, while Vishishtadvaita and Dvaita read it pointedly as worship of Vishnu, every act offered to him — and both readings fit the verse.
 
+## Meaning (hi)
+
+काम बाँधता है — जब तक वह अर्पण बनकर न किया जाए। एक ही काम तुम्हें जकड़ भी सकता है और मुक्त भी कर सकता है; बदलता काम नहीं, उसकी दिशा है। यज्ञ के रूप में, अर्पण के रूप में किया गया कर्म कर्म-संचय की मशीनरी से बच निकलता है, क्योंकि वह अहं को पालने के लिए नहीं किया जाता। दैनिक अभ्यास के लिए यह रोज़मर्रा के काम को नई नज़र देता है: ईमेल, खाना पकाना, देखभाल — पकड़ छोड़कर और कर्म को समर्पित करके इनमें से हर एक को अर्पण बनाया जा सकता है। यज्ञ को परंपराएँ अलग पढ़ती हैं — अद्वैत टीकाकार इसे व्यापक अर्थ में भगवान और लोक-व्यवस्था के लिए किया गया कर्तव्य मानते हैं जो शुद्धि करता है, जबकि विशिष्टाद्वैत और द्वैत इसे सीधे विष्णु की उपासना पढ़ते हैं, जिसमें हर कर्म उन्हें अर्पित है — और दोनों पाठ श्लोक में समाते हैं।
+
 ## Reflection
 
 Which ordinary task today could you perform as an offering rather than a transaction?

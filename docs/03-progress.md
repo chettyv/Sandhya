@@ -216,3 +216,7 @@ Founder review note: the 30 files gained `daily_pool` flags and `## Reflection` 
 ### Cycle 14 — 12 Aug 2026 — Pool expansion: 40 more verses live — DONE
 
 Four writer batches (ch4, ch5, ch6, ch9/15/18 incl. the charama shloka with side-by-side tradition readings). Writers honestly excluded 5.16, 6.16, 18.63 from the daily pool (backreferencing verses). Two machine-IAST artifacts caught and fixed (4.39 candrabindu, 18.63 ZWNJ). **Approved under the founder blanket directive ("I approve everything") with reviewer name applied — founder should spot-check these 40 files.** Live bank: 80 verses, 69-verse daily pool. Next: Hindi parity for the new 40, Chalisa ITRANS converter, Upanishads.
+
+### Cycle 15 — 12 Aug 2026 — Hindi parity (80/80) + Hanuman Chalisa extracted — DONE
+
+All 80 live verses now carry Hindi verse translations and prose meanings (18.66 three-reading note survives in Hindi). ITRANS→Devanagari converter built; Chalisa extracted with canonical alignment (43 units; split chaupai 36 merged; aarti colophon excluded; nukta + R^i handled; zero Latin leakage). Chalisa lands as draft skeletons pending its translation pass. Hindi added to already-approved files under the founder blanket directive — spot-check welcome.
