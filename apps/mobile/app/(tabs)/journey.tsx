@@ -110,6 +110,12 @@ export default function JourneyScreen() {
       <SectionHeader title="Your journey" />
       <Card>
         <ListRow
+          icon="book-outline"
+          title="Shloka bank"
+          subtitle="Verses with pronunciation, word meanings, and sources"
+          onPress={() => router.push("/shlokas")}
+        />
+        <ListRow
           icon="bookmark-outline"
           title={t("savedItems")}
           subtitle={`${savedCount} saved for later`}

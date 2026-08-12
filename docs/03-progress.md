@@ -132,3 +132,19 @@ Founder decisions received: **payment rail = native IAP via RevenueCat**; keep w
 - **Verified:** built in both modes, rendered in browser (draft banner, title/meta correct), lint/typecheck/tests/backend checks pass, `apps/web` builds after content-tools via workspace dependency ordering. Fixed en route: `apps/**/*.mjs` missing from the lint tsconfig; build scripts added to the relaxed-lint block alongside `scripts/**`.
 
 **Next:** remaining four §5 page drafts → scoped AI on today's content → EAS build config for the store pipeline.
+
+### Cycle 6b — 12 Aug 2026 — Two more arrival page drafts — DONE
+
+Ekadashi and diya pages drafted (same rules: no scripture quotes in drafts, variation explicit). Four of six §5 pages now await founder review. Remaining: Lakshmi puja at home, Hanuman Chalisa meaning.
+
+### Cycle 7 — 12 Aug 2026 — Shloka bank (free product first — founder priority flip) — IN PROGRESS
+
+Founder redirected priorities: **free product quality first — shloka bank with word-by-word meanings; monetisation last.** IAP work parked (built through sandbox-ready; no further effort until product is good).
+
+- **`shloka` doc type** in content-tools: three-register block + `## Word by word` gloss lines + `## Meaning` prose, provenance required (`source_url`, Source label), approved-needs-named-reviewer. Template at `content/shlokas/_template.md`. 12 tests pass.
+- **`pnpm content:generate-shloka-bank`** → bundled `apps/mobile/src/data/shlokaBank.json` (approved-only; `--allow-draft` dev; `--check` staleness). Verified end-to-end with a fixture.
+- **App:** `src/lib/shlokas.ts` (day-of-year rotation like reflections), Today-tab "Today's shloka" card (hidden while bank is empty), `/shlokas` bank list, `/shloka/[slug]` detail with registers card, word-by-word rows, "the meaning behind it" prose, reflection. Journey tab links the bank. Typecheck/lint/tests pass; typed routes regenerated.
+- **Content reality:** the bank ships empty until verses are copied from rights-cleared sources and reviewed — Wikisource Sanskrit Gita is staged but marked "attribution/share-alike review needed" in the inventory; Besant/Bhagavan Das 1905 (word-by-word translation, likely public domain) is staged as OCR. **Populating the bank = founder/reviewer work with those sources** (your-actions #3 note expanded).
+- Open question for founder: the message mentioned "our qu" — quiz? questions? Clarify what that refers to.
+
+**Next:** verify Today-tab render with populated fixture in browser · remaining two §5 drafts · scoped AI (depth layer on the daily shloka).

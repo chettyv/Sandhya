@@ -57,7 +57,8 @@
     "secrets:scan": "secretlint \"**/*\" --secretlintignore .gitignore",
     "clean": "pnpm -r exec rimraf dist .turbo coverage && rimraf node_modules",
     "prepare": "husky",
-    "content:generate-challenge-seed": "pnpm --filter @dharma-daily/content-tools build && node scripts/generate-challenge-seed.mjs"
+    "content:generate-challenge-seed": "pnpm --filter @dharma-daily/content-tools build && node scripts/generate-challenge-seed.mjs",
+    "content:generate-shloka-bank": "pnpm --filter @dharma-daily/content-tools build && node scripts/generate-shloka-bank.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",

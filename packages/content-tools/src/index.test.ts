@@ -155,6 +155,49 @@ describe("challenge session validation", () => {
     );
   });
 
+  it("validates shloka documents with word-by-word gloss", () => {
+    const shloka = `---
+doc_type: shloka
+shloka_slug: gita-2-47
+text_ref: Bhagavad Gita 2.47
+tradition_primary: general
+licence: original
+copyright_status: Example fixture.
+source_url: https://example.org
+review_status: draft
+---
+
+## Shloka
+
+**Devanagari:** देवी
+**IAST:** devī
+**Say it:** DAY-vee
+**Meaning:** The goddess.
+**Source:** Example text 1.1, tr. Example Translator, public domain, https://example.org
+
+## Word by word
+
+- **devī** — the goddess
+
+## Meaning
+
+Prose meaning.
+`;
+    expect(validateMarkdownDocument(shloka, "gita-2-47.md")).toEqual([]);
+
+    const noWords = shloka.replace("- **devī** — the goddess\n", "");
+    expect(
+      validateMarkdownDocument(noWords, "gita-2-47.md").some((issue) =>
+        issue.includes("Word by word"),
+      ),
+    ).toBe(true);
+
+    const approvedNoReviewer = shloka.replace("review_status: draft", "review_status: approved");
+    expect(validateMarkdownDocument(approvedNoReviewer, "gita-2-47.md")).toContain(
+      "gita-2-47.md: approved shlokas must name a reviewer in reviewed_by",
+    );
+  });
+
   it("rejects a non-integer night", () => {
     const badNight = validSession.replace("night: 1", "night: first");
     expect(validateMarkdownDocument(badNight, "night-01.md")).toContain(

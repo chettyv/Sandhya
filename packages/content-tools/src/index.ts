@@ -128,6 +128,10 @@ export function validateMarkdownDocument(source: string, displayFile = "content.
     return validateWebPage(frontmatter, body).map((issue) => `${displayFile}: ${issue}`);
   }
 
+  if (frontmatter.doc_type === "shloka") {
+    return validateShloka(frontmatter, body).map((issue) => `${displayFile}: ${issue}`);
+  }
+
   for (const field of REQUIRED_FIELDS) {
     if (!(field in frontmatter)) issues.push(`missing required field: ${field}`);
   }
@@ -247,6 +251,61 @@ function validateChallengeSession(
     }
   }
 
+  return issues;
+}
+
+// Free daily shloka-bank entries (content/shlokas/**): one verse per file with
+// all three registers, a word-by-word gloss, and a prose meaning. The quoted
+// text must be copied from a named cleared source, never written from memory —
+// the Source label and source_url carry that provenance.
+const SHLOKA_DOC_SECTIONS = ["Shloka", "Word by word", "Meaning"] as const;
+
+function validateShloka(frontmatter: Record<string, string | boolean>, body: string): string[] {
+  const issues: string[] = [];
+  if (
+    typeof frontmatter.shloka_slug !== "string" ||
+    !/^[a-z0-9-]{3,80}$/.test(frontmatter.shloka_slug)
+  ) {
+    issues.push("shloka_slug must be lowercase-hyphenated (3-80 chars)");
+  }
+  for (const field of ["text_ref", "tradition_primary", "copyright_status", "source_url"]) {
+    const value = frontmatter[field];
+    if (typeof value !== "string" || !value.trim()) {
+      issues.push(`${field} must be a non-empty string`);
+    }
+  }
+  if (
+    typeof frontmatter.review_status !== "string" ||
+    !SESSION_REVIEW_STATUSES.includes(frontmatter.review_status as SessionReviewStatus)
+  ) {
+    issues.push(`review_status must be one of: ${SESSION_REVIEW_STATUSES.join(", ")}`);
+  }
+  if (
+    frontmatter.review_status === "approved" &&
+    (typeof frontmatter.reviewed_by !== "string" || !frontmatter.reviewed_by.trim())
+  ) {
+    issues.push("approved shlokas must name a reviewer in reviewed_by");
+  }
+  const sectionTitles = [...body.matchAll(/^##\s+(.+?)\s*$/gm)].map((match) => match[1] ?? "");
+  for (const section of SHLOKA_DOC_SECTIONS) {
+    if (!sectionTitles.includes(section)) issues.push(`missing required section: ## ${section}`);
+  }
+  const shlokaBody = extractSection(body, "Shloka");
+  if (shlokaBody !== null) {
+    for (const label of SHLOKA_REQUIRED_LABELS) {
+      if (!new RegExp(`^\\*\\*${label}:\\*\\*\\s+\\S`, "m").test(shlokaBody)) {
+        issues.push(`## Shloka must include a **${label}:** line`);
+      }
+    }
+    const devanagariLine = shlokaBody.match(/^\*\*Devanagari:\*\*\s+(.+)$/m)?.[1];
+    if (devanagariLine && !/[ऀ-ॿ]/.test(devanagariLine)) {
+      issues.push("**Devanagari:** line contains no Devanagari characters");
+    }
+  }
+  const wordSection = extractSection(body, "Word by word");
+  if (wordSection !== null && !/^-\s+\*\*.+?\*\*\s+—\s+\S/m.test(wordSection)) {
+    issues.push("## Word by word must contain at least one `- **word** — meaning` line");
+  }
   return issues;
 }
 

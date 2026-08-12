@@ -12,6 +12,7 @@ import { calculateCurrentStreak, localDateKey, removeSavedItem, saveItem } from 
 import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
+import { dailyShloka } from "@/lib/shlokas";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -180,6 +181,8 @@ export default function HomeScreen() {
 
       <FeaturedChallengeCard />
 
+      <DailyShlokaCard />
+
       <LinearGradient
         colors={["#6E4A1E", "#142E34", "#0B0B0A"]}
         start={{ x: 0, y: 0 }}
@@ -333,6 +336,33 @@ export default function HomeScreen() {
         ))}
       </View>
     </Page>
+  );
+}
+
+function DailyShlokaCard() {
+  const router = useRouter();
+  const shloka = dailyShloka();
+  if (!shloka) return null;
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`Today's shloka: ${shloka.textRef}`}
+      onPress={() => router.push({ pathname: "/shloka/[slug]", params: { slug: shloka.slug } })}
+      className="mb-2 rounded-card border border-[#302C25] bg-surface p-4"
+    >
+      <View className="flex-row items-center justify-between">
+        <Text className="text-[11px] font-semibold uppercase text-saffron">
+          Today's shloka · {shloka.textRef}
+        </Text>
+        <Ionicons name="chevron-forward" size={16} color={colors.muted} />
+      </View>
+      <Text className="mt-2 text-[17px] leading-8 text-ink" numberOfLines={2}>
+        {shloka.devanagari}
+      </Text>
+      <Text className="mt-1 text-sm leading-5 text-muted" numberOfLines={2}>
+        {shloka.translation}
+      </Text>
+    </Pressable>
   );
 }
 
