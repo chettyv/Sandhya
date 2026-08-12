@@ -192,6 +192,13 @@ Founder's product evaluation surfaced three real flaws; all three fixed and brow
 
 Founder review note: the 30 files gained `daily_pool` flags and `## Reflection` sections since the last look — the SHIP-48H review covers these too.
 
+### Cycle 13 — 12 Aug 2026 — Ch3 drafts, Hindi launch set, loop analytics — DONE
+
+- **Ten chapter-3 karma-yoga verses drafted** (3.4–3.35 selection), all pool-flagged; 3.16 flagged for reviewer judgement (its "wheel" leans on 3.14–15). Daily pool now 32 pending review.
+- **Hindi for all 30 launch verses**: `**Meaning (hi):**` verse translations + `## Meaning (hi)` prose, natural register, tradition notes preserved; verified end-to-end through the generator (30/30 parsed; available languages en,hi — the Settings switcher activates on approval).
+- **Product-loop analytics**: onboarding_completed, daily_shloka_opened, shloka_viewed, reader_chapter_opened via the consent-gated telemetry; CI now fails on a stale bank (`generate-shloka-bank --check`).
+- Founder review scope is now **40 verse files** (30 launch + 10 ch3) + 6 web pages.
+
 ### NEXT SESSION — priorities (founder said don't stop)
 
 1. **Hanuman Chalisa into the bank:** staged `content/_staging/raw/hindi/sanskritdocuments_hanuman_chalisa_hi.itx` is clean but ITRANS-encoded — write an ITRANS→Devanagari converter (deterministic, mirrors the IAST work in `extract-gita-shlokas.mjs`) and emit draft files (free-mode legal with attribution; Hindi Wikisource page lookup failed on three title guesses — try their search API or the `hanumAnachAlisAsaMskRRita.itx` Sanskrit variant).
