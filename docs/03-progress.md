@@ -157,6 +157,16 @@ Directives: never stop to ask (questions go in 00-your-actions) · collect maxim
 - `docs/testing-in-expo-go.md` — phone testing guide; `configurePurchases` now try/caught so Expo Go's missing native module degrades instead of crashing startup.
 - your-actions: added notes pointer + the "our qu" question (non-blocking).
 
+### Cycle 9 — 12 Aug 2026 — Ship sprint (founder: live in 1–2 days) — IN PROGRESS
+
+Directive: don't stop until the app is ready; placeholders only for credentials. Realistic 48h surface = web (Expo web app + arrival site); stores stay queued (external timelines).
+
+- **Full Gita extracted: all 700 verses across 18 chapters** (chapter 16 re-fetched from Wikisource — the staged export had a truncated redirect page; supplement record stored with provenance). All validate.
+- **30-verse launch set being drafted by three parallel writers** (chapter 12 complete + 2.13/14/20/47/48/62/63/69/70/71): translation, word-by-word gloss, meaning prose, stress-marked pronunciation — per plan §4.4 (AI drafts, named human approves). Ship-gate unchanged: founder reviews + approves each file (SHIP-48H item 1 in your-actions).
+- Bank generator now natural-sorts (2.9 before 2.10; lexicographic bug); bank list screen rewritten as virtualized SectionList grouped by chapter (700-verse scale).
+- **All six §5 arrival pages now drafted** (added Lakshmi puja at home + Hanuman Chalisa meaning — the latter deliberately quotes no verses, per the named-edition rule).
+- README gains a Quickstart; **SHIP-48H checklist added to 00-your-actions** — the founder's exact 5-step path to live.
+
 ### NEXT SESSION — do these in order, no questions
 
 1. **Corpus extraction (top priority):** write `scripts/extract-gita-verses.mjs` — fetch the sanskritdocuments.org Bhagavad Gita (ITX/HTML per chapter; their terms allow distribution with attribution — record row in inventory) or parse the staged `content/_staging/raw/sanskrit/wikisource_bhagavad_gita_sa.jsonl`, plus the staged **Besant/Bhagavan Das 1905** OCR for word-by-word English. Emit draft `content/shlokas/gita-N-M.md` files (start: chapter 2 + chapter 12, ~90 verses) with Source lines citing the staged file + URL. Drafts only — ship-gate unchanged. Also run the remaining queue collection scripts (list in SOURCES-AND-ATTRIBUTION.md) to pull the ~58 metadata-only rows.

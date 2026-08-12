@@ -17,10 +17,11 @@ const tools = await import(
 );
 
 const entries = [];
+// Natural sort so gita-2-9 precedes gita-2-10 and chapter 2 precedes 12.
 const files = existsSync(contentDir)
   ? readdirSync(contentDir)
       .filter((file) => file.endsWith(".md") && !file.startsWith("_"))
-      .sort()
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
   : [];
 
 for (const file of files) {

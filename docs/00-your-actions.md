@@ -4,6 +4,18 @@ Things only you can do. Items are deleted when resolved, not marked done. Catego
 
 ---
 
+## SHIP-48H · The exact path to live in the next 1–2 days
+
+Web is the only surface that can be live to strangers this week (stores have external review timelines — items 1/1b below stay queued). In order:
+
+1. **Review + approve the 30 drafted verses** (chapter 12 complete + 10 chapter-2 essentials in `content/shlokas/`). For each file you're happy with: change `review_status: draft` → `approved` and put your name in `reviewed_by`. Then run `pnpm content:generate-shloka-bank`. This is the ship-gate — nothing sacred goes out unreviewed, and right now the reviewer is you.
+2. **Review + approve the 4 web pages** in `content/web/` the same way.
+3. **Create the production Supabase project** (item 11) → paste URL + anon key into `.env` (`EXPO_PUBLIC_SUPABASE_URL`, `EXPO_PUBLIC_SUPABASE_ANON_KEY`) → say "apply migrations" and I run them.
+4. **Buy the domain + create Cloudflare Pages** (item 9). Two deploys, both free: arrival site = upload `apps/web/dist` (build: `pnpm --filter @dharma-daily/web build`); app = upload `apps/mobile/dist` (build: `cd apps/mobile && npx expo export --platform web`). I'll wire both to exact commands once the domain exists.
+5. **Submit the sitemap** in Search Console (item 9).
+
+The app works without step 3 (offline bundled content, no sign-in) — steps 1, 2, 4 alone put a real product on a real URL.
+
 ## 0 · READ: two new notes written for you
 
 - **[docs/SOURCES-AND-ATTRIBUTION.md](SOURCES-AND-ATTRIBUTION.md)** — everything collected so far (242 sources staged on this machine), what attribution each class needs, which rows you can flip to approved now (pre-1929 translations + Sanskrit originals), and the short list of things only you can obtain (publisher permissions for modern translations; preferred editions). Corpus collection continues from the existing queue scripts listed there.

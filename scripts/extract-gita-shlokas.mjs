@@ -24,6 +24,19 @@ const records = readFileSync(sourcePath, "utf8")
   .split(/\n/)
   .filter(Boolean)
   .map((line) => JSON.parse(line));
+// Chapter 16 was truncated in the original export (redirect page); a
+// re-fetched record supplements it when present.
+const supplementPath = sourcePath.replace(".jsonl", "_ch16_refetch.jsonl");
+try {
+  for (const line of readFileSync(supplementPath, "utf8").split(/\n/).filter(Boolean)) {
+    const record = JSON.parse(line);
+    const index = records.findIndex((r) => r.title === record.title);
+    if (index >= 0) records[index] = record;
+    else records.push(record);
+  }
+} catch {
+  // no supplement staged
+}
 
 mkdirSync(outDir, { recursive: true });
 let written = 0;

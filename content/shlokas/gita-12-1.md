@@ -4,7 +4,7 @@ shloka_slug: gita-12-1
 text_ref: Bhagavad Gita 12.1
 tradition_primary: general
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated pending review; translation pending.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 review_status: draft
 reviewed_by: ""
@@ -14,14 +14,26 @@ reviewed_by: ""
 
 **Devanagari:** अर्जुन उवाच / एवं सततयुक्ता ये भक्तास्त्वां पर्युपासते । / ये चाप्यक्षरमव्यक्तं तेषां के योगवित्तमाः ॥12.1॥
 **IAST:** arjuna uvāca / evaṃ satatayuktā ye bhaktāstvāṃ paryupāsate । / ye cāpyakṣaramavyaktaṃ teṣāṃ ke yogavittamāḥ ॥12.1॥
-**Say it:** arjuna uvāca / evaṃ satatayuktā ye bhaktāstvāṃ paryupāsate । / ye cāpyakṣaramavyaktaṃ teṣāṃ ke yogavittamāḥ (draft — add stress CAPS in review)
-**Meaning:** (translation pending — align a cleared public-domain translation in review)
-**Source:** Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+**Say it:** ar-JOO-na oo-VAA-cha / AY-vam sa-ta-ta-YOOK-taa yay bhak-TAAS-tvaam par-yoo-PAA-sa-tay / yay CHAAP-yak-sha-ram av-YAK-tam TAY-shaam kay yo-ga-VIT-ta-maah
+**Meaning:** Arjuna said: Those devotees who worship you with such constant steadiness, and those who worship the imperishable and unmanifest — which of them understands yoga best?
+**Source:** Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
 
-- **(word)** — (add gloss in review; Besant/Bhagavan Das 1905 staged OCR is the word-by-word reference)
+- **arjunaḥ uvāca** — Arjuna said
+- **evam** — thus, in this way
+- **satata-yuktāḥ** — ever steadfast, constantly disciplined
+- **ye** — those who
+- **bhaktāḥ** — devotees
+- **tvām** — you
+- **paryupāsate** — worship, attend upon fully
+- **ye ca api** — and those who, moreover
+- **akṣaram** — the imperishable
+- **avyaktam** — the unmanifest
+- **teṣām** — among these
+- **ke** — which ones
+- **yoga-vittamāḥ** — the best knowers of yoga
 
 ## Meaning
 
-(Write the plain-prose meaning in review; keep scripture and commentary separate.)
+Arjuna opens the chapter on devotion with a practical question: who has the better grasp of yoga — the person who worships God as a personal presence with steady devotion, or the one who contemplates the formless, imperishable absolute? It is the question anyone building a practice eventually faces: do I direct my attention to a form I can love, or to a truth beyond all form? The chapter that follows is Krishna's answer. Traditions weigh that answer differently: Advaita readers tend to see worship of the personal form as a support on the way to formless realisation, while Vishishtadvaita and Dvaita readers hold personal devotion to be the highest path in itself.

@@ -31,7 +31,8 @@ Hard rules: no LLM calls from the client, no LangChain in v1, no separate vector
 ```
 DharmaDaily/
 ├── apps/
-│   ├── mobile/             # Expo consumer app
+│   ├── mobile/             # Expo consumer app (iOS, Android, web)
+│   ├── web/                # Static arrival site built from content/web markdown
 │   └── admin/              # Static admin moderation/content console
 ├── packages/
 │   ├── shared-types/       # Cross-package TS types (RAG schema, API contracts)
@@ -46,6 +47,15 @@ DharmaDaily/
 ├── pnpm-workspace.yaml
 └── tsconfig.base.json
 ```
+
+## Quickstart (run the app now)
+
+```bash
+pnpm install
+cd apps/mobile && npx expo start
+```
+
+Scan the QR with Expo Go on your phone ([full guide](docs/testing-in-expo-go.md)), or press `w` for the web build. The app runs fully offline on the bundled catalog; add `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` to `.env` for auth + live data.
 
 ## Prerequisites
 
