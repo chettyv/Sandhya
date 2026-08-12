@@ -1,0 +1,11 @@
+{
+  "work_id": "gretil_mirror_github_metadata",
+  "title": "GRETIL mirror repository",
+  "source_name": "INDOLOGY/GRETIL-mirror",
+  "source_url": "https://github.com/INDOLOGY/GRETIL-mirror",
+  "captured_at": "2026-06-19",
+  "download_status": "metadata_only",
+  "rights_status": "unclear_blanket_license",
+  "commercial_use_allowed": "unclear",
+  "notes": "The mirror is useful for stable Sanskrit source discovery and versioning, but GRETIL material needs per-file provenance and terms review before bulk storage or RAG ingestion."
+}

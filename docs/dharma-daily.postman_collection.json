@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "Dharma Daily backend",
+    "description": "Authenticated smoke requests for the Supabase REST and Edge Function backend. Set the collection variables before running; never store service-role or provider secrets here.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "supabase_url", "value": "https://YOUR_PROJECT.supabase.co" },
+    { "key": "anon_key", "value": "" },
+    { "key": "access_token", "value": "" },
+    { "key": "question", "value": "What does dharma mean in daily life?" },
+    { "key": "conversation_id", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Ask Dharma",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "apikey", "value": "{{anon_key}}" },
+          { "key": "Authorization", "value": "Bearer {{access_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"{{question}}\",\n  \"conversation_id\": \"{{conversation_id}}\"\n}"
+        },
+        "url": "{{supabase_url}}/functions/v1/ask"
+      }
+    },
+    {
+      "name": "Read own profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{anon_key}}" },
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": "{{supabase_url}}/rest/v1/profiles?select=id,display_name,language_pref,tradition_pref,timezone"
+      }
+    },
+    {
+      "name": "Read own conversations",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "apikey", "value": "{{anon_key}}" },
+          { "key": "Authorization", "value": "Bearer {{access_token}}" }
+        ],
+        "url": "{{supabase_url}}/rest/v1/conversations?select=id,title,created_at,updated_at&order=updated_at.desc"
+      }
+    },
+    {
+      "name": "Delete account (destructive)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "apikey", "value": "{{anon_key}}" },
+          { "key": "Authorization", "value": "Bearer {{access_token}}" },
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": { "mode": "raw", "raw": "{\n  \"confirmation\": \"DELETE\"\n}" },
+        "url": "{{supabase_url}}/functions/v1/account"
+      }
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "Dharma Daily",
+    "slug": "dharma-daily",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/dharma-daily-icon.png",
+    "scheme": "dharmadaily",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.dharmadaily.mobile",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/dharma-daily-icon.png",
+        "backgroundColor": "#26172B"
+      },
+      "predictiveBackGestureEnabled": true,
+      "package": "app.dharmadaily.mobile"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/dharma-daily-icon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-secure-store",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/dharma-daily-icon.png",
+          "imageWidth": 180,
+          "resizeMode": "contain",
+          "backgroundColor": "#26172B",
+          "dark": {
+            "backgroundColor": "#170F1B"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

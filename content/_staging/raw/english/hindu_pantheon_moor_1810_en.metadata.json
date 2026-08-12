@@ -1,0 +1,277 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760009.eu.archive.org",
+        "dir": "/0/items/in.gov.ignca.35409"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.gov.ignca.35409"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760009.eu.archive.org",
+        "dir": "/0/items/in.gov.ignca.35409"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.gov.ignca.35409"
+      }
+    ]
+  },
+  "created": 1783333403,
+  "d1": "ia600102.us.archive.org",
+  "d2": "ia800102.us.archive.org",
+  "dir": "/29/items/in.gov.ignca.35409",
+  "files": [
+    {
+      "name": "35409.epub",
+      "source": "derivative",
+      "original": "35409_hocr.html",
+      "mtime": "1710394688",
+      "size": "1034499",
+      "md5": "25a8dc5be821e6076b62ec7a4ff2f86a",
+      "crc32": "6028c03b",
+      "sha1": "d1eb9b51b766d28fc743d454182d23cf1b9d06cc",
+      "format": "EPUB"
+    },
+    {
+      "name": "35409.pdf",
+      "source": "original",
+      "mtime": "1604534275",
+      "size": "70683570",
+      "md5": "c8303fd4dda1aa951270cf7f57760930",
+      "crc32": "60f0c1a5",
+      "sha1": "f125279b1245345991adc6fabc97f2fb6d8d02b6",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "35409_chocr.html.gz",
+      "source": "derivative",
+      "format": "chOCR",
+      "original": "35409_jp2.zip",
+      "mtime": "1607955118",
+      "size": "20619620",
+      "md5": "bf6ff79ef932db8cbd3584f50cf00ae4",
+      "crc32": "ed33bcc5",
+      "sha1": "8b018da292f10610f0b377af3c59af6839dea521"
+    },
+    {
+      "name": "35409_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "35409_djvu.xml",
+      "mtime": "1607955243",
+      "size": "1423911",
+      "md5": "432a83b48b1c0952debec8cc02ecc8d5",
+      "crc32": "d59465b3",
+      "sha1": "ba0eb2937242280fa6055dfa26891a145ea5a909"
+    },
+    {
+      "name": "35409_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "35409_chocr.html.gz",
+      "mtime": "1607955235",
+      "size": "19946800",
+      "md5": "c3185f02fc6c9e1b16ad2e5f302b2fec",
+      "crc32": "3ecb5bd5",
+      "sha1": "d7f733ae5e80b07daa009bc0d6a07914cb022926"
+    },
+    {
+      "name": "35409_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.0.0",
+      "hocr_char_to_word_hocr_version": "1.1.2",
+      "format": "hOCR",
+      "original": "35409_chocr.html.gz",
+      "mtime": "1614850438",
+      "size": "41370875",
+      "md5": "5f007496e3d79cf75f0fae1c57d2b8a8",
+      "crc32": "50dcb791",
+      "sha1": "c75e5f8bc123b34d153696f4c6bca08761d0aaa3"
+    },
+    {
+      "name": "35409_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.0.0",
+      "hocr_pageindex_hocr_version": "1.1.0",
+      "format": "OCR Page Index",
+      "original": "35409_hocr.html",
+      "mtime": "1614850504",
+      "size": "8176",
+      "md5": "fc002ab08ff6a9ce1f805289ca34fefd",
+      "crc32": "d0881bef",
+      "sha1": "e54cb3b49658f71b4d2c42fa1ae143b0060d840a"
+    },
+    {
+      "name": "35409_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.0.0",
+      "hocr_fts_text_hocr_version": "1.1.0",
+      "word_conf_0_10": "1847",
+      "word_conf_11_20": "1453",
+      "word_conf_21_30": "2723",
+      "word_conf_31_40": "4491",
+      "word_conf_41_50": "6329",
+      "word_conf_51_60": "8107",
+      "word_conf_61_70": "10637",
+      "word_conf_71_80": "14479",
+      "word_conf_81_90": "26201",
+      "word_conf_91_100": "176855",
+      "format": "OCR Search Text",
+      "original": "35409_hocr.html",
+      "mtime": "1614850536",
+      "size": "615563",
+      "md5": "a83226ff9cea458381770b14348cfe34",
+      "crc32": "55e7cabe",
+      "sha1": "78b64300116f6a59ee1d685a6270f8e7bbcb45a2"
+    },
+    {
+      "name": "35409_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "35409.pdf",
+      "mtime": "1607811634",
+      "size": "784307499",
+      "md5": "f7e802829410f91b9a25802a6dff217a",
+      "crc32": "2e11f897",
+      "sha1": "e255b88e3e64a352d8863db3df26381b6de2d46e",
+      "filecount": "682"
+    },
+    {
+      "name": "35409_page_numbers.json",
+      "source": "derivative",
+      "format": "Page Numbers JSON",
+      "original": "35409_djvu.xml",
+      "mtime": "1607955777",
+      "size": "127048",
+      "md5": "1b52178b41570e92c2e51932d5c3cb69",
+      "crc32": "b8d170d0",
+      "sha1": "b967b81d321ac5b2844ba3f9b3d0326b9b88bb1f"
+    },
+    {
+      "name": "35409_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "35409_djvu.xml",
+      "mtime": "1607955777",
+      "size": "231679",
+      "md5": "1bcf5568b5be9a526baefa3775924b64",
+      "crc32": "025c4607",
+      "sha1": "09fadbbd4c2b98348a37a27dd191cf121a8ad13c"
+    },
+    {
+      "name": "35409_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "35409_page_numbers.json",
+      "mtime": "1608015262",
+      "size": "129384910",
+      "md5": "92ec7f2596339c2bf9a23fc4a0a127a1",
+      "crc32": "e3ea52a3",
+      "sha1": "69002dd92639092e80969096fab4b82cb37ab808"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1710394689",
+      "size": "9939",
+      "md5": "58bfe6649efb1d1d21b11ce957b72e52",
+      "crc32": "495b4c20",
+      "sha1": "b7e4872214cbc18bdabf3f925d37848004bc3974",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.gov.ignca.35409_archive.torrent",
+      "source": "metadata",
+      "btih": "ac48f0593a532c4716d3089567f07dee12b8a265",
+      "mtime": "1710394694",
+      "size": "44581",
+      "md5": "3cfcb1e394a4629f65d6680b0fa8b722",
+      "crc32": "cf388c76",
+      "sha1": "088d2231e6849afa16acf32a6cc1075d57fe9d18",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.gov.ignca.35409_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "2df57519d54768946ab8d8da4ce131f6",
+      "summation": "md5"
+    },
+    {
+      "name": "in.gov.ignca.35409_meta.sqlite",
+      "source": "original",
+      "mtime": "1604534327",
+      "size": "9216",
+      "md5": "8d22988ef47710adb9774448c59deb17",
+      "crc32": "3cbb032b",
+      "sha1": "bdca8a8f44c38c54beb64cdf1f592431e252cea0",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.gov.ignca.35409_meta.xml",
+      "source": "original",
+      "mtime": "1760347986",
+      "size": "1849",
+      "md5": "c7ccc08f0012294212058dd2f8e17998",
+      "crc32": "2e571fc4",
+      "sha1": "e621c4aa56d85440c67cf29fff21444467ff6ece",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 17,
+  "item_last_updated": 1760347986,
+  "item_size": 1069819735,
+  "metadata": {
+    "identifier": "in.gov.ignca.35409",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "creator": "Moor, Edward",
+    "date": "1810",
+    "description": "<p>From the <a href=\"http://ignca.gov.in/divisionss/asi-books/\" rel=\"ugc nofollow\">collection of the esteemed Archaeological Survey of India</a> as maintained at the Indira Gandhi National Centre for the Arts.</p><p>Place of publication of this book: London</p>",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.9.5",
+    "subject": [
+      "Hinduism; Hinduism, Doctrines; Religious fundamentalism",
+      "DLI Top-Up"
+    ],
+    "title": "Hindu pantheon",
+    "uploader": "carl@media.org",
+    "publicdate": "2020-11-04 23:58:21",
+    "addeddate": "2020-11-04 23:58:21",
+    "identifier-access": "http://archive.org/details/in.gov.ignca.35409",
+    "identifier-ark": "ark:/13960/t9t24t96s",
+    "ppi": "600",
+    "ocr": "tesseract 4.1.1",
+    "ocr_parameters": "-l kaz+bul+kir+eng+lat+mon+rus+Arabic+Latin+Cyrillic",
+    "ocr_module_version": "0.0.9",
+    "ocr_autonomous": "true",
+    "ocr_detected_script": [
+      "Latin",
+      "Cyrillic",
+      "Arabic"
+    ],
+    "ocr_detected_script_conf": [
+      "0.5416",
+      "0.3211",
+      "0.1358"
+    ],
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "53.30",
+    "pdf_module_version": "0.0.4"
+  },
+  "server": "ia800102.us.archive.org",
+  "uniq": 999248233,
+  "workable_servers": [
+    "ia800102.us.archive.org",
+    "ia600102.us.archive.org"
+  ]
+}

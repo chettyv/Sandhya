@@ -1,0 +1,189 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760007.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.69899"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.69899"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760007.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.69899"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.69899"
+      }
+    ]
+  },
+  "created": 1783253167,
+  "d1": "ia601904.us.archive.org",
+  "d2": "ia801904.us.archive.org",
+  "dir": "/7/items/in.ernet.dli.2015.69899",
+  "files": [
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta.pdf",
+      "source": "original",
+      "mtime": "1485237157",
+      "size": "16192289",
+      "md5": "095e9e2cf7ccb208df8e50aa272de226",
+      "crc32": "8525b0f6",
+      "sha1": "3d36a583cf568fe9128b11e2fdeba479d61c630d",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.69899.Studies-In-Saiva-Siddhanta_jp2.zip",
+      "mtime": "1495346325",
+      "size": "12072310",
+      "md5": "f23d6cb9b4c85ca9a27f142ca1cd6bea",
+      "crc32": "589f8e95",
+      "sha1": "5fbdd0bfa692b48bc5d4284260e82603cf6948be"
+    },
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.69899.Studies-In-Saiva-Siddhanta_djvu.xml",
+      "mtime": "1495347163",
+      "size": "782296",
+      "md5": "1d80f39aaf0bc4c76fcbaadb6fb8b431",
+      "crc32": "d59eb9e8",
+      "sha1": "feda96347593eefc2c575831a0f0f9e0c63cc903"
+    },
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.69899.Studies-In-Saiva-Siddhanta_abbyy.gz",
+      "mtime": "1495346583",
+      "size": "7345424",
+      "md5": "92e0eeede063c2deb0730db1699abe79",
+      "crc32": "20d68064",
+      "sha1": "4bc4e57037ecede1ff0cccd2af930dab9f873891"
+    },
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.69899.Studies-In-Saiva-Siddhanta.pdf",
+      "mtime": "1495342431",
+      "size": "170590548",
+      "md5": "64e2a8e283d0f86c5e9d3bf998ad1009",
+      "crc32": "64cd1d3a",
+      "sha1": "b1bc838adb7c4c476ccaa14bba2e03a68dca216e",
+      "filecount": "396"
+    },
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.69899.Studies-In-Saiva-Siddhanta_djvu.xml",
+      "mtime": "1495347166",
+      "size": "118926",
+      "md5": "81bdecf683805da5e6300df6435dfaa0",
+      "crc32": "50cb0201",
+      "sha1": "c7a8e0fb85b346c85bedd1d1f77ba94b0c537bac"
+    },
+    {
+      "name": "2015.69899.Studies-In-Saiva-Siddhanta_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.69899.Studies-In-Saiva-Siddhanta_djvu.xml",
+      "mtime": "1495347157",
+      "size": "12893560",
+      "md5": "958345814d11aa1775c049a9959bd168",
+      "crc32": "9746480a",
+      "sha1": "6334e70c78e258ca489d9be20c3593ff35b38af1"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1537969136",
+      "size": "7813",
+      "md5": "39ab652cd13746970183e64c59707f13",
+      "crc32": "bde68e1f",
+      "sha1": "c5e733fff6a360d7c384097e50bd6957b684212e",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.69899_archive.torrent",
+      "source": "metadata",
+      "btih": "64597a588cb1a1fce69f34fb2062b932afd9c40c",
+      "mtime": "1563287894",
+      "size": "11513",
+      "md5": "d1d55e44f726be30309c78502a46d60a",
+      "crc32": "08b37095",
+      "sha1": "af40371c77ec5ff3063fb63c175b19d102e1c68f",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.69899_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "2d70caf99dffd06e5b6736b096dd431e",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.69899_meta.sqlite",
+      "source": "original",
+      "mtime": "1485237170",
+      "size": "15360",
+      "md5": "431279b317dca6fb7d25f6f0de9ab943",
+      "crc32": "6c2d84fa",
+      "sha1": "876a30c831790c5d7da394d4319786ce6adf63af",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.69899_meta.xml",
+      "source": "original",
+      "mtime": "1563287891",
+      "size": "2202",
+      "format": "Metadata",
+      "md5": "a13c41daeb5907d3a414e69576e1b5da",
+      "crc32": "8789f4de",
+      "sha1": "7cd4ac0c647047cdd66eff618e67863af53c6bea"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1727607438,
+  "item_size": 220032241,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.69899",
+    "creator": "Pillai, J.m. Nallasvami",
+    "date": "1911",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/69899\" rel=\"nofollow\">Digital Library of India Item 2015.69899</a></p><p>dc.contributor.author: Pillai, J.m. Nallasvami<br />dc.date.accessioned: 2015-06-30T02:01:53Z<br />dc.date.available: 2015-06-30T02:01:53Z<br />dc.date.copyrightexpirydate: 0000-00-00<br />dc.date.digitalpublicationdate: 0000-00-00<br />dc.date.citation: 1911<br />dc.identifier.barcode: 99999990008452<br />dc.identifier.origpath: /data6/upload/0142/611<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/69899<br />dc.description.scanningcentre: IGNCA, Delhi<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 396<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher: The Meykandan Press<br />dc.rights: Out_of_copyright<br />dc.source.library: Central Archaeological Library,  Asi<br />dc.subject.classification: Shivaism<br />dc.subject.classification: Hindu Sects<br />dc.subject.classification: Hinduism<br />dc.title: Studies In Saiva Siddhanta<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "IGNCA",
+    "title": "Studies In Saiva Siddhanta",
+    "publicdate": "2017-01-24 05:52:37",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-24 05:52:37",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.69899",
+    "identifier-ark": "ark:/13960/t10p6gn30",
+    "ppi": "300",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_25",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia801904.us.archive.org",
+  "uniq": 1428106917,
+  "workable_servers": [
+    "ia801904.us.archive.org",
+    "ia601904.us.archive.org"
+  ]
+}

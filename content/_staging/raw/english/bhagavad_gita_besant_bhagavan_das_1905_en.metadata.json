@@ -1,0 +1,228 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760104.eu.archive.org",
+        "dir": "/0/items/wg1100"
+      },
+      {
+        "server": "dn790007.ca.archive.org",
+        "dir": "/0/items/wg1100"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760104.eu.archive.org",
+        "dir": "/0/items/wg1100"
+      },
+      {
+        "server": "dn790007.ca.archive.org",
+        "dir": "/0/items/wg1100"
+      }
+    ]
+  },
+  "created": 1783265060,
+  "d1": "ia903202.us.archive.org",
+  "d2": "ia803202.us.archive.org",
+  "dir": "/26/items/wg1100",
+  "files": [
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita.epub",
+      "source": "derivative",
+      "original": "WG1100-1905 -The Bhagavad Gita_abbyy.gz",
+      "mtime": "1699785341",
+      "size": "2766547",
+      "md5": "e4d6ff97231f4fa9048517e336473a94",
+      "crc32": "56af07bf",
+      "sha1": "2d66f1b07f3ea88d3cf05739fed70fe1efe0bfae",
+      "format": "EPUB"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita.pdf",
+      "source": "original",
+      "mtime": "1596722818",
+      "size": "26303599",
+      "md5": "3cd79fe003f67d51c5e840183fff58dc",
+      "crc32": "1110dcd0",
+      "sha1": "fb9620fe5622821d35537903265c0f02feebcdc3",
+      "format": "Text PDF"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "WG1100-1905 -The Bhagavad Gita_jp2.zip",
+      "mtime": "1596749577",
+      "size": "6671215",
+      "md5": "c4021616770f3782a899cf29e0c0ea73",
+      "crc32": "44897816",
+      "sha1": "3843d5ecfea8263c4399c54fa67c718052289642"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_daisy.zip",
+      "source": "derivative",
+      "original": "WG1100-1905 -The Bhagavad Gita_abbyy.gz",
+      "mtime": "1712251533",
+      "size": "305085",
+      "md5": "15bdbb39cd705453d4439ccb12b8d852",
+      "crc32": "6b3bd8d3",
+      "sha1": "de1f15c585ceebd03ed74d2353de3281c576076c",
+      "format": "Daisy",
+      "filecount": "9"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "WG1100-1905 -The Bhagavad Gita_djvu.xml",
+      "mtime": "1596749809",
+      "size": "375339",
+      "md5": "e8b7508bc34a15eaab75aa86685365d1",
+      "crc32": "6dbd59ed",
+      "sha1": "8eb5428083e123d9f6379957c58766cfd8bafdd8"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "WG1100-1905 -The Bhagavad Gita_abbyy.gz",
+      "mtime": "1596749804",
+      "size": "5129590",
+      "md5": "92a93c7f2f89b45575bdc005b6912ca4",
+      "crc32": "be03f414",
+      "sha1": "657ea252f9818180e789ddb0b30f5139648c7093"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "WG1100-1905 -The Bhagavad Gita.pdf",
+      "mtime": "1596746041",
+      "size": "162479078",
+      "md5": "181ef791f9cfc556a9b2debf6a3d0205",
+      "crc32": "ed2c8e1d",
+      "sha1": "d75aaa27cbd56bfa36d19453333f6ee1e328813d",
+      "filecount": "395"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_page_numbers.json",
+      "source": "derivative",
+      "format": "Page Numbers JSON",
+      "original": "WG1100-1905 -The Bhagavad Gita_djvu.xml",
+      "mtime": "1596750236",
+      "size": "75715",
+      "md5": "6a87668d71fa164c58dc045cdf8873ca",
+      "crc32": "59ef9f78",
+      "sha1": "8fb6336a32a95e806c150a74fe4b3a7f21300818"
+    },
+    {
+      "name": "WG1100-1905 -The Bhagavad Gita_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "WG1100-1905 -The Bhagavad Gita_djvu.xml",
+      "mtime": "1596750236",
+      "size": "130648",
+      "md5": "199112515dd9971e0f5c60bfdf9ee746",
+      "crc32": "806229ce",
+      "sha1": "ccd9cca9fd0d8a61091da75981fb350390b546b3"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1772746376",
+      "size": "10683",
+      "md5": "9d499dbbdf3396214efd192327ee68bd",
+      "crc32": "d7e74923",
+      "sha1": "379e02ef969e88f9f106d4e7043b2f4acdaa56d9",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "wg1100_archive.torrent",
+      "source": "metadata",
+      "btih": "676a2feced2a4042dc124549b5ea945e5f4ed980",
+      "mtime": "1772746379",
+      "size": "11131",
+      "md5": "f9953915e435eb802c4dbaf9a2b3d1c4",
+      "crc32": "ca2d3f22",
+      "sha1": "cca3fa13f69bd354928b031eb358ab34b9710879",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "wg1100_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "103ccf9d0d5711c9cf1d08ca6904d325",
+      "summation": "md5"
+    },
+    {
+      "name": "wg1100_meta.sqlite",
+      "source": "original",
+      "mtime": "1596722894",
+      "size": "14336",
+      "md5": "18e6f629f8130314a78d76828240e7d4",
+      "crc32": "1848f2ba",
+      "sha1": "f77f05c52eefa0fdda8158b259fe40d87ef0f788",
+      "format": "Metadata"
+    },
+    {
+      "name": "wg1100_meta.xml",
+      "source": "original",
+      "mtime": "1772746375",
+      "size": "1551",
+      "md5": "b855fa6635b2b4a3ef0d9f299019a940",
+      "crc32": "e750389b",
+      "sha1": "b56e7ca58a4aaa5a6243271e7229f1a50dd56e7c",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 14,
+  "item_last_updated": 1772746379,
+  "item_size": 204274517,
+  "metadata": {
+    "identifier": "wg1100",
+    "mediatype": "texts",
+    "collection": [
+      "wisdom-of-guru",
+      "folkscanomy_philosophy",
+      "folkscanomy"
+    ],
+    "creator": "Annie Besant And Bhagavan Das",
+    "date": "1905",
+    "description": "<span style=\"font-size:11pt;font-family:Calibri, Arial;\">With Sanskrit Text, free translation into English, a word for word translation and an introduction on Sanskrit Gammar</span>",
+    "language": "eng",
+    "scanner": "Internet Archive HTML5 Uploader 1.6.4",
+    "subject": [
+      "गीता",
+      "Geeta",
+      "Indian Philosophy",
+      "Hindu Philosophy",
+      "Hindu Religious Texts",
+      "Hindu Literature",
+      "Veda",
+      "Upanishad",
+      "Puran",
+      "Vedant",
+      "Advait Vedant"
+    ],
+    "title": "1905 -The Bhagavad Gita",
+    "uploader": "wisdomofguru@gmail.com",
+    "publicdate": "2020-08-06 14:07:57",
+    "addeddate": "2020-08-06 14:07:57",
+    "identifier-access": "http://archive.org/details/wg1100",
+    "identifier-ark": "ark:/13960/t0fv7m518",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0 (Extended OCR)",
+    "page_number_confidence": "88.07",
+    "collection_added": [
+      "folkscanomy_philosophy",
+      "folkscanomy"
+    ]
+  },
+  "server": "ia803202.us.archive.org",
+  "uniq": 2085011165,
+  "workable_servers": [
+    "ia803202.us.archive.org",
+    "ia903202.us.archive.org"
+  ]
+}

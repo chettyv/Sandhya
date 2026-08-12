@@ -13,7 +13,11 @@
     }
   },
   "bin": {
-    "rag": "./dist/cli.js"
+    "rag": "./dist/cli.js",
+    "rag-audit-prepared": "./dist/audit-prepared.js",
+    "rag-prepare-corpus": "./dist/prepare-corpus.js",
+    "rag-ingest-prepared": "./dist/ingest-prepared.js",
+    "rag-evaluate": "./dist/evaluate.js"
   },
   "files": [
     "dist",
@@ -26,7 +30,8 @@
     "clean": "rimraf dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@dharma-daily/shared-types": "workspace:*"
+    "@dharma-daily/shared-types": "workspace:*",
+    "js-tiktoken": "^1.0.21"
   },
   "devDependencies": {
     "rimraf": "^6.0.1",

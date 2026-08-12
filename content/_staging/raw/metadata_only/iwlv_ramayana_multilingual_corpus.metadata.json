@@ -1,0 +1,10 @@
+{
+  "work_id": "iwlv_ramayana_multilingual_corpus_metadata",
+  "title": "IWLV Ramayana multilingual corpus",
+  "language": "Sanskrit/Indic multilingual",
+  "source_name": "arXiv",
+  "source_url": "https://arxiv.org/abs/2604.13078",
+  "status": "metadata_only_pending_source_url",
+  "rights_note": "Multilingual Ramayana corpus lead. Dataset release URL, language coverage, license, and upstream text rights were not verified in this pass.",
+  "next_action": "Locate the public dataset and verify commercial reuse rights before downloading."
+}

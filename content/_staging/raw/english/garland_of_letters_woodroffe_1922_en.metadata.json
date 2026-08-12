@@ -1,0 +1,215 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760106.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.274061"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760106.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.274061"
+      }
+    ]
+  },
+  "created": 1783274362,
+  "d1": "ia902908.us.archive.org",
+  "d2": "ia802908.us.archive.org",
+  "dir": "/6/items/in.ernet.dli.2015.274061",
+  "files": [
+    {
+      "name": "2015.274061.The-Garland.epub",
+      "source": "derivative",
+      "original": "2015.274061.The-Garland_abbyy.gz",
+      "mtime": "1699641191",
+      "size": "379369039",
+      "md5": "38af88b15349319715a51bf4a5ca40b5",
+      "crc32": "76e474b0",
+      "sha1": "099d6b9d5be9e2e8525a4afb1f876567927d3cbf",
+      "format": "EPUB"
+    },
+    {
+      "name": "2015.274061.The-Garland.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.274061.The-Garland_jp2.zip",
+      "mtime": "1485945409",
+      "size": "264845",
+      "md5": "50a09d76382be6968576a1250ad01d5a",
+      "crc32": "3541d9cb",
+      "sha1": "715f2ac8236dcef0aba755201da7eb00678f70f4"
+    },
+    {
+      "name": "2015.274061.The-Garland.pdf",
+      "source": "original",
+      "mtime": "1484627643",
+      "size": "114500662",
+      "md5": "2098fb5f7abd6a1464540fa3865cfaa3",
+      "crc32": "0a49504d",
+      "sha1": "91f62c71a66b9382c038fc9f92e63a8a8b8993fe",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.274061.The-Garland_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.274061.The-Garland_jp2.zip",
+      "mtime": "1485955305",
+      "size": "8781484",
+      "md5": "75c3a74e370d97062e8a7bf395767f40",
+      "crc32": "eab21447",
+      "sha1": "94a90a979584fd9dc6576af92208e938a0f25f60"
+    },
+    {
+      "name": "2015.274061.The-Garland_daisy.zip",
+      "source": "derivative",
+      "original": "2015.274061.The-Garland_abbyy.gz",
+      "mtime": "1721667026",
+      "size": "263270",
+      "md5": "44a139cc5059d6f519894a22e333a082",
+      "crc32": "b5dc2c77",
+      "sha1": "acccec64ff157c7fa02ddfd6ec9a1c85dad0a87c",
+      "format": "Daisy",
+      "filecount": "9"
+    },
+    {
+      "name": "2015.274061.The-Garland_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.274061.The-Garland_djvu.xml",
+      "mtime": "1485958417",
+      "size": "574051",
+      "md5": "23bd1a3fa98c42588bd0298b525fd4fe",
+      "crc32": "ab0b7557",
+      "sha1": "4ab3962c9c7177709011d0e4ad1bea159ad36bfb"
+    },
+    {
+      "name": "2015.274061.The-Garland_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.274061.The-Garland_abbyy.gz",
+      "mtime": "1485955578",
+      "size": "5348552",
+      "md5": "8f6cb3d41e72ec0d3e9862f3326fb13d",
+      "crc32": "c6cd8ddc",
+      "sha1": "2b8da445e450ed587437b21665fcb378c955c02c"
+    },
+    {
+      "name": "2015.274061.The-Garland_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.274061.The-Garland.pdf",
+      "mtime": "1485945294",
+      "size": "838857837",
+      "md5": "414a42872ec723af9c1ca6bc99bc261d",
+      "crc32": "333eecc6",
+      "sha1": "97fdf044862d95b08dd657816926cca1a0dd66ff",
+      "filecount": "322"
+    },
+    {
+      "name": "2015.274061.The-Garland_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.274061.The-Garland_djvu.xml",
+      "mtime": "1485959097",
+      "size": "96727",
+      "md5": "eaa6168c64b322100ee3a3b4636d31c2",
+      "crc32": "397de384",
+      "sha1": "314eb7ad4a9484c0debadb270d470f35de71543a"
+    },
+    {
+      "name": "2015.274061.The-Garland_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.274061.The-Garland_djvu.xml",
+      "mtime": "1485958391",
+      "size": "63738451",
+      "md5": "ccce2af63d7cc90783a0ea9c29260413",
+      "crc32": "4ce68467",
+      "sha1": "33d1f5b2e64a8ae019f3907ba08505ef582e87c3"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1699641198",
+      "size": "8755",
+      "md5": "b76bd7670d3580738bc887917387bb52",
+      "crc32": "0493c5bb",
+      "sha1": "ae393a392b38eecaf2a36285cbc9cf0feb94bcfc",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.274061_archive.torrent",
+      "source": "metadata",
+      "btih": "67c169cf9f4d65f0fadfdc322a94f8916b72a8fc",
+      "mtime": "1721667036",
+      "size": "30549",
+      "md5": "c5f1476a06764cc4cb9c269f4a9e0981",
+      "crc32": "66cbcdc8",
+      "sha1": "fd98104d58c846da9abcafc356b702e6258173d4",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.274061_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "4009056ee012f9612d084ad9c48bad35",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.274061_meta.sqlite",
+      "source": "original",
+      "mtime": "1484627661",
+      "size": "15360",
+      "md5": "c63e0cd4f67ca34965987d62efca372f",
+      "crc32": "eb1adc93",
+      "sha1": "d25e59512fbb9321c2b2786a7909a615b342abfd",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.274061_meta.xml",
+      "source": "original",
+      "mtime": "1563296486",
+      "size": "2095",
+      "format": "Metadata",
+      "md5": "3de53f8a25d676879466abf6084fd88d",
+      "crc32": "34c01890",
+      "sha1": "57adbb26671aa040c478fc38dbe723158df7331c"
+    }
+  ],
+  "files_count": 15,
+  "item_last_updated": 1721667036,
+  "item_size": 1411851677,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.274061",
+    "creator": "John Woodroffe",
+    "date": "1922",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/274061\" rel=\"nofollow\">Digital Library of India Item 2015.274061</a></p><p>dc.contributor.author: John Woodroffe<br />dc.date.accessioned: 2015-07-29T19:43:00Z<br />dc.date.available: 2015-07-29T19:43:00Z<br />dc.date.citation: 1922<br />dc.identifier.barcode: 05990010895400<br />dc.identifier.origpath: /data58/upload/0097/117<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/274061<br />dc.description.scannerno: 20003530<br />dc.description.scanningcentre: IIIT, Allahabad<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 322<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Ganesh And Co.<br />dc.source.library: Bharti Bhawan Library Allahabad<br />dc.subject.classification: Literature<br />dc.title: The Garland Of Letters<br />dc.type: ptiff<br />dc.type: pdf<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "IIIT",
+    "title": "The Garland Of Letters",
+    "publicdate": "2017-01-17 04:34:04",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-17 04:34:04",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.274061",
+    "identifier-ark": "ark:/13960/t8tb6746r",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "backup_location": "ia906304_29"
+  },
+  "server": "ia902908.us.archive.org",
+  "uniq": 1350967725,
+  "workable_servers": [
+    "ia902908.us.archive.org",
+    "ia802908.us.archive.org"
+  ]
+}

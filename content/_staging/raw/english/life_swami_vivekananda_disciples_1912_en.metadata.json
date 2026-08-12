@@ -1,0 +1,274 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710201.ca.archive.org",
+        "dir": "/0/items/dli.ministry.03948"
+      },
+      {
+        "server": "dn760005.eu.archive.org",
+        "dir": "/0/items/dli.ministry.03948"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710201.ca.archive.org",
+        "dir": "/0/items/dli.ministry.03948"
+      },
+      {
+        "server": "dn760005.eu.archive.org",
+        "dir": "/0/items/dli.ministry.03948"
+      }
+    ]
+  },
+  "created": 1783291990,
+  "d1": "ia601406.us.archive.org",
+  "d2": "ia801406.us.archive.org",
+  "dir": "/23/items/dli.ministry.03948",
+  "files": [
+    {
+      "name": "22504.178%20C%20469.pdf",
+      "source": "original",
+      "mtime": "1614718539",
+      "size": "13265757",
+      "md5": "d8d55bdc8f9468b21b0ffec8ce59ec1b",
+      "crc32": "3b3e7217",
+      "sha1": "4a899a00a92dbf35e23b4df381eb12f72e34d6be",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "22504.178%20C%20469_chocr.html.gz",
+      "source": "derivative",
+      "ocr": "tesseract 5.0.0-alpha-20201231-7-gc75f",
+      "ocr_parameters": "-l eng",
+      "ocr_module_version": "0.0.11",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "0.9068",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "chOCR",
+      "original": "22504.178%20C%20469_jp2.zip",
+      "mtime": "1615109558",
+      "size": "12166946",
+      "md5": "a9219b14c1d5ef02d7e231b578fd0310",
+      "crc32": "6b63c38f",
+      "sha1": "db481e835400cd751082a78c45add4060a17154e"
+    },
+    {
+      "name": "22504.178%20C%20469_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "22504.178%20C%20469_djvu.xml",
+      "mtime": "1615109706",
+      "size": "915890",
+      "md5": "6fe52851ba4824b839fdfb1764c2cbaa",
+      "crc32": "b56797f2",
+      "sha1": "e9ad579697e0fa9a9c1b4cad8457b0276e5356d4"
+    },
+    {
+      "name": "22504.178%20C%20469_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "22504.178%20C%20469_hocr.html",
+      "mtime": "1615109653",
+      "size": "11851549",
+      "md5": "f6876b3beef543e9bc38bb29846821f3",
+      "crc32": "f291e2d8",
+      "sha1": "e1d46a58ffcc3be545363eb086b10e0e83422c6d"
+    },
+    {
+      "name": "22504.178%20C%20469_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.0.0",
+      "hocr_char_to_word_hocr_version": "1.1.2",
+      "ocr_parameters": "-l eng",
+      "ocr_module_version": "0.0.11",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "0.9068",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "hOCR",
+      "original": "22504.178%20C%20469_chocr.html.gz",
+      "mtime": "1615109614",
+      "size": "21918250",
+      "md5": "24bc59cbdc723d85130a32cb456bac7f",
+      "crc32": "0c573e75",
+      "sha1": "866a7caf5679b4110fcb41f1aea6aac1f2e338b1"
+    },
+    {
+      "name": "22504.178%20C%20469_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.0.0",
+      "hocr_pageindex_hocr_version": "1.1.0",
+      "format": "OCR Page Index",
+      "original": "22504.178%20C%20469_hocr.html",
+      "mtime": "1615109671",
+      "size": "5565",
+      "md5": "4c13db697d63326c726b57767c82416e",
+      "crc32": "67b8f0ac",
+      "sha1": "6d1dd4bc29329d27e3de50fa52221ccad7c45dbc"
+    },
+    {
+      "name": "22504.178%20C%20469_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.0.0",
+      "hocr_fts_text_hocr_version": "1.1.0",
+      "word_conf_0_10": "1290",
+      "word_conf_11_20": "731",
+      "word_conf_21_30": "913",
+      "word_conf_31_40": "999",
+      "word_conf_41_50": "1120",
+      "word_conf_51_60": "1326",
+      "word_conf_61_70": "1850",
+      "word_conf_71_80": "3409",
+      "word_conf_81_90": "8396",
+      "word_conf_91_100": "136758",
+      "format": "OCR Search Text",
+      "original": "22504.178%20C%20469_hocr.html",
+      "mtime": "1615109695",
+      "size": "328922",
+      "md5": "bb9345754792b92cb07fc1ea90d26c5b",
+      "crc32": "933ba18b",
+      "sha1": "bd21b09763f9a11e9165cb437e93bb78e1903868"
+    },
+    {
+      "name": "22504.178%20C%20469_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "22504.178%20C%20469.pdf",
+      "mtime": "1615106774",
+      "size": "114542231",
+      "md5": "cf8807fd4a8eaa408e8525edfc573000",
+      "crc32": "a39237d1",
+      "sha1": "40de3aca48268525dcc82876ff8b720ca3ec0f75",
+      "filecount": "462"
+    },
+    {
+      "name": "22504.178%20C%20469_page_numbers.json",
+      "source": "derivative",
+      "format": "Page Numbers JSON",
+      "original": "22504.178%20C%20469_djvu.xml",
+      "mtime": "1615110076",
+      "size": "82871",
+      "md5": "36c7af2af53366ddf3e215c06498f4ac",
+      "crc32": "ddbd28d1",
+      "sha1": "d12ae402f1a44b3321374e5e927eb8c489f70cff"
+    },
+    {
+      "name": "22504.178%20C%20469_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "22504.178%20C%20469_djvu.xml",
+      "mtime": "1615110077",
+      "size": "162142",
+      "md5": "4a7a1a85d836617798a52da0d0fd6710",
+      "crc32": "e87b7a58",
+      "sha1": "2e1e7465addd5bb23d7dc7e7c7229f2e8dc847e7"
+    },
+    {
+      "name": "22504.178%20C%20469_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.8",
+      "format": "Additional Text PDF",
+      "original": "22504.178%20C%20469_page_numbers.json",
+      "mtime": "1615112706",
+      "size": "14371992",
+      "md5": "89b8b8314b647f6fcbec86f370850e31",
+      "crc32": "e9eb7dc4",
+      "sha1": "03c8c7960869988c9a8187a60b2b1bcbc3002236"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1615112815",
+      "size": "6864",
+      "md5": "5fd9fd395945f635933a2cc65387ea24",
+      "crc32": "8dca2bf8",
+      "sha1": "2cd18603c7c6b71354983545cb954f0dfd6ca9f6",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "dli.ministry.03948_archive.torrent",
+      "source": "metadata",
+      "btih": "aff3a88cbcae34276dac92f4ac557c4ad3239b40",
+      "mtime": "1615265328",
+      "size": "10956",
+      "md5": "072aacca7b06e81ac252242f63a19a67",
+      "crc32": "45c6ffc8",
+      "sha1": "5cc0319ec1b4b1f7f643b1a21d62f78baaffefcb",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "dli.ministry.03948_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "234e347b251913edbce19c46062be2c4",
+      "summation": "md5"
+    },
+    {
+      "name": "dli.ministry.03948_meta.sqlite",
+      "source": "original",
+      "mtime": "1614718842",
+      "size": "9216",
+      "md5": "274e6e974b9b79664c48cf0a786307d4",
+      "crc32": "b69679c9",
+      "sha1": "1f2562802b7bdc7a2296b5bfab16cde7623285e2",
+      "format": "Metadata"
+    },
+    {
+      "name": "dli.ministry.03948_meta.xml",
+      "source": "original",
+      "mtime": "1615265307",
+      "size": "1597",
+      "md5": "9844572c366675f09f2687b3c2fd894e",
+      "crc32": "d89cf01b",
+      "sha1": "6820245e2fff0189f71c1a41e3b6d96f005f81c0",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 16,
+  "item_last_updated": 1773909275,
+  "item_size": 189640748,
+  "metadata": {
+    "identifier": "dli.ministry.03948",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "date": "1912",
+    "description": "In three Volumes; The semi centenary birthday memorial edition",
+    "identifier-bib": "Library: National Library of India, Kolkata",
+    "language": "eng",
+    "mediatype": "texts",
+    "publisher": "The Swami Virajananda from the Prabuddha Bharata office , Mayavati, Almora, Himalayas",
+    "scanner": "Internet Archive Python library 1.9.9",
+    "subject": [
+      "Swami Vivekananda:Biography",
+      "MinistryOfCulture"
+    ],
+    "title": "The life of the Swami Vivekananda",
+    "uploader": "carl@media.org",
+    "publicdate": "2021-03-02 20:58:15",
+    "addeddate": "2021-03-02 20:58:15",
+    "identifier-access": "http://archive.org/details/dli.ministry.03948",
+    "identifier-ark": "ark:/13960/t5bd48312",
+    "ppi": "72",
+    "ocr": "tesseract 5.0.0-alpha-20201231-7-gc75f",
+    "ocr_parameters": "-l eng",
+    "ocr_module_version": "0.0.11",
+    "ocr_detected_script": "Latin",
+    "ocr_detected_script_conf": "0.9068",
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "93.28",
+    "pdf_module_version": "0.0.8",
+    "original-source": "http://indianculture.gov.in/ebooks/life-swami-vivekananda"
+  },
+  "server": "ia801406.us.archive.org",
+  "uniq": 1793918588,
+  "workable_servers": [
+    "ia801406.us.archive.org",
+    "ia601406.us.archive.org"
+  ]
+}

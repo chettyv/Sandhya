@@ -1,0 +1,188 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760001.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.282567"
+      },
+      {
+        "server": "dn790000.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.282567"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760001.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.282567"
+      },
+      {
+        "server": "dn790000.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.282567"
+      }
+    ]
+  },
+  "created": 1783291077,
+  "d1": "ia601508.us.archive.org",
+  "d2": "ia801508.us.archive.org",
+  "dir": "/0/items/in.ernet.dli.2015.282567",
+  "files": [
+    {
+      "name": "2015.282567.Parasara-Dharma.pdf",
+      "source": "original",
+      "mtime": "1485331203",
+      "size": "201198464",
+      "md5": "8bc8f69bfa1bb1c83ed7026fa554da8d",
+      "crc32": "c6e8dba7",
+      "sha1": "a1308852fafd4a3de7b68ec87470ebb6c48e7823",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.282567.Parasara-Dharma_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.282567.Parasara-Dharma_jp2.zip",
+      "mtime": "1496112523",
+      "size": "9173471",
+      "md5": "303b686e3096e6a07b980647e730e7f5",
+      "crc32": "50dc3ade",
+      "sha1": "c9d7b46af8345f9c4fdef9f5480b7d2cb843811e"
+    },
+    {
+      "name": "2015.282567.Parasara-Dharma_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.282567.Parasara-Dharma_djvu.xml",
+      "mtime": "1496115730",
+      "size": "542859",
+      "md5": "c514da7ff9d6faea7fabb5667ab975e1",
+      "crc32": "a8888bcb",
+      "sha1": "76bd5fe842ed9bfba9a4ad87dcac11da06fa7988"
+    },
+    {
+      "name": "2015.282567.Parasara-Dharma_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.282567.Parasara-Dharma_abbyy.gz",
+      "mtime": "1496112655",
+      "size": "6258156",
+      "md5": "54ff0d50f8c60ee11943f98a5b278d75",
+      "crc32": "b22550e4",
+      "sha1": "2faaf9ad559356f74d58bf8e585921a723273611"
+    },
+    {
+      "name": "2015.282567.Parasara-Dharma_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.282567.Parasara-Dharma.pdf",
+      "mtime": "1496078229",
+      "size": "1328812978",
+      "md5": "4efeaf68bfaed6ea41edd9eebde451b5",
+      "crc32": "35a7825b",
+      "sha1": "99a1fc75e81740d3dcb4365e13f7b6b35b733810"
+    },
+    {
+      "name": "2015.282567.Parasara-Dharma_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.282567.Parasara-Dharma_djvu.xml",
+      "mtime": "1496115867",
+      "size": "178327",
+      "md5": "7b8035ee5294802729ad10172bc046e0",
+      "crc32": "36db8b34",
+      "sha1": "34ba823edd275e4fbce36643e68472596fb35d0b"
+    },
+    {
+      "name": "2015.282567.Parasara-Dharma_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.282567.Parasara-Dharma_djvu.xml",
+      "mtime": "1496115721",
+      "size": "109438134",
+      "md5": "fc84a509baa46f79c0814a5da9dca192",
+      "crc32": "32f398e2",
+      "sha1": "6e21955483e46046b87ff0729f013687c5cd5c50"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1530822924",
+      "size": "15280",
+      "md5": "c6853964072ae4ebb53cb853775fee49",
+      "crc32": "8ef24256",
+      "sha1": "a5596354b56787514c66727758f02398e744ca8f",
+      "format": "JPEG Thumb",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.282567_archive.torrent",
+      "source": "metadata",
+      "btih": "3604a06eabd0bb1a48fc1307971861fff1f76323",
+      "mtime": "1563264890",
+      "size": "34634",
+      "md5": "c29edcd0554b90f9bb367393209bde57",
+      "crc32": "667c6062",
+      "sha1": "9dafc1685a78a84d50f6dd5dadcbc2c5975c19e7",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.282567_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "6e6833b76aae8123aadf914d40780239",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.282567_meta.sqlite",
+      "source": "original",
+      "mtime": "1485331225",
+      "size": "15360",
+      "md5": "640965de17b18de775b745d34fd6bcd9",
+      "crc32": "54ab03d8",
+      "sha1": "4df5165375d7f67638c6d692855355a0c7391e4d",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.282567_meta.xml",
+      "source": "original",
+      "mtime": "1563264868",
+      "size": "2274",
+      "format": "Metadata",
+      "md5": "18dba15247ee05d5ea6d2cb7cba72479",
+      "crc32": "3000c0b5",
+      "sha1": "245c4688be1caf334edd6a7e182ccd0427223dd8"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1668772692,
+  "item_size": 1655669937,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.282567",
+    "creator": "Pandit Vaman Sastri Islamapurkar",
+    "date": "1893",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/282567\" rel=\"nofollow\">Digital Library of India Item 2015.282567</a></p><p>dc.contributor.author: Pandit Vaman Sastri Islamapurkar<br />dc.date.accessioned: 2015-08-04T16:48:08Z<br />dc.date.available: 2015-08-04T16:48:08Z<br />dc.date.citation: 1893<br />dc.identifier.barcode: 05990010903695<br />dc.identifier.origpath: /data58/upload/0105/412<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/282567<br />dc.description.scannerno: 20003571<br />dc.description.scanningcentre: IIIT, Allahabad<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 594<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Government Central Book Depot Bombay<br />dc.rights: In Public Domain<br />dc.source.library: Central Archaeological Library_asi_ New Delhi<br />dc.subject.classification: Literature<br />dc.title: Parasara Dharma Samhita Or Parasara Smriti Vol.i Part Ii<br />dc.type: ptiff<br />dc.type: pdf<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "IIIT",
+    "title": "Parasara Dharma Samhita Or Parasara Smriti Vol.i Part Ii",
+    "publicdate": "2017-01-25 08:00:05",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-25 08:00:05",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.282567",
+    "identifier-ark": "ark:/13960/t2h75vj0t",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_29",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia801508.us.archive.org",
+  "uniq": 1658905667,
+  "workable_servers": [
+    "ia801508.us.archive.org",
+    "ia601508.us.archive.org"
+  ]
+}

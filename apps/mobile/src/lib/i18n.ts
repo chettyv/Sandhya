@@ -1,0 +1,66 @@
+import { useMemo } from "react";
+
+const en = {
+  appName: "Dharma Daily",
+  today: "Today",
+  chat: "Chat",
+  home: "Home",
+  calendar: "Calendar",
+  ask: "Ask",
+  explore: "Explore",
+  journey: "Journey",
+  goodMorning: "Good morning",
+  dailyReflection: "Daily reflection",
+  todaysPractice: "Today's practice",
+  upcoming: "Coming up",
+  continueLearning: "Continue learning",
+  seeAll: "See all",
+  save: "Save",
+  saved: "Saved",
+  reflect: "Reflect",
+  begin: "Begin",
+  learnMore: "Learn more",
+  askDharma: "Ask Dharma",
+  askPlaceholder: "Ask about a teaching, practice, or tradition…",
+  groundedNotice: "Answers are grounded in retrieved sources and may note different traditions.",
+  browseBy: "Browse by",
+  featuredConcepts: "Featured concepts",
+  gentleRhythm: "Your gentle rhythm",
+  journal: "Journal",
+  savedItems: "Saved items",
+  settings: "Settings",
+  account: "Account",
+  profile: "Profile",
+  search: "Search",
+  festivals: "Festivals",
+  practices: "Practices",
+  concepts: "Concepts",
+  texts: "Sacred texts",
+  sources: "Sources used",
+  traditionNotes: "Tradition notes",
+  suggestedPractice: "A simple next step",
+  send: "Send question",
+  report: "Report this answer",
+  newConversation: "New conversation",
+  signIn: "Sign in",
+  continueAsGuest: "Continue as guest",
+  notificationTime: "Daily reminder",
+  traditionPreference: "Tradition preference",
+  language: "Language",
+  appearance: "Appearance",
+  privacy: "Privacy and data",
+  support: "Help and feedback",
+  deleteAccount: "Delete account",
+  allTraditions: "All traditions",
+  noPressure: "A little, often, without pressure.",
+  offlinePartial:
+    "Some live content is unavailable, so this page is filling the gaps with the app’s offline learning library.",
+  offlineFallback:
+    "You’re using the app’s offline learning library. Live sources will appear when a connection is available.",
+} as const;
+
+export type CopyKey = keyof typeof en;
+
+export function useCopy() {
+  return useMemo(() => (key: CopyKey) => en[key], []);
+}

@@ -1,0 +1,279 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn720706.ca.archive.org",
+        "dir": "/0/items/guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn720706.ca.archive.org",
+        "dir": "/0/items/guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra"
+      }
+    ]
+  },
+  "created": 1783290735,
+  "d1": "ia600600.us.archive.org",
+  "d2": "ia800600.us.archive.org",
+  "dir": "/14/items/guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra",
+  "files": [
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office.pdf",
+      "source": "original",
+      "mtime": "1739489309",
+      "size": "767663235",
+      "md5": "554ae302c1922d23a50fa15e6431d6f3",
+      "crc32": "76a10866",
+      "sha1": "db52cb694489e82d878eec7909ee640766e0f4ed",
+      "format": "Text PDF"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_chocr.html.gz",
+      "source": "derivative",
+      "ocr": "tesseract 5.3.0-6-g76ae",
+      "ocr_parameters": "lang-eng;lang-lat;lang-Latin;two-pass-disabled;pass-dpi-disabled;autonomous-mode-enabled;binarisation-method-otsu",
+      "ocr_module_version": "0.0.21",
+      "ocr_autonomous": "true",
+      "ocr_detected_script": [
+        "Latin",
+        "Cyrillic"
+      ],
+      "ocr_detected_script_conf": [
+        "0.6531",
+        "0.3411"
+      ],
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "chOCR",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_jp2.zip",
+      "mtime": "1739497132",
+      "size": "17299907",
+      "md5": "d64145af530ac79601c7102689537bd9",
+      "crc32": "1a1dfb6f",
+      "sha1": "7b6e1180580d46e52e68273f7d6357172fada23d"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_djvu.xml",
+      "mtime": "1739497217",
+      "size": "1203036",
+      "md5": "1ac37ed1d223bc7dd3eac38fde4d5d36",
+      "crc32": "067119b9",
+      "sha1": "e49508b67c0b45bfdee62622b76c726555374190"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr.html",
+      "mtime": "1739497178",
+      "size": "16233380",
+      "md5": "919e14f969f3b538ac29f65911756613",
+      "crc32": "7358b099",
+      "sha1": "1a6edc68fcd073ce0a55bcd2de0a8f8c7a35682a"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_parameters": "lang-eng;lang-lat;lang-Latin;two-pass-disabled;pass-dpi-disabled;autonomous-mode-enabled;binarisation-method-otsu",
+      "ocr_module_version": "0.0.21",
+      "ocr_autonomous": "true",
+      "ocr_detected_script": [
+        "Latin",
+        "Cyrillic"
+      ],
+      "ocr_detected_script_conf": [
+        "0.6531",
+        "0.3411"
+      ],
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "hOCR",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_chocr.html.gz",
+      "mtime": "1739497160",
+      "size": "32411601",
+      "md5": "6f20243c9f392d67a8b5ba43a225a6cb",
+      "crc32": "e02d4abd",
+      "sha1": "e35acfa9817d92e7d7e3d11e4bc3aa65edbc7276"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr.html",
+      "mtime": "1739497190",
+      "size": "4574",
+      "md5": "60e357f2ed979fa01bd03d23d78f8c4c",
+      "crc32": "37515b0b",
+      "sha1": "7d0c13bacdf23a149399c32ba6631e2b1c34d0ff"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "955",
+      "word_conf_11_20": "778",
+      "word_conf_21_30": "1248",
+      "word_conf_31_40": "1625",
+      "word_conf_41_50": "1993",
+      "word_conf_51_60": "2691",
+      "word_conf_61_70": "3870",
+      "word_conf_71_80": "7275",
+      "word_conf_81_90": "24135",
+      "word_conf_91_100": "165236",
+      "format": "OCR Search Text",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr.html",
+      "mtime": "1739497204",
+      "size": "427643",
+      "md5": "b4637b9ceb07d31d84d2b587ae85e458",
+      "crc32": "47288ce8",
+      "sha1": "dc55fadb41f5f1a1635bc297325f54d371861cbf"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office.pdf",
+      "mtime": "1739489991",
+      "size": "159348889",
+      "md5": "620455ad721b7c7c66b8b710683bf057",
+      "crc32": "fcbf5f65",
+      "sha1": "0fde917f1ea9d32129bbdeb5bd88a7021bcad807",
+      "filecount": "367"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "95",
+      "format": "Page Numbers JSON",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_hocr.html",
+      "mtime": "1739497343",
+      "size": "62422",
+      "md5": "bca70bd8cd3e424c6b8afae0f6cbe25b",
+      "crc32": "bf59b1f2",
+      "sha1": "072e0a7eb6c59a23c717656175a27baf40db652e"
+    },
+    {
+      "name": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office_djvu.xml",
+      "mtime": "1739497343",
+      "size": "129830",
+      "md5": "23780bf0e3691be36628cf88566eeca6",
+      "crc32": "8c9a16c2",
+      "sha1": "629f661f3287791e82c405d13a1f4b73856f2fd7"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1739497360",
+      "size": "18380",
+      "md5": "1aae0f21603003c059e7f4234016d9a4",
+      "crc32": "32411afd",
+      "sha1": "475a69fd75a713df608121cfafd36e61608e30bf",
+      "format": "Item Tile"
+    },
+    {
+      "name": "guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra_archive.torrent",
+      "source": "metadata",
+      "btih": "16bf2c5ff3bc3fdc3c696ac53df2a831237aa04d",
+      "mtime": "1781950174",
+      "size": "43319",
+      "md5": "33f25ef7bb7d1609f29ec59a8c9a6ccb",
+      "crc32": "2ec4613a",
+      "sha1": "48de97d6ac870d3bacbf9e605d3d19c03502b83d",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "1dd8a5e1e82fc605b75e9ed7d92e971d",
+      "summation": "md5"
+    },
+    {
+      "name": "guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra_meta.sqlite",
+      "source": "original",
+      "mtime": "1739489349",
+      "size": "28672",
+      "md5": "9e6d20c4651ac063f108e511fd5f8677",
+      "crc32": "08d105c6",
+      "sha1": "56db82140eeac5b108aded73c76c90bb6e7ff3b7",
+      "format": "Metadata"
+    },
+    {
+      "name": "guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra_meta.xml",
+      "source": "original",
+      "mtime": "1781950166",
+      "size": "2189",
+      "md5": "0dcc8d75e9efa0c36f4e158303e028cf",
+      "crc32": "ae2f929d",
+      "sha1": "7f451f385440cc3ab6b1b8512a3aafd02510c6d5",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 15,
+  "item_last_updated": 1781950174,
+  "item_size": 994877077,
+  "metadata": {
+    "identifier": "guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra",
+    "mediatype": "texts",
+    "collection": [
+      "folkscanomy_miscellaneous",
+      "folkscanomy"
+    ],
+    "creator": "The Panini Office",
+    "description": "SPS, SPS-Srinagar, Funded-By-IKS-MoE,IKS-SPS\n\nFilename: 'The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd - The Panini Office'",
+    "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "scanner": "Internet Archive HTML5 Uploader 1.7.0",
+    "subject": [
+      "SPS",
+      "SPS-Srinagar",
+      "Funded-By-IKS-MoE",
+      "IKS-SPS"
+    ],
+    "title": "The Sacred Books Of The Hindus Brahma Vaivarta Puranam Part 4 Ed By B D Basu Trans By Rajendra Nath Sen 1922 Allahabd The Panini Office",
+    "uploader": "egangotrifoundation@gmail.com",
+    "publicdate": "2025-02-13 23:28:51",
+    "addeddate": "2025-02-13 23:28:51",
+    "curation": "[curator]validator@archive.org[/curator][date]20250213232938[/date][comment]checked for malware[/comment]",
+    "identifier-access": "http://archive.org/details/guhw_the-sacred-books-of-the-hindus-brahma-vaivarta-puranam-part-4-ed-by-b-d-basu-tra",
+    "identifier-ark": "ark:/13960/s260249fz5x",
+    "ppi": "241",
+    "ocr": "tesseract 5.3.0-6-g76ae",
+    "ocr_parameters": "-l eng+lat+Latin",
+    "ocr_module_version": "0.0.21",
+    "ocr_autonomous": "true",
+    "ocr_detected_script": [
+      "Latin",
+      "Cyrillic"
+    ],
+    "ocr_detected_script_conf": [
+      "0.6531",
+      "0.3411"
+    ],
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "95",
+    "page_number_module_version": "1.0.5",
+    "language": "eng",
+    "collection_added": "folkscanomy"
+  },
+  "server": "ia800600.us.archive.org",
+  "uniq": 2096693327,
+  "workable_servers": [
+    "ia800600.us.archive.org",
+    "ia600600.us.archive.org"
+  ]
+}

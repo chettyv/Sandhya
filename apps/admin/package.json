@@ -1,11 +1,11 @@
 {
   "name": "@dharma-daily/admin",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "Placeholder. Real Next.js admin dashboard is scaffolded in Phase 8.",
+  "description": "Dependency-free admin console for moderation and curated-content operations.",
   "scripts": {
-    "build": "echo 'admin build: scaffolded in Phase 8 (developer plan §8)'",
-    "typecheck": "echo 'admin typecheck: scaffolded in Phase 8'",
-    "test": "echo 'admin tests: scaffolded in Phase 8'"
+    "build": "tsc -p tsconfig.json && node build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node test.mjs"
   }
 }

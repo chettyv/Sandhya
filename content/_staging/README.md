@@ -1,0 +1,447 @@
+# Content Staging
+
+Raw candidate source files live here temporarily while they are reviewed and converted into the canonical `content/` Markdown format.
+
+Important:
+
+- Files in this folder are **not approved app content**.
+- Every source must have a row in `docs/source_inventory_template.csv`.
+- Do not ingest from this folder into Supabase until legal, attribution, content, and human-review fields are complete.
+- Project Gutenberg files include boilerplate and trademark/license text that must be removed or complied with before app display.
+- HTML files need extraction, cleanup, scripture segmentation, source attribution, and reviewer signoff before moving into production corpus folders.
+- Large scans and OCR work should be planned separately to avoid committing bulky raw binaries without approval.
+
+Current staged sources:
+
+- `raw/english/bhagavad_gita_arnold_1885_en.txt`
+- `raw/english/upanishads_paramananda_en.txt`
+- `raw/english/yoga_sutras_johnston_en.txt`
+- `raw/english/ramayana_griffith_en.txt`
+- `raw/english/mahabharata_ganguli_en.txt`
+- `raw/english/vedanta_sutras_sankara_thibaut_en.txt`
+- `raw/english/vedanta_sutras_ramanuja_thibaut_en.txt`
+- `raw/english/vishnu_purana_dutt_wilson_en.txt`
+- `raw/english/markandeya_purana_books_7_8_wortham_en.txt`
+- `raw/english/vishnu_sahasranamam_pg9000_en.txt`
+- `raw/tamil/tirukkural_project_madurai_ta_en.html`
+- `raw/tamil/wikisource_bharati_bhagavad_gita_ta.jsonl`
+- `raw/sanskrit/bhagavadgita_com_copyright.html`
+- `raw/sanskrit/gretil_index.html`
+- `raw/sanskrit/wikisource_bhagavad_gita_sa.jsonl`
+- `raw/hindi/bhagavad_gita_public_domain_mark_hi.ocr.txt`
+- `raw/hindi/gita_rahasya_tilak_sapre_1933_hi.ocr.txt`
+- `raw/hindi/wikisource_ramcharitmanas_hi.jsonl`
+- `raw/bengali/bhagavad_gita_bankim_1902_bn.ocr.txt`
+- `raw/bengali/bhagavad_gita_hitalal_mishra_1853_bn.ocr.txt`
+- `raw/bengali/bhagavad_gita_kailash_chandra_singha_1885_bn.ocr.txt`
+- `raw/bengali/bhagavad_gita_kaliprasanna_sarkar_1894_bn.ocr.txt`
+- `raw/bengali/wikisource_bhagavad_gita_indexes_bn.jsonl`
+- `raw/marathi/gita_rahasya_tilak_1924_mr.ocr.txt`
+- `raw/marathi/sri_gyaneshwari_marathi_web_mr.ocr.txt`
+- `raw/marathi/dnyaneshwari_rajwade_1909_mr.ocr.txt`
+- `raw/gujarati/bhagwat_geeta_sanjivanni_gu.ocr.txt`
+- `raw/gujarati/bhagavad_gita_jyoti_1927_gu.ocr.txt`
+- `raw/gujarati/wikisource_gitadhvani_gu.jsonl`
+- `raw/telugu/bhagavad_gita_kantha_bhashyam_bodananda_te.ocr.txt`
+- `raw/telugu/bhagavad_gita_simple_telugu_public_domain_mark_te.ocr.txt`
+- `raw/telugu/wikisource_bhagavad_gita_translation_te.jsonl`
+- `raw/urdu/bhagavat_gita_urdu_khalifa_abdul_hakeem.ocr.txt`
+- `raw/urdu/shrimad_bhagvata_gita_madan_dehlavi_1930_ur.ocr.txt`
+- `raw/metadata_only/*.metadata.json`
+- `raw/project_gutenberg_download_log_2026-06-19_continued.txt`
+
+Not staged:
+
+- English-first manual backlog as of 2026-07-06:
+  - Standalone Devi Mahatmya / Durga Saptashati: full Markandeya Purana OCR exists in staging, but a dedicated verified extraction or separate old English edition is still needed.
+  - Lalita Sahasranama: no reviewed English public-domain source staged.
+  - Hanuman Chalisa English: Hindi/Awadhi lead exists, but no reviewed English translation staged.
+  - Shiva Mahimna Stotra: no reviewed English source staged.
+  - Aditya Hridayam: no reviewed English standalone source staged.
+  - Bhaja Govindam: no reviewed English source staged.
+  - Soundarya Lahari: earlier candidate was skipped because the usable edition appeared post-1930; find older/clearer edition or permission.
+  - Dnyaneshwari/Jnaneshwari English: Marathi scans are staged, but no reviewed English translation is staged.
+  - Gita Rahasya English: Marathi/Hindi sources are staged, but English appears rights-sensitive and needs permission/manual review.
+  - Kamba Ramayanam English and Adhyatma Ramayana English: no reviewed English sources staged.
+  - Eknathi Bhagwat English, Namdev abhangs English, and broader Varkari primary devotional sources: not staged beyond related hagiography/context.
+  - Broader or complete Divya Prabandham and Tevaram English: selected Alvar/Tamil Shaiva sources are staged, but coverage is not complete.
+  - Narayaneeyam English: no reviewed source staged.
+  - Shiva Purana, Padma Purana, Skanda/Kashi Khanda, Kurma Purana, Linga Purana, Vayu Purana, Brahmanda Purana, and Narada Purana English: no reviewed old public-domain English full/section sources staged.
+  - Madhva Gita Bhashya and Abhinavagupta Gita commentary in English: no reviewed source staged.
+- Sacred Texts Rig Veda index: scripted download was blocked by Cloudflare. Keep it as an inventory candidate and fetch manually or from another public-domain source.
+- Full PDF/DJVU binaries for Marathi, Bengali, Gujarati, Telugu, and Urdu scans: OCR text and metadata were staged instead to avoid committing bulky raw scans without approval.
+- Noncommercial or unclear-rights Urdu items: metadata only. Full text was not downloaded where commercial use is blocked or unclear.
+- Additional Project Gutenberg public-domain candidates discovered on 2026-06-19 continuation: queued in `docs/source_download_queue_2026-06-19.csv` because the current shell sandbox blocks outbound socket access.
+- Sacred Books of the East / Sacred Texts candidates for Vedic, dharma-sutra, dharma-sastra, Grihya-sutra, Upanishad, and Vedanta material: queued in `docs/source_download_queue_2026-06-19.csv` for the same network reason.
+- Project Madurai Tamil candidates for Thiruvasagam, Tirumantiram, Naalayira Divya Prabandham, Tiruvaymoli, Bharati Gita, Kandar Alankaram/Kandar Anubhuti, Abirami Andhadhi, and Kanda Sashti Kavacham: queued in `docs/source_download_queue_2026-06-19.csv`.
+- Additional regional candidates added after the Tamil pass: Hindi/Braj Vinaya Patrika, Marathi Dasbodh and Eknathi Bhagwat metadata, Telugu Andhra Mahabharatam, Ranganatha Ramayanamu, Pothana Bhagavatha metadata, Dhruvopakhyanamu metadata, Gujarati Narsinh Mehta metadata-only, and Bengali Krittivasi Ramayan / Kashidasi Mahabharat metadata-only source leads.
+- Additional Project Madurai Tamil candidates added in the next pass: later Tirumantiram sections, Bharati devotional songs, Desika Prabandham, Thiruvarutpa sections, Thiruvarutpa Agaval, Shanmuga Kavacham, and Kanda Guru Kavacham.
+- Corpus/dataset metadata-only leads added for Itihasa Sanskrit-English, IWLV Ramayana multilingual, Samasamayik Hindi-Sanskrit, and Mitrasamgraha Sanskrit-English. These are not approved source texts until dataset and upstream text rights are reviewed.
+- Additional metadata-only discovery leads added for SanskritDocuments, Sanskrit Wikisource, Bengali Gaudiya Vaishnava texts, Gujarati bhakti poets, Telugu Sumati Satakam, and the Persian-script Razmnama Mahabharata.
+- Additional metadata-only leads added for Hanuman Chalisa, Surdas/Sursagar, Devi Mahatmya/Durga Saptashati, Tukaram Gatha, Namdev Gatha, Bhoja Bhagat, Vemana poems, Bengali Manasamangal/Chandimangal, and the SanskritDocuments Upanishad index.
+- Additional metadata-only leads added for Janabai, Eknath poetry, Premanand Gujarati Ramayana, Dayaram, Bengali Vaishnava Padavali and Krishna Mangal, Tulsidas Kavitavali/Gitavali, Molla Ramayanam, Bhaskara Ramayanam, and Urdu/Persian-script Mahabharata translation discovery.
+- Additional Kabir/Mirabai/Raskhan/Tulsidas leads added, including a concrete Project Gutenberg retry target for `Songs of Kabir` and an Internet Archive metadata target for the 1917 `Bijak of Kabir`.
+- Additional Advaita/darshana metadata retry targets added for `Sarva-Darsana-Samgraha`, `Panchadasi`, `Shankara Digvijaya Mula`, and two Surendranath Dasgupta secondary works. These are not production-ready source texts until legal and subject review is complete.
+- Additional Marathi and English IA metadata retry targets added for `Sant Tukaram Gatha` and Wilkins' `Hindu Mythology Vedic and Puranic`. Both remain review-first sources.
+- Additional Bhagavata Purana metadata-only leads added for Gita Press, M. N. Dutt/HathiTrust, and SanskritDocuments. None are approved full-text downloads yet.
+
+Run notes for 2026-06-19:
+
+- Public-domain/open-license candidates were downloaded for English, Hindi, Sanskrit, Tamil, Bengali, Marathi, Telugu, Gujarati, and Urdu.
+- Wikisource exports are raw JSONL/Wikitext snapshots. They are not production-ready and carry attribution/share-alike/provenance obligations.
+- Internet Archive OCR files preserve the paired `*.metadata.json` file. Treat `Public Domain Mark` and `CC0` labels as claims to verify, not final legal approval.
+- Every newly staged source has a row in `docs/source_inventory_template.csv`.
+- To retry pending queued downloads when network access is available, run `pwsh scripts/download-source-queue.ps1` from the repository root.
+- To preview queued downloads without writing files, run `pwsh scripts/download-source-queue.ps1 -WhatIf`.
+- Queued sources are not approved by being queued. Treat the `status` column in `docs/source_inventory_template.csv` as authoritative.
+
+Run notes for 2026-07-04 English-focused continuation:
+
+- Retried English queued downloads now that network access is available.
+- Staged remaining Project Gutenberg English TXT candidates from the queue:
+  - `raw/english/mahabharata_ganguli_volume_1_books_1_3_en.txt`
+  - `raw/english/mahabharata_ganguli_volume_2_books_4_7_en.txt`
+  - `raw/english/mahabharata_ganguli_volume_3_books_8_12_en.txt`
+  - `raw/english/mahabharata_ganguli_volume_4_books_13_18_en.txt`
+  - `raw/english/yajnavalkya_dharma_sastra_judicature_en.txt`
+  - `raw/english/hindu_literature_hitopadesa_nala_ramayana_sakuntala_en.txt`
+  - `raw/english/hindu_tales_from_sanskrit_en.txt`
+  - `raw/english/tales_from_hindu_dramatists_en.txt`
+  - `raw/english/nala_and_damayanti_milman_en.txt`
+  - `raw/english/hindu_gods_and_heroes_barnett_en.txt`
+  - `raw/english/songs_of_kabir_tagore_pg_en.txt`
+- Added two additional English Project Gutenberg candidates discovered on 2026-07-04:
+  - `raw/english/bhagavata_purana_study_sinha_1901_en.txt`
+  - `raw/english/sacred_books_of_the_east_wilson_anthology_en.txt`
+- Added `scripts/stage-gutenberg-english-candidates.mjs` and staged 29 more English Project Gutenberg candidates:
+  - `raw/english/hinduism_buddhism_eliot_vol1_en.txt`
+  - `raw/english/hinduism_buddhism_eliot_vol2_en.txt`
+  - `raw/english/hinduism_buddhism_eliot_vol3_en.txt`
+  - `raw/english/history_indian_philosophy_dasgupta_vol1_en.txt`
+  - `raw/english/loves_of_krishna_archer_en.txt`
+  - `raw/english/lessons_gnani_yoga_atkinson_en.txt`
+  - `raw/english/lessons_raja_yoga_atkinson_en.txt`
+  - `raw/english/introduction_to_yoga_besant_en.txt`
+  - `raw/english/hindu_yogi_science_breath_atkinson_en.txt`
+  - `raw/english/doctrine_practice_yoga_mukerji_en.txt`
+  - `raw/english/yoga_as_philosophy_religion_dasgupta_en.txt`
+  - `raw/english/autobiography_yogi_yogananda_en.txt`
+  - `raw/english/gita_and_gospel_farquhar_en.txt`
+  - `raw/english/jnana_yoga_part2_vivekananda_en.txt`
+  - `raw/english/tattva_muktavali_cowell_en.txt`
+  - `raw/english/sarva_darsana_samgraha_cowell_gough_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol1_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol2_part1_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol2_part2_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol3_part1_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol3_part2_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol4_part1_en.txt`
+  - `raw/english/yoga_vasishtha_mitra_vol4_part2_en.txt`
+  - `raw/english/great_indian_epics_oman_en.txt`
+  - `raw/english/ramayana_dutt_vol1_en.txt`
+  - `raw/english/ramayana_dutt_vol2_en.txt`
+  - `raw/english/ramayana_dutt_vol3_en.txt`
+  - `raw/english/ramayana_dutt_vol4_en.txt`
+  - `raw/english/harivamsha_dutt_en.txt`
+- Staged 14 more English Project Gutenberg candidates through the same script:
+  - `raw/english/maha_bharata_romesh_dutt_en.txt`
+  - `raw/english/religions_india_hopkins_en.txt`
+  - `raw/english/indian_myth_legend_mackenzie_en.txt`
+  - `raw/english/buddhism_brahmanism_hinduism_monier_williams_en.txt`
+  - `raw/english/siksha_patri_swami_narayana_monier_williams_en.txt`
+  - `raw/english/katha_sarit_sagara_tawney_en.txt`
+  - `raw/english/popular_religion_folklore_north_india_crooke_vol1_en.txt`
+  - `raw/english/popular_religion_folklore_north_india_crooke_vol2_en.txt`
+  - `raw/english/tales_sun_folklore_southern_india_kingscote_sastri_en.txt`
+  - `raw/english/baital_pachchisi_forbes_platts_en.txt`
+  - `raw/english/vikram_vampire_burton_en.txt`
+  - `raw/english/indian_fairy_tales_jacobs_en.txt`
+  - `raw/english/tales_punjab_folklore_steel_en.txt`
+  - `raw/english/two_old_faiths_mitchell_muir_en.txt`
+- Added `scripts/stage-internet-archive-english-candidates.mjs` and staged 10 English Internet Archive OCR candidates with paired `*.metadata.json` sidecars:
+  - `raw/english/bhagavata_purana_mn_dutt_ia_en.txt`
+  - `raw/english/devi_bhagavatam_vijnanananda_en.txt`
+  - `raw/english/manu_samhita_dutt_1909_en.txt`
+  - `raw/english/harita_samhita_dutt_1906_en.txt`
+  - `raw/english/garuda_purana_dutt_1908_en.txt`
+  - `raw/english/agni_purana_dutt_vol1_en.txt`
+  - `raw/english/agni_purana_dutt_vol2_en.txt`
+  - `raw/english/markandeya_purana_dutt_1896_en.txt`
+  - `raw/english/brahmanism_hinduism_monier_williams_1891_en.txt`
+  - `raw/english/dharmasastra_mn_dutt_6_vols_smritis_en.txt`
+- Staged 8 core Vedic Internet Archive OCR candidates through the same IA script:
+  - `raw/english/rig_veda_griffith_vol1_ia_en.txt`
+  - `raw/english/rig_veda_griffith_vol2_ia_en.txt`
+  - `raw/english/rig_veda_griffith_vol3_ia_en.txt`
+  - `raw/english/rig_veda_griffith_vol4_ia_en.txt`
+  - `raw/english/sama_veda_griffith_1893_ia_en.txt`
+  - `raw/english/atharva_veda_griffith_vol1_ia_en.txt`
+  - `raw/english/atharva_veda_griffith_vol2_ia_en.txt`
+  - `raw/english/white_yajurveda_griffith_1899_ia_en.txt`
+- Added `scripts/scrape-sacred-texts.mjs` and staged page-level Sacred Texts JSONL bundles under `raw/english/sacred_texts/`.
+- Sacred Texts scrape output contains 15 JSONL bundles and 1,863 total page records after URL normalization/deduplication:
+  - SBE 2, 7, 8, 12, 14, 15, 25, 29, 30, 32, 33, 38, 42, and 46
+  - Griffith Atharva Veda
+- Added seven more Sacred Books of the East page-level JSONL bundles from Sacred Texts:
+  - `raw/english/sacred_texts/sbe01_upanishads_part1_muller_en.jsonl`
+  - `raw/english/sacred_texts/sbe26_satapatha_brahmana_part2_en.jsonl`
+  - `raw/english/sacred_texts/sbe34_vedanta_sutras_sankara_part1_en.jsonl`
+  - `raw/english/sacred_texts/sbe41_satapatha_brahmana_part3_en.jsonl`
+  - `raw/english/sacred_texts/sbe43_satapatha_brahmana_part4_en.jsonl`
+  - `raw/english/sacred_texts/sbe44_satapatha_brahmana_part5_en.jsonl`
+  - `raw/english/sacred_texts/sbe48_vedanta_sutras_ramanuja_en.jsonl`
+- The additional Sacred Texts scrape added 1,410 page records with zero scrape errors, completing the staged Sacred Texts coverage for Muller Upanishads Part 1, Eggeling Satapatha Brahmana Parts 2-5, Sankara Vedanta-Sutras Part 1, and Ramanuja Vedanta-Sutras.
+- Added three more Sacred Texts English JSONL bundles on 2026-07-05:
+  - `raw/english/sacred_texts/sankhya_aphorisms_kapila_ballantyne_en.jsonl`
+  - `raw/english/sacred_texts/vishnu_purana_wilson_sacred_texts_en.jsonl`
+  - `raw/english/sacred_texts/mahanirvana_tantra_avalon_en.jsonl`
+- The 2026-07-05 Sacred Texts scrape added 218 page records with zero scrape errors. Treat the Sankhya hypertext as review-first because its source notes say Sanskrit was omitted from the transcription; treat Mahanirvana Tantra as sensitive ritual/tantra content requiring specialist review before retrieval use.
+- Added three additional Sacred Texts Shakta/Tantra English JSONL bundles on 2026-07-05:
+  - `raw/english/sacred_texts/hymns_to_the_goddess_avalon_en.jsonl`
+  - `raw/english/sacred_texts/hymn_to_kali_avalon_en.jsonl`
+  - `raw/english/sacred_texts/shakti_and_shakta_avalon_1918_en.jsonl`
+- This targeted scrape added 99 page records with zero scrape errors. Treat `Hymn to Kali` and `Shakti and Shakta` as review-first Shakta/Tantra material requiring specialist review and product-safety context before retrieval use.
+- Added four Internet Archive OCR darshana/yoga sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/nyaya_sutras_gotama_vidyabhusana_1913_en.txt`
+  - `raw/english/vaisesika_sutras_kanada_sinha_1923_en.txt`
+  - `raw/english/purva_mimamsa_sutras_jaimini_jha_1916_en.txt`
+  - `raw/english/yoga_system_patanjali_woods_1914_en.txt`
+- These pre-1929 English editions are staged for review-first use. OCR cleanup, Sanskrit/English alignment, commentary boundary review, and darshana specialist review remain required before ingestion.
+- Added two Internet Archive OCR Upanishad sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/thirteen_principal_upanishads_hume_1921_en.txt`
+  - `raw/english/thirty_minor_upanishads_aiyar_1914_en.txt`
+- These pre-1929 English editions expand staged Upanishad coverage beyond the Muller and Paramananda sources. OCR cleanup, source-boundary review, Sanskrit/English alignment, and category-level review for minor yoga/sannyasa/physiological Upanishads remain required before ingestion.
+- Added two Internet Archive OCR Sankhya sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/samkhya_philosophy_sinha_1915_en.txt`
+  - `raw/english/tattva_kaumudi_jha_1896_en.txt`
+- These pre-1929 English editions deepen staged Sankhya coverage beyond the Sacred Texts Sankhya Aphorisms scrape. OCR cleanup, commentary boundary review, Sanskrit/English alignment, and darshana specialist review remain required before ingestion.
+- Added five more Internet Archive OCR Vedanta/Gita/Bhakti sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/taittiriya_upanishad_mahadeva_sastri_1903_en.txt`
+  - `raw/english/amritabindu_kaivalya_upanishads_mahadeva_sastri_1898_en.txt`
+  - `raw/english/panchadasi_vidyaranya_1912_en.txt`
+  - `raw/english/bhagavad_gita_sankara_bhashya_mahadeva_sastri_1901_en.txt`
+  - `raw/english/narada_bhakti_sutras_sinha_1917_en.txt`
+- These pre-1929 English editions add Advaita commentary, prakaran, Gita-bhashya, and bhakti-sutra coverage. OCR cleanup, commentary/source-boundary review, Sanskrit/English alignment, and tradition-sensitive specialist review remain required before ingestion.
+- Added five more Internet Archive OCR Vishishtadvaita/Tamil Shaiva/Vedanta sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/sri_bhashya_ramanuja_rangacharya_1899_en.txt`
+  - `raw/english/tiruvacagam_pope_1900_en.txt`
+  - `raw/english/hymns_tamil_saivite_saints_kingsbury_phillips_1921_en.txt`
+  - `raw/english/studies_saiva_siddhanta_nallasvami_1911_en.txt`
+  - `raw/english/vedantasara_sadananda_ballantyne_1898_en.txt`
+- These pre-1929 English editions broaden staged coverage beyond Sanskrit-centered Advaita sources. OCR cleanup, Tamil/Sanskrit source alignment, poetic translation review, commentary/source-boundary review, and tradition-sensitive specialist review remain required before ingestion.
+- Added five more Internet Archive OCR Hatha-yoga and Sanskrit poetry sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/hatha_yoga_pradipika_pancham_sinh_1915_en.txt`
+  - `raw/english/siva_samhita_vasu_1914_en.txt`
+  - `raw/english/gheranda_sanhita_vasu_1895_en.txt`
+  - `raw/english/satakas_bhartrihari_wortham_1886_en.txt`
+  - `raw/english/gita_govinda_arnold_1875_en.txt`
+- These pre-1929 English editions add hatha-yoga source coverage plus ethics/renunciation and Krishna-bhakti poetry. OCR cleanup, practice-safety review, Sanskrit/English alignment, verse-level attribution, and sensitive devotional/romantic-content review remain required before ingestion.
+- Added six more Internet Archive OCR modern Vedanta/Bhakti/Gita sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/bhakti_sutras_narada_sandilya_sinha_1917_1918_en.txt`
+  - `raw/english/bhagavad_gita_chatterji_1887_en.txt`
+  - `raw/english/ramakrishna_life_sayings_muller_1898_en.txt`
+  - `raw/english/gospel_ramakrishna_abhedananda_1907_en.txt`
+  - `raw/english/raja_yoga_vivekananda_1923_en.txt`
+  - `raw/english/bhakti_yoga_vivekananda_1896_en.txt`
+- These pre-1929 English editions add Sandilya Bhakti Sutra coverage, another older Gita translation, and Ramakrishna/Vivekananda teaching sources. OCR cleanup, duplicate Narada passage review, speaker/source-boundary review, modern lineage context, and practice-safety review remain required before ingestion.
+- Added nine more Internet Archive OCR English Vedanta/Vaishnava teaching sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/karma_yoga_vivekananda_1907_en.txt`
+  - `raw/english/jnana_yoga_vivekananda_1902_en.txt`
+  - `raw/english/vedanta_philosophy_sketch_tripathi_1901_en.txt`
+  - `raw/english/my_master_vivekananda_1901_en.txt`
+  - `raw/english/lectures_colombo_almora_vivekananda_1897_en.txt`
+  - `raw/english/inspired_talks_vivekananda_1910_en.txt`
+  - `raw/english/chaitanya_life_teachings_sarkar_1922_en.txt`
+  - `raw/english/chaitanya_companions_sen_1917_en.txt`
+  - `raw/english/three_great_acharyas_1923_en.txt`
+- These pre-1929 English editions complete more of the core Vivekananda yoga/lecture set and add Gaudiya Vaishnava plus cross-Vedanta Acharya coverage. OCR cleanup, duplicate Vivekananda passage review, lecture/source-boundary review, Vaishnava/Dvaita specialist review, and modern-lineage context remain required before ingestion.
+- Added two more English Vaishnava/Dvaita sources on 2026-07-05:
+  - `raw/english/chaitanya_vaishnava_poets_beames_1873_en.txt`
+  - `raw/english/upanishads_madhwa_bhashya_sbh_vol1_1911_en.txt`
+- These sources add a Project Gutenberg Chaitanya/Vaishnava poetry article and a Madhwa-bhashya Upanishad OCR volume. Gutenberg boilerplate removal, IA upload-rights review for the Madhwa scan, Vaishnava/Dvaita specialist review, Sanskrit/Bengali/English alignment, and source-boundary review remain required before ingestion.
+- Added eleven more Internet Archive OCR English Vedic, mythology/reference, mysticism, and festival/practice support sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/classical_dictionary_hindu_mythology_dowson_1888_en.txt`
+  - `raw/english/vedic_mythology_macdonell_1897_en.txt`
+  - `raw/english/vedic_reader_macdonell_1917_en.txt`
+  - `raw/english/religion_philosophy_veda_upanishads_keith_part1_1925_en.txt`
+  - `raw/english/religion_philosophy_veda_upanishads_keith_part2_1925_en.txt`
+  - `raw/english/hindu_mysticism_dasgupta_1927_en.txt`
+  - `raw/english/religion_of_veda_bloomfield_1908_en.txt`
+  - `raw/english/vedic_index_macdonell_keith_vol1_1912_en.txt`
+  - `raw/english/vedic_index_macdonell_keith_vol2_1912_en.txt`
+  - `raw/english/hindu_feasts_fasts_ceremonies_sastri_1903_en.txt`
+  - `raw/english/hindu_fasts_feasts_mukerji_1918_en.txt`
+- These pre-1929 English editions strengthen reference and explanatory coverage. They are not primary scripture rows; OCR cleanup, reference-entry segmentation, dated-scholarship review, regional festival/practice review, and source-category labeling remain required before ingestion.
+- Added six more Internet Archive OCR English devotional, story, and saint-context sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/prem_sagar_eastwick_1851_en.txt`
+  - `raw/english/panchatantra_ryder_1925_en.txt`
+  - `raw/english/hitopadesa_wilkins_1886_en.txt`
+  - `raw/english/psalms_maratha_saints_macnicol_1919_en.txt`
+  - `raw/english/bijak_kabir_ahmad_shah_1917_en.txt`
+  - `raw/english/mystics_ascetics_saints_oman_1905_en.txt`
+- These pre-1929 English editions add Krishna-bhakti narrative, Sanskrit niti/story literature, Marathi bhakti poetry, Kabir/Sant coverage, and historical ascetic/saint context. OCR cleanup, Hindi/Marathi/Sanskrit source alignment, poem/story-level attribution, colonial-framing review, and sensitive-practice review remain required before ingestion.
+- Added five more Internet Archive OCR English Purana and Advaita sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/matsya_puranam_taluqdar_vol1_1916_en.txt`
+  - `raw/english/matsya_puranam_taluqdar_vol2_1917_en.txt`
+  - `raw/english/brahma_vaivarta_puranam_sen_brahma_prakriti_1920_en.txt`
+  - `raw/english/vivekachudamani_madhavananda_1921_en.txt`
+  - `raw/english/prabodha_chandrodaya_atma_bodha_taylor_1893_en.txt`
+- These pre-1929 English editions add Matsya Purana coverage, partial Brahma Vaivarta Purana Brahma/Prakriti khanda coverage, and Advaita prakarana/drama coverage. OCR cleanup, partial-volume labeling, Sanskrit/English alignment, notes/index boundary review, and tradition-sensitive segmentation remain required before ingestion.
+- Added three more Internet Archive OCR English Bhagavad Gita translations on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/bhagavad_gita_besant_bhagavan_das_1905_en.txt`
+  - `raw/english/bhagavad_gita_davies_1889_en.txt`
+  - `raw/english/srimad_bhagavad_gita_swarupananda_1909_en.txt`
+- These pre-1929 English editions add additional Gita translation witnesses. OCR cleanup, Sanskrit/English alignment, duplicate passage review across staged Gita translations, edition/source-boundary review, and lineage/framing review remain required before ingestion.
+- Added four more Internet Archive OCR English vernacular-bhakti sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/ramayana_tulsidas_growse_1914_en.txt`
+  - `raw/english/ekanath_bhaktalilamrita_abbott_1927_en.txt`
+  - `raw/english/bhanudas_bhaktavijaya_abbott_1926_en.txt`
+  - `raw/english/bahina_bai_autobiography_verses_abbott_1929_en.txt`
+- These pre-1929 English editions add Ramcharitmanas/Tulsidas coverage plus Varkari/Marathi saint hagiography, autobiography, and verse coverage. OCR cleanup, Awadhi/Hindi/Marathi source alignment, translator-note and appendix boundary review, poem/story attribution, and tradition-sensitive segmentation remain required before ingestion.
+- Added four more Internet Archive OCR English Shakta/Tantra sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/principles_of_tantra_tantratattva_part1_1914_en.txt`
+  - `raw/english/principles_of_tantra_tantratattva_part2_1916_en.txt`
+  - `raw/english/serpent_power_avalon_1924_en.txt`
+  - `raw/english/garland_of_letters_woodroffe_1922_en.txt`
+- These pre-1929 English editions add Tantratattva, kundalini/laya-yoga, and mantra-shastra coverage. OCR cleanup, Shakta/Tantra specialist review, strict practice-safety review, Sanskrit/Bengali/English alignment, and translator/editor/source-text boundary review remain required before ingestion.
+- Added four more Internet Archive OCR English Vaishnava/Sri Vaishnava sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/pancaratra_ahirbudhnya_samhita_schrader_1916_en.txt`
+  - `raw/english/vedanta_desika_narayanacharya_vol1_1917_en.txt`
+  - `raw/english/hymns_of_alvars_hooper_1929_en.txt`
+  - `raw/english/chaitanya_upadesh_vol1_1919_en.txt`
+- These 1930-or-earlier English editions add Pancaratra/Ahirbudhnya Samhita scholarship, Vedanta Desika coverage, selected Alvar hymns, and another Gaudiya Vaishnava teaching source. OCR cleanup, Sri Vaishnava/Gaudiya specialist review, Tamil/Bengali/Sanskrit/English alignment, hymn attribution, source-boundary review, and legal review remain required before ingestion.
+- Added four more Internet Archive OCR English Saiva/Saiva Siddhanta sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/metaphysics_saiva_siddhanta_subramania_pillai_1929_en.txt`
+  - `raw/english/siva_jnana_botham_navamoney_david_nadar_1927_en.txt`
+  - `raw/english/sivajnana_siddhiyar_nallaswami_pillai_1913_en.txt`
+  - `raw/english/siddhanta_deepika_complete_14_volumes_1897_1914_en.txt`
+- These 1930-or-earlier English editions add Saiva Siddhanta metaphysics, Siva Jnana Botham, Sivajnana Siddhiyar, and the 14-volume Siddhanta Deepika periodical corpus. OCR cleanup, Tamil/Sanskrit/English alignment, article-level attribution, periodical segmentation, contributor-rights review, and Saiva Siddhanta specialist review remain required before ingestion.
+- Added three more Internet Archive OCR English Brahma Vaivarta Purana sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/brahma_vaivarta_puranam_sen_part2_1921_en.txt`
+  - `raw/english/brahma_vaivarta_puranam_sen_ganesh_khanda_part3_en.txt`
+  - `raw/english/brahma_vaivarta_puranam_sen_part4_1922_en.txt`
+- These 1930-or-earlier English editions extend the already staged Brahma/Prakriti khanda scan toward fuller Brahma Vaivarta Purana coverage. OCR cleanup, exact khanda/part boundary review, Krishna/Shakta/Ganesha tradition review, Sanskrit/English alignment, title-page date verification, and partial-volume labeling remain required before ingestion.
+- Added four more Internet Archive OCR English dharma-smriti sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/yajnavalkya_smriti_mitakshara_vidyarnava_1918_en.txt`
+  - `raw/english/parasara_dharma_samhita_vol1_part2_1893_en.txt`
+  - `raw/english/parasara_dharma_samhita_vol2_part1_1898_en.txt`
+  - `raw/english/parasara_dharma_samhita_1919_en.txt`
+- These 1930-or-earlier English editions add fuller Yajnavalkya Smriti with Mitakshara/Balambhatta notes plus dedicated Parasara Smriti coverage. OCR cleanup, duplicate-volume comparison, commentary/source-text boundary review, sensitive legal/social content review, and careful non-advisory labeling remain required before ingestion.
+- Added five more Internet Archive OCR English Hindu iconography/reference sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/elements_hindu_iconography_rao_vol1_part1_1914_en.txt`
+  - `raw/english/elements_hindu_iconography_rao_vol1_part2_1914_en.txt`
+  - `raw/english/elements_hindu_iconography_rao_vol2_part1_1916_en.txt`
+  - `raw/english/elements_hindu_iconography_rao_vol2_part2_1916_en.txt`
+  - `raw/english/south_indian_images_gods_goddesses_krishna_sastri_1916_en.txt`
+- These 1930-or-earlier English editions add deity/image-reference coverage through T. A. Gopinatha Rao's four-part `Elements of Hindu Iconography` and H. Krishna Sastri's `South-Indian Images of Gods and Goddesses`. OCR cleanup, Sanskrit/deity-name normalization, plate-reference boundaries, image/source-boundary review, and strict labeling as historical/reference context remain required before ingestion.
+- Added two more Internet Archive OCR English practice/customs context sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/hindu_religious_year_underhill_1921_en.txt`
+  - `raw/english/hindu_manners_customs_ceremonies_dubois_beauchamp_1906_en.txt`
+- These 1930-or-earlier English editions add festival-calendar and customs/ceremonies context. OCR cleanup, regional variation review, colonial/missionary bias review, sensitive caste/social-content review, and strict non-normative labeling remain required before ingestion.
+- Added four more Internet Archive OCR English Ramakrishna/Vivekananda tradition sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/sri_ramakrishna_great_master_vol1_1920_en.txt`
+  - `raw/english/life_swami_vivekananda_disciples_1912_en.txt`
+  - `raw/english/spiritual_talks_brahmananda_1911_en.txt`
+  - `raw/english/address_on_vedanta_vivekananda_1896_en.txt`
+- These 1930-or-earlier English editions add fuller Ramakrishna biography, early Vivekananda disciple biography, Brahmananda teaching coverage, and a concise Vivekananda Vedanta lecture. OCR cleanup, lineage-context review, biography/source-boundary review, speaker and quotation attribution, duplicate Vivekananda passage review, and practical-advice safety review remain required before ingestion.
+- Added two more Internet Archive OCR English Sant/Varkari bhakti context sources on 2026-07-05, each with paired `*.metadata.json` sidecars:
+  - `raw/english/kabir_and_kabir_panth_westcott_1907_en.txt`
+  - `raw/english/life_teaching_tukaram_edwards_1922_en.txt`
+- These 1930-or-earlier English editions add Kabir Panth context and Tukaram life/teaching context. OCR cleanup, Sant/Kabir and Varkari specialist review, verse-attribution review, Marathi/Hindi-English alignment, hagiography/source-boundary review, and colonial/missionary framing review remain required before ingestion.
+- Added nine more Internet Archive OCR English Kashmir Shaiva, Tantra, Arya Samaj, Vishishtadvaita, and Kashi/place-context sources on 2026-07-06, each with paired `*.metadata.json` sidecars:
+  - `raw/english/spanda_karikas_vasu_1913_en.txt`
+  - `raw/english/mahanirvana_tantram_dutt_1900_en.txt`
+  - `raw/english/satyarth_prakash_durga_prasad_1908_en.txt`
+  - `raw/english/satyarth_prakash_bharadwaja_1915_en.txt`
+  - `raw/english/arya_samaj_lajpat_rai_1915_en.txt`
+  - `raw/english/yatindra_mata_dipika_srinivasa_1912_en.txt`
+  - `raw/english/philosophy_ramanuja_hebblethwaite_1926_en.txt`
+  - `raw/english/holy_city_benares_sen_1912_en.txt`
+  - `raw/english/benares_gazetteer_nevill_1909_en.txt`
+- These 1930-or-earlier English editions add Spanda/Kashmir Shaiva coverage, a distinct Dutt Mahanirvana Tantra witness, Arya Samaj/Dayananda reform sources, additional Ramanuja/Vishishtadvaita doctrine context, and Kashi/Varanasi pilgrimage/place-history context. OCR cleanup, duplicate-edition comparison, sectarian/polemical content review, Tantra practice-safety review, colonial/administrative framing review, Sanskrit/English alignment, and source-category labeling remain required before ingestion.
+- Added four more Internet Archive OCR English Vaishnava/Bhakti context sources on 2026-07-06, each with paired `*.metadata.json` sidecars:
+  - `raw/english/life_ramanujacharya_govindacharya_1906_en.txt`
+  - `raw/english/bhakti_cult_ancient_india_goswami_1924_en.txt`
+  - `raw/english/who_is_krishna_saha_1930_en.txt`
+  - `raw/english/pancharatra_vaishnava_daily_life_rajagopalachariar_1917_en.txt`
+- These 1930-or-earlier English editions add Ramanuja biography, older bhakti scholarship, Krishna theology/history context, and a concise Pancharatra daily-life article. OCR cleanup, copyright-notice and jurisdiction review, hagiography/source-boundary review, Vaishnava specialist review, and non-prescriptive practice labeling remain required before ingestion.
+- Added six more Internet Archive OCR English ethics, yoga, Vedanta, Sri Vaishnava, and social-context sources on 2026-07-06, each with paired `*.metadata.json` sidecars:
+  - `raw/english/hindu_system_moral_science_sarkar_1912_en.txt`
+  - `raw/english/hindu_system_self_culture_sarkar_1902_en.txt`
+  - `raw/english/divine_wisdom_dravida_saints_govindacharya_1902_en.txt`
+  - `raw/english/system_vedanta_deussen_johnston_1912_en.txt`
+  - `raw/english/science_philosophy_religion_vivekananda_1908_en.txt`
+  - `raw/english/high_caste_hindu_woman_ramabai_1887_en.txt`
+- These 1930-or-earlier English editions add Hindu ethics and Yoga/self-culture context, Alvar/Sri Vaishnava devotional coverage, secondary Advaita/Brahma-Sutra systematization, Vivekananda comparative Vedanta, and Pandita Ramabai social reform context. OCR cleanup, practice-safety review, dated-scholarship review, caste/gender sensitive-content review, missionary/reform framing review, and clear non-devotional source labeling remain required before ingestion.
+- Added three more Internet Archive OCR English Sri Vaishnava, mythology, and Sanskrit-literature reference sources on 2026-07-06, each with paired `*.metadata.json` sidecars:
+  - `raw/english/holy_lives_azhvars_govindacharya_1902_en.txt`
+  - `raw/english/hindu_mythology_wilkins_1882_en.txt`
+  - `raw/english/indian_wisdom_monier_williams_1893_en.txt`
+- These 1930-or-earlier English editions add Alvar/Sri Vaishnava hagiography, a deity/mythology reference work, and a broad Sanskrit-literature anthology. OCR cleanup, Google boilerplate removal, hagiography/source-boundary review, missionary/colonial framing review, Sanskrit/English citation review, and reference-entry segmentation remain required before ingestion.
+- Added six more Internet Archive OCR English sect, iconography, customs, jurisprudence, and overview/reference sources on 2026-07-06, each with paired `*.metadata.json` sidecars:
+  - `raw/english/religious_sects_hindus_wilson_1846_en.txt`
+  - `raw/english/hindu_pantheon_moor_1810_en.txt`
+  - `raw/english/history_literature_religion_hindoos_ward_1863_en.txt`
+  - `raw/english/hindu_jurisprudence_sen_1918_en.txt`
+  - `raw/english/primer_hinduism_farquhar_1912_en.txt`
+  - `raw/english/handbook_sanskrit_literature_small_1866_en.txt`
+- These 1930-or-earlier English editions add historical sect taxonomy, early deity/iconography reference coverage, customs/religion history, Hindu legal-history context, a compact overview of Hinduism, and Sanskrit-literature reference support. OCR cleanup, missionary/colonial framing review, caste/social-content review, plate and appendix boundary review, non-advisory legal labeling, and reference-entry segmentation remain required before ingestion.
+- Added six more Internet Archive OCR English Gita, Sri Vaishnava, Tamil Shaiva, and Varkari bhakti sources on 2026-07-06, each with paired `*.metadata.json` sidecars:
+  - `raw/english/bhagavad_gita_ramanuja_bhashya_govindacharya_1898_en.txt`
+  - `raw/english/lectures_bhagavad_gita_bhawani_shankar_1923_en.txt`
+  - `raw/english/bhagavad_gita_exposition_rele_1928_en.txt`
+  - `raw/english/one_hundred_poems_tayumanavar_1930_en.txt`
+  - `raw/english/inspirations_saint_tukaram_munge_1930_en.txt`
+  - `raw/english/tukaram_bhaktalilamrita_abbott_ch25_40_1930_en.txt`
+- These 1930-or-earlier English editions add Ramanuja's Gita Bhashya in English translation, two modern Bhagavad Gita interpretive works, Tayumanavar poetry, and two Tukaram/Varkari sources. OCR cleanup, title-page copyright notice and jurisdiction review, Gita duplicate review, Tamil/Marathi-English alignment, hagiography/source-boundary review, and source-category labeling remain required before ingestion.
+- Corrected queue/source URLs for Satapatha Brahmana Part 1 and Laws of Manu:
+  - Satapatha Brahmana Part 1: `https://www.sacred-texts.com/hin/sbr/sbe12/index.htm`
+  - Laws of Manu: `https://www.sacred-texts.com/hin/manu.htm`
+- Staged Internet Archive metadata for review-first English or English-adjacent leads:
+  - `raw/english/sarva_darsana_sangraha_cowell_ia.metadata.json`
+  - `raw/english/dasgupta_history_indian_philosophy_vol1_ia.metadata.json`
+  - `raw/english/dasgupta_yoga_as_philosophy_religion_ia.metadata.json`
+  - `raw/english/hindu_mythology_wilkins_1913_ia.metadata.json`
+  - `raw/metadata_only/ekanath_bhaktalilamrita_ia.metadata.json`
+  - `raw/hindi/bijak_kabir_1917_ia.metadata.json`
+- Updated `docs/source_inventory_template.csv` and `docs/source_download_queue_2026-06-19.csv` with `staged_candidate`, `scraped_staged`, `downloaded_staged`, or `metadata_only`/`metadata_staged` statuses.
+- These files remain nonproduction staging. Project Gutenberg boilerplate, Sacred Texts site terms, attribution, sensitive-content flags, and human review must be handled before any Supabase ingestion or user-facing display.
+
+Run notes for 2026-07-06 P0-P3 source-map acquisition:
+
+- Staged actual text carriers from the pasted provisional P0-P3 source map and recorded the run in `docs/source_acquisition_2026-07-06_p0_p3.md`.
+- Added exact Sacred Texts page-level JSONL scrapes for:
+  - `raw/english/sacred_texts/bhagavad_gita_arnold_sacred_texts_en.jsonl`
+  - `raw/english/sacred_texts/ramayana_griffith_sacred_texts_en.jsonl`
+  - `raw/english/sacred_texts/mahabharata_ganguli_sacred_texts_en.jsonl`
+  - `raw/english/sacred_texts/rig_veda_griffith_sacred_texts_en.jsonl`
+  - `raw/english/sacred_texts/yoga_sutras_bongiovanni_sacred_texts_en.jsonl`
+- Added direct Project Madurai, Wikisource, Web Archive, and ANU Press downloads:
+  - `raw/tamil/tirukkural_project_madurai_source_map_ta_en.html`
+  - `raw/tamil/kamba_ramayanam_project_madurai_ayodhya_part1_ta.html`
+  - `raw/tamil/tiruvacagam_project_madurai_pope_part1_en.html`
+  - `raw/tamil/divya_prabandham_project_madurai_muthal_ayiram_ta.html`
+  - `raw/marathi/dnyaneshwari_wikisource_mr_rendered.html`
+  - `raw/english/ramcharitmanas_english_wikisource_rendered.html`
+  - `raw/sanskrit/brahma_vaivarta_purana_web_archive_gateway.html`
+  - `raw/english/vishnu_purana_taylor_anu_press_2021.pdf`
+- The source-map Divya Prabandham TSCII URL returned 404, so the Project Madurai UTF-8 Muthal Ayiram URL already present in the queue was downloaded instead.
+- WisdomLib exact-source scrapes for Markandeya Purana and Garuda Purana returned 403. Do not treat those exact WisdomLib pages as staged; use the existing Internet Archive OCR text candidates already in staging for review-first work.
+- `raw/english/vishnu_purana_taylor_anu_press_2021.pdf` is a modern open-access source, not public domain. It must not be embedded or used for RAG until ANU Press licence terms are reviewed.
+
+Run notes for 2026-07-06 Vedic Reserve Purana PDF acquisition:
+
+- Staged 3 archived Vedic Reserve Devanagari Purana/upapurana PDFs under `content/_staging/raw/sanskrit/vedicreserve_puranas`.
+- This batch covers missing Sanskrit Purana source candidates including Shiva, Padma, Narada, Linga, Brahmanda, Kurma, Matsya, Vamana, Vishnu, Brahma, Bhagavata, Agni, Brahma Vaivarta, Markandeya, and selected upapuranas.
+- These are raw scan/PDF candidates only. They require legal review, Sanskrit OCR/PDF extraction, segmentation, edition review, and source-category labeling before any embedding, RAG, or app display.
+
+Run notes for 2026-07-06 GRETIL Sanskrit text acquisition:
+
+- Staged 14 GRETIL Sanskrit plaintext files under `content/_staging/raw/sanskrit/gretil`, with matching TEI XML sidecars.
+- This batch adds Madhva/Dvaita and Abhinavagupta/Kashmir Shaiva/Tantra source candidates that were visible in the already staged GRETIL index.
+- These are raw Sanskrit candidates only. They require GRETIL terms review, TEI metadata review, Sanskrit segmentation, and tradition/category labeling before embedding, RAG, or app display.
+
+Run notes for 2026-07-06 SanskritDocuments short-text acquisition:
+
+- Staged 8 SanskritDocuments ITX short-text candidates for Hanuman Chalisa, Shiva Mahimna Stotra, Aditya Hridayam, Bhaja Govindam, Soundarya Lahari, Lalita Sahasranama, and a Sanskrit Hanuman Chalisa translation.
+- These are actual text files, not just index leads. They still require SanskritDocuments terms review, per-file provenance review, ITRANS normalization, and Hindi/Sanskrit review before embedding, RAG, or app display.

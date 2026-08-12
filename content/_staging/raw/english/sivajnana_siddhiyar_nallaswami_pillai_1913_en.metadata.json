@@ -1,0 +1,185 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721605.ca.archive.org",
+        "dir": "/0/items/sivajnanasiddhiyarofarunandisivacharya1913"
+      },
+      {
+        "server": "dn760105.eu.archive.org",
+        "dir": "/0/items/sivajnanasiddhiyarofarunandisivacharya1913"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721605.ca.archive.org",
+        "dir": "/0/items/sivajnanasiddhiyarofarunandisivacharya1913"
+      },
+      {
+        "server": "dn760105.eu.archive.org",
+        "dir": "/0/items/sivajnanasiddhiyarofarunandisivacharya1913"
+      }
+    ]
+  },
+  "created": 1783290360,
+  "d1": "ia903105.us.archive.org",
+  "d2": "ia803105.us.archive.org",
+  "dir": "/9/items/sivajnanasiddhiyarofarunandisivacharya1913",
+  "files": [
+    {
+      "name": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913.pdf",
+      "source": "original",
+      "mtime": "1573516565",
+      "size": "20675773",
+      "md5": "5af400807f530848c59fec03ae3400c8",
+      "crc32": "482f6b1d",
+      "sha1": "92dd5cca38acb0601734fc17e41c00c7338b2bb6",
+      "format": "Text PDF"
+    },
+    {
+      "name": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_jp2.zip",
+      "mtime": "1573535476",
+      "size": "12721937",
+      "md5": "7867cbe0e2427f6b0b89424b48cc788d",
+      "crc32": "8e95d212",
+      "sha1": "c37b37369b19a15ffb73d04e2e5a9813d1287c17"
+    },
+    {
+      "name": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_djvu.xml",
+      "mtime": "1573535876",
+      "size": "740098",
+      "md5": "bd134cf9172fe0d54a893804e0c6b628",
+      "crc32": "b690a143",
+      "sha1": "2cb0f369de783cc3ff35a46aa28ce16d0afea8be"
+    },
+    {
+      "name": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_abbyy.gz",
+      "mtime": "1573535869",
+      "size": "8651122",
+      "md5": "ce4c927eab19c25ac4e1e5b87711fe91",
+      "crc32": "811e5575",
+      "sha1": "af14d883dfbe6a2baef1136ff92486f394f8b739"
+    },
+    {
+      "name": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913.pdf",
+      "mtime": "1573530508",
+      "size": "283466003",
+      "md5": "f3a0cf4fd2e64449778506af48ebf68f",
+      "crc32": "b43c5aab",
+      "sha1": "5fd71ade2d5b76360b05d1731f1a3f91e7a423d8",
+      "filecount": "352"
+    },
+    {
+      "name": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "Sivajnana Siddhiyar of Arunandi Sivacharya-1913_djvu.xml",
+      "mtime": "1573536117",
+      "size": "105745",
+      "md5": "f26c6216a758da22903a05b393430ff4",
+      "crc32": "921ac172",
+      "sha1": "32a87b590e2dd8ce560a04fd97dcaf6910c25d20"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1767917579",
+      "size": "10341",
+      "md5": "fc47b7868c198f3200cc27638716cd50",
+      "crc32": "02cc5eb3",
+      "sha1": "e3a3c2f1adecc6f98383aa656dc806940d6b83a9",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "sivajnanasiddhiyarofarunandisivacharya1913_archive.torrent",
+      "source": "metadata",
+      "btih": "912dba805f47577124f33bbf44191814c3e0d640",
+      "mtime": "1767917582",
+      "size": "15631",
+      "md5": "092d25fc882885b8417983ed1aa603b0",
+      "crc32": "6e77a267",
+      "sha1": "8c42f15700be78b8b5f306700004fae67e0957a3",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "sivajnanasiddhiyarofarunandisivacharya1913_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "44239b24e2db54f1fe9c2673b9de7f08",
+      "summation": "md5"
+    },
+    {
+      "name": "sivajnanasiddhiyarofarunandisivacharya1913_meta.sqlite",
+      "source": "original",
+      "mtime": "1573516613",
+      "size": "14336",
+      "format": "Metadata",
+      "md5": "e812d22583685f5182a73c0f70f37963",
+      "crc32": "c0b06c14",
+      "sha1": "a608c10aa0c71b94a22756ca9889bb163a397f19"
+    },
+    {
+      "name": "sivajnanasiddhiyarofarunandisivacharya1913_meta.xml",
+      "source": "original",
+      "mtime": "1767917577",
+      "size": "1952",
+      "format": "Metadata",
+      "md5": "96559bcd2c7004588ea93f0db714d561",
+      "crc32": "1979def5",
+      "sha1": "32d9b334a5b2d7fe8db987853c90666074d8a971"
+    }
+  ],
+  "files_count": 11,
+  "item_last_updated": 1767917582,
+  "item_size": 326402938,
+  "metadata": {
+    "identifier": "sivajnanasiddhiyarofarunandisivacharya1913",
+    "mediatype": "texts",
+    "collection": [
+      "koviloorandavarlibrary",
+      "patron-library-collection"
+    ],
+    "creator": "J.M. Nallaswami Pillai, B.A.,B.L.,",
+    "date": "1913",
+    "description": "Sivajnana Siddhiyar of Arunandi Sivacharya,<div><br /></div><div>Translated with Introduction, Notes, Glossary etc., by J.M. Nallaswami Pillai, B.A.,B.L., President, Third and Sixth Conference of the Saiva Siddhanta Maha Samaja,<br /></div><div><br /></div><div>Madras, Meykandan Press,<br /></div><div><br /></div><div>கோவிலூர் ஆண்டவர் நூலகம்,<br /></div><div><br /></div><div><br /></div>",
+    "language": "eng",
+    "licenseurl": "http://creativecommons.org/publicdomain/mark/1.0/",
+    "scanner": "Internet Archive HTML5 Uploader 1.6.4",
+    "subject": [
+      "Sivajnana Siddhiyar of Arunandi Sivacharya",
+      "J.M. Nallaswami Pillai",
+      "B.A.",
+      "B.L."
+    ],
+    "title": "Sivajnana Siddhiyar Of Arunandi Sivacharya",
+    "publicdate": "2019-11-11 23:56:06",
+    "uploader": "kaldigitalarchive@outlook.com",
+    "addeddate": "2019-11-11 23:56:06",
+    "curation": "[curator]validator@archive.org[/curator][date]20191112000226[/date][comment]checked for malware[/comment]",
+    "identifier-access": "http://archive.org/details/sivajnanasiddhiyarofarunandisivacharya1913",
+    "identifier-ark": "ark:/13960/t2q60nc73",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0 (Extended OCR)",
+    "backup_location": "ia907006_5",
+    "collection_added": "patron-library-collection"
+  },
+  "server": "ia803105.us.archive.org",
+  "uniq": 2051004830,
+  "workable_servers": [
+    "ia803105.us.archive.org",
+    "ia903105.us.archive.org"
+  ]
+}

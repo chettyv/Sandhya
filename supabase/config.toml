@@ -1,0 +1,8 @@
+# Supabase local/deploy configuration for Edge Functions.
+# User-facing functions still validate their bearer token in application code.
+
+[functions.revenuecat-webhook]
+verify_jwt = false
+
+[functions.send-daily-reflections]
+verify_jwt = false

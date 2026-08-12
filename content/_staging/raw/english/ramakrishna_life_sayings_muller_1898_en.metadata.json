@@ -1,0 +1,238 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn720107.ca.archive.org",
+        "dir": "/0/items/ramakrishnahisli025100mbp"
+      },
+      {
+        "server": "dn760106.eu.archive.org",
+        "dir": "/0/items/ramakrishnahisli025100mbp"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn720107.ca.archive.org",
+        "dir": "/0/items/ramakrishnahisli025100mbp"
+      },
+      {
+        "server": "dn760106.eu.archive.org",
+        "dir": "/0/items/ramakrishnahisli025100mbp"
+      }
+    ]
+  },
+  "created": 1783254280,
+  "d1": "ia601700.us.archive.org",
+  "d2": "ia801700.us.archive.org",
+  "dir": "/21/items/ramakrishnahisli025100mbp",
+  "files": [
+    {
+      "name": "OMETA.xml",
+      "source": "original",
+      "md5": "bb7f0902012762c51690de7b56438921",
+      "format": "Million Books Original Metadata",
+      "mtime": "1165229687",
+      "size": "912",
+      "crc32": "e3b7d76b",
+      "sha1": "0ae68b5fd4e22432d9a8329f9e84c2c7e40b8d84"
+    },
+    {
+      "name": "OTIFF.zip",
+      "source": "original",
+      "md5": "02caf85f2e08828657f9d583cf674c47",
+      "format": "Million Books Original TIFF ZIP",
+      "mtime": "1165229691",
+      "size": "29937374",
+      "crc32": "8596daf7",
+      "sha1": "5e733f871afc2d406f748005f10645a63ddd3d84",
+      "filecount": "1"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1708737980",
+      "size": "345",
+      "md5": "8812f274dccecc35c537eb8f7c40aeac",
+      "crc32": "4756d2bd",
+      "sha1": "cf0cd177a0bac81057237ab478eaae49bf01be05",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp.djvu",
+      "source": "derivative",
+      "format": "DjVu",
+      "original": "ramakrishnahisli025100mbp_djvu.xml",
+      "md5": "bcbfd0ba876cdcdb540b6a8cb03dd92b",
+      "mtime": "1165332491",
+      "size": "18716984",
+      "crc32": "fa4c0b3e",
+      "sha1": "afa7fe96f2384f0f6cd5fb77776edc9e3ef60f56"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp.epub",
+      "source": "derivative",
+      "original": "ramakrishnahisli025100mbp_abbyy.gz",
+      "mtime": "1708737978",
+      "size": "10835969",
+      "md5": "61ecf06eeea24acffed728b3e4efdc89",
+      "crc32": "e4e62312",
+      "sha1": "82261dba67c37b8c77b22a7f3f177f88d78ccf9c",
+      "format": "EPUB"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "ramakrishnahisli025100mbp_tif.zip",
+      "md5": "f9f9047a405a5d8b2672a07d7c6195a1",
+      "mtime": "1165314183",
+      "size": "178016",
+      "crc32": "7c1f29a",
+      "sha1": "c7c1f07332844af56a05606622c2c8be06410e30"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp.pdf",
+      "source": "derivative",
+      "format": "Text PDF",
+      "original": "ramakrishnahisli025100mbp_djvu.xml",
+      "md5": "3584bbcbb8d41dc83e13d0b10fb96320",
+      "mtime": "1165333195",
+      "size": "21044442",
+      "crc32": "c971cf87",
+      "sha1": "c9fcb9e9a02cc077f6fbc70714a73ff272fa0213"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "ramakrishnahisli025100mbp_tif.zip",
+      "md5": "00350304a27da72d522335a1ce1d158c",
+      "mtime": "1165331437",
+      "size": "5363295",
+      "crc32": "7e4ae261",
+      "sha1": "e4b737911036566a00ba6d04ea0b6b563b7d57af"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_archive.torrent",
+      "source": "metadata",
+      "btih": "ea7664623ce0d20734ca48bd058ef1930dec4bf5",
+      "mtime": "1711454454",
+      "size": "8342",
+      "md5": "29fdfe9f502d4d9c6da1214157f9179b",
+      "crc32": "2f4fc89e",
+      "sha1": "5d398948451e1172ad151cdf9f1129b5804ae717",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_daisy.zip",
+      "source": "derivative",
+      "original": "ramakrishnahisli025100mbp_abbyy.gz",
+      "mtime": "1711454451",
+      "size": "203603",
+      "md5": "cd7bd1341086aa538100155aa57bfc05",
+      "crc32": "f5859ef7",
+      "sha1": "3898bedc9fab7e6a21111ae1fa685d6927bbfc6e",
+      "format": "Daisy",
+      "filecount": "9"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "ramakrishnahisli025100mbp.djvu",
+      "md5": "e875b4deff219ffa191c8c88b8e3d333",
+      "mtime": "1165333224",
+      "size": "334417",
+      "crc32": "ca60f11",
+      "sha1": "c9fa3a44fd76c10d6883aa00c669f65a9c8dedb9"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "ramakrishnahisli025100mbp_abbyy.gz",
+      "md5": "39171b0eed8d115382345bf70c08c0b3",
+      "mtime": "1165332250",
+      "size": "3070462",
+      "crc32": "a03645f4",
+      "sha1": "e3496394ee9e2fd6376f5a7c29c290bb6e9bef1b"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_files.xml",
+      "source": "metadata",
+      "md5": "7fdb582e99a3f78754271f2df8f7bf39",
+      "format": "Metadata",
+      "summation": "md5"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_meta.xml",
+      "source": "metadata",
+      "format": "Metadata",
+      "mtime": "1609465589",
+      "size": "1200",
+      "md5": "81c1d9a55094224f7f494c4ed3da7e10",
+      "crc32": "f59933a3",
+      "sha1": "95734f3d676032f2e4b3cdd09a1378c2ea63e65e"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "ramakrishnahisli025100mbp_djvu.xml",
+      "md5": "de0ceb222f6cf3758a10b07cdc847c6c",
+      "mtime": "1244460179",
+      "size": "63111",
+      "crc32": "1fbcba90",
+      "sha1": "3450f36ed0e63cb43107e11c0df97d789b0ecd7b"
+    },
+    {
+      "name": "ramakrishnahisli025100mbp_tif.zip",
+      "source": "original",
+      "md5": "5796f81f1d5b7b133b1015ad6f593e79",
+      "format": "Single Page Processed TIFF ZIP",
+      "mtime": "1165229687",
+      "size": "29990098",
+      "crc32": "5b3c9ada",
+      "sha1": "7f674ddba2ded32eaa8f7c250ba8ab38289bbef9",
+      "filecount": "210"
+    }
+  ],
+  "files_count": 16,
+  "item_last_updated": 1711454454,
+  "item_size": 119748570,
+  "metadata": {
+    "identifier": "ramakrishnahisli025100mbp",
+    "mediatype": "texts",
+    "collection": "universallibrary",
+    "call_number": "25100",
+    "pagelayout": "FirstPageLeft",
+    "uploader": "mario@archive.org",
+    "imagecount": "210",
+    "title": "Ramakrishna: his life and sayings",
+    "creator": "Max Muller",
+    "barcode": "0325461",
+    "subject": "Philosophy",
+    "publisher": "Theosophical publishing society.- London.",
+    "date": "1898",
+    "language": "eng",
+    "copyrightowner": "Author",
+    "scanningcenter": "Pune University",
+    "scanner": "20002972",
+    "contributor": "Ingwale, Surekha",
+    "digitalpublicationdate": "25-04-2003",
+    "identifier-access": "http://www.archive.org/details/ramakrishnahisli025100mbp",
+    "identifier-ark": "ark:/13960/t1sf2n422",
+    "publicdate": "2006-12-05 07:40:33",
+    "repub_state": "4",
+    "backup_location": "ia903600_26",
+    "addeddate": "2006-12-05 07:40:33",
+    "filesxml": "Fri Jan 1 1:46:29 UTC 2021"
+  },
+  "server": "ia601700.us.archive.org",
+  "uniq": 1789616603,
+  "workable_servers": [
+    "ia601700.us.archive.org",
+    "ia801700.us.archive.org"
+  ]
+}

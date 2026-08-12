@@ -1,0 +1,10 @@
+{
+  "work_id": "mitrasamgraha_sanskrit_english_dataset_metadata",
+  "title": "Mitrasamgraha Sanskrit-English corpus",
+  "language": "Sanskrit/English",
+  "source_name": "arXiv",
+  "source_url": "https://arxiv.org/abs/2601.07314",
+  "status": "metadata_only_pending_source_url",
+  "rights_note": "Sanskrit-English corpus lead. Dataset release URL, license, religious-domain fit, and upstream text rights were not verified in this pass.",
+  "next_action": "Find the dataset release and review commercial reuse rights before downloading."
+}

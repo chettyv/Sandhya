@@ -1,0 +1,211 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760009.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.506272"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.506272"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760009.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.506272"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.506272"
+      }
+    ]
+  },
+  "created": 1783291075,
+  "d1": "ia601405.us.archive.org",
+  "d2": "ia801405.us.archive.org",
+  "dir": "/10/items/in.ernet.dli.2015.506272",
+  "files": [
+    {
+      "name": "2015.506272.parasara-dharma.epub",
+      "source": "derivative",
+      "original": "2015.506272.parasara-dharma_abbyy.gz",
+      "mtime": "1720663828",
+      "size": "160299563",
+      "md5": "7e672292809babac95751f92e3c3f5a0",
+      "crc32": "a50cfa12",
+      "sha1": "9b15515f4c6e1683e5b5d49e6238ff648b61785a",
+      "format": "EPUB"
+    },
+    {
+      "name": "2015.506272.parasara-dharma.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.506272.parasara-dharma_jp2.zip",
+      "mtime": "1489009662",
+      "size": "154965",
+      "md5": "937f13499a09e851c5ef57a873a2024b",
+      "crc32": "c511008a",
+      "sha1": "a58487ecc3b01fba0be02b7ea0e6ef9426099181"
+    },
+    {
+      "name": "2015.506272.parasara-dharma.pdf",
+      "source": "original",
+      "mtime": "1484518150",
+      "size": "15045337",
+      "md5": "3963b3272f73fdfddc60ffb7bf388bb9",
+      "crc32": "355cfd8b",
+      "sha1": "886434cf21db1305f7d1590c48ef1cea19af1e5e",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.506272.parasara-dharma_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.506272.parasara-dharma_jp2.zip",
+      "mtime": "1489013473",
+      "size": "7288202",
+      "md5": "41fe471a691c625a5bfc946f9aa6b3e4",
+      "crc32": "83cf9bd3",
+      "sha1": "58157ad4a4ce4e1e11e4efa080a467ecc909265f"
+    },
+    {
+      "name": "2015.506272.parasara-dharma_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.506272.parasara-dharma_djvu.xml",
+      "mtime": "1489014193",
+      "size": "461474",
+      "md5": "c5e68b171dde5b73b91c392d33215727",
+      "crc32": "1622cc72",
+      "sha1": "7436a2cc8c0bfac48af20bce7b0687d9ae3a5efe"
+    },
+    {
+      "name": "2015.506272.parasara-dharma_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.506272.parasara-dharma_abbyy.gz",
+      "mtime": "1489013619",
+      "size": "5234652",
+      "md5": "c0dd9fbcbb807aff0fb59da0d28dfe30",
+      "crc32": "4c2cadb3",
+      "sha1": "8d561da51d969e0b080b595ea4ab7330b9192afb"
+    },
+    {
+      "name": "2015.506272.parasara-dharma_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.506272.parasara-dharma.pdf",
+      "mtime": "1489009641",
+      "size": "167961967",
+      "md5": "b16c80f8097bc77cf22c5762d6bece58",
+      "crc32": "a54f2424",
+      "sha1": "552dc6ef77d2b1485255fe074489c7258d562d2f",
+      "filecount": "533"
+    },
+    {
+      "name": "2015.506272.parasara-dharma_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.506272.parasara-dharma_djvu.xml",
+      "mtime": "1489014198",
+      "size": "160027",
+      "md5": "203a557fbd8afe4288bf15387efe7069",
+      "crc32": "59bcf0a7",
+      "sha1": "29d298e0f4a7567b9bf2386627f2a2b566e73501"
+    },
+    {
+      "name": "2015.506272.parasara-dharma_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.506272.parasara-dharma_djvu.xml",
+      "mtime": "1489014189",
+      "size": "16428671",
+      "md5": "172df55c3d9efbbeb5917de5c952c02f",
+      "crc32": "41cc4631",
+      "sha1": "0c201093de06a8d8ebd4e190f80a5a17b5b6a01e"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1720663831",
+      "size": "1626",
+      "md5": "cd483f6a0ed6b3fe8f9825df1f478d7b",
+      "crc32": "43a3fd91",
+      "sha1": "d04387d8092b9091686e4670984527a05ef0b877",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.506272_archive.torrent",
+      "source": "metadata",
+      "btih": "f8f945e4050fb985704556f4a8b1ffc1f0e56212",
+      "mtime": "1720663834",
+      "size": "17698",
+      "md5": "adc79d84113e5264f7f6d7229dbc677f",
+      "crc32": "c4f876fc",
+      "sha1": "d88c271ee1fe219f603ff89967b66cd36ea9a7ec",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.506272_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "0ca80ef78ac9f5bf4c5b84c5cf7e357c",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.506272_meta.sqlite",
+      "source": "original",
+      "mtime": "1484518162",
+      "size": "15360",
+      "md5": "fa2e986be7bcab3430464b6f8c174260",
+      "crc32": "0a83ccb1",
+      "sha1": "f0bb91515d9dc3ed40502deb2324bda6a3063bf7",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.506272_meta.xml",
+      "source": "original",
+      "mtime": "1563282862",
+      "size": "2088",
+      "format": "Metadata",
+      "md5": "24a0f22bb67c9e8674507deaa91b8bed",
+      "crc32": "ddb3aa77",
+      "sha1": "cc206828f315de50e0ee987398fe3e50e41e69dd"
+    }
+  ],
+  "files_count": 14,
+  "item_last_updated": 1720663834,
+  "item_size": 373071630,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.506272",
+    "creator": "Madhavacharya, Sayana",
+    "date": "1919",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/506272\" rel=\"nofollow\">Digital Library of India Item 2015.506272</a></p><p>dc.contributor.author: Madhavacharya, Sayana<br />dc.coverage.spatial: poona<br />dc.date.accessioned: 2015-09-27T12:34:03Z<br />dc.date.available: 2015-09-27T12:34:03Z<br />dc.date.copyright: 1919<br />dc.date.citation: 1919<br />dc.identifier.barcode: 99999990267193<br />dc.identifier.origpath: /data4/upload/0119/997<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/506272<br />dc.description: 803<br />dc.description.scanningcentre: UOD, Delhi<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 533<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher: Director Public Instruction<br />dc.rights: not available<br />dc.source.library: Central Library, Delhi University<br />dc.title: Parasara Dharma Samhita Or Parasara Smriti<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "UOD",
+    "title": "Parasara Dharma Samhita Or Parasara Smriti",
+    "publicdate": "2017-01-15 22:09:11",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-15 22:09:11",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.506272",
+    "identifier-ark": "ark:/13960/t1rg0xh32",
+    "ppi": "300",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906304_22",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia801405.us.archive.org",
+  "uniq": 1836138173,
+  "workable_servers": [
+    "ia801405.us.archive.org",
+    "ia601405.us.archive.org"
+  ]
+}

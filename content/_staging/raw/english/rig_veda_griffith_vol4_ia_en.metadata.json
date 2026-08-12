@@ -1,0 +1,184 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/dli.csl.6827"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/dli.csl.6827"
+      }
+    ]
+  },
+  "created": 1783203857,
+  "d1": "ia902901.us.archive.org",
+  "d2": "ia802901.us.archive.org",
+  "dir": "/9/items/dli.csl.6827",
+  "files": [
+    {
+      "name": "6827.pdf",
+      "source": "original",
+      "mtime": "1583677908",
+      "size": "153060984",
+      "md5": "9f3a186460259d234ac998a81be2760a",
+      "crc32": "687d6737",
+      "sha1": "b4e7594c8024a1066d38242142a35859a83ba902",
+      "format": "Text PDF"
+    },
+    {
+      "name": "6827_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "6827_jp2.zip",
+      "mtime": "1583690586",
+      "size": "14609692",
+      "md5": "d149bef6d3c7286b4acc0d3d141a7b4a",
+      "crc32": "310fd58e",
+      "sha1": "54dedb71a3d68f739d39a8c492ae580fd64eea6d"
+    },
+    {
+      "name": "6827_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "6827_djvu.xml",
+      "mtime": "1583690954",
+      "size": "826329",
+      "md5": "eef45343a96aa98fc42963a6402f47cc",
+      "crc32": "30a6c937",
+      "sha1": "b9fd754c0349126d4f60a158deab53fa33914576"
+    },
+    {
+      "name": "6827_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "6827_abbyy.gz",
+      "mtime": "1583690947",
+      "size": "9533415",
+      "md5": "9eca1eaa9cff2f92047dddd7c121025e",
+      "crc32": "951d3891",
+      "sha1": "dc1d99a9df9ea6cf9f93a6d73834772585fe1a4a"
+    },
+    {
+      "name": "6827_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "6827.pdf",
+      "mtime": "1583685669",
+      "size": "333549494",
+      "md5": "2d8a3d08a723ed1512b3e0f7f7d6be57",
+      "crc32": "f179350b",
+      "sha1": "990e93a1e7af8dfd8d543b85f1aa56492781ad59"
+    },
+    {
+      "name": "6827_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "6827_djvu.xml",
+      "mtime": "1583691368",
+      "size": "141715",
+      "md5": "986c38444994adcfb0ca1fcbb741aed9",
+      "crc32": "762fc649",
+      "sha1": "12d0f2e6a3eff0c856835c1e111bb43df055623c"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1608561130",
+      "size": "15015",
+      "md5": "80a3d34c3e1a92d85ef17e66c7b541e1",
+      "crc32": "005088ff",
+      "sha1": "41f54a94803e394e97673cd40ca8ca6dce7d82e0",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "dli.csl.6827_archive.torrent",
+      "source": "metadata",
+      "btih": "ee702cc5c8fd52cc5894caa996b403997e5debcb",
+      "mtime": "1608561133",
+      "size": "22152",
+      "md5": "82d49fb3c634a8f4303d698b61160eed",
+      "crc32": "18c59b48",
+      "sha1": "55778c3d9df1e335a253a6f3234ec1bbf757a74c",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "dli.csl.6827_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "1045b6f2f0a36d7c6eed55e7b8a8472f"
+    },
+    {
+      "name": "dli.csl.6827_meta.sqlite",
+      "source": "original",
+      "mtime": "1583677938",
+      "size": "11264",
+      "format": "Metadata",
+      "md5": "4df9fca20148a23150a0e2d1991265df",
+      "crc32": "59161ac7",
+      "sha1": "8e0dc8ced2bc35c2c89856a499a17ee8ca3b5abd"
+    },
+    {
+      "name": "dli.csl.6827_meta.xml",
+      "source": "original",
+      "mtime": "1608561128",
+      "size": "1707",
+      "format": "Metadata",
+      "md5": "8af964962386952f092d0f8220819a98",
+      "crc32": "3da00707",
+      "sha1": "ff1c8c2542ecdde5211329fcec5265f924a1b0fd"
+    }
+  ],
+  "files_count": 11,
+  "item_last_updated": 1608561133,
+  "item_size": 511771767,
+  "metadata": {
+    "identifier": "dli.csl.6827",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "date": "1892",
+    "description": [
+      "<p>Central Secretariat Library, Government of India<br />Source URL: <a href=\"http://192.168.1.42:8080//handle/123456789/6827\" rel=\"nofollow\">http://192.168.1.42:8080//handle/123456789/6827</a></p>",
+      "<p>Vol-IV</p>"
+    ],
+    "external-identifier": [
+      "urn:handle:http://192.168.1.42:8080//handle/123456789/6827",
+      "urn:handle:AS-000450",
+      "urn:handle:294.4",
+      "urn:accessionnumber:AS-000450",
+      "urn:classnumber:294.4"
+    ],
+    "language": "eng",
+    "mediatype": "texts",
+    "publisher": "E.J. Lazarus and Co., Benares",
+    "scanner": "Internet Archive Python library 1.9.0",
+    "source": "Central Secretariat Library",
+    "subject": [
+      "Vedas",
+      "Hindu hymns",
+      "Vedas.--R̥gveda",
+      "Hymns",
+      "Central Secretariat Library"
+    ],
+    "title": "The Hymns of the Rigveda",
+    "uploader": "carl@media.org",
+    "publicdate": "2020-03-08 14:32:05",
+    "addeddate": "2020-03-08 14:32:05",
+    "identifier-access": "http://archive.org/details/dli.csl.6827",
+    "identifier-ark": "ark:/13960/t3sv65c14",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0 (Extended OCR)",
+    "backup_location": "ia907107_8"
+  },
+  "server": "ia802901.us.archive.org",
+  "uniq": 842616296,
+  "workable_servers": [
+    "ia802901.us.archive.org",
+    "ia902901.us.archive.org"
+  ]
+}

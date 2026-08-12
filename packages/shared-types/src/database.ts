@@ -45,7 +45,15 @@ export type Plan = "free" | "plus_monthly" | "plus_annual" | "lifetime";
 
 export type LanguagePref = "en" | "hi";
 
-export type SavedItemType = "message" | "reflection" | "passage" | "practice" | "festival";
+export type SavedItemType =
+  | "message"
+  | "reflection"
+  | "passage"
+  | "practice"
+  | "festival"
+  | "concept"
+  | "deity"
+  | "text";
 
 export type MessageRole = "user" | "assistant";
 
@@ -96,15 +104,35 @@ export interface CommentaryRow {
   created_at: string;
 }
 
+export interface ContentSourceRow {
+  id: string;
+  source_key: string;
+  title: string;
+  language: string;
+  translator: string | null;
+  source_url: string | null;
+  licence: Licence;
+  copyright_status: string | null;
+  can_store: boolean;
+  can_show_excerpts: boolean;
+  can_embed: boolean;
+  metadata: Record<string, unknown>;
+  created_at: string;
+  updated_at: string;
+}
+
 export interface PassageEmbeddingRow {
   id: string;
   passage_id: string;
   commentary_id: string | null;
+  source_document_id: string | null;
   content_type: EmbeddingContentType;
   embedding: number[];
   embedding_model: string;
+  chunk_hash: string | null;
   chunk_text: string;
   tokens: number | null;
+  metadata: Record<string, unknown>;
   created_at: string;
 }
 
@@ -207,6 +235,110 @@ export interface ProfileRow {
   tradition_pref: string | null;
   location: string | null;
   notification_time: string | null;
+  timezone: string;
+  created_at: string;
+}
+
+export interface DevicePushTokenRow {
+  id: string;
+  user_id: string;
+  expo_push_token: string;
+  platform: "ios" | "android" | "web";
+  app_version: string | null;
+  enabled: boolean;
+  last_seen_at: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface SubscriptionStatusRow {
+  user_id: string;
+  revenuecat_app_user_id: string;
+  entitlement_id: string | null;
+  product_id: string | null;
+  plan: Plan;
+  status: "active" | "billing_issue" | "cancelled" | "expired" | "refunded" | "free";
+  environment: "PRODUCTION" | "SANDBOX" | "UNKNOWN";
+  expires_at: string | null;
+  latest_event_id: string | null;
+  latest_event_at: string | null;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface BillingEventRow {
+  event_id: string;
+  event_type: string;
+  app_user_id: string | null;
+  environment: string | null;
+  received_at: string;
+  processing_started_at: string | null;
+  processing_token: string | null;
+  processed_at: string | null;
+  processing_error: string | null;
+}
+
+export interface NotificationDeliveryRow {
+  id: string;
+  user_id: string;
+  delivery_date: string;
+  kind: "daily_reflection";
+  status: "claimed" | "sent";
+  attempt_count: number;
+  claimed_at: string | null;
+  claim_token: string | null;
+  sent_at: string | null;
+  last_error: string | null;
+  created_at: string;
+}
+
+export interface NotificationPushTicketRow {
+  id: string;
+  ticket_id: string;
+  user_id: string;
+  expo_push_token: string;
+  delivery_date: string;
+  kind: "daily_reflection";
+  status: "pending" | "claimed" | "ok" | "error";
+  attempt_count: number;
+  claimed_at: string | null;
+  claim_token: string | null;
+  checked_at: string | null;
+  last_error: string | null;
+  created_at: string;
+}
+
+export interface BillingRuntimeConfigRow {
+  id: true;
+  allow_sandbox: boolean;
+  updated_at: string;
+}
+
+export type CostLogPurpose = "classifier" | "main_answer" | "embedding" | "eval" | "judge";
+
+export interface CostLogRow {
+  id: string;
+  user_id: string | null;
+  purpose: CostLogPurpose;
+  model: string;
+  tokens_in: number;
+  tokens_out: number;
+  cost_usd: string;
+  metadata: Record<string, unknown>;
+  created_at: string;
+}
+
+export interface PracticeCompletionRow {
+  id: string;
+  user_id: string;
+  practice_key: string;
+  completed_on: string;
+  created_at: string;
+}
+
+export interface ActivityDayRow {
+  user_id: string;
+  activity_date: string;
   created_at: string;
 }
 
@@ -273,9 +405,54 @@ export interface UsageQuotaRow {
 export interface CachedAnswerRow {
   id: string;
   question_hash: string;
-  question_text: string;
+  question_text: string | null;
   structured_response: Record<string, unknown>;
+  retrieved_passage_ids: string[];
   hit_count: number;
   last_used_at: string;
+  expires_at: string | null;
   created_at: string;
+}
+
+export interface AiRequestWindowRow {
+  user_id: string;
+  window_started_at: string;
+  request_count: number;
+  updated_at: string;
+}
+
+export type ApiRequestOperation = "account_export" | "account_delete" | "push_token_mutation";
+
+export interface ApiRequestWindowRow {
+  user_id: string;
+  operation: ApiRequestOperation;
+  window_started_at: string;
+  request_count: number;
+  updated_at: string;
+}
+
+export interface AiBudgetReservationRow {
+  id: string;
+  user_id: string;
+  reserved_usd: string;
+  status: "reserved" | "released";
+  expires_at: string;
+  created_at: string;
+}
+
+export interface AdminAuditLogRow {
+  id: string;
+  admin_user_id: string | null;
+  action:
+    | "content_create"
+    | "content_update"
+    | "content_delete"
+    | "feedback_update"
+    | "cache_invalidate";
+  resource: string;
+  resource_id: string | null;
+  resource_key: string | null;
+  outcome: "pending" | "succeeded" | "failed";
+  created_at: string;
+  completed_at: string | null;
 }

@@ -1,0 +1,1144 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721507.ca.archive.org",
+        "dir": "/0/items/psalmsofmarathas00macnuoft"
+      },
+      {
+        "server": "dn760009.eu.archive.org",
+        "dir": "/0/items/psalmsofmarathas00macnuoft"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721507.ca.archive.org",
+        "dir": "/0/items/psalmsofmarathas00macnuoft"
+      },
+      {
+        "server": "dn760009.eu.archive.org",
+        "dir": "/0/items/psalmsofmarathas00macnuoft"
+      }
+    ]
+  },
+  "created": 1783272947,
+  "d1": "ia600106.us.archive.org",
+  "d2": "ia800106.us.archive.org",
+  "dir": "/10/items/psalmsofmarathas00macnuoft",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1692773802",
+      "size": "12737",
+      "md5": "61978bb35f6b778e59e326bc339524bf",
+      "crc32": "574ec3ad",
+      "sha1": "c81c10f1377afaba7e029ea15ed3872e9925df94",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "_cloth_detection.log",
+      "source": "derivative",
+      "cloth_cover_detection_module_version": "1.2",
+      "format": "Cloth Cover Detection Log",
+      "original": "scandata.zip",
+      "mtime": "1697918923",
+      "size": "715",
+      "md5": "5b69a8aa37b3c11c4baa8a2ac83ba553",
+      "crc32": "e25954ea",
+      "sha1": "e15726664b683eab2001172c1d5f6bebd6823a86"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "psalmsofmarathas00macnuoft_jp2.zip",
+      "md5": "efa22ab8cf610f04fb5ee70800c1442d",
+      "mtime": "1196799104",
+      "size": "307427",
+      "crc32": "662bef28",
+      "sha1": "a208b0acb0eaa2ff3520206c9c419c28fdf53df1"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.23",
+      "format": "Text PDF",
+      "original": "psalmsofmarathas00macnuoft_page_numbers.json",
+      "mtime": "1697919895",
+      "size": "6509761",
+      "md5": "0d41dc5f912dd1218af1ec6a6dad7f23",
+      "crc32": "a9d91303",
+      "sha1": "b1696958a78385f5e4db0ec89c56d791b9ddf470"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "psalmsofmarathas00macnuoft_jp2.zip",
+      "md5": "0a5806ab9a6bd6aa8cebac46814f23eb",
+      "mtime": "1196800107",
+      "size": "2082796",
+      "crc32": "31e241e6",
+      "sha1": "822c082d91b54c637f9e67344f050cc957536058"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_archive.torrent",
+      "source": "metadata",
+      "btih": "c6ba74b2abf156cb6cca49334a68273bd80a0bbd",
+      "mtime": "1728177696",
+      "size": "9194",
+      "md5": "f17102a09f972403f152824bf15d3981",
+      "crc32": "a76120ac",
+      "sha1": "968e053fd5b0c81b0514818e0175e2187e5d3328",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "psalmsofmarathas00macnuoft_abbyy.gz",
+      "mtime": "1697918876",
+      "size": "1747700",
+      "md5": "408fcec50b0be027785807f87ffe4766",
+      "crc32": "4468600f",
+      "sha1": "c51fe3dd3a8f54774e6fc2d095be680fbd085fc6"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_dc.xml",
+      "source": "original",
+      "format": "Dublin Core",
+      "md5": "e10882ade491dd9e76f1905decb59482",
+      "mtime": "1649150485",
+      "size": "560",
+      "crc32": "f6542694",
+      "sha1": "417b90fd2a008638a3397860b060cbf4c21b8115"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "psalmsofmarathas00macnuoft_djvu.xml",
+      "mtime": "1697919983",
+      "size": "154532",
+      "md5": "967eae024ffa96105743fa987c42e497",
+      "crc32": "39a13d27",
+      "sha1": "510064a16c9e7fb4071a7235e464593b1c879cac"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "psalmsofmarathas00macnuoft_hocr.html",
+      "mtime": "1697919013",
+      "size": "1944764",
+      "md5": "bf0d315a6480575587316475a7d372d4",
+      "crc32": "9e040494",
+      "sha1": "13d59358babbddc04455bbd18fbe9bef35a35d47"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "79a99f38cc8e9ad62e72994a630b3472",
+      "summation": "md5"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.2.0",
+      "hocr_char_to_word_hocr_version": "1.1.45",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "psalmsofmarathas00macnuoft_chocr.html.gz",
+      "mtime": "1697918965",
+      "size": "3722613",
+      "md5": "126bac3fa3fff17f123ea59e699a256c",
+      "crc32": "9e3149c7",
+      "sha1": "593fe7af962c313d1317c23c6becad250dcead00"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.0.0",
+      "hocr_pageindex_hocr_version": "1.1.15",
+      "format": "OCR Page Index",
+      "original": "psalmsofmarathas00macnuoft_hocr.html",
+      "mtime": "1697919025",
+      "size": "1280",
+      "md5": "909f18cdfc8eac0a54a2a7baf7d2ce78",
+      "crc32": "ad879e76",
+      "sha1": "03fafc5ec8f28272173cf71ba97da2d4ea9374aa"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.1.0",
+      "hocr_fts_text_hocr_version": "1.1.15",
+      "word_conf_0_10": "1629",
+      "word_conf_11_20": "1774",
+      "word_conf_21_30": "3141",
+      "word_conf_31_40": "3638",
+      "word_conf_41_50": "5234",
+      "word_conf_51_60": "3992",
+      "word_conf_61_70": "2545",
+      "word_conf_71_80": "853",
+      "word_conf_81_90": "430",
+      "word_conf_91_100": "500",
+      "format": "OCR Search Text",
+      "original": "psalmsofmarathas00macnuoft_hocr.html",
+      "mtime": "1697919097",
+      "size": "56851",
+      "md5": "630110dfaee418d76f668f73cb8ccba2",
+      "crc32": "a4e0eb25",
+      "sha1": "a987a3035685bd023ad4f132b5e5940eb8485fe5"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "psalmsofmarathas00macnuoft_raw_jp2.zip",
+      "mtime": "1196798713",
+      "size": "39856041",
+      "md5": "6c57cbf48df6d2b6dd488cf31077fe3d",
+      "crc32": "8c42a7bb",
+      "sha1": "6be330631cb23e462ef73450b1a202cb160e2743",
+      "filecount": "114"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_marc.xml",
+      "source": "original",
+      "format": "MARC",
+      "md5": "6a783e0a6dd0feecc40258c272b8c11a",
+      "mtime": "1196734698",
+      "size": "2308",
+      "crc32": "b7e28efc",
+      "sha1": "eefd00c2bb4f30fefd95fddc89a5b5aef69f8a21"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_meta.mrc",
+      "source": "original",
+      "md5": "4b543bcc5b3b84f7776a10238405d1ba",
+      "format": "MARC Binary",
+      "mtime": "1196734698",
+      "size": "689",
+      "crc32": "f4a6e873",
+      "sha1": "20a0f7c9f2a7c60723e7e94a60761680927a950c"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_meta.sqlite",
+      "source": "original",
+      "mtime": "1466462308",
+      "size": "6144",
+      "format": "Metadata",
+      "md5": "d07ce3f0a6e538dd6132697982bb5fe2",
+      "crc32": "6dd6455e",
+      "sha1": "df3487d02ec922c22773c52a25cbb06072e7455e"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_meta.xml",
+      "source": "original",
+      "format": "Metadata",
+      "mtime": "1728177692",
+      "size": "2681",
+      "md5": "43374b5d95ceba47d9ad12ab31d9f314",
+      "crc32": "d083f57f",
+      "sha1": "a6933a8f88959a18319c57c4f7d13c8978409047"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_metasource.xml",
+      "source": "original",
+      "format": "MARC Source",
+      "md5": "027785a6e576639dc95de53973018d40",
+      "mtime": "1196734698",
+      "size": "384",
+      "crc32": "56a3ec20",
+      "sha1": "20b8c1c1734b108f30d94ec7dfaf898891fd3341"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.3",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "96",
+      "format": "Page Numbers JSON",
+      "original": "psalmsofmarathas00macnuoft_hocr.html",
+      "mtime": "1697919157",
+      "size": "18726",
+      "md5": "2e97c07fc46b941954d5ce52e8e0483d",
+      "crc32": "f3135852",
+      "sha1": "5431634789b9891d802608fe60b06e18cf76f166"
+    },
+    {
+      "name": "psalmsofmarathas00macnuoft_raw_jp2.zip",
+      "source": "original",
+      "format": "Single Page Raw JP2 ZIP",
+      "md5": "660339ec323be903c8176dc53251fab3",
+      "mtime": "1196798704",
+      "size": "83983560",
+      "crc32": "a9457736",
+      "sha1": "21901e084db6e32ed62999ff63953a1ffd942e27",
+      "filecount": "114"
+    },
+    {
+      "name": "scandata.zip",
+      "source": "original",
+      "format": "Scribe Scandata ZIP",
+      "md5": "16ce9bcc52dacc2f872ea6ab1a56238c",
+      "mtime": "1697918923",
+      "size": "53809569",
+      "crc32": "68f86f36",
+      "sha1": "9377e6fdb20fee160f64a1dba32d290b9c943a07",
+      "filecount": "11"
+    }
+  ],
+  "files_count": 23,
+  "item_last_updated": 1728177696,
+  "item_size": 194231032,
+  "metadata": {
+    "title": "Psalms of Maratha Saints, one hundred and eigh hymns translated from the Marathi",
+    "creator": "Macnicol, Nicol, 1870-",
+    "subject": "Marathi literature -- Collections",
+    "description": "26",
+    "publisher": "Calcutta, Association Press",
+    "date": "1919",
+    "language": "eng",
+    "copyright-evidence-operator": "AlexAitken",
+    "possible-copyright-status": "NOT_IN_COPYRIGHT",
+    "copyright-region": "US",
+    "copyright-evidence": "Evidence reported by AlexAitken for item psalmsofmarathas00macnuoft on December 4, 2007: no visible notice of copyright; exact publication date unknown.",
+    "copyright-evidence-date": "20071204021811",
+    "sponsor": "MSN",
+    "contributor": "Robarts - University of Toronto",
+    "scanningcenter": "uoft",
+    "mediatype": "texts",
+    "collection": [
+      "robarts",
+      "toronto",
+      "university_of_toronto"
+    ],
+    "call_number": "AET-5739",
+    "updatedate": "2007-12-04 02:18:19",
+    "updater": "AlexAitken",
+    "identifier": "psalmsofmarathas00macnuoft",
+    "uploader": "alexaitken@archive.org",
+    "addeddate": "2007-12-04 02:18:21",
+    "publicdate": "2007-12-04 02:19:13",
+    "imagecount": "114",
+    "ppi": "500",
+    "lcamid": "330933",
+    "rcamid": "332491",
+    "camera": "1Ds",
+    "operator": "scanner-greg-deschamps@archive.org",
+    "scanner": "ias5",
+    "scandate": "20071204184812",
+    "identifier-access": "http://www.archive.org/details/psalmsofmarathas00macnuoft",
+    "identifier-ark": "ark:/13960/t8x925263",
+    "bookplateleaf": "0002",
+    "curation": "[curator]marcus@archive.org[/curator][date]20080105212245[/date][state]approved[/state]",
+    "sponsordate": "20071231",
+    "filesxml": [
+      "Thu Mar 18 8:38:47 UTC 2010",
+      "Fri Dec 25 21:31:02 UTC 2020"
+    ],
+    "foldoutcount": "0",
+    "repub_state": "4",
+    "backup_location": "ia903601_15",
+    "openlibrary_edition": "OL7229433M",
+    "openlibrary_work": "OL7905161W",
+    "external-identifier": "urn:oclc:record:669407512",
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "96",
+    "page_number_module_version": "1.0.3",
+    "pdf_module_version": "0.0.23"
+  },
+  "page_numbers": {
+    "identifier": "psalmsofmarathas00macnuoft",
+    "format-version": "2",
+    "archive-hocr-tools-version": "1.1.54",
+    "confidence": 96,
+    "pages": [
+      {
+        "leafNum": 1,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 2,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 3,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 4,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 5,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 6,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 7,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 8,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 9,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 10,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 11,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 12,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 13,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 14,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 15,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 16,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 17,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 18,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 19,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 20,
+        "confidence": 76,
+        "pageNumber": "10",
+        "pageProb": 66,
+        "wordConf": 100
+      },
+      {
+        "leafNum": 21,
+        "confidence": null,
+        "pageNumber": "11",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 22,
+        "confidence": null,
+        "pageNumber": "12",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 23,
+        "confidence": 96,
+        "pageNumber": "13",
+        "pageProb": 86,
+        "wordConf": 29
+      },
+      {
+        "leafNum": 24,
+        "confidence": null,
+        "pageNumber": "14",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 25,
+        "confidence": 98,
+        "pageNumber": "15",
+        "pageProb": 88,
+        "wordConf": 37
+      },
+      {
+        "leafNum": 26,
+        "confidence": null,
+        "pageNumber": "16",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 27,
+        "confidence": 97,
+        "pageNumber": "17",
+        "pageProb": 87,
+        "wordConf": 20
+      },
+      {
+        "leafNum": 28,
+        "confidence": null,
+        "pageNumber": "18",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 29,
+        "confidence": 100,
+        "pageNumber": "19",
+        "pageProb": 92,
+        "wordConf": 22
+      },
+      {
+        "leafNum": 30,
+        "confidence": null,
+        "pageNumber": "20",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 31,
+        "confidence": 100,
+        "pageNumber": "21",
+        "pageProb": 91,
+        "wordConf": 90
+      },
+      {
+        "leafNum": 32,
+        "confidence": null,
+        "pageNumber": "22",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 33,
+        "confidence": null,
+        "pageNumber": "23",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 34,
+        "confidence": null,
+        "pageNumber": "24",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 35,
+        "confidence": 97,
+        "pageNumber": "25",
+        "pageProb": 87,
+        "wordConf": 9
+      },
+      {
+        "leafNum": 36,
+        "confidence": null,
+        "pageNumber": "26",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 37,
+        "confidence": 100,
+        "pageNumber": "27",
+        "pageProb": 90,
+        "wordConf": 43
+      },
+      {
+        "leafNum": 38,
+        "confidence": null,
+        "pageNumber": "28",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 39,
+        "confidence": 100,
+        "pageNumber": "29",
+        "pageProb": 90,
+        "wordConf": 13
+      },
+      {
+        "leafNum": 40,
+        "confidence": null,
+        "pageNumber": "30",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 41,
+        "confidence": 99,
+        "pageNumber": "31",
+        "pageProb": 89,
+        "wordConf": 6
+      },
+      {
+        "leafNum": 42,
+        "confidence": null,
+        "pageNumber": "32",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 43,
+        "confidence": 98,
+        "pageNumber": "33",
+        "pageProb": 88,
+        "wordConf": 100
+      },
+      {
+        "leafNum": 44,
+        "confidence": null,
+        "pageNumber": "34",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 45,
+        "confidence": null,
+        "pageNumber": "35",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 46,
+        "confidence": null,
+        "pageNumber": "36",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 47,
+        "confidence": 100,
+        "pageNumber": "37",
+        "pageProb": 91,
+        "wordConf": 19
+      },
+      {
+        "leafNum": 48,
+        "confidence": null,
+        "pageNumber": "38",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 49,
+        "confidence": 98,
+        "pageNumber": "39",
+        "pageProb": 88,
+        "wordConf": 18
+      },
+      {
+        "leafNum": 50,
+        "confidence": null,
+        "pageNumber": "40",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 51,
+        "confidence": null,
+        "pageNumber": "41",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 52,
+        "confidence": null,
+        "pageNumber": "42",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 53,
+        "confidence": 100,
+        "pageNumber": "43",
+        "pageProb": 92,
+        "wordConf": 32
+      },
+      {
+        "leafNum": 54,
+        "confidence": null,
+        "pageNumber": "44",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 55,
+        "confidence": 100,
+        "pageNumber": "45",
+        "pageProb": 93,
+        "wordConf": 16
+      },
+      {
+        "leafNum": 56,
+        "confidence": null,
+        "pageNumber": "46",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 57,
+        "confidence": 100,
+        "pageNumber": "47",
+        "pageProb": 92,
+        "wordConf": 49
+      },
+      {
+        "leafNum": 58,
+        "confidence": null,
+        "pageNumber": "48",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 59,
+        "confidence": null,
+        "pageNumber": "49",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 60,
+        "confidence": null,
+        "pageNumber": "50",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 61,
+        "confidence": null,
+        "pageNumber": "51",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 62,
+        "confidence": null,
+        "pageNumber": "52",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 63,
+        "confidence": 99,
+        "pageNumber": "53",
+        "pageProb": 89,
+        "wordConf": 34
+      },
+      {
+        "leafNum": 64,
+        "confidence": null,
+        "pageNumber": "54",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 65,
+        "confidence": 97,
+        "pageNumber": "55",
+        "pageProb": 87,
+        "wordConf": 28
+      },
+      {
+        "leafNum": 66,
+        "confidence": null,
+        "pageNumber": "56",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 67,
+        "confidence": 100,
+        "pageNumber": "57",
+        "pageProb": 92,
+        "wordConf": 36
+      },
+      {
+        "leafNum": 68,
+        "confidence": null,
+        "pageNumber": "58",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 69,
+        "confidence": 100,
+        "pageNumber": "59",
+        "pageProb": 91,
+        "wordConf": 22
+      },
+      {
+        "leafNum": 70,
+        "confidence": null,
+        "pageNumber": "60",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 71,
+        "confidence": 100,
+        "pageNumber": "61",
+        "pageProb": 91,
+        "wordConf": 24
+      },
+      {
+        "leafNum": 72,
+        "confidence": null,
+        "pageNumber": "62",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 73,
+        "confidence": 100,
+        "pageNumber": "63",
+        "pageProb": 90,
+        "wordConf": 8
+      },
+      {
+        "leafNum": 74,
+        "confidence": null,
+        "pageNumber": "64",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 75,
+        "confidence": 100,
+        "pageNumber": "65",
+        "pageProb": 90,
+        "wordConf": 21
+      },
+      {
+        "leafNum": 76,
+        "confidence": null,
+        "pageNumber": "66",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 77,
+        "confidence": 100,
+        "pageNumber": "67",
+        "pageProb": 90,
+        "wordConf": 70
+      },
+      {
+        "leafNum": 78,
+        "confidence": null,
+        "pageNumber": "68",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 79,
+        "confidence": 97,
+        "pageNumber": "69",
+        "pageProb": 87,
+        "wordConf": 26
+      },
+      {
+        "leafNum": 80,
+        "confidence": null,
+        "pageNumber": "70",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 81,
+        "confidence": 100,
+        "pageNumber": "71",
+        "pageProb": 91,
+        "wordConf": 2
+      },
+      {
+        "leafNum": 82,
+        "confidence": null,
+        "pageNumber": "72",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 83,
+        "confidence": 100,
+        "pageNumber": "73",
+        "pageProb": 91,
+        "wordConf": 4
+      },
+      {
+        "leafNum": 84,
+        "confidence": null,
+        "pageNumber": "74",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 85,
+        "confidence": 100,
+        "pageNumber": "75",
+        "pageProb": 90,
+        "wordConf": 51
+      },
+      {
+        "leafNum": 86,
+        "confidence": null,
+        "pageNumber": "76",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 87,
+        "confidence": 100,
+        "pageNumber": "77",
+        "pageProb": 90,
+        "wordConf": 100
+      },
+      {
+        "leafNum": 88,
+        "confidence": null,
+        "pageNumber": "78",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 89,
+        "confidence": 100,
+        "pageNumber": "79",
+        "pageProb": 90,
+        "wordConf": 4
+      },
+      {
+        "leafNum": 90,
+        "confidence": null,
+        "pageNumber": "80",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 91,
+        "confidence": 100,
+        "pageNumber": "81",
+        "pageProb": 90,
+        "wordConf": 40
+      },
+      {
+        "leafNum": 92,
+        "confidence": null,
+        "pageNumber": "82",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 93,
+        "confidence": 99,
+        "pageNumber": "83",
+        "pageProb": 89,
+        "wordConf": 4
+      },
+      {
+        "leafNum": 94,
+        "confidence": null,
+        "pageNumber": "84",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 95,
+        "confidence": 100,
+        "pageNumber": "85",
+        "pageProb": 90,
+        "wordConf": 20
+      },
+      {
+        "leafNum": 96,
+        "confidence": null,
+        "pageNumber": "86",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 97,
+        "confidence": 100,
+        "pageNumber": "87",
+        "pageProb": 90,
+        "wordConf": 6
+      },
+      {
+        "leafNum": 98,
+        "confidence": null,
+        "pageNumber": "88",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 99,
+        "confidence": 100,
+        "pageNumber": "89",
+        "pageProb": 91,
+        "wordConf": 4
+      },
+      {
+        "leafNum": 100,
+        "confidence": null,
+        "pageNumber": "90",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 101,
+        "confidence": null,
+        "pageNumber": "91",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 102,
+        "confidence": null,
+        "pageNumber": "92",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 103,
+        "confidence": null,
+        "pageNumber": "93",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 104,
+        "confidence": 77,
+        "pageNumber": "94",
+        "pageProb": 67,
+        "wordConf": 7
+      },
+      {
+        "leafNum": 105,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 106,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 107,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 108,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 109,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      },
+      {
+        "leafNum": 110,
+        "confidence": null,
+        "pageNumber": "",
+        "pageProb": null,
+        "wordConf": null
+      }
+    ]
+  },
+  "server": "ia600106.us.archive.org",
+  "uniq": 1153248807,
+  "workable_servers": [
+    "ia600106.us.archive.org",
+    "ia800106.us.archive.org"
+  ]
+}

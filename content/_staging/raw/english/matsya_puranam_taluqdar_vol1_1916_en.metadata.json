@@ -1,0 +1,310 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721801.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45856"
+      },
+      {
+        "server": "dn760108.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45856"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721801.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45856"
+      },
+      {
+        "server": "dn760108.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45856"
+      }
+    ]
+  },
+  "created": 1783271507,
+  "d1": "ia600904.us.archive.org",
+  "d2": "ia800904.us.archive.org",
+  "dir": "/30/items/in.ernet.dli.2015.45856",
+  "files": [
+    {
+      "name": "2015.45856.The-Matsya-Puranam.epub",
+      "source": "derivative",
+      "original": "2015.45856.The-Matsya-Puranam_abbyy.gz",
+      "mtime": "1702019918",
+      "size": "569566857",
+      "md5": "762cd53f27085439266b8a726d43e56a",
+      "crc32": "cc278fc3",
+      "sha1": "8d17ca3d65a0cfde39f2e9906af7306961749792",
+      "format": "EPUB"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam.pdf",
+      "source": "original",
+      "mtime": "1485002372",
+      "size": "39800767",
+      "md5": "988e2def1bf57e5aea56f51df38f592c",
+      "crc32": "dd6291b1",
+      "sha1": "b190f3364750ecc82397a3680c93ef292aaf8b39",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.45856.The-Matsya-Puranam_jp2.zip",
+      "mtime": "1493488242",
+      "size": "19235307",
+      "md5": "01eba45f2aa51a12fde03b83cb194c20",
+      "crc32": "987adf76",
+      "sha1": "928187c50d18410575cc858271d5203decbfabf2"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "2015.45856.The-Matsya-Puranam_abbyy.gz",
+      "mtime": "1763785675",
+      "size": "15734942",
+      "md5": "2a2555aebda05cd92e77af9e4078f61d",
+      "crc32": "38347518",
+      "sha1": "0b0efabd8d3b2481881b8c0cc0ffdd1063482dce"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_cloth_detection.log",
+      "source": "derivative",
+      "format": "Cloth Cover Detection Log",
+      "original": "2015.45856.The-Matsya-Puranam_scandata.xml",
+      "mtime": "1763786388",
+      "size": "581",
+      "md5": "99fbbc3ca21ba868fdfe6defa1ca108a",
+      "crc32": "800ca485",
+      "sha1": "cbf5f62a2e50ae17ecca2f1f7fee1b5e356f104f"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_daisy.zip",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "Daisy",
+      "original": "2015.45856.The-Matsya-Puranam_hocr.html",
+      "mtime": "1763785994",
+      "size": "621850",
+      "md5": "c60d9657f7f19d4a934916e4d8bb2ad5",
+      "crc32": "47999c60",
+      "sha1": "865b1f0f0d50054fea74633506c3fe3b6f3862eb",
+      "filecount": "9"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.45856.The-Matsya-Puranam_djvu.xml",
+      "mtime": "1763786008",
+      "size": "1320640",
+      "md5": "53a23673578374a9e156fa6a8235af23",
+      "crc32": "d3061b79",
+      "sha1": "3d91a819ffefb8212af673b285bab44562dc2839"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.45856.The-Matsya-Puranam_hocr.html",
+      "mtime": "1763785912",
+      "size": "15475114",
+      "md5": "438adbaa55e0543aa7f466e0feb580ee",
+      "crc32": "3ff5d898",
+      "sha1": "fe4ee75e2502cce68e48fe846bf5ce9c1a44ae02"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "2015.45856.The-Matsya-Puranam_chocr.html.gz",
+      "mtime": "1763785892",
+      "size": "29402304",
+      "md5": "54d6ebf4629efb2a2a0fb763489a56f5",
+      "crc32": "78349c6b",
+      "sha1": "a3ffcfe18668256293155d2968d0b1229ab403d6"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "2015.45856.The-Matsya-Puranam_hocr.html",
+      "mtime": "1763785929",
+      "size": "5928",
+      "md5": "f16c58a0dbac1a50e7f01ef2665d84b7",
+      "crc32": "2860528a",
+      "sha1": "c7be83d423c5efbe8acd8ab49234839c48c63c71"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "71368",
+      "word_conf_11_20": "41460",
+      "word_conf_21_30": "28504",
+      "word_conf_31_40": "19741",
+      "word_conf_41_50": "12632",
+      "word_conf_51_60": "8575",
+      "word_conf_61_70": "4613",
+      "word_conf_71_80": "2473",
+      "word_conf_81_90": "1237",
+      "word_conf_91_100": "10388",
+      "format": "OCR Search Text",
+      "original": "2015.45856.The-Matsya-Puranam_hocr.html",
+      "mtime": "1763785964",
+      "size": "489229",
+      "md5": "3c8cd14cb9aaa2173a03a47ee944e4c1",
+      "crc32": "43216036",
+      "sha1": "bea58eeba23c504787666f3d6317cb9025825816"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.45856.The-Matsya-Puranam.pdf",
+      "mtime": "1493479386",
+      "size": "595318575",
+      "md5": "c8fdb09871e3b7d3422708f197f1ba51",
+      "crc32": "a1e7a036",
+      "sha1": "a50114c5a033dcefe3d5ab9cfa442be0944e5962",
+      "filecount": "490"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "71",
+      "format": "Page Numbers JSON",
+      "original": "2015.45856.The-Matsya-Puranam_hocr.html",
+      "mtime": "1763786359",
+      "size": "83753",
+      "md5": "318c49765a03d6b802535d650b9d86e4",
+      "crc32": "6ac82dd7",
+      "sha1": "8ca6b4daab4a9bc641942303e837095994fdd21b"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.45856.The-Matsya-Puranam_djvu.xml",
+      "mtime": "1763786359",
+      "size": "159590",
+      "md5": "42de0b7e83ab59c36eeaa82701c6b958",
+      "crc32": "6459750d",
+      "sha1": "5642d1f91b7723d9895f9ea4f2eb38f208da1b62"
+    },
+    {
+      "name": "2015.45856.The-Matsya-Puranam_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "2015.45856.The-Matsya-Puranam_page_numbers.json",
+      "mtime": "1763789204",
+      "size": "45580977",
+      "md5": "5f9ed2d9ae96a9897d90fd4192f36a08",
+      "crc32": "22930dcc",
+      "sha1": "dae9d307c80d439cf2c8a2d9dbc007a7d3014831"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1702019930",
+      "size": "362",
+      "md5": "3a693fdf0229f9560085233d272582ab",
+      "crc32": "318d7b76",
+      "sha1": "d3df60c0c1f9317db008fd959e97559405ea594b",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.45856_archive.torrent",
+      "source": "metadata",
+      "btih": "3edece89fb4ba25a3e04461fe00138f1269000db",
+      "mtime": "1763789419",
+      "size": "30126",
+      "md5": "3e28f4daf84ef6cc74d508db5efa96bb",
+      "crc32": "5ccbb40f",
+      "sha1": "4cbe4c6407ca173f473f79ee679adf68a8b401d5",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.45856_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "d3a06174b8d4e1cf26d709548570bbcb",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.45856_meta.sqlite",
+      "source": "original",
+      "mtime": "1485002386",
+      "size": "15360",
+      "md5": "8d6413a794115e1ec310a9585de2e809",
+      "crc32": "d7f46877",
+      "sha1": "36daf04129a47d95f2463b4b466a3552eb987461",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.45856_meta.xml",
+      "source": "original",
+      "mtime": "1763789412",
+      "size": "2577",
+      "format": "Metadata",
+      "md5": "ae8505efbdd73f83f40aa469e3a3d5fe",
+      "crc32": "afeccc57",
+      "sha1": "5cad7ea5775b036cbc35536413e7540b2d7d454e"
+    }
+  ],
+  "files_count": 20,
+  "item_last_updated": 1763789419,
+  "item_size": 1332844839,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.45856",
+    "creator": "Basu, B. D., Ed.",
+    "date": "1916",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/45856\" rel=\"ugc nofollow\">Digital Library of India Item 2015.45856</a></p><p>dc.contributor.author: Basu, B. D., Ed.<br />dc.date.accessioned: 2015-06-26T09:23:45Z<br />dc.date.available: 2015-06-26T09:23:45Z<br />dc.date.digitalpublicationdate: 2006-08-14<br />dc.date.citation: 1916<br />dc.identifier.barcode: 4990010226266<br />dc.identifier.origpath: /data3/upload/0080/874<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/45856<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 490<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Panini Office, Allababad<br />dc.rights: In Public Domain<br />dc.source.library: Hooghly Mohsin College<br />dc.subject.classification: Religion. Theology<br />dc.subject.classification: Hinduism<br />dc.subject.classification: Other Hindu Sects<br />dc.subject.keywords: Hindu Puran<br />dc.subject.keywords: Hindu Myhology<br />dc.title: The Matsya Puranam<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "C-DAK",
+    "title": "The Matsya Puranam",
+    "publicdate": "2017-01-21 12:39:32",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-21 12:39:32",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.45856",
+    "identifier-ark": "ark:/13960/t4dn9h46g",
+    "ppi": "600",
+    "repub_state": "4",
+    "backup_location": "ia906305_15",
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "71",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia800904.us.archive.org",
+  "uniq": 157776530,
+  "workable_servers": [
+    "ia800904.us.archive.org",
+    "ia600904.us.archive.org"
+  ]
+}

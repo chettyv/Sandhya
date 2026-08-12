@@ -1,0 +1,188 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710609.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45858"
+      },
+      {
+        "server": "dn760005.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45858"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710609.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45858"
+      },
+      {
+        "server": "dn760005.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.45858"
+      }
+    ]
+  },
+  "created": 1783273236,
+  "d1": "ia601402.us.archive.org",
+  "d2": "ia801402.us.archive.org",
+  "dir": "/9/items/in.ernet.dli.2015.45858",
+  "files": [
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2.pdf",
+      "source": "original",
+      "mtime": "1484930312",
+      "size": "47353364",
+      "md5": "6cb7fb9953b5a576ed17636220745f98",
+      "crc32": "1dd0d518",
+      "sha1": "5522593388354d69672b32fc21815fd795a05c02",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.45858.The-Matsya-Puranam--Pt-2_jp2.zip",
+      "mtime": "1492625169",
+      "size": "19785293",
+      "md5": "e62d75717786236acb7b9c313f7c0397",
+      "crc32": "05a86d0d",
+      "sha1": "f2be8a54bcfd5c6378a04196ee7df71fa8160775"
+    },
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.45858.The-Matsya-Puranam--Pt-2_djvu.xml",
+      "mtime": "1492627820",
+      "size": "1218622",
+      "md5": "7edb25ea55d3d7e1278abb8a7d532b6f",
+      "crc32": "b899883f",
+      "sha1": "e37db8c017c38d09f1ec23c50ac28126adfac906"
+    },
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.45858.The-Matsya-Puranam--Pt-2_abbyy.gz",
+      "mtime": "1492625608",
+      "size": "11624821",
+      "md5": "6691b73c1d96c574b88e3f0673689724",
+      "crc32": "618c7959",
+      "sha1": "5bf52a21272eed719cae42f3469ce9750644f8bd"
+    },
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.45858.The-Matsya-Puranam--Pt-2.pdf",
+      "mtime": "1492616941",
+      "size": "691844218",
+      "md5": "585a3501d89d9e2e9175b60a0bb73b8a",
+      "crc32": "b79841d2",
+      "sha1": "a0b1f2a0f70e146ae20fa89dc16794ce5d61c284"
+    },
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.45858.The-Matsya-Puranam--Pt-2_djvu.xml",
+      "mtime": "1492627839",
+      "size": "121326",
+      "md5": "6e4bc70321a98d455d20b5180bc45986",
+      "crc32": "36fda2f7",
+      "sha1": "b05d853e5430fdc97798bfb382539e77778373e9"
+    },
+    {
+      "name": "2015.45858.The-Matsya-Puranam--Pt-2_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.45858.The-Matsya-Puranam--Pt-2_djvu.xml",
+      "mtime": "1492627803",
+      "size": "50268227",
+      "md5": "f83411266b5f729db78d0b9abcf5ee23",
+      "crc32": "d8fbcaed",
+      "sha1": "943d617fcf6d310d59bb714738c6c782a1e13c37"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1536075566",
+      "size": "6427",
+      "md5": "e9272dc1e78ec0c1fe037f5e9364a708",
+      "crc32": "c63af4ac",
+      "sha1": "58e45bc1189ff2dc9f0d40c1982c374f42218d90",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.45858_archive.torrent",
+      "source": "metadata",
+      "btih": "c6689e812e908595c5216fd7312a3a4c197b9cf2",
+      "mtime": "1563306840",
+      "size": "34482",
+      "md5": "4f827cf5199b1a3076928b7b4b185042",
+      "crc32": "acf6ff5d",
+      "sha1": "6d38e2314619e0b1cc56c579a562ff1f6e9d56a8",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.45858_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "d3786417a050632c0c4a5bbbb0351510",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.45858_meta.sqlite",
+      "source": "original",
+      "mtime": "1484930329",
+      "size": "15360",
+      "md5": "2fcf5bdfe147b234a9f18c75861bbb5d",
+      "crc32": "25ad5472",
+      "sha1": "ef2b1e32bcaf2338c6eee2426a2df585bdb877e2",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.45858_meta.xml",
+      "source": "original",
+      "mtime": "1563306830",
+      "size": "2247",
+      "format": "Metadata",
+      "md5": "9d527215153b1bb46b5472e96fd1b1cd",
+      "crc32": "ede2e019",
+      "sha1": "40131cfb16c14652a1d89337843f365c368cb649"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1669085680,
+  "item_size": 822274387,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.45858",
+    "creator": "Hindu Puran",
+    "date": "1917",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/45858\" rel=\"nofollow\">Digital Library of India Item 2015.45858</a></p><p>dc.contributor.author: Basu, B. D., Ed.<br />dc.contributor.author: Hindu Puran<br />dc.date.accessioned: 2015-06-26T09:23:54Z<br />dc.date.available: 2015-06-26T09:23:54Z<br />dc.date.digitalpublicationdate: 2006-08-14<br />dc.date.citation: 1917<br />dc.identifier.barcode: 4990010226267<br />dc.identifier.origpath: /data3/upload/0080/875<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/45858<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 404<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Panini Office, Allababad<br />dc.rights: In Public Domain<br />dc.source.library: Hooghly Mohsin College<br />dc.subject.classification: Religion. Theology<br />dc.subject.classification: Hinduism<br />dc.subject.classification: Other Hindu Sect<br />dc.title: The Matsya Puranam  Pt. 2<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "C-DAK",
+    "title": "The Matsya Puranam  Pt. 2",
+    "publicdate": "2017-01-20 16:38:32",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-20 16:38:32",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.45858",
+    "identifier-ark": "ark:/13960/t6d27875c",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_11"
+  },
+  "server": "ia601402.us.archive.org",
+  "uniq": 909141088,
+  "workable_servers": [
+    "ia601402.us.archive.org",
+    "ia801402.us.archive.org"
+  ]
+}

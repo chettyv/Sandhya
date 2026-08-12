@@ -1,0 +1,302 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760007.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.272582"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760007.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.272582"
+      }
+    ]
+  },
+  "created": 1783179315,
+  "d1": "ia601507.us.archive.org",
+  "d2": "ia801507.us.archive.org",
+  "dir": "/23/items/in.ernet.dli.2015.272582",
+  "files": [
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam.epub",
+      "source": "derivative",
+      "original": "2015.272582.Shrimad-Bhagwatam_abbyy.gz",
+      "mtime": "1724526259",
+      "size": "1583332907",
+      "md5": "0a2d2babcdc5d1bdef10ef7471ffff1c",
+      "crc32": "48ea6778",
+      "sha1": "19848250d35344ee3df67cfbaf2ca8cdc78553ac",
+      "format": "EPUB"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam.pdf",
+      "source": "original",
+      "mtime": "1485412944",
+      "size": "405559909",
+      "md5": "d1f7b72cbd13055475738765fa073f77",
+      "crc32": "43116d17",
+      "sha1": "a22147cf01cad1af5997d8870b1ceaa3e4076ce9",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.272582.Shrimad-Bhagwatam_jp2.tar",
+      "mtime": "1496904213",
+      "size": "23178807",
+      "md5": "f267a6c762f1ce228874529066562c02",
+      "crc32": "ee75c63b",
+      "sha1": "c9deaf76e461deb55e9b27aa9b657e67119cf7d5"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "2015.272582.Shrimad-Bhagwatam_abbyy.gz",
+      "mtime": "1765897890",
+      "size": "19362090",
+      "md5": "ccb2ab748426e22e700a1f9df4737dcd",
+      "crc32": "82d5c093",
+      "sha1": "be2c9d544288a119bb88b6b991307a575dcafd0f"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_cloth_detection.log",
+      "source": "derivative",
+      "format": "Cloth Cover Detection Log",
+      "original": "2015.272582.Shrimad-Bhagwatam_scandata.xml",
+      "mtime": "1765898612",
+      "size": "581",
+      "md5": "c8c1efdd0c95a7cc2f8974cd593337e4",
+      "crc32": "65e62732",
+      "sha1": "05e0c6cfd6d0fd0151bf006cde903742778b4224"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_daisy.zip",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "Daisy",
+      "original": "2015.272582.Shrimad-Bhagwatam_hocr.html",
+      "mtime": "1765898015",
+      "size": "619018",
+      "md5": "50b92e81c817ff51bfb57f68616dc86b",
+      "crc32": "1e2ef878",
+      "sha1": "0c9df48c9bee83322f591e89fd86e38ee8adb448",
+      "filecount": "9"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.272582.Shrimad-Bhagwatam_djvu.xml",
+      "mtime": "1765898032",
+      "size": "1568024",
+      "md5": "dd111bbb18c57bb476ab62246da8c54d",
+      "crc32": "f8df6193",
+      "sha1": "1208800ce2d334605197a6f097fb324315455890"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.272582.Shrimad-Bhagwatam_hocr.html",
+      "mtime": "1765897969",
+      "size": "18695664",
+      "md5": "138a5666b3e8fa655f0c0a89c5c7c283",
+      "crc32": "d32ff5ec",
+      "sha1": "b1d3e9eca82eb265fbdc020f0c395c5e6845b2cf"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "2015.272582.Shrimad-Bhagwatam_chocr.html.gz",
+      "mtime": "1765897944",
+      "size": "35778282",
+      "md5": "3083c9e9dba615546ba83448075902de",
+      "crc32": "9aae68bb",
+      "sha1": "c5405b57533a8b22186e1b4480afe4a22d7f8e7b"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "2015.272582.Shrimad-Bhagwatam_hocr.html",
+      "mtime": "1765897986",
+      "size": "9068",
+      "md5": "e3656b98bf37043e4df3ce4468346bd2",
+      "crc32": "15ed56ce",
+      "sha1": "bce8932ef25dcddc944e26e428a5c860b493d31b"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "82280",
+      "word_conf_11_20": "68232",
+      "word_conf_21_30": "39951",
+      "word_conf_31_40": "21552",
+      "word_conf_41_50": "11227",
+      "word_conf_51_60": "5719",
+      "word_conf_61_70": "2658",
+      "word_conf_71_80": "1148",
+      "word_conf_81_90": "556",
+      "word_conf_91_100": "12348",
+      "format": "OCR Search Text",
+      "original": "2015.272582.Shrimad-Bhagwatam_hocr.html",
+      "mtime": "1765897999",
+      "size": "534130",
+      "md5": "869fd02793e00b9e2fe7276f01562924",
+      "crc32": "a4fbfe28",
+      "sha1": "91b04cd53e5a359de6c8d69ebc92777ee02d48c5"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_jp2.tar",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 Tar",
+      "original": "2015.272582.Shrimad-Bhagwatam.pdf",
+      "mtime": "1496874280",
+      "size": "2672435200",
+      "md5": "d0bc6c21af8242da3d09b0b6eda19722",
+      "crc32": "1c673556",
+      "sha1": "a2e001d6c1f153d9b7ee48ceb2bcaa43bdb873ac",
+      "filecount": "744"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "79",
+      "format": "Page Numbers JSON",
+      "original": "2015.272582.Shrimad-Bhagwatam_hocr.html",
+      "mtime": "1765898595",
+      "size": "126677",
+      "md5": "dceb9cef5952a3e5c1eaeea995e80efa",
+      "crc32": "26385367",
+      "sha1": "0749f02f34ada0b59fe77603657b078e70dc668c"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.272582.Shrimad-Bhagwatam_djvu.xml",
+      "mtime": "1765898596",
+      "size": "245927",
+      "md5": "2b7c1a47c7d844b208773a4b51bc7218",
+      "crc32": "2c514474",
+      "sha1": "f1280d3775c8fb6aa60bed4ac9b1ac105025de34"
+    },
+    {
+      "name": "2015.272582.Shrimad-Bhagwatam_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "2015.272582.Shrimad-Bhagwatam_page_numbers.json",
+      "mtime": "1765905849",
+      "size": "285697717",
+      "md5": "1d232fa16fcf88f1b3d4325ad712bf83",
+      "crc32": "8a646b66",
+      "sha1": "c49e3b61d45cfac772008e6c7069e2fdb571ed2c"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1724526279",
+      "size": "10613",
+      "md5": "80fc5c87b95860c952ad5022776f5b80",
+      "crc32": "1e8dc92f",
+      "sha1": "147d947cda73e3c5fd396aecf83a6687b46346e4",
+      "format": "JPEG Thumb",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.272582_archive.torrent",
+      "source": "metadata",
+      "btih": "463c9b3e938f097f2bcc4b418d32268658e86c72",
+      "mtime": "1765905992",
+      "size": "54172",
+      "md5": "a5f031eeb99e43abc85922c4c2b50258",
+      "crc32": "b35cf9ea",
+      "sha1": "97d1a2e881b4698a55e47f7443cf7819fb6bc9da",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.272582_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "0fd9cc48ca24d5bd17b6f2b1c367b5ee",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.272582_meta.sqlite",
+      "source": "original",
+      "mtime": "1485412965",
+      "size": "14336",
+      "md5": "9c56e98910393441be1319beb04e04da",
+      "crc32": "d7c5df1b",
+      "sha1": "2a88bea980118072ee974aa0a79a84b9c0a1edf7",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.272582_meta.xml",
+      "source": "original",
+      "mtime": "1765905991",
+      "size": "2345",
+      "format": "Metadata",
+      "md5": "3d293e3d62d3f4e43d48f1c5e571315a",
+      "crc32": "493328cf",
+      "sha1": "7277ea72c2e81ec83b2b975b3dca37fff7ad2f74"
+    }
+  ],
+  "files_count": 20,
+  "item_last_updated": 1765905993,
+  "item_size": 5047225467,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.272582",
+    "creator": "Manmatha Nath Dutt",
+    "date": "1896",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/272582\" rel=\"ugc nofollow\">Digital Library of India Item 2015.272582</a></p><p>dc.contributor.author: Manmatha Nath Dutt<br />dc.date.accessioned: 2015-07-27T21:20:04Z<br />dc.date.available: 2015-07-27T21:20:04Z<br />dc.date.citation: 1896<br />dc.identifier.barcode: 05990010893870<br />dc.identifier.origpath: /data58/upload/0095/587<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/272582<br />dc.description.scannerno: 20003535<br />dc.description.scanningcentre: IIIT, Allahabad<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 744<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: H.c.dass Calcutta<br />dc.source.library: Bharti Bhawan Library Allahabad<br />dc.title: Shrimad Bhagwatam<br />dc.type: ptiff<br />dc.type: pdf<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "IIIT",
+    "title": "Shrimad Bhagwatam",
+    "publicdate": "2017-01-26 06:42:25",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-26 06:42:25",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.272582",
+    "identifier-ark": "ark:/13960/t84j5zz37",
+    "ppi": "600",
+    "repub_state": "4",
+    "backup_location": "ia906305_33",
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "79",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia801507.us.archive.org",
+  "uniq": 371484026,
+  "workable_servers": [
+    "ia801507.us.archive.org",
+    "ia601507.us.archive.org"
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710706.ca.archive.org",
+        "dir": "/0/items/dli.csl.7087"
+      },
+      {
+        "server": "dn760007.eu.archive.org",
+        "dir": "/0/items/dli.csl.7087"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710706.ca.archive.org",
+        "dir": "/0/items/dli.csl.7087"
+      },
+      {
+        "server": "dn760007.eu.archive.org",
+        "dir": "/0/items/dli.csl.7087"
+      }
+    ]
+  },
+  "created": 1783252400,
+  "d1": "ia902900.us.archive.org",
+  "d2": "ia802900.us.archive.org",
+  "dir": "/20/items/dli.csl.7087",
+  "files": [
+    {
+      "name": "7087.epub",
+      "source": "derivative",
+      "original": "7087_abbyy.gz",
+      "mtime": "1706317227",
+      "size": "1793450",
+      "md5": "66d3f2417ab84ca081714d6bfab998b9",
+      "crc32": "9e75442b",
+      "sha1": "a1d2d29a74fc3f8f8eab2be4ba340fe5e72371e8",
+      "format": "EPUB"
+    },
+    {
+      "name": "7087.pdf",
+      "source": "original",
+      "mtime": "1583740260",
+      "size": "18966292",
+      "md5": "4781c395ebf16bbfe29a8c8abfd3c2b3",
+      "crc32": "d7519b66",
+      "sha1": "5c6b7c8f239b28c261d3d548e1ab90fad62dc068",
+      "format": "Text PDF"
+    },
+    {
+      "name": "7087_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "7087_jp2.zip",
+      "mtime": "1583742495",
+      "size": "2087366",
+      "md5": "a4a020c66db5bd6b5535ab443ae06493",
+      "crc32": "5d5c13e7",
+      "sha1": "c3558ef4c3cddf41f5a1ebc32b64d87c89256250"
+    },
+    {
+      "name": "7087_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "7087_djvu.xml",
+      "mtime": "1583742541",
+      "size": "107207",
+      "md5": "1bffca61c6b69f62b1e2507e5d41c265",
+      "crc32": "aedeec1c",
+      "sha1": "139a37f376fdabbc24e590ef048f051ccf7459c0"
+    },
+    {
+      "name": "7087_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "7087_abbyy.gz",
+      "mtime": "1583742534",
+      "size": "1662900",
+      "md5": "6d6fc81ed58c64cf0bb347da82c9569f",
+      "crc32": "3b0dd295",
+      "sha1": "e23755f000c2b8c160f914f215389d967d7c8d05"
+    },
+    {
+      "name": "7087_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "7087.pdf",
+      "mtime": "1583740724",
+      "size": "51729917",
+      "md5": "0e750a53749d4ded615d038364a44393",
+      "crc32": "6c282600",
+      "sha1": "82f8f3692983e595d2118faf02645439e06389ab",
+      "filecount": "71"
+    },
+    {
+      "name": "7087_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "7087_djvu.xml",
+      "mtime": "1583742600",
+      "size": "21443",
+      "md5": "b5e54e10ea7dee883da53dc40e1d8299",
+      "crc32": "ba614ce3",
+      "sha1": "cc6cfdcd478971f22576caac78fe43722fa5dd1f"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1706317229",
+      "size": "12676",
+      "md5": "76060540ef8ab3329e3c74127250125b",
+      "crc32": "cfa1ed4d",
+      "sha1": "b199ef2b4b1fbe44f73a94eb58db4392f0320425",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "dli.csl.7087_archive.torrent",
+      "source": "metadata",
+      "btih": "c23ea96316b2a818fe1b8b9cfb1b388b03ed59bd",
+      "mtime": "1706317231",
+      "size": "5724",
+      "md5": "ef620bb575fe0b859881eb79c9b8aea2",
+      "crc32": "351c0576",
+      "sha1": "4206c445213a6129b8ca54677f800796b016098b",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "dli.csl.7087_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "ecc38202d7d1ab42569d5fe2ac66b4ac",
+      "summation": "md5"
+    },
+    {
+      "name": "dli.csl.7087_meta.sqlite",
+      "source": "original",
+      "mtime": "1583740290",
+      "size": "11264",
+      "format": "Metadata",
+      "md5": "8c48a6c8e46e3fb2d1b2ef762f15271d",
+      "crc32": "703fa0ae",
+      "sha1": "0bfc0dd4e611723d3648279c6125088c237f2b4d"
+    },
+    {
+      "name": "dli.csl.7087_meta.xml",
+      "source": "original",
+      "mtime": "1608745155",
+      "size": "1659",
+      "format": "Metadata",
+      "md5": "7b56b971e27f5f854847acf539220e60",
+      "crc32": "836b92c1",
+      "sha1": "f1ba943b096c5fcf7469c89233fdb765c0d981fc"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1706317231,
+  "item_size": 76399898,
+  "metadata": {
+    "identifier": "dli.csl.7087",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "creator": "sinh, Pancham",
+    "date": "1915",
+    "description": [
+      "<p>Central Secretariat Library, Government of India<br />Source URL: <a href=\"http://cslrepository.nvli.in//handle/123456789/7087\" rel=\"nofollow\">http://cslrepository.nvli.in//handle/123456789/7087</a></p>",
+      "<p>Description: Translated into English.</p>"
+    ],
+    "external-identifier": [
+      "urn:handle:http://cslrepository.nvli.in//handle/123456789/7087",
+      "urn:handle:AS-005207",
+      "urn:handle:181.45",
+      "urn:accessionnumber:AS-005207",
+      "urn:classnumber:181.45"
+    ],
+    "language": "eng",
+    "mediatype": "texts",
+    "publisher": "Apurva Krishna Bose, Allahabad",
+    "scanner": "Internet Archive Python library 1.9.0",
+    "subject": [
+      "Yoga; Ashtanga Yoga.",
+      "Central Secretariat Library"
+    ],
+    "title": "The Hatha yoga pradipika",
+    "uploader": "carl@media.org",
+    "publicdate": "2020-03-09 07:51:22",
+    "addeddate": "2020-03-09 07:51:22",
+    "identifier-access": "http://archive.org/details/dli.csl.7087",
+    "identifier-ark": "ark:/13960/t81k8049b",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0 (Extended OCR)",
+    "backup_location": "ia907107_11"
+  },
+  "server": "ia902900.us.archive.org",
+  "uniq": 1184336265,
+  "workable_servers": [
+    "ia902900.us.archive.org",
+    "ia802900.us.archive.org"
+  ]
+}

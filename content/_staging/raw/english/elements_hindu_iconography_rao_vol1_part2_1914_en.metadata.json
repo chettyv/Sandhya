@@ -1,0 +1,298 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760006.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.459193"
+      },
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.459193"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760006.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.459193"
+      },
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.459193"
+      }
+    ]
+  },
+  "created": 1783291424,
+  "d1": "ia902904.us.archive.org",
+  "d2": "ia802904.us.archive.org",
+  "dir": "/18/items/in.ernet.dli.2015.459193",
+  "files": [
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2.epub",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "EPUB",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr.html",
+      "mtime": "1775915697",
+      "size": "182211605",
+      "md5": "0b300d500ec46e4814073fb4555a716b",
+      "crc32": "fbd0ffc2",
+      "sha1": "301fe9fe5567b371dc0c584a359f493cb06b938e"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2.pdf",
+      "source": "original",
+      "mtime": "1485288574",
+      "size": "13827934",
+      "md5": "b64512c92470cbb265e08a8c5d03eb0f",
+      "crc32": "bb613f3b",
+      "sha1": "3cebabb2369880ca566d6ed43d37dd245a5fc0ba",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_jp2.zip",
+      "mtime": "1495768918",
+      "size": "4832879",
+      "md5": "7aaf54b28e47b0f7f16e4ffe98d9033f",
+      "crc32": "4be1f1af",
+      "sha1": "db596fdf65648424dc8bd846442693da9a1616d3"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_abbyy.gz",
+      "mtime": "1775915329",
+      "size": "3905021",
+      "md5": "578287e285bb865d597bdc11327ba4d7",
+      "crc32": "ff128180",
+      "sha1": "fba7bb2f6b1547e8b59b7844e80fa0b69b3fb9d5"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_cloth_detection.log",
+      "source": "derivative",
+      "format": "Cloth Cover Detection Log",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_scandata.xml",
+      "mtime": "1775916082",
+      "size": "681",
+      "md5": "0e272da54500b13926e36548e4b87f65",
+      "crc32": "39c1c5d6",
+      "sha1": "a8547b85d63940b6016cd1342da2198a681044d8"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_djvu.xml",
+      "mtime": "1775915710",
+      "size": "338922",
+      "md5": "3c5521732727cc54f59c48a293a35bd8",
+      "crc32": "a5cc3bcf",
+      "sha1": "5b8d5c52545a203802ad9cbba05f1179ea1d616a"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr.html",
+      "mtime": "1775915370",
+      "size": "4430123",
+      "md5": "61afdcddd6f55e5c30062137b63728c1",
+      "crc32": "22e0861f",
+      "sha1": "b7391134fa9b1d4d149a908bd270891fb50dc331"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_chocr.html.gz",
+      "mtime": "1775915357",
+      "size": "9043978",
+      "md5": "d0a4899f26153328a190d0f70c25d7c0",
+      "crc32": "dbec15a3",
+      "sha1": "a7d0e08e84f5ffa4815997a47bc41ea3220e89cb"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr.html",
+      "mtime": "1775915382",
+      "size": "5548",
+      "md5": "32f42b865e1c4976e47b33a730a93440",
+      "crc32": "acce7d3b",
+      "sha1": "1c22d3d2862ffc49a4bd1e431416866d497321b7"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "15616",
+      "word_conf_11_20": "4200",
+      "word_conf_21_30": "4239",
+      "word_conf_31_40": "4082",
+      "word_conf_41_50": "4158",
+      "word_conf_51_60": "4444",
+      "word_conf_61_70": "3020",
+      "word_conf_71_80": "2206",
+      "word_conf_81_90": "1280",
+      "word_conf_91_100": "7188",
+      "format": "OCR Search Text",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr.html",
+      "mtime": "1775915393",
+      "size": "143130",
+      "md5": "6f1f401e1b0d2720109503366f2d86c5",
+      "crc32": "5b38e5cb",
+      "sha1": "906cdf7a58cba245b8cdbd0ce67ff3f969d9ca48"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2.pdf",
+      "mtime": "1495764751",
+      "size": "185496000",
+      "md5": "cc6fe87ee14e3407fa76fa44fd5c7441",
+      "crc32": "aedee0f1",
+      "sha1": "f11120c785efd4e29c1394c99718adeeb8aad315",
+      "filecount": "509"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "73",
+      "format": "Page Numbers JSON",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_hocr.html",
+      "mtime": "1775916071",
+      "size": "86562",
+      "md5": "c1054371f6afee9e8ad8204e56f2fda5",
+      "crc32": "812a5cfe",
+      "sha1": "d928a6eac5aad719638ebe78f2f704cb9076ba15"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_djvu.xml",
+      "mtime": "1775916071",
+      "size": "165195",
+      "md5": "1874142c9d9a8443469bdef111a24293",
+      "crc32": "9295a269",
+      "sha1": "7aca7830eb50cfebf393e47aa0e5bd2f9b0a0a39"
+    },
+    {
+      "name": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "2015.459193.Elements-Of-Hindu-Iconography-Vol-1-Part-2_page_numbers.json",
+      "mtime": "1775917121",
+      "size": "17169314",
+      "md5": "eb6e50f6835b58ac5c972dbf22819c11",
+      "crc32": "3c2ba734",
+      "sha1": "e4a0f511fb43bb16c12d27baa1a94d4742b56fb2"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1775915289",
+      "size": "2038",
+      "md5": "ee631b44cdbd80d19d9ce92a05d7b226",
+      "crc32": "97c2b797",
+      "sha1": "ed147908f6ceac26f45f3f7267e4295bdb10a1f7",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.459193_archive.torrent",
+      "source": "metadata",
+      "btih": "6b9827b9c2745d999ea54c39aa8ff629455d716b",
+      "mtime": "1775917173",
+      "size": "20946",
+      "md5": "e8fae5f5af9b772fc87ed3107d07f195",
+      "crc32": "755210cf",
+      "sha1": "ee92292818c2dbac5f7cb21d2c0fbf1ac1ade5fd",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.459193_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "3f6aced19f580b18ea1d82c168f7a8c0",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.459193_meta.sqlite",
+      "source": "original",
+      "mtime": "1485288587",
+      "size": "17408",
+      "md5": "97192873babdeb75606105ad607e5d26",
+      "crc32": "06ddd3c8",
+      "sha1": "5c2f170380819acee7091e6497ccd07379e11df2",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.459193_meta.xml",
+      "source": "original",
+      "mtime": "1775917170",
+      "size": "2878",
+      "format": "Metadata",
+      "md5": "70fa7bda30e840e44d46bd424b660871",
+      "crc32": "137b8eca",
+      "sha1": "4889ee45f43cd5dde17a47ca9ed5d324ca5a4914"
+    }
+  ],
+  "files_count": 19,
+  "item_last_updated": 1775917174,
+  "item_size": 421700162,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.459193",
+    "creator": "Rao, T A Gopinatha",
+    "date": "1914",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/459193\" rel=\"ugc nofollow\">Digital Library of India Item 2015.459193</a></p><p>dc.contributor.author: Rao, T A Gopinatha<br />dc.date.accessioned: 2015-09-22T13:56:41Z<br />dc.date.available: 2015-09-22T13:56:41Z<br />dc.date.copyrightexpirydate: 1914<br />dc.date.digitalpublicationdate: 2013/09/21<br />dc.date.citation: 1914<br />dc.identifier.barcode: 07019990355463<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/459193<br />dc.description.scannerno: SC-1<br />dc.description.scanningcentre: North Eastern States Libraries<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 509<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: The Law Printing House, Madras<br />dc.rights: Copyright Permitted<br />dc.source.library: DIRECTORATE OF LIBRARY SERVICES, GUWAHATI, ASSAM<br />dc.subject.classification: Religion. Theology<br />dc.subject.classification: Prehistoric And Primitive Religions<br />dc.subject.keywords: Srichakara<br />dc.subject.keywords: Iconography<br />dc.subject.keywords: Hindu Religion<br />dc.subject.keywords: Surya<br />dc.subject.keywords: Buddha<br />dc.title: Elements Of Hindu Iconography Vol. 1, Part. 2<br />dc.type: Print - Paper<br />dc.type: Book<br />dc.description.diskno: NE-DLI-TR-4521<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "North",
+    "title": "Elements Of Hindu Iconography Vol. 1, Part. 2",
+    "publicdate": "2017-01-24 20:09:35",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-24 20:09:35",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.459193",
+    "identifier-ark": "ark:/13960/t31319p7d",
+    "ppi": "600",
+    "repub_state": "4",
+    "backup_location": "ia906305_27",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "73",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia902904.us.archive.org",
+  "uniq": 775421079,
+  "workable_servers": [
+    "ia902904.us.archive.org",
+    "ia802904.us.archive.org"
+  ]
+}

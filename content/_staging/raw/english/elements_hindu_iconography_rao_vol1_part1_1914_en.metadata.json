@@ -1,0 +1,181 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.gov.ignca.39172"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.gov.ignca.39172"
+      }
+    ]
+  },
+  "created": 1783291353,
+  "d1": "ia601402.us.archive.org",
+  "d2": "ia801402.us.archive.org",
+  "dir": "/21/items/in.gov.ignca.39172",
+  "files": [
+    {
+      "name": "39172.pdf",
+      "source": "original",
+      "mtime": "1509863064",
+      "size": "13721018",
+      "format": "Image Container PDF",
+      "md5": "3d37baa5d83c78371ad9c3fb9d3cbe53",
+      "crc32": "58517309",
+      "sha1": "02298098c5fd1ef519befb1d85382f2a15a2838b"
+    },
+    {
+      "name": "39172_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "39172_jp2.zip",
+      "mtime": "1509872106",
+      "size": "8511059",
+      "md5": "6e15c539071b95199e8d0a534707c3ea",
+      "crc32": "dcd665ac",
+      "sha1": "95fc2c9ba7307121fa6f0b358545edf3b986e638"
+    },
+    {
+      "name": "39172_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "39172_djvu.xml",
+      "mtime": "1509881187",
+      "size": "475771",
+      "md5": "f3729d59803f6bf1acf6cacb41ab580b",
+      "crc32": "dfaf67e3",
+      "sha1": "3ecbfaa22202784f2f702bdbacfbbb8f5dabe8da"
+    },
+    {
+      "name": "39172_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "39172_abbyy.gz",
+      "mtime": "1509872320",
+      "size": "6381085",
+      "md5": "1d2be5390f30e0f570620ddf5920861d",
+      "crc32": "a7fd4116",
+      "sha1": "a83e8602c0f0093513910114d74ceddf6f6f9ca8"
+    },
+    {
+      "name": "39172_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "39172.pdf",
+      "mtime": "1509864449",
+      "size": "270378400",
+      "md5": "a7e351b6ff96b9bcd0ed58d489957dbe",
+      "crc32": "06d8dd39",
+      "sha1": "dfa4f76ec2f3e0b4055e4e07df4cff4225d55364",
+      "filecount": "552"
+    },
+    {
+      "name": "39172_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "39172_djvu.xml",
+      "mtime": "1509881191",
+      "size": "165721",
+      "md5": "d33598f2863e044affaff5c174e7a97b",
+      "crc32": "22809876",
+      "sha1": "cec2c09b86c83763a3e153c23b20fb7df50b1f9f"
+    },
+    {
+      "name": "39172_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "39172_abbyy.gz",
+      "mtime": "1509881179",
+      "size": "70893972",
+      "md5": "e8df9137042b175aeda95e5bf833b73f",
+      "crc32": "1e0f2bed",
+      "sha1": "b2f96d0c05c7f654e66b5cbdbe6f42eb5900bcd5"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1539161195",
+      "size": "12711",
+      "md5": "45de216fe3010bfa870765dc8c552423",
+      "crc32": "ffea9ff7",
+      "sha1": "cf697f7f0ff39ebee29ccc2db0105d1c89c2f86e",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.gov.ignca.39172_archive.torrent",
+      "source": "metadata",
+      "btih": "2b43c5071c84a79981bb996a5ccb2b8c3d4d0104",
+      "mtime": "1539161198",
+      "size": "16984",
+      "md5": "a6105c9bd85c62c3314482c83b897fe3",
+      "crc32": "16e51273",
+      "sha1": "91360d69de428301c8383bc0aac563ed522d6f99",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.gov.ignca.39172_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "996a7381eb070219cad1a503958eb3ad",
+      "summation": "md5"
+    },
+    {
+      "name": "in.gov.ignca.39172_meta.sqlite",
+      "source": "original",
+      "mtime": "1509863071",
+      "size": "11264",
+      "format": "Metadata",
+      "md5": "fc9c7ea4bb862d946bcdd5bfb6e705b5",
+      "crc32": "fc864eaa",
+      "sha1": "0629f06de9d38a0eb8c43301b7032b342536bd96"
+    },
+    {
+      "name": "in.gov.ignca.39172_meta.xml",
+      "source": "original",
+      "mtime": "1765555248",
+      "size": "1682",
+      "format": "Metadata",
+      "md5": "49fac4cd062bd7496b0d7a55fde5785d",
+      "crc32": "bfb1f9c2",
+      "sha1": "1704862e9cd4b00a22fff4c2ecda32db0474224d"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1765555248,
+  "item_size": 370569667,
+  "metadata": {
+    "identifier": "in.gov.ignca.39172",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "creator": "Rao, T.A. Gopinath",
+    "date": "1914",
+    "description": "Book from the <a href=\"http://www.ignca.nic.in/\" rel=\"ugc nofollow\">Archaeological Survey of India</a><br />Central Archaeological Library, New Delhi<p>Book Number: 39172<br />Book Title: Elements of Hindu iconography vol.I; pt. I<br />Book Author: Rao, T.A. Gopinath<br />Book Language: English<br />Number of Pages: 502<br />Publisher: The Law Printing; Madras; 1914<br />Subject: Iconography, India; Inscription, India; Decorative arts, India<br />Source URL: <a href=\"http://asi.nic.in/asi_books/39172.pdf\" rel=\"ugc nofollow\">http://asi.nic.in/asi_books/39172.pdf</a><br />Year: 1914</p><p></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.6.0",
+    "subject": "Archeological Survey;Iconography, India; Inscription, India; Decorative arts, India",
+    "title": "Elements of Hindu iconography vol.I; pt. I",
+    "publicdate": "2017-11-02 22:33:46",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-11-02 22:33:46",
+    "identifier-access": "http://archive.org/details/in.gov.ignca.39172",
+    "identifier-ark": "ark:/13960/t9x12f112",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0 (Extended OCR)",
+    "repub_state": "4",
+    "backup_location": "ia906509_19"
+  },
+  "server": "ia601402.us.archive.org",
+  "uniq": 1451570945,
+  "workable_servers": [
+    "ia601402.us.archive.org",
+    "ia801402.us.archive.org"
+  ]
+}

@@ -1,0 +1,243 @@
+% Text title            : shivamahimnastotra (text)
+% File name             : shivamahi.itx
+% Category              : shiva, stotra, puShpadanta, shivarahasya, mahimna
+% Location              : doc\_shiva
+% Author                : Pushhpadanta
+% Transliterated by     : Devendraray V . Bhatt and S. V. Ganesan
+% Proofread by          : S. V. Ganesan, Ruma Dewan
+% Translated by         : Translation in shivamahimean file
+% Description-comments  : Stotra updated from text from Shivarahasya
+% Latest update         : March 23, 2004, April 12, 2024
+% Send corrections to   : sanskrit at cheerful dot c om
+%
+% This text is prepared by volunteers and is to be used for personal study 
+% and research. The file is not to be copied or reposted for promotion of 
+% any website or individuals or for commercial purpose without permission. 
+% Please help to maintain respect for volunteer spirit.
+%
+\documentstyle[11pt,multicol,itrans]{article}
+#include=ijag.inc
+#endwordvowel=.h
+\portraitwide
+\parindent=100pt                
+\let\usedvng=\Largedvng      % for 1 column     
+\pagenumbering{itrans} 
+\def\engtitle#1{\hrule\medskip\centerline{\LARGE #1}}
+\def\itxtitle#1{\medskip\centerline{\LARGEdvng #1}\medskip\hrule}
+\def\endtitles{\medskip\obeyspaceslines}
+%%
+\begin{document}
+\engtitle{.. Pushpadantavirachitam Shivamahimna Stotram ..}##
+\itxtitle{.. puShpadantavirachitaM shrIshivamahimnastotram ..}##\endtitles ##
+      || OM namaH shivAya ||
+   || atha shrI shivamahimnastotram ||
+mahimnaH pAraM te paramaviduSho yadyasadRRishI
+stutirbrahmAdInAmapi tadavasannAstvayi giraH |
+athAvAchyaH sarvaH svamatipariNAmAvadhi gRRiNan
+mamApyeSha stotre hara nirapavAdaH parikaraH || 1||
+atItaH panthAnaM tava cha mahimA vA~NmanasayoH
+atadvyAvRRittyA yaM chakitamabhidhatte shrutirapi |
+sa kasya stotavyaH katividhaguNaH kasya viShayaH
+pade tvarvAchIne patati na manaH kasya na vachaH || 2||
+madhusphItA vAchaH paramamamRRitaM nirmitavataH
+tava brahman kiM vAgapi suragurorvismayapadam |
+mama tvetAM vANIM guNakathanapuNyena bhavataH
+punAmItyarthe.asmin puramathana buddhirvyavasitA || 3||
+tavaishvaryaM yattajjagadudayarakShApralayakRRit
+trayIvastu vyastaM tisRRiShu guNabhinnAsu tanuShu |
+abhavyAnAmasminvarada ramaNIyAmaramaNIM
+vihantuM vyAkroshIM vidadhata ihaike jaDadhiyaH || 4||
+kimIhaH ki~NkAyaH sa khalu kimupAyastribhuvanaM
+kimAdhAro dhAtA sRRijati kimupAdAna iti cha |
+atarkyaishvarye tvayyanavasara duHstho hatadhiyaH
+kutarko.ayaM kAMshchinmukharayati mohAya jagatAm (jagataH) || 5||
+ajanmAno lokAH kimavayavavanto.api jagatAM
+adhiShThAtAraM kiM bhavavidhiranAdRRitya bhavati |
+anIsho vA kuryAdbhuvanajanane kaH parikaro
+yato mandAstvAM pratyamaravara saMsherata ime || 6||
+trayI sA~NkhyaM yogaH pashupatimataM vaiShNavamiti
+prabhinne prasthAne paramidamadaH pathyamiti cha |
+ruchInAM vaichitryAdRRijukuTila nAnApathajuShAM
+nRRiNAmeko gamyastvamasi payasAmarNava iva || 7||
+mahokShaH khaTvA~NgaM parashurajinaM bhasma phaNinaH
+kapAlaM chetIyattava varada tantropakaraNam |
+surAstAM tAmRRiddhiM dadhati tu bhavadbhUpraNihitAM
+na hi svAtmArAmaM viShayamRRigatRRiShNA bhramayati || 8||
+dhruvaM kashchidbrUte sakalamaparastvaM dhruvamiti
+(dhruvaM kashchitsarvaM sakalamaparastvadhruvamidaM)
+paro dhrauvyAdhrauvye jagati gadati vyastaviShaye |
+samaste.apyetasminpuramathana tairvismita iva
+stuvanjihremi tvAM na khalu nanu dhRRiShTA mukharatA || 9||
+tvAtmAnaM (tavaishvaryaM) yatnAdyadupari viri~nchirhariradhaH (viri~ncho hariradhaH)
+parichChettuM yAtAvanilamanala skandhavapuShaH | (yAtAvanilamanala) (stambhavapuShaH)
+tato bhaktishraddhAbharagurugRRiNadbhyAM girisha yat
+svayaM tasthe tAbhyAM tvayi (tava) kimanuvRRittirna phalati || 10||
+ayatnAdApAdya (ayatnAdAsAdya) tribhuvanamavairavyatikaraM
+dashAsyo yadbAhUnabhRRita raNakaNDUparavashAn |
+shiraHpadmashreNIrachitacharaNAmbhoruhabaleH
+sthirAyAstvadbhaktestripurahara visphUrjitamidam || 11||
+amuShya tvatsevAsamadhigatasAraM bhujavanaM
+balAtkailAse.api tvadadhivasatau vikramayataH |
+alabhyA pAtAle.apyalasachalitA~NguShThashirasi
+pratiShThA tvayyAsIddhruvamupachito muhyati khalaH || 12||
+yada~NghriM (yadRRiddhiM) sutrAmNo varada paramochchairapi satIM
+adhashchakre bANaH parijanavidheyastribhuvanaH (parijanavidheyatribhuvanaH) |
+na tachchitraM tasminvarivasitari tvachcharaNayoH
+na kasyApyunnatyai bhavati shirasastvayyavanatiH (shirasitvayyavanatiH) || 13||
+akANDabrahmANDakShayachakitadevAsurakRRipA
+vidheyasyA.a.asIdyastrinayana viShaM saMhRRitavataH |
+sa kalmAShaH kaNThe tava na kurute na shriyamaho
+vikAro.api shlAghyo bhuvanabhayabha~NgavyasaninaH || 14||
+asiddhArthA naiva kvachidapi sadevAsuranare
+nivartante nityaM jagati jayino yasya vishikhAH |
+sa pashyannIsha tvAmitarasurasAdhAraNamabhUt
+smaraH smartavyAtmA na hi vashiShu pathyaH paribhavaH || 15||
+mahI pAdAghAtAdvrajati sahasA saMshayapadaM
+padaM viShNorbhrAmyadbhujaparigharugNa grahagaNam |
+muhurdyaurdausthyaM yAtyanibhRRita jaTAtADita taTA
+jagadrakShAyai tvaM naTasi nanu vAmaiva vibhutA || 16||
+viyadvyApI tArAgaNaguNitaphenodgamaruchiH
+pravAho vArAM yaH pRRiShatalaghudRRiShTaH shirasi te |
+jagaddvIpAkAraM jaladhivalayaM tena kRRitamiti
+anenaivonneyaM dhRRitamahima divyaM tava vapuH || 17||
+rathaH kShoNI yantA shatadhRRitiragendro dhanuratho
+rathA~Nge chandrArkau rathacharaNapANiH shara iti |
+didhakShoste ko.ayaM tripuratRRiNamADambara vidhiH
+vidheyaiH krIDantyo na khalu paratantrAH prabhudhiyaH || 18||
+hariste sAhasraM kamalabalimAdhAya padayoH
+yadekone tasmin nijamudaharannetrakamalam |
+gato bhaktyudrekaH pariNatimasau chakra vapuShA (chakravapuShaH)
+trayANAM rakShAyai tripurahara jAgarti jagatAm || 19||
+kratau supte jAgrattvamasi phalayoge kratumatAM
+kva karmapradhvastaM phalati puruShArAdhanamRRite |
+atastvAM samprekShya kratuShu phaladAna pratibhuvaM
+shrutau shraddhAM baddhA (baddhvA) dRRiDhaparikaraH karmasu janaH || 20||
+kriyAdakSho dakShaH kratupatiradhIshastanubhRRitAM
+RRiShINAmArtvijyaM sharaNada sadasyAH suragaNAH |
+kratubhreShastvattaH (kratubhraMshastvattaH) kratuphalavidhAna vyasaninaH
+dhruvaM kartuM shraddhA vidhuramabhichArAya hi makhAH || 21||
+satAMvartmatyaktvA shrutisamadhigamyaM sahabhuvaM
+ghRRiNAmapyunmUlya svajanaviShayasneha guNitAm |
+dvijaH kRRintanpAde pitaramaparAddhaM tvayi vibho
+manuShyatvaM sadyastridasha pariNAmena vijahau || 22||
+prajAnAthaM nAtha prasabhamabhikaM svAM duhitaraM
+gataM rohidbhUtAM riramayiShumRRiShyasya vapuShA |
+dhanuShpANeryAtaM divamapi sapatrAkRRitamamuM
+trasantaM te.adyApi tyajati na mRRigavyAdharabhasaH || 23/22||
+svalAvaNyAshaMsA dhRRitadhanuShamahnAya tRRiNavat
+puraH pluShTaM dRRiShTvA puramathana puShpAyudhamapi |
+yadistraiNaM devI yamaniratadehArdha ghaTanAt
+avaiti tvAmaddhA bata varada mugdhA yuvatayaH || 24/23||
+shmashAneShvAkrIDA smarahara pishAchAH sahacharAH
+chitAbhasmAlepaH sragapi nRRikaroTIparikaraH |
+ama~NgalyaM shIlaM tava bhavatu nAmaivamakhilaM
+tathApi smartRRINAM varada paramaM ma~Ngalamasi || 25/24||
+manaH pratyakchitte savidhamavidhAyAttamarutaH
+prahRRiShyadromANaH pramadasalilotsa~NgatidRRishaH |
+yadAlokyAhlAdaM hrada iva nimajyAmRRitamaye
+dadhatyantastattvaM kimapi yaminastatkila bhavAn || 26/25||
+tvamarkastvaM somastvamasi pavanastvaM hutavahaH
+tvamApastvaM vyoma tvamu dharaNirAtmA tvamiti cha |
+parichChinnAmevaM tvayi pariNatA bibhrati giraM
+na vidmastattattvaM vayamiha tu yattvaM na bhavasi || 27/26||
+trayIM tisro vRRittIstribhuvanamatho trInapi surAn
+akArAdyairvarNaistribhirabhidadhattIrNa vikRRiti |
+turIyaM te dhAma dhvanibhiravarundhAnamaNubhiH
+samastaM(sta) vyastaM tvAM sharaNada gRRiNAtyomiti padam || 28/27||
+bhavaH sharvo rudraH pashupatirathograH sa cha mahAMs (sahamahAn)
+tathA bhImeshAnAviti yadabhidhAnAShTakamidam |
+amuShminpratyekaM pravicharati deva shrutirapi
+priyAyAsmaidhAmne praNihitanamasyo.asmi bhavate || 29/28||
+namo nediShThAya priya varadaviShThAya cha namaH
+(namo nediShThAya priyadava daviShThAya cha namaH)
+namaH kShodiShThAya smarahara mahiShThAya cha namaH |
+namo varShiShThAya trinayana yaviShThAya cha namaH
+namaH sarvasmai te tadidamatisarvAya cha namaH || 30/29||
+bahularajase vishvotpattau bhavAya namo namaH
+janasukhakRRite sattvodriktau mRRiDAya namo namaH |
+prabalatamase tatsaMhAre harAya namo namaH
+pramahasi pade nistraiguNye shivAya namo namaH || 31/30||
+kRRishapariNatichetaH kleshavashyaM kvachedaM
+kva cha tava guNasImolla~NghinI shashvadRRiddhiH |
+iti chakitamamandIkRRitya mAM bhaktirAdhAt
+varada charaNayoste vAkyapuShpopahAram || 32/31||
+vapuH prAdurbhAvAdanutamitadaM janmani purA
+purAre nakvApi kShaNamapi bhavantaM praNatavAn |
+namanmuktaH sampratyahamalanuragre.apyanatimA
+nitIsha kShantavyaM tadidamaparAdhadvayamapi || 33||
+asitagirisamaM syAtkajjalaM sindhupAtre
+surataruvarashAkhA lekhanI patramurvI |
+yadi likhati gRRihItvA shAradA sarvakAlaM
+tadapi tava guNAnAmIsha pAraM na yAti || 34/32||
+asurasuramunIndrairarchitasyendumauleH
+grathitaguNamahimno nirguNasyeshvarasya |
+sakalaguNa(gaNa)variShThaH puShpadantAbhidhAnaH
+ruchiramalaghuvRRittaM(ttaiH) stotrametachchakAra || 35/33||
+aharaharanavadyaM dhUrjaTeH stotrametat
+paThati paramabhaktyA shuddhachittaH pumAnyaH |
+sa bhavati shivaloke rudratulyastathAtra
+prachurataradhanAyuH putravAnkIrtimAMshcha || 36/34||
+maheshAnnAparo devo mahimno nAparA stutiH |
+aghorAnnAparo mantro nAsti tattvaM guroH param || 37/35||
+phalam \-
+dIkShA dAnaM tapastIrthaM j~nAnaM (snAnaM) yAgAdikAH kriyAH |
+mahimna:stavapAThasya kalAM nArhanti ShoDashIm || 36||
+kusumadashananAmA sarvagandharvarAjaH
+shashidharavaramaulerdevadevasya dAsaH |
+sa khalu nijamahimno bhraShTa evAsya roShAt
+stavanamidamakArShIddivyadivyaM mahimnaH || 37||
+suravaramunipUjyaM svargamokShaikahetuM
+paThati yadi manuShyaH prA~njalirnAnyachetAH |
+vrajati shivasamIpaM kinnaraiH stUyamAnaH
+stavanamidamamoghaM puShpadantapraNItam || 38||
+AsamAptamidaM stotraM puNyaM gandharvabhAShitam |
+anaupamyaM manohAri shivamIshvaravarNanam || 39||
+ityeShA vA~NmayI pUjA shrImachCha~NkarapAdayoH |
+arpitA tena deveshaH prIyatAM me sadAshivaH || 40||
+tava tattvaM na jAnAmi kIdRRisho.asi maheshvara |
+yA dRRisho.asi mahAdeva tAdRRishAya namo namaH || 41||
+ekakAlaM dvikAlaM vA trikAlaM yaH paThennaraH |
+sarvapApavinirmuktaH shivaloke mahIyate || 42||
+shrI puShpadantamukhapa~Nkajanirgatena
+stotreNa kilbiShahareNa harapriyeNa |
+kaNThasthitena paThitena samAhitena
+suprINito bhavati bhUtapatirmaheshaH || 43||
+
+|| iti shrIpuShpadantavirachitaM shivamahimnastotraM sampUrNam ||
+##
+Notes:
+The Core Stotram is found in ŚivaRahasyam, Ugrākhyaḥ Saptamāṃśaḥ, Adhyāyaḥ 13, ślokaḥ 241-277 (##shivarahasyam## | ##ugrAkhyaH saptamAMshaH## | ##adhyAyaH 13## | ##shlokAH 241-277##).
+Phalaśruti ##phalashruti## is found in prevalent versions of the Stotram in many publications.
+śloka-s from ŚivaRahasyam have been renumbered and given as preceding the numbering that is seen as followed in the prevalent versions.
+Core Stotram in ŚivaRahasyam has two śloka-s more than the prevalent versions; viz, śloka number 22 (##satAMvartmatyaktvA##) and 33 (##vapuH prAdurbhAvAdanutamitadaM##)
+Three additional śloka-s are found in as beginning of the Stotram in the publication ``Stotra Pāṭha Saṅgraha ##stotra pATha sa~Ngraha##''.##
+OM namaH shivAya |
+AdhInAmagadhaM divyaM vyAdhInAM mUlakRRintanam |
+upadrAvANAM dalanaM mahAdevamupAsmahe || 1||
+ahaM pApI pApakShapaNa nipUNAH sha~Nkara bhavAn |
+ahaM bhIto bhItAbhayavitaraNe te vyasanitA
+ahaM dIno dInoddharaNa vidhisajjastvaditarat
+na jAne.ahaM vaktuM kuru sakala shochye mayi kRRipAm || 2||
+janastvadapAdAbjashravaNamananadhyAnanipuNAH
+svayaM te vistIrNA na khalu karuNA teShu karaNA |
+bhave lIne dIne mayi mananahIne na karuNA
+kathaM nAtha khyAtastvamasi karuNAgAra sAgara iti || 3||
+OM mahimnaH pAraM te \.\.\.\.
+##
+The publication named ##shivarAtri pUjA mahimnastotra sahita##; and the śloka number 30 (given below) is a variation of śloka renumbered as 33 from ŚivaRahasyam. Pages after śloka 35 seem to be missing in the scan.##
+vapuShprAdurbhAvAdanutamitadaM janmani purA
+purAre ! naivAhaM kvachidapi bhavantaM praNatavAn |
+namanmuktaH sampratyatanurahamagrepyanatimAn
+mahesha ! kShantavyaM tadidamaparAdhadvayamapi || 30||
+##
+
+Encoded by Devendraray V . Bhatt and S. V. Ganesan
+Proofread by S. V. Ganesan, Ruma Dewan
+
+\medskip\hrule\obeylines
+
+Please send corrections to sanskrit@cheerful.com
+Last updated \today
+https://sanskritdocuments.org
+
+\end{document}

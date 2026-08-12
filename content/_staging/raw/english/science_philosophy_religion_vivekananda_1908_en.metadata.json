@@ -1,0 +1,265 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721809.ca.archive.org",
+        "dir": "/0/items/dli.ministry.26988"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721809.ca.archive.org",
+        "dir": "/0/items/dli.ministry.26988"
+      }
+    ]
+  },
+  "created": 1783293382,
+  "d1": "ia601808.us.archive.org",
+  "d2": "ia801808.us.archive.org",
+  "dir": "/32/items/dli.ministry.26988",
+  "files": [
+    {
+      "name": "17962.10985-.pdf",
+      "source": "original",
+      "mtime": "1615233100",
+      "size": "4939267",
+      "md5": "9f7ec49cfe3b750113a5f3f333d80501",
+      "crc32": "f183db17",
+      "sha1": "9fb2acc31848ba4081cbb2b87fa602c735a07d2f",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "17962.10985-_chocr.html.gz",
+      "source": "derivative",
+      "ocr": "tesseract 5.0.0-alpha-20201231-10-g1236",
+      "ocr_parameters": "-l eng",
+      "ocr_module_version": "0.0.12",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "1.0000",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "chOCR",
+      "original": "17962.10985-_jp2.zip",
+      "mtime": "1617383857",
+      "size": "2503181",
+      "md5": "75eca55090955df42e88c888a831e5e7",
+      "crc32": "0b751d49",
+      "sha1": "1296a374b9164c4599f2bcbc481ad6a5d855c1c1"
+    },
+    {
+      "name": "17962.10985-_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "17962.10985-_djvu.xml",
+      "mtime": "1617383985",
+      "size": "178224",
+      "md5": "440c72ecf2fa6e090a797b130b5e868b",
+      "crc32": "cd182478",
+      "sha1": "019fd278aa972f2b6ecc1974354f288918e67422"
+    },
+    {
+      "name": "17962.10985-_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "17962.10985-_hocr.html",
+      "mtime": "1617383927",
+      "size": "2555076",
+      "md5": "31138d4a950a000d57a6be60b6dbd4c8",
+      "crc32": "7f30f828",
+      "sha1": "02a675f693eb052f3a9872b0f7bed45cb2a318fc"
+    },
+    {
+      "name": "17962.10985-_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.0.0",
+      "hocr_char_to_word_hocr_version": "1.1.2",
+      "ocr_parameters": "-l eng",
+      "ocr_module_version": "0.0.12",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "1.0000",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "hOCR",
+      "original": "17962.10985-_chocr.html.gz",
+      "mtime": "1617383912",
+      "size": "4798851",
+      "md5": "f48c82b0fd5933ac56ddc079b85efe0e",
+      "crc32": "8846670c",
+      "sha1": "a8248bf98e1128356bbc57f1b0399a75e27024e6"
+    },
+    {
+      "name": "17962.10985-_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.0.0",
+      "hocr_pageindex_hocr_version": "1.1.0",
+      "format": "OCR Page Index",
+      "original": "17962.10985-_hocr.html",
+      "mtime": "1617383946",
+      "size": "2248",
+      "md5": "c0cb1179297b4ef6093a7f8d7534faf2",
+      "crc32": "e794031a",
+      "sha1": "509820a3ffa250529bf538ea9d08b4805f845f38"
+    },
+    {
+      "name": "17962.10985-_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.0.0",
+      "hocr_fts_text_hocr_version": "1.1.0",
+      "word_conf_0_10": "166",
+      "word_conf_11_20": "73",
+      "word_conf_21_30": "96",
+      "word_conf_31_40": "146",
+      "word_conf_41_50": "177",
+      "word_conf_51_60": "193",
+      "word_conf_61_70": "273",
+      "word_conf_71_80": "530",
+      "word_conf_81_90": "1366",
+      "word_conf_91_100": "28314",
+      "format": "OCR Search Text",
+      "original": "17962.10985-_hocr.html",
+      "mtime": "1617383971",
+      "size": "59005",
+      "md5": "39620ed41f98cc193e2e81b09358d6f3",
+      "crc32": "c02469e1",
+      "sha1": "b01e8cbb26aab6a985fe52f4d65a415c10d696a9"
+    },
+    {
+      "name": "17962.10985-_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "17962.10985-.pdf",
+      "mtime": "1617382579",
+      "size": "88673575",
+      "md5": "2aac027e549fd4ff373b35266640174c",
+      "crc32": "5ba5f9d7",
+      "sha1": "aecd02e91930ba95ad70c8a6f9aed1271c677684"
+    },
+    {
+      "name": "17962.10985-_page_numbers.json",
+      "source": "derivative",
+      "format": "Page Numbers JSON",
+      "original": "17962.10985-_djvu.xml",
+      "mtime": "1617384100",
+      "size": "35177",
+      "md5": "cf09bd88908d7f65bb9c8ba99d677ed2",
+      "crc32": "700da3d0",
+      "sha1": "31005b9a020cfc2231f0c9bcf8f37f901781fabe"
+    },
+    {
+      "name": "17962.10985-_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "17962.10985-_djvu.xml",
+      "mtime": "1617384100",
+      "size": "69017",
+      "md5": "636a41c39244caff1f8743c9bd14af40",
+      "crc32": "2815e375",
+      "sha1": "fe988b56f53c08dd91f609848d757de7831144ff"
+    },
+    {
+      "name": "17962.10985-_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.10",
+      "format": "Additional Text PDF",
+      "original": "17962.10985-_page_numbers.json",
+      "mtime": "1617391336",
+      "size": "9663650",
+      "md5": "a36f93d659787f2985cc29eefa0e61a8",
+      "crc32": "c5da0592",
+      "sha1": "518d3d8120bd67c3312a55ecdaa1edb65d062070"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1617391425",
+      "size": "6028",
+      "md5": "897cacdcdfc3e3bd8d816ffb7a29c816",
+      "crc32": "5ac50849",
+      "sha1": "5c2b35315eb9ca35bbad9cf1bf94cb6a6e74202e",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "dli.ministry.26988_archive.torrent",
+      "source": "metadata",
+      "btih": "84957bbb851ac9826259bc2c7cf588b1972234f7",
+      "mtime": "1617391434",
+      "size": "7968",
+      "md5": "9974c095e97cd2a4b02aaf7747309ed9",
+      "crc32": "10f43232",
+      "sha1": "5346d1a9d5be1f38831945308ae6c96219ce362d",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "dli.ministry.26988_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "ed0d837d3aad56914b26bcb63db72fc0",
+      "summation": "md5"
+    },
+    {
+      "name": "dli.ministry.26988_meta.sqlite",
+      "source": "original",
+      "mtime": "1615233133",
+      "size": "9216",
+      "md5": "cafee9c93ab0576bd57dcbdb9f0d7538",
+      "crc32": "6c9787b2",
+      "sha1": "7836791a72ca9965ce030903b085425310b0126f",
+      "format": "Metadata"
+    },
+    {
+      "name": "dli.ministry.26988_meta.xml",
+      "source": "original",
+      "mtime": "1617391376",
+      "size": "1632",
+      "md5": "3a538c74e1744b7d5611195a157d42f8",
+      "crc32": "5eb64e18",
+      "sha1": "dbe406e8a179b886d3096533ed627ab18c60e812",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 16,
+  "item_last_updated": 1617391434,
+  "item_size": 113502115,
+  "metadata": {
+    "identifier": "dli.ministry.26988",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "creator": "Vivekananda",
+    "date": "1908",
+    "identifier-bib": [
+      "Accession Number: IMP2045",
+      "Library: National Library of India, Kolkata"
+    ],
+    "language": "eng",
+    "mediatype": "texts",
+    "publisher": "Udbodhan Office, Calcutta",
+    "scanner": "Internet Archive Python library 1.9.9",
+    "subject": "MinistryOfCulture",
+    "title": "The science and philosophy of religion: a comparative study of Sankhya, Vedanta and other systems of thought",
+    "uploader": "carl@media.org",
+    "publicdate": "2021-03-08 19:52:02",
+    "addeddate": "2021-03-08 19:52:02",
+    "original-source": "http://indianculture.gov.in/rarebooks/science-and-philosophy-religion-comparative-study-sankhya-vedanta-and-other-systems",
+    "identifier-access": "http://archive.org/details/dli.ministry.26988",
+    "identifier-ark": "ark:/13960/t3qw40x2p",
+    "ppi": "600",
+    "ocr": "tesseract 5.0.0-alpha-20201231-10-g1236",
+    "ocr_parameters": "-l eng",
+    "ocr_module_version": "0.0.12",
+    "ocr_detected_script": "Latin",
+    "ocr_detected_script_conf": "1.0000",
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "94.33",
+    "pdf_module_version": "0.0.10"
+  },
+  "server": "ia801808.us.archive.org",
+  "uniq": 1760686845,
+  "workable_servers": [
+    "ia801808.us.archive.org",
+    "ia601808.us.archive.org"
+  ]
+}

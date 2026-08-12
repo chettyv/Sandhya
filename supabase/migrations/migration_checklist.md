@@ -9,6 +9,7 @@ Run through this before applying any migration to the **production** Supabase pr
 - [ ] Reviewed existing migrations in `supabase/migrations/` to confirm current schema state
 - [ ] Column names and types match the build reference (`dharma_daily_build_reference.docx`)
 - [ ] Checked whether any Edge Function, TanStack Query call, or client query references the columns being changed
+- [ ] Checked whether the change affects synced journey history, notifications, billing, or account deletion flows
 
 ---
 

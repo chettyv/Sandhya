@@ -1,0 +1,27 @@
+{
+  "staged_at": "2026-08-06T00:00:00Z",
+  "language_scope": [
+    "en"
+  ],
+  "policy": "review-first staging; no source is approved for production retrieval by this script",
+  "sources": [
+    {
+      "work_id": "devi_mahatmya_markandeya_dutt_1896_en",
+      "target_path": "content\\_staging\\raw\\english\\devi_mahatmya_markandeya_dutt_1896_en.txt",
+      "source_lines": [
+        14648,
+        17062
+      ]
+    },
+    {
+      "work_id": "lalita_sahasranama_gherwal_1930_en",
+      "target_path": "content\\_staging\\raw\\english\\sacred_texts\\lalita_sahasranama_gherwal_1930_en.jsonl",
+      "pages": 2
+    },
+    {
+      "work_id": "aditya_hridayam_wikisource_en",
+      "target_path": "content\\_staging\\raw\\english\\aditya_hridayam_wikisource_en.html",
+      "pages": 1
+    }
+  ]
+}

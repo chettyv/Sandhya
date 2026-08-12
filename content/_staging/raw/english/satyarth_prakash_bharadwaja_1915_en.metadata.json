@@ -1,0 +1,276 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760102.eu.archive.org",
+        "dir": "/0/items/dli.ministry.16408"
+      },
+      {
+        "server": "dn790007.ca.archive.org",
+        "dir": "/0/items/dli.ministry.16408"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760102.eu.archive.org",
+        "dir": "/0/items/dli.ministry.16408"
+      },
+      {
+        "server": "dn790007.ca.archive.org",
+        "dir": "/0/items/dli.ministry.16408"
+      }
+    ]
+  },
+  "created": 1783292654,
+  "d1": "ia601801.us.archive.org",
+  "d2": "ia801801.us.archive.org",
+  "dir": "/27/items/dli.ministry.16408",
+  "files": [
+    {
+      "name": "E01584_Light_of_truth_.pdf",
+      "source": "original",
+      "mtime": "1615010349",
+      "size": "6970527",
+      "md5": "bb18aeeeb96a87115f9008f3e598a989",
+      "crc32": "5871b8ed",
+      "sha1": "79b39bbb0cc6145112857f268afdb23f26760a88",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "E01584_Light_of_truth__chocr.html.gz",
+      "source": "derivative",
+      "ocr": "tesseract 5.0.0-alpha-20201231-10-g1236",
+      "ocr_parameters": "-l eng",
+      "ocr_module_version": "0.0.12",
+      "ocr_detected_script": "Cyrillic",
+      "ocr_detected_script_conf": "0.6818",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "chOCR",
+      "original": "E01584_Light_of_truth__jp2.zip",
+      "mtime": "1617607525",
+      "size": "9288321",
+      "md5": "7d3a109e5cb25f103e8ac61c96785c79",
+      "crc32": "c5628f14",
+      "sha1": "ac53af48f87f96e3d65ee48294916d46fee7fb5b"
+    },
+    {
+      "name": "E01584_Light_of_truth__djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "E01584_Light_of_truth__djvu.xml",
+      "mtime": "1617608357",
+      "size": "719547",
+      "md5": "5ed9b5925902ce9fecd9d47f14665d9a",
+      "crc32": "3a53621c",
+      "sha1": "c30826d00602bed06c1884832fd7c72d2e4cf74f"
+    },
+    {
+      "name": "E01584_Light_of_truth__djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "E01584_Light_of_truth__hocr.html",
+      "mtime": "1617607718",
+      "size": "9355915",
+      "md5": "20ea4bbedc04d971312253340f5c3c27",
+      "crc32": "bdc4aeb2",
+      "sha1": "4f07ce3551b4b0054830545acf0aa6cc6ed6ff3a"
+    },
+    {
+      "name": "E01584_Light_of_truth__hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.0.0",
+      "hocr_char_to_word_hocr_version": "1.1.2",
+      "ocr_parameters": "-l eng",
+      "ocr_module_version": "0.0.12",
+      "ocr_detected_script": "Cyrillic",
+      "ocr_detected_script_conf": "0.6818",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "hOCR",
+      "original": "E01584_Light_of_truth__chocr.html.gz",
+      "mtime": "1617607677",
+      "size": "17655551",
+      "md5": "01350a30f47b4238eda5f1bb5f53511a",
+      "crc32": "cd93d346",
+      "sha1": "ea45b6ec02a9d49023d7cc5a0454237bfa9b25e0"
+    },
+    {
+      "name": "E01584_Light_of_truth__hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.0.0",
+      "hocr_pageindex_hocr_version": "1.1.0",
+      "format": "OCR Page Index",
+      "original": "E01584_Light_of_truth__hocr.html",
+      "mtime": "1617607788",
+      "size": "4235",
+      "md5": "08f02d6624eed0aa2e421aeb94a64eca",
+      "crc32": "5de21fc5",
+      "sha1": "e235183b53693975368ddfc0457d73bfd01cab42"
+    },
+    {
+      "name": "E01584_Light_of_truth__hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.1.0",
+      "hocr_fts_text_hocr_version": "1.1.0",
+      "word_conf_0_10": "4255",
+      "word_conf_11_20": "1476",
+      "word_conf_21_30": "1986",
+      "word_conf_31_40": "2349",
+      "word_conf_41_50": "2465",
+      "word_conf_51_60": "2557",
+      "word_conf_61_70": "2740",
+      "word_conf_71_80": "4093",
+      "word_conf_81_90": "9398",
+      "word_conf_91_100": "90852",
+      "format": "OCR Search Text",
+      "original": "E01584_Light_of_truth__hocr.html",
+      "mtime": "1617608318",
+      "size": "276459",
+      "md5": "4370a07592fff94c54744da9b5ffb579",
+      "crc32": "efca06aa",
+      "sha1": "b36f047eb352c8212c2451f8a4f1c94c57efd3fe"
+    },
+    {
+      "name": "E01584_Light_of_truth__jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "E01584_Light_of_truth_.pdf",
+      "mtime": "1617605656",
+      "size": "61393657",
+      "md5": "8d58b4b9974849eb5ce4f5095d5280a1",
+      "crc32": "afce4f2c",
+      "sha1": "90889355bece3ae71fc7c3d49d38d33de4bbe6fd"
+    },
+    {
+      "name": "E01584_Light_of_truth__page_numbers.json",
+      "source": "derivative",
+      "format": "Page Numbers JSON",
+      "original": "E01584_Light_of_truth__djvu.xml",
+      "mtime": "1617608664",
+      "size": "65980",
+      "md5": "17c30848f352c9711e338b7d6d12f819",
+      "crc32": "811066b9",
+      "sha1": "6747dc3905a61c212c0eef02deb09200a886c111"
+    },
+    {
+      "name": "E01584_Light_of_truth__scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "E01584_Light_of_truth__djvu.xml",
+      "mtime": "1617608666",
+      "size": "117809",
+      "md5": "b6df8c12cdf1fa02d9e4176e43e0c4c2",
+      "crc32": "ef558689",
+      "sha1": "9d2fd1db9d4a849ab487021c317d3f22d74dbc00"
+    },
+    {
+      "name": "E01584_Light_of_truth__text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.10",
+      "format": "Additional Text PDF",
+      "original": "E01584_Light_of_truth__page_numbers.json",
+      "mtime": "1617610202",
+      "size": "8426380",
+      "md5": "51f766f446b89883f5fee233ddb80e62",
+      "crc32": "180332c7",
+      "sha1": "5d3e3cb6912a54d64af07ab6a6641b6421f13d16"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1617610645",
+      "size": "15980",
+      "md5": "a5312afab9b9afacf6333a4f0342ce8b",
+      "crc32": "ff8c3657",
+      "sha1": "7e12f9f4e1d6301e6c45b75918e1dda687bc13a5",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "dli.ministry.16408_archive.torrent",
+      "source": "metadata",
+      "btih": "e02027a2e7d54d689d8fc24c19933b0290633289",
+      "mtime": "1617610653",
+      "size": "8126",
+      "md5": "71f55c3d3ed12b420d57158b59d8f199",
+      "crc32": "97e7fb45",
+      "sha1": "465b00a04a3c1fb84652b6604771c7538c780119",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "dli.ministry.16408_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "b3824a5de84bc9c0cf4958781c6c1bae",
+      "summation": "md5"
+    },
+    {
+      "name": "dli.ministry.16408_meta.sqlite",
+      "source": "original",
+      "mtime": "1615010368",
+      "size": "11264",
+      "md5": "5622cae890c2b345203010c426359f99",
+      "crc32": "37ce42a6",
+      "sha1": "db404c91455b9394851755e98d9a287b9e760206",
+      "format": "Metadata"
+    },
+    {
+      "name": "dli.ministry.16408_meta.xml",
+      "source": "original",
+      "mtime": "1617610494",
+      "size": "1745",
+      "md5": "da6b83d2afc8c134ccec6dc4fe6f80d1",
+      "crc32": "f684bb9e",
+      "sha1": "5fc8d3a2d9e6a9f7daea6ce3363ed3beb2e7f291",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 16,
+  "item_last_updated": 1617610654,
+  "item_size": 114311496,
+  "metadata": {
+    "identifier": "dli.ministry.16408",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "creator": "Bharadwaja, Chiranjiva",
+    "date": "1915",
+    "identifier-bib": [
+      "Accession Number: E01584",
+      "Library: Salar Jung Museum, Hyderabad"
+    ],
+    "language": "eng",
+    "mediatype": "texts",
+    "publisher": "The Arya Pratinidhi sabha, Agra",
+    "scanner": "Internet Archive Python library 1.9.9",
+    "subject": [
+      "Religion:Theology; Religions of the Indian subcontinent; Hinduism narrowly",
+      "MinistryOfCulture"
+    ],
+    "title": "Light of truth : an English translation of the Satyarth Prakash : the well-known work of Swami Dayanada Saraswati of",
+    "uploader": "carl@media.org",
+    "publicdate": "2021-03-06 05:59:21",
+    "addeddate": "2021-03-06 05:59:21",
+    "original-source": "http://indianculture.gov.in/light-truth-english-translation-satyarth-prakash-well-known-work-swami-dayanada-saraswati",
+    "identifier-access": "http://archive.org/details/dli.ministry.16408",
+    "identifier-ark": "ark:/13960/t22c9hn0w",
+    "ppi": "150",
+    "ocr": "tesseract 5.0.0-alpha-20201231-10-g1236",
+    "ocr_parameters": "-l eng",
+    "ocr_module_version": "0.0.12",
+    "ocr_detected_script": "Cyrillic",
+    "ocr_detected_script_conf": "0.6818",
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "39.09",
+    "pdf_module_version": "0.0.10"
+  },
+  "server": "ia801801.us.archive.org",
+  "uniq": 758041890,
+  "workable_servers": [
+    "ia801801.us.archive.org",
+    "ia601801.us.archive.org"
+  ]
+}

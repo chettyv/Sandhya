@@ -1,0 +1,250 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760008.eu.archive.org",
+        "dir": "/0/items/cu31924022925402"
+      },
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/cu31924022925402"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/cu31924022925402"
+      }
+    ]
+  },
+  "created": 1783292670,
+  "d1": "ia600606.us.archive.org",
+  "d2": "ia800606.us.archive.org",
+  "dir": "/19/items/cu31924022925402",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1652754614",
+      "size": "17478",
+      "md5": "2c0b088d5d123ab44f2a546304de04a2",
+      "crc32": "37635853",
+      "sha1": "3b832a91238c5e426c0244d54a6d2561fb7c0f30",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "cu31924022925402.djvu",
+      "source": "derivative",
+      "format": "DjVu",
+      "original": "cu31924022925402_djvu.xml",
+      "md5": "035cac3a9eeacf8ac5c22669c1bc5a7e",
+      "mtime": "1257795312",
+      "size": "2565321",
+      "crc32": "d75b0aeb",
+      "sha1": "43241b6ebd26159fca1cafa2eee36f5b0ffe1a36"
+    },
+    {
+      "name": "cu31924022925402.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "cu31924022925402_jp2.zip",
+      "md5": "12bc15f996a61b6f57defc6093b07086",
+      "mtime": "1257791220",
+      "size": "143913",
+      "crc32": "f6ef32f4",
+      "sha1": "8ddb5539e46d6f974cbc060bd3c7822ef67de4f1"
+    },
+    {
+      "name": "cu31924022925402.pdf",
+      "source": "derivative",
+      "format": "Text PDF",
+      "original": "cu31924022925402_djvu.xml",
+      "md5": "bacdc6ee0162c05731c2c1f5a6c4cf1f",
+      "mtime": "1257795789",
+      "size": "4115105",
+      "crc32": "e2257e18",
+      "sha1": "0032b7f8c4708f8fe9b0fe61d7113b517c4d7655"
+    },
+    {
+      "name": "cu31924022925402_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "cu31924022925402_jp2.zip",
+      "md5": "d41496179eddeb6ac3a42d0ef7aea078",
+      "mtime": "1257794902",
+      "size": "3126830",
+      "crc32": "ea288df",
+      "sha1": "d652bcf373b02c85d3b51cb763f1dca4b28f066e"
+    },
+    {
+      "name": "cu31924022925402_archive.torrent",
+      "source": "metadata",
+      "btih": "747fa1aa0cfcc4c55cf303fed920ff4406b30460",
+      "mtime": "1652754619",
+      "size": "9439",
+      "md5": "aeb0efb0cc6420bf665b3eb54e24e6da",
+      "crc32": "bae23c0b",
+      "sha1": "032c6b0e684972318d1dc80d6433450a7c2fb9f9",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "cu31924022925402_cubook.zip",
+      "source": "original",
+      "format": "Raw Cornell Book Zip",
+      "md5": "0a13d49973e4b3060ccd47f1ea3c16fb",
+      "mtime": "1228326692",
+      "size": "73836348",
+      "crc32": "07e389ab",
+      "sha1": "5e779bf1cef289c9569f83a388a853aac468a0a8",
+      "filecount": "960"
+    },
+    {
+      "name": "cu31924022925402_dc.xml",
+      "source": "original",
+      "md5": "16772290834883db3b308575d96947dd",
+      "format": "Dublin Core",
+      "mtime": "1652754608",
+      "size": "877",
+      "crc32": "14a7ceef",
+      "sha1": "f73b86996660fa3628bf2544fd6aef08904dacfd"
+    },
+    {
+      "name": "cu31924022925402_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "cu31924022925402.djvu",
+      "md5": "37271dde62573f9205fbb7e13632e092",
+      "mtime": "1257795799",
+      "size": "204931",
+      "crc32": "97578e17",
+      "sha1": "e7685ba07e27446b1308df5d29b03273bc976bf4"
+    },
+    {
+      "name": "cu31924022925402_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "cu31924022925402_abbyy.gz",
+      "md5": "01f3a0b1e10b3bb163e91317bbf6d3af",
+      "mtime": "1257794998",
+      "size": "1927713",
+      "crc32": "8d6ffd8",
+      "sha1": "f9e540fba68dd3a1d57fd7234d26d01b16e62875"
+    },
+    {
+      "name": "cu31924022925402_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "31917f9d5bb394de9e77ba474e6f5462",
+      "summation": "md5"
+    },
+    {
+      "name": "cu31924022925402_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "cu31924022925402_cubook.zip",
+      "md5": "ced46158aa14e1a82667bbf6544272f2",
+      "mtime": "1257791204",
+      "size": "66755487",
+      "crc32": "66035b19",
+      "sha1": "5c23613f93e95482fe6c54457116474b5178bbe3",
+      "filecount": "236"
+    },
+    {
+      "name": "cu31924022925402_marc.xml",
+      "source": "original",
+      "md5": "28b26ab5be18d4fe9d718c23180b3ea1",
+      "format": "MARC",
+      "mtime": "1201127606",
+      "size": "3265",
+      "crc32": "4c47e55d",
+      "sha1": "fd5814ea9c246968389171021e37138481b230f3"
+    },
+    {
+      "name": "cu31924022925402_meta.mrc",
+      "source": "original",
+      "md5": "2ae509a57ea4a2d63b377cd77797f6df",
+      "format": "MARC Binary",
+      "mtime": "1201127604",
+      "size": "824",
+      "crc32": "4f0fb5e",
+      "sha1": "8cfe762250ab444c6fe006a48d0c4a3246ccf996"
+    },
+    {
+      "name": "cu31924022925402_meta.xml",
+      "source": "original",
+      "format": "Metadata",
+      "mtime": "1780047134",
+      "size": "1997",
+      "md5": "462a4cf07ef56131af13a83f91874780",
+      "crc32": "9f118564",
+      "sha1": "3d29cafbc76a79561408b2b8b7842b9fa31f3c10"
+    },
+    {
+      "name": "cu31924022925402_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "cu31924022925402_djvu.xml",
+      "md5": "20d92e32a4bb38feface10a83858893e",
+      "mtime": "1257795011",
+      "size": "83685",
+      "crc32": "7dcf968e",
+      "sha1": "24c081c1b996febefc3ab8f94eac82172f0e77a5"
+    }
+  ],
+  "files_count": 16,
+  "item_last_updated": 1780047135,
+  "item_size": 152793213,
+  "metadata": {
+    "mediatype": "texts",
+    "collection": [
+      "cornell",
+      "americana"
+    ],
+    "title": "The Hindu system of moral science",
+    "identifier": "cu31924022925402",
+    "uploader": "hank@archive.org",
+    "addeddate": "2009-10-31 18:53:40",
+    "identifier-access": "http://www.archive.org/details/cu31924022925402",
+    "identifier-ark": "ark:/13960/t01z4s145",
+    "sponsor": "MSN",
+    "contributor": "Cornell University Library",
+    "description": [
+      "The metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and the derived formats (OCR results, PDF etc.). See also the <a href=\"http://www.archive.org/about/faqs.php#140\" rel=\"ugc nofollow\">What is the directory structure for the texts?</a> FAQ for information about file content and naming conventions.",
+      "iv, ii, 216 p. ; 20 cm"
+    ],
+    "camera": "EOS-1D",
+    "lcamid": "337562",
+    "rcamid": "337626",
+    "operator": "ben b",
+    "scanner": "Kirtas APT 2400",
+    "ppi": "300",
+    "creator": "Kesari Lal A Sarkar",
+    "publisher": "Calcutta : S.G. Majumdar",
+    "date": "1912",
+    "subject": [
+      "Hinduism",
+      "Philosophy, Hindu",
+      "Cults, Hindu"
+    ],
+    "language": "eng",
+    "imagecount": "236",
+    "bookplateleaf": "0002",
+    "ocr": "ABBYY FineReader 8.0",
+    "scandate": "20080123225046",
+    "foldoutcount": "0",
+    "repub_state": "4",
+    "publicdate": "2009-11-09 19:43:33",
+    "filesxml": "Sun Mar 7 0:28:50 UTC 2010",
+    "backup_location": "ia903604_11",
+    "openlibrary_edition": "OL24150904M",
+    "openlibrary_work": "OL18107430W",
+    "oclc-id": "64000444"
+  },
+  "server": "ia600606.us.archive.org",
+  "uniq": 404858285,
+  "workable_servers": [
+    "ia600606.us.archive.org",
+    "ia800606.us.archive.org"
+  ]
+}

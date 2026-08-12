@@ -1,0 +1,148 @@
+% Text title            : shrii hanumaana chaaliisaa
+% File name             : chaalisa.itx
+% Category              : chAlisA, hanumaana, hindi
+% Location              : doc\_z\_otherlang\_hindi
+% Transliterated by     : NA
+% Proofread by          : NA
+% Description-comments  : Devotional hymn to Hanuman, of 40 verses
+% Latest update         : March 13, 2015
+% Send corrections to   : sanskrit at cheerful dot c om
+%
+% This text is prepared by volunteers and is to be used for personal study 
+% and research. The file is not to be copied or reposted for promotion of 
+% any website or individuals or for commercial purpose without permission. 
+% Please help to maintain respect for volunteer spirit.
+%
+\documentstyle[11pt,multicol,itrans]{article}
+#include=ijag.inc
+#endwordvowel=.h
+\portraitwide
+\parindent=100pt                
+\let\usedvng=\Largedvng      % for 1 column     
+\pagenumbering{itrans} 
+\def\engtitle#1{\hrule\medskip\centerline{\LARGE #1}}
+\def\itxtitle#1{\medskip\centerline{\LARGEdvng #1}\medskip\hrule}
+\def\endtitles{\medskip\obeyspaceslines}
+%%
+\begin{document}
+\engtitle{.. Hanumana Chalisa ..}##
+\itxtitle{.. hanumAna chAlIsA ..}##\endtitles ##
+dohA
+\ \ \  shrIguru charana saroja raja
+nija manu mukuru sudhAri .
+\ \ \  barana_U.N raghubara bimala jasu
+jo dAyaku phala chAri .. 
+buddhihIna tanu jAnike
+sumirau.n pavanakumAra .
+bala buddhi bidyA dehu mohi.n
+harahu kalesa bikAra .. 
+chaupAI
+jaya hanumAna GYAna guna sAgara .
+jaya kapIsa tihu.N loka ujAgara .. 
+rAma dUta atulita bala dhAmA .
+a.njaniputra pavanasuta nAmA .. 
+mahAbIra bikrama bajara.ngI .
+kumati nivAra sumati ke sa.ngI .. 
+ka.nchana barana birAja subesA .
+kAnana ku.nDala ku.nchita kesA .. 
+hAtha bajra au dhvajA birAjai .
+kA.Ndhe mU.Nja janeU sAjai .. 
+sa.nkara suvana kesarIna.ndana .
+teja pratApa mahA jaga ba.ndana .. 
+vidyAvAna gunI ati chAtura .
+rAma kAja karibe ko Atura .. 
+prabhu charitra sunibe ko rasiyA .
+rAma lakhana sItA mana basiyA .. 
+sUkshma rUpa dhari siyahi.n dikhAvA .
+bikaTa rUpa dhari la.nka jarAvA .. 
+bhIma rUpa dhari asura sa.NhAre .
+rAmacha.ndra ke kAja sa.NvAre .. 
+lAya sajIvana lakhana jiyAye .
+shrIraghubIra harashhi ura lAye .. 
+raghupati kInhI bahuta ba.DAI .
+tuma mama priya bharatahi sama bhAI .. 
+sahasa badana tumharo jasa gAvai.n .
+asa kahi shrIpati ka.nTha lagAvai.n .. 
+sanakAdika brahmAdi munIsA .
+nArada sArada sahita ahIsA .. 
+jama kubera digapAla jahA.N te .
+kabi kobida kahi sake kahA.N te .. 
+tuma upakAra sugrIvahi.n kInhA .
+rAma milAya rAja pada dInhA .. 
+tumharo ma.ntra bibhIshhana mAnA .
+la.nkesvara bhae saba jaga jAnA .. 
+juga sahasra jojana para bhAnU .
+lIlyo tAhi madhura phala jAnU .. 
+prabhu mudrikA meli mukha mAhI.n .
+jaladhi lA.Nghi gaye acharaja nAhI.n .. 
+durgama kAja jagata ke jete .
+sugama anugraha tumhare tete .. 
+rAma du{A}re tuma rakhavAre .
+hota na AGYA binu paisAre .. 
+saba sukha lahai tumhArI saranA .
+tuma rachchhaka kAhU ko Dara nA .. 
+Apana teja saMhAro Apai .
+tIno.n loka hA.Nka te.n kA.Npai .. 
+bhUta pisAcha nikaTa nahi.n Avai .
+mahAbIra jaba nAma sunAvai .. 
+nAsai roga harai saba pIrA .
+japata nira.ntara hanumata bIrA .. 
+sa.nkaTa te.n hanumAna chhu.DAvai .
+mana krama bachana dhyAna jo lAvai .. 
+saba para rAma tapasvI rAjA .
+tina ke kAja sakala tuma sAjA .. 
+aura manoratha jo koI lAvai .
+soI amita jIvana phala pAvai .. 
+chAro.n juga paratApa tumhArA .
+hai parasiddha jagata ujiyArA .. 
+sAdhu sa.nta ke tuma rakhavAre .
+asura nika.ndana rAma dulAre .. 
+ashhTa siddhi nau nidhi ke dAtA .
+asa bara dIna jAnakI mAtA .. 
+rAma rasAyana tumhare pAsA .
+sadA raho raghupati ke dAsA .. 
+tumhare bhajana rAma ko pAvai .
+janama janama ke dukha bisarAvai .. 
+a.nta kAla raghubara pura jAI .
+jahA.N janma haribhakta kahAI .. 
+aura devatA chitta na dhara{I} .
+hanumata seI sarba sukha kara{I} .. 
+sa.nkaTa kaTai miTai saba pIrA .. 
+jo sumirai hanumata balabIrA .. 
+jai jai jai hanumAna gosAI.n .
+kR^ipA karahu guru deva kI nAI.n .. 
+jo sata bAra pATha kara koI .
+chhUTahi ba.ndi mahA sukha hoI .. 
+jo yaha pa.Dhai hanumAna chalIsA .
+hoya siddhi sAkhI gaurIsA .. 
+tulasIdAsa sadA hari cherA .
+kIjai nAtha hR^idaya ma.Nha DerA .. 
+\centerline{\largedvng dohA}
+pavanatanaya sa.nkaTa harana
+ma.ngala mUrati rUpa .
+rAma lakhana sItA sahita
+hR^idaya basahu sura bhUpa .. 
+\centerline{\largedvng AratI}
+ma.ngala mUratI mAruta na.ndana
+sakala ama.ngala mUla nika.ndana
+pavanatanaya sa.ntana hitakArI
+hR^idaya birAjata avadha bihArI
+mAtu pitA gurU gaNapati sArada
+shiva sameta shaMbhU shuka nArada
+charana kamala bindhau saba kAhu
+dehu rAmapada nehu nibAhu
+jai jai jai hanumAna gosAI.n
+kR^ipA karahu guru deva kI nAI.n
+ba.ndhana rAma lakhana vaidehI
+yaha tulasI ke parama sanehI
+
+siyAvara rAmacha.ndrajI kI jaya .. 
+##
+
+\medskip\hrule\obeylines
+
+Please send corrections to sanskrit@cheerful.com
+Last updated \today
+https://sanskritdocuments.org
+
+\end{document}

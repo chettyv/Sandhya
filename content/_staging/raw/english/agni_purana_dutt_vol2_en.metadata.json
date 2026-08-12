@@ -1,0 +1,199 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.33600"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.33600"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.33600"
+      },
+      {
+        "server": "dn790006.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.33600"
+      }
+    ]
+  },
+  "created": 1783203599,
+  "d1": "ia601505.us.archive.org",
+  "d2": "ia801505.us.archive.org",
+  "dir": "/2/items/in.ernet.dli.2015.33600",
+  "files": [
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.33600.Agni-Puranam--Vol-2_jp2.zip",
+      "mtime": "1491878635",
+      "size": "211303",
+      "md5": "d4056e245b4b56d663f43b78b605c8f5",
+      "crc32": "a6e94332",
+      "sha1": "2d1278ac22cfea2759fa526939f377ba03c46d2f"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2.pdf",
+      "source": "original",
+      "mtime": "1484856051",
+      "size": "21821602",
+      "md5": "f49a9e98be25206f72a8e4c53a268706",
+      "crc32": "56106f37",
+      "sha1": "d1ff4894bb56d3cde6434c9ecf18e24b81975c24",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.33600.Agni-Puranam--Vol-2_jp2.zip",
+      "mtime": "1491883374",
+      "size": "11860066",
+      "md5": "842efd2f85a50e9cbd28b55605c5f3d7",
+      "crc32": "9169ce13",
+      "sha1": "0e9f11d7249e86f71321bdf205da138f1a92dd96"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.33600.Agni-Puranam--Vol-2_djvu.xml",
+      "mtime": "1491885047",
+      "size": "710094",
+      "md5": "b43f6ccb8f5935365816be62adf6294c",
+      "crc32": "88af153f",
+      "sha1": "901868ab94d2adc7ab8518987b10298e8df4b260"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.33600.Agni-Puranam--Vol-2_abbyy.gz",
+      "mtime": "1491883680",
+      "size": "6709243",
+      "md5": "f7998e9bbac4170c32693c01c7db7621",
+      "crc32": "87b9942f",
+      "sha1": "132414bc40fc9e0e430c7a3ed6729c1bede4edad"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.33600.Agni-Puranam--Vol-2.pdf",
+      "mtime": "1491878587",
+      "size": "339197872",
+      "md5": "ad886fec70d9c0b704ef70d7f6e72c2b",
+      "crc32": "ae3ad264",
+      "sha1": "7c68ee3555246a6c60c6c4eb3ce1200a32f13d6a"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.33600.Agni-Puranam--Vol-2_djvu.xml",
+      "mtime": "1491885052",
+      "size": "112026",
+      "md5": "791e31e87b21fdc298e0c451719496ba",
+      "crc32": "e3bf28e3",
+      "sha1": "124ddfcdffbe10e36ab49d50f79a2963e9d4709a"
+    },
+    {
+      "name": "2015.33600.Agni-Puranam--Vol-2_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.33600.Agni-Puranam--Vol-2_djvu.xml",
+      "mtime": "1491885042",
+      "size": "24505637",
+      "md5": "fed3aec434e47f8601baad0ed7e137af",
+      "crc32": "a2da11e0",
+      "sha1": "a31ed0adedf459c179ce498385828968f2f22ca8"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1537628747",
+      "size": "6122",
+      "md5": "9ead4ca89c87e315883d68be2c994c51",
+      "crc32": "fc39357c",
+      "sha1": "f8d18a07f17cf8a72d8e1c289d8d050331883baa",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.33600_archive.torrent",
+      "source": "metadata",
+      "btih": "3a1e9030cedaaac4c9521bd002d6facbdd05c879",
+      "mtime": "1563268297",
+      "size": "18711",
+      "md5": "d60b397940c0b6c1710831c26e56858a",
+      "crc32": "4c1b7192",
+      "sha1": "f36d925c3eb5c702f3994d26fb84e056da630f0a",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.33600_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "aea12ee102d32c0f858468dd3f79d9c8",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.33600_meta.sqlite",
+      "source": "original",
+      "mtime": "1484856066",
+      "size": "15360",
+      "md5": "0bcef8c5fab3ff8edd10032292acd19c",
+      "crc32": "33c11d9a",
+      "sha1": "e952a2eb7257048336c96bfafaf9b0369e9de9f1",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.33600_meta.xml",
+      "source": "original",
+      "mtime": "1563268293",
+      "size": "2336",
+      "format": "Metadata",
+      "md5": "287e60f3a61e535ce2efd0071a344c6d",
+      "crc32": "e1fb02ea",
+      "sha1": "cd788a9e033a69aab18a0e410d11b1c2e9e4d4dd"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1667608965,
+  "item_size": 405170372,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.33600",
+    "creator": "Dutt, M. N.",
+    "date": "1904",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/33600\" rel=\"nofollow\">Digital Library of India Item 2015.33600</a></p><p>dc.contributor.author: Dutt, M. N.<br />dc.date.accessioned: 2015-06-25T17:16:51Z<br />dc.date.available: 2015-06-25T17:16:51Z<br />dc.date.digitalpublicationdate: 2007-02-01<br />dc.date.citation: 1904<br />dc.identifier.barcode: 4990010204021<br />dc.identifier.origpath: /data2/upload/0058/173<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/33600<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 373<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Cosmo Publications, New Delhi<br />dc.rights: In Public Domain<br />dc.source.library: The Asiatic Society, Kolkata<br />dc.subject.classification: Religion.<br />dc.subject.classification: Hinduism<br />dc.subject.classification: Theology<br />dc.subject.keywords: Successive Orders<br />dc.subject.keywords: rite of fire<br />dc.title: Agni Puranam  Vol. 2<br />dc.type: Print-Paper<br />dc.type: Book<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "C-DAK",
+    "title": "Agni Puranam  Vol. 2",
+    "publicdate": "2017-01-19 20:00:51",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-19 20:00:51",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.33600",
+    "identifier-ark": "ark:/13960/t4bp5d19j",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_6",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia801505.us.archive.org",
+  "uniq": 227407136,
+  "workable_servers": [
+    "ia801505.us.archive.org",
+    "ia601505.us.archive.org"
+  ]
+}

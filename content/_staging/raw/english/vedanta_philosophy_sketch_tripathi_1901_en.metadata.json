@@ -1,0 +1,200 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.218962"
+      },
+      {
+        "server": "dn790000.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.218962"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.218962"
+      },
+      {
+        "server": "dn790000.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.218962"
+      }
+    ]
+  },
+  "created": 1783272062,
+  "d1": "ia600703.us.archive.org",
+  "d2": "ia800703.us.archive.org",
+  "dir": "/9/items/in.ernet.dli.2015.218962",
+  "files": [
+    {
+      "name": "2015.218962.A-Sketch.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.218962.A-Sketch_jp2.zip",
+      "mtime": "1485295334",
+      "size": "164045",
+      "md5": "b775a4a839eff1214e54b708f99b6e1c",
+      "crc32": "793c4ecc",
+      "sha1": "6158bea6ba32df726ad218f49990976b1b66a366"
+    },
+    {
+      "name": "2015.218962.A-Sketch.pdf",
+      "source": "original",
+      "mtime": "1484660530",
+      "size": "17361148",
+      "md5": "e554a7ddd1b9d0ab3c4905b18db97b01",
+      "crc32": "2f40a8bd",
+      "sha1": "7a8184327256d07a5df7983faeccfa181bbd157e",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.218962.A-Sketch_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.218962.A-Sketch_jp2.zip",
+      "mtime": "1485301485",
+      "size": "5886388",
+      "md5": "8208274b798497673126be0bcb64de5b",
+      "crc32": "2775e483",
+      "sha1": "0a619d9b47c0f757d5ed29381b17f4af2ff8caa5"
+    },
+    {
+      "name": "2015.218962.A-Sketch_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.218962.A-Sketch_djvu.xml",
+      "mtime": "1485302577",
+      "size": "377936",
+      "md5": "cc26b6e85369279dac6ac56a50091e72",
+      "crc32": "ed4d7a40",
+      "sha1": "a2510961ee27b2512824133794cd24cacdf585b1"
+    },
+    {
+      "name": "2015.218962.A-Sketch_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.218962.A-Sketch_abbyy.gz",
+      "mtime": "1485301644",
+      "size": "3654564",
+      "md5": "20486c04f1087fa85bbadff5be7c7b90",
+      "crc32": "90935ae0",
+      "sha1": "e5ca2a704b8a73450a7a2e16969c75f0476b2d30"
+    },
+    {
+      "name": "2015.218962.A-Sketch_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.218962.A-Sketch.pdf",
+      "mtime": "1485295293",
+      "size": "245312025",
+      "md5": "44ddb28ea9d05d11513cbf6e42d43ae8",
+      "crc32": "594cf34c",
+      "sha1": "313b2571dc8f9be5f7c0e4ef1ddb980f93de4500",
+      "filecount": "250"
+    },
+    {
+      "name": "2015.218962.A-Sketch_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.218962.A-Sketch_djvu.xml",
+      "mtime": "1485302585",
+      "size": "75127",
+      "md5": "582640d525795a843d746025eab29883",
+      "crc32": "48d9e32d",
+      "sha1": "540fff3860fc9886c4aacc915dd02e078c7b94a8"
+    },
+    {
+      "name": "2015.218962.A-Sketch_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.218962.A-Sketch_djvu.xml",
+      "mtime": "1485302574",
+      "size": "19013265",
+      "md5": "8f5e9b7fb92d2e9576a4e18f46025474",
+      "crc32": "bdf40169",
+      "sha1": "8e4acf2fed4cf0dd4f16ca2dd64e055d39cba6c4"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1535805307",
+      "size": "7277",
+      "md5": "88818e130d8838f9af5500d38a040459",
+      "crc32": "9fd59384",
+      "sha1": "235020a06641f840013844b53a952c9cfada4316",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.218962_archive.torrent",
+      "source": "metadata",
+      "btih": "50645e79438bd3f7963cfa812beccee681e8f261",
+      "mtime": "1563293253",
+      "size": "14321",
+      "md5": "d2728bba2061c7cc4df47ae759e9e666",
+      "crc32": "9cb4c419",
+      "sha1": "a535006d0d41d26700b8259e26fa238ee5731f28",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.218962_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "fe4a28f18ff7d6157d226bbebdf73338",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.218962_meta.sqlite",
+      "source": "original",
+      "mtime": "1484660546",
+      "size": "15360",
+      "md5": "d945a5db17d925838fb1e5c81dbfd607",
+      "crc32": "8db69b44",
+      "sha1": "dedbfe1938dec827d5ccf61c879368e6df73eda1",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.218962_meta.xml",
+      "source": "original",
+      "mtime": "1772487536",
+      "size": "2294",
+      "format": "Metadata",
+      "md5": "494d1f2be0c4de2c15e8f7923fa5a014",
+      "crc32": "5d93c0dc",
+      "sha1": "e211df871af0103e851196a0cb8b8b5e77b93e6f"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1772487537,
+  "item_size": 291883750,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.218962",
+    "creator": "Manassukharama Suryarama Tripathi",
+    "date": "1901",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/218962\" rel=\"ugc nofollow\">Digital Library of India Item 2015.218962</a></p><p>dc.contributor.author: Manassukharama Suryarama Tripathi<br />dc.date.accessioned: 2015-07-09T21:02:50Z<br />dc.date.available: 2015-07-09T21:02:50Z<br />dc.date.digitalpublicationdate: 2005-01-20<br />dc.date.citation: 1901<br />dc.identifier: Librarian, SJM<br />dc.identifier.barcode: 2990150059840<br />dc.identifier.origpath: /data_copy/upload/0059/845<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/218962<br />dc.description.scannerno: 50027<br />dc.description.scanningcentre: Salar Jung Museum<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 250<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: N.m.t. And Company<br />dc.source.library: Salar Jung Museum, Hyderabad<br />dc.subject.classification: Philosophy. Psychology<br />dc.subject.classification: Nature And Role Of Philosophy<br />dc.title: A Sketch Of The Vedanta Philosophy<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "Salar",
+    "title": "A Sketch Of The Vedanta Philosophy",
+    "publicdate": "2017-01-17 13:42:12",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-17 13:42:12",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.218962",
+    "identifier-ark": "ark:/13960/t19k9f466",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "backup_location": "ia906304_31"
+  },
+  "server": "ia600703.us.archive.org",
+  "uniq": 1441971052,
+  "workable_servers": [
+    "ia600703.us.archive.org",
+    "ia800703.us.archive.org"
+  ]
+}

@@ -1,0 +1,158 @@
+name: Release smoke tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_account_delete:
+        description: "Run the destructive disposable-account deletion smoke test"
+        required: true
+        default: false
+        type: boolean
+      run_billing_replay:
+        description: "Replay sandbox RevenueCat lifecycle and transfer events"
+        required: true
+        default: false
+        type: boolean
+      run_notification_smoke:
+        description: "Run guarded Expo notification delivery smoke"
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dharma-daily-release-smoke
+  cancel-in-progress: false
+
+jobs:
+  live-read-smokes:
+    name: Live RLS and RAG smokes
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      RLS_SMOKE_EMAIL_A: ${{ secrets.RLS_SMOKE_EMAIL_A }}
+      RLS_SMOKE_PASSWORD_A: ${{ secrets.RLS_SMOKE_PASSWORD_A }}
+      RLS_SMOKE_EMAIL_B: ${{ secrets.RLS_SMOKE_EMAIL_B }}
+      RLS_SMOKE_PASSWORD_B: ${{ secrets.RLS_SMOKE_PASSWORD_B }}
+      RAG_SMOKE_EMAIL: ${{ secrets.RAG_SMOKE_EMAIL }}
+      RAG_SMOKE_PASSWORD: ${{ secrets.RAG_SMOKE_PASSWORD }}
+      RAG_MAX_QUESTION_CHARS: "2000"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare --activate
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Verify two-user RLS isolation
+        run: pnpm backend:smoke:live
+
+      - name: Verify live safety, grounding, audit, and cache behavior
+        run: pnpm rag:smoke:live
+
+  destructive-account-smoke:
+    name: Disposable account export and deletion
+    if: ${{ inputs.run_account_delete == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment: production-account-delete
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      ACCOUNT_DELETE_SMOKE_EMAIL: ${{ secrets.ACCOUNT_DELETE_SMOKE_EMAIL }}
+      ACCOUNT_DELETE_SMOKE_PASSWORD: ${{ secrets.ACCOUNT_DELETE_SMOKE_PASSWORD }}
+      ACCOUNT_DELETE_SMOKE_CONFIRM: DELETE_ACCOUNT_LIVE
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare --activate
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: pnpm
+
+      - name: Run guarded account deletion smoke
+        run: node scripts/account-delete-live-smoke.mjs
+
+  sandbox-billing-replay:
+    name: RevenueCat sandbox webhook replay
+    if: ${{ inputs.run_billing_replay == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: provider-sandbox-smoke
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      REVENUECAT_WEBHOOK_URL: ${{ secrets.REVENUECAT_WEBHOOK_URL }}
+      REVENUECAT_WEBHOOK_SECRET: ${{ secrets.REVENUECAT_WEBHOOK_SECRET }}
+      REVENUECAT_SMOKE_USER_ID: ${{ secrets.REVENUECAT_SMOKE_USER_ID }}
+      REVENUECAT_SMOKE_TRANSFER_DESTINATION_USER_ID: ${{ secrets.REVENUECAT_SMOKE_TRANSFER_DESTINATION_USER_ID }}
+      REVENUECAT_SMOKE_CONFIRM: REVENUECAT_SANDBOX_LIVE
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare --activate
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Replay guarded sandbox lifecycle events
+        run: pnpm backend:billing-smoke:live
+
+  notification-delivery-smoke:
+    name: Disposable Expo notification delivery
+    if: ${{ inputs.run_notification_smoke == true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: notification-provider-smoke
+    env:
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+      DAILY_REFLECTIONS_CRON_SECRET: ${{ secrets.DAILY_REFLECTIONS_CRON_SECRET }}
+      NOTIFICATION_SMOKE_USER_ID: ${{ secrets.NOTIFICATION_SMOKE_USER_ID }}
+      NOTIFICATION_SMOKE_EXPO_PUSH_TOKEN: ${{ secrets.NOTIFICATION_SMOKE_EXPO_PUSH_TOKEN }}
+      NOTIFICATION_SMOKE_CONFIRM: NOTIFICATION_LIVE
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: |
+          corepack enable
+          corepack prepare --activate
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+
+      - name: Run guarded notification delivery smoke
+        run: pnpm backend:notifications-smoke:live

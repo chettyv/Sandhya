@@ -1,0 +1,200 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760002.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.170080"
+      },
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.170080"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760002.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.170080"
+      },
+      {
+        "server": "dn790009.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.170080"
+      }
+    ]
+  },
+  "created": 1783292660,
+  "d1": "ia601407.us.archive.org",
+  "d2": "ia801407.us.archive.org",
+  "dir": "/20/items/in.ernet.dli.2015.170080",
+  "files": [
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja.epub",
+      "source": "derivative",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_abbyy.gz",
+      "mtime": "1727187111",
+      "size": "143733327",
+      "md5": "4e5dee39e6cb984773e6460fbf69100f",
+      "crc32": "f5d88896",
+      "sha1": "a6c70414fbbe02e3a9f276979c49a538f6b2459d",
+      "format": "EPUB"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja.pdf",
+      "source": "original",
+      "mtime": "1485281773",
+      "size": "13009347",
+      "md5": "17f1dbac4519d03afde4384ba0678a06",
+      "crc32": "fe76a8c3",
+      "sha1": "54d70d8911ec531cea0cb6fa1d0e9927bb0fb736",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_jp2.zip",
+      "mtime": "1495706036",
+      "size": "3689027",
+      "md5": "2069d74f6d3eda859cb43ecd8e2b0bb3",
+      "crc32": "b5dc0e32",
+      "sha1": "a8eb22528f96fff87a30798460cc07786feda7cc"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_djvu.xml",
+      "mtime": "1495706450",
+      "size": "228692",
+      "md5": "5de0b0086e403f20537aa396016e8565",
+      "crc32": "a2d5e819",
+      "sha1": "89427181343189a89ed5812b839735cbaacae5d7"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_abbyy.gz",
+      "mtime": "1495706083",
+      "size": "2149626",
+      "md5": "b817960aae9e4f7d3c65702ab8a10728",
+      "crc32": "c09850b5",
+      "sha1": "20194bbc43ad6835b3fe3142144f436a0aac3203"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja.pdf",
+      "mtime": "1495703604",
+      "size": "133949430",
+      "md5": "202337e68ed0407797cd0ac63652dd3e",
+      "crc32": "c9ecdedc",
+      "sha1": "1f4f8dd3a83d2615583da2c03a4128fd52c1dbdc",
+      "filecount": "214"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_djvu.xml",
+      "mtime": "1495706453",
+      "size": "64327",
+      "md5": "bd74652c738a0aff247bbc2a708fc877",
+      "crc32": "8f27db49",
+      "sha1": "0e7a249106b52142c1e781909f64dec346f43d8b"
+    },
+    {
+      "name": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.170080.Yatindra-Mata-Dipika-Or-The-Light-Of-The-School-Of-Ramanuja_djvu.xml",
+      "mtime": "1495706446",
+      "size": "12802301",
+      "md5": "dc41ddbcd9f70f83f092f1310ca61c46",
+      "crc32": "18abeb29",
+      "sha1": "1ac12cef67ea083b6896564abfa93465d51993da"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1727187114",
+      "size": "356",
+      "md5": "804444fe14074d6c7138d7bfe8f31fa1",
+      "crc32": "fc7fc9d3",
+      "sha1": "fe4a84426aca941b2ee59f27f6b00db37217dcfc",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.170080_archive.torrent",
+      "source": "metadata",
+      "btih": "3abea1f81b97723d35ed6b0e2685bc30ae0cb208",
+      "mtime": "1727187116",
+      "size": "15442",
+      "md5": "ad8aeb1afe1b1f660c546076c5de1e60",
+      "crc32": "8d7b1975",
+      "sha1": "476f913bffed034655f0215385f69e488c244e6c",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.170080_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "1133528a42c0a414a31a3db201a50eca",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.170080_meta.sqlite",
+      "source": "original",
+      "mtime": "1485281788",
+      "size": "17408",
+      "md5": "56cc19d7a564239be62b846a96b7d35b",
+      "crc32": "9f3aa2bb",
+      "sha1": "9986c336a058bb6a127b730c06401a3e8dd26c0d",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.170080_meta.xml",
+      "source": "original",
+      "mtime": "1563256753",
+      "size": "2647",
+      "format": "Metadata",
+      "md5": "3f6d7b5fe472754c84fadb7e94d60f44",
+      "crc32": "886e66f4",
+      "sha1": "5d98396b0b521d97baa494ceb7d846c72b5f7883"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1727187116,
+  "item_size": 309661930,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.170080",
+    "creator": "Srinivasa",
+    "date": "1912",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/170080\" rel=\"nofollow\">Digital Library of India Item 2015.170080</a></p><p>dc.contributor.author: Srinivasa<br />dc.contributor.other: Govindacharya Swamin Tr.<br />dc.date.accessioned: 2015-07-07T02:20:23Z<br />dc.date.available: 2015-07-07T02:20:23Z<br />dc.date.digitalpublicationdate: 2004-11-19<br />dc.date.citation: 1912<br />dc.identifier: Asr,Melkote<br />dc.identifier.barcode: 1990020047401<br />dc.identifier.origpath: /data/upload/0047/406<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/170080<br />dc.description.scanningcentre: ASR, Melkote<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 214<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Meykandan Press,madras<br />dc.rights: Copyright Permitted<br />dc.source.library: Asr,melkote<br />dc.subject.classification: Religion. Theology<br />dc.subject.classification: Religions Of The Indian Subcontinent<br />dc.subject.classification: Hinduism Narrowly<br />dc.subject.keywords: Compendium Of Visistadvaita Vedanta<br />dc.subject.keywords: Visistadvaita Vedanta :indological Studies<br />dc.subject.keywords: Indian Religion And Philosophy<br />dc.subject.keywords: Hindusim : Srivaishnavsiim<br />dc.title: Yatindra Mata Dipika Or The Light Of The School Of Ramanuja<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "Other",
+    "title": "Yatindra Mata Dipika Or The Light Of The School Of Ramanuja",
+    "publicdate": "2017-01-24 18:16:14",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-24 18:16:14",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.170080",
+    "identifier-ark": "ark:/13960/t5q86r63z",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_27",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia801407.us.archive.org",
+  "uniq": 824644327,
+  "workable_servers": [
+    "ia801407.us.archive.org",
+    "ia601407.us.archive.org"
+  ]
+}

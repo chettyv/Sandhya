@@ -1,0 +1,265 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/cu31924023014941"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/cu31924023014941"
+      }
+    ]
+  },
+  "created": 1783197478,
+  "d1": "ia903109.us.archive.org",
+  "d2": "ia803109.us.archive.org",
+  "dir": "/11/items/cu31924023014941",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1652754605",
+      "size": "12703",
+      "md5": "0e5e939a47943e40632a40e466e4f90c",
+      "crc32": "1a212988",
+      "sha1": "a7a2195de979bf24457dabd884fef94d01daba52",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "cu31924023014941.djvu",
+      "source": "derivative",
+      "format": "DjVu",
+      "original": "cu31924023014941_djvu.xml",
+      "md5": "5191fb4af8fec3b38f499264525f08f0",
+      "mtime": "1257138246",
+      "size": "8903462",
+      "crc32": "94eab8a2",
+      "sha1": "79d343ee43f00df7af53310542ec527018a94bbc"
+    },
+    {
+      "name": "cu31924023014941.epub",
+      "source": "derivative",
+      "original": "cu31924023014941_abbyy.gz",
+      "mtime": "1710078259",
+      "size": "706899",
+      "md5": "4524cbeb21b26d411e94eda0e2f03832",
+      "crc32": "51d97d80",
+      "sha1": "6ec77ae275c839008b3c08882287e90ab6f7e943",
+      "format": "EPUB"
+    },
+    {
+      "name": "cu31924023014941.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "cu31924023014941_jp2.zip",
+      "md5": "16d6bf83ccf2d1d8aeaa43acda024cd4",
+      "mtime": "1257128276",
+      "size": "245356",
+      "crc32": "74537fd1",
+      "sha1": "e25a5ed6ea2e5631eaeab91ddd931588fb7fb2ae"
+    },
+    {
+      "name": "cu31924023014941.pdf",
+      "source": "derivative",
+      "format": "Text PDF",
+      "original": "cu31924023014941_djvu.xml",
+      "md5": "d271daed7f6ac87a7113513ad6f6dc76",
+      "mtime": "1257139495",
+      "size": "11377867",
+      "crc32": "14feb1e6",
+      "sha1": "e4a4699bc17a1c9d78223eb6f55bf70ceed66480"
+    },
+    {
+      "name": "cu31924023014941_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "cu31924023014941_jp2.zip",
+      "md5": "c5bb680491f274316f9d1df2fe9b0109",
+      "mtime": "1257137029",
+      "size": "12331551",
+      "crc32": "c7b93b5d",
+      "sha1": "8cc26b3e92e57e5bd2d6f1f0d458248956301a08"
+    },
+    {
+      "name": "cu31924023014941_archive.torrent",
+      "source": "metadata",
+      "btih": "dfe10167e0cc679f89de46fd6d1db2c870b80c12",
+      "mtime": "1710078263",
+      "size": "22153",
+      "md5": "c1c087eae1ba2c17985ccbdf0f5a09d2",
+      "crc32": "fa3868f1",
+      "sha1": "e6c1a43267b4a0850d58b090f3e59f2bb9f6bdff",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "cu31924023014941_cubook.zip",
+      "source": "original",
+      "format": "Raw Cornell Book Zip",
+      "md5": "880c12e526640142002fb9e77ca3a576",
+      "mtime": "1254246457",
+      "size": "231341521",
+      "crc32": "50065002",
+      "sha1": "93329beb263c65150d2acedade43204e8bf556e4",
+      "filecount": "1817"
+    },
+    {
+      "name": "cu31924023014941_daisy.zip",
+      "source": "derivative",
+      "original": "cu31924023014941_abbyy.gz",
+      "mtime": "1709630470",
+      "size": "389465",
+      "md5": "33fb8d38d330ffe90dbe627f12aba45e",
+      "crc32": "d5031f1d",
+      "sha1": "75b3d2319922cd343c76b6675132978ebddb13f5",
+      "format": "Daisy",
+      "filecount": "9"
+    },
+    {
+      "name": "cu31924023014941_dc.xml",
+      "source": "original",
+      "md5": "4875f2a42c1489c9a309ff1e898a2a35",
+      "format": "Dublin Core",
+      "mtime": "1652754597",
+      "size": "767",
+      "crc32": "fc471658",
+      "sha1": "5ede3e812d82ef68c909ebf04dcf8e04eb65c568"
+    },
+    {
+      "name": "cu31924023014941_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "cu31924023014941.djvu",
+      "md5": "13cfac433f9dec00fd7ac583c7f9bcaa",
+      "mtime": "1257139517",
+      "size": "768151",
+      "crc32": "1963dc64",
+      "sha1": "6ae077dcb9f3c7354faa1bc881c3661dc778d3ce"
+    },
+    {
+      "name": "cu31924023014941_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "cu31924023014941_abbyy.gz",
+      "md5": "df015ab01c3ab5a90177b35c27587c34",
+      "mtime": "1257137369",
+      "size": "6925024",
+      "crc32": "599b7fd4",
+      "sha1": "2a63e14b1f55401a35df1e43e66bdf70f4308eca"
+    },
+    {
+      "name": "cu31924023014941_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "35c9c4265b212e544d8127942ce89a25",
+      "summation": "md5"
+    },
+    {
+      "name": "cu31924023014941_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "cu31924023014941_cubook.zip",
+      "md5": "e90dc6d98e4631bc554a6e0974b94a23",
+      "mtime": "1257128245",
+      "size": "202612623",
+      "crc32": "55db2395",
+      "sha1": "402b26cdb8e0a912eeb9d607e3e41bfe99b585c7",
+      "filecount": "450"
+    },
+    {
+      "name": "cu31924023014941_marc.xml",
+      "source": "original",
+      "md5": "550fbb8a3231fc910a7e77b4c4a42e46",
+      "format": "MARC",
+      "mtime": "1207146436",
+      "size": "3065",
+      "crc32": "22a37c55",
+      "sha1": "678990c7f293f8f13b0bedf276ad0ababef60278"
+    },
+    {
+      "name": "cu31924023014941_meta.mrc",
+      "source": "original",
+      "md5": "44967410150fcc014445673b00b2075e",
+      "format": "MARC Binary",
+      "mtime": "1207146436",
+      "size": "804",
+      "crc32": "73afeb41",
+      "sha1": "a9fc05747aa658fe569ce635b26c3975c12de49f"
+    },
+    {
+      "name": "cu31924023014941_meta.xml",
+      "source": "original",
+      "format": "Metadata",
+      "mtime": "1781581069",
+      "size": "1963",
+      "md5": "dca652d159f558ee443d284f941adffc",
+      "crc32": "c93d509e",
+      "sha1": "81e30a1d23cc86d74a95dc4cb638951ddca4b8fc"
+    },
+    {
+      "name": "cu31924023014941_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "cu31924023014941_djvu.xml",
+      "md5": "620dd5ea873586e5ea52da4241d48f4a",
+      "mtime": "1257137380",
+      "size": "159334",
+      "crc32": "54af30ca",
+      "sha1": "2add98f6dbc73c70c8175ca2d3a5d2a4c8108163"
+    }
+  ],
+  "files_count": 18,
+  "item_last_updated": 1781581070,
+  "item_size": 475802708,
+  "metadata": {
+    "mediatype": "texts",
+    "collection": [
+      "cornell",
+      "americana"
+    ],
+    "title": "Manu Samhita : English translation",
+    "identifier": "cu31924023014941",
+    "uploader": "hank@archive.org",
+    "addeddate": "2009-10-30 00:07:50",
+    "identifier-access": "http://www.archive.org/details/cu31924023014941",
+    "identifier-ark": "ark:/13960/t63496v6r",
+    "sponsor": "MSN",
+    "contributor": "Cornell University Library",
+    "description": [
+      "The metadata below describe the original scanning. Follow the \"All Files: HTTP\" link in the \"View the book\" box to the left to find XML files that contain more metadata about the original images and the derived formats (OCR results, PDF etc.). See also the <a href=\"http://www.archive.org/about/faqs.php#140\" rel=\"ugc nofollow\">What is the directory structure for the texts?</a> FAQ for information about file content and naming conventions.",
+      "438, ii p. ; 21 cm"
+    ],
+    "camera": "EOS-1D",
+    "lcamid": "338662",
+    "rcamid": "337626",
+    "operator": "SR",
+    "scanner": "Kirtas APT 2400",
+    "ppi": "300",
+    "creator": "Dutt, Manmatha Nath",
+    "publisher": "Calcutta : Printed and pub. by H.C. Das",
+    "date": "1909",
+    "language": "eng",
+    "imagecount": "450",
+    "bookplateleaf": "0003",
+    "ocr": "ABBYY FineReader 8.0",
+    "scandate": "20080402144943",
+    "foldoutcount": "0",
+    "repub_state": "4",
+    "publicdate": "2009-11-02 05:25:27",
+    "filesxml": "Wed Mar 17 10:37:21 UTC 2010",
+    "backup_location": "ia903604_9",
+    "openlibrary_edition": "OL24179293M",
+    "openlibrary_work": "OL18042210W",
+    "oclc-id": "64002290",
+    "associated-names": "Dutt, Manmatha Nath"
+  },
+  "server": "ia903109.us.archive.org",
+  "uniq": 1476122868,
+  "workable_servers": [
+    "ia903109.us.archive.org",
+    "ia803109.us.archive.org"
+  ]
+}

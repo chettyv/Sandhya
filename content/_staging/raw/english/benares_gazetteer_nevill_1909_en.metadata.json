@@ -1,0 +1,199 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710108.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.181552"
+      },
+      {
+        "server": "dn760105.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.181552"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710108.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.181552"
+      },
+      {
+        "server": "dn760105.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.181552"
+      }
+    ]
+  },
+  "created": 1783292671,
+  "d1": "ia601402.us.archive.org",
+  "d2": "ia801402.us.archive.org",
+  "dir": "/2/items/in.ernet.dli.2015.181552",
+  "files": [
+    {
+      "name": "2015.181552.Benares---A-Gazetteer.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.181552.Benares---A-Gazetteer_jp2.zip",
+      "mtime": "1492279120",
+      "size": "191798",
+      "md5": "3c3a5f955817b1885affe461d1f4df66",
+      "crc32": "90b7d8cb",
+      "sha1": "30e63a1803d4ebd369d858e831a4b1bb8bba8d0c"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer.pdf",
+      "source": "original",
+      "mtime": "1484897072",
+      "size": "35359917",
+      "md5": "85f7b5e5f9eab1c9b12d2d42b03102ca",
+      "crc32": "7af4b6fb",
+      "sha1": "0dd3468a770a22d3c04b6f55e65cbcaf8216d48d",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.181552.Benares---A-Gazetteer_jp2.zip",
+      "mtime": "1492284829",
+      "size": "15542421",
+      "md5": "5547207560f8bebe595392b641e7d2e8",
+      "crc32": "83a599d3",
+      "sha1": "052b0bf7ef676f830ef20db8df54e48ffc760a4f"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.181552.Benares---A-Gazetteer_djvu.xml",
+      "mtime": "1492287370",
+      "size": "947845",
+      "md5": "a15459c9dd6dab0108d842abdd26533b",
+      "crc32": "5285042b",
+      "sha1": "ed3762d3dd1bee9c1871423caf273e94f658ec3e"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.181552.Benares---A-Gazetteer_abbyy.gz",
+      "mtime": "1492285279",
+      "size": "9267110",
+      "md5": "352c928ddec62d7d34a8f9ed0af8e8b1",
+      "crc32": "7aa12df3",
+      "sha1": "5236c437ec6ed61ad6ac22fd57b322ae38c57804"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.181552.Benares---A-Gazetteer.pdf",
+      "mtime": "1492279045",
+      "size": "494384467",
+      "md5": "3b003efd42c05859bdd70ddfaa5a94c6",
+      "crc32": "e23ad858",
+      "sha1": "135c2ce37a85a6da2b26b47868211a2e2734c386"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.181552.Benares---A-Gazetteer_djvu.xml",
+      "mtime": "1492287380",
+      "size": "138127",
+      "md5": "97d7ce53c6bf35959afcc8c68812e086",
+      "crc32": "83e093ae",
+      "sha1": "6a00423c90e223e852467230386b4bd9d6ba04cf"
+    },
+    {
+      "name": "2015.181552.Benares---A-Gazetteer_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.181552.Benares---A-Gazetteer_djvu.xml",
+      "mtime": "1492287361",
+      "size": "40123653",
+      "md5": "ef5e689aa648017e2aacc0ac42fba5a9",
+      "crc32": "df2253fa",
+      "sha1": "ff719214e41d25ee0c1d9bcea1938f127b48cef8"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1535985458",
+      "size": "7369",
+      "md5": "74036209f080f03ed2ca10bbfd7697af",
+      "crc32": "9573cd61",
+      "sha1": "a7a779b3bc48745e98bc3d1163be94c237c1f7b8",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.181552_archive.torrent",
+      "source": "metadata",
+      "btih": "50b9c5977a1827bba99f3656341e86bba9e10666",
+      "mtime": "1563287956",
+      "size": "26024",
+      "md5": "20fffddeabdddebe24e4f5dd76c9acea",
+      "crc32": "c50442f3",
+      "sha1": "5b33b88bcff1fb084d4358f3c211ace03164d056",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.181552_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "f2dd4aa5d5276de210b18e7591797a60",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.181552_meta.sqlite",
+      "source": "original",
+      "mtime": "1484897084",
+      "size": "15360",
+      "md5": "62de02ff730a76db043b3c951cc6328b",
+      "crc32": "1e2d0952",
+      "sha1": "58f1e9d84af400b8489b88ee1e2cacdc8fa3f403",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.181552_meta.xml",
+      "source": "original",
+      "mtime": "1563287949",
+      "size": "2337",
+      "format": "Metadata",
+      "md5": "98209957e4aced14c5dd25c23684d4cc",
+      "crc32": "b9af8472",
+      "sha1": "e3610ed93ae500e217948e5b00bc6e60b9f03d16"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1665561956,
+  "item_size": 596006428,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.181552",
+    "creator": "Nevill, H. R.",
+    "date": "1909",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/181552\" rel=\"nofollow\">Digital Library of India Item 2015.181552</a></p><p>dc.contributor.author: Nevill, H. R.<br />dc.date.accessioned: 2015-07-07T14:43:38Z<br />dc.date.available: 2015-07-07T14:43:38Z<br />dc.date.digitalpublicationdate: 2006-09-25<br />dc.date.citation: 1909<br />dc.identifier.barcode: 4990010104873<br />dc.identifier.origpath: /rawdataupload/upload/0104/875<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/181552<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 460<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Superintendent Government Press, Allahabad<br />dc.rights: In Public Domain<br />dc.source.library: The Asiatic Society, Kolkata<br />dc.subject.classification: Social Sciences<br />dc.subject.classification: Demography. Statistics. Sociology<br />dc.subject.classification: Gazetteer<br />dc.subject.keywords: Physical Aspect<br />dc.subject.keywords: Social Aspect<br />dc.title: Benares - A Gazetteer<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "C-DAK",
+    "title": "Benares - A Gazetteer",
+    "publicdate": "2017-01-20 07:24:33",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-20 07:24:33",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.181552",
+    "identifier-ark": "ark:/13960/t1wd9628x",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_9"
+  },
+  "server": "ia801402.us.archive.org",
+  "uniq": 373208745,
+  "workable_servers": [
+    "ia801402.us.archive.org",
+    "ia601402.us.archive.org"
+  ]
+}

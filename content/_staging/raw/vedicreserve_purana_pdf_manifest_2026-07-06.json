@@ -1,0 +1,482 @@
+{
+  "fetched_at": "2026-07-06T19:28:03.455Z",
+  "results": [
+    {
+      "href": "puranas/agni_purana.pdf",
+      "filename": "agni_purana.pdf",
+      "title": "Agni Purana 2.1 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/agni_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/agni_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/bhagavata_purana.pdf",
+      "filename": "bhagavata_purana.pdf",
+      "title": "Shrimad Bhagavata Mahapurana 3.6 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/bhagavata_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/bhagavata_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahma_purana.pdf",
+      "filename": "brahma_purana.pdf",
+      "title": "Brahma Purana 3.33 MBytes",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahma_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahma_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmanda_purana.pdf",
+      "filename": "brahmanda_purana.pdf",
+      "title": "Brahmanda Purana 3.2 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmanda_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmanda_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana01.pdf",
+      "filename": "brahmavaivartapurana01.pdf",
+      "title": "Brahma Vaivarta 1-100 6.9MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana01.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana01.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana02.pdf",
+      "filename": "brahmavaivartapurana02.pdf",
+      "title": "Brahma Vaivarta 101-200 6.8MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana02.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana02.pdf",
+      "bytes": 7173695,
+      "status": "downloaded"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana03.pdf",
+      "filename": "brahmavaivartapurana03.pdf",
+      "title": "Brahma Vaivarta 201-300 6.8MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana03.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana03.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana04.pdf",
+      "filename": "brahmavaivartapurana04.pdf",
+      "title": "Brahma Vaivarta 301-400 6.6MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana04.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana04.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana05.pdf",
+      "filename": "brahmavaivartapurana05.pdf",
+      "title": "Brahma Vaivarta 401-500 6.6MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana05.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana05.pdf",
+      "bytes": 6935420,
+      "status": "downloaded"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana06.pdf",
+      "filename": "brahmavaivartapurana06.pdf",
+      "title": "Brahma Vaivarta 501-600 6.3MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana06.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana06.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana07.pdf",
+      "filename": "brahmavaivartapurana07.pdf",
+      "title": "Brahma Vaivarta 601-700 6.2MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana07.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana07.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana08.pdf",
+      "filename": "brahmavaivartapurana08.pdf",
+      "title": "Brahma Vaivarta 701-800 6.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana08.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana08.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/brahmavaivartapurana09.pdf",
+      "filename": "brahmavaivartapurana09.pdf",
+      "title": "Brahma Vaivarta 801-end 4.0MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/brahmavaivartapurana09.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/brahmavaivartapurana09.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/kurma_purana.pdf",
+      "filename": "kurma_purana.pdf",
+      "title": "Kurma Puranam 1.38MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/kurma_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/kurma_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/linga_purana.pdf",
+      "filename": "linga_purana.pdf",
+      "title": "Linga Puranam 2.1 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/linga_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/linga_purana.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_1.pdf",
+      "filename": "markandeya_purana_1.pdf",
+      "title": "Markandeya Purana 1-100 3.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_1.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_1.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_2.pdf",
+      "filename": "markandeya_purana_2.pdf",
+      "title": "Markandeya Purana 101-200 3.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_2.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_2.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_3.pdf",
+      "filename": "markandeya_purana_3.pdf",
+      "title": "Markandeya Purana 201-300 3.7MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_3.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_3.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_4.pdf",
+      "filename": "markandeya_purana_4.pdf",
+      "title": "Markandeya Purana 301-400 3.6MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_4.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_4.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_5.pdf",
+      "filename": "markandeya_purana_5.pdf",
+      "title": "Markandeya Purana 401-500 3.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_5.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_5.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_6.pdf",
+      "filename": "markandeya_purana_6.pdf",
+      "title": "Markandeya Purana 501-600 3.1MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_6.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_6.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/markandeya_purana_7.pdf",
+      "filename": "markandeya_purana_7.pdf",
+      "title": "Markandeya Purana 601-660 1.8MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/markandeya_purana_7.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/markandeya_purana_7.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/matsya_purana.pdf",
+      "filename": "matsya_purana.pdf",
+      "title": "Matsya Purana 3.15 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/matsya_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/matsya_purana.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/narada_purana_purva.pdf",
+      "filename": "narada_purana_purva.pdf",
+      "title": "Narada Puranam - Purva Bhagam 2.8MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/narada_purana_purva.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/narada_purana_purva.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/narada_purana_uttara.pdf",
+      "filename": "narada_purana_uttara.pdf",
+      "title": "Narada Puranam - Uttara Bhagam 1.2MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/narada_purana_uttara.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/narada_purana_uttara.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_1srishti.pdf",
+      "filename": "padma_purana_1srishti.pdf",
+      "title": "Padma Puranam - Sristhi Khandam 2.3MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_1srishti.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_1srishti.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_2bhumi.pdf",
+      "filename": "padma_purana_2bhumi.pdf",
+      "title": "Padma Puranam - Bhumi Khandam 1.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_2bhumi.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_2bhumi.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_3svarga.pdf",
+      "filename": "padma_purana_3svarga.pdf",
+      "title": "Padma Puranam - Svarga Khandam 678KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_3svarga.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_3svarga.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_4brahma.pdf",
+      "filename": "padma_purana_4brahma.pdf",
+      "title": "Padma Puranam - Brahma Khandam 269KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_4brahma.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_4brahma.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_5patala.pdf",
+      "filename": "padma_purana_5patala.pdf",
+      "title": "Padma Puranam - Patala Khandam 1.9MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_5patala.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_5patala.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_6uttara.pdf",
+      "filename": "padma_purana_6uttara.pdf",
+      "title": "Padma Puranam - Uttara Khandam 3.1MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_6uttara.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_6uttara.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/padma_purana_7kriya.pdf",
+      "filename": "padma_purana_7kriya.pdf",
+      "title": "Padma Puranam - Kriya Khandam 686KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/padma_purana_7kriya.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/padma_purana_7kriya.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_01.pdf",
+      "filename": "siva_purana_01.pdf",
+      "title": "Shiva Purana 1-100 3.0MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_01.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_01.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_02.pdf",
+      "filename": "siva_purana_02.pdf",
+      "title": "Shjva Purana 101-200 4.25MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_02.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_02.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_03.pdf",
+      "filename": "siva_purana_03.pdf",
+      "title": "Shiva Purana 201-300 4.3MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_03.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_03.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_04.pdf",
+      "filename": "siva_purana_04.pdf",
+      "title": "Shiva Purana 301-400 4.2MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_04.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_04.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_05.pdf",
+      "filename": "siva_purana_05.pdf",
+      "title": "Shiva Purana 401-end of volume 1 4.3MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_05.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_05.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_06.pdf",
+      "filename": "siva_purana_06.pdf",
+      "title": "Shiva Purana Vol. 2, 1-100 4.9MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_06.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_06.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_07.pdf",
+      "filename": "siva_purana_07.pdf",
+      "title": "Shiva Purana Vol. 2, 101-200 4.8MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_07.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_07.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_08.pdf",
+      "filename": "siva_purana_08.pdf",
+      "title": "Shiva Purana Vol. 2, 201-300 4.5MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_08.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_08.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_09.pdf",
+      "filename": "siva_purana_09.pdf",
+      "title": "Shiva Purana Vol. 2, 301-400 4.5MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_09.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_09.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/siva_purana_10.pdf",
+      "filename": "siva_purana_10.pdf",
+      "title": "Shiva Purana Vol. 2, 401-end 4.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/siva_purana_10.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/siva_purana_10.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "puranas/vamana_purana.pdf",
+      "filename": "vamana_purana.pdf",
+      "title": "Vamana Purana 1.4MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/vamana_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/vamana_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "puranas/vishnu_purana.pdf",
+      "filename": "vishnu_purana.pdf",
+      "title": "Vishnu Purana 1.4 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/puranas/vishnu_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/vishnu_purana.pdf",
+      "bytes": 1460649,
+      "status": "downloaded"
+    },
+    {
+      "href": "upapurana/devibhagavata_purana.pdf",
+      "filename": "devibhagavata_purana.pdf",
+      "title": "Devi Bhagavata Purana 46 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/devibhagavata_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/devibhagavata_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/kapila_purana.pdf",
+      "filename": "kapila_purana.pdf",
+      "title": "Kapila Purana 291 KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/kapila_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/kapila_purana.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/nandi_purana.pdf",
+      "filename": "nandi_purana.pdf",
+      "title": "Nandi Purana 1.05 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/nandi_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/nandi_purana.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/narasimha_purana.pdf",
+      "filename": "narasimha_purana.pdf",
+      "title": "Narasimha Purana 893 KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/narasimha_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/narasimha_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/nilamata_purana.pdf",
+      "filename": "nilamata_purana.pdf",
+      "title": "Nilamata Purana 362 KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/nilamata_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/nilamata_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/parashara_purana.pdf",
+      "filename": "parashara_purana.pdf",
+      "title": "Parashara Purana 266KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/parashara_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/parashara_purana.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/samba_purana.pdf",
+      "filename": "samba_purana.pdf",
+      "title": "Samba Purana 715KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/samba_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/samba_purana.pdf",
+      "error": "fetch failed",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/saura_purana.pdf",
+      "filename": "saura_purana.pdf",
+      "title": "Saura Purana 896 KB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/saura_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/saura_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    },
+    {
+      "href": "upapurana/vishnudharma_purana.pdf",
+      "filename": "vishnudharma_purana.pdf",
+      "title": "Vishnudharma 1.06 MB",
+      "downloadUrl": "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/upapurana/vishnudharma_purana.pdf",
+      "targetPath": "content/_staging/raw/sanskrit/vedicreserve_puranas/vishnudharma_purana.pdf",
+      "error": "terminated",
+      "status": "error"
+    }
+  ]
+}

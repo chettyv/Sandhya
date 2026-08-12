@@ -1,0 +1,188 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710805.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.114952"
+      },
+      {
+        "server": "dn760108.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.114952"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710805.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.114952"
+      },
+      {
+        "server": "dn760108.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.114952"
+      }
+    ]
+  },
+  "created": 1783252840,
+  "d1": "ia601402.us.archive.org",
+  "d2": "ia801402.us.archive.org",
+  "dir": "/17/items/in.ernet.dli.2015.114952",
+  "files": [
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada.pdf",
+      "source": "original",
+      "mtime": "1484978675",
+      "size": "16076792",
+      "md5": "2045112a91e528c6d9facaf9060db761",
+      "crc32": "3c88ef11",
+      "sha1": "bfdc0edd051ca6774f52ff5f97b173023c57894e",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.114952.The-Bhakti-Sutras-Of-Narada_jp2.zip",
+      "mtime": "1493203236",
+      "size": "11309804",
+      "md5": "26f1a2fd3f38f69914730f5811e892e0",
+      "crc32": "b81a58b2",
+      "sha1": "eec3f36bde207cccd90706aff94d9c8d365be199"
+    },
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.114952.The-Bhakti-Sutras-Of-Narada_djvu.xml",
+      "mtime": "1493203914",
+      "size": "713988",
+      "md5": "eda4ab4157552780b89b525a1d74e7b5",
+      "crc32": "704634a6",
+      "sha1": "5ec514ab01b4ded7c9d9ed30397ce112ce11bd5b"
+    },
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.114952.The-Bhakti-Sutras-Of-Narada_abbyy.gz",
+      "mtime": "1493203481",
+      "size": "6854714",
+      "md5": "9418fc1408d0b7066fbf7894a71e1af1",
+      "crc32": "569ce26d",
+      "sha1": "8466117c4a343912a7208f1d13f937ca80f22722"
+    },
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.114952.The-Bhakti-Sutras-Of-Narada.pdf",
+      "mtime": "1493199463",
+      "size": "185752283",
+      "md5": "24ea454c24158f9c57cf4fcf5269a093",
+      "crc32": "193ddb90",
+      "sha1": "17127b8ed5e3f774e7bc0304a4947a20221b15b9"
+    },
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.114952.The-Bhakti-Sutras-Of-Narada_djvu.xml",
+      "mtime": "1493203917",
+      "size": "100925",
+      "md5": "06055909ad17c660895d09a4618ef1b7",
+      "crc32": "b2e7194c",
+      "sha1": "8234ceea60e72a2754fb0d4fb622d8a1340c98cc"
+    },
+    {
+      "name": "2015.114952.The-Bhakti-Sutras-Of-Narada_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.114952.The-Bhakti-Sutras-Of-Narada_djvu.xml",
+      "mtime": "1493203911",
+      "size": "14803387",
+      "md5": "4a073783743c2891d21198da32521635",
+      "crc32": "4dc022ca",
+      "sha1": "c56d24fbaca318b8d96314c33da59eb224c3cfd6"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1539957451",
+      "size": "27604",
+      "md5": "2263554f28de3bfc0d905a7105a18f48",
+      "crc32": "4d9c01b6",
+      "sha1": "bd6b325836313349d3c313d04d1405d34c460720",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.114952_archive.torrent",
+      "source": "metadata",
+      "btih": "86564591ee7316717380473421149abd7feae299",
+      "mtime": "1563253059",
+      "size": "12137",
+      "md5": "7ae47f33ef701db9ae6405664801faa3",
+      "crc32": "e3156be9",
+      "sha1": "3721fcb37d9c4ed9a0798f05718c65fa8751258c",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.114952_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "62d09718a1ee5741417be69b8c615fbf",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.114952_meta.sqlite",
+      "source": "original",
+      "mtime": "1484978687",
+      "size": "15360",
+      "md5": "8a505b2f457136c70ac4bfecbcb2774c",
+      "crc32": "1dd6843b",
+      "sha1": "802fb59517746d041e4880c5018c13cb68e02d29",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.114952_meta.xml",
+      "source": "original",
+      "mtime": "1563253056",
+      "size": "2174",
+      "format": "Metadata",
+      "md5": "9a7accff09c531233d520355b28a0363",
+      "crc32": "447823fc",
+      "sha1": "9c1f0d0806ee073edb829cdbe4a058292300a098"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1667569737,
+  "item_size": 235669168,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.114952",
+    "creator": "Sinha, Nandalal",
+    "date": "1917",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/114952\" rel=\"nofollow\">Digital Library of India Item 2015.114952</a></p><p>dc.contributor.author: Sinha, Nandalal<br />dc.date.accessioned: 2015-07-02T14:56:59Z<br />dc.date.available: 2015-07-02T14:56:59Z<br />dc.date.digitalpublicationdate: 2010-04-00<br />dc.date.citation: 1917<br />dc.identifier.barcode: 99999990065196<br />dc.identifier.origpath: /data9/upload/0262/764<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/114952<br />dc.description.scanningcentre: Banasthali University<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 338<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Allahabad, The Panini Office Bhuvanesvari Abrama, Bahadurganj<br />dc.rights: Copyright Permitted<br />dc.source.library: Central Library, University Of Rajasthan<br />dc.subject.classification: Devotional<br />dc.title: The Bhakti Sutras Of Narada<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "Banasthali",
+    "title": "The Bhakti Sutras Of Narada",
+    "publicdate": "2017-01-21 06:04:36",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-21 06:04:36",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.114952",
+    "identifier-ark": "ark:/13960/t9w14ds9t",
+    "ppi": "300",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_13",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia801402.us.archive.org",
+  "uniq": 1318891893,
+  "workable_servers": [
+    "ia801402.us.archive.org",
+    "ia601402.us.archive.org"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "created": 1783290179,
+  "d1": "ia600702.us.archive.org",
+  "d2": "ia800702.us.archive.org",
+  "dir": "/19/items/in.ernet.dli.2015.92361",
+  "files": [
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_jp2.zip",
+      "mtime": "1490885028",
+      "size": "98750",
+      "md5": "dff4e54387c73214df26bb3cf031aff6",
+      "crc32": "41576398",
+      "sha1": "b687fcd8ac9f3f4f586ed22ce383752bec4ced08"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1.pdf",
+      "source": "original",
+      "mtime": "1484748440",
+      "size": "13198084",
+      "md5": "30b176613ab3542b1487cc02c8947af8",
+      "crc32": "91f4993f",
+      "sha1": "4b09f49e47a1cb992ff910f9a496bb2f86a04af5",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_jp2.zip",
+      "mtime": "1490889230",
+      "size": "2826831",
+      "md5": "baacdd5d11ed663609b4519cd2205aec",
+      "crc32": "6c5bd067",
+      "sha1": "b8208786d305b18f6bde5f48656d5baa9ff5a98d"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_djvu.xml",
+      "mtime": "1490890101",
+      "size": "180606",
+      "md5": "ea0c31f518e4ebe8d91eeefb351b037d",
+      "crc32": "70aa4cde",
+      "sha1": "1f64652d9378281b05ccea61315345133977d43b"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_abbyy.gz",
+      "mtime": "1490889287",
+      "size": "2176740",
+      "md5": "fc800e7c9f4749109ca923105439cc11",
+      "crc32": "419ba9a7",
+      "sha1": "0722952e8d1e5c1fa124e4505e2855a789060d9b"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1.pdf",
+      "mtime": "1490885002",
+      "size": "168491728",
+      "md5": "e7a0530da3dec24a8a0625d56d57b40f",
+      "crc32": "fbe5c566",
+      "sha1": "55273aeb5f5ae7f25e25ac0099796e8829ac4ef8",
+      "filecount": "576"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_djvu.xml",
+      "mtime": "1490890104",
+      "size": "172926",
+      "md5": "58b60aa08ceee75a8ad9c49de77694a3",
+      "crc32": "47cac8e7",
+      "sha1": "69aa2dd14d75ded8830e25885fee3971140fa9c7"
+    },
+    {
+      "name": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.92361.Shri-Shri-Chaitanya-upadesh--Vol-1_djvu.xml",
+      "mtime": "1490890099",
+      "size": "16799735",
+      "md5": "dc2b578ea6e16d05483c75a6487564a3",
+      "crc32": "d3d73161",
+      "sha1": "7f3fef367876a69b71c81af530e3c8d51b5c978f"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1534814459",
+      "size": "10988",
+      "md5": "fa2b66961573f10f76c20320701e366d",
+      "crc32": "9db7cd1e",
+      "sha1": "80f617f6f857336a5c26c897a1faef02e0dfb0d6",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.92361_archive.torrent",
+      "source": "metadata",
+      "btih": "67c103d80f6f7ff3d10bf5c846182f620185cda7",
+      "mtime": "1563313289",
+      "size": "11172",
+      "md5": "faf33fa31e94bbb50e50a37b7f2e4e09",
+      "crc32": "126fcbd2",
+      "sha1": "c90c4a46d4e34577a13ee903e5408b56a011e9fd",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.92361_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "862fd87b4cd60b633f3053e946ae9edd",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.92361_meta.sqlite",
+      "source": "original",
+      "mtime": "1484748452",
+      "size": "15360",
+      "md5": "141ebb1ddde2ff9a8712ffce02986481",
+      "crc32": "beb7ace0",
+      "sha1": "de74322b7b4c5b6ec833b2191d3fad4496d5e0f9",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.92361_meta.xml",
+      "source": "original",
+      "mtime": "1739286347",
+      "size": "2479",
+      "format": "Metadata",
+      "md5": "06bec5a08b7d31ca47e4f822ce469f4e",
+      "crc32": "db7ab792",
+      "sha1": "04f97dbe789634077cc575d0a36a20e71d5e51ad"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1739286347,
+  "item_size": 203985399,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.92361",
+    "creator": "Not Available",
+    "date": "1919",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/92361\" rel=\"ugc nofollow\">Digital Library of India Item 2015.92361</a></p><p>dc.contributor.author: Not Available<br />dc.date.accessioned: 2015-07-01T13:33:45Z<br />dc.date.available: 2015-07-01T13:33:45Z<br />dc.date.digitalpublicationdate: 2010-08-29<br />dc.date.citation: 1919<br />dc.identifier.barcode: 4990010047180<br />dc.identifier.origpath: /data8/upload/0244/463<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/92361<br />dc.description.scannerno: 1<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 577<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Binayendranath Basu, Kolkata<br />dc.rights: In Public Domain<br />dc.source.library: Bangiya Sahitya Parishad, Kolkata<br />dc.subject.classification: Religion. Theology<br />dc.subject.classification: Hinduism<br />dc.subject.keywords: Sri Krishna<br />dc.subject.keywords: Krishna Bhakta<br />dc.subject.keywords: Bhagabad-chakkher Darshan<br />dc.subject.keywords: Krishnaaam Kirtan<br />dc.subject.keywords: Sankirtan Sikkha Dan<br />dc.title: Shri Shri Chaitanya-upadesh  Vol. 1<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "C-DAK",
+    "title": "Shri Shri Chaitanya-upadesh  Vol. 1",
+    "publicdate": "2017-01-18 14:07:21",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-18 14:07:21",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.92361",
+    "identifier-ark": "ark:/13960/t84j5rq5k",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_1"
+  },
+  "server": "ia800702.us.archive.org",
+  "servers_unavailable": true,
+  "uniq": 282187656,
+  "workable_servers": [
+    "ia800702.us.archive.org"
+  ]
+}

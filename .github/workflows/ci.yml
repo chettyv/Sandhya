@@ -36,11 +36,47 @@ jobs:
           node-version-file: .nvmrc
           cache: pnpm
 
+      - name: Repository backend and content gates
+        run: |
+          node scripts/verify-workspace-lock.mjs
+          node scripts/verify-release-contract.mjs
+          node scripts/verify-scheduler-contract.mjs
+          node scripts/verify-migration-security.mjs
+          node scripts/verify-edge-functions-syntax.mjs
+          node scripts/verify-database-contract.mjs
+          node scripts/verify-rag-backend.mjs --source-only
+          node scripts/verify-account-flow.mjs
+          node --experimental-transform-types scripts/verify-revenuecat-transfer.mjs
+          node --experimental-transform-types scripts/verify-notification-flow.mjs
+          node --experimental-transform-types scripts/verify-notification-worker.mjs
+          node --experimental-transform-types scripts/verify-push-token-flow.mjs
+          node --experimental-transform-types scripts/generate-authored-catalog-migration.mjs --check
+          node scripts/verify-content-catalog.mjs
+          node scripts/verify-seed-content.mjs
+          node scripts/verify-source-trackers.mjs
+          git diff --check
+
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Validate canonical content
+        run: pnpm content:validate
+
+      - name: Full backend verification
+        run: node scripts/verify-backend.mjs
+
       - name: Build (workspace)
         run: pnpm -r run build
+
+      - name: RAG artifact gates
+        run: |
+          node packages/rag-pipeline/dist/prepare-corpus.js content/_staging/raw content/_staging/prepared/rag-corpus.jsonl
+          node packages/rag-pipeline/dist/audit-prepared.js content/_staging/prepared/rag-corpus.jsonl
+          node packages/rag-pipeline/dist/evaluate.js --validate-only content/_staging/evals/rag-eval.example.jsonl
+          node packages/rag-pipeline/dist/ingest-prepared.js content/_staging/prepared/rag-corpus.jsonl --dry-run --allow-staging
+          pnpm rag:prepare:canonical
+          pnpm rag:audit:canonical
+          pnpm rag:ingest:canonical:dry-run
 
       - name: Typecheck
         run: pnpm typecheck
@@ -49,10 +85,16 @@ jobs:
         run: pnpm lint
 
       - name: Format check
-        run: pnpm format:check
+        run: pnpm format:check:changed
+        env:
+          FORMAT_BASE_SHA: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
+          FORMAT_HEAD_SHA: ${{ github.sha }}
 
       - name: Test
         run: pnpm test
+
+      - name: Secret scan
+        run: pnpm secrets:scan
 
       - name: Commitlint (PR only)
         if: github.event_name == 'pull_request'

@@ -1,0 +1,196 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710102.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.188973"
+      },
+      {
+        "server": "dn760008.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.188973"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710102.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.188973"
+      }
+    ]
+  },
+  "created": 1783203859,
+  "d1": "ia600800.us.archive.org",
+  "d2": "ia800800.us.archive.org",
+  "dir": "/0/items/in.ernet.dli.2015.188973",
+  "files": [
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_jp2.zip",
+      "mtime": "1489805185",
+      "size": "123044",
+      "md5": "d7b93a36b5db44b36e77a5536384a074",
+      "crc32": "57bce846",
+      "sha1": "837da261e8e4eb6fd66a14ad485a05127dbed775"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii.pdf",
+      "source": "original",
+      "mtime": "1484684997",
+      "size": "69352586",
+      "md5": "de29c88955dacf17bc5d1721ffe8f7ef",
+      "crc32": "3fe44e3c",
+      "sha1": "54ef5cda96d4022c8a36f16f4d21f91d56ac3bf0",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_jp2.zip",
+      "mtime": "1489814692",
+      "size": "12928067",
+      "md5": "48c40e3de54d1a1fab88fdbbff228396",
+      "crc32": "438f0697",
+      "sha1": "d238b8e50ed80cc2b3975cf2cf9dc4b78d436e45"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_djvu.xml",
+      "mtime": "1489816769",
+      "size": "780815",
+      "md5": "6deaf64345b8ebb5fef08e744f7cf537",
+      "crc32": "09ae5d26",
+      "sha1": "692a0464de454338e9a23505512acf0d57d22226"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_abbyy.gz",
+      "mtime": "1489814886",
+      "size": "8032858",
+      "md5": "78f808a8134f7c91ae834ad1b42172b3",
+      "crc32": "4e10eeb6",
+      "sha1": "df1960445977f3c852046579a2aee0612eaf8e4d"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii.pdf",
+      "mtime": "1489805113",
+      "size": "516707614",
+      "md5": "51f586e7ff678cf41a087b1268377a69",
+      "crc32": "1aaf0bb2",
+      "sha1": "c7c6fc4589d509ba7b582399b5f226b2af7173ad",
+      "filecount": "462"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_djvu.xml",
+      "mtime": "1489816780",
+      "size": "138727",
+      "md5": "a236c764c76f1397d1775c0e2d68c6f1",
+      "crc32": "35ff2b3f",
+      "sha1": "15eea0d1fe9d05792ba8e140b1ff1d46ddb7d569"
+    },
+    {
+      "name": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.188973.The-Hymns-Of-The-Atharva---Veda-Volii_djvu.xml",
+      "mtime": "1489816762",
+      "size": "62853000",
+      "md5": "fe5d6a493de9de9f1eef45e1ac84b91f",
+      "crc32": "81cd20ec",
+      "sha1": "b25bd1fbf3394d91427f9f1629bd7edba588f7dc"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1540100720",
+      "size": "3800",
+      "md5": "1bcafe3b117860862b7e3cf8917d1141",
+      "crc32": "18e86e35",
+      "sha1": "32ce41773d521b3e32b64b2e997f809e7a91f1d0",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.188973_archive.torrent",
+      "source": "metadata",
+      "btih": "5319e0b88d33a36c601c5a92029678aa46f3adf3",
+      "mtime": "1563258578",
+      "size": "29015",
+      "md5": "30d82c00cdf48028c7dc4b3e122b7880",
+      "crc32": "0b34d85e",
+      "sha1": "090131f21d9c9e0b37aa9cf9069d80607722398f",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.188973_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "d0753c97dcfe8412a4ecf6338383fdde",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.188973_meta.sqlite",
+      "source": "original",
+      "mtime": "1484685015",
+      "size": "15360",
+      "md5": "1308dc41f3dd6228b7d6236b38671a1e",
+      "crc32": "138c29fd",
+      "sha1": "7a00c575d5ccc8130906a7c2b2b3c1fdcfb651eb",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.188973_meta.xml",
+      "source": "original",
+      "mtime": "1563258571",
+      "size": "2083",
+      "format": "Metadata",
+      "md5": "9fcd3396646f12812d642fc7cd737ba3",
+      "crc32": "5df49753",
+      "sha1": "41770415e2962e73be83cbd0ea4f15a2f6bba7a9"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1725719881,
+  "item_size": 670966969,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.188973",
+    "creator": "Ralph T.h. Griffith",
+    "date": "1917",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/188973\" rel=\"nofollow\">Digital Library of India Item 2015.188973</a></p><p>dc.contributor.author: Ralph T.h. Griffith<br />dc.date.accessioned: 2015-07-07T22:35:49Z<br />dc.date.available: 2015-07-07T22:35:49Z<br />dc.date.digitalpublicationdate: 2022-07-07<br />dc.date.citation: 1917<br />dc.identifier.barcode: 5990010112033<br />dc.identifier.origpath: /rawdataupload/upload/0112/035<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/188973<br />dc.description.scanningcentre: IIIT, Allahabad<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 462<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher: E.j. Lazarus Amp Co., Benares<br />dc.rights: Out_of_copyright<br />dc.source.library: University Liberey  Allahabad<br />dc.subject.classification: Literture<br />dc.title: The Hymns Of The Atharva - Veda Vol.ii<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "IIIT",
+    "title": "The Hymns Of The Atharva - Veda Vol.ii",
+    "publicdate": "2017-01-17 20:29:59",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-17 20:29:59",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.188973",
+    "identifier-ark": "ark:/13960/t9p323p2f",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906304_32",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ]
+  },
+  "server": "ia600800.us.archive.org",
+  "uniq": 173515724,
+  "workable_servers": [
+    "ia600800.us.archive.org",
+    "ia800800.us.archive.org"
+  ]
+}

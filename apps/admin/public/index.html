@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Dharma Daily Admin</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        color: #241b16;
+        background: #fbf7f2;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        align-items: center;
+        padding: 1rem 5vw;
+        background: #542c1f;
+        color: #fff8ef;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 1.15rem;
+      }
+      main {
+        width: min(1180px, 90vw);
+        margin: 2rem auto 4rem;
+      }
+      .card {
+        background: #fff;
+        border: 1px solid #e4d8cd;
+        border-radius: 12px;
+        padding: 1.25rem;
+        box-shadow: 0 8px 24px #542c1f0d;
+        margin-bottom: 1rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1rem;
+      }
+      label {
+        display: grid;
+        gap: 0.35rem;
+        font-weight: 650;
+        font-size: 0.9rem;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        border: 1px solid #cdbeb2;
+        border-radius: 8px;
+        padding: 0.65rem 0.7rem;
+        background: #fff;
+        color: inherit;
+        font: inherit;
+      }
+      textarea {
+        min-height: 10rem;
+        resize: vertical;
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 0.85rem;
+      }
+      button {
+        border: 0;
+        border-radius: 8px;
+        padding: 0.65rem 0.9rem;
+        background: #b94e24;
+        color: white;
+        font: inherit;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      button.secondary {
+        background: #eee4da;
+        color: #542c1f;
+      }
+      button.danger {
+        background: #9b2525;
+      }
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        align-items: center;
+      }
+      .muted {
+        color: #6e625b;
+      }
+      .error {
+        color: #9b2525;
+        font-weight: 650;
+      }
+      .success {
+        color: #236a41;
+        font-weight: 650;
+      }
+      .hidden {
+        display: none !important;
+      }
+      nav {
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+      }
+      nav button[aria-selected="true"] {
+        background: #542c1f;
+      }
+      article {
+        border-top: 1px solid #eadfd6;
+        padding: 1rem 0;
+      }
+      article:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+      pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+        background: #f5eee8;
+        border-radius: 8px;
+        padding: 0.75rem;
+        max-height: 16rem;
+        overflow: auto;
+      }
+      .pill {
+        display: inline-block;
+        border-radius: 999px;
+        padding: 0.2rem 0.55rem;
+        background: #f0e1d4;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+      @media (max-width: 600px) {
+        header {
+          padding: 1rem 5vw;
+        }
+        main {
+          width: 94vw;
+          margin-top: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Dharma Daily · Admin</h1>
+      <button id="sign-out" class="secondary hidden">Sign out</button>
+    </header>
+    <main>
+      <section id="setup" class="card">
+        <h2>Connect</h2>
+        <p class="muted">
+          Use the project URL and publishable anon key. A service-role key is never accepted or
+          needed here.
+        </p>
+        <div class="grid">
+          <label
+            >Supabase URL<input
+              id="supabase-url"
+              type="url"
+              autocomplete="url"
+              placeholder="https://project.supabase.co"
+          /></label>
+          <label
+            >Publishable anon key<input id="supabase-key" type="password" autocomplete="off"
+          /></label>
+        </div>
+        <hr />
+        <div class="grid">
+          <label>Admin email<input id="admin-email" type="email" autocomplete="email" /></label>
+          <label id="otp-label" class="hidden"
+            >One-time code<input id="otp" inputmode="numeric" autocomplete="one-time-code"
+          /></label>
+        </div>
+        <div class="actions">
+          <button id="send-otp">Send sign-in code</button
+          ><button id="verify-otp" class="hidden">Verify code</button>
+        </div>
+        <p id="auth-status" class="muted" role="status"></p>
+      </section>
+
+      <section id="workspace" class="hidden">
+        <nav aria-label="Admin sections">
+          <button data-tab="dashboard" aria-selected="true">Dashboard</button
+          ><button data-tab="feedback" aria-selected="false">Feedback</button
+          ><button data-tab="content" aria-selected="false">Curated content</button
+          ><button data-tab="cache" aria-selected="false">Cache</button
+          ><button data-tab="users" aria-selected="false">Users</button>
+        </nav>
+        <section id="dashboard-panel" class="card">
+          <div class="actions">
+            <h2 style="margin-right: auto">Operations dashboard</h2>
+            <button id="load-dashboard">Refresh</button>
+          </div>
+          <p id="dashboard-status" class="muted"></p>
+          <pre id="dashboard-output">Sign in to load operational metrics.</pre>
+        </section>
+        <section id="feedback-panel" class="card">
+          <div class="actions">
+            <h2 style="margin-right: auto">Feedback queue</h2>
+            <select id="feedback-status">
+              <option value="pending">Pending</option>
+              <option value="reviewed">Reviewed</option>
+              <option value="fixed">Fixed</option></select
+            ><button id="load-feedback">Refresh</button>
+          </div>
+          <p id="feedback-status-message" class="muted"></p>
+          <div id="feedback-list"></div>
+        </section>
+        <section id="content-panel" class="card hidden">
+          <div class="actions">
+            <h2 style="margin-right: auto">Curated content</h2>
+            <select id="content-resource">
+              <option value="daily_reflections">Daily reflections</option>
+              <option value="festivals">Festivals</option>
+              <option value="practice_guides">Practice guides</option>
+              <option value="concepts">Concepts</option>
+              <option value="deities">Deities</option></select
+            ><button id="load-content">Refresh</button
+            ><button id="new-content" class="secondary">New row</button>
+          </div>
+          <p class="muted">
+            Rows are edited as JSON. The Edge Function strips unknown fields and keeps
+            database/service credentials server-side.
+          </p>
+          <div id="content-list"></div>
+        </section>
+        <section id="cache-panel" class="card hidden">
+          <div class="actions">
+            <h2 style="margin-right: auto">Answer cache</h2>
+            <button id="load-cache">Refresh</button>
+          </div>
+          <p id="cache-status" class="muted"></p>
+          <div id="cache-list"></div>
+        </section>
+        <section id="users-panel" class="card hidden">
+          <div class="actions">
+            <h2 style="margin-right: auto">Users</h2>
+            <button id="load-users">Refresh</button>
+          </div>
+          <p id="users-status" class="muted"></p>
+          <div id="users-list"></div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,261 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721303.ca.archive.org",
+        "dir": "/0/items/nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721303.ca.archive.org",
+        "dir": "/0/items/nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission"
+      }
+    ]
+  },
+  "created": 1783292008,
+  "d1": "ia600107.us.archive.org",
+  "d2": "ia800107.us.archive.org",
+  "dir": "/12/items/nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission",
+  "files": [
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission.pdf",
+      "source": "original",
+      "mtime": "1739475431",
+      "size": "118646772",
+      "md5": "1ed50c3f0d2d0121eb61a76ae871bd05",
+      "crc32": "2f03bd8c",
+      "sha1": "1a09a7f75f883f3b9a4f04742d4416c3111ee337",
+      "format": "Text PDF"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_chocr.html.gz",
+      "source": "derivative",
+      "ocr": "tesseract 5.3.0-6-g76ae",
+      "ocr_parameters": "lang-eng;lang-Latin;two-pass-disabled;pass-dpi-disabled;autonomous-mode-enabled;binarisation-method-otsu",
+      "ocr_module_version": "0.0.21",
+      "ocr_autonomous": "true",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "0.9954",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "chOCR",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_jp2.zip",
+      "mtime": "1739478879",
+      "size": "5648704",
+      "md5": "cad902ceef149fcec015b9b6f5d9d620",
+      "crc32": "f5b909c8",
+      "sha1": "8b49ffaf8d7d43a8176f4fbddb58c311b8615c8a"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_djvu.xml",
+      "mtime": "1739478978",
+      "size": "410210",
+      "md5": "94a08a2289a8ca9a5b4582799bb94bc1",
+      "crc32": "c69a9321",
+      "sha1": "d18dcb42772ece8bb50ddba9b96bf06b859a0ca8"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr.html",
+      "mtime": "1739478922",
+      "size": "5595013",
+      "md5": "31ae6f334f6b7c6c7d7443473eac2753",
+      "crc32": "4cc29291",
+      "sha1": "97e9e7048cd70a65fc943f0cab2990d78f9620ab"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_parameters": "lang-eng;lang-Latin;two-pass-disabled;pass-dpi-disabled;autonomous-mode-enabled;binarisation-method-otsu",
+      "ocr_module_version": "0.0.21",
+      "ocr_autonomous": "true",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "0.9954",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "hOCR",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_chocr.html.gz",
+      "mtime": "1739478905",
+      "size": "11097717",
+      "md5": "3a8a03145f6aa29bc2a678ad8add5bab",
+      "crc32": "e12be334",
+      "sha1": "d06d4dc86cff30a10c09214d2759f71bcc105841"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr.html",
+      "mtime": "1739478934",
+      "size": "3977",
+      "md5": "16799ad64266337e5ea3f83985e04d9f",
+      "crc32": "98d1829f",
+      "sha1": "652ab0e9c033f6bd328ccd198f9c67a7f77a1b2a"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "157",
+      "word_conf_11_20": "102",
+      "word_conf_21_30": "154",
+      "word_conf_31_40": "225",
+      "word_conf_41_50": "333",
+      "word_conf_51_60": "452",
+      "word_conf_61_70": "524",
+      "word_conf_71_80": "1061",
+      "word_conf_81_90": "3198",
+      "word_conf_91_100": "62940",
+      "format": "OCR Search Text",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr.html",
+      "mtime": "1739478957",
+      "size": "135071",
+      "md5": "ba0f8307cfc021159329b3476938c885",
+      "crc32": "9788d8e1",
+      "sha1": "af444a014bb1a89110dba45e898f2e66e8abdbf0"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission.pdf",
+      "mtime": "1739476181",
+      "size": "76262357",
+      "md5": "5c31654eb42e0515166e9e689c7d7229",
+      "crc32": "325d9e16",
+      "sha1": "821e64f28f05ae3e5e58755210a8e1415463091b",
+      "filecount": "336"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "82",
+      "format": "Page Numbers JSON",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_hocr.html",
+      "mtime": "1739479125",
+      "size": "56672",
+      "md5": "dd82764489cc43fc5d6832415f7ca728",
+      "crc32": "2a5bd793",
+      "sha1": "8f6fd0371cb9ab703a46a244d6269f2f21cde8f0"
+    },
+    {
+      "name": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission_djvu.xml",
+      "mtime": "1739479125",
+      "size": "118144",
+      "md5": "257de56f1cae4cb5f7d4d62e7939abca",
+      "crc32": "e4431fa0",
+      "sha1": "750635bab1d0df752829cf26410f041ccb409563"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1778473417",
+      "size": "16392",
+      "md5": "e9e62755f36ad9b185a6f082e55f8182",
+      "crc32": "b23bfb57",
+      "sha1": "993a9710394e888235c21bac7ee437a4bcc852d6",
+      "format": "Item Tile"
+    },
+    {
+      "name": "nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission_archive.torrent",
+      "source": "metadata",
+      "btih": "49afa6a56b6b3ac1dd0d2e3a843af6a86bba9812",
+      "mtime": "1778473419",
+      "size": "12753",
+      "md5": "8d6d7ff00e0123c6cd4fd2b2432fbda5",
+      "crc32": "ee097a75",
+      "sha1": "bca9228f2f27da04ba685e95f0e0a1e0c0b86fc0",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "261225dac10a2b7e2478a9f3b7cc3c95",
+      "summation": "md5"
+    },
+    {
+      "name": "nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission_meta.sqlite",
+      "source": "original",
+      "mtime": "1739475469",
+      "size": "20480",
+      "md5": "ebbffb374f9e3da20bac3c236dcd03dc",
+      "crc32": "91555a6f",
+      "sha1": "b4d14647991df5e6b65ac14ca6ff52d22f7271b9",
+      "format": "Metadata"
+    },
+    {
+      "name": "nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission_meta.xml",
+      "source": "original",
+      "mtime": "1778473415",
+      "size": "1982",
+      "md5": "cad3df16c9f5dcf6820a1342a601fe3a",
+      "crc32": "0900d362",
+      "sha1": "a6dda9ccb8afc1c524680c4d0628305cf3f416aa",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 15,
+  "item_last_updated": 1778473420,
+  "item_size": 218026244,
+  "metadata": {
+    "identifier": "nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission",
+    "mediatype": "texts",
+    "collection": [
+      "folkscanomy_religion",
+      "folkscanomy"
+    ],
+    "creator": "Ramakrishna Mission",
+    "description": "Sri Sri Anandamayee Ashram Varanasi Collection\n\nFilename: 'Spiritual Talks By Swami Brahmananda 1911 - Ramakrishna Mission'",
+    "licenseurl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "scanner": "Internet Archive HTML5 Uploader 1.7.0",
+    "subject": [
+      "Funded-By-IKS-MoE",
+      "IKS_Anandamayee",
+      "Sri Sri Anandamayee Ashram Varanasi Collection",
+      "श्री श्री आनन्दमयी आश्रम"
+    ],
+    "title": "Spiritual Talks By Swami Brahmananda 1911 Ramakrishna Mission",
+    "uploader": "indiclibrary17@gmail.com",
+    "publicdate": "2025-02-13 19:37:35",
+    "addeddate": "2025-02-13 19:37:35",
+    "curation": "[curator]validator@archive.org[/curator][date]20250213193810[/date][comment]checked for malware[/comment]",
+    "identifier-access": "http://archive.org/details/nmim_spiritual-talks-by-swami-brahmananda-1911-ramakrishna-mission",
+    "identifier-ark": "ark:/13960/s2tr3qc14v7",
+    "ppi": "300",
+    "ocr": "tesseract 5.3.0-6-g76ae",
+    "ocr_parameters": "-l eng+Latin",
+    "ocr_module_version": "0.0.21",
+    "ocr_autonomous": "true",
+    "ocr_detected_script": "Latin",
+    "ocr_detected_script_conf": "0.9954",
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "82",
+    "page_number_module_version": "1.0.5",
+    "language": "eng",
+    "collection_added": "folkscanomy"
+  },
+  "server": "ia600107.us.archive.org",
+  "uniq": 391606911,
+  "workable_servers": [
+    "ia600107.us.archive.org",
+    "ia800107.us.archive.org"
+  ]
+}

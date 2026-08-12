@@ -1,5 +1,6 @@
 # Dependencies
 node_modules/
+.pnpm-store/
 .pnp.*
 .yarn/
 
@@ -58,6 +59,7 @@ supabase/.env
 # Content pipeline scratch
 content/.cache/
 content/.tmp/
+content/_staging/prepared/
 
 # Misc
 *.tgz

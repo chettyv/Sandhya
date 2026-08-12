@@ -1,0 +1,265 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721301.ca.archive.org",
+        "dir": "/0/items/gita-bhasya"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721301.ca.archive.org",
+        "dir": "/0/items/gita-bhasya"
+      }
+    ]
+  },
+  "created": 1783339082,
+  "d1": "ia601408.us.archive.org",
+  "d2": "ia801408.us.archive.org",
+  "dir": "/18/items/gita-bhasya",
+  "files": [
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya.pdf",
+      "source": "original",
+      "mtime": "1736479638",
+      "size": "21890615",
+      "md5": "31d412cb6abc566254b725e4ce3bbaf0",
+      "crc32": "0b7ba4e1",
+      "sha1": "69024dcbc9117157bf62fd0694cdf25cbade9a96",
+      "format": "Text PDF",
+      "viruscheck": "1736479994"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_chocr.html.gz",
+      "source": "derivative",
+      "ocr": "tesseract 5.3.0-6-g76ae",
+      "ocr_parameters": "lang-eng;two-pass-disabled;pass-dpi-disabled;autonomous-mode-disabled;binarisation-method-otsu",
+      "ocr_module_version": "0.0.21",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "0.9790",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "chOCR",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_jp2.zip",
+      "mtime": "1736484239",
+      "size": "13382109",
+      "md5": "fb732e4547b5d253a03a64b4120895dd",
+      "crc32": "ae24fe08",
+      "sha1": "06a6c2c714ca1dfd747ea1f4f1167d7a957b6b9b"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_djvu.xml",
+      "mtime": "1736484902",
+      "size": "945764",
+      "md5": "55af52df63955beb7cab2f1003fc37d4",
+      "crc32": "9f723baa",
+      "sha1": "0f5705ca7427cc150ca521e31ef1c6ce8a72bccc"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr.html",
+      "mtime": "1736484565",
+      "size": "12360867",
+      "md5": "c8ab76869e9a131ab3d9c72388acd61b",
+      "crc32": "8afecd92",
+      "sha1": "5495b404b4dbd8dae4aeccbe32d7a70244bbd791"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_parameters": "lang-eng;two-pass-disabled;pass-dpi-disabled;autonomous-mode-disabled;binarisation-method-otsu",
+      "ocr_module_version": "0.0.21",
+      "ocr_detected_script": "Latin",
+      "ocr_detected_script_conf": "0.9790",
+      "ocr_detected_lang": "en",
+      "ocr_detected_lang_conf": "1.0000",
+      "format": "hOCR",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_chocr.html.gz",
+      "mtime": "1736484450",
+      "size": "23045708",
+      "md5": "cd25a028f98b5e303f8e1fedc963c0fd",
+      "crc32": "9d6a6707",
+      "sha1": "86f3876fa1e6197a0f9b05d4db5acc943b3c33c2"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr.html",
+      "mtime": "1736484695",
+      "size": "6867",
+      "md5": "449d04fc31f0b9531f26376216aabbd7",
+      "crc32": "73d7fe95",
+      "sha1": "b42776e5d838e4c374a6725dffcc9c21bdd68fa0"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "2684",
+      "word_conf_11_20": "1228",
+      "word_conf_21_30": "1656",
+      "word_conf_31_40": "1986",
+      "word_conf_41_50": "2217",
+      "word_conf_51_60": "2409",
+      "word_conf_61_70": "2974",
+      "word_conf_71_80": "4242",
+      "word_conf_81_90": "11303",
+      "word_conf_91_100": "118570",
+      "format": "OCR Search Text",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr.html",
+      "mtime": "1736484853",
+      "size": "366836",
+      "md5": "daa7835be0315c4bf1e8d468c5239ae3",
+      "crc32": "49455e41",
+      "sha1": "8b69cdfd02029090000151af3d122b73f9aee841"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya.pdf",
+      "mtime": "1736482288",
+      "size": "294450688",
+      "md5": "e9dd832d7ab2bc3e22db22f57447f141",
+      "crc32": "064f4e3e",
+      "sha1": "72f5cd0c5c38938801c30d2e81cc4e5a75f44357",
+      "filecount": "571"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "93",
+      "format": "Page Numbers JSON",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_hocr.html",
+      "mtime": "1736485435",
+      "size": "96284",
+      "md5": "6c356e36fac527b89836f8fb70000ea4",
+      "crc32": "a380a777",
+      "sha1": "83c3611b33fcb13e2726d718fcc4cf15a2f3193a"
+    },
+    {
+      "name": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "A. Govindacharya Svamin - Śrī Bhagavad-gītā with Śrī Rāmānujācārya’s Gītā Bhāṣya_djvu.xml",
+      "mtime": "1736485436",
+      "size": "200893",
+      "md5": "3c84e4caece66f39d9446b550f09ca99",
+      "crc32": "988b6881",
+      "sha1": "94a5af83ceea32cf42d0343de6ce4303c4456e52"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1736485524",
+      "size": "13144",
+      "md5": "c1b773c4e1168daf96898bac24fccbe8",
+      "crc32": "4e920fbb",
+      "sha1": "4408b15d2949b32b5f54ccc315d76b1ec30699f3",
+      "format": "Item Tile"
+    },
+    {
+      "name": "gita-bhasya_archive.torrent",
+      "source": "metadata",
+      "btih": "7e8eae5829399801ce4c716079398b42c7d300e5",
+      "mtime": "1767514302",
+      "size": "18291",
+      "md5": "18bf07ebc1046263e021a6d472b78654",
+      "crc32": "c6d96d43",
+      "sha1": "3be9b155e62ccabb96110c744823ea9a304c70dd",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "gita-bhasya_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "ecc660b93c7d8df479d20b60e6a51ab9",
+      "summation": "md5"
+    },
+    {
+      "name": "gita-bhasya_meta.sqlite",
+      "source": "original",
+      "mtime": "1736479671",
+      "size": "20480",
+      "md5": "fb5fdbf7ffa4f53b808c9d88e5eff024",
+      "crc32": "0b588745",
+      "sha1": "44920948d4e3f2d7eb9fd61235a66435dc634219",
+      "format": "Metadata"
+    },
+    {
+      "name": "gita-bhasya_meta.xml",
+      "source": "original",
+      "mtime": "1767514298",
+      "size": "1971",
+      "md5": "56e9554a9fe73b449375836175f32e15",
+      "crc32": "85ee3daa",
+      "sha1": "6fe38067b5a93674adfe9fa6cbc16ea777a24c91",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 15,
+  "item_last_updated": 1767514303,
+  "item_size": 366800517,
+  "metadata": {
+    "identifier": "gita-bhasya",
+    "mediatype": "texts",
+    "collection": [
+      "folkscanomy_religion_bhagavad_gita",
+      "folkscanomy_religion",
+      "folkscanomy"
+    ],
+    "date": "1898",
+    "description": "One of the best English editions of Śrī Bhagavad Gītā, with Śrī Rāmānujācārya’s Gītā Bhāṣya, translated by the pioneer A. Govindacharya Svamin. Published in 1898.",
+    "language": "eng",
+    "scanner": "Internet Archive HTML5 Uploader 1.7.0",
+    "subject": [
+      "Bhagavad Gītā",
+      "Rāmānujācārya",
+      "Ramanuja",
+      "Śrī",
+      "Alkondavilli",
+      "Govindacharya"
+    ],
+    "title": "A. Govindacharya Svamin - Śrī Bhagavad Gītā With Śrī Rāmānujācārya’s Gītā Bhāṣya",
+    "uploader": "sehnsucht7@outlook.com",
+    "publicdate": "2025-01-10 03:27:41",
+    "addeddate": "2025-01-10 03:27:41",
+    "curation": "[curator]validator@archive.org[/curator][date]20250110033314[/date][comment]checked for malware[/comment]",
+    "identifier-access": "http://archive.org/details/gita-bhasya",
+    "identifier-ark": "ark:/13960/s2qgt6fqk2w",
+    "ppi": "367",
+    "ocr": "tesseract 5.3.0-6-g76ae",
+    "ocr_parameters": "-l eng",
+    "ocr_module_version": "0.0.21",
+    "ocr_detected_script": "Latin",
+    "ocr_detected_script_conf": "0.9790",
+    "ocr_detected_lang": "en",
+    "ocr_detected_lang_conf": "1.0000",
+    "page_number_confidence": "93",
+    "page_number_module_version": "1.0.5",
+    "collection_added": [
+      "folkscanomy_religion",
+      "folkscanomy",
+      "additional_collections"
+    ]
+  },
+  "server": "ia801408.us.archive.org",
+  "uniq": 951597695,
+  "workable_servers": [
+    "ia801408.us.archive.org",
+    "ia601408.us.archive.org"
+  ]
+}

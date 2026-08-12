@@ -1,0 +1,309 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760104.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.279469"
+      },
+      {
+        "server": "dn790003.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.279469"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760104.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.279469"
+      },
+      {
+        "server": "dn790003.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.279469"
+      }
+    ]
+  },
+  "created": 1783203539,
+  "d1": "ia601502.us.archive.org",
+  "d2": "ia801502.us.archive.org",
+  "dir": "/2/items/in.ernet.dli.2015.279469",
+  "files": [
+    {
+      "name": "2015.279469.Agni-Puranam.epub",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "EPUB",
+      "original": "2015.279469.Agni-Puranam_hocr.html",
+      "mtime": "1773934897",
+      "size": "1844249408",
+      "md5": "3759bbe6506618d3e4093db4a2cd3346",
+      "crc32": "8b054ac2",
+      "sha1": "4ea11fd83f4b577f999fc27ca3e4ee91e9bf351e"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.279469.Agni-Puranam_jp2.tar",
+      "mtime": "1488081612",
+      "size": "330652",
+      "md5": "9cbe897715c4c0a980437d9d141dbc6d",
+      "crc32": "a01bd116",
+      "sha1": "ce5e0dfbb1ed27d4a3b338aa1891ed51afab5e65"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam.pdf",
+      "source": "original",
+      "mtime": "1484554732",
+      "size": "636259030",
+      "md5": "4e06499f3737c1dd2a1977a8d3e4f82f",
+      "crc32": "5d3470ef",
+      "sha1": "aae7a7b0a93b873621991cc2b749fdbfae40f432",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.279469.Agni-Puranam_jp2.tar",
+      "mtime": "1488108379",
+      "size": "20921473",
+      "md5": "ddc59650b02ab3642fec4fcdbc9d24bf",
+      "crc32": "bfd342cd",
+      "sha1": "1654e43c35d6e47d97878443400667227757739f"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "2015.279469.Agni-Puranam_abbyy.gz",
+      "mtime": "1773933050",
+      "size": "17321877",
+      "md5": "0dc91abcc573442e611263b93377ad0b",
+      "crc32": "7e945120",
+      "sha1": "8e14a85987a02557d9c7f03c8a7a210c2305e724"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_cloth_detection.log",
+      "source": "derivative",
+      "format": "Cloth Cover Detection Log",
+      "original": "2015.279469.Agni-Puranam_scandata.xml",
+      "mtime": "1773942039",
+      "size": "561",
+      "md5": "ccfe827254dea2c883e6f8853fe12dc4",
+      "crc32": "e73b6601",
+      "sha1": "f219ab6e6630aff0b56cabc8a382092410331c6b"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.279469.Agni-Puranam_djvu.xml",
+      "mtime": "1773936332",
+      "size": "1411722",
+      "md5": "7b71c4b16cadda8405eac107e1ce2424",
+      "crc32": "c99cdf2b",
+      "sha1": "2abafebf83ae2fabc9c2f6d8083567593f470793"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.279469.Agni-Puranam_hocr.html",
+      "mtime": "1773933293",
+      "size": "16625998",
+      "md5": "f7860a03303e98a9e45b0e40a33d804c",
+      "crc32": "c7505031",
+      "sha1": "32d90789903e04a69fa088eb1d84bd0e5e592b2b"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "2015.279469.Agni-Puranam_chocr.html.gz",
+      "mtime": "1773933250",
+      "size": "31415307",
+      "md5": "56e85e40b565d14647d76018287d3df1",
+      "crc32": "ec909586",
+      "sha1": "05c4c39323f9f7314eb1d40aa33fc94d037b1878"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "2015.279469.Agni-Puranam_hocr.html",
+      "mtime": "1773933631",
+      "size": "8122",
+      "md5": "3e68563c6767e3d2d08d9ecc308b4bc1",
+      "crc32": "a5c59dc1",
+      "sha1": "eb2cf6e8dcaa8668523d439fb8413f2016f7e226"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "84276",
+      "word_conf_11_20": "63066",
+      "word_conf_21_30": "30713",
+      "word_conf_31_40": "15809",
+      "word_conf_41_50": "7784",
+      "word_conf_51_60": "3959",
+      "word_conf_61_70": "1728",
+      "word_conf_71_80": "743",
+      "word_conf_81_90": "356",
+      "word_conf_91_100": "7378",
+      "format": "OCR Search Text",
+      "original": "2015.279469.Agni-Puranam_hocr.html",
+      "mtime": "1773933706",
+      "size": "438830",
+      "md5": "ddc73e7fec238720700dcbe6e205234a",
+      "crc32": "eb8fab17",
+      "sha1": "b818f767638e60f6b1de32aebc7988b795090b1a"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_jp2.tar",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 Tar",
+      "original": "2015.279469.Agni-Puranam.pdf",
+      "mtime": "1488081453",
+      "size": "2931886080",
+      "md5": "c43483cfc49e379d13677d5fb8b83ff3",
+      "crc32": "ffb078e3",
+      "sha1": "d92ee198219b73b5e9f9f2c85386beb73e0ba177",
+      "filecount": "666"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "79",
+      "format": "Page Numbers JSON",
+      "original": "2015.279469.Agni-Puranam_hocr.html",
+      "mtime": "1773941081",
+      "size": "113949",
+      "md5": "a983a325a5ad22f8271223c49ae08141",
+      "crc32": "67313f03",
+      "sha1": "70a13f94f282d7436e88e82f6a60cace1a4597a6"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.279469.Agni-Puranam_djvu.xml",
+      "mtime": "1773941082",
+      "size": "221911",
+      "md5": "f754578d77304a0bccac02011cc8586e",
+      "crc32": "8a869da0",
+      "sha1": "06887708cc38f20a789ab7d84ab4eac19533282e"
+    },
+    {
+      "name": "2015.279469.Agni-Puranam_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "2015.279469.Agni-Puranam_page_numbers.json",
+      "mtime": "1773950322",
+      "size": "323914702",
+      "md5": "22c2d783943d8d24e3201eb01aa77b36",
+      "crc32": "4419a3cd",
+      "sha1": "9f01ef9771a47f4f03e998c8b4b8fc7e00169861"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1773932839",
+      "size": "11575",
+      "md5": "8dc6c3960f09b4fac91b907e553aaede",
+      "crc32": "6c93f458",
+      "sha1": "ba1f0651c82354864eca04bdce4d0c38c27faf0b",
+      "format": "JPEG Thumb",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.279469_archive.torrent",
+      "source": "metadata",
+      "btih": "4b599dfb3f97fa069bda77a6ba4d2e9bf664de47",
+      "mtime": "1773951318",
+      "size": "61490",
+      "md5": "d2f4f44c77b6fafda162fa64069fe74e",
+      "crc32": "c6ef0d01",
+      "sha1": "7ea18c04bde8b9beb7c33501cfcd204b57e0afbb",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.279469_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "dc3a6779fb120c5ec4c47f730c3cbea8",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.279469_meta.sqlite",
+      "source": "original",
+      "mtime": "1484554758",
+      "size": "15360",
+      "md5": "aced4f256d53bca86da78b51a2867161",
+      "crc32": "de066630",
+      "sha1": "b6fe7a2ca496387b9434fcdce6b746ac208a4a1b",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.279469_meta.xml",
+      "source": "original",
+      "mtime": "1773951315",
+      "size": "2400",
+      "format": "Metadata",
+      "md5": "5bfb483041aa0a7ac2bf32d28d2c9136",
+      "crc32": "8e56c651",
+      "sha1": "4380a2ee3a4b29eed59e704022c629391adc53a6"
+    }
+  ],
+  "files_count": 20,
+  "item_last_updated": 1773951318,
+  "item_size": 5825210447,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.279469",
+    "creator": "Manmatha Nath Dutt",
+    "date": "1903",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/279469\" rel=\"ugc nofollow\">Digital Library of India Item 2015.279469</a></p><p>dc.contributor.author: Manmatha Nath Dutt<br />dc.date.accessioned: 2015-08-04T15:55:36Z<br />dc.date.available: 2015-08-04T15:55:36Z<br />dc.date.citation: 1903<br />dc.identifier.barcode: 05990010900681<br />dc.identifier.origpath: /data58/upload/0102/398<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/279469<br />dc.description.scannerno: 20003265<br />dc.description.scanningcentre: IIIT, Allahabad<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 666<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.rights: In public domain<br />dc.source.library: Central Archaeological Library_asi_new Delhi<br />dc.subject.classification: Literature<br />dc.title: Agni Puranam Vol I<br />dc.type: ptiff<br />dc.type: pdf<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "IIIT",
+    "title": "Agni Puranam Vol I",
+    "publicdate": "2017-01-16 08:18:53",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-16 08:18:53",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.279469",
+    "identifier-ark": "ark:/13960/t3jx3j04k",
+    "ppi": "600",
+    "repub_state": "4",
+    "backup_location": "ia906304_24",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "79",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia801502.us.archive.org",
+  "uniq": 977914806,
+  "workable_servers": [
+    "ia801502.us.archive.org",
+    "ia601502.us.archive.org"
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "name": "@dharma-daily/content-tools",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "Content ingestion CLI: validate, chunk, embed, and insert Markdown corpus files into Supabase.",
+  "description": "Rights-aware canonical Markdown content validator for the Dharma Daily corpus.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

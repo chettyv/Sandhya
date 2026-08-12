@@ -1,0 +1,309 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.237563"
+      },
+      {
+        "server": "dn790003.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.237563"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760109.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.237563"
+      },
+      {
+        "server": "dn790003.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.237563"
+      }
+    ]
+  },
+  "created": 1783273579,
+  "d1": "ia601807.us.archive.org",
+  "d2": "ia801807.us.archive.org",
+  "dir": "/32/items/in.ernet.dli.2015.237563",
+  "files": [
+    {
+      "name": "2015.237563.Shrimad-Bhagavad.epub",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "EPUB",
+      "original": "2015.237563.Shrimad-Bhagavad_hocr.html",
+      "mtime": "1769419886",
+      "size": "301686322",
+      "md5": "17b899ae24f698ec68d217e663a246b4",
+      "crc32": "584d45d2",
+      "sha1": "c4435681206f866b530ff332ac88a627258ac096"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.237563.Shrimad-Bhagavad_jp2.zip",
+      "mtime": "1489144449",
+      "size": "138598",
+      "md5": "43f1108ca3065f508014e8712e78791e",
+      "crc32": "cc064c93",
+      "sha1": "4ffcfa7f13c812ea8965d2c888ec12dcc3eea9fc"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad.pdf",
+      "source": "original",
+      "mtime": "1484495704",
+      "size": "19706019",
+      "md5": "3b99425c6b6fa3bb494d61c38279ef5d",
+      "crc32": "b432afa5",
+      "sha1": "995993dc12e0fe65daae64c5c398b8be07218660",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.237563.Shrimad-Bhagavad_jp2.zip",
+      "mtime": "1489148401",
+      "size": "6328939",
+      "md5": "b20811975e88d66decfeb68439a4b1e6",
+      "crc32": "fdaf1ea1",
+      "sha1": "ce48200d2e5b9580a430fde61896e051c832c841"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "2015.237563.Shrimad-Bhagavad_abbyy.gz",
+      "mtime": "1769419556",
+      "size": "5316487",
+      "md5": "a726f454478654cb32f1a9966a2c5e19",
+      "crc32": "bf800529",
+      "sha1": "ef6779c3a618a6b1b0b795f377ba83b702cbf649"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_cloth_detection.log",
+      "source": "derivative",
+      "format": "Cloth Cover Detection Log",
+      "original": "2015.237563.Shrimad-Bhagavad_scandata.xml",
+      "mtime": "1769420284",
+      "size": "577",
+      "md5": "05482cbea88837dcea5d0c86c4349d48",
+      "crc32": "c904c0e6",
+      "sha1": "d83856650eec46e90737a362091a5440bd337594"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.237563.Shrimad-Bhagavad_djvu.xml",
+      "mtime": "1769419905",
+      "size": "455279",
+      "md5": "2bd7c6586cf51f5636fd1db294ef3838",
+      "crc32": "e238c360",
+      "sha1": "338dac85f5190355f3e752fb9912fe605ea58f60"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.237563.Shrimad-Bhagavad_hocr.html",
+      "mtime": "1769419600",
+      "size": "5882597",
+      "md5": "90a933b9c277264c4a36322273e1ebef",
+      "crc32": "330e9517",
+      "sha1": "dc7bcb7a0779f3171da0391b832b3c785f865d25"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "2015.237563.Shrimad-Bhagavad_chocr.html.gz",
+      "mtime": "1769419588",
+      "size": "11771032",
+      "md5": "bc433d36a47f3e3f7b97c0ce21c40482",
+      "crc32": "974fd68d",
+      "sha1": "63c9db2c5890eff987e42b19e572c8aa8c056978"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "2015.237563.Shrimad-Bhagavad_hocr.html",
+      "mtime": "1769419608",
+      "size": "5468",
+      "md5": "713bcd5c665e500ce66d7ee76021dc1f",
+      "crc32": "856a2b7f",
+      "sha1": "3d96d49697f5c43111af970206037f56fb619b44"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "8819",
+      "word_conf_11_20": "983",
+      "word_conf_21_30": "1825",
+      "word_conf_31_40": "2844",
+      "word_conf_41_50": "4178",
+      "word_conf_51_60": "5826",
+      "word_conf_61_70": "7146",
+      "word_conf_71_80": "7540",
+      "word_conf_81_90": "6861",
+      "word_conf_91_100": "24296",
+      "format": "OCR Search Text",
+      "original": "2015.237563.Shrimad-Bhagavad_hocr.html",
+      "mtime": "1769419622",
+      "size": "157025",
+      "md5": "e597377208acf25f714626954922f171",
+      "crc32": "bd828f9f",
+      "sha1": "dd9bd21e8bb80f36614bba202f7ce7fe9ebe1697"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.237563.Shrimad-Bhagavad.pdf",
+      "mtime": "1489144425",
+      "size": "278390951",
+      "md5": "0c4d5626b031dd7efc965fde805269be",
+      "crc32": "97ae61f1",
+      "sha1": "72b01806ef766666052129b9b2c7111377c111a9",
+      "filecount": "459"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "100",
+      "format": "Page Numbers JSON",
+      "original": "2015.237563.Shrimad-Bhagavad_hocr.html",
+      "mtime": "1769420265",
+      "size": "77049",
+      "md5": "fa305cc297d5ac236208f52ab7b61c4e",
+      "crc32": "efef88db",
+      "sha1": "4f34382faf0ba492016e61bc057d98700498e6f4"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.237563.Shrimad-Bhagavad_djvu.xml",
+      "mtime": "1769420265",
+      "size": "153123",
+      "md5": "86f60bb58bd29154dd4ec5a84bed20a5",
+      "crc32": "031be257",
+      "sha1": "3127dc5b59010d61166a2fe1e3602fbee1052e62"
+    },
+    {
+      "name": "2015.237563.Shrimad-Bhagavad_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "2015.237563.Shrimad-Bhagavad_page_numbers.json",
+      "mtime": "1769421925",
+      "size": "23051026",
+      "md5": "de522881b95e0d04f6fa4112cdb6b405",
+      "crc32": "2b77f8e6",
+      "sha1": "c69c202d5b75c3c29dc28e12cbe276e9e15c7689"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1769419508",
+      "size": "8330",
+      "md5": "94042a4f89805c8e42f061cd563e7ab1",
+      "crc32": "919d92e6",
+      "sha1": "5ecad9e7bdff6ff5997a7a3049e427c5ad62863d",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.237563_archive.torrent",
+      "source": "metadata",
+      "btih": "189d567f50df4877b42866c9bded2fe93da5051a",
+      "mtime": "1769421994",
+      "size": "29590",
+      "md5": "16bc50f1c0b668f61078cd518b2d8d27",
+      "crc32": "6b72449c",
+      "sha1": "7801c7a2b9f5b1e3ede13d613283f039456d00bc",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.237563_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "9ef2167b8a4b3cc2b5c8e1085e495dbb",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.237563_meta.sqlite",
+      "source": "original",
+      "mtime": "1484495717",
+      "size": "15360",
+      "md5": "4321bab80fe684b2fc1dc9f438153fbc",
+      "crc32": "4550bff0",
+      "sha1": "f9b6ec255e2d2601198dbb7549652b85d5054d40",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.237563_meta.xml",
+      "source": "original",
+      "mtime": "1769421990",
+      "size": "2573",
+      "format": "Metadata",
+      "md5": "eeda2c5a74a16e91d131013c93bf0c29",
+      "crc32": "71d68b6b",
+      "sha1": "e762203e06cf98f66371c2d76e86f193f5eb8544"
+    }
+  ],
+  "files_count": 20,
+  "item_last_updated": 1769421994,
+  "item_size": 653176345,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.237563",
+    "creator": "Swarupananda Swami",
+    "date": "1909",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/237563\" rel=\"ugc nofollow\">Digital Library of India Item 2015.237563</a></p><p>dc.contributor.author: Swarupananda Swami<br />dc.date.accessioned: 2015-07-10T19:47:23Z<br />dc.date.available: 2015-07-10T19:47:23Z<br />dc.date.digitalpublicationdate: 2006-02-20<br />dc.date.citation: 1909<br />dc.identifier.barcode: 99999990134526<br />dc.identifier.origpath: /rawdataupload1/upload/0133/188<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/237563<br />dc.description.scanningcentre: C-DAC, Noida<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 459<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Advaita Ashrama, Calcutta<br />dc.rights: Out_of_copyright<br />dc.source.library: Lbs National Academy Of Administration<br />dc.subject.classification: Religion Theology<br />dc.subject.classification: Religions Of The Indian Subcontinent<br />dc.subject.classification: Hinduism Narrowly<br />dc.title: Shrimad Bhagavad Gita (1909)<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "C-DAC",
+    "title": "Shrimad Bhagavad Gita (1909)",
+    "publicdate": "2017-01-15 15:55:05",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-15 15:55:05",
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.237563",
+    "identifier-ark": "ark:/13960/t8tb69j02",
+    "ppi": "600",
+    "repub_state": "4",
+    "backup_location": "ia906304_21",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "100",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia601807.us.archive.org",
+  "uniq": 905383825,
+  "workable_servers": [
+    "ia601807.us.archive.org",
+    "ia801807.us.archive.org"
+  ]
+}

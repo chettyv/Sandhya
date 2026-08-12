@@ -1,0 +1,10 @@
+{
+  "work_id": "sanskritdocuments_sahasranama_index_metadata",
+  "title": "SanskritDocuments Sahasranama index",
+  "language": "Sanskrit",
+  "source_name": "SanskritDocuments",
+  "source_url": "https://sanskritdocuments.org/sanskrit/sahasranama/",
+  "status": "metadata_only",
+  "rights_note": "Category/index lead only. Site terms and per-file provenance must be reviewed before any commercial download or ingestion.",
+  "next_action": "Review SanskritDocuments reuse terms and then clear individual sahasranama files one by one."
+}

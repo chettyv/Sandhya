@@ -1,0 +1,200 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721507.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.283602"
+      },
+      {
+        "server": "dn760001.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.283602"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721507.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.283602"
+      },
+      {
+        "server": "dn760001.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.283602"
+      }
+    ]
+  },
+  "created": 1783291070,
+  "d1": "ia600408.us.archive.org",
+  "d2": "ia800408.us.archive.org",
+  "dir": "/15/items/in.ernet.dli.2015.283602",
+  "files": [
+    {
+      "name": "2015.283602.The-Parasra.gif",
+      "source": "derivative",
+      "format": "Animated GIF",
+      "original": "2015.283602.The-Parasra_jp2.zip",
+      "mtime": "1490052946",
+      "size": "300323",
+      "md5": "89afe204019afd5657e1d9578dce3b9e",
+      "crc32": "f5b9b671",
+      "sha1": "fbbae27979fecad766f7f0f42ee3bd5c75fe6a91"
+    },
+    {
+      "name": "2015.283602.The-Parasra.pdf",
+      "source": "original",
+      "mtime": "1484700023",
+      "size": "208332689",
+      "md5": "1bd9f7cab2a3124dc0d7f2471917e69f",
+      "crc32": "2627bc43",
+      "sha1": "318be4a9bda653a0df9872a37b025d9c132c22b9",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.283602.The-Parasra_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.283602.The-Parasra_jp2.zip",
+      "mtime": "1490060257",
+      "size": "7328273",
+      "md5": "cfc5b709d98d36a178e20913bf286e53",
+      "crc32": "dd7cf405",
+      "sha1": "0abd5cc620ba7bca094f4c77cc39a4bc70e4825c"
+    },
+    {
+      "name": "2015.283602.The-Parasra_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.283602.The-Parasra_djvu.xml",
+      "mtime": "1490062456",
+      "size": "441548",
+      "md5": "348bf0a03947b6fdf896a0b32cfe9008",
+      "crc32": "5c121487",
+      "sha1": "8297b483edd71548329099c14b392db8b5160954"
+    },
+    {
+      "name": "2015.283602.The-Parasra_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.283602.The-Parasra_abbyy.gz",
+      "mtime": "1490060354",
+      "size": "4764814",
+      "md5": "4ccc65042146c3b1c6eec30d91cbaae1",
+      "crc32": "78ac3fdc",
+      "sha1": "1fbc07704c971b23e5c8aabdd824cbeafec76435"
+    },
+    {
+      "name": "2015.283602.The-Parasra_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.283602.The-Parasra.pdf",
+      "mtime": "1490052882",
+      "size": "1137363622",
+      "md5": "1e7c00e6c16583c80cf40fbe95317f0d",
+      "crc32": "4e2c2ab6",
+      "sha1": "b4e324c2e3ff25b344c89ccee9dda585379c5fe5",
+      "filecount": "559"
+    },
+    {
+      "name": "2015.283602.The-Parasra_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.283602.The-Parasra_djvu.xml",
+      "mtime": "1490062575",
+      "size": "167827",
+      "md5": "623710fdca084d8a598f421d881493ad",
+      "crc32": "f9e646ed",
+      "sha1": "3d2a34a17ec03731eb3453a8e4a2835d959f52f3"
+    },
+    {
+      "name": "2015.283602.The-Parasra_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.283602.The-Parasra_djvu.xml",
+      "mtime": "1490062447",
+      "size": "113368046",
+      "md5": "f77ca6e3bb15864e86dee1a18e65052a",
+      "crc32": "20ec401a",
+      "sha1": "b6e65387db6f3a39edc29eef1734e95c4b97b49b"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1530844935",
+      "size": "23283",
+      "md5": "6ebec8bbc15dbaec1c3e55806ce3d89a",
+      "crc32": "3c0c64f8",
+      "sha1": "872075281fca4cb3d27fd8c5893db88485b3b39f",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.283602_archive.torrent",
+      "source": "metadata",
+      "btih": "63f70633c84176981938dea90da5d78a88875471",
+      "mtime": "1563297644",
+      "size": "31291",
+      "md5": "2029d12d07a7973bc0fe49aa28489729",
+      "crc32": "25c141a1",
+      "sha1": "0f236e8d022f28622725d1541ced7bb2a952a80b",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.283602_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "f48ab976782afd13bf10d34555048f84",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.283602_meta.sqlite",
+      "source": "original",
+      "mtime": "1484700041",
+      "size": "15360",
+      "md5": "7b5889b46d6f94ddb18ebf6394c9d553",
+      "crc32": "8d80ad5a",
+      "sha1": "51fdf58b61e083f37c5101d4cbe1658718147680",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.283602_meta.xml",
+      "source": "original",
+      "mtime": "1563297628",
+      "size": "2231",
+      "format": "Metadata",
+      "md5": "2c8e399de7408604d3db53af7b436458",
+      "crc32": "e5e4f384",
+      "sha1": "d57f7feefa7d03a2a63294c8c755cbf78f4d7796"
+    }
+  ],
+  "files_count": 13,
+  "item_last_updated": 1726847381,
+  "item_size": 1472139307,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.283602",
+    "creator": "Pandit Vaman Sastri Islampurkar",
+    "date": "1898",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/283602\" rel=\"nofollow\">Digital Library of India Item 2015.283602</a></p><p>dc.contributor.author: Pandit Vaman Sastri Islampurkar<br />dc.date.accessioned: 2015-08-04T17:06:22Z<br />dc.date.available: 2015-08-04T17:06:22Z<br />dc.date.citation: 1898<br />dc.identifier.barcode: 05990010904707<br />dc.identifier.origpath: /data58/upload/0106/424<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/283602<br />dc.description.scannerno: 20003265<br />dc.description.scanningcentre: IIIT, Allahabad<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 559<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Government Central Book Depot<br />dc.source.library: Central Archaeological Library_asi_new Delhi<br />dc.subject.classification: Literature<br />dc.title: The Parasra Dharma Samhita Or Parasara Smriti Vol Ii Part I<br />dc.type: ptiff<br />dc.type: pdf<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "IIIT",
+    "title": "The Parasra Dharma Samhita Or Parasara Smriti Vol Ii Part I",
+    "publicdate": "2017-01-18 00:40:24",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-18 00:40:24",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.283602",
+    "identifier-ark": "ark:/13960/t5dc3893m",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906304_34"
+  },
+  "server": "ia800408.us.archive.org",
+  "uniq": 740100094,
+  "workable_servers": [
+    "ia800408.us.archive.org",
+    "ia600408.us.archive.org"
+  ]
+}

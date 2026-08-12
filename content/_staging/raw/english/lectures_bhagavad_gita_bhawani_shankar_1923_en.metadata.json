@@ -1,0 +1,189 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn711004.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.96311"
+      },
+      {
+        "server": "dn760001.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.96311"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn711004.ca.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.96311"
+      },
+      {
+        "server": "dn760001.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.96311"
+      }
+    ]
+  },
+  "created": 1783339084,
+  "d1": "ia600801.us.archive.org",
+  "d2": "ia800801.us.archive.org",
+  "dir": "/25/items/in.ernet.dli.2015.96311",
+  "files": [
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd.pdf",
+      "source": "original",
+      "mtime": "1485124527",
+      "size": "4783506",
+      "md5": "2bf97901cab293888b9bf2274b8f9b96",
+      "crc32": "dba36dc7",
+      "sha1": "43b5475e5bf9b405b82a08c1f8ea56ee6b1ad38c",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_jp2.zip",
+      "mtime": "1494444858",
+      "size": "1562415",
+      "md5": "fa04e9a91470bd48193168fe21f83ea4",
+      "crc32": "599a337e",
+      "sha1": "49a5152cdf72994ec8e21d990cd69e505630f91e"
+    },
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_djvu.xml",
+      "mtime": "1494445163",
+      "size": "100744",
+      "md5": "0ea053e674427784cb7f95cd58e694c5",
+      "crc32": "4b80ae77",
+      "sha1": "6f8acb0761c9bfa709c79ef73796de86d1cb6cfb"
+    },
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_abbyy.gz",
+      "mtime": "1494444894",
+      "size": "996117",
+      "md5": "7e1af0886995b711c3b54743d10f36b9",
+      "crc32": "7dfcc30c",
+      "sha1": "36eb714e212eb977ba670cf9ff12a937f790b70e"
+    },
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd.pdf",
+      "mtime": "1494443540",
+      "size": "69011353",
+      "md5": "db131902032f0d77331306814fa1dd7e",
+      "crc32": "c4a29285",
+      "sha1": "3ac62a55be77f297f75613dc19937bd8beefb7b2",
+      "filecount": "104"
+    },
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_djvu.xml",
+      "mtime": "1494445165",
+      "size": "31326",
+      "md5": "2a6dc696fe9d7591cf13f207c49a4cdb",
+      "crc32": "b9c6b77f",
+      "sha1": "fd3881ad44766cbf3463c7612393930d4290440a"
+    },
+    {
+      "name": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_text.pdf",
+      "source": "derivative",
+      "format": "Additional Text PDF",
+      "original": "2015.96311.Lectures-On-Bhagavad-Gita--Ed-2nd_djvu.xml",
+      "mtime": "1494445161",
+      "size": "5487236",
+      "md5": "d7909b243467616f3302cc8739399c71",
+      "crc32": "fd5679f1",
+      "sha1": "552c9d841fee859a7ecd6d69a83818de24053659"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1535775459",
+      "size": "3813",
+      "md5": "514eb4caee1001a6bfd1f1cec052ac13",
+      "crc32": "331b039d",
+      "sha1": "2eacf728a0a11a26155cb704ab61a98ae43c243e",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.96311_archive.torrent",
+      "source": "metadata",
+      "btih": "3d9b18a4ae69711a6c6a90e17449f88b501d1c0c",
+      "mtime": "1563313542",
+      "size": "6296",
+      "md5": "46fde29790c3b987950f092526529a7f",
+      "crc32": "889ec4d7",
+      "sha1": "76f137c7b73a6bb7b5ba31f3773f796a4352d33d",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.96311_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "d4f420fefb86fc53a994b2c4687ef35e",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.96311_meta.sqlite",
+      "source": "original",
+      "mtime": "1485124538",
+      "size": "15360",
+      "md5": "d6950e87ab10ec4661f9d66b0800e628",
+      "crc32": "6ea4288f",
+      "sha1": "84cb531c417205a21544af79da3871b00c62babe",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.96311_meta.xml",
+      "source": "original",
+      "mtime": "1563313538",
+      "size": "2395",
+      "format": "Metadata",
+      "md5": "d9460be1b393ee4204974b01ca140014",
+      "crc32": "3ed5f93b",
+      "sha1": "b3128ebcb91bed8d0f6acd2d7b750cd5ab85b59f"
+    }
+  ],
+  "files_count": 12,
+  "item_last_updated": 1726749582,
+  "item_size": 82000561,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.96311",
+    "creator": "Shankar, Bhawani",
+    "date": "1923",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/96311\" rel=\"nofollow\">Digital Library of India Item 2015.96311</a></p><p>dc.contributor.author: Shankar, Bhawani<br />dc.date.accessioned: 2015-07-01T15:23:44Z<br />dc.date.available: 2015-07-01T15:23:44Z<br />dc.date.digitalpublicationdate: 2011-05-17<br />dc.date.citation: 1923<br />dc.identifier.barcode: 4990010052688<br />dc.identifier.origpath: /data8/upload/0249/971<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/96311<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 104<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: Lalitmohan Banerjee, Calcutta<br />dc.rights: In Public Domain<br />dc.source.library: Uttarpara Jaykrishna Public Library, Hooghly<br />dc.subject.classification: Religion<br />dc.subject.classification: Hinduism<br />dc.subject.keywords: Jnanayoga<br />dc.subject.keywords: Itihasa<br />dc.subject.keywords: Dharma<br />dc.subject.keywords: Mahabharata<br />dc.subject.keywords: Arjuna<br />dc.title: Lectures On Bhagavad Gita  Ed. 2nd<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.2.0.dev4",
+    "subject": "C-DAK",
+    "title": "Lectures On Bhagavad Gita  Ed. 2nd",
+    "publicdate": "2017-01-22 22:35:27",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-22 22:35:27",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.96311",
+    "identifier-ark": "ark:/13960/t2v46403v",
+    "ppi": "600",
+    "ocr": "ABBYY FineReader 11.0",
+    "repub_state": "4",
+    "backup_location": "ia906305_20"
+  },
+  "server": "ia800801.us.archive.org",
+  "uniq": 1979743267,
+  "workable_servers": [
+    "ia800801.us.archive.org",
+    "ia600801.us.archive.org"
+  ]
+}

@@ -247,9 +247,11 @@ create policy "users read own quota"
 -- ---------------------------------------------------------------------------
 -- cached_answers: cost-control cache, server-side only
 --
--- This table holds no user PII (just a question hash + structured response).
--- It is read/written by Edge Functions via the service-role key. RLS is
--- enabled with no policies so the anon/authenticated roles can never see it.
+-- Current writers intentionally store only a question hash + structured
+-- response; question_text remains nullable for compatibility with this base
+-- schema and is not populated by the RAG pipeline. It is read/written by Edge
+-- Functions via the service-role key. RLS is enabled with no policies so the
+-- anon/authenticated roles can never see it.
 -- ---------------------------------------------------------------------------
 create table if not exists public.cached_answers (
   id                  uuid primary key default uuid_generate_v4(),

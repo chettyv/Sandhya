@@ -4,23 +4,25 @@ An AI-powered companion for Hindu learning and daily practice. Mobile (iOS + And
 
 The product is non-sectarian by design (surfaces variation across traditions rather than picking one), refuses to act as guru / priest / doctor / therapist / lawyer (safety gate), and leans on hand-written static content for the everyday surface — AI is the fallback, not the default.
 
-For the full product spec see `dharma_daily_build_reference.docx`. For the build plan see `dharma_daily_developer_plan.docx`.
+The current product, MVP, branch, and release summary is in [`CURRENT_SUMMARY.md`](CURRENT_SUMMARY.md).
+The authoritative architecture, schema, RAG design, and milestone reference remains
+[`docs/dharma_daily_build_reference.docx`](docs/dharma_daily_build_reference.docx).
 
 ## Stack (fixed for v1)
 
-| Layer          | Tool                                                                            |
-| -------------- | ------------------------------------------------------------------------------- |
-| Mobile         | Expo + React Native + TypeScript (Expo Router, Tamagui or NativeWind)           |
-| Backend        | Supabase (Postgres + Auth + Storage + Edge Functions)                           |
-| Vector store   | Supabase pgvector                                                               |
-| LLM            | Anthropic Claude (default) via a swappable provider interface (OpenAI / Gemini) |
-| Embeddings     | OpenAI `text-embedding-3-small` (1536-dim)                                      |
-| State (mobile) | TanStack Query + Zustand                                                        |
-| Payments       | RevenueCat                                                                      |
-| Push           | Expo Notifications                                                              |
-| Analytics      | PostHog                                                                         |
-| Errors         | Sentry                                                                          |
-| Builds         | EAS Build + EAS Submit                                                          |
+| Layer          | Tool                                                                                       |
+| -------------- | ------------------------------------------------------------------------------------------ |
+| Mobile         | Expo + React Native + TypeScript (Expo Router, Tamagui or NativeWind)                      |
+| Backend        | Supabase (Postgres + Auth + Storage + Edge Functions)                                      |
+| Vector store   | Supabase pgvector                                                                          |
+| LLM            | Backend-only swappable provider (DeepSeek default; OpenAI-compatible / Anthropic optional) |
+| Embeddings     | OpenAI `text-embedding-3-small` (1536-dim)                                                 |
+| State (mobile) | TanStack Query + Zustand                                                                   |
+| Payments       | RevenueCat                                                                                 |
+| Push           | Expo Notifications                                                                         |
+| Analytics      | PostHog                                                                                    |
+| Errors         | Sentry                                                                                     |
+| Builds         | EAS Build + EAS Submit                                                                     |
 
 Hard rules: no LLM calls from the client, no LangChain in v1, no separate vector DB, RLS on every user-scoped table, structured-JSON output only.
 
@@ -29,15 +31,15 @@ Hard rules: no LLM calls from the client, no LangChain in v1, no separate vector
 ```
 DharmaDaily/
 ├── apps/
-│   ├── mobile/             # Expo app — scaffolded in Phase 6
-│   └── admin/              # Next.js admin dashboard — scaffolded in Phase 8
+│   ├── mobile/             # Expo consumer app
+│   └── admin/              # Static admin moderation/content console
 ├── packages/
 │   ├── shared-types/       # Cross-package TS types (RAG schema, API contracts)
-│   ├── rag-pipeline/       # The RAG pipeline (library + CLI) — Phase 4
-│   └── content-tools/      # Content ingestion CLI — Phase 3
+│   ├── rag-pipeline/       # The RAG pipeline (library + CLI)
+│   └── content-tools/      # Content ingestion utilities
 ├── supabase/
-│   ├── migrations/         # SQL migrations (Phase 2)
-│   └── functions/          # Edge Functions (Phase 5)
+│   ├── migrations/         # SQL migrations
+│   └── functions/          # Edge Functions
 ├── content/                # Source corpus (Markdown), filled by PO
 ├── .github/workflows/      # CI
 ├── package.json            # Workspace root
@@ -51,12 +53,12 @@ DharmaDaily/
 - **pnpm 11** — pinned in `package.json` `packageManager`. Install with `winget install pnpm.pnpm` (Windows), `brew install pnpm` (macOS), or `npm i -g pnpm@11`.
 - **git** with line-ending mode set sensibly (`core.autocrlf=input` on Windows is fine).
 
-Optional, added in their respective phases:
+Optional tooling:
 
-- Supabase CLI — Phase 2 (`npm i -g supabase`)
-- Expo CLI — Phase 6 (bundled with the `apps/mobile` install)
-- Vercel CLI — Phase 8 (for admin deploys)
-- EAS CLI — Phase 6 (`npm i -g eas-cli`)
+- Supabase CLI (`npm i -g supabase`)
+- Expo CLI (bundled with the `apps/mobile` install)
+- A static-site host for `apps/admin/dist/` (Vercel, Cloudflare Pages, or equivalent)
+- EAS CLI (`npm i -g eas-cli`)
 
 ## Setup
 
@@ -87,7 +89,8 @@ pnpm build          # Build every workspace
 pnpm typecheck      # Typecheck every workspace
 pnpm lint           # ESLint across the repo
 pnpm format         # Prettier write
-pnpm format:check   # Prettier check (CI uses this)
+pnpm format:check   # Full Prettier check
+pnpm format:check:changed # Changed-file check used by CI
 pnpm test           # Vitest in every workspace
 pnpm secrets:scan   # secretlint over the whole repo (also runs on staged files pre-commit)
 
@@ -103,29 +106,41 @@ See `.env.example`. Every variable is documented inline. Two ground rules:
 1. **Anything without an `EXPO_PUBLIC_` prefix is server-only.** It must never be imported from `apps/mobile`. Doing so leaks the value into the app bundle.
 2. **`EXPO_PUBLIC_*` is visible to anyone with the binary.** Only public keys (Supabase anon, RevenueCat public, PostHog, Sentry DSN) go there.
 
-## What is built / not built (Phase 1)
+## Current product status
 
-✅ Built in Phase 1 (this commit):
+✅ Built in the current product slice:
 
 - pnpm monorepo with Node 22 / pnpm 11 pinning
 - TypeScript strict (`tsconfig.base.json`)
 - ESLint (flat config) + Prettier shared configs
 - Husky + lint-staged + commitlint (Conventional Commits)
-- Vitest wired into every real package (`pnpm test` runs with `--passWithNoTests`; real tests arrive alongside real code in Phases 2–4)
-- Three real packages compiling: `shared-types` (with the structured-answer types), `rag-pipeline` and `content-tools` (skeletons)
-- App and Supabase placeholders pointing at the phase that owns them
+- Vitest wired into every real package (`pnpm test` runs with `--passWithNoTests`)
+- Compiling `shared-types`, `rag-pipeline`, and `content-tools` packages
+- Expo mobile app with onboarding, home, calendar, explore (including deity entries), Ask Dharma,
+  conversation history, festival reminders, journal, saved items, account settings, legal copy,
+  and subscription paywall UX
+- Supabase-authenticated conversations, server-enforced free quota, RevenueCat
+  webhook state, premium-content RLS, push-token registration, and daily delivery
+- Curated-content fallback for local browsing plus production table adapters
+- Dependency-free admin console for OTP sign-in, feedback review, and allowlisted
+  curated-content CRUD through protected Edge Functions
 - GitHub Actions CI: typecheck, lint, format check, test, commitlint
 - Documented `.env.example`
 
-⏳ Deliberately deferred (not Phase 1):
+⏳ Still required before public store launch:
 
-- Database schema, migrations, RLS — **Phase 2**
-- Content ingest CLI — **Phase 3**
-- RAG pipeline implementation, eval harness — **Phase 4**
-- Edge Functions API — **Phase 5**
-- Expo mobile app — **Phase 6**
-- RevenueCat paywall — **Phase 7**
-- Next.js admin — **Phase 8**
+- Run Supabase migrations and populate only licensed, reviewed production content
+- Create RevenueCat products/entitlements and configure App Store / Play Store
+  credentials, webhook signing, the server-only subscriber API key for transfer
+  reconciliation, and public SDK keys
+- Install declared native packages with a network-enabled `pnpm install`, create
+  an EAS development build, and test purchases and push delivery on physical devices
+- Add production support/privacy URLs, mobile analytics/error DSNs, backend
+  telemetry secrets, and store metadata. The mobile telemetry adapter is opt-in,
+  emits only anonymous lifecycle/error events, and excludes prompts, answers,
+  tokens, emails, and user IDs.
+- Configure and host the admin console, then assign the admin role only to approved
+  operators; continue editorial, theological, regional, and safety review
 
 ## License
 

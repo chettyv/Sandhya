@@ -1,0 +1,10 @@
+{
+  "work_id": "urdu_razmnama_source_expansion_lead",
+  "title": "Urdu/Persian Mahabharata translation leads",
+  "language": "Urdu/Persian-script",
+  "source_name": "Wikipedia/source lead",
+  "source_url": "https://en.wikipedia.org/wiki/Mahabharata",
+  "status": "metadata_only",
+  "rights_note": "Historical Persian translations and later Urdu-script editions may exist, but concrete reusable editions were not identified.",
+  "next_action": "Search manuscript libraries and Internet Archive for public-domain Urdu/Persian-script editions."
+}

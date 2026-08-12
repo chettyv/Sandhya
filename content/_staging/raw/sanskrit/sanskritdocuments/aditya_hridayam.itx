@@ -1,0 +1,291 @@
+% Text title            : AdityahRidayastotra
+% File name             : adityahriday.itx
+% Category              : hRidaya, navagraha
+% Location              : doc\_z\_misc\_navagraha
+% Transliterated by     : M. Giridhar giridhar at chemeng.iisc.ernet.in
+% Proofread by          : Kirk Wortman kirkwort at hotmail.com
+% Latest update         : June 13, 2020
+% Send corrections to   : sanskrit at cheerful dot c om
+%
+% This text is prepared by volunteers and is to be used for personal study 
+% and research. The file is not to be copied or reposted for promotion of 
+% any website or individuals or for commercial purpose without permission. 
+% Please help to maintain respect for volunteer spirit.
+%
+\documentstyle[11pt,multicol,itrans]{article}
+#include=ijag.inc
+#endwordvowel=.h
+\portraitwide
+\parindent=100pt                
+\let\usedvng=\Largedvng      % for 1 column     
+\pagenumbering{itrans} 
+\def\engtitle#1{\hrule\medskip\centerline{\LARGE #1}}
+\def\itxtitle#1{\medskip\centerline{\LARGEdvng #1}\medskip\hrule}
+\def\endtitles{\medskip\obeyspaceslines}
+%%
+\begin{document}
+\engtitle{.. Adityahridayam ..}##
+\itxtitle{.. AdityahR^idayam ..}##\endtitles ##
+##
+            Introduction
+
+Before we begin, let us bow to Aditya, the Sun god, who bestows upon us all prosperity and who is capable of destroying all our enemies.
+
+Aditya hridyam is a hymn to the Sun god and forms part of the canto 107 of the Valmiki ramayana. The setting is the battle field and the fight between Ravana and Lord Rama has just been suspended. The latter enters into a contemplative mood and is instructed by the sage Agastya on the glory of Aditya, the Sun God.
+
+The great acharya without any equal, Shankara acharya, established the worship of five deities : Ganesha, Vishnu, Shakti, Shiva and Aditya.  The worship establishes the unique function of each deity while remembering the unity between Them. The unity between all of us is Brahman. Established in the space-time domain, the mind mistakes that the sun rises and sets. In reality, the sun is ever-present. Similarly, we mistake ourselves to be the body-mind complex and suffer, while in reality, we are Satchitananda, one without a second. To become aware of this Truth, one has to destroy all the enemies within (like kama, krodha, lobha, mada etc.) and establish our minds at the lotus feet of the divine at all times. And recitation of this hymn will accomplish this seemingly impossible feat.
+
+Though this hymn is said to Rama, who appears to be in a state of distress, Rama is well aware of His divinity.  As Sita says,
+
+'Know Rama to be the Supreme Brahman - the existence knowledge bliss (Satchitananda) absolute, the one without a second. He is pure consciousness devoid of all adjuncts, whom the senses can not perceive as their object.'
+
+But Rama behaved very much like a human to set an example to all of us humans. By His grace, we have the teachings of Yoga Vasistha since Rama pretended to be ignorant and asked questions to vasistha.  Similarly, here we obtain an hymn capable of destroying all our internal enemies and which will bestow supreme felicity upon us, because Rama pretends to be distressed. Rama's behaviour is also to set an example on how outwardly we may act our roles and pretend to be happy or sad, while inwardly understanding that the world is merely a mirage and the only reality is the Self, Brahman.
+##
+
+             || atha sArtha AdityahR^idayam ||
+       tato yuddhaparishrAntaM samare chintayA sthitam |
+       rAvaNaM chAgrato dR^iShTvA yuddhAya samupasthitam || 1||
+       daivataishcha samAgamya draShTumabhyAgato raNam |
+       upAgamyAbravIdrAmamagastyo bhagavAnR^iShiH || 2|| ##
+       Rama, exhausted and about to face Ravana ready for a fresh battle was lost deep in contemplation. The all knowing sage agastya who had joined the gods to witness the battle spoke to Rama thus || 1,2
+##
+       rAma rAma mahAbAho shR^iNu guhyaM sanAtanam |
+       yena sarvAnarInvatsa samare vijayiShyasi || 3|| ##
+Oh Rama, mighty-armed Rama, listen to this eternal secret which will help you destroy all your enemies in battle. 3
+##
+       AdityahR^idayaM puNyaM sarvashatruvinAshanam |
+       jayAvahaM japennityamakShayaM paramaM shivam || 4|| ##
+This holy hymn dedicated to the Sun deity will result in destroying all enemies and bring you victory and never ending supreme bliss. 4
+##
+       sarvama~NgalamA~NgalyaM sarvapApapraNAshanam |
+       chintAshokaprashamanaM Ayurvardhanamuttamam || 5|| ##
+This hymn is supreme and is a guarantee of complete prosperity and is the destroyer of sin, anxiety, anguish and is the bestower of longevity. 5
+##
+       rashmimantaM samudyantaM devAsuranamaskR^itam |
+       pUjayasva vivasvantaM bhAskaraM bhuvaneshvaram || 6|| ##
+Worship the One, possessed of rays when he has completely risen, held in reverence by the devas and asuras, and who is the Lord of the
+universe by whose efflugence all else brighten. 6
+##
+       sarvadevAtmako hyeSha tejasvI rashmibhAvanaH |
+       eSha devAsuragaNA.NllokAn pAti gabhastibhiH || 7|| ##
+He indeed represent the totality of all celestial beings. He is self-luminous and sustains all with his rays. He nourishes and energizes the inhabitants of all the worlds and the race of Devas and Asuras. 7
+##
+       eSha brahmA cha viShNushcha shivaH skandaH prajApatiH |
+       mahendro dhanadaH kAlo yamaH somo hyapAM patiH || 8|| ##
+He is Brahma, Vishnu, Shiva, Skands, Prajapati. He is also Mahendra, kubera, kala, yama, soma and varuna. 8
+##
+       pitaro vasavaH sAdhyA hyashvinau maruto manuH |
+       vAyurvahniH prajAprANa R^itukartA prabhAkaraH || 9|| ##
+He is the pitrs, vasus, sadhyas, aswini devas, maruts, manu, vayu, agni, prana and, being the source of all energy and light, is the maker of all the six seasons. 9
+##
+       AdityaH savitA sUryaH khagaH pUShA gabhastimAn |
+       suvarNasadR^isho bhAnurhiraNyaretA divAkaraH || 10|| ## or ## bhAnurvishvaretA
+##
+He is the son of Aditi, creator of the universe, inspirer of action, transverser of the heavens. He is the sustainer, illumination of all directions, the golden hued brilliance and is the maker of the day. 10
+##
+       haridashvaH sahasrArchiH saptasaptirmarIchimAn |
+       timironmathanaH shambhustvaShTA mArtANDa a.nshumAn || 11|| ## or ## mArtaNDa ##
+He is the Omnipresent One who pervades all with countless rays. He is the power behind the seven sense organs, the dispeller of darkness, bestower of happiness and prosperity, the remover of misfortunes and is the infuser of life. 11
+##
+       hiraNyagarbhaH shishirastapano bhAskaro raviH |
+       agnigarbho.aditeH putraH sha~NkhaH shishiranAshanaH || 12|| ##
+He is the primordial BEing manifesting as the Trinity. He ushers in the Day and is the teacher (of Hiranyagarbha), the fire-wombed, the son of Aditi, and has a vast and supreme felicity. He is the remover of intellectual dull-headedness. 12
+##
+       vyomanAthastamobhedI R^igyajuHsAmapAragaH |
+       ghanavR^iShTirapAM mitro vindhyavIthI plava~NgamaH || 13|| ##
+He is the Lord of the firmament, dispeller of darkness. Master of all the vedas, he is a friend of the waters and causes rain. HE has crossed the vindya range and sports in the Brahma Nadi. 13
+##
+       AtapI maNDalI mR^ityuH pi~NgalaH sarvatApanaH |
+       kavirvishvo mahAtejAH raktaH sarvabhavod.hbhavaH || 14|| ##
+He, whose form is circular and is colored yellow, is intensely absorbed and inflicts death. He is the destroyer of all and is the Omniscient one being exceedingly energetic sustains the universe and all action. 14
+##
+       nakShatragrahatArANAmadhipo vishvabhAvanaH |
+       tejasAmapi tejasvI dvAdashAtmannamo.astu te || 15|| ##
+He is the lord of stars, planets and all constellations. He is the origin of everything in the universe and is the cause of the lustre of even the brilliant ones. Salutations to Thee who is the One being manifest in the twelve forms of the Sun. 15
+##
+       namaH pUrvAya giraye pashchimAyAdraye namaH |
+       jyotirgaNAnAM pataye dinAdhipataye namaH || 16|| ##
+Salutations to the Eastern and western mountain, Salutations to the Lord of the stellar bodies and the Lord of the Day. 16
+##
+       jayAya jayabhadrAya haryashvAya namo namaH |
+       namo namaH sahasrA.nsho AdityAya namo namaH || 17|| ##
+Salutations to the One who ordains victory and the prosperity that follows. Salutations to the one possessed of yellow steeds and to the thousand rayed Lord, and to Aditya. 17
+##
+       nama ugrAya vIrAya sAra~NgAya namo namaH |
+       namaH padmaprabodhAya mArtANDAya namo namaH || 18|| ## or ## mArtaNDAya, prachaNDAya ##
+Salutations to the Terrible one, the hero, the one that travels fast.  Salutations to the one whose emergence makes the lotus blossom and to the fierce and omnipotent one. 18
+##
+       brahmeshAnAchyuteshAya sUryAyAdityavarchase |
+       bhAsvate sarvabhakShAya raudrAya vapuShe namaH || 19|| ##
+Salutations to the Lord of Brahma, shiva and Achyuta, salutations to the powerful and to the effulgence in the Sun that is both the illuminator and devourer of all and is of a form that is fierce like Rudra. 19
+##
+       tamoghnAya himaghnAya shatrughnAyAmitAtmane |
+       kR^itaghnaghnAya devAya jyotiShAM pataye namaH || 20|| ##
+Salutations to he transcendental atman that dispels darkness, drives away all fear, and destroys all foes. Salutations also to the annihilator of the ungrateful and to the Lord of all the stellar bodies. 20
+##
+       taptachAmIkarAbhAya vahnaye vishvakarmaNe | ## or ## haraye vishvakarmaNe
+       namastamo.abhinighnAya ruchaye lokasAkShiNe || 21|| ##
+Salutations to the Lord shining like molten gold, to the transcendental fire, the fire of supreme knowledge, the architect of the universe, destroyer of darkness and salutations again to the efflugence that is the Cosmic witness. 21
+##
+       nAshayatyeSha vai bhUtaM tadeva sR^ijati prabhuH |
+       pAyatyeSha tapatyeSha varShatyeSha gabhastibhiH || 22|| ##
+Salutations to the Lord who destroys everything and creates them again.  Salutations to Him who by His rays consumes the waters, heats them up and sends them down as rain. 22
+##
+       eSha supteShu jAgarti bhUteShu pariniShThitaH |
+       eSha evAgnihotraM cha phalaM chaivAgnihotriNAm || 23|| ##
+Salutations to the Lord who abides in the heart of all beings keeping awake when they are asleep. He is both the sacrificial fire and the fruit enjoyed by the worshippers. 23
+##
+       vedAshcha kratavashchaiva kratUnAM phalameva cha |
+       yAni kR^ityAni lokeShu sarva eSha raviH prabhuH || 24|| ##
+The Sun is verily the Lord of all action in this universe. He is verily the vedas, the sacrifices mentioned in them and the fruits obtained by performing the sacrifices. 24
+##
+       	|| phala shrutiH ||
+       enamApatsu kR^ichChreShu kAntAreShu bhayeShu cha |
+       kIrtayan puruShaH kashchinnAvasIdati rAghava || 25|| ##
+Raghava, one who recites this hymn in times of danger, during an affliction or when lost in the wilderness and having fear, he will not lose heart (and become brave). 25
+##
+       pUjayasvainamekAgro devadevaM jagat.hpatim |
+       etat triguNitaM japtvA yuddheShu vijayiShyasi || 26|| ##
+Raghava, worship this Lord of all Gods and the Universe with one-pointed devotion. Recite this hymn thrice and you will win this battle. 26
+##
+       asminkShaNe mahAbAho rAvaNaM tvaM vadhiShyasi |
+       evamuktvA tadA.agastyo jagAma cha yathAgatam || 27|| ##
+O mighty armed one, you shall truimph over Ravana this very moment.  Having spoken this, Agastya returned his original place. 27
+##
+       etachChrutvA mahAtejA naShTashoko.abhavattadA |
+       dhArayAmAsa suprIto rAghavaH prayatAtmavAn || 28|| ##
+Raghava became free from worry after hearing this. He was greatly pleased and became brave and energetic. 28
+##
+       AdityaM prekShya japtvA tu paraM harShamavAptavAn |
+       trirAchamya shuchirbhUtvA dhanurAdAya vIryavAn || 29|| ##
+Gazing at the sun with devotion, He recited this hymn thrice and experienced bliss. Purifying Himself by sipping water thrice, He took up His bow with His mighty arms. 29
+##
+       rAvaNaM prekShya hR^iShTAtmA yuddhAya samupAgamat |
+       sarva yatnena mahatA vadhe tasya dhR^ito.abhavat || 30|| ##
+Seeing Ravana coming to fight, He put forth all his effort with a determination to destroy Ravana. 30
+##
+       atha raviravadannirIkShya rAmaM
+            muditamanAH paramaM prahR^iShyamANaH |
+       nishicharapatisa~NkShayaM viditvA
+            suragaNamadhyagato vachastvareti || 31|| ##
+Then knowing that the destruction of the lord of prowlers at night (Ravana) was near, Aditya, who was at the center of the assembly of the Gods, looked at Rama and exclaimed 'Hurry up' with great delight. 31
+
+       ##|| iti AdityahR^idayaM mantram ||
+
+                  stotrapATha
+       OM asya shrIAdityahR^idayastotramantrasya shrIagastyaR^iShiH |
+       anuShTupChandaH |  shrIAdityahR^idayabhUto bhagavAn brahmA
+       devatAH | OM bIjam | rashmimateriti shaktiH |
+       OM tatsaviturityAdigAyatrI kIlakam | nirastAsheShavighnatayA
+       brahmavidyAsiddhau sarvatra jayasiddhau cha viniyogaH |
+
+       atha R^iShyAdinyAsaH ||
+       OM agastyaR^iShaye namaH shirasi |
+       anuShTupChandase namaH mukhe |
+       AdityahR^idayabhUtabrahmadevatAyai namaH. hR^idi |
+       OM bIjAya namaH guhye |
+       OM rashmimate shaktaye namaH pAdayoH |
+       OM tatsaviturityAdigAyatrI kIlakAya namaH nAbhau |
+       viniyogAya namaH sarvA~Nge |
+       iti R^iShyAdinyAsaH ||
+
+       atha karanyAsaH ||
+       OM rashmimate a~NguShThAbhyAM namaH |
+       OM samudyate tarjanIbhyAM namaH |
+       OM devAsuranamaskR^itAya madhyamAbhyAM namaH |
+       OM vivasvate anAmikAbhyAM namaH |
+       OM bhAskarAya kaniShThikAbhyAM namaH |
+       OM bhuvaneshvarAya karatalakarapR^iShThAbhyAM namaH |
+       iti karanyAsaH ||
+
+       atha hR^idayAdiShaDa~Nga nyAsaH ||
+       OM rashmimate hR^idayAya namaH |
+       OM samudyate shirase svAhA |
+       OM devAsuranamaskR^itAya shikhAyai vaShaT |
+       OM vivasvate kavachAya hum |
+       OM bhAskarAya netratrayAya vauShaT |
+       OM bhuvaneshvarAya astrAya phaT |
+       iti hR^idayAdiShaDa~Nga nyAsaH ||
+
+                 || atha AdityahR^idayam ||
+       tato yuddhaparishrAntaM samare chintayA sthitam |
+       rAvaNaM chAgrato dR^iShTvA yuddhAya samupasthitam || 1||
+       daivataishcha samAgamya draShTumabhyAgato raNam |
+       upAgamyAbravIdrAmamagastyo bhagavAnR^iShiH || 2||
+       rAma rAma mahAbAho shR^iNu guhyaM sanAtanam |
+       yena sarvAnarInvatsa samare vijayiShyasi || 3||
+       AdityahR^idayaM puNyaM sarvashatruvinAshanam |
+       jayAvahaM japennityamakShayaM paramaM shivam || 4||
+       sarvama~NgalamA~NgalyaM sarvapApapraNAshanam |
+       chintAshokaprashamanaM Ayurvardhanamuttamam || 5||
+       rashmimantaM samudyantaM devAsuranamaskR^itam |
+       pUjayasva vivasvantaM bhAskaraM bhuvaneshvaram || 6||
+       sarvadevAtmako hyeSha tejasvI rashmibhAvanaH |
+       eSha devAsuragaNA.NllokAn pAti gabhastibhiH || 7||
+       eSha brahmA cha viShNushcha shivaH skandaH prajApatiH |
+       mahendro dhanadaH kAlo yamaH somo hyapAM patiH || 8||
+       pitaro vasavaH sAdhyA hyashvinau maruto manuH |
+       vAyurvahniH prajAprANa R^itukartA prabhAkaraH || 9||
+       AdityaH savitA sUryaH khagaH pUShA gabhastimAn |
+       suvarNasadR^isho bhAnurhiraNyaretA divAkaraH || 10|| ## or ## bhAnurvishvaretA
+       haridashvaH sahasrArchiH saptasaptirmarIchimAn |
+       timironmathanaH shambhustvaShTA mArtANDa aMshumAn || 11|| ## or ## mArtaNDa
+       hiraNyagarbhaH shishirastapano bhAskaro raviH |
+       agnigarbho.aditeH putraH sha~NkhaH shishiranAshanaH || 12||
+       vyomanAthastamobhedI R^igyajuHsAmapAragaH |
+       ghanavR^iShTirapAM mitro vindhyavIthI plava~NgamaH || 13||
+       AtapI maNDalI mR^ityuH pi~NgalaH sarvatApanaH |
+       kavirvishvo mahAtejAH raktaH sarvabhavodbhavaH || 14||
+       nakShatragrahatArANAmadhipo vishvabhAvanaH |
+       tejasAmapi tejasvI dvAdashAtmannamo.astu te || 15||
+       namaH pUrvAya giraye pashchimAyAdraye namaH |
+       jyotirgaNAnAM pataye dinAdhipataye namaH || 16||
+       jayAya jayabhadrAya haryashvAya namo namaH |
+       namo namaH sahasrAMsho AdityAya namo namaH || 17||
+       nama ugrAya vIrAya sAra~NgAya namo namaH |
+       namaH padmaprabodhAya mArtANDAya namo namaH || 18|| ## or ## mArtaNDAya, prachaNDAya
+       brahmeshAnAchyuteshAya sUryAyAdityavarchase |
+       bhAsvate sarvabhakShAya raudrAya vapuShe namaH || 19||
+       tamoghnAya himaghnAya shatrughnAyAmitAtmane |
+       kR^itaghnaghnAya devAya jyotiShAM pataye namaH || 20||
+       taptachAmIkarAbhAya vahnaye vishvakarmaNe | ## or ## haraye vishvakarmaNe
+       namastamo.abhinighnAya ruchaye lokasAkShiNe || 21||
+       nAshayatyeSha vai bhUtaM tadeva sR^ijati prabhuH |
+       pAyatyeSha tapatyeSha varShatyeSha gabhastibhiH || 22||
+       eSha supteShu jAgarti bhUteShu pariniShThitaH |
+       eSha evAgnihotraM cha phalaM chaivAgnihotriNAm || 23||
+       vedAshcha kratavashchaiva kratUnAM phalameva cha |
+       yAni kR^ityAni lokeShu sarva eSha raviH prabhuH || 24||
+
+       	|| phalashrutiH ||
+       enamApatsu kR^ichChreShu kAntAreShu bhayeShu cha |
+       kIrtayan puruShaH kashchinnAvasIdati rAghava || 25||
+       pUjayasvainamekAgro devadevaM jagatpatim |
+       etat triguNitaM japtvA yuddheShu vijayiShyasi || 26||
+       asminkShaNe mahAbAho rAvaNaM tvaM vadhiShyasi |
+       evamuktvA tadA.agastyo jagAma cha yathAgatam || 27||
+       etachChrutvA mahAtejA naShTashoko.abhavattadA |
+       dhArayAmAsa suprIto rAghavaH prayatAtmavAn || 28||
+       AdityaM prekShya japtvA tu paraM harShamavAptavAn |
+       trirAchamya shuchirbhUtvA dhanurAdAya vIryavAn || 29||
+       rAvaNaM prekShya hR^iShTAtmA yuddhAya samupAgamat |
+       sarva yatnena mahatA vadhe tasya dhR^ito.abhavat || 30||
+       atha raviravadannirIkShya rAmaM
+            muditamanAH paramaM prahR^iShyamANaH |
+       nishicharapatisa~NkShayaM viditvA
+            suragaNamadhyagato vachastvareti || 31||
+
+       iti AdityahR^idayaM mantram ||  ##
+
+Aditya Hridayam is Sarga 105 in Yuddha Kanda of Valmiki
+Ramayana (Gita Press, 1995, 4th edn.)
+
+Encoded and translated by M. Giridhar
+
+\medskip\hrule\obeylines
+
+Please send corrections to sanskrit@cheerful.com
+Last updated \today
+https://sanskritdocuments.org
+
+\end{document}

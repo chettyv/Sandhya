@@ -1,5 +1,14 @@
 # @dharma-daily/admin
 
-Placeholder workspace. The real Next.js admin dashboard is scaffolded in **Phase 8** of the developer plan (`dharma_daily_developer_plan.docx` §8).
+Small, dependency-free operator console for the protected Supabase admin Edge Functions.
 
-Planned pages: dashboard (DAU/MAU/spend), `/feedback` review queue, content CRUD (reflections, festivals, concepts, practices), cache management, cost log, user list. Admin allowlist auth via Supabase.
+It supports:
+
+- Supabase email OTP sign-in and sign-out. The backend still requires `app_metadata.role = "admin"`.
+- Pending/reviewed/fixed feedback queue with admin notes.
+- Allowlisted CRUD for reflections, festivals, practice guides, concepts, and deities.
+- Explicit delete confirmation and JSON editing for content rows.
+- Protected operational dashboard for DAU/MAU, feedback volume, usage, and spend.
+- PII-minimized user list and cache inspection with explicit cache invalidation.
+
+Configure the Supabase URL and publishable anon key in the browser. Never put a service-role key in this app. Build with `pnpm --filter @dharma-daily/admin build`; deploy the generated `dist/` directory as a static site. The Edge Functions remain the authorization boundary.

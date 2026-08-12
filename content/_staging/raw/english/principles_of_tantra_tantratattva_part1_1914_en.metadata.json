@@ -1,0 +1,299 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760100.eu.archive.org",
+        "dir": "/0/items/dli.bengal.10689.636"
+      },
+      {
+        "server": "dn790003.ca.archive.org",
+        "dir": "/0/items/dli.bengal.10689.636"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760100.eu.archive.org",
+        "dir": "/0/items/dli.bengal.10689.636"
+      },
+      {
+        "server": "dn790003.ca.archive.org",
+        "dir": "/0/items/dli.bengal.10689.636"
+      }
+    ]
+  },
+  "created": 1783269116,
+  "d1": "ia903108.us.archive.org",
+  "d2": "ia803108.us.archive.org",
+  "dir": "/31/items/dli.bengal.10689.636",
+  "files": [
+    {
+      "name": "10689.636.epub",
+      "source": "derivative",
+      "original": "10689.636_abbyy.gz",
+      "mtime": "1709431382",
+      "size": "178643241",
+      "md5": "d651f49923a766122b500600a12958f6",
+      "crc32": "e816c1e4",
+      "sha1": "52aa8192e16036d08d8203c20e76ba79d29411f0",
+      "format": "EPUB"
+    },
+    {
+      "name": "10689.636.pdf",
+      "source": "original",
+      "mtime": "1537480556",
+      "size": "20625385",
+      "md5": "c3f4080f214b051af7dab97dbd319f12",
+      "crc32": "3ccc44c8",
+      "sha1": "4d3ffff636fd6992e016eed47ed26a5efa18821e",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "10689.636_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "10689.636_jp2.zip",
+      "mtime": "1537488364",
+      "size": "31603410",
+      "md5": "452a78fae799506f30a9c4721437a0f0",
+      "crc32": "3bf37ea4",
+      "sha1": "245ff9df0e1a6f0fc9017b3085f6fe6c0c8c103b"
+    },
+    {
+      "name": "10689.636_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "10689.636_abbyy.gz",
+      "mtime": "1776757870",
+      "size": "25780745",
+      "md5": "301980000f15ecc284870c67f6790dce",
+      "crc32": "ce273ab2",
+      "sha1": "fae0d83ce8230981b0e956536c4a99e0e57de094"
+    },
+    {
+      "name": "10689.636_daisy.zip",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "Daisy",
+      "original": "10689.636_hocr.html",
+      "mtime": "1776762644",
+      "size": "950006",
+      "md5": "afdb070820c4f8d2d66add06d7c8bf4c",
+      "crc32": "0ec35a7a",
+      "sha1": "e5bea95cda6abe287d75d82f10dc4829a8b63f7d",
+      "filecount": "9"
+    },
+    {
+      "name": "10689.636_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "10689.636_djvu.xml",
+      "mtime": "1776762776",
+      "size": "2470752",
+      "md5": "793de5720672928e65a3f1a9f6d48077",
+      "crc32": "a7d741c6",
+      "sha1": "415f6b23285932423494c01d5a1bcab034aec8e4"
+    },
+    {
+      "name": "10689.636_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "10689.636_hocr.html",
+      "mtime": "1776758161",
+      "size": "27948401",
+      "md5": "d4c92f876f97395a2d768c685fd09847",
+      "crc32": "be68b8a6",
+      "sha1": "b08c827a8ba00a9da38d86eeb2d2e05114ed7d17"
+    },
+    {
+      "name": "10689.636_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "10689.636_chocr.html.gz",
+      "mtime": "1776758071",
+      "size": "55621624",
+      "md5": "175ac24b5c26f9e576cc955df776521c",
+      "crc32": "f77bc85b",
+      "sha1": "3d7ea4622f42d67f9cc0d5f78ad7bd05fe54ac1e"
+    },
+    {
+      "name": "10689.636_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "10689.636_hocr.html",
+      "mtime": "1776758246",
+      "size": "9995",
+      "md5": "dfaf1d862c3dbe8e8139b609539f0e92",
+      "crc32": "1b54cf9c",
+      "sha1": "c0f21a13a0cafe4f2b59781d7dc3940158798bed"
+    },
+    {
+      "name": "10689.636_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "11120",
+      "word_conf_11_20": "12615",
+      "word_conf_21_30": "29022",
+      "word_conf_31_40": "50316",
+      "word_conf_41_50": "70872",
+      "word_conf_51_60": "77124",
+      "word_conf_61_70": "60495",
+      "word_conf_71_80": "33368",
+      "word_conf_81_90": "13177",
+      "word_conf_91_100": "10664",
+      "format": "OCR Search Text",
+      "original": "10689.636_hocr.html",
+      "mtime": "1776758410",
+      "size": "804969",
+      "md5": "8bdeffeb50b3fe734a01e71ff91d2c4e",
+      "crc32": "968675bc",
+      "sha1": "b81d46538a5a17c1efe4ad7c1b0c28839e299f9a"
+    },
+    {
+      "name": "10689.636_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "10689.636.pdf",
+      "mtime": "1537480798",
+      "size": "162551437",
+      "md5": "fa95380bb046803a0bdd08b16559f3a6",
+      "crc32": "5251cf97",
+      "sha1": "788c962933c89f247e19c308ae41cde2b3fb0fdb",
+      "filecount": "800"
+    },
+    {
+      "name": "10689.636_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "98",
+      "format": "Page Numbers JSON",
+      "original": "10689.636_hocr.html",
+      "mtime": "1776763689",
+      "size": "134931",
+      "md5": "9025aeb722f040fcd6c14977941746a9",
+      "crc32": "52e0fe4b",
+      "sha1": "30d868bdbb3fb66f16db1cf0e39e75967f9d6044"
+    },
+    {
+      "name": "10689.636_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "10689.636_djvu.xml",
+      "mtime": "1776763690",
+      "size": "265828",
+      "md5": "95a59995b57847ee398b05a6db3d6def",
+      "crc32": "3505d5e8",
+      "sha1": "48b451f5f4480d05cad8dc9b430aede7beb52451"
+    },
+    {
+      "name": "10689.636_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "10689.636_page_numbers.json",
+      "mtime": "1776765923",
+      "size": "22569277",
+      "md5": "1557f92584b45a97a7a8f5177427862e",
+      "crc32": "309ace71",
+      "sha1": "0b7606373cae50d589e0bea9effc8af3b55e56d6"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1709431385",
+      "size": "14634",
+      "md5": "90ee4711ff741fb357a434bc75d3fb34",
+      "crc32": "b9edf114",
+      "sha1": "eaf27becbbdf62b3e22c86d410678e5ba8cc1462",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "dli.bengal.10689.636_archive.torrent",
+      "source": "metadata",
+      "btih": "99cf57ad3e99c31a1ec15a0b179bf1d5df0895f6",
+      "mtime": "1776768315",
+      "size": "24400",
+      "md5": "221bde3ba67ea337ac9712487049a94a",
+      "crc32": "01833d48",
+      "sha1": "82193272304e1cc9cc74301b26bdf533a0230490",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "dli.bengal.10689.636_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "f2689d67c64eba75a3ebe108c7004b99",
+      "summation": "md5"
+    },
+    {
+      "name": "dli.bengal.10689.636_meta.sqlite",
+      "source": "original",
+      "mtime": "1537480573",
+      "size": "38912",
+      "md5": "6a7d7f605c8c9b5b2bb4c954f608c510",
+      "crc32": "57dfe7ac",
+      "sha1": "ecd8ece3af39b238ccc001cd443b0511af580fb5",
+      "format": "Metadata"
+    },
+    {
+      "name": "dli.bengal.10689.636_meta.xml",
+      "source": "original",
+      "mtime": "1776768303",
+      "size": "9467",
+      "format": "Metadata",
+      "md5": "733568456e6499322bdaf5767b15cac6",
+      "crc32": "2b101c6d",
+      "sha1": "3f1993a5b4de638a4227d0d22ed5bf072e86a2d1"
+    }
+  ],
+  "files_count": 19,
+  "item_last_updated": 1776768316,
+  "item_size": 530067414,
+  "metadata": {
+    "identifier": "dli.bengal.10689.636",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "creator": "Avalon, Arthur, ed.",
+    "date": "1914",
+    "description": "<p>Source: West Bengal Public Library Network<br />Source Identifier: <a href=\"http://dspace.wbpublibnet.gov.in:8080/jspui/handle/10689/636\" rel=\"ugc nofollow\">handle/10689/636</a></p><table style=\"border-collapse:collapse;border:1px solid #000000;\"><tr><th style=\"background-color:#eee;padding:3px;border:1px solid #000000;\">Field</th><th style=\"background-color:#eee;padding:3px;border:1px solid #000000;\">Value</th><th style=\"background-color:#eee;padding:3px;border:1px solid #000000;\">Lang</th></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.contributor.author</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Bhattacarya, Siva Candra</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.contributor.author</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Avalon, Arthur, ed.</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.date.accessioned</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">2009-11-25T12:14:44Z</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.date.available</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">2009-11-25T12:14:44Z</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.date.issued</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">1914</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.identifier.uri</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">http://hdl.handle.net/10689/636</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.description</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Includes Sanskrit</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.language.iso</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.publisher</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Ganesh and Co., Madras</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.rights</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">In Public Domain</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.source</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">STATE CENTRAL LIBRARY, KOLKATA</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.subject</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">RELIGION</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.subject</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">HINDUISM</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.subject</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">THEOLOGY</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.title</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Principles Of Tantra</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.title.alternative</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">The Tantratattva Of Sriyukta Siva Candra Vidyarnava Bhattacarya Mahodaya</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.type</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Book</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.scanningcentre</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">C-DAC, Kolkata</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.scanningnumber</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">SCL_02</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.digitalrepublisher</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">DteLS</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.digitalpublicationdate</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">2006-07-15</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">-</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.totalpages</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">800p.</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.Keywords</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Hindu Mythology</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.Keywords</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Religions of the Indian subcontinent</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr><tr><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">dc.scl.Keywords</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">Hinduism narrowly</td><td style=\"text-align:left;padding:3px;border:1px solid #000000;\">en_US</td></tr></table>",
+    "language": "eng",
+    "mediatype": "texts",
+    "publisher": "Ganesh and Co., Madras",
+    "scanner": "Internet Archive Python library 1.8.1",
+    "subject": "West Bengal Public Library",
+    "title": "Principles Of Tantra",
+    "publicdate": "2018-09-20 21:55:57",
+    "uploader": "carl@media.org",
+    "addeddate": "2018-09-20 21:55:57",
+    "identifier-access": "http://archive.org/details/dli.bengal.10689.636",
+    "identifier-ark": "ark:/13960/t9c60tq41",
+    "ppi": "150",
+    "backup_location": "ia906802_5",
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "98",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia803108.us.archive.org",
+  "uniq": 878109226,
+  "workable_servers": [
+    "ia803108.us.archive.org",
+    "ia903108.us.archive.org"
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn760107.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.47262"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn760107.eu.archive.org",
+        "dir": "/0/items/in.ernet.dli.2015.47262"
+      }
+    ]
+  },
+  "created": 1783203855,
+  "d1": "ia600802.us.archive.org",
+  "d2": "ia800802.us.archive.org",
+  "dir": "/33/items/in.ernet.dli.2015.47262",
+  "files": [
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2.epub",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "EPUB",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "mtime": "1762953984",
+      "size": "565442489",
+      "md5": "fd12ecbf6aa5c9ae1fa8ebb8c05eb8a4",
+      "crc32": "e09427ed",
+      "sha1": "e0893eba5707e226c3b8bafa9900cc68dc1eec73"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2.pdf",
+      "source": "original",
+      "mtime": "1484969042",
+      "size": "40031141",
+      "md5": "f455992d67e2d28d3584cf5d593e6082",
+      "crc32": "fe951d43",
+      "sha1": "97264d989a7d40914a5d67080bd88b03501c2a4b",
+      "format": "Image Container PDF"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_abbyy.gz",
+      "source": "derivative",
+      "format": "Abbyy GZ",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_jp2.zip",
+      "mtime": "1493052551",
+      "size": "24646758",
+      "md5": "f65ddf560f4937f62adc80a17473ed2d",
+      "crc32": "2249c574",
+      "sha1": "00a4be9c59759a3f313a1a6d3444598bbe0cdc88"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_chocr.html.gz",
+      "source": "derivative",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "chOCR",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_abbyy.gz",
+      "mtime": "1756325070",
+      "size": "20404522",
+      "md5": "089b1f304c9c6c5819d94ce8381aa11a",
+      "crc32": "4a7c65bf",
+      "sha1": "c9e5e460a930a100441dceea6f971188fca3b70b"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_cloth_detection.log",
+      "source": "derivative",
+      "format": "Cloth Cover Detection Log",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_scandata.xml",
+      "mtime": "1756327489",
+      "size": "613",
+      "md5": "76ae9741cb16279f880e264b06a24139",
+      "crc32": "5489b100",
+      "sha1": "5d7f14ac1865443ca773159084826e60f8ea795b"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_daisy.zip",
+      "source": "derivative",
+      "hocr_epub_module_version": "0.0.1",
+      "hocr_epub_hocr_version": "1.1.66",
+      "format": "Daisy",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "mtime": "1756326189",
+      "size": "924708",
+      "md5": "56764be78fa9c53b93259d7a691e42c1",
+      "crc32": "ad1bcc3a",
+      "sha1": "cb063177865c27def43d5be0041f35d444d01bce",
+      "filecount": "9"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_djvu.txt",
+      "source": "derivative",
+      "format": "DjVuTXT",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_djvu.xml",
+      "mtime": "1756326227",
+      "size": "1653978",
+      "md5": "c81e04736eb22769ee73bfac05dd3dac",
+      "crc32": "ccde21ff",
+      "sha1": "ebc4ad6288ac72e07aa84215bcc4f917720fdc16"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_djvu.xml",
+      "source": "derivative",
+      "format": "Djvu XML",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "mtime": "1756325674",
+      "size": "20721278",
+      "md5": "9c53c8ac3874e926ef892b9554a058c4",
+      "crc32": "75986ad4",
+      "sha1": "5ed2300bff9e7b0ec1b92cbb882c9b5f8506ded0"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "source": "derivative",
+      "hocr_char_to_word_module_version": "1.3.0",
+      "hocr_char_to_word_hocr_version": "1.1.56",
+      "ocr_module_version": "0.0.21",
+      "ocr_converted": "abbyy-to-hocr 1.1.37",
+      "format": "hOCR",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_chocr.html.gz",
+      "mtime": "1756325610",
+      "size": "40979078",
+      "md5": "efc536b7c9ab7373e52c305cc7d4ea67",
+      "crc32": "c17f2c33",
+      "sha1": "293760af0375f417b1a03646f76d598edeedb2fc"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr_pageindex.json.gz",
+      "source": "derivative",
+      "hocr_pageindex_module_version": "1.1.0",
+      "hocr_pageindex_hocr_version": "1.1.56",
+      "format": "OCR Page Index",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "mtime": "1756325752",
+      "size": "8426",
+      "md5": "d011920ea04978cb42d0f02b28cca3a0",
+      "crc32": "4caea598",
+      "sha1": "2e87b8163d2448e4978d0384a19760b22d8dee81"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr_searchtext.txt.gz",
+      "source": "derivative",
+      "hocr_fts_text_module_version": "1.2.0",
+      "hocr_fts_text_hocr_version": "1.1.56",
+      "word_conf_0_10": "72058",
+      "word_conf_11_20": "62413",
+      "word_conf_21_30": "47881",
+      "word_conf_31_40": "31307",
+      "word_conf_41_50": "17993",
+      "word_conf_51_60": "10208",
+      "word_conf_61_70": "5292",
+      "word_conf_71_80": "2353",
+      "word_conf_81_90": "1257",
+      "word_conf_91_100": "20352",
+      "format": "OCR Search Text",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "mtime": "1756325995",
+      "size": "606357",
+      "md5": "32d5c256952e054fec6b6c04228f6099",
+      "crc32": "186d990c",
+      "sha1": "07db47346551ff47c8e3f66a0067f2b52c796669"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_jp2.zip",
+      "source": "derivative",
+      "format": "Single Page Processed JP2 ZIP",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2.pdf",
+      "mtime": "1493035670",
+      "size": "528289975",
+      "md5": "6eb0305b60e5ba8b4f19af1cbfb3587e",
+      "crc32": "2171f716",
+      "sha1": "2186fa8de5e24c36c1274702fd53f67381ef4b1d",
+      "filecount": "688"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_page_numbers.json",
+      "source": "derivative",
+      "hocr_pagenumber_module_version": "1.0.5",
+      "hocr_pagenumber_hocr_version": "1.1.54",
+      "hocr_pagenumber_confidence": "98",
+      "format": "Page Numbers JSON",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_hocr.html",
+      "mtime": "1756327352",
+      "size": "116950",
+      "md5": "c22abee3aacb5b331a73ea20c1dde07b",
+      "crc32": "65850f52",
+      "sha1": "77719c3f3cae6ba578212f53bfc48a3959e8e793"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_scandata.xml",
+      "source": "derivative",
+      "format": "Scandata",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_djvu.xml",
+      "mtime": "1756327352",
+      "size": "229869",
+      "md5": "ba9f192842b35e02777758ae8c05726a",
+      "crc32": "43f903da",
+      "sha1": "d5647281c0ecefd65b512aa456a2144298b77fce"
+    },
+    {
+      "name": "2015.47262.Hymns-Of-The-Rigveda--Vol2_text.pdf",
+      "source": "derivative",
+      "pdf_module_version": "0.0.25",
+      "pdf_degraded": "invalid-jp2-headers",
+      "format": "Additional Text PDF",
+      "original": "2015.47262.Hymns-Of-The-Rigveda--Vol2_page_numbers.json",
+      "mtime": "1756332014",
+      "size": "48056709",
+      "md5": "97c9bbf4d447615b533747fc5ee9118f",
+      "crc32": "6b33d4d6",
+      "sha1": "1d317a62096c101c0f305023481ab23d8f36eae9"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1756324257",
+      "size": "1354",
+      "md5": "82d3295af5361469e46def6810f542f2",
+      "crc32": "2f76f3f5",
+      "sha1": "eef74804e0aa8a7a0fee550662bb307c440ff047",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "in.ernet.dli.2015.47262_archive.torrent",
+      "source": "metadata",
+      "btih": "a39bc767f1e609f1c954da136998921334fec2ab",
+      "mtime": "1762954136",
+      "size": "29468",
+      "md5": "1755ab530327897d87d8c1014e56a348",
+      "crc32": "3e9ce7e4",
+      "sha1": "40c422d12b50beb37e3bb5cfaf6cf94429e271d3",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "in.ernet.dli.2015.47262_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "3f20b2aa6dce92b389bb71e05bc49112",
+      "summation": "md5"
+    },
+    {
+      "name": "in.ernet.dli.2015.47262_meta.sqlite",
+      "source": "original",
+      "mtime": "1484969059",
+      "size": "15360",
+      "md5": "cc143338cedfb58c2941342f6425f212",
+      "crc32": "ab60ac3a",
+      "sha1": "d315f8e3b1f06167b5a16e72b7e4608e0d0e3ef7",
+      "format": "Metadata"
+    },
+    {
+      "name": "in.ernet.dli.2015.47262_meta.xml",
+      "source": "original",
+      "mtime": "1762954130",
+      "size": "2548",
+      "format": "Metadata",
+      "md5": "ea97ace97347955b93aabdb7cc49c99e",
+      "crc32": "eeddb2c3",
+      "sha1": "5ae42ee678f0b613666d60c034145ab0217abe68"
+    }
+  ],
+  "files_count": 20,
+  "item_last_updated": 1762954136,
+  "item_size": 1292161581,
+  "metadata": {
+    "identifier": "in.ernet.dli.2015.47262",
+    "creator": "Griffith, Ralph T. H., Tr.",
+    "date": "1897",
+    "description": "<p><b>Book Source:</b> <a href=\"http://www.new.dli.ernet.in/handle/2015/47262\" rel=\"ugc nofollow\">Digital Library of India Item 2015.47262</a></p><p>dc.contributor.author: Griffith, Ralph T. H., Tr.<br />dc.date.accessioned: 2015-06-26T12:45:50Z<br />dc.date.available: 2015-06-26T12:45:50Z<br />dc.date.digitalpublicationdate: 2006-04-28<br />dc.date.citation: 1897<br />dc.identifier.barcode: 4990010215631<br />dc.identifier.origpath: /data3/upload/0069/783<br />dc.identifier.copyno: 1<br />dc.identifier.uri: http://www.new.dli.ernet.in/handle/2015/47262<br />dc.description.scanningcentre: C-DAK, Kolkata<br />dc.description.main: 1<br />dc.description.tagged: 0<br />dc.description.totalpages: 688<br />dc.format.mimetype: application/pdf<br />dc.language.iso: English<br />dc.publisher.digitalrepublisher: Digital Library Of India<br />dc.publisher: E. J. Lazarus And Co., Benaras<br />dc.rights: In Public Domain<br />dc.source.library: Ramkrishna Mission Institute Of Culture, Golpark<br />dc.subject.classification: Religion. Theology<br />dc.subject.classification: Hinduism<br />dc.subject.classification: The Vedas<br />dc.title: Hymns Of The Rigveda  Vol.2<br /></p>",
+    "language": "eng",
+    "mediatype": "texts",
+    "scanner": "Internet Archive Python library 1.1.0",
+    "subject": "C-DAK",
+    "title": "Hymns Of The Rigveda  Vol.2",
+    "publicdate": "2017-01-21 03:24:03",
+    "uploader": "carl@media.org",
+    "addeddate": "2017-01-21 03:24:03",
+    "collection": [
+      "digitallibraryindia",
+      "JaiGyan"
+    ],
+    "identifier-access": "http://archive.org/details/in.ernet.dli.2015.47262",
+    "identifier-ark": "ark:/13960/t9188n99m",
+    "ppi": "600",
+    "repub_state": "4",
+    "backup_location": "ia906305_13",
+    "ocr_module_version": "0.0.21",
+    "ocr_converted": "abbyy-to-hocr 1.1.37",
+    "page_number_confidence": "98",
+    "page_number_module_version": "1.0.5",
+    "pdf_degraded": "invalid-jp2-headers",
+    "pdf_module_version": "0.0.25"
+  },
+  "server": "ia800802.us.archive.org",
+  "uniq": 55708009,
+  "workable_servers": [
+    "ia800802.us.archive.org",
+    "ia600802.us.archive.org"
+  ]
+}
