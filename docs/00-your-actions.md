@@ -1,124 +1,59 @@
 # Founder actions — live list
 
-Things only you can do. Items are deleted when resolved, not marked done. Categories: (1) accounts/keys, (2) decisions, (3) real-world testing, (4) authentic content. Open questions for you also live here — nothing blocks on them.
+Mission-critical first: accounts and keys only you can create, in the order they unblock the app. Resolved items get deleted. Parked items live at the bottom so they don't clutter the critical path.
 
 ---
 
-## SHIP-48H · The exact path to live in the next 1–2 days
+## MISSION-CRITICAL — in order
 
-Web is the only surface that can be live to strangers this week (stores have external review timelines — items 1/1b below stay queued). In order:
+### 1 · Supabase production project (~15 min) — unblocks auth, sync, Ask
 
-1. **Review + approve the 30 drafted verses** (chapter 12 complete + 10 chapter-2 essentials in `content/shlokas/`). For each file you're happy with: change `review_status: draft` → `approved` and put your name in `reviewed_by`. Then run `pnpm content:generate-shloka-bank`. This is the ship-gate — nothing sacred goes out unreviewed, and right now the reviewer is you.
-2. **Review + approve the 4 web pages** in `content/web/` the same way.
-3. **Create the production Supabase project** (item 11) → paste URL + anon key into `.env` (`EXPO_PUBLIC_SUPABASE_URL`, `EXPO_PUBLIC_SUPABASE_ANON_KEY`) → say "apply migrations" and I run them.
-4. **Buy the domain + create Cloudflare Pages** (item 9). Two deploys, both free: arrival site = upload `apps/web/dist` (build: `pnpm --filter @dharma-daily/web build`); app = upload `apps/mobile/dist` (build: `cd apps/mobile && npx expo export --platform web`). I'll wire both to exact commands once the domain exists.
-5. **Submit the sitemap** in Search Console (item 9).
-
-The app works without step 3 (offline bundled content, no sign-in) — steps 1, 2, 4 alone put a real product on a real URL.
-
-## 0 · READ: two new notes written for you
-
-- **[docs/SOURCES-AND-ATTRIBUTION.md](SOURCES-AND-ATTRIBUTION.md)** — everything collected so far (242 sources staged on this machine), what attribution each class needs, which rows you can flip to approved now (pre-1929 translations + Sanskrit originals), and the short list of things only you can obtain (publisher permissions for modern translations; preferred editions). Corpus collection continues from the existing queue scripts listed there.
-- **[docs/testing-in-expo-go.md](testing-in-expo-go.md)** — how to run the app on your phone today. Purchases/push need a dev build; everything else works in Expo Go (startup is now guarded so the missing purchases module can't crash it).
+- **WHAT:** Create a project at https://supabase.com/dashboard (free tier is fine to start; pick the region closest to your users, e.g. London). Then copy into `.env`:
+  - Project URL → `EXPO_PUBLIC_SUPABASE_URL` (Settings → API → Project URL)
+  - anon public key → `EXPO_PUBLIC_SUPABASE_ANON_KEY` (Settings → API → anon key)
+  - service_role key → `SUPABASE_SERVICE_ROLE_KEY` (same page — server-side only, never ships in the app)
+- **THEN:** tell me "apply migrations" — I run all 72 against it (your explicit approval is required by repo rules). Without this the app still runs fully offline on the bundled 80 verses; with it you get accounts, sync, and Ask.
 - **ADDED:** 2026-08-12
 
-## 0b · ANSWER (when convenient, not blocking): what is "our qu"?
+### 2 · Expo account + EAS project (~10 min) — unblocks phone builds beyond Expo Go
 
-- **WHAT:** Your message said "our word banks or qu hella work" — I read "word banks" (built: word-by-word shloka gloss) and "shloka banks" (built), but couldn't decode "qu". If it means **quizzes**, say so and I'll design a reviewed-content quiz layer; if it means the **Ask/questions** feature, that's the scoped-AI work already queued.
+- **WHAT:** Create an account at https://expo.dev (free). Run `npx eas init` in `apps/mobile` while logged in (`npx expo login`) — it creates the project and prints the project ID → `EXPO_PUBLIC_EAS_PROJECT_ID` in `.env`.
+- **WHY:** Expo Go covers daily testing today ([guide](testing-in-expo-go.md)); EAS is needed for real device builds, push notifications, and store submission.
 - **ADDED:** 2026-08-12
 
-## 1 · CREATE: Apple Developer + Google Play Console accounts — **START TODAY, longest lead time in the plan**
+### 3 · AI provider keys (~10 min) — unblocks Ask Dharma (needs #1 first)
 
-- **WHAT:** (a) Apple Developer Program, individual enrolment, $99/yr — https://developer.apple.com/programs/enroll/. (b) Google Play Console, personal account, $25 one-off — https://play.google.com/console/signup.
-- **WHY:** You chose IAP as the payment rail, so the app must be **live in both stores before 11 October**. Apple enrolment takes ~2 days; **Google Play personal accounts must run a closed test with 12 testers for 14 consecutive days before they may publish to production** — that alone means the Android closed test must be running by mid-September. This is now the critical path of the whole launch.
-- **BLOCKING:** store builds, IAP products, the entire revenue mechanism.
+- **WHAT:** Two keys, both server-side (Supabase Edge Function secrets, never in the app):
+  - **DeepSeek** (default answer model, cheapest): https://platform.deepseek.com → API Keys → `DEEPSEEK_API_KEY`
+  - **OpenAI** (embeddings only, required for retrieval): https://platform.openai.com/api-keys → `OPENAI_API_KEY`
+- **ALSO:** set a monthly spend alert in both dashboards (£10 is plenty at launch; the backend has its own budget cap via `LLM_MONTHLY_BUDGET_USD`).
+- **BLOCKING:** only the Ask feature; everything else works without these.
 - **ADDED:** 2026-08-12
 
-## 1b · CREATE: RevenueCat account + the challenge product
+### 4 · Apple Developer + Google Play accounts — **longest lead time, start when store launch is in sight**
 
-- **WHAT:** Create a (free-tier) RevenueCat project at https://app.revenuecat.com. After the store accounts exist: create a **non-consumable** in-app product with identifier `dd_challenge_navratri_2026` in App Store Connect (Monetisation → In-App Purchases) and in Play Console (Monetise → Products → In-app products), price tier ≈ £9.99. In RevenueCat: add both store apps, attach the product to a new entitlement `challenge_navratri_2026`, and copy the iOS + Android public SDK keys into `.env` as `EXPO_PUBLIC_REVENUECAT_API_KEY_IOS` / `_ANDROID`, plus the webhook secret as `REVENUECAT_WEBHOOK_SECRET`.
-- **WHY:** The code I am building resolves challenge access from product identifiers with this exact prefix (`dd_challenge_<slug>`); the webhook grants participation on purchase.
-- **BLOCKING:** end-to-end purchase testing (sandbox first); not blocking the code, which is being built against this contract now.
+- **WHAT:** Apple Developer Program, individual, $99/yr — https://developer.apple.com/programs/enroll/ (~2 days). Google Play Console, $25 once — https://play.google.com/console/signup.
+- **WHY:** The only way onto real users' phones. **Play personal accounts must run a 12-tester closed test for 14 straight days before production** — that clock can't be compressed, so open the account well before you want to launch.
 - **ADDED:** 2026-08-12
 
-## 1c · SET: challenge price
+### 5 · Support email + privacy/terms URLs (~30 min) — store submission requirement
 
-- **WHAT:** Pick the price inside the plan's £8–15 band (my recommendation: £9.99 — a store tier that exists in every country) and tell me, so `price_display` in `content/challenges/navratri-2026/challenge.json` matches the store tier you configure in 1b.
-- **BLOCKING:** publishing the challenge; nothing else.
+- **WHAT:** (a) A monitored email (e.g. a dharma-daily@ alias) → `EXPO_PUBLIC_SUPPORT_EMAIL` in `.env`. (b) Both stores require a public privacy-policy URL: no domain needed — a free GitHub Pages URL from this repo works. Say the word and I'll draft the privacy policy + terms from what the app actually collects and set up the Pages deploy; you review before it goes live.
 - **ADDED:** 2026-08-12
 
-## 2 · DECIDE: rewriting git history to remove ~128 MiB of staged sources
+### 6 · Sentry + PostHog projects (~15 min, optional at launch)
 
-- **WHAT:** Approve (or decline) a history rewrite of `main` (`git filter-repo` dropping `content/_staging/` from all commits) followed by a force-push. The preserve branch would keep the full history untouched.
-- **WHY:** Plan Phase 0 asks for the raw sources to leave git _history_. I have untracked them going forward, but every clone still downloads ~123 MiB of pack. This is a destructive operation on a shared branch, so it is yours to call.
-- **HOW:** Say "rewrite approved" and whether the preserve branch should keep full history (recommended: yes). Nothing else needed; I will run it and verify.
-- **BLOCKING:** not blocking.
+- **WHAT:** https://sentry.io (free tier) → DSN → `EXPO_PUBLIC_SENTRY_DSN` and `SENTRY_DSN_BACKEND`. https://posthog.com (free tier) → project API key → `EXPO_PUBLIC_POSTHOG_KEY`. Analytics events are already wired and consent-gated; without keys they simply no-op.
 - **ADDED:** 2026-08-12
 
-## 3 · WRITE: the nine Navratri sessions (with reviewer)
+---
 
-- **WHAT:** Nine sessions, one devi form per night (Shailaputri → Siddhidatri), ~8–12 min each, three-register pronunciation for every quoted line (Devanagari / IAST / plain-English e.g. "LUCK-shmee"), tradition variation noted where real. Plan §7 wants nights 1–4 by 25 Aug, 5–9 by 1 Sep.
-- **WHY:** This is the product. I can build the container, template the format, and validate structure, but tradition-sensitive devotional content written by an AI and shipped unreviewed violates the project's own editorial rules (CLAUDE.md, plan §4.4). I can draft _scaffolding_ (structure, source citations from the cleared corpus) for you to write into, if useful — say so.
-- **HOW:** One markdown file per night in a format I will set up in `content/` with a validating schema. Checkpoint A (20 Sep): fewer than 3 written = STOP per plan.
-- **BLOCKING:** challenge content seeding; audio; Checkpoint A.
-- **ADDED:** 2026-08-12
+## PARKED — not on the critical path
 
-## 4 · ENGAGE: a named reviewer for the sessions
-
-- **WHAT:** Find and brief one reviewer for the nine sessions; agree fee (£100–200 per plan) and a 20 September deadline. Plan week 1 item.
-- **WHY:** Nothing tradition-sensitive ships unreviewed; also the plan's stated test of whether reviewers will engage with an AI-assisted scripture product at all.
-- **HOW:** Temple contacts, Chinmaya/ISKCON-adjacent educators, or academic contacts. Brief: read nine ~10-min sessions, flag errors and tradition-flattening, sign off by name.
-- **BLOCKING:** shipping any session content.
-- **ADDED:** 2026-08-12
-
-## 5 · RECORD: audio for the nine sessions
-
-- **WHAT:** Read each session's shloka clearly + a slow repeat-after-me pass, phone microphone, one take per night is fine. Plan §7: nights 1–5 the week of 2–8 Sep.
-- **WHY:** Audio-first is a CORE cut-list item; a shloka is an oral form. I will build the player and the upload path, but the voice must be a human's — yours or the reviewer's.
-- **HOW:** Quiet room, phone voice-memo app, M4A/AAC, one file per night named `night-01.m4a` … I'll give you an exact drop location once storage is set up.
-- **BLOCKING:** audio playback feature (buildable with a placeholder, not shippable).
-- **ADDED:** 2026-08-12
-
-## 6 · PULL: real search volumes for the §5 query list
-
-- **WHAT:** Google Keyword Planner (free with a Google Ads account, no spend needed) volumes for the explanatory queries in plan §5, geo-filtered UK+US+CA+AE.
-- **WHY:** Plan explicitly says verify before committing to target keywords; research tools couldn't reach Keyword Planner/Ahrefs.
-- **HOW:** https://ads.google.com → Tools → Keyword Planner → "Get search volume and forecasts" → paste the §5 list → set location filter.
-- **BLOCKING:** final choice of the six web-page topics (pages are being scaffolded against the plan's draft list meanwhile).
-- **ADDED:** 2026-08-12
-
-## 7 · READ: self-promotion rules for every target community
-
-- **WHAT:** r/Hinduism (and adjacent subreddits), target Facebook groups, temple WhatsApp groups — read each community's self-promotion rules and write them into `docs/arrival-notes.md`. Plan week 1, 3h.
-- **WHY:** Moderator rules override sitewide policy; religious communities are hostile to commercial self-promotion; one ban per channel is permanent.
-- **BLOCKING:** not blocking build; blocking arrival actions (§5), which are yours regardless.
-- **ADDED:** 2026-08-12
-
-## 8 · REVIEW & PUBLISH: the six explanatory web pages
-
-- **WHAT:** I will draft the six §5 pages from the already-reviewed app-authored catalog plus cleared sources, but you must review each before it goes live, and choose the domain it's published on (see item 9).
-- **WHY:** They carry the product's name into Hindu communities; editorial rules require human sign-off. Plan wants ≥4 live by Checkpoint A, all 6 indexed by mid-September.
-- **BLOCKING:** publication only; drafting proceeds.
-- **ADDED:** 2026-08-12
-
-## 9 · CREATE: domain + hosting for the web surface
-
-- **WHAT:** Buy a domain (or confirm one you own) and create a free-tier hosting account (recommendation: Cloudflare Pages or Netlify — both free, both fine for a static site). Also create a Google Search Console account and verify the domain.
-- **WHY:** The six SEO pages and the challenge join page need a real domain; indexing lag is the whole reason the plan wants them live by mid-September.
-- **HOW:** Domain: any registrar (~£10/yr). Hosting: https://pages.cloudflare.com or https://app.netlify.com. Search Console: https://search.google.com/search-console → add property → DNS verify.
-- **BLOCKING:** publication + Search Console submission. Site builds and previews locally without it.
-- **ADDED:** 2026-08-12
-
-## 10 · INSTALL: Docker Desktop + Supabase CLI (local backend testing)
-
-- **WHAT:** Install Docker Desktop (https://www.docker.com/products/docker-desktop/) and the Supabase CLI (`scoop install supabase` or the Windows installer from https://github.com/supabase/cli/releases), then run `supabase start` in the repo once so the local stack exists.
-- **WHY:** This machine has no Docker, psql, or supabase CLI, so migrations (including the new challenges schema) pass static security checks but cannot be _executed_ anywhere. Every backend acceptance test — RLS two-user proof, RPC behaviour, quota atomicity — needs a running database.
-- **BLOCKING:** live verification of all SQL work; not blocking app-side build.
-- **ADDED:** 2026-08-12
-
-## 11 · CONFIRM: production Supabase project
-
-- **WHAT:** Confirm whether a production Supabase project exists (vs local only). If not: create one at https://supabase.com/dashboard, then I need its URL + anon key in `.env` (never the service-role key in anything client-side) before migrations can be applied — with your explicit go-ahead per repo rules.
-- **WHY:** Nothing can ship to a stranger without a hosted backend. All 70 migrations are ready; applying them to production needs your approval.
-- **BLOCKING:** any live launch step; not blocking local build.
-- **ADDED:** 2026-08-12
+- **Domain + arrival website.** The product is the app; the six SEO pages are a free acquisition channel for _later_. When you want them live: any registrar (~£10/yr) + Cloudflare Pages (free) + Search Console. Not needed to ship the app.
+- **RevenueCat + store IAP products.** Payments are off (free launch). Before reactivating: re-audit sources for commercial rights (docs/SOURCES-AND-ATTRIBUTION.md) — sanskritdocuments texts need written permission (Sanskrit@cheerful.com) or re-sourcing from Wikisource.
+- **Navratri challenge content** (nine sessions, reviewer, audio) — plan v2's revenue mechanism; parked with payments. Format and validator are ready in `content/challenges/` whenever you want it.
+- **Docker Desktop + Supabase CLI** — lets me run migrations/RLS tests locally before production. Useful, not blocking (item 1 gives a real database).
+- **Git history rewrite** to shrink the repo (~123 MiB pack) — housekeeping; say "rewrite approved" if wanted.
+- **Spot-check the blanket-approved content** — everything live under "I approve everything" is listed per cycle in docs/03-progress.md; pull anything you'd word differently.
+- **Keyword volumes / community self-promotion rules** — arrival work, whenever distribution becomes the focus.
