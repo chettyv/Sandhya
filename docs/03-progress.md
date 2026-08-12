@@ -233,3 +233,14 @@ All 80 live verses now carry Hindi verse translations and prose meanings (18.66 
 - Epics (Ramayana/Ramcharitmanas/Mahabharata): verse-bank format does not scale to 100k+ verses — bulk reader backed by the existing RAG corpus pipeline is the architecture; design next once Upanishads land.
 
 **Session-limit interruption (12 Aug):** the three Upanishad content-pass writers (Kena, Mundaka 1-2, Mundaka 3 + Mandukya) were terminated by the usage limit (resets 14:30 Europe/London) before writing any files. The 114 extracted skeletons are intact and committed. RELAUNCH per docs/content-pass-runbook.md — fully self-contained, no conversation history needed.
+
+---
+
+## HAND-OFF STATE (12 Aug 2026, end of session) — START HERE, NEW AGENTS
+
+- **Everything is pushed.** `origin/main` = local main; **CI is GREEN** (run for `4137ac3`). Repo renamed to `chettyv/Sandhya` (old URLs redirect; local folder name unchanged).
+- **Read in this order:** `CURRENT_SUMMARY.md` (whole picture) → this file (what happened, per cycle) → `docs/content-pass-runbook.md` (how to continue content work, fully self-contained) → `docs/00-your-actions.md` (founder queue — do not do those items for them).
+- **Immediate next work:** relaunch the three interrupted Upanishad writer passes per the runbook (Kena / Mundaka 1–2 / Mundaka 3 + Mandukya), then the approval sweep, then the extraction queue in the corpus ledger.
+- **Live state:** bank 142 units (Gita 80, Chalisa 43, Isha 19), 108-verse pool, 100% Hindi; free-launch mode; payments/challenge/web-arrival parked with reactivation gates.
+- **Standing founder directives** (memory + this log): never stop to ask — log questions in 00-your-actions; corpus maximization; blanket content approval with spot-check flags; branch-per-work-chunk, no agent prefixes.
+- **CI parity lessons already fixed — do not regress:** generated `shlokaBank.json` is prettier-ignored; `expo-env.d.ts` is committed; staging RAG gates are guarded; no `as never` on route pushes (use object form).
