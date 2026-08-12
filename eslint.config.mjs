@@ -73,6 +73,7 @@ export default tseslint.config(
       "**/*.config.{js,mjs,cjs,ts}",
       "scripts/**/*.{js,mjs,cjs,ts}",
       "apps/admin/**/*.{js,mjs,cjs}",
+      "apps/web/build.mjs",
     ],
     ...tseslint.configs.disableTypeChecked,
     rules: {

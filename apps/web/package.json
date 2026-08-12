@@ -1,0 +1,14 @@
+{
+  "name": "@dharma-daily/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dharma Daily arrival pages — static, indexable, built from reviewed markdown.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "dependencies": {
+    "@dharma-daily/content-tools": "workspace:*",
+    "marked": "^15.0.4"
+  }
+}

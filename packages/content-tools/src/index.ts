@@ -124,6 +124,10 @@ export function validateMarkdownDocument(source: string, displayFile = "content.
     return validateChallengeSession(frontmatter, body).map((issue) => `${displayFile}: ${issue}`);
   }
 
+  if (frontmatter.doc_type === "web_page") {
+    return validateWebPage(frontmatter, body).map((issue) => `${displayFile}: ${issue}`);
+  }
+
   for (const field of REQUIRED_FIELDS) {
     if (!(field in frontmatter)) issues.push(`missing required field: ${field}`);
   }
@@ -243,6 +247,35 @@ function validateChallengeSession(
     }
   }
 
+  return issues;
+}
+
+// Arrival-site pages (content/web/**): app-authored explanatory essays with
+// the same named-reviewer gate as everything else that ships.
+function validateWebPage(frontmatter: Record<string, string | boolean>, body: string): string[] {
+  const issues: string[] = [];
+  if (typeof frontmatter.slug !== "string" || !/^[a-z0-9-]{3,80}$/.test(frontmatter.slug)) {
+    issues.push("slug must be lowercase-hyphenated (3-80 chars)");
+  }
+  for (const field of ["title", "description"]) {
+    const value = frontmatter[field];
+    if (typeof value !== "string" || !value.trim()) {
+      issues.push(`${field} must be a non-empty string`);
+    }
+  }
+  if (
+    typeof frontmatter.review_status !== "string" ||
+    !SESSION_REVIEW_STATUSES.includes(frontmatter.review_status as SessionReviewStatus)
+  ) {
+    issues.push(`review_status must be one of: ${SESSION_REVIEW_STATUSES.join(", ")}`);
+  }
+  if (
+    frontmatter.review_status === "approved" &&
+    (typeof frontmatter.reviewed_by !== "string" || !frontmatter.reviewed_by.trim())
+  ) {
+    issues.push("approved pages must name a reviewer in reviewed_by");
+  }
+  if (!body.trim()) issues.push("page body is empty");
   return issues;
 }
 

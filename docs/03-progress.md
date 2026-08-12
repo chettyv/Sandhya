@@ -123,3 +123,12 @@ Founder decisions received: **payment rail = native IAP via RevenueCat**; keep w
 - **Launch-critical consequence of IAP, now on the founder list:** Google Play personal accounts require a 12-tester, 14-day closed test before production — the Android closed test must be live by mid-September to make 11 October.
 
 **Next:** web arrival surface scaffold (six §5 pages), then scoped AI on the day's content.
+
+### Cycle 6 — 12 Aug 2026 — Web arrival surface — DONE
+
+- **`apps/web`** — zero-framework static site: `build.mjs` renders `content/web/*.md` through the shared content-tools validator into `dist/` (page shell per design spec, index, `sitemap.xml`, `robots.txt`). Approved-only publishing; `--allow-draft` builds drafts with a visible "DRAFT — do not publish" banner for review. One dependency added: `marked` (markdown → HTML; actively maintained; writing a correct renderer by hand is not 20 lines). Site URL configurable via `WEB_SITE_URL` (placeholder `dharmadaily.app` until the domain exists — your-actions #9).
+- **`web_page` doc type** added to content-tools with the same named-reviewer gate as sessions; `pnpm content:validate` now covers web pages.
+- **Two §5 pages drafted** for founder review (your-actions #8): `what-can-i-eat-during-navratri` and `nine-forms-of-durga-navratri`. Deliberately no direct scripture quotations in drafts — prose only, tradition variation stated explicitly, no invented citations. Four more §5 pages to draft next (Ekadashi, Lakshmi puja, diya, Hanuman Chalisa meaning).
+- **Verified:** built in both modes, rendered in browser (draft banner, title/meta correct), lint/typecheck/tests/backend checks pass, `apps/web` builds after content-tools via workspace dependency ordering. Fixed en route: `apps/**/*.mjs` missing from the lint tsconfig; build scripts added to the relaxed-lint block alongside `scripts/**`.
+
+**Next:** remaining four §5 page drafts → scoped AI on today's content → EAS build config for the store pipeline.
