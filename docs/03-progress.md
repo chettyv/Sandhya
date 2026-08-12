@@ -244,3 +244,18 @@ All 80 live verses now carry Hindi verse translations and prose meanings (18.66 
 - **Live state:** bank 142 units (Gita 80, Chalisa 43, Isha 19), 108-verse pool, 100% Hindi; free-launch mode; payments/challenge/web-arrival parked with reactivation gates.
 - **Standing founder directives** (memory + this log): never stop to ask — log questions in 00-your-actions; corpus maximization; blanket content approval with spot-check flags; branch-per-work-chunk, no agent prefixes.
 - **CI parity lessons already fixed — do not regress:** generated `shlokaBank.json` is prettier-ignored; `expo-env.d.ts` is committed; staging RAG gates are guarded; no `as never` on route pushes (use object form).
+
+---
+
+## CYCLE LOG — TWO-STREAM PHASE (plan v3, 12 Aug 2026)
+
+### Cycle 17 — 12 Aug 2026 — STREAM B — Phase 0.5: both correctness fixes — DONE
+
+Plan v3's Phase 0.5, prerequisite for B4. Branch `phase-0.5-correctness-fixes`, merged to main.
+
+- **Fix 1 — tradition preference now RANKS retrieval, never narrows it.** The narrowing existed in three layers and all three are fixed: migration `20260812160000_tradition_ranks_not_narrows.sql` redefines `match_passage_embeddings` (tradition WHERE clause removed; small bounded 0.05 ranking boost for the stated tradition; rights gates untouched) and `cached_answer_sources_are_allowed` (tradition no longer a rights gate; cache keys stay tradition-scoped); the edge function and `packages/rag-pipeline` (which had a copy of the same bug at `index.ts:454`) now stable-rank the stated tradition first AFTER count truncation, so ranking can reorder but never drop. Passage policy extracted to `supabase/functions/_shared/retrieval.ts`; unit-tested by new `scripts/verify-tradition-retrieval.mjs` (in `backend:check`); the pipeline test that pinned the old narrowing now pins retention + ranking. `EDGE_PIPELINE_VERSION` v22, `PIPELINE_VERSION` 0.9.0 — no narrowed cached answer survives.
+- **Fix 2 — variation data rendered, not discarded.** `apps/mobile/src/lib/variationNotes.ts` (`describeVariations`) renders the actual `festivals.regional_variations` / `concepts.tradition_variations` jsonb ({note}, keyed regions, strings, arrays; safe fallback), replacing both constant strings in `content.ts`. 6 new tests.
+- **Brand rule sweep:** RAG context fence renamed `DHARMA_DAILY_RETRIEVED_CONTEXT` → `SANDHYA_RETRIEVED_CONTEXT` (edge fn + rag-pipeline prompt + verifier pins). Grep of tracked apps/packages/supabase/scripts: clean; committed `apps/web/dist` verified already clean (a stale local pre-rename build had masked this — rebuilt, byte-identical to HEAD).
+- **Verified:** typecheck (5 projects), 140 tests (117 rag-pipeline incl. new ranking test, 16 mobile, 7 content-tools), `backend:check` green (verifier pins updated to the new behaviour), lint 0 errors.
+
+**Stream B next (per plan §7 week 1):** B1 — Supabase production project + migrations + EAS env vars (blocked on founder credentials: your-actions #11/SHIP-48H), then B1 device build.
