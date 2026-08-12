@@ -220,3 +220,14 @@ Four writer batches (ch4, ch5, ch6, ch9/15/18 incl. the charama shloka with side
 ### Cycle 15 — 12 Aug 2026 — Hindi parity (80/80) + Hanuman Chalisa extracted — DONE
 
 All 80 live verses now carry Hindi verse translations and prose meanings (18.66 three-reading note survives in Hindi). ITRANS→Devanagari converter built; Chalisa extracted with canonical alignment (43 units; split chaupai 36 merged; aarti colophon excluded; nukta + R^i handled; zero Latin leakage). Chalisa lands as draft skeletons pending its translation pass. Hindi added to already-approved files under the founder blanket directive — spot-check welcome.
+
+### Cycle 16 — 12 Aug 2026 — Corpus maximization (founder: "we need them ALL") — IN PROGRESS
+
+**Live bank: 142 units, 3 texts** (Gita 80 · Hanuman Chalisa 43 · Isha 19), 108-verse daily pool, 100% Hindi.
+
+**Corpus ledger toward "all scriptures":**
+
+- Extracted, content pass RUNNING: Kena (36) · Mundaka (65) · Mandukya (13) — generic Wikisource extractor handles 1/2/3-level verse numbering.
+- Extracted, awaiting content passes: remaining 620 Gita verses (skeletons with correct Devanagari+IAST) — rolling writer waves next.
+- Next extraction queue: Katha, Prashna, Shvetashvatara, Taittiriya, Aitareya (Wikisource subpage texts — extend extractor with subpage fetching); Gayatri/Mahamrityunjaya/shanti mantras; Bhaja Govindam, Shiva Mahimna, Soundarya Lahari, Aditya Hridayam, Lalita Sahasranama (staged ITX — non-commercial terms OK in free mode).
+- Epics (Ramayana/Ramcharitmanas/Mahabharata): verse-bank format does not scale to 100k+ verses — bulk reader backed by the existing RAG corpus pipeline is the architecture; design next once Upanishads land.
