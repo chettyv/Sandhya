@@ -71,6 +71,22 @@ In Phase 1 deliverable order:
 
 ## CYCLE LOG
 
-### Cycle 1 — 12 Aug 2026 — Orientation + Phase 0 (in progress)
+### Cycle 1 — 12 Aug 2026 — Orientation + Phase 0 — DONE
 
-Planned: commit plan v2 · preserve branch pushed · untrack `content/_staging` · delete `docs/ref_images` screenshots · `PORTFOLIO.md` · this file · `docs/00-your-actions.md`.
+- Plan v2 committed (`6ff11ab`); `preserve/2026-08-12-full-state` pushed to origin.
+- 608 raw staged sources untracked from git (stay on disk); 35 reference screenshots deleted; `PORTFOLIO.md` written; this log and `docs/00-your-actions.md` created (`dc259fc`, merged to main, pushed).
+- Verified before touching anything: typecheck, 131 tests, backend checks all pass.
+- Remaining from Phase 0: git history rewrite — founder decision (your-actions item 2).
+
+### Cycle 2 — 12 Aug 2026 — Challenge session content format — DONE
+
+The plan's §4.1 pronunciation format + the writing contract for the nine sessions, built first because founder writing (your-actions item 3) was blocked without it.
+
+- `content/challenges/README.md` — house style: six fixed sections, three-register shloka block (**Devanagari / IAST / Say it** + Meaning + Source), "Say it" style rules.
+- `content/challenges/navratri-2026/_template.md` — starting file, validator-ignored via `_` prefix.
+- `packages/content-tools`: `challenge_session` doc type with strict validation — section order enforced, all five shloka labels required, Devanagari line must contain Devanagari codepoints, `approved` requires a named `reviewed_by`, `can_embed: false` mandatory (paid content never enters the RAG corpus). 7 new tests (11 total in package). `_`-prefixed files now skipped by the corpus scanner (also covers `_staging`, previously special-cased).
+- Verified: package tests, `pnpm content:validate`, `pnpm content:stats`, typecheck all pass.
+
+Files: +2 content docs, ~+120 lines in content-tools src, +90 test lines. No dependencies added.
+
+**Next:** challenge system (schema → screens → unlock → join screen with participation count), with the design spec written before any UI.

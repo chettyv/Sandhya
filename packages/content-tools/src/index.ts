@@ -20,6 +20,9 @@ export type ContentMetadata = {
   [key: string]: string | boolean;
 };
 
+export const SESSION_REVIEW_STATUSES = ["draft", "in_review", "approved"] as const;
+export type SessionReviewStatus = (typeof SESSION_REVIEW_STATUSES)[number];
+
 export type ContentValidationIssue = { file: string; message: string };
 
 export type ContentValidationResult = {
@@ -117,6 +120,10 @@ export function validateMarkdownDocument(source: string, displayFile = "content.
     return issues.map((issue) => `${displayFile}: ${issue}`);
   }
 
+  if (frontmatter.doc_type === "challenge_session") {
+    return validateChallengeSession(frontmatter, body).map((issue) => `${displayFile}: ${issue}`);
+  }
+
   for (const field of REQUIRED_FIELDS) {
     if (!(field in frontmatter)) issues.push(`missing required field: ${field}`);
   }
@@ -158,6 +165,94 @@ export function validateMarkdownDocument(source: string, displayFile = "content.
   return issues.map((issue) => `${displayFile}: ${issue}`);
 }
 
+// Challenge sessions (content/challenges/**) are paid product content with a
+// stricter contract than corpus documents: six fixed body sections, and every
+// quoted verse rendered in all three registers (Devanagari / IAST / plain
+// pronunciation) with a named source. See content/challenges/README.md.
+const SESSION_REQUIRED_SECTIONS = [
+  "Tonight",
+  "Shloka",
+  "Meaning",
+  "Practice",
+  "Tradition notes",
+  "Reflection",
+] as const;
+const SHLOKA_REQUIRED_LABELS = ["Devanagari", "IAST", "Say it", "Meaning", "Source"] as const;
+
+function validateChallengeSession(
+  frontmatter: Record<string, string | boolean>,
+  body: string,
+): string[] {
+  const issues: string[] = [];
+
+  for (const field of ["challenge_slug", "session_title", "deity_focus", "tradition_primary"]) {
+    if (typeof frontmatter[field] !== "string" || !frontmatter[field].trim()) {
+      issues.push(`${field} must be a non-empty string`);
+    }
+  }
+  for (const field of ["night", "estimated_minutes"]) {
+    if (typeof frontmatter[field] !== "string" || !/^[1-9]\d*$/.test(frontmatter[field])) {
+      issues.push(`${field} must be a positive integer`);
+    }
+  }
+  if (
+    typeof frontmatter.review_status !== "string" ||
+    !SESSION_REVIEW_STATUSES.includes(frontmatter.review_status as SessionReviewStatus)
+  ) {
+    issues.push(`review_status must be one of: ${SESSION_REVIEW_STATUSES.join(", ")}`);
+  }
+  if (
+    frontmatter.review_status === "approved" &&
+    (typeof frontmatter.reviewed_by !== "string" || !frontmatter.reviewed_by.trim())
+  ) {
+    issues.push("approved sessions must name a reviewer in reviewed_by");
+  }
+  if (frontmatter.can_embed !== false) {
+    issues.push(
+      "challenge sessions must set can_embed: false (paid content never enters the RAG corpus)",
+    );
+  }
+
+  const sectionTitles = [...body.matchAll(/^##\s+(.+?)\s*$/gm)].map((match) => match[1] ?? "");
+  const expectedOrder = SESSION_REQUIRED_SECTIONS.filter((section) =>
+    sectionTitles.includes(section),
+  );
+  for (const section of SESSION_REQUIRED_SECTIONS) {
+    if (!sectionTitles.includes(section)) issues.push(`missing required section: ## ${section}`);
+  }
+  const actualOrder = sectionTitles.filter((title) =>
+    (SESSION_REQUIRED_SECTIONS as readonly string[]).includes(title),
+  );
+  if (
+    issues.every((issue) => !issue.startsWith("missing required section")) &&
+    actualOrder.join("|") !== expectedOrder.join("|")
+  ) {
+    issues.push(`sections out of order; expected: ${SESSION_REQUIRED_SECTIONS.join(", ")}`);
+  }
+
+  const shlokaBody = extractSection(body, "Shloka");
+  if (shlokaBody !== null) {
+    for (const label of SHLOKA_REQUIRED_LABELS) {
+      if (!new RegExp(`^\\*\\*${label}:\\*\\*\\s+\\S`, "m").test(shlokaBody)) {
+        issues.push(`## Shloka must include a **${label}:** line`);
+      }
+    }
+    const devanagariLine = shlokaBody.match(/^\*\*Devanagari:\*\*\s+(.+)$/m)?.[1];
+    if (devanagariLine && !/[ऀ-ॿ]/.test(devanagariLine)) {
+      issues.push("**Devanagari:** line contains no Devanagari characters");
+    }
+  }
+
+  return issues;
+}
+
+function extractSection(body: string, title: string): string | null {
+  const match = body.match(
+    new RegExp(`^##\\s+${title}\\s*$([\\s\\S]*?)(?=^##\\s+|$(?![\\s\\S]))`, "m"),
+  );
+  return match ? (match[1] ?? "") : null;
+}
+
 export function parseFrontmatter(source: string): {
   frontmatter: Record<string, string | boolean> | null;
   body: string;
@@ -192,7 +287,7 @@ async function listMarkdownFiles(root: string): Promise<string[]> {
     // canonical corpus documents. Keeping them out of the validator prevents
     // `pnpm content:validate` from treating README files as missing rights
     // metadata while still scanning every production Markdown source.
-    if (entry.name.toLowerCase() === "_staging" || entry.name.toLowerCase() === "readme.md") {
+    if (entry.name.toLowerCase() === "readme.md" || entry.name.startsWith("_")) {
       continue;
     }
     const path = join(root, entry.name);
