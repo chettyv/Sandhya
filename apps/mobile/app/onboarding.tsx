@@ -85,7 +85,7 @@ export default function OnboardingScreen() {
       <ScrollView contentContainerStyle={{ padding: layout.screenPadding, paddingBottom: 40 }}>
         <View className="mt-10">
           <Text className="text-sm font-semibold uppercase tracking-[2px] text-saffron">
-            Dharma Daily
+            Sandhya
           </Text>
           <Text className="mt-3 text-[32px] font-semibold leading-10 text-ink">
             A small daily space for learning and practice.

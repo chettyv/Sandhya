@@ -275,7 +275,7 @@ export const additionalConcepts: Concept[] = [
     "Varna",
     "वर्ण",
     "A historical classification discussed in some Hindu texts and social theories.",
-    "Varna is not interchangeable with every form of caste or with a person’s worth. Caste-based discrimination has caused and continues to cause real harm; Dharma Daily does not endorse hierarchy or exclusion.",
+    "Varna is not interchangeable with every form of caste or with a person’s worth. Caste-based discrimination has caused and continues to cause real harm; Sandhya does not endorse hierarchy or exclusion.",
     "Texts, historians, communities, and contemporary thinkers debate how varna relates to jati, occupation, conduct, and later social systems.",
   ),
   concept(

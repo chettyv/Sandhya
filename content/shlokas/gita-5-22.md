@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 5.22
 tradition_primary: general
 tags: discipline, wisdom
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** yay hi sum-spar-sha-JAA BHO-gaa DUH-kha-YO-na-ya AY-va tay / aad-YUN-ta-vun-tah kown-TAY-ya na TAY-shoo RA-ma-tay BU-dhah
 **Meaning:** The enjoyments born of contact with the senses are truly wombs of sorrow; they have a beginning and an end, O son of Kunti — the wise take no delight in them.
 **Meaning (hi):** इन्द्रिय-संपर्क से उपजे भोग वास्तव में दुःख की जननी हैं; उनका आदि है और अन्त भी, हे कुन्तीपुत्र — ज्ञानी उनमें रमता नहीं।
-**Source:** Bhagavad Gita 5.22, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 5.22, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

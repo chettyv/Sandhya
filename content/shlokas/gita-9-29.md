@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 9.29
 tradition_primary: general
 tags: devotion, wisdom
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%97%E0%A5%81%E0%A4%B9%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** sa-MO-hum sar-va-BHOO-tay-shoo na may DVAYSH-yo-sti na pri-yah / yay bha-JUN-ti too maam BHAK-tyaa MA-yi tay TAY-shoo CHAAP-ya-hum
 **Meaning:** I am the same toward all beings; none is hateful to me and none is dear. But those who worship me with devotion are in me, and I too am in them.
 **Meaning (hi):** मैं सब प्राणियों के प्रति समान हूँ; न कोई मुझे अप्रिय है, न कोई प्रिय। पर जो मुझे भक्ति से भजते हैं, वे मुझमें हैं, और मैं भी उनमें हूँ।
-**Source:** Bhagavad Gita 9.29, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%97%E0%A5%81%E0%A4%B9%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 9.29, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%B5%E0%A4%BF%E0%A4%A6%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B0%E0%A4%BE%E0%A4%9C%E0%A4%97%E0%A5%81%E0%A4%B9%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

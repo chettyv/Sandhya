@@ -8,7 +8,7 @@ const rawRoot = path.join(repoRoot, "content/_staging/raw/english");
 async function fetchText(url) {
   const response = await fetch(url, {
     headers: {
-      "user-agent": "DharmaDaily-source-stager/1.0 (+English corpus review)",
+      "user-agent": "Sandhya-source-stager/1.0 (+English corpus review)",
     },
   });
   if (!response.ok) {

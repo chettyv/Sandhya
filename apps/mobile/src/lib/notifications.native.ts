@@ -5,7 +5,7 @@ import { Platform } from "react-native";
 
 import { supabase } from "./supabase";
 
-const PUSH_TOKEN_KEY = "dharma-daily-expo-push-token";
+const PUSH_TOKEN_KEY = "sandhya-expo-push-token";
 const NOTIFICATION_REQUEST_TIMEOUT_MS = 15_000;
 
 Notifications.setNotificationHandler({
@@ -124,7 +124,7 @@ export async function scheduleFestivalReminder(
   await Notifications.scheduleNotificationAsync({
     content: {
       title: `${festival.name} is today`,
-      body: "Open Dharma Daily to learn about its meaning and observances.",
+      body: "Open Sandhya to learn about its meaning and observances.",
       data: { type: "festival", festivalId: festival.id },
     },
     trigger: {

@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 5.25
 tradition_primary: general
 tags: peace, duty
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** la-BHUN-tay brah-ma-nir-VAA-num RI-sha-yah KSHEE-na-KUL-ma-shaah / chhin-na-DVAI-dhaa ya-TAAT-maa-nah sar-va-BHOO-ta-hi-tay ra-TAAH
 **Meaning:** The seers whose faults are worn away and whose doubts are cut, who are self-restrained and delight in the welfare of all beings, attain the stillness of Brahman.
 **Meaning (hi):** जिन ऋषियों के दोष क्षीण हो चुके हैं और संशय कट चुके हैं, जो संयमी हैं और सब प्राणियों के हित में रमते हैं, वे ब्रह्म की शान्ति को पाते हैं।
-**Source:** Bhagavad Gita 5.25, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 5.25, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

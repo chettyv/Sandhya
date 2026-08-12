@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 12.2
 tradition_primary: general
 tags: devotion
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** shree-bha-ga-VAAN oo-VAA-cha / mai-YAA-vaysh-ya MA-no yay maam nit-ya-YOOK-taa oo-PAA-sa-tay / shrad-dha-YAA pa-ra-yo-PAY-taas-tay may yook-ta-ta-MAA ma-TAAH
 **Meaning:** The Blessed Lord said: Those who fix their minds on me and worship me, always steady and filled with the highest faith — these I consider the most accomplished in yoga.
 **Meaning (hi):** श्रीभगवान ने कहा: जो अपना मन मुझमें एकाग्र करके, सदा स्थिर रहकर, परम श्रद्धा के साथ मेरी उपासना करते हैं — उन्हें मैं योग में सबसे श्रेष्ठ मानता हूँ।
-**Source:** Bhagavad Gita 12.2, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 12.2, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

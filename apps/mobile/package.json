@@ -1,8 +1,8 @@
 {
-  "name": "@dharma-daily/mobile",
+  "name": "@sandhya/mobile",
   "version": "0.1.0",
   "private": true,
-  "description": "Dharma Daily mobile app for iOS and Android.",
+  "description": "Sandhya mobile app for iOS and Android.",
   "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",

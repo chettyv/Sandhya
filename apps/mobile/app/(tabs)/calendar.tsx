@@ -240,8 +240,8 @@ export default function CalendarScreen() {
                 <Text className="font-semibold text-ink">Dates can vary by location</Text>
                 <Text className="mt-1 text-sm leading-5 text-muted">
                   Tithi and observance dates may differ by region, tradition, and local panchang.
-                  Dharma Daily does not calculate local timings yet; check a local panchang or
-                  temple for exact observance times.
+                  Sandhya does not calculate local timings yet; check a local panchang or temple for
+                  exact observance times.
                 </Text>
               </View>
             </View>

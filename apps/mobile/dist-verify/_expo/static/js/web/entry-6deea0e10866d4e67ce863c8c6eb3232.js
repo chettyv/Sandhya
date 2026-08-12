@@ -68923,7 +68923,7 @@ __d(
         return null;
       },
       get manifest() {
-        return '{"name":"Dharma Daily","slug":"dharma-daily","version":"1.0.0","orientation":"portrait","icon":"./assets/images/dharma-daily-icon.png","scheme":"dharmadaily","userInterfaceStyle":"automatic","web":{"bundler":"metro","output":"static","favicon":"./assets/images/dharma-daily-icon.png","description":"Dharma Daily mobile app for iOS and Android.","shortName":"Dharma Daily","orientation":"portrait","backgroundColor":"#26172B","name":"Dharma Daily"},"experiments":{"typedRoutes":true},"description":"Dharma Daily mobile app for iOS and Android.","sdkVersion":"56.0.0","platforms":["ios","android","web"],"extra":{"router":{}}}';
+        return '{"name":"Sandhya","slug":"sandhya","version":"1.0.0","orientation":"portrait","icon":"./assets/images/sandhya-icon.png","scheme":"sandhya","userInterfaceStyle":"automatic","web":{"bundler":"metro","output":"static","favicon":"./assets/images/sandhya-icon.png","description":"Sandhya mobile app for iOS and Android.","shortName":"Sandhya","orientation":"portrait","backgroundColor":"#26172B","name":"Sandhya"},"experiments":{"typedRoutes":true},"description":"Sandhya mobile app for iOS and Android.","sdkVersion":"56.0.0","platforms":["ios","android","web"],"extra":{"router":{}}}';
       },
       get manifest2() {
         return null;
@@ -87174,7 +87174,7 @@ __d(
       }));
     var n = r(d[0]);
     const t = {
-      appName: "Dharma Daily",
+      appName: "Sandhya",
       today: "Today",
       chat: "Chat",
       home: "Home",
@@ -87639,7 +87639,7 @@ __d(
                                 }),
                                 (0, I.jsx)(h.default, {
                                   className: "font-semibold text-ink",
-                                  children: "Dharma Daily",
+                                  children: "Sandhya",
                                 }),
                                 (0, I.jsx)(y.Pill, {
                                   label: se.data.answer.confidence,
@@ -93888,7 +93888,7 @@ __d(
         "Varna",
         "\u0935\u0930\u094d\u0923",
         "A historical classification discussed in some Hindu texts and social theories.",
-        "Varna is not interchangeable with every form of caste or with a person\u2019s worth. Caste-based discrimination has caused and continues to cause real harm; Dharma Daily does not endorse hierarchy or exclusion.",
+        "Varna is not interchangeable with every form of caste or with a person\u2019s worth. Caste-based discrimination has caused and continues to cause real harm; Sandhya does not endorse hierarchy or exclusion.",
         "Texts, historians, communities, and contemporary thinkers debate how varna relates to jati, occupation, conduct, and later social systems.",
       ),
       t(
@@ -94467,7 +94467,7 @@ __d(
         return o;
       }),
       (e.updateProfile = async function (t) {
-        if (!s.supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+        if (!s.supabase) throw new Error("Sandhya is not connected to Supabase.");
         const { data: o, error: n } = await s.supabase.auth.getSession();
         if (n) throw n;
         const c = o.session?.user.id;
@@ -94597,7 +94597,7 @@ __d(
         if (t) throw t;
       }),
       (e.deleteAccount = async function () {
-        if (!s.supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+        if (!s.supabase) throw new Error("Sandhya is not connected to Supabase.");
         await (0, n.configureDailyReminder)(!1, "08:00").catch(() => {});
         const { data: t, error: c } = await s.supabase.auth.getSession();
         if (c) throw c;
@@ -94622,7 +94622,7 @@ __d(
         await s.supabase.auth.signOut({ scope: "local" }).catch(() => {});
       }),
       (e.exportAccountData = async function () {
-        if (!s.supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+        if (!s.supabase) throw new Error("Sandhya is not connected to Supabase.");
         const { data: t, error: o } = await s.supabase.auth.getSession();
         if (o) throw o;
         const n = t.session?.access_token;
@@ -94646,7 +94646,7 @@ __d(
       u = 2e4,
       l = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
     async function f() {
-      if (!s.supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+      if (!s.supabase) throw new Error("Sandhya is not connected to Supabase.");
       const { data: t, error: o } = await s.supabase.auth.getSession();
       if (o) throw o;
       const n = t.session?.user.id;
@@ -94811,8 +94811,8 @@ __d(
         e
       );
     })(r(_d[0]));
-    const e = "dharma-daily-local-journal",
-      n = "dharma-daily-local-journal-index",
+    const e = "sandhya-local-journal",
+      n = "sandhya-local-journal-index",
       o = 512,
       c = 50,
       l = "guest";
@@ -94867,7 +94867,7 @@ __d(
       return t === l ? n : `${n}-${w(t)}`;
     }
     function p(t) {
-      return t === l ? "dharma-daily-local-journal" : `dharma-daily-local-journal-${w(t)}`;
+      return t === l ? "sandhya-local-journal" : `sandhya-local-journal-${w(t)}`;
     }
     function w(t) {
       return /^[0-9a-f-]{8,80}$/i.test(t) ? t : "guest";
@@ -111340,7 +111340,7 @@ __d(
       }),
       (e.askDharma = async function (t, n, s) {
         throw new Error(
-          "Dharma Daily is not connected to its source library yet. Add the public Supabase environment values to enable grounded answers.",
+          "Sandhya is not connected to its source library yet. Add the public Supabase environment values to enable grounded answers.",
         );
       }));
     (r(d[0]), r(d[1]));
@@ -111395,7 +111395,7 @@ __d(
         t
       );
     })(r(_d[2]));
-    const c = "dharma-daily-anonymous-telemetry-consent";
+    const c = "sandhya-anonymous-telemetry-consent";
     async function o() {
       return "granted" === (await n.getItemAsync(c).catch(() => null));
     }
@@ -111663,7 +111663,7 @@ __d(
             setHydrated: (s) => t({ hydrated: s }),
           }),
           {
-            name: "dharma-daily-app-state",
+            name: "sandhya-app-state",
             storage: n,
             partialize: (t) => ({ ...t, hydrated: !1 }),
             onRehydrateStorage: () => (t) => t?.setHydrated(!0),
@@ -112631,7 +112631,7 @@ __d(
                             (0, y.jsx)(o.default, {
                               className: "mt-1 text-sm leading-5 text-muted",
                               children:
-                                "Tithi and observance dates may differ by region, tradition, and local panchang. Dharma Daily does not calculate local timings yet; check a local panchang or temple for exact observance times.",
+                                "Tithi and observance dates may differ by region, tradition, and local panchang. Sandhya does not calculate local timings yet; check a local panchang or temple for exact observance times.",
                             }),
                           ],
                         }),
@@ -113714,7 +113714,7 @@ __d(
                     children: [
                       (0, P.jsx)(u.default, {
                         className: "font-semibold text-ink",
-                        children: "Go deeper with Dharma Daily Plus",
+                        children: "Go deeper with Sandhya Plus",
                       }),
                       (0, P.jsx)(u.default, {
                         className: "mt-1 text-sm leading-5 text-muted",
@@ -116128,7 +116128,7 @@ __d(
         translation:
           "Just as the embodied self passes through childhood, youth, and old age in this body, so at death it passes into another body; the wise person is not confused by this.",
         source:
-          "Bhagavad Gita 2.13, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.13, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "dehina\u1e25", meaning: "of the embodied self" },
           { word: "asmin", meaning: "in this" },
@@ -116163,7 +116163,7 @@ __d(
         translation:
           "Contacts between the senses and their objects, Arjuna, bring cold and heat, pleasure and pain. They come and go and do not last \u2014 endure them patiently, Bharata.",
         source:
-          "Bhagavad Gita 2.14, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.14, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           {
             word: "m\u0101tr\u0101-spar\u015b\u0101\u1e25",
@@ -116339,7 +116339,7 @@ __d(
         translation:
           "The self is never born and never dies; having existed, it never ceases to be. Unborn, eternal, everlasting, and ancient, it is not slain when the body is slain.",
         source:
-          "Bhagavad Gita 2.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "na j\u0101yate", meaning: "is never born" },
           { word: "mriyate", meaning: "dies" },
@@ -117106,7 +117106,7 @@ __d(
         translation:
           "Your right is to the action alone, never to its results. Do not make the results of action your motive, and do not become attached to inaction.",
         source:
-          "Bhagavad Gita 2.47, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.47, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "karma\u1e47i", meaning: "in action" },
           { word: "eva", meaning: "only, alone" },
@@ -117144,7 +117144,7 @@ __d(
         translation:
           "Established in yoga, do your work, Arjuna, letting go of attachment, staying even in success and failure. That evenness of mind is called yoga.",
         source:
-          "Bhagavad Gita 2.48, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.48, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "yoga-stha\u1e25", meaning: "established in yoga" },
           { word: "kuru", meaning: "do, perform" },
@@ -117543,7 +117543,7 @@ __d(
         translation:
           "When a person keeps dwelling on the objects of the senses, attachment to them arises; from attachment desire is born, and from desire anger arises.",
         source:
-          "Bhagavad Gita 2.62, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.62, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "dhy\u0101yata\u1e25", meaning: "for one who keeps dwelling on" },
           { word: "vi\u1e63ay\u0101n", meaning: "the objects of the senses" },
@@ -117578,7 +117578,7 @@ __d(
         translation:
           "From anger comes delusion; from delusion, confusion of memory; from confusion of memory, the loss of discernment; and when discernment is lost, a person is ruined.",
         source:
-          "Bhagavad Gita 2.63, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.63, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "krodh\u0101t", meaning: "from anger" },
           { word: "bhavati", meaning: "comes, arises" },
@@ -117750,7 +117750,7 @@ __d(
         translation:
           "What is night for all beings is when the self-controlled one is awake; and what beings are awake in, the seeing sage knows as night.",
         source:
-          "Bhagavad Gita 2.69, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.69, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "y\u0101", meaning: "that which" },
           { word: "ni\u015b\u0101", meaning: "night" },
@@ -117786,7 +117786,7 @@ __d(
         translation:
           "As waters flow into the ocean, which stays full and unmoved as they enter, so all desires enter the one who attains peace \u2014 not the one who runs after desires.",
         source:
-          "Bhagavad Gita 2.70, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.70, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "\u0101p\u016bryam\u0101\u1e47am", meaning: "being filled from all sides" },
           { word: "acala-prati\u1e63\u1e6dham", meaning: "standing unmoved, firmly established" },
@@ -117829,7 +117829,7 @@ __d(
         translation:
           'The person who abandons all desires and moves through life free of craving, without any sense of "mine" or "I", attains peace.',
         source:
-          "Bhagavad Gita 2.71, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 2.71, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "vih\u0101ya", meaning: "having given up, having set down" },
           { word: "k\u0101m\u0101n", meaning: "desires" },
@@ -127692,7 +127692,7 @@ __d(
         translation:
           "Arjuna said: Those devotees who worship you with such constant steadiness, and those who worship the imperishable and unmanifest \u2014 which of them understands yoga best?",
         source:
-          "Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "arjuna\u1e25 uv\u0101ca", meaning: "Arjuna said" },
           { word: "evam", meaning: "thus, in this way" },
@@ -127729,7 +127729,7 @@ __d(
         translation:
           "The Blessed Lord said: Those who fix their minds on me and worship me, always steady and filled with the highest faith \u2014 these I consider the most accomplished in yoga.",
         source:
-          "Bhagavad Gita 12.2, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.2, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "\u015br\u012b-bhagav\u0101n uv\u0101ca", meaning: "the Blessed Lord said" },
           { word: "mayi", meaning: "on me" },
@@ -127770,7 +127770,7 @@ __d(
         translation:
           "But those who worship the imperishable \u2014 the indefinable, the unmanifest, the all-pervading, the inconceivable, the unchanging, the immovable, the constant \u2014 (the sentence continues in 12.4).",
         source:
-          "Bhagavad Gita 12.3, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.3, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "ye", meaning: "those who" },
           { word: "tu", meaning: "but" },
@@ -127805,7 +127805,7 @@ __d(
         translation:
           "\u2014 those who fully restrain their senses, stay even-minded in every situation, and delight in the welfare of all beings \u2014 they too reach me.",
         source:
-          "Bhagavad Gita 12.4, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.4, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "sa\u1e43niyamya", meaning: "fully restraining" },
           { word: "indriya-gr\u0101mam", meaning: "the whole group of senses" },
@@ -127838,7 +127838,7 @@ __d(
         translation:
           "The struggle is greater for those whose minds are set on the unmanifest, for a goal without form is hard for embodied beings to reach.",
         source:
-          "Bhagavad Gita 12.5, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.5, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "kle\u015ba\u1e25", meaning: "struggle, hardship" },
           { word: "adhikatara\u1e25", meaning: "greater" },
@@ -127874,7 +127874,7 @@ __d(
         translation:
           "But those who dedicate all their actions to me, hold me as their highest aim, and worship me, meditating on me with undivided devotion \u2014 (the sentence continues in 12.7).",
         source:
-          "Bhagavad Gita 12.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "ye", meaning: "those who" },
           { word: "tu", meaning: "but" },
@@ -127910,7 +127910,7 @@ __d(
         translation:
           "\u2014 for them, whose minds have entered into me, I soon become the rescuer from the ocean of death-bound existence, O Partha.",
         source:
-          "Bhagavad Gita 12.7, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.7, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "te\u1e63\u0101m", meaning: "for them" },
           { word: "aham", meaning: "I" },
@@ -127948,7 +127948,7 @@ __d(
         translation:
           "Fix your mind on me alone; settle your understanding in me. From then on you will live in me \u2014 of this there is no doubt.",
         source:
-          "Bhagavad Gita 12.8, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.8, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "mayi", meaning: "on me" },
           { word: "eva", meaning: "alone, only" },
@@ -127980,7 +127980,7 @@ __d(
         translation:
           "But if you cannot hold your mind steadily on me, then seek to reach me through the yoga of repeated practice, O Dhananjaya.",
         source:
-          "Bhagavad Gita 12.9, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.9, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "atha", meaning: "but if" },
           { word: "cittam", meaning: "the mind, the attention" },
@@ -128015,7 +128015,7 @@ __d(
         translation:
           "If you cannot even manage this practice, then devote yourself to working for me; even by doing actions for my sake you will reach fulfilment.",
         source:
-          "Bhagavad Gita 12.10, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.10, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "abhy\u0101se", meaning: "in repeated practice" },
           { word: "api", meaning: "even" },
@@ -128050,7 +128050,7 @@ __d(
         translation:
           "And if even this is beyond you, then, taking refuge in union with me, give up the fruits of all your actions with a disciplined mind.",
         source:
-          "Bhagavad Gita 12.11, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.11, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "atha", meaning: "and if, but if" },
           { word: "etat api", meaning: "even this" },
@@ -128086,7 +128086,7 @@ __d(
         translation:
           "Knowledge is better than practice; meditation is better than knowledge; giving up the fruits of action is better than meditation \u2014 for peace follows immediately upon that giving up.",
         source:
-          "Bhagavad Gita 12.12, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.12, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "\u015breya\u1e25", meaning: "better, superior" },
           { word: "hi", meaning: "indeed, for" },
@@ -128124,7 +128124,7 @@ __d(
         translation:
           "One who bears no ill will toward any being, who is friendly and compassionate, free of possessiveness and self-importance, the same in sorrow and joy, and patient \u2014",
         source:
-          "Bhagavad Gita 12.13, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.13, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "adve\u1e63\u1e6d\u0101", meaning: "bearing ill will toward none" },
           { word: "sarva-bh\u016bt\u0101n\u0101m", meaning: "toward all beings" },
@@ -128159,7 +128159,7 @@ __d(
         translation:
           "\u2014 that yogi who is always content, self-controlled, firm in resolve, with mind and understanding offered to me \u2014 that devotee of mine is dear to me.",
         source:
-          "Bhagavad Gita 12.14, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.14, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "sa\u1e43tu\u1e63\u1e6da\u1e25", meaning: "content, satisfied" },
           { word: "satatam", meaning: "always, constantly" },
@@ -128192,7 +128192,7 @@ __d(
         translation:
           "One from whom the world does not shrink and who does not shrink from the world, who is free from excitement, resentment, fear, and anxiety \u2014 that one too is dear to me.",
         source:
-          "Bhagavad Gita 12.15, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.15, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "yasm\u0101t", meaning: "from whom" },
           { word: "na udvijate", meaning: "does not shrink, is not disturbed" },
@@ -128226,7 +128226,7 @@ __d(
         translation:
           "One who wants nothing, who is pure, capable, impartial, and untroubled, who has given up all self-interested undertakings \u2014 that devotee of mine is dear to me.",
         source:
-          "Bhagavad Gita 12.16, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.16, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "anapek\u1e63a\u1e25", meaning: "expecting nothing, free of wants" },
           { word: "\u015buci\u1e25", meaning: "pure, clean" },
@@ -128263,7 +128263,7 @@ __d(
         translation:
           "One who neither rejoices nor hates, neither grieves nor craves, who has let go of both the pleasant and the unpleasant \u2014 that devoted one is dear to me.",
         source:
-          "Bhagavad Gita 12.17, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.17, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "ya\u1e25", meaning: "who" },
           { word: "na h\u1e5b\u1e63yati", meaning: "does not (over-)rejoice" },
@@ -128297,7 +128297,7 @@ __d(
         translation:
           "One who is the same toward enemy and friend, the same in honour and disgrace, in cold and heat, in pleasure and pain, and free from clinging \u2014",
         source:
-          "Bhagavad Gita 12.18, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.18, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "sama\u1e25", meaning: "the same, even-minded" },
           { word: "\u015batrau", meaning: "toward an enemy" },
@@ -128330,7 +128330,7 @@ __d(
         translation:
           "\u2014 alike in blame and praise, sparing with speech, content with whatever comes, at home anywhere, steady in mind, and full of devotion \u2014 that person is dear to me.",
         source:
-          "Bhagavad Gita 12.19, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.19, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "tulya-nind\u0101-stuti\u1e25", meaning: "the same in blame and praise" },
           { word: "maun\u012b", meaning: "silent, sparing with speech" },
@@ -128362,7 +128362,7 @@ __d(
         translation:
           "But those who honour this nectar of dharma as it has been taught, full of faith and holding me as the highest \u2014 those devotees are exceedingly dear to me.",
         source:
-          "Bhagavad Gita 12.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+          "Bhagavad Gita 12.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review",
         words: [
           { word: "ye tu", meaning: "but those who" },
           {
@@ -134851,7 +134851,7 @@ __d(
                     }),
                     (0, v.jsx)(n.Stack.Screen, {
                       name: "subscription",
-                      options: { title: "Dharma Daily Plus", presentation: "modal" },
+                      options: { title: "Sandhya Plus", presentation: "modal" },
                     }),
                     (0, v.jsx)(n.Stack.Screen, {
                       name: "legal",
@@ -176892,7 +176892,7 @@ __d(
           children: (0, b.jsx)(c.default, {
             className: "text-center text-[15px] leading-6 text-muted",
             children:
-              "Joining happens in the Dharma Daily app, where the challenge lives. Open the app to join.",
+              "Joining happens in the Sandhya app, where the challenge lives. Open the app to join.",
           }),
         })
       );
@@ -177487,7 +177487,7 @@ __d(
                                       }),
                                       (0, y.jsx)(c.default, {
                                         className: "font-semibold text-ink",
-                                        children: "Dharma Daily",
+                                        children: "Sandhya",
                                       }),
                                       e.confidence
                                         ? (0, y.jsx)(x.Pill, { label: e.confidence, tone: "sage" })
@@ -178008,7 +178008,7 @@ __d(
             children: (0, f.jsx)(n.default, {
               className: "text-sm leading-6 text-muted",
               children:
-                "Ask for source-grounded stories, practices, or comparisons. Dharma Daily will identify the tradition and cite only passages returned by the source library.",
+                "Ask for source-grounded stories, practices, or comparisons. Sandhya will identify the tradition and cite only passages returned by the source library.",
             }),
           }),
           (0, f.jsxs)(l.default, {
@@ -178309,7 +178309,7 @@ __d(
             (0, u.jsx)(n.default, {
               className: "mt-1 text-center text-sm leading-5 text-muted",
               children:
-                "This guide is part of Dharma Daily Plus. Free members can keep exploring the daily reflection, starter practices, and core concepts.",
+                "This guide is part of Sandhya Plus. Free members can keep exploring the daily reflection, starter practices, and core concepts.",
             }),
             (0, u.jsx)(l.default, {
               accessibilityRole: "button",
@@ -178696,7 +178696,7 @@ __d(
             (0, h.jsx)(o.default, {
               className: "mt-3 text-base leading-6 text-muted",
               children:
-                "Dharma Daily is educational software for Hindu learning and personal reflection. It is not a religious authority, guru, priest, doctor, therapist, lawyer, or financial adviser.",
+                "Sandhya is educational software for Hindu learning and personal reflection. It is not a religious authority, guru, priest, doctor, therapist, lawyer, or financial adviser.",
             }),
             (0, h.jsxs)(l.default, {
               accessibilityRole: "alert",
@@ -178865,7 +178865,7 @@ __d(
               children: [
                 (0, N.jsx)(u.default, {
                   className: "text-sm font-semibold uppercase tracking-[2px] text-saffron",
-                  children: "Dharma Daily",
+                  children: "Sandhya",
                 }),
                 (0, N.jsx)(u.default, {
                   className: "mt-3 text-[32px] font-semibold leading-10 text-ink",
@@ -179615,7 +179615,7 @@ __d(
                 className: "mt-3 items-center py-2",
                 children: (0, w.jsx)(u.default, {
                   className: "font-semibold text-plum",
-                  children: "Explore Dharma Daily Plus",
+                  children: "Explore Sandhya Plus",
                 }),
               }),
           (0, w.jsx)(u.default, {
@@ -179674,7 +179674,7 @@ __d(
             children: (0, w.jsx)(u.default, {
               className: "text-center text-xs leading-5 text-muted",
               children:
-                "Dharma Daily offers educational information and reflective practices. It does not replace a guru, priest, doctor, therapist, lawyer, or financial adviser.",
+                "Sandhya offers educational information and reflective practices. It does not replace a guru, priest, doctor, therapist, lawyer, or financial adviser.",
             }),
           }),
           (0, w.jsx)(x.default, {
@@ -180117,8 +180117,7 @@ __d(
                 }),
                 (0, f.jsx)(o.default, {
                   className: "mt-3 text-center text-[15px] leading-6 text-muted",
-                  children:
-                    "Your new password is ready. You can continue your Dharma Daily journey.",
+                  children: "Your new password is ready. You can continue your Sandhya journey.",
                 }),
                 (0, f.jsx)(c.default, {
                   className: "mt-6 w-full",
@@ -180444,7 +180443,7 @@ __d(
             O(!0);
             try {
               const e = await (0, h.exportAccountData)();
-              await l.default.share({ title: "Dharma Daily account export", message: e });
+              await l.default.share({ title: "Sandhya account export", message: e });
             } catch (e) {
               s.default.alert(
                 "Could not export account data",
@@ -180506,29 +180505,25 @@ __d(
                 title: "Reminder time",
                 subtitle: D,
                 onPress: () => {
-                  s.default.alert(
-                    "Reminder time",
-                    "Choose when Dharma Daily should invite you back.",
-                    [
-                      ...["08:00", "12:00", "20:00"].map((e) => ({
-                        text: e,
-                        onPress: () => {
-                          b ? Y(!0, e) : v(!1, e);
-                        },
-                      })),
-                      { text: "Cancel", style: "cancel" },
-                    ],
-                  );
+                  s.default.alert("Reminder time", "Choose when Sandhya should invite you back.", [
+                    ...["08:00", "12:00", "20:00"].map((e) => ({
+                      text: e,
+                      onPress: () => {
+                        b ? Y(!0, e) : v(!1, e);
+                      },
+                    })),
+                    { text: "Cancel", style: "cancel" },
+                  ]);
                 },
               }),
               (0, C.jsx)(p.ListRow, {
                 icon: "moon-outline",
                 title: "Appearance",
-                subtitle: "Dharma Daily dark",
+                subtitle: "Sandhya dark",
                 onPress: () =>
                   s.default.alert(
                     "Appearance",
-                    "Dharma Daily uses a calm dark palette designed for reading and reflection.",
+                    "Sandhya uses a calm dark palette designed for reading and reflection.",
                   ),
               }),
               (0, C.jsx)(L, {}),
@@ -180641,7 +180636,7 @@ __d(
                           onPress: () => {
                             s.default.alert(
                               "Delete account?",
-                              "This permanently removes your synced data and cannot be undone. Deleting your Dharma Daily account does not cancel an Apple or Google subscription; manage billing in the store first if needed.",
+                              "This permanently removes your synced data and cannot be undone. Deleting your Sandhya account does not cancel an Apple or Google subscription; manage billing in the store first if needed.",
                               [
                                 { text: "Cancel", style: "cancel" },
                                 {
@@ -180652,7 +180647,7 @@ __d(
                                       .then(() => {
                                         s.default.alert(
                                           "Account deleted",
-                                          "Your Dharma Daily account and synced data have been removed.",
+                                          "Your Sandhya account and synced data have been removed.",
                                           [
                                             {
                                               text: "Continue",
@@ -180684,7 +180679,7 @@ __d(
           }),
           (0, C.jsx)(u.default, {
             className: "mt-6 text-center text-xs leading-5 text-muted",
-            children: "Dharma Daily 1.0.0 \xb7 Made with care for diverse traditions",
+            children: "Sandhya 1.0.0 \xb7 Made with care for diverse traditions",
           }),
         ],
       });
@@ -180709,7 +180704,7 @@ __d(
           onPress: () =>
             s.default.alert(
               "Language",
-              "Dharma Daily is in English today. Hindi and other languages will appear here as reviewed translations are added.",
+              "Sandhya is in English today. Hindi and other languages will appear here as reviewed translations are added.",
             ),
         });
       const o = n.indexOf(e),
@@ -181408,7 +181403,7 @@ __d(
                   children: (0, C.jsx)(x.default, {
                     className: "text-center text-xs leading-5 text-muted",
                     children:
-                      "By continuing, you agree to the Terms and Privacy Policy. Dharma Daily never sells private journal content.",
+                      "By continuing, you agree to the Terms and Privacy Policy. Sandhya never sells private journal content.",
                   }),
                 }),
               ],
@@ -181837,7 +181832,7 @@ __d(
               (0, k.jsx)(h.default, {
                 className: "mt-3 text-center text-[15px] leading-6 text-muted",
                 children:
-                  "The full library, daily shloka, practices, and festival guides are all open while Dharma Daily is in its early free period. If a paid tier ever arrives, nothing you rely on today will be taken away without clear notice.",
+                  "The full library, daily shloka, practices, and festival guides are all open while Sandhya is in its early free period. If a paid tier ever arrives, nothing you rely on today will be taken away without clear notice.",
               }),
               (0, k.jsx)(u.default, {
                 accessibilityRole: "button",
@@ -181934,7 +181929,7 @@ __d(
                 }),
                 (0, k.jsx)(h.default, {
                   className: "text-base font-semibold text-muted",
-                  children: "Dharma Daily Plus",
+                  children: "Sandhya Plus",
                 }),
                 (0, k.jsx)(x.default, { className: "h-10 w-10" }),
               ],
@@ -182134,7 +182129,7 @@ __d(
                         (0, k.jsx)(h.default, {
                           className: "mt-1 text-sm leading-5 text-muted",
                           children:
-                            "Your subscription is linked to your Dharma Daily account so access and purchases can be restored safely.",
+                            "Your subscription is linked to your Sandhya account so access and purchases can be restored safely.",
                         }),
                         (0, k.jsx)(u.default, {
                           accessibilityRole: "button",
@@ -182275,7 +182270,7 @@ __d(
                         (0, N.jsx)(c.default, {
                           className: "mt-1 text-sm leading-5 text-muted",
                           children:
-                            "This work is approached differently across schools and communities. Dharma Daily presents context and variation rather than one final interpretation.",
+                            "This work is approached differently across schools and communities. Sandhya presents context and variation rather than one final interpretation.",
                         }),
                         _.estimatedDate
                           ? (0, N.jsx)(c.default, {
@@ -182368,7 +182363,7 @@ __d(
                           (0, N.jsx)(c.default, {
                             className: "mt-1 text-sm leading-5 text-muted",
                             children:
-                              "This text is part of Dharma Daily\u2019s reviewed catalog. Passages appear here after the source record and usage rights have been verified.",
+                              "This text is part of Sandhya\u2019s reviewed catalog. Passages appear here after the source record and usage rights have been verified.",
                           }),
                         ],
                       }),

@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 5.20
 tradition_primary: general
 tags: peace, wisdom
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** na pra-HRISH-yet PRI-yum PRAAP-ya nod-VI-jet PRAAP-ya CHAAP-ri-yum / sthi-ra-BUD-dhir a-sum-MOO-dho BRAH-ma-vid BRAH-ma-ni STHI-tah
 **Meaning:** One should not exult on gaining the pleasant, nor be shaken on meeting the unpleasant; with steady understanding and free of delusion, the knower of Brahman stands established in Brahman.
 **Meaning (hi):** प्रिय को पाकर न फूल उठे, न अप्रिय को पाकर विचलित हो; स्थिर बुद्धि वाला, मोह से मुक्त ब्रह्मवेत्ता ब्रह्म में स्थित रहता है।
-**Source:** Bhagavad Gita 5.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 5.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

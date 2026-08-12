@@ -1,4 +1,4 @@
-# @dharma-daily/rag-pipeline
+# @sandhya/rag-pipeline
 
 Backend RAG tools for preparing corpus files, embedding approved chunks into Supabase pgvector, and testing grounded answers from the terminal.
 
@@ -7,7 +7,7 @@ Backend RAG tools for preparing corpus files, embedding approved chunks into Sup
 Strict mode is the default. Files without clear store, excerpt, and embed rights are skipped and written to a `.skipped.json` report.
 
 ```bash
-pnpm --filter @dharma-daily/rag-pipeline build
+pnpm --filter @sandhya/rag-pipeline build
 pnpm rag ask "What is dharma?"
 pnpm rag:prepare
 ```
@@ -39,7 +39,7 @@ Requires `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and `OPENAI_API_KEY`.
 The v1 database column is `vector(1536)`, so keep `EMBEDDING_DIMENSIONS=1536` unless a migration explicitly changes the vector size and the whole corpus is re-embedded. Ingestion and query-time embeddings both request and validate this dimension before vectors are written or used for retrieval.
 
 ```bash
-pnpm --filter @dharma-daily/rag-pipeline build
+pnpm --filter @sandhya/rag-pipeline build
 node packages/rag-pipeline/dist/ingest-prepared.js \
   content/_staging/prepared/rag-corpus.jsonl \
   --limit=100

@@ -56,7 +56,7 @@ export default function ResetPasswordScreen() {
         <View className="flex-1 items-center justify-center py-24">
           <Text className="text-center text-2xl font-semibold text-ink">Password updated</Text>
           <Text className="mt-3 text-center text-[15px] leading-6 text-muted">
-            Your new password is ready. You can continue your Dharma Daily journey.
+            Your new password is ready. You can continue your Sandhya journey.
           </Text>
           <View className="mt-6 w-full">
             <PrimaryButton

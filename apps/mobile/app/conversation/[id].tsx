@@ -103,7 +103,7 @@ export default function ConversationDetailScreen() {
           <Card key={message.id} className="mb-4">
             <View className="mb-3 flex-row items-center gap-2">
               <Ionicons name="sparkles" size={17} color={colors.saffron} />
-              <Text className="font-semibold text-ink">Dharma Daily</Text>
+              <Text className="font-semibold text-ink">Sandhya</Text>
               {message.confidence ? <Pill label={message.confidence} tone="sage" /> : null}
             </View>
             <Text className="text-[16px] leading-7 text-ink">{message.content}</Text>

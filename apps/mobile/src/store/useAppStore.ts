@@ -137,7 +137,7 @@ export const useAppStore = create<AppState>()(
       setHydrated: (hydrated) => set({ hydrated }),
     }),
     {
-      name: "dharma-daily-app-state",
+      name: "sandhya-app-state",
       storage,
       partialize: (state) => ({ ...state, hydrated: false }),
       onRehydrateStorage: () => (state) => state?.setHydrated(true),

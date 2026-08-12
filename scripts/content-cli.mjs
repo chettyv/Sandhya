@@ -13,7 +13,7 @@ const args = rawArgs;
 if (command === "validate" || command === "stats") {
   const cli = join(root, "packages", "content-tools", "dist", "cli.js");
   if (!existsSync(cli)) {
-    console.error(`Missing ${cli}. Run pnpm --filter @dharma-daily/content-tools build first.`);
+    console.error(`Missing ${cli}. Run pnpm --filter @sandhya/content-tools build first.`);
     process.exit(1);
   }
   runNode(cli, [command, resolve(root, input), ...args]);

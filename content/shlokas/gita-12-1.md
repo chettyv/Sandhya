@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 12.1
 tradition_primary: general
 tags: devotion
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** ar-JOO-na oo-VAA-cha / AY-vam sa-ta-ta-YOOK-taa yay bhak-TAAS-tvaam par-yoo-PAA-sa-tay / yay CHAAP-yak-sha-ram av-YAK-tam TAY-shaam kay yo-ga-VIT-ta-maah
 **Meaning:** Arjuna said: Those devotees who worship you with such constant steadiness, and those who worship the imperishable and unmanifest — which of them understands yoga best?
 **Meaning (hi):** अर्जुन ने कहा: जो भक्त इस तरह निरंतर आपसे जुड़े रहकर आपकी उपासना करते हैं, और जो अविनाशी, अव्यक्त की उपासना करते हैं — इन दोनों में योग को सबसे अच्छा कौन जानता है?
-**Source:** Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

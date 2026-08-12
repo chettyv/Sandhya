@@ -45,7 +45,7 @@ export default function SettingsScreen() {
   const removeAccount = () => {
     Alert.alert(
       "Delete account?",
-      "This permanently removes your synced data and cannot be undone. Deleting your Dharma Daily account does not cancel an Apple or Google subscription; manage billing in the store first if needed.",
+      "This permanently removes your synced data and cannot be undone. Deleting your Sandhya account does not cancel an Apple or Google subscription; manage billing in the store first if needed.",
       [
         { text: "Cancel", style: "cancel" },
         {
@@ -56,7 +56,7 @@ export default function SettingsScreen() {
               .then(() => {
                 Alert.alert(
                   "Account deleted",
-                  "Your Dharma Daily account and synced data have been removed.",
+                  "Your Sandhya account and synced data have been removed.",
                   [{ text: "Continue", onPress: () => router.replace("/(tabs)") }],
                 );
               })
@@ -76,7 +76,7 @@ export default function SettingsScreen() {
     try {
       const json = await exportAccountData();
       await Share.share({
-        title: "Dharma Daily account export",
+        title: "Sandhya account export",
         message: json,
       });
     } catch (error) {
@@ -115,7 +115,7 @@ export default function SettingsScreen() {
     });
   };
   const chooseReminderTime = () => {
-    Alert.alert("Reminder time", "Choose when Dharma Daily should invite you back.", [
+    Alert.alert("Reminder time", "Choose when Sandhya should invite you back.", [
       ...["08:00", "12:00", "20:00"].map((time) => ({
         text: time,
         onPress: () => {
@@ -168,11 +168,11 @@ export default function SettingsScreen() {
         <ListRow
           icon="moon-outline"
           title="Appearance"
-          subtitle="Dharma Daily dark"
+          subtitle="Sandhya dark"
           onPress={() =>
             Alert.alert(
               "Appearance",
-              "Dharma Daily uses a calm dark palette designed for reading and reflection.",
+              "Sandhya uses a calm dark palette designed for reading and reflection.",
             )
           }
         />
@@ -277,7 +277,7 @@ export default function SettingsScreen() {
         )}
       </Card>
       <Text className="mt-6 text-center text-xs leading-5 text-muted">
-        Dharma Daily 1.0.0 · Made with care for diverse traditions
+        Sandhya 1.0.0 · Made with care for diverse traditions
       </Text>
     </Page>
   );
@@ -306,7 +306,7 @@ function LanguageRow() {
         onPress={() =>
           Alert.alert(
             "Language",
-            "Dharma Daily is in English today. Hindi and other languages will appear here as reviewed translations are added.",
+            "Sandhya is in English today. Hindi and other languages will appear here as reviewed translations are added.",
           )
         }
       />

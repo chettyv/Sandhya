@@ -1,4 +1,4 @@
-# Dharma Daily mobile
+# Sandhya mobile
 
 Production-oriented Expo + React Native frontend for iOS, Android, and web preview.
 
@@ -17,10 +17,10 @@ Supporting routes cover onboarding, reflection, festival, concept, deity, guided
 From the repository root:
 
 ```bash
-pnpm --filter @dharma-daily/mobile start
-pnpm --filter @dharma-daily/mobile android
-pnpm --filter @dharma-daily/mobile ios
-pnpm --filter @dharma-daily/mobile web
+pnpm --filter @sandhya/mobile start
+pnpm --filter @sandhya/mobile android
+pnpm --filter @sandhya/mobile ios
+pnpm --filter @sandhya/mobile web
 ```
 
 For native purchase and push testing, create a development build with the included `eas.json`; Expo Go is only suitable for the web/local UI loop, not real store purchases or Android remote push.
@@ -67,9 +67,9 @@ RevenueCat also needs matching monthly, annual, and lifetime products attached t
 
 ```bash
 node scripts/verify-content-catalog.mjs
-pnpm --filter @dharma-daily/mobile typecheck
-pnpm --filter @dharma-daily/mobile lint
-pnpm --filter @dharma-daily/mobile build
+pnpm --filter @sandhya/mobile typecheck
+pnpm --filter @sandhya/mobile lint
+pnpm --filter @sandhya/mobile build
 ```
 
 The data in `src/data/content.ts` and `src/data/appAuthoredCatalog.ts` is a safe presentation fallback: 50 concept introductions, 20 practice guides, 21 festival explainers, and 30 rotating reflections. These entries are original educational copy, not scripture quotations or a substitute for source review. Festival guides without a verified date are intentionally read-only; they cannot schedule a reminder. Authored preview dates are also synchronized into the generated Supabase catalog migration, while production calendar coverage still requires reviewed, location-aware calculations or precomputed dates. All source-linked content must pass the repository licensing tracker.

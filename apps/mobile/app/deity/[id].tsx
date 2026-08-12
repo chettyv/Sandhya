@@ -75,7 +75,7 @@ export default function DeityDetailScreen() {
       <Text className="mb-3 mt-8 text-xl font-semibold text-ink">Keep exploring</Text>
       <Card>
         <Text className="text-sm leading-6 text-muted">
-          Ask for source-grounded stories, practices, or comparisons. Dharma Daily will identify the
+          Ask for source-grounded stories, practices, or comparisons. Sandhya will identify the
           tradition and cite only passages returned by the source library.
         </Text>
       </Card>

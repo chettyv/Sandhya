@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 6.6
 tradition_primary: general
 tags: discipline, wisdom
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 daily_pool: true
 review_status: approved
@@ -19,7 +19,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** BUN-dhoo-RAAT-MAAT-ma-nus-TUS-ya yay-NAAT-my-VAAT-ma-naa ji-taha / a-NAAT-ma-nus-too SHUT-root-vay var-tay-TAAT-my-va SHUT-roo-vut
 **Meaning:** For one who has conquered the self by the self, the self is a friend; but for one who has not mastered the self, the self itself acts in hostility, like an enemy.
 **Meaning (hi):** जिसने स्वयं के द्वारा स्वयं को जीत लिया है, उसके लिए आत्मा मित्र है; पर जिसने स्वयं को वश में नहीं किया, उसके लिए वही आत्मा शत्रु की तरह शत्रुता में बरतती है।
-**Source:** Bhagavad Gita 6.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 6.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

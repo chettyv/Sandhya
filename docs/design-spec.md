@@ -1,4 +1,4 @@
-# Dharma Daily — design spec
+# Sandhya — design spec
 
 Codifies the visual language already in the app (`apps/mobile/src/theme/tokens.ts`, `src/components/ui.tsx`) and specifies the new challenge and web surfaces against it. New UI follows this spec; it does not improvise a second language.
 

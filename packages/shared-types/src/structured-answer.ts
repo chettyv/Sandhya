@@ -1,6 +1,6 @@
 // Structured AI answer contract.
 // The RAG pipeline forces the LLM into this shape; the API returns it; the mobile app renders it.
-// Mirrors the structured-answer schema in docs/dharma_daily_build_reference.docx.
+// Mirrors the structured-answer schema in docs/sandhya_build_reference.docx.
 
 export type Confidence = "high" | "medium" | "low";
 

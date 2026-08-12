@@ -17,7 +17,7 @@ That said, words help many people arrive in the moment. Here is what is commonly
 - **A short intention in your own language.** Something as plain as: _"May this light bring peace to this home."_ Speaking your own words to the divine is an old and respectable practice, not a modern shortcut.
 - **A verse about light**, if your family uses one. Several Sanskrit verses associate the lamp's flame with auspiciousness and the divine presence; families and traditions differ on which, if any, they recite. If your family has one, learn theirs — asking an elder for "the diya prayer we use" is exactly how these things are meant to travel.
 
-We have deliberately not printed a Sanskrit verse here with a rough translation, because verse texts vary between traditions and a wrongly attributed or half-remembered verse does more harm than a sincere sentence in English or Gujarati or Tamil. When Dharma Daily quotes a verse, it names the text and translator — that standard applies to this page too.
+We have deliberately not printed a Sanskrit verse here with a rough translation, because verse texts vary between traditions and a wrongly attributed or half-remembered verse does more harm than a sincere sentence in English or Gujarati or Tamil. When Sandhya quotes a verse, it names the text and translator — that standard applies to this page too.
 
 ## When is the diya lit?
 

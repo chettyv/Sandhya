@@ -68,8 +68,8 @@ deity_focus: Shailaputri
 estimated_minutes: 10
 review_status: approved
 reviewed_by: Named Reviewer
-copyright_status: Original Dharma Daily content; quoted scripture attributed inline.
-source_url: https://github.com/chettyv/DharmaDaily
+copyright_status: Original Sandhya content; quoted scripture attributed inline.
+source_url: https://github.com/chettyv/Sandhya
 tradition_primary: general
 licence: original
 can_store: true

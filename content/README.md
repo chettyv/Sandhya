@@ -1,7 +1,7 @@
 # content/
 
 Source corpus, added as Markdown files following the authoritative schema in
-`docs/dharma_daily_build_reference.docx` and the rights policy summarized in
+`docs/sandhya_build_reference.docx` and the rights policy summarized in
 `CURRENT_SUMMARY.md`.
 
 ## Expected layout (added in Phase 2/3)

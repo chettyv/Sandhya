@@ -1,31 +1,31 @@
 {
   "expo": {
-    "name": "Dharma Daily",
-    "slug": "dharma-daily",
+    "name": "Sandhya",
+    "slug": "sandhya",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/dharma-daily-icon.png",
-    "scheme": "dharmadaily",
+    "icon": "./assets/images/sandhya-icon.png",
+    "scheme": "sandhya",
     "userInterfaceStyle": "automatic",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "app.dharmadaily.mobile",
+      "bundleIdentifier": "app.sandhya.mobile",
       "config": {
         "usesNonExemptEncryption": false
       }
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/dharma-daily-icon.png",
+        "foregroundImage": "./assets/images/sandhya-icon.png",
         "backgroundColor": "#26172B"
       },
       "predictiveBackGestureEnabled": true,
-      "package": "app.dharmadaily.mobile"
+      "package": "app.sandhya.mobile"
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/dharma-daily-icon.png"
+      "favicon": "./assets/images/sandhya-icon.png"
     },
     "plugins": [
       "expo-router",
@@ -33,7 +33,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/dharma-daily-icon.png",
+          "image": "./assets/images/sandhya-icon.png",
           "imageWidth": 180,
           "resizeMode": "contain",
           "backgroundColor": "#26172B",

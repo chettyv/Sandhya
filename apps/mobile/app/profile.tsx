@@ -122,7 +122,7 @@ export default function ProfileScreen() {
           onPress={() => router.push("/subscription")}
           className="mt-3 items-center py-2"
         >
-          <Text className="font-semibold text-plum">Explore Dharma Daily Plus</Text>
+          <Text className="font-semibold text-plum">Explore Sandhya Plus</Text>
         </Pressable>
       ) : null}
 
@@ -175,8 +175,8 @@ export default function ProfileScreen() {
 
       <View className="mt-6 rounded-card bg-surface2 p-4">
         <Text className="text-center text-xs leading-5 text-muted">
-          Dharma Daily offers educational information and reflective practices. It does not replace
-          a guru, priest, doctor, therapist, lawyer, or financial adviser.
+          Sandhya offers educational information and reflective practices. It does not replace a
+          guru, priest, doctor, therapist, lawyer, or financial adviser.
         </Text>
       </View>
       <View className="mt-4">

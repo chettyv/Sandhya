@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "Dharma Daily backend",
+    "name": "Sandhya backend",
     "description": "Authenticated smoke requests for the Supabase REST and Edge Function backend. Set the collection variables before running; never store service-role or provider secrets here.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },

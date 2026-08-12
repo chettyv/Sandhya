@@ -76,7 +76,7 @@ export async function askDharma(
 
   if (!baseUrl || !anonKey || !supabase) {
     throw new Error(
-      "Dharma Daily is not connected to its source library yet. Add the public Supabase environment values to enable grounded answers.",
+      "Sandhya is not connected to its source library yet. Add the public Supabase environment values to enable grounded answers.",
     );
   }
 

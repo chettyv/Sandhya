@@ -1,17 +1,17 @@
-# Global Codex Guidance — Dharma Daily
+# Global Codex Guidance — Sandhya
 
-Global working agreements for Codex on the **Dharma Daily** project — an AI-powered Hinduism app for daily learning and practice.
+Global working agreements for Codex on the **Sandhya** project — an AI-powered Hinduism app for daily learning and practice.
 
 This file contains reusable guidance for the specific stack and constraints of this app. Repository-specific `AGENTS.md`, `README.md`, `CONTRIBUTING.md`, package scripts, tests, and existing project conventions take priority when they are more specific.
 
-The authoritative product reference is `dharma_daily_build_reference.docx`. When this file and the build reference conflict, the build reference wins.
+The authoritative product reference is `sandhya_build_reference.docx`. When this file and the build reference conflict, the build reference wins.
 
 ## Priority order
 
 When instructions conflict, follow this order:
 
 1. User's direct request
-2. `dharma_daily_build_reference.docx` (architecture, schema, RAG design, milestones)
+2. `sandhya_build_reference.docx` (architecture, schema, RAG design, milestones)
 3. Repository-specific `AGENTS.md`
 4. Project documentation
 5. Existing code style and architecture

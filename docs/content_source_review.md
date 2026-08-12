@@ -1,8 +1,8 @@
-# Dharma Daily Content Source Review
+# Sandhya Content Source Review
 
 Review date: 2026-06-01
 
-This memo is a decision aid for Dharma Daily's scripture, glossary, ritual, and calendar corpus. It is intentionally conservative: a source being online, on GitHub, or described as "open" is not enough for commercial app ingestion. Before any text is added to `content/`, it needs a source inventory row with storage, excerpt, full-text, RAG, attribution, and commercial-use decisions.
+This memo is a decision aid for Sandhya's scripture, glossary, ritual, and calendar corpus. It is intentionally conservative: a source being online, on GitHub, or described as "open" is not enough for commercial app ingestion. Before any text is added to `content/`, it needs a source inventory row with storage, excerpt, full-text, RAG, attribution, and commercial-use decisions.
 
 ## Executive Summary
 
@@ -195,7 +195,7 @@ Calendar recommendation:
 
 ### B. Glossary
 
-The glossary should be written in-house, not copied from Wisdom Library, Sanskrit Documents, Wikipedia, temple websites, or sectarian sources. Use references to understand range, then create Dharma Daily definitions in neutral language.
+The glossary should be written in-house, not copied from Wisdom Library, Sanskrit Documents, Wikipedia, temple websites, or sectarian sources. Use references to understand range, then create Sandhya definitions in neutral language.
 
 Recommended workflow for 200-500 terms:
 
@@ -206,7 +206,7 @@ Recommended workflow for 200-500 terms:
 
 | Source option                                  | Rights decision                                   | Can store?                                             | Can rewrite in our own words?           | Multi-tradition quality                      | Human review required? |
 | ---------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------ | --------------------------------------- | -------------------------------------------- | ---------------------- |
-| In-house glossary                              | Owned by Dharma Daily                             | Yes                                                    | Yes                                     | High if reviewed                             | Yes                    |
+| In-house glossary                              | Owned by Sandhya                                  | Yes                                                    | Yes                                     | High if reviewed                             | Yes                    |
 | Wisdom Library                                 | Copyrighted/unclear                               | No                                                     | Yes, as research only                   | Medium; broad but uneven                     | Yes                    |
 | Sanskrit-English dictionaries in public domain | Public domain if edition verified                 | Yes after item review                                  | Yes                                     | Good lexical coverage, weak practice context | Yes                    |
 | Cologne Digital Sanskrit Dictionaries          | Open/research source, per-dictionary terms needed | Use after license review                               | Yes                                     | High lexical value                           | Yes                    |
@@ -454,7 +454,7 @@ Review priorities:
 - `sanskrit-coders/sanskrit_data` for schema inspiration.
 - `bugsum/vedic-shastra-api` for API inspiration only.
 - GitHub topic pages for discovery only.
-- In-house glossary/practice/festival content written by Dharma Daily and human-reviewed.
+- In-house glossary/practice/festival content written by Sandhya and human-reviewed.
 - Public-domain scans from Internet Archive only after each item is verified and inventoried.
 
 ### Use After Manual Review

@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 12.4
 tradition_primary: general
 tags: devotion
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 review_status: approved
 reviewed_by: Vaibhav Chetty
@@ -18,7 +18,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** sam-ni-YAM-yen-dri-ya-GRAA-mam sar-VAT-ra sa-ma-BOOD-dha-yah / tay praap-noo-VAN-ti MAAM-ay-va sar-va-BHOO-ta-hi-tay ra-TAAH
 **Meaning:** — those who fully restrain their senses, stay even-minded in every situation, and delight in the welfare of all beings — they too reach me.
 **Meaning (hi):** — जो अपनी सारी इंद्रियों को पूरी तरह संयम में रखते हैं, हर स्थिति में समबुद्धि रहते हैं और सभी प्राणियों के हित में रमे रहते हैं — वे भी मुझे ही पाते हैं।
-**Source:** Bhagavad Gita 12.4, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 12.4, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

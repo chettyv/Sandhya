@@ -13,8 +13,8 @@ export function PremiumGate({ label = "Continue with Plus" }: { label?: string }
         A deeper library awaits
       </Text>
       <Text className="mt-1 text-center text-sm leading-5 text-muted">
-        This guide is part of Dharma Daily Plus. Free members can keep exploring the daily
-        reflection, starter practices, and core concepts.
+        This guide is part of Sandhya Plus. Free members can keep exploring the daily reflection,
+        starter practices, and core concepts.
       </Text>
       <Pressable
         accessibilityRole="button"

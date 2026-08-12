@@ -178,7 +178,7 @@ export default function SubscriptionScreen() {
           >
             <Ionicons name="close" size={26} color={colors.white} />
           </Pressable>
-          <Text className="text-base font-semibold text-muted">Dharma Daily Plus</Text>
+          <Text className="text-base font-semibold text-muted">Sandhya Plus</Text>
           <View className="h-10 w-10" />
         </View>
         <View className="mt-8 items-center rounded-[28px] bg-aubergine p-6">
@@ -282,8 +282,8 @@ export default function SubscriptionScreen() {
             <View className="mt-8 rounded-card border border-[#302C25] bg-surface p-5">
               <Text className="text-lg font-semibold text-ink">Sign in to continue</Text>
               <Text className="mt-1 text-sm leading-5 text-muted">
-                Your subscription is linked to your Dharma Daily account so access and purchases can
-                be restored safely.
+                Your subscription is linked to your Sandhya account so access and purchases can be
+                restored safely.
               </Text>
               <Pressable
                 accessibilityRole="button"

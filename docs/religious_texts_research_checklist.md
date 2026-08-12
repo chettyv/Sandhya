@@ -1,6 +1,6 @@
 # Religious Texts Research Checklist
 
-Use this checklist while researching sources for Dharma Daily. For each candidate source, capture:
+Use this checklist while researching sources for Sandhya. For each candidate source, capture:
 
 - Exact text/work name.
 - Language and script.

@@ -1,11 +1,11 @@
 ---
-text_slug: dharma_daily_grounded_learning
-text_title: Dharma Daily Grounded Learning Guide
+text_slug: sandhya_grounded_learning
+text_title: Sandhya Grounded Learning Guide
 section: Editorial principles
-translator: Dharma Daily editorial team
+translator: Sandhya editorial team
 licence: original
-copyright_status: Original Dharma Daily content owned by the project; no third-party text.
-source_url: https://github.com/chettyv/DharmaDaily
+copyright_status: Original Sandhya content owned by the project; no third-party text.
+source_url: https://github.com/chettyv/Sandhya
 tradition_primary: general
 category: modern_commentary
 language: en
@@ -16,7 +16,7 @@ can_embed: true
 
 ## Grounded learning
 
-Dharma Daily introduces Hindu learning as a conversation among many texts,
+Sandhya introduces Hindu learning as a conversation among many texts,
 schools, lineages, regions, families, and living communities. A useful answer
 names what kind of claim it is making. Scripture, commentary, historical
 description, folklore, common practice, and personal reflection should not be
@@ -48,7 +48,7 @@ professional where health or safety is involved.
 
 ## Careful product guidance
 
-Dharma Daily is an educational companion, not a guru, priest, therapist,
+Sandhya is an educational companion, not a guru, priest, therapist,
 doctor, lawyer, or substitute for a trusted community. The product should
 decline crisis, medical, legal, and financial requests with a clear referral to
 appropriate help. It should protect private journals and conversations,

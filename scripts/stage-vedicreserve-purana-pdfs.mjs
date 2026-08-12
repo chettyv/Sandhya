@@ -13,7 +13,7 @@ const queuePath = path.join(repoRoot, "docs/source_download_queue_2026-06-19.csv
 const readmePath = path.join(repoRoot, "content/_staging/README.md");
 const targetDir = "content/_staging/raw/sanskrit/vedicreserve_puranas";
 const fetchedAt = new Date().toISOString();
-const userAgent = "DharmaDailyCorpusResearch/0.5 (local staging; nonproduction)";
+const userAgent = "SandhyaCorpusResearch/0.5 (local staging; nonproduction)";
 const waybackPrefix = "https://web.archive.org/web/20080408110939/http://is1.mum.edu/vedicreserve/";
 
 const titleOverrides = {

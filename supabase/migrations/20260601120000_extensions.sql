@@ -1,5 +1,5 @@
 -- 20260601120000_extensions.sql
--- Enable Postgres extensions used across the Dharma Daily schema.
+-- Enable Postgres extensions used across the Sandhya schema.
 --
 -- - uuid-ossp: uuid_generate_v4() for primary keys
 -- - vector:   pgvector for RAG embeddings

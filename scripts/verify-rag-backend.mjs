@@ -642,7 +642,7 @@ function checkBackendInvariants() {
   assertContains(billingTransferMigration, "p_source_user_ids");
   assertContains(
     billingTransferDestinationGuardMigration,
-    "Transfer destination is not a registered Dharma Daily user.",
+    "Transfer destination is not a registered Sandhya user.",
   );
   assertContains(
     billingTransferDestinationGuardMigration,
@@ -790,7 +790,7 @@ function checkBackendInvariants() {
   assertContains(globalBudgetMigration, "project-wide circuit breaker");
   assertContains(
     globalBudgetMigration,
-    "pg_advisory_xact_lock(hashtext('dharma_daily_ai_budget'))",
+    "pg_advisory_xact_lock(hashtext('sandhya_ai_budget'))",
   );
   assertContains(globalBudgetMigration, "from public.messages m");
   assertContains(globalBudgetMigration, "from public.cost_log l");
@@ -1068,14 +1068,14 @@ function checkBackendInvariants() {
   assertContains(migration, "ts_rank_cd");
 
   assertContains(rootPackage, '"rag:doctor"');
-  assertContains(rootPackage, '"rag:ingest": "pnpm --filter @dharma-daily/rag-pipeline build &&');
+  assertContains(rootPackage, '"rag:ingest": "pnpm --filter @sandhya/rag-pipeline build &&');
   assertContains(
     rootPackage,
-    '"rag:ingest:dry-run": "pnpm --filter @dharma-daily/rag-pipeline build &&',
+    '"rag:ingest:dry-run": "pnpm --filter @sandhya/rag-pipeline build &&',
   );
   assertContains(
     rootPackage,
-    '"rag:prepare:canonical": "pnpm --filter @dharma-daily/rag-pipeline build &&',
+    '"rag:prepare:canonical": "pnpm --filter @sandhya/rag-pipeline build &&',
   );
   assertContains(rootPackage, '"rag:smoke:live"');
   assertContains(ragDoctor, "docker");

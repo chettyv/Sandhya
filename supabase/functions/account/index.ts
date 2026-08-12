@@ -82,7 +82,7 @@ Deno.serve(async (request) => {
         throw new Error("Account export is too large to return safely.");
       }
       return jsonTextResponse(serialized, 200, {
-        "content-disposition": 'attachment; filename="dharma-daily-account-export.json"',
+        "content-disposition": 'attachment; filename="sandhya-account-export.json"',
         "cache-control": "no-store, private",
         pragma: "no-cache",
       });

@@ -149,7 +149,7 @@ function JoinButton({ slug, onPurchased }: { slug: string; onPurchased: () => vo
     return (
       <Card>
         <Text className="text-center text-[15px] leading-6 text-muted">
-          Joining happens in the Dharma Daily app, where the challenge lives. Open the app to join.
+          Joining happens in the Sandhya app, where the challenge lives. Open the app to join.
         </Text>
       </Card>
     );

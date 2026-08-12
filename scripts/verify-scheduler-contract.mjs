@@ -15,11 +15,11 @@ const readme = readFileSync(readmePath, "utf8");
 
 for (const required of [
   "vault.decrypted_secrets",
-  "dharma_daily_project_url",
-  "dharma_daily_publishable_key",
-  "dharma_daily_reflections_cron_secret",
+  "sandhya_project_url",
+  "sandhya_publishable_key",
+  "sandhya_reflections_cron_secret",
   "cron.unschedule(jobid)",
-  "dharma-daily-send-reflections",
+  "sandhya-send-reflections",
   "cron.schedule(",
   "'* * * * *'",
   "net.http_post(",

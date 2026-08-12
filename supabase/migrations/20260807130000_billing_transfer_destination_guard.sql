@@ -1,5 +1,5 @@
 -- Never revoke a source account for a RevenueCat TRANSFER whose destination
--- is not a registered Dharma Daily account. The webhook must be retryable in
+-- is not a registered Sandhya account. The webhook must be retryable in
 -- that case so a later sign-up or corrected transfer can reconcile ownership.
 
 create or replace function public.apply_subscription_transfer(
@@ -29,7 +29,7 @@ begin
   if not exists (
     select 1 from public.profiles where id = p_destination_user_id
   ) then
-    raise exception 'Transfer destination is not a registered Dharma Daily user.';
+    raise exception 'Transfer destination is not a registered Sandhya user.';
   end if;
 
   update public.subscription_status

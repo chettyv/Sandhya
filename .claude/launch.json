@@ -6,7 +6,7 @@
       "runtimeExecutable": "pnpm",
       "runtimeArgs": [
         "--filter",
-        "@dharma-daily/mobile",
+        "@sandhya/mobile",
         "exec",
         "expo",
         "start",

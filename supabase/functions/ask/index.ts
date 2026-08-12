@@ -1699,7 +1699,7 @@ function safetyAnswer(category: string, answer: string): StructuredAnswer {
 function noSourceAnswer(): StructuredAnswer {
   return {
     answer:
-      "I could not find a sufficiently relevant source passage in the approved Dharma Daily corpus for this question, so I should not give a scripture-grounded answer yet.",
+      "I could not find a sufficiently relevant source passage in the approved Sandhya corpus for this question, so I should not give a scripture-grounded answer yet.",
     summary: "No approved source passage was retrieved for this question.",
     sources: [],
     tradition_notes: [
@@ -2165,7 +2165,7 @@ class HttpError extends Error {
   }
 }
 
-const SYSTEM_PROMPT = `You are Dharma Daily's backend answer writer.
+const SYSTEM_PROMPT = `You are Sandhya's backend answer writer.
 Return only valid JSON matching this schema:
 {
   "answer": "string",

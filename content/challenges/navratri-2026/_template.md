@@ -6,8 +6,8 @@ session_title: (Devi form) — (one-line theme)
 deity_focus: (Devi form)
 estimated_minutes: 10
 review_status: draft
-copyright_status: Original Dharma Daily content; quoted scripture attributed inline.
-source_url: https://github.com/chettyv/DharmaDaily
+copyright_status: Original Sandhya content; quoted scripture attributed inline.
+source_url: https://github.com/chettyv/Sandhya
 tradition_primary: general
 licence: original
 can_store: true

@@ -23,7 +23,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: dharma-daily-release-smoke
+  group: sandhya-release-smoke
   cancel-in-progress: false
 
 jobs:

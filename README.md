@@ -1,4 +1,4 @@
-# Dharma Daily
+# Sandhya
 
 An AI-powered companion for Hindu learning and daily practice. Mobile (iOS + Android) app backed by a RAG pipeline that grounds every AI answer in a curated, properly-licensed corpus of scripture, commentary, and curated content.
 
@@ -6,7 +6,7 @@ The product is non-sectarian by design (surfaces variation across traditions rat
 
 The current product, MVP, branch, and release summary is in [`CURRENT_SUMMARY.md`](CURRENT_SUMMARY.md).
 The authoritative architecture, schema, RAG design, and milestone reference remains
-[`docs/dharma_daily_build_reference.docx`](docs/dharma_daily_build_reference.docx).
+[`docs/sandhya_build_reference.docx`](docs/sandhya_build_reference.docx).
 
 ## Stack (fixed for v1)
 
@@ -29,7 +29,7 @@ Hard rules: no LLM calls from the client, no LangChain in v1, no separate vector
 ## Repo layout
 
 ```
-DharmaDaily/
+Sandhya/
 ├── apps/
 │   ├── mobile/             # Expo consumer app (iOS, Android, web)
 │   ├── web/                # Static arrival site built from content/web markdown
@@ -74,8 +74,8 @@ Optional tooling:
 
 ```bash
 # 1. Clone
-git clone <repo-url> dharma-daily
-cd dharma-daily
+git clone <repo-url> sandhya
+cd sandhya
 
 # 2. Install deps for every workspace
 pnpm install
@@ -105,8 +105,8 @@ pnpm test           # Vitest in every workspace
 pnpm secrets:scan   # secretlint over the whole repo (also runs on staged files pre-commit)
 
 # Per-package, e.g.:
-pnpm --filter @dharma-daily/shared-types build
-pnpm --filter @dharma-daily/rag-pipeline test
+pnpm --filter @sandhya/shared-types build
+pnpm --filter @sandhya/rag-pipeline test
 ```
 
 ## Environment variables

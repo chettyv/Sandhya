@@ -5,7 +5,7 @@ Rules specific to database migrations. These extend and override the root `CLAUD
 ## Before writing any migration
 
 1. Check the existing migrations in this folder to understand current schema state
-2. Match column names and types exactly to the build reference (`dharma_daily_build_reference.docx`)
+2. Match column names and types exactly to the build reference (`sandhya_build_reference.docx`)
 3. Confirm whether the change affects any user-scoped table — if so, RLS policy updates are required in the same migration
 
 ## Naming

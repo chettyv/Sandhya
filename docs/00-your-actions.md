@@ -38,7 +38,7 @@ Mission-critical first: accounts and keys only you can create, in the order they
 
 ### 5 · Support email + privacy/terms URLs (~30 min) — store submission requirement
 
-- **WHAT:** (a) A monitored email (e.g. a dharma-daily@ alias) → `EXPO_PUBLIC_SUPPORT_EMAIL` in `.env`. (b) Both stores require a public privacy-policy URL: no domain needed — a free GitHub Pages URL from this repo works. Say the word and I'll draft the privacy policy + terms from what the app actually collects and set up the Pages deploy; you review before it goes live.
+- **WHAT:** (a) A monitored email (e.g. a sandhya@ alias) → `EXPO_PUBLIC_SUPPORT_EMAIL` in `.env`. (b) Both stores require a public privacy-policy URL: no domain needed — a free GitHub Pages URL from this repo works. Say the word and I'll draft the privacy policy + terms from what the app actually collects and set up the Pages deploy; you review before it goes live.
 - **ADDED:** 2026-08-12
 
 ### 6 · Sentry + PostHog projects (~15 min, optional at launch)

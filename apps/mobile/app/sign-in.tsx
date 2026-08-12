@@ -383,8 +383,8 @@ export default function SignInScreen() {
         </Pressable>
         <Pressable accessibilityRole="link" onPress={() => router.push("/legal")} className="mt-6">
           <Text className="text-center text-xs leading-5 text-muted">
-            By continuing, you agree to the Terms and Privacy Policy. Dharma Daily never sells
-            private journal content.
+            By continuing, you agree to the Terms and Privacy Policy. Sandhya never sells private
+            journal content.
           </Text>
         </Pressable>
       </Page>

@@ -2,7 +2,7 @@
 
 Review date: 2026-06-01
 
-This is a working map from Dharma Daily's target corpus to sources that are safer than bulk-scraping Sacred Texts. "Open" here means public-domain or clearly open-licensed enough to consider for staging. It does not mean approved for production RAG. Every staged work still needs a row in `docs/source_inventory_template.csv` and legal/content review before ingestion.
+This is a working map from Sandhya's target corpus to sources that are safer than bulk-scraping Sacred Texts. "Open" here means public-domain or clearly open-licensed enough to consider for staging. It does not mean approved for production RAG. Every staged work still needs a row in `docs/source_inventory_template.csv` and legal/content review before ingestion.
 
 ## Rules
 
@@ -34,7 +34,7 @@ This is a working map from Dharma Daily's target corpus to sources that are safe
 | Hindi translations                             | No broad clean source identified                                                                                               | Permission track           | Prefer commissioned/in-house translations or public-domain scans after OCR and review. Do not scrape IITK/Gita Supersite/Sanskrit Documents.                     |
 | Marathi translations/commentary                | Public-domain scans via Wikimedia Commons / Internet Archive, item-level                                                       | OCR/permission track       | Dnyaneshwari and Gita Rahasya scans may be candidates, but need OCR, edition review, and Marathi reviewer.                                                       |
 | Tamil scripture translations beyond Tirukkural | No broad clean source identified                                                                                               | Permission track           | Use in-house/commissioned translations or verified public-domain scans only.                                                                                     |
-| Festival/practice/glossary/deity content       | Dharma Daily in-house writing                                                                                                  | Approved path after review | Rights-safe if written by us. Needs human theological/regional review before app release.                                                                        |
+| Festival/practice/glossary/deity content       | Sandhya in-house writing                                                                                                       | Approved path after review | Rights-safe if written by us. Needs human theological/regional review before app release.                                                                        |
 
 ## Source Links
 

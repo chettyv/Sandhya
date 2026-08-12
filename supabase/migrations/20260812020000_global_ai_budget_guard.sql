@@ -27,7 +27,7 @@ declare
 begin
   -- The budget is project-wide, so serialize all reservation decisions with
   -- one stable lock rather than one lock per user.
-  perform pg_advisory_xact_lock(hashtext('dharma_daily_ai_budget'));
+  perform pg_advisory_xact_lock(hashtext('sandhya_ai_budget'));
 
   delete from public.ai_budget_reservations
   where status = 'released'

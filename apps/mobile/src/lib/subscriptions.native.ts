@@ -117,14 +117,14 @@ export async function restorePurchases(): Promise<void> {
   await Purchases.restorePurchases();
 }
 
-// One-off challenge products are named dd_challenge_<slug-with-underscores>;
+// One-off challenge products are named sandhya_challenge_<slug-with-underscores>;
 // the webhook grants challenge participation when the purchase event lands.
 export async function purchaseChallenge(
   slug: string,
 ): Promise<"purchased" | "cancelled" | "unavailable"> {
   await ensureConfigured();
   if (!configuredUserId) return "unavailable";
-  const productId = `dd_challenge_${slug.replaceAll("-", "_")}`;
+  const productId = `sandhya_challenge_${slug.replaceAll("-", "_")}`;
   const [product] = await Purchases.getProducts(
     [productId],
     Purchases.PRODUCT_CATEGORY.NON_SUBSCRIPTION,

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
 const en = {
-  appName: "Dharma Daily",
+  appName: "Sandhya",
   today: "Today",
   chat: "Chat",
   home: "Home",

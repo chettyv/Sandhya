@@ -3,7 +3,7 @@ import path from "node:path";
 
 const repoRoot = path.resolve(import.meta.dirname, "..");
 const fetchedAt = new Date().toISOString();
-const userAgent = "DharmaDailyCorpusResearch/0.4 (local staging; nonproduction)";
+const userAgent = "SandhyaCorpusResearch/0.4 (local staging; nonproduction)";
 
 const directDownloads = [
   {

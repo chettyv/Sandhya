@@ -28,7 +28,7 @@ const HANDLED_EVENTS = new Set([
   "BILLING_ISSUE",
   "TRANSFER",
 ]);
-const CHALLENGE_PRODUCT_PREFIX = "dd_challenge_";
+const CHALLENGE_PRODUCT_PREFIX = "sandhya_challenge_";
 const MAX_REQUEST_BODY_CHARS = 256_000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -91,7 +91,7 @@ Deno.serve(async (request) => {
       if (transferredTo.length !== 1) {
         return jsonResponse(
           {
-            error: "RevenueCat transfer must have exactly one Dharma Daily destination.",
+            error: "RevenueCat transfer must have exactly one Sandhya destination.",
             code: "bad_request",
           },
           400,

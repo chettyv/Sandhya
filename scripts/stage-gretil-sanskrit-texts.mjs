@@ -9,7 +9,7 @@ const readmePath = path.join(repoRoot, "content/_staging/README.md");
 const targetDir = "content/_staging/raw/sanskrit/gretil";
 const fetchedAt = new Date().toISOString();
 const baseUrl = "https://gretil.sub.uni-goettingen.de/gretil/corpustei/";
-const userAgent = "DharmaDailyCorpusResearch/0.5 (local staging; nonproduction)";
+const userAgent = "SandhyaCorpusResearch/0.5 (local staging; nonproduction)";
 
 const works = [
   {

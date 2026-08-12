@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 6.16
 tradition_primary: general
 tags: discipline, peace
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 review_status: approved
 reviewed_by: Vaibhav Chetty
@@ -18,7 +18,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** NAAT-yush-na-tus-too YO-go-sti na chai-KAAN-ta-ma-NUSH-na-taha / na CHAA-ti svup-na-SHEE-lus-ya JAA-gra-to NY-va CHAAR-joo-na
 **Meaning:** Yoga is not for one who eats too much, nor for one who does not eat at all; not for one given to too much sleep, nor for one who stays always awake, Arjuna.
 **Meaning (hi):** योग न उसके लिए है जो बहुत खाता है, न उसके लिए जो बिल्कुल नहीं खाता; न उसके लिए जो बहुत सोता है, न उसके लिए जो हमेशा जागता रहता है, अर्जुन।
-**Source:** Bhagavad Gita 6.16, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 6.16, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%86%E0%A4%A4%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%AF%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

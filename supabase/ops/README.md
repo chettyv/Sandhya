@@ -17,9 +17,9 @@ Before running the script:
 
 1. Enable Supabase Cron (`pg_cron`), `pg_net`, and Vault for the target project.
 2. Store these three Vault secrets using the dashboard or SQL editor:
-   - `dharma_daily_project_url` — `https://<project-ref>.supabase.co`
-   - `dharma_daily_publishable_key` — the target project's publishable/anon key
-   - `dharma_daily_reflections_cron_secret` — the same value as the deployed
+   - `sandhya_project_url` — `https://<project-ref>.supabase.co`
+   - `sandhya_publishable_key` — the target project's publishable/anon key
+   - `sandhya_reflections_cron_secret` — the same value as the deployed
      `DAILY_REFLECTIONS_CRON_SECRET` Edge Function secret
 3. Deploy `send-daily-reflections` and set its `EXPO_ACCESS_TOKEN` and
    `DAILY_REFLECTIONS_CRON_SECRET` secrets.
@@ -28,5 +28,5 @@ Before running the script:
    due notification window and run the protected notification smoke workflow.
 
 The script fails closed when any required Vault secret is missing. Re-running
-it replaces only the named Dharma Daily job, so it cannot create duplicate
+it replaces only the named Sandhya job, so it cannot create duplicate
 schedulers.

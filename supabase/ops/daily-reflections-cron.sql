@@ -3,54 +3,54 @@
 -- This is deliberately separate from application migrations: pg_cron, pg_net,
 -- and Vault are hosted project capabilities and may not be available in every
 -- local Supabase stack. Run after enabling the three extensions and storing:
---   dharma_daily_project_url
---   dharma_daily_publishable_key
---   dharma_daily_reflections_cron_secret
+--   sandhya_project_url
+--   sandhya_publishable_key
+--   sandhya_reflections_cron_secret
 -- in Supabase Vault.
 
 do $$
 begin
   if not exists (
     select 1 from vault.decrypted_secrets
-    where name = 'dharma_daily_project_url'
+    where name = 'sandhya_project_url'
   ) or not exists (
     select 1 from vault.decrypted_secrets
-    where name = 'dharma_daily_publishable_key'
+    where name = 'sandhya_publishable_key'
   ) or not exists (
     select 1 from vault.decrypted_secrets
-    where name = 'dharma_daily_reflections_cron_secret'
+    where name = 'sandhya_reflections_cron_secret'
   ) then
     raise exception
-      'Dharma Daily scheduler requires project URL, publishable key, and cron secret in Vault.';
+      'Sandhya scheduler requires project URL, publishable key, and cron secret in Vault.';
   end if;
 end;
 $$;
 
 select cron.unschedule(jobid)
 from cron.job
-where jobname = 'dharma-daily-send-reflections';
+where jobname = 'sandhya-send-reflections';
 
 select cron.schedule(
-  'dharma-daily-send-reflections',
+  'sandhya-send-reflections',
   '* * * * *',
   $job$
     select net.http_post(
       url := (
         select decrypted_secret
         from vault.decrypted_secrets
-        where name = 'dharma_daily_project_url'
+        where name = 'sandhya_project_url'
       ) || '/functions/v1/send-daily-reflections',
       headers := jsonb_build_object(
         'content-type', 'application/json',
         'apikey', (
           select decrypted_secret
           from vault.decrypted_secrets
-          where name = 'dharma_daily_publishable_key'
+          where name = 'sandhya_publishable_key'
         ),
         'x-cron-secret', (
           select decrypted_secret
           from vault.decrypted_secrets
-          where name = 'dharma_daily_reflections_cron_secret'
+          where name = 'sandhya_reflections_cron_secret'
         )
       ),
       body := jsonb_build_object(
@@ -64,4 +64,4 @@ select cron.schedule(
 -- Down / uninstall:
 -- select cron.unschedule(jobid)
 -- from cron.job
--- where jobname = 'dharma-daily-send-reflections';
+-- where jobname = 'sandhya-send-reflections';

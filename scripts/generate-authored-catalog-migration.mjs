@@ -6,7 +6,7 @@ import { pathToFileURL } from "node:url";
 
 const root = resolve(process.cwd());
 const outputPath = join(root, "supabase", "migrations", "20260806200000_app_authored_catalog.sql");
-const tempRoot = mkdtempSync(join(tmpdir(), "dharma-daily-catalog-"));
+const tempRoot = mkdtempSync(join(tmpdir(), "sandhya-catalog-"));
 const checkOnly = process.argv.includes("--check");
 
 try {

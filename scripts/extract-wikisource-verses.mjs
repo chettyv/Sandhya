@@ -26,7 +26,7 @@ const texts = requested.length ? TEXTS.filter((t) => requested.includes(t.slug))
 const get = (url) =>
   new Promise((res, rej) => {
     https
-      .get(url, { headers: { "user-agent": "DharmaDaily-corpus/1.0" } }, (r) => {
+      .get(url, { headers: { "user-agent": "Sandhya-corpus/1.0" } }, (r) => {
         let data = "";
         r.on("data", (chunk) => (data += chunk));
         r.on("end", () => res(data));

@@ -1,5 +1,5 @@
 -- Challenge purchases arrive through the RevenueCat webhook as one-off
--- (non-subscription) products named dd_challenge_<slug-with-underscores>.
+-- (non-subscription) products named sandhya_challenge_<slug-with-underscores>.
 -- These two helpers are the only write path into challenge_participants:
 -- service-role only, called by the webhook after signature verification and
 -- fenced event claiming. A purchase grants participation; a refund revokes it.

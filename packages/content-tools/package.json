@@ -1,8 +1,8 @@
 {
-  "name": "@dharma-daily/content-tools",
+  "name": "@sandhya/content-tools",
   "version": "0.1.0",
   "private": true,
-  "description": "Rights-aware canonical Markdown content validator for the Dharma Daily corpus.",
+  "description": "Rights-aware canonical Markdown content validator for the Sandhya corpus.",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -26,7 +26,7 @@
     "clean": "rimraf dist *.tsbuildinfo"
   },
   "dependencies": {
-    "@dharma-daily/shared-types": "workspace:*"
+    "@sandhya/shared-types": "workspace:*"
   },
   "devDependencies": {
     "rimraf": "^6.0.1",

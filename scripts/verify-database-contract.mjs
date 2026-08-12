@@ -94,7 +94,7 @@ for (const field of ["status", "attempt_count", "claimed_at", "sent_at", "last_e
 assertMigration("20260806190000_ai_budget_reservations.sql", /reserved_usd/);
 assertMigration(
   "20260812020000_global_ai_budget_guard.sql",
-  /project-wide[\s\S]*pg_advisory_xact_lock\(hashtext\('dharma_daily_ai_budget'\)\)[\s\S]*from public\.messages m[\s\S]*from public\.cost_log l[\s\S]*from public\.ai_budget_reservations r/i,
+  /project-wide[\s\S]*pg_advisory_xact_lock\(hashtext\('sandhya_ai_budget'\)\)[\s\S]*from public\.messages m[\s\S]*from public\.cost_log l[\s\S]*from public\.ai_budget_reservations r/i,
 );
 assertMigration(
   "20260806210000_billing_event_retry_claims.sql",

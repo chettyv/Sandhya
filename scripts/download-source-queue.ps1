@@ -1,7 +1,7 @@
 [CmdletBinding(SupportsShouldProcess = $true)]
 param(
   [string]$QueuePath = "docs/source_download_queue_2026-06-19.csv",
-  [string]$UserAgent = "DharmaDailyCorpusResearch/0.2 (local staging; nonproduction)"
+  [string]$UserAgent = "SandhyaCorpusResearch/0.2 (local staging; nonproduction)"
 )
 
 $ErrorActionPreference = "Stop"

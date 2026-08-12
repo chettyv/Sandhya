@@ -1,4 +1,4 @@
-# Dharma Daily — Engineering Portfolio
+# Sandhya — Engineering Portfolio
 
 What this repository demonstrates as engineering, independent of the product's commercial outcome. Written 12 August 2026, per the product review's Section 9 ("what has value regardless"). Everything below is in this repo and verifiable by running the commands in `README.md`.
 

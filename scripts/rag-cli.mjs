@@ -19,7 +19,7 @@ if (command === "ask") {
 
 function runNode(entry, args) {
   if (!existsSync(entry)) {
-    console.error(`Missing ${entry}. Run pnpm --filter @dharma-daily/rag-pipeline build first.`);
+    console.error(`Missing ${entry}. Run pnpm --filter @sandhya/rag-pipeline build first.`);
     process.exit(1);
   }
   const result = spawnSync(process.execPath, [entry, ...args], { cwd: root, stdio: "inherit" });

@@ -7,8 +7,8 @@ export type LocalJournalEntry = {
   date: string;
 };
 
-const LEGACY_KEY = "dharma-daily-local-journal";
-const INDEX_KEY = "dharma-daily-local-journal-index";
+const LEGACY_KEY = "sandhya-local-journal";
+const INDEX_KEY = "sandhya-local-journal-index";
 const CHUNK_SIZE = 512;
 const MAX_ENTRIES = 50;
 export const GUEST_JOURNAL_SCOPE = "guest";
@@ -98,8 +98,8 @@ function indexKey(scope: string): string {
 
 function journalPrefix(scope: string): string {
   return scope === GUEST_JOURNAL_SCOPE
-    ? "dharma-daily-local-journal"
-    : `dharma-daily-local-journal-${safeScope(scope)}`;
+    ? "sandhya-local-journal"
+    : `sandhya-local-journal-${safeScope(scope)}`;
 }
 
 function safeScope(scope: string): string {

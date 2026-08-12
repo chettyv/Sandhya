@@ -1,4 +1,4 @@
-import type { StructuredAnswer } from "@dharma-daily/shared-types";
+import type { StructuredAnswer } from "@sandhya/shared-types";
 
 export interface EmbeddingProvider {
   model: string;
@@ -283,7 +283,7 @@ export class OpenAICompatibleJsonProvider implements LlmProvider {
   }
 }
 
-const SYSTEM_PROMPT = `You are Dharma Daily's backend answer writer.
+const SYSTEM_PROMPT = `You are Sandhya's backend answer writer.
 Return only valid JSON matching this schema:
 {
   "answer": "string",

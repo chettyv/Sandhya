@@ -57,7 +57,7 @@ type ProfilePatch = {
 };
 
 export async function updateProfile(patch: ProfilePatch): Promise<void> {
-  if (!supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+  if (!supabase) throw new Error("Sandhya is not connected to Supabase.");
   const { data, error: sessionError } = await supabase.auth.getSession();
   if (sessionError) throw sessionError;
   const userId = data.session?.user.id;
@@ -68,7 +68,7 @@ export async function updateProfile(patch: ProfilePatch): Promise<void> {
 }
 
 async function currentUserId(): Promise<string> {
-  if (!supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+  if (!supabase) throw new Error("Sandhya is not connected to Supabase.");
   const { data, error } = await supabase.auth.getSession();
   if (error) throw error;
   const userId = data.session?.user.id;
@@ -344,7 +344,7 @@ export async function signOut(): Promise<void> {
 }
 
 export async function deleteAccount(): Promise<void> {
-  if (!supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+  if (!supabase) throw new Error("Sandhya is not connected to Supabase.");
   await configureDailyReminder(false, "08:00").catch(() => undefined);
   const { data, error: sessionError } = await supabase.auth.getSession();
   if (sessionError) throw sessionError;
@@ -375,7 +375,7 @@ export async function deleteAccount(): Promise<void> {
 
 /** Return a portable JSON copy of the authenticated user's account data. */
 export async function exportAccountData(): Promise<string> {
-  if (!supabase) throw new Error("Dharma Daily is not connected to Supabase.");
+  if (!supabase) throw new Error("Sandhya is not connected to Supabase.");
   const { data, error: sessionError } = await supabase.auth.getSession();
   if (sessionError) throw sessionError;
   const accessToken = data.session?.access_token;

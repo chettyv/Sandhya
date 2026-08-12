@@ -131,17 +131,17 @@ describe("prepare corpus", () => {
     const output = join(root, "prepared", "corpus.jsonl");
     await mkdir(input, { recursive: true });
     await writeFile(
-      join(input, "dharma-daily-editorial-guide.md"),
+      join(input, "sandhya-editorial-guide.md"),
       `---
-text_slug: dharma_daily_editorial_guide
-text_title: Dharma Daily Editorial Guide
+text_slug: sandhya_editorial_guide
+text_title: Sandhya Editorial Guide
 category: modern_commentary
 language: en
 tradition_primary: shakta
 licence: original
-copyright_status: Original Dharma Daily editorial content; owned by the project.
-source_url: https://github.com/chettyv/DharmaDaily
-translator: Dharma Daily editorial team
+copyright_status: Original Sandhya editorial content; owned by the project.
+source_url: https://github.com/chettyv/Sandhya
+translator: Sandhya editorial team
 can_store: true
 can_show_excerpts: true
 can_embed: true
@@ -155,7 +155,7 @@ section: Editorial principles
     );
 
     const parsed = parseMarkdownFrontmatter(
-      await readFile(join(input, "dharma-daily-editorial-guide.md"), "utf8"),
+      await readFile(join(input, "sandhya-editorial-guide.md"), "utf8"),
     );
     expect(parsed.metadata).toMatchObject({
       category: "modern_commentary",
@@ -180,8 +180,8 @@ section: Editorial principles
     expect(result.chunksCount).toBeGreaterThan(0);
     expect(first.category).toBe("modern_commentary");
     expect(first.tradition_primary).toBe("shakta");
-    expect(first.source_url).toBe("https://github.com/chettyv/DharmaDaily");
-    expect(first.translator).toBe("Dharma Daily editorial team");
+    expect(first.source_url).toBe("https://github.com/chettyv/Sandhya");
+    expect(first.translator).toBe("Sandhya editorial team");
     expect(first.section).toBe("Editorial principles");
     expect(first.chunk_text).toContain("Grounded learning");
     expect(first.chunk_text).toContain("Hindu traditions are diverse.");

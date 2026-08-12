@@ -6,7 +6,7 @@ Source: https://sanskritdocuments.org/
 
 ## Decision
 
-Use Sanskrit Documents as a **reference, discovery, cross-checking, and permission-request target**. Do **not** ingest its files into Dharma Daily's commercial app database, show full text from it, or embed its full text for RAG unless permission is obtained for the specific files.
+Use Sanskrit Documents as a **reference, discovery, cross-checking, and permission-request target**. Do **not** ingest its files into Sandhya's commercial app database, show full text from it, or embed its full text for RAG unless permission is obtained for the specific files.
 
 The site is extremely useful, but its homepage states that files are prepared by volunteers for personal study and research, and says they should not be copied or reposted for promotion of websites, individuals, or commercial purposes without permission.
 
@@ -34,7 +34,7 @@ Sanskrit Documents is one of the best Hindu/Sanskrit discovery sources because i
 | Can we copy its Hindi/Marathi/English translations? | No, not without permission and item-level checks.                                          |
 | Should we contact them?                             | Yes, if we want to use selected stotras, puja texts, Gita material, or multilingual files. |
 
-## Best Use in Dharma Daily
+## Best Use in Sandhya
 
 | Use case                                                 | Recommendation                                       |
 | -------------------------------------------------------- | ---------------------------------------------------- |
@@ -47,7 +47,7 @@ Sanskrit Documents is one of the best Hindu/Sanskrit discovery sources because i
 | Embedding text for RAG                                   | Do not do without permission.                        |
 | Commercial redistribution in the app                     | Do not do without permission.                        |
 
-## Content Coverage Relevant to Dharma Daily
+## Content Coverage Relevant to Sandhya
 
 | App need                           | Sanskrit Documents coverage                                                                                                                | Use decision                                                       |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
@@ -90,7 +90,7 @@ Potential permission-request targets:
 3. Check whether the page links to an Archive.org scan, Wikisource page, GRETIL file, or another source with clearer rights.
 4. Prefer the clearer-rights source for ingestion.
 5. If no clean source exists, contact Sanskrit Documents for permission.
-6. Only after permission or alternate rights clearance, stage the source and convert it into Dharma Daily's canonical Markdown format.
+6. Only after permission or alternate rights clearance, stage the source and convert it into Sandhya's canonical Markdown format.
 
 ## Permission Email Data to Collect
 
@@ -101,10 +101,10 @@ Before contacting Sanskrit Documents, prepare:
 - Whether we will store text in Supabase.
 - Whether users will see full text or only excerpts.
 - Whether text will be embedded for semantic search/RAG.
-- Whether Dharma Daily is commercial/subscription-supported.
+- Whether Sandhya is commercial/subscription-supported.
 - Attribution wording we can display.
 - Whether we can share corrections back to them.
 
 ## Bottom Line
 
-Sanskrit Documents is one of the best Hindu text discovery sites for our scope, especially Sanskrit and devotional/stotra coverage. But for Dharma Daily's commercial app database, it is **not a download-and-ingest source by default**. Use it to guide research and permission requests; use public-domain scans, GRETIL, Project Gutenberg, Project Madurai, or explicitly licensed sources for actual ingestion where possible.
+Sanskrit Documents is one of the best Hindu text discovery sites for our scope, especially Sanskrit and devotional/stotra coverage. But for Sandhya's commercial app database, it is **not a download-and-ingest source by default**. Use it to guide research and permission requests; use public-domain scans, GRETIL, Project Gutenberg, Project Madurai, or explicitly licensed sources for actual ingestion where possible.

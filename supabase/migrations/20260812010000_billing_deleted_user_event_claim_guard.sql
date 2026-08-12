@@ -1,4 +1,4 @@
--- Do not retain a RevenueCat billing-event row for a deleted Dharma Daily
+-- Do not retain a RevenueCat billing-event row for a deleted Sandhya
 -- account. The account endpoint performs a second scrub after auth deletion;
 -- this guard handles provider retries that arrive after that scrub.
 

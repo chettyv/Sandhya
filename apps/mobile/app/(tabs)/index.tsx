@@ -171,7 +171,7 @@ export default function HomeScreen() {
         >
           <Ionicons name="sparkles-outline" size={23} color={colors.saffron} />
           <View className="min-w-0 flex-1">
-            <Text className="font-semibold text-ink">Go deeper with Dharma Daily Plus</Text>
+            <Text className="font-semibold text-ink">Go deeper with Sandhya Plus</Text>
             <Text className="mt-1 text-sm leading-5 text-muted">
               Unlock more guided practices and keep asking grounded questions.
             </Text>

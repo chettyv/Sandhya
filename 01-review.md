@@ -1,4 +1,4 @@
-# Dharma Daily — Hostile Product Review
+# Sandhya — Hostile Product Review
 
 **Status:** Pre-launch. Zero users. ~18 months of build.
 **Reviewed:** August 2026
@@ -261,4 +261,4 @@ Answer it in **three weeks, without touching the codebase.**
 One-page site. Single festival guide. Aimed at diaspora Hindu parents. Posted where those people already are. Charge £8 up front for something not yet written; refund anyone if it doesn't ship.
 
 - **Fewer than 100 emails** → this is not a distribution problem to solve later. There is no audience, and no amount of Expo, pgvector or citation validation creates one.
-- **Five payments** → more has been learned than in the last twelve months of building, and it will be clear which 5% of Dharma Daily to keep.
+- **Five payments** → more has been learned than in the last twelve months of building, and it will be clear which 5% of Sandhya to keep.

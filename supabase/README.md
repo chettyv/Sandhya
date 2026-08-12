@@ -1,6 +1,6 @@
 # supabase/
 
-Database migrations and Edge Functions for the Dharma Daily backend.
+Database migrations and Edge Functions for the Sandhya backend.
 
 ## Layout
 
@@ -26,7 +26,7 @@ Migrations applied in order:
 | `migrations/20260807100000_billing_event_lease_fencing.sql`             | Adds a per-claim fencing token so stale workers cannot complete or release a billing event after a newer worker reclaims its expired lease.                                                                                                           |
 | `migrations/20260807110000_notification_delivery_lease_fencing.sql`     | Adds the same claim-token fencing to daily notification delivery completion and release.                                                                                                                                                              |
 | `migrations/20260807120000_notification_push_receipt_lease_fencing.sql` | Fences Expo receipt polling so a stale worker cannot finalize a reclaimed receipt ticket.                                                                                                                                                             |
-| `migrations/20260807130000_billing_transfer_destination_guard.sql`      | Refuses to revoke a transfer source when the destination is not a registered Dharma Daily account, leaving the signed event retryable.                                                                                                                |
+| `migrations/20260807130000_billing_transfer_destination_guard.sql`      | Refuses to revoke a transfer source when the destination is not a registered Sandhya account, leaving the signed event retryable.                                                                                                                     |
 | `migrations/20260807140000_authenticated_endpoint_rate_limits.sql`      | Adds server-only, operation-scoped rate limits for account export/deletion and push-token mutations, with retry-safe response metadata.                                                                                                               |
 | `migrations/20260807150000_notification_recipient_batching.sql`         | Bounds each daily notification invocation to 500 users while retaining all active device tokens for each selected user.                                                                                                                               |
 | `migrations/20260807160000_admin_audit_log.sql`                         | Adds a server-only, outcome-tracked audit trail for privileged content, feedback, and cache operations without persisting raw payloads.                                                                                                               |
@@ -399,7 +399,7 @@ Set `EMBEDDING_INPUT_COST_PER_MILLION` as well when using a positive monthly bud
 The repository checks are intentionally environment-independent. Before calling this backend production-ready, a project owner must complete the live Supabase and store configuration:
 
 1. Apply migrations only after reviewing `migrations/migration_checklist.md`, then verify RLS and the new tables in the Supabase dashboard.
-2. Configure Supabase Auth email confirmation, password recovery, Apple/Google provider credentials, the production Site URL, and redirect allow-list entries for the app scheme (`dharmadaily://auth/callback`) and the hosted web preview before testing sign-in.
+2. Configure Supabase Auth email confirmation, password recovery, Apple/Google provider credentials, the production Site URL, and redirect allow-list entries for the app scheme (`sandhya://auth/callback`) and the hosted web preview before testing sign-in.
 3. Set Edge Function secrets for `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`, the selected LLM/embedding provider, `LLM_MONTHLY_BUDGET_USD`, `REVENUECAT_WEBHOOK_SECRET`, `REVENUECAT_API_KEY`, `REVENUECAT_WEBHOOK_TOLERANCE_SECONDS`, `DAILY_REFLECTIONS_CRON_SECRET`, and `EXPO_ACCESS_TOKEN`. Configure `SENTRY_DSN_BACKEND` and `POSTHOG_API_KEY`/`POSTHOG_HOST` when production telemetry is enabled.
 4. Deploy `ask`, `account`, `register-push-token`, `revenuecat-webhook`, `send-daily-reflections`, `admin-feedback`, `admin-content`, and `admin-ops`. The authenticated `account` function supports JSON data export as well as confirmed deletion. Keep JWT verification disabled only for the HMAC/cron-authenticated functions listed in `config.toml`.
 5. Configure RevenueCat HMAC signing and point its webhook at `revenuecat-webhook`; use the Supabase UUID as the RevenueCat App User ID. RevenueCat recommends fast 200 responses, idempotent event handling, and retry-safe processing. See the [RevenueCat webhook guide](https://www.revenuecat.com/docs/integrations/webhooks).

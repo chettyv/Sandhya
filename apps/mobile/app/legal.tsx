@@ -23,8 +23,8 @@ export default function LegalScreen() {
         </View>
         <Text className="mt-8 text-[30px] font-semibold text-ink">A respectful learning space</Text>
         <Text className="mt-3 text-base leading-6 text-muted">
-          Dharma Daily is educational software for Hindu learning and personal reflection. It is not
-          a religious authority, guru, priest, doctor, therapist, lawyer, or financial adviser.
+          Sandhya is educational software for Hindu learning and personal reflection. It is not a
+          religious authority, guru, priest, doctor, therapist, lawyer, or financial adviser.
         </Text>
         {!process.env.EXPO_PUBLIC_PRIVACY_URL || !process.env.EXPO_PUBLIC_TERMS_URL ? (
           <View

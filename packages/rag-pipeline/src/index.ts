@@ -1,4 +1,4 @@
-import type { StructuredAnswer } from "@dharma-daily/shared-types";
+import type { StructuredAnswer } from "@sandhya/shared-types";
 
 import { isCacheableQuestion } from "./classifier.js";
 import { hashQuestion } from "./hash.js";
@@ -574,7 +574,7 @@ function formatLocation(passage: RetrievedPassage): string {
 function noSourceAnswer(): StructuredAnswer {
   return {
     answer:
-      "I could not find a sufficiently relevant source passage in the approved Dharma Daily corpus for this question, so I should not give a scripture-grounded answer yet.",
+      "I could not find a sufficiently relevant source passage in the approved Sandhya corpus for this question, so I should not give a scripture-grounded answer yet.",
     summary: "No approved source passage was retrieved for this question.",
     sources: [],
     tradition_notes: [

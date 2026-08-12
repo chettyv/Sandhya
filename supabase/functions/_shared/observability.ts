@@ -72,7 +72,7 @@ async function sendPostHog(
     body: JSON.stringify({
       api_key: apiKey,
       event: "backend_error",
-      distinct_id: "dharma-daily-backend",
+      distinct_id: "sandhya-backend",
       properties: {
         function_name: functionName,
         error_type: "BackendError",

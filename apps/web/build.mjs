@@ -13,7 +13,7 @@ const root = resolve(import.meta.dirname, "..", "..");
 const contentDir = join(root, "content", "web");
 const outDir = join(import.meta.dirname, "dist");
 const allowDraft = process.argv.includes("--allow-draft");
-const siteUrl = (process.env.WEB_SITE_URL ?? "https://dharmadaily.app").replace(/\/$/, "");
+const siteUrl = (process.env.WEB_SITE_URL ?? "https://sandhya.app").replace(/\/$/, "");
 
 const tools = await import(
   pathToFileURL(join(root, "packages", "content-tools", "dist", "index.js")).href
@@ -55,7 +55,7 @@ console.log(`built ${pages.length} page(s) + index, sitemap, robots.txt -> ${out
 
 function page(fm, bodyHtml, approved) {
   return shell({
-    title: `${fm.title} — Dharma Daily`,
+    title: `${fm.title} — Sandhya`,
     description: fm.description,
     canonical: `${siteUrl}/${fm.slug}`,
     body: `
@@ -66,14 +66,14 @@ ${bodyHtml}
 ${fm.reviewed_by ? `<p class="reviewed">Reviewed by ${escapeHtml(fm.reviewed_by)}.</p>` : ""}
 </article>
 <aside class="app-card">
-  <p><strong>Dharma Daily</strong> — a calm, source-grounded companion for Hindu learning and daily practice. A short teaching every day, with real citations and respect for how traditions differ.</p>
+  <p><strong>Sandhya</strong> — a calm, source-grounded companion for Hindu learning and daily practice. A short teaching every day, with real citations and respect for how traditions differ.</p>
 </aside>`,
   });
 }
 
 function indexPage(list) {
   return shell({
-    title: "Dharma Daily — understand the why behind Hindu practice",
+    title: "Sandhya — understand the why behind Hindu practice",
     description:
       "Clear, source-grounded answers about Hindu festivals, fasting, and home practice — written for people who inherited the tradition and want to understand it.",
     canonical: `${siteUrl}/`,
@@ -124,7 +124,7 @@ blockquote { margin: 16px 0; padding-left: 16px; border-left: 2px solid #d6c8e6;
 </head>
 <body>
 <main>
-<p class="eyebrow"><a href="/">Dharma Daily</a></p>
+<p class="eyebrow"><a href="/">Sandhya</a></p>
 ${body}
 </main>
 </body>

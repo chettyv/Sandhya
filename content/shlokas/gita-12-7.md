@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 12.7
 tradition_primary: general
 tags: devotion
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 review_status: approved
 reviewed_by: Vaibhav Chetty
@@ -18,7 +18,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** TAY-shaam a-HAM sa-mood-DHAR-taa mrit-yoo-sam-SAA-ra-saa-ga-RAAT / bha-VAA-mi na chi-RAAT PAAR-tha mai-YAA-vay-shi-ta-CHAY-ta-saam
 **Meaning:** — for them, whose minds have entered into me, I soon become the rescuer from the ocean of death-bound existence, O Partha.
 **Meaning (hi):** — हे पार्थ, जिनका चित्त मुझमें समा गया है, उनके लिए मैं शीघ्र ही मृत्यु से बँधे संसार-सागर से उबारने वाला बन जाता हूँ।
-**Source:** Bhagavad Gita 12.7, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 12.7, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

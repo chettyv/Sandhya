@@ -3,8 +3,8 @@ import { Platform } from "react-native";
 
 import * as SecureStore from "./secureStorage";
 
-const INSTALL_ID_KEY = "dharma-daily-anonymous-install-id";
-const TELEMETRY_CONSENT_KEY = "dharma-daily-anonymous-telemetry-consent";
+const INSTALL_ID_KEY = "sandhya-anonymous-install-id";
+const TELEMETRY_CONSENT_KEY = "sandhya-anonymous-telemetry-consent";
 const MAX_MESSAGE_LENGTH = 320;
 const MAX_PROPERTY_LENGTH = 120;
 

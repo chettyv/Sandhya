@@ -1,5 +1,5 @@
 {
-  "name": "@dharma-daily/admin",
+  "name": "@sandhya/admin",
   "version": "0.1.0",
   "private": true,
   "description": "Dependency-free admin console for moderation and curated-content operations.",

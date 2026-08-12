@@ -2,7 +2,7 @@
 
 Review date: 2026-06-01
 
-Goal: identify sources Dharma Daily can start downloading and inventorying now for Sanskrit, English, Hindi, Tamil, and Marathi. "Download now" does not mean "ship blindly." It means the source is strong enough to put into the content inventory and begin extraction, cleanup, attribution, and human review.
+Goal: identify sources Sandhya can start downloading and inventorying now for Sanskrit, English, Hindi, Tamil, and Marathi. "Download now" does not mean "ship blindly." It means the source is strong enough to put into the content inventory and begin extraction, cleanup, attribution, and human review.
 
 ## Short Answer
 
@@ -94,7 +94,7 @@ Manual collection rule: if a source is not clearly reusable, create a metadata-o
 | Vedic Heritage Portal                          | Reproduction requires written permission.                                                                                                                   |
 | Wisdom Library                                 | Useful reference only; do not copy definitions/summaries/translations.                                                                                      |
 | Drik Panchang                                  | Use only for comparison. Do not copy calendar database rows.                                                                                                |
-| `vedicscriptures/bhagavad-gita-api`            | README says free for non-monetized apps and cites modern source books; not safe for Dharma Daily commercial corpus.                                         |
+| `vedicscriptures/bhagavad-gita-api`            | README says free for non-monetized apps and cites modern source books; not safe for Sandhya commercial corpus.                                              |
 | `bhavykhatri/DharmicData`                      | ODbL plus upstream IITK/Sacred Texts issues.                                                                                                                |
 | `hrgupta/indian-scriptures`                    | Scraped IITK source.                                                                                                                                        |
 
@@ -153,7 +153,7 @@ Manual collection rule: if a source is not clearly reusable, create a metadata-o
 - Add inventory rows for every candidate in this file before downloading into `content/`.
 - For Project Gutenberg texts, strip or comply with the Project Gutenberg trademark/license boilerplate. Keep bibliographic attribution internally.
 - For Project Madurai, preserve headers/credit acknowledgements and contact coordinators before public app release.
-- For Wikisource, decide whether CC BY-SA content is acceptable in Dharma Daily's commercial closed-source product.
+- For Wikisource, decide whether CC BY-SA content is acceptable in Sandhya's commercial closed-source product.
 - Commission Hindi, Tamil, and Marathi translations for glossary, festivals, practice guides, and app-written summaries.
 - Obtain permissions for modern scripture translations if we want readable contemporary Hindi/Tamil/Marathi in v1.
 

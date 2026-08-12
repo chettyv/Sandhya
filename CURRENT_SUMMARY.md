@@ -1,4 +1,4 @@
-# Dharma Daily — Current Project Summary
+# Sandhya — Current Project Summary
 
 **Last updated:** 12 August 2026 (remediation build, cycles 1–16)
 **Status:** Free-launch product, content-live, awaiting founder infrastructure setup (Supabase, EAS) to reach devices beyond Expo Go.
@@ -19,6 +19,8 @@ A free, source-grounded daily practice app built around a **verse bank**: every 
 | Hanuman Chalisa           | all 43 units   | 43 live                                                           | ITRANS→Devanagari converted, canonical alignment verified                                                |
 | Isha Upanishad            | 19 units       | 19 live                                                           | safety-aware pool curation                                                                               |
 | Kena / Mundaka / Mandukya | 114 units      | drafting interrupted by session limit — **relaunch after 2:30pm** | extractor verified against canonical counts                                                              |
+
+Alongside the verse bank, the app-authored fallback catalog still serves the wider surfaces offline: 50 concept introductions, 20 practice guides, 30 rotating reflections, and the festival library now includes 21 explainers.
 
 **Live bank: 142 units · 108-verse curated daily pool · 100% Hindi coverage · 3 scriptures.** The pool excludes sentence-fragment verses (they live in the reader). Next extraction queue and the epics architecture note (bulk reader via RAG pipeline, not file-per-verse) are in the progress-log corpus ledger.
 

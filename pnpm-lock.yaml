@@ -185,7 +185,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@dharma-daily/content-tools':
+      '@sandhya/content-tools':
         specifier: workspace:*
         version: link:../../packages/content-tools
       marked:
@@ -194,7 +194,7 @@ importers:
 
   packages/content-tools:
     dependencies:
-      '@dharma-daily/shared-types':
+      '@sandhya/shared-types':
         specifier: workspace:*
         version: link:../shared-types
     devDependencies:
@@ -210,7 +210,7 @@ importers:
 
   packages/rag-pipeline:
     dependencies:
-      '@dharma-daily/shared-types':
+      '@sandhya/shared-types':
         specifier: workspace:*
         version: link:../shared-types
       js-tiktoken:

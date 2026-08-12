@@ -5,7 +5,7 @@ text_ref: Bhagavad Gita 12.6
 tradition_primary: general
 tags: devotion
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Sandhya draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 review_status: approved
 reviewed_by: Vaibhav Chetty
@@ -18,7 +18,7 @@ reviewed_by: Vaibhav Chetty
 **Say it:** yay too sar-VAA-ni kar-MAA-ni MA-yi san-NYAS-ya mat-pa-RAAH / a-nan-yay-NAI-va yo-GAY-na maam dhyaa-YAN-ta oo-PAA-sa-tay
 **Meaning:** But those who dedicate all their actions to me, hold me as their highest aim, and worship me, meditating on me with undivided devotion — (the sentence continues in 12.7).
 **Meaning (hi):** परंतु जो अपने सारे कर्म मुझे समर्पित करके, मुझे ही परम लक्ष्य मानकर, अनन्य योग से मेरा ध्यान करते हुए मेरी उपासना करते हैं — (वाक्य 12.7 में पूरा होता है)।
-**Source:** Bhagavad Gita 12.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
+**Source:** Bhagavad Gita 12.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Sandhya draft, pending review
 
 ## Word by word
 

@@ -289,7 +289,7 @@ export default function AskScreen() {
                   <View className="h-8 w-8 items-center justify-center rounded-full bg-[#3E3413]">
                     <Ionicons name="sparkles" size={16} color={colors.saffron} />
                   </View>
-                  <Text className="font-semibold text-ink">Dharma Daily</Text>
+                  <Text className="font-semibold text-ink">Sandhya</Text>
                   <Pill label={mutation.data.answer.confidence} tone="sage" />
                 </View>
                 <Text className="text-[16px] leading-7 text-ink">

@@ -72,8 +72,8 @@ export default function SacredTextDetailScreen() {
           <View className="flex-1">
             <Text className="font-semibold text-plum">Tradition and context</Text>
             <Text className="mt-1 text-sm leading-5 text-muted">
-              This work is approached differently across schools and communities. Dharma Daily
-              presents context and variation rather than one final interpretation.
+              This work is approached differently across schools and communities. Sandhya presents
+              context and variation rather than one final interpretation.
             </Text>
             {text.estimatedDate ? (
               <Text className="mt-2 text-xs leading-4 text-muted">{text.estimatedDate}</Text>
@@ -122,8 +122,8 @@ export default function SacredTextDetailScreen() {
         <Card className="bg-surface">
           <Text className="font-semibold text-ink">The source library is being prepared</Text>
           <Text className="mt-1 text-sm leading-5 text-muted">
-            This text is part of Dharma Daily’s reviewed catalog. Passages appear here after the
-            source record and usage rights have been verified.
+            This text is part of Sandhya’s reviewed catalog. Passages appear here after the source
+            record and usage rights have been verified.
           </Text>
         </Card>
       )}

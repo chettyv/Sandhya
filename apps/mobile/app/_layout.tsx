@@ -246,7 +246,7 @@ export default function RootLayout() {
             <Stack.Screen name="settings" options={{ title: "Settings" }} />
             <Stack.Screen
               name="subscription"
-              options={{ title: "Dharma Daily Plus", presentation: "modal" }}
+              options={{ title: "Sandhya Plus", presentation: "modal" }}
             />
             <Stack.Screen
               name="legal"

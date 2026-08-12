@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import type { StructuredAnswer } from "@dharma-daily/shared-types";
+import type { StructuredAnswer } from "@sandhya/shared-types";
 import { describe, expect, it } from "vitest";
 
 import {

@@ -789,7 +789,7 @@ async function fetchText(candidate) {
     try {
       const response = await fetch(url, {
         headers: {
-          "User-Agent": "DharmaDaily source staging; contact via repository maintainer",
+          "User-Agent": "Sandhya source staging; contact via repository maintainer",
         },
       });
       if (!response.ok) {

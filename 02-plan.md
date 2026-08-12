@@ -1,4 +1,4 @@
-# Dharma Daily — Remediation Plan (v2)
+# Sandhya — Remediation Plan (v2)
 
 **Written:** 12 August 2026 · supersedes v1 of the same date
 **Inputs:** `01-review.md` · `CURRENT_SUMMARY.md` · verified market data (Appendix A) · founder decisions taken 12 Aug (Appendix B)

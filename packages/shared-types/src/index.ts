@@ -1,4 +1,4 @@
-// @dharma-daily/shared-types
+// @sandhya/shared-types
 //
 // Single source of truth for types that cross package boundaries:
 //   - The structured AI answer schema (RAG → API → mobile)

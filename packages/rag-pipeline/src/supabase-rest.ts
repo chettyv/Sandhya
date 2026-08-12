@@ -1,4 +1,4 @@
-import type { StructuredAnswer } from "@dharma-daily/shared-types";
+import type { StructuredAnswer } from "@sandhya/shared-types";
 
 import { validateStructuredAnswer } from "./providers.js";
 

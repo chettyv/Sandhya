@@ -232,7 +232,7 @@ const candidates = [
     difficulty: "Medium",
     review_needed: "legal; OCR review; historical bias review; missionary framing",
     notes:
-      "Secondary history source staged for background only; do not surface dated or missionary framing as Dharma Daily voice.",
+      "Secondary history source staged for background only; do not surface dated or missionary framing as Sandhya voice.",
   },
   {
     work_id: "elements_hindu_iconography_rao_vol1_part1_1914_en",
@@ -358,7 +358,7 @@ const candidates = [
     review_needed:
       "legal; OCR review; colonial/missionary bias review; customs review; regional variation review; sensitive caste/social content review; segmentation",
     notes:
-      "Dubois and Beauchamp customs source OCR staged as historical background only; do not present colonial or missionary framing as Dharma Daily voice or as normative Hindu practice.",
+      "Dubois and Beauchamp customs source OCR staged as historical background only; do not present colonial or missionary framing as Sandhya voice or as normative Hindu practice.",
   },
   {
     work_id: "dharmasastra_mn_dutt_6_vols_smritis_en",
@@ -2176,7 +2176,7 @@ const candidates = [
     review_needed:
       "legal; OCR review; Arya Samaj review; polemical content review; interfaith sensitivity review; duplicate-edition comparison; segmentation",
     notes:
-      "Bharadwaja's Light of Truth OCR staged as another early English Satyarth Prakash witness; compare against Durga Prasad before retrieval use and avoid presenting sectarian polemic as Dharma Daily voice.",
+      "Bharadwaja's Light of Truth OCR staged as another early English Satyarth Prakash witness; compare against Durga Prasad before retrieval use and avoid presenting sectarian polemic as Sandhya voice.",
   },
   {
     work_id: "arya_samaj_lajpat_rai_1915_en",
@@ -2590,7 +2590,7 @@ const candidates = [
     review_needed:
       "legal; OCR review; overview/source-boundary review; missionary framing review; dated-scholarship review; segmentation",
     notes:
-      "Farquhar's primer OCR staged as a compact dated overview source; use only with explicit missionary-era framing and not as Dharma Daily voice.",
+      "Farquhar's primer OCR staged as a compact dated overview source; use only with explicit missionary-era framing and not as Sandhya voice.",
   },
   {
     work_id: "handbook_sanskrit_literature_small_1866_en",
@@ -2809,7 +2809,7 @@ async function fetchWithRetry(url, options, attempts = 3) {
     try {
       const response = await fetch(url, {
         ...options,
-        headers: { "User-Agent": "DharmaDaily source staging", ...options.headers },
+        headers: { "User-Agent": "Sandhya source staging", ...options.headers },
       });
       if (response.ok || response.status < 500 || attempt === attempts) return response;
       lastError = new Error(`${url} -> HTTP ${response.status}`);

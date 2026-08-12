@@ -21,8 +21,8 @@ estimated_minutes: 10
 review_status: draft # draft → in_review → approved; only approved ships
 reviewed_by: "" # named reviewer, required when approved
 licence: original # the prose is app-authored; quotes carry their own source lines
-copyright_status: Original Dharma Daily content; quoted scripture attributed inline.
-source_url: https://github.com/chettyv/DharmaDaily
+copyright_status: Original Sandhya content; quoted scripture attributed inline.
+source_url: https://github.com/chettyv/Sandhya
 tradition_primary: general
 can_store: true
 can_show_excerpts: true
