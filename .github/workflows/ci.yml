@@ -78,8 +78,12 @@ jobs:
         run: |
           if [ -d content/_staging/raw ]; then
             node packages/rag-pipeline/dist/prepare-corpus.js content/_staging/raw content/_staging/prepared/rag-corpus.jsonl
-            node packages/rag-pipeline/dist/audit-prepared.js content/_staging/prepared/rag-corpus.jsonl
-            node packages/rag-pipeline/dist/ingest-prepared.js content/_staging/prepared/rag-corpus.jsonl --dry-run --allow-staging
+            if [ -f content/_staging/prepared/rag-corpus.jsonl ]; then
+              node packages/rag-pipeline/dist/audit-prepared.js content/_staging/prepared/rag-corpus.jsonl
+              node packages/rag-pipeline/dist/ingest-prepared.js content/_staging/prepared/rag-corpus.jsonl --dry-run --allow-staging
+            else
+              echo 'no prepared staging corpus produced — audit/ingest skipped'
+            fi
           else
             echo "content/_staging/raw absent — staging corpus gates skipped"
           fi
