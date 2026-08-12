@@ -178,10 +178,20 @@ Founder directives: launch free (non-commercial unlocks restricted sources; paid
 - **Browser-verified end to end:** onboarding (focus chips) → Today shows the devotion-pool verse (12.3, drafted translation) → detail renders three registers + full word bank + meaning + attribution. Zero app console errors. `public/_redirects` added so dynamic deep links survive static hosting.
 - Committed bank is approved-only (empty until founder review); local preview: `pnpm content:generate-shloka-bank -- --allow-draft`.
 
-### NEXT SESSION — do these in order, no questions
+### Cycle 11 — 12 Aug 2026 — Full-bank tagging — DONE
 
-1. **Corpus extraction (top priority):** write `scripts/extract-gita-verses.mjs` — fetch the sanskritdocuments.org Bhagavad Gita (ITX/HTML per chapter; their terms allow distribution with attribution — record row in inventory) or parse the staged `content/_staging/raw/sanskrit/wikisource_bhagavad_gita_sa.jsonl`, plus the staged **Besant/Bhagavan Das 1905** OCR for word-by-word English. Emit draft `content/shlokas/gita-N-M.md` files (start: chapter 2 + chapter 12, ~90 verses) with Source lines citing the staged file + URL. Drafts only — ship-gate unchanged. Also run the remaining queue collection scripts (list in SOURCES-AND-ATTRIBUTION.md) to pull the ~58 metadata-only rows.
-2. **UX polish pass** (founder: "very good looking"): walk every screen in expo web + mobile viewport; fix spacing/contrast/empty states; verify Today card, bank list, detail with populated drafts (`pnpm content:generate-shloka-bank -- --allow-draft`).
-3. Remaining two §5 web drafts (Lakshmi puja at home, Hanuman Chalisa meaning — Chalisa text itself is PD, quote with Wikisource attribution).
-4. Scoped AI on the daily shloka (depth layer; reuse `ask` with a scoping param per plan §3).
-5. Monetisation stays parked (founder order) — store items remain in your-actions with the Play 14-day warning.
+All 700 verses now carry theme tags (curated tags on the 30 launch verses; defensible chapter-level tags elsewhere: ch1 courage/family, ch2 wisdom/courage, ch7–12 devotion-weighted, etc.). Personalized rotation works across the whole bank the moment more verses are approved.
+
+### NEXT SESSION — priorities (founder said don't stop)
+
+1. **Hanuman Chalisa into the bank:** staged `content/_staging/raw/hindi/sanskritdocuments_hanuman_chalisa_hi.itx` is clean but ITRANS-encoded — write an ITRANS→Devanagari converter (deterministic, mirrors the IAST work in `extract-gita-shlokas.mjs`) and emit draft files (free-mode legal with attribution; Hindi Wikisource page lookup failed on three title guesses — try their search API or the `hanumAnachAlisAsaMskRRita.itx` Sanskrit variant).
+2. **Hindi translations for the 30 launch verses** — draft `## Meaning (hi)` sections via writer agents (the plumbing ships; settings row activates automatically).
+3. **Word-by-word + translations for more Gita chapters** — writer agents in batches of 10, chapter 3 next (karma yoga — matches "discipline/duty" journeys).
+4. Remaining acceptance sweep: reduced-motion audit, keyboard nav on web, analytics events (PostHog is placeholder-keyed), 320px viewport pass.
+5. Scoped AI on the daily shloka (needs live backend — after founder's Supabase step).
+
+6. **Corpus extraction (top priority):** write `scripts/extract-gita-verses.mjs` — fetch the sanskritdocuments.org Bhagavad Gita (ITX/HTML per chapter; their terms allow distribution with attribution — record row in inventory) or parse the staged `content/_staging/raw/sanskrit/wikisource_bhagavad_gita_sa.jsonl`, plus the staged **Besant/Bhagavan Das 1905** OCR for word-by-word English. Emit draft `content/shlokas/gita-N-M.md` files (start: chapter 2 + chapter 12, ~90 verses) with Source lines citing the staged file + URL. Drafts only — ship-gate unchanged. Also run the remaining queue collection scripts (list in SOURCES-AND-ATTRIBUTION.md) to pull the ~58 metadata-only rows.
+7. **UX polish pass** (founder: "very good looking"): walk every screen in expo web + mobile viewport; fix spacing/contrast/empty states; verify Today card, bank list, detail with populated drafts (`pnpm content:generate-shloka-bank -- --allow-draft`).
+8. Remaining two §5 web drafts (Lakshmi puja at home, Hanuman Chalisa meaning — Chalisa text itself is PD, quote with Wikisource attribution).
+9. Scoped AI on the daily shloka (depth layer; reuse `ask` with a scoping param per plan §3).
+10. Monetisation stays parked (founder order) — store items remain in your-actions with the Play 14-day warning.
