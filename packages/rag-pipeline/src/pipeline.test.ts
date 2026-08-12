@@ -505,7 +505,7 @@ describe("RagPipeline", () => {
       passage_id: "00000000-0000-0000-0000-000000000202",
       licence: "licensed",
     };
-    const wrongTraditionPassage: RetrievedPassage = {
+    const otherTraditionPassage: RetrievedPassage = {
       ...passage,
       passage_id: "00000000-0000-0000-0000-000000000203",
       tradition: "shaiva",
@@ -524,7 +524,7 @@ describe("RagPipeline", () => {
       retrieved: [
         passage,
         licensedPassage,
-        wrongTraditionPassage,
+        otherTraditionPassage,
         wrongLanguagePassage,
         lowSimilarityPassage,
       ],
@@ -553,8 +553,11 @@ describe("RagPipeline", () => {
       minSimilarity: 0.2,
     });
 
+    // Licence, language, and similarity gate; a different tradition does NOT —
+    // it stays retrievable and is ranked, not removed.
     expect(result.retrievedPassages.map((retrieved) => retrieved.passage_id)).toEqual([
       passage.passage_id,
+      otherTraditionPassage.passage_id,
     ]);
     expect(llm.generateStructuredAnswer).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -564,9 +567,48 @@ describe("RagPipeline", () => {
             title: passage.title,
             location: "Chapter 2 2.47",
           },
+          {
+            passage_id: otherTraditionPassage.passage_id,
+            title: otherTraditionPassage.title,
+            location: "Chapter 2 2.47",
+          },
         ],
       }),
     );
+  });
+
+  it("ranks the stated tradition's passages first without dropping other traditions", async () => {
+    const statedTraditionPassage: RetrievedPassage = {
+      ...passage,
+      passage_id: "00000000-0000-0000-0000-000000000206",
+      tradition: "vaishnava",
+      similarity: 0.5,
+    };
+    const otherTraditionPassage: RetrievedPassage = {
+      ...passage,
+      passage_id: "00000000-0000-0000-0000-000000000207",
+      tradition: "shaiva",
+      similarity: 0.9,
+    };
+    const store = fakeStore({
+      retrieved: [otherTraditionPassage, passage, statedTraditionPassage],
+    });
+    const pipeline = new RagPipeline({
+      store,
+      embeddings: fakeEmbeddings(),
+      llm: fakeLlm(),
+    });
+
+    const result = await pipeline.ask({
+      question: "What does the Gita say about action?",
+      traditionPreference: "vaishnava",
+    });
+
+    expect(result.retrievedPassages.map((retrieved) => retrieved.passage_id)).toEqual([
+      statedTraditionPassage.passage_id,
+      otherTraditionPassage.passage_id,
+      passage.passage_id,
+    ]);
   });
 
   it("ignores malformed retrieved rows before policy filtering and prompt construction", async () => {
