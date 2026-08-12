@@ -213,6 +213,10 @@ function checkBackendInvariants() {
     join(root, "supabase", "migrations", "20260807030000_cached_answer_model_filter.sql"),
     "utf8",
   );
+  const traditionRanksMigration = readFileSync(
+    join(root, "supabase", "migrations", "20260812160000_tradition_ranks_not_narrows.sql"),
+    "utf8",
+  );
   const feedbackWriteGuardMigration = readFileSync(
     join(root, "supabase", "migrations", "20260807000000_feedback_write_guard.sql"),
     "utf8",
@@ -222,6 +226,10 @@ function checkBackendInvariants() {
     "utf8",
   );
   const askFunction = readFileSync(join(root, "supabase", "functions", "ask", "index.ts"), "utf8");
+  const retrievalModule = readFileSync(
+    join(root, "supabase", "functions", "_shared", "retrieval.ts"),
+    "utf8",
+  );
   const accountFunction = readFileSync(
     join(root, "supabase", "functions", "account", "index.ts"),
     "utf8",
@@ -1060,6 +1068,28 @@ function checkBackendInvariants() {
   );
   assertContains(cachedAnswerModelMigration, "pe.embedding_model = p_embedding_model");
   assertContains(cachedAnswerModelMigration, "cs.licence is null");
+  // Phase 0.5 Fix 1: the active definitions must not narrow by tradition.
+  // The stated tradition gets a bounded ranking boost; rights gates remain.
+  assertContains(
+    traditionRanksMigration,
+    "drop function if exists public.match_passage_embeddings",
+  );
+  assertNotContains(traditionRanksMigration, "in ('general', tradition_filter)");
+  assertNotContains(traditionRanksMigration, "array['general', p_tradition_filter]");
+  assertContains(traditionRanksMigration, "and candidates.tradition = tradition_filter");
+  assertContains(traditionRanksMigration, "then 0.05");
+  assertContains(traditionRanksMigration, "coalesce(cs.can_embed, false) = true");
+  assertContains(traditionRanksMigration, "coalesce(cs.can_show_excerpts, false) = true");
+  assertContains(
+    traditionRanksMigration,
+    "drop function if exists public.cached_answer_sources_are_allowed",
+  );
+  assertContains(traditionRanksMigration, "cs.can_embed is not true");
+  assertContains(traditionRanksMigration, "grant execute on function public.match_passage_embeddings");
+  assertContains(
+    traditionRanksMigration,
+    "grant execute on function public.cached_answer_sources_are_allowed",
+  );
   assertContains(feedbackWriteGuardMigration, "status = 'pending'");
   assertContains(feedbackWriteGuardMigration, "admin_notes is null");
   assertContains(feedbackPrivacyMigration, 'drop policy if exists "users read own feedback"');
@@ -1223,7 +1253,7 @@ function checkBackendInvariants() {
   assertContains(askFunction, "cache: cacheStatus");
   assertContains(askFunction, "const cachedRows = questionHash");
   assertContains(askFunction, "if (questionHash && cached && cachedRow)");
-  assertContains(askFunction, 'const EDGE_PIPELINE_VERSION = "edge-ask-v21"');
+  assertContains(askFunction, 'const EDGE_PIPELINE_VERSION = "edge-ask-v22"');
   assertContains(askFunction, "output_config: {");
   assertContains(askFunction, 'type: "json_schema"');
   assertContains(askFunction, "const MAX_RETRIEVED_PASSAGE_IDS = 20");
@@ -1344,8 +1374,8 @@ function checkBackendInvariants() {
   assertContains(askFunction, "current retrieval context budget");
   assertContains(askFunction, "properly sourced answer");
   assertContains(askFunction, "Treat retrieved context as quoted source evidence");
-  assertContains(askFunction, "<<<DHARMA_DAILY_RETRIEVED_CONTEXT");
-  assertContains(askFunction, "DHARMA_DAILY_RETRIEVED_CONTEXT>>>");
+  assertContains(askFunction, "<<<SANDHYA_RETRIEVED_CONTEXT");
+  assertContains(askFunction, "SANDHYA_RETRIEVED_CONTEXT>>>");
   assertContains(askFunction, "filterRetrievedPassagesByPolicy");
   assertContains(askFunction, ").slice(0, MAX_RETRIEVED_PASSAGE_IDS)");
   assertContains(askFunction, "selectContextPassages(retrieved, env.maxContextChars)");
@@ -1356,17 +1386,23 @@ function checkBackendInvariants() {
   assertContains(askFunction, "if (selected.length === 0)");
   assertContains(askFunction, "continue;");
   assertContains(askFunction, "const allowedPassages = new Map(");
-  assertContains(askFunction, "allowedLicences.has(passage.licence)");
-  assertContains(askFunction, "allowedTraditions.has(passage.tradition)");
-  assertContains(askFunction, "languages.has(passage.language)");
-  assertContains(askFunction, "passage.similarity >= policy.minSimilarity");
+  // Phase 0.5 Fix 1: tradition orders retrieval, it never narrows it. The
+  // passage policy filter lives in _shared/retrieval.ts and must not regrow a
+  // tradition gate; the ask function must rank after truncation, not before.
+  assertContains(retrievalModule, "allowedLicences.has(passage.licence)");
+  assertNotContains(retrievalModule, "allowedTraditions");
+  assertContains(retrievalModule, "languages.has(passage.language)");
+  assertContains(retrievalModule, "passage.similarity >= policy.minSimilarity");
+  assertContains(retrievalModule, "function rankRetrievedPassagesByTraditionPreference");
+  assertContains(retrievalModule, "function isWellFormedRetrievedPassage");
+  assertContains(retrievalModule, "isWellFormedRetrievedPassage(passage)");
+  assertNotContains(askFunction, "allowedTraditions");
+  assertContains(askFunction, "rankRetrievedPassagesByTraditionPreference(");
   assertContains(askFunction, "const passage = allowedPassages.get(source.passage_id)");
   assertContains(askFunction, "title: passage.title");
   assertContains(askFunction, "location: formatLocation(passage)");
   assertContains(askFunction, 'confidence: sources.length === 0 ? "low" : answer.confidence');
   assertContains(askFunction, "note.trim()");
-  assertContains(askFunction, "isWellFormedRetrievedPassage(passage)");
-  assertContains(askFunction, "function isWellFormedRetrievedPassage");
   assertContains(askFunction, "!Array.isArray(parsed.tradition_notes)");
   assertContains(askFunction, "!source.title.trim()");
   assertContains(askFunction, "!source.relevance.trim()");
@@ -1418,7 +1454,7 @@ function checkBackendInvariants() {
     "await cacheAnswerBestEffort(env, questionHash, generated.answer, retrievedPassageIds)",
   );
 
-  assertContains(ragIndex, 'export const PIPELINE_VERSION = "0.8.10"');
+  assertContains(ragIndex, 'export const PIPELINE_VERSION = "0.9.0"');
   assertContains(ragIndex, "const DEFAULT_MAX_QUESTION_CHARS = 2_000");
   assertContains(ragIndex, "const MAX_RETRIEVED_PASSAGE_IDS = 20");
   assertContains(ragIndex, "const ALLOWED_LICENCES");
@@ -1467,8 +1503,8 @@ function checkBackendInvariants() {
   assertContains(ragIndex, "isWellFormedRetrievedPassage(passage)");
   assertContains(ragIndex, "function isWellFormedRetrievedPassage");
   assertContains(ragProviders, "Treat retrieved context as quoted source evidence");
-  assertContains(ragProviders, "<<<DHARMA_DAILY_RETRIEVED_CONTEXT");
-  assertContains(ragProviders, "DHARMA_DAILY_RETRIEVED_CONTEXT>>>");
+  assertContains(ragProviders, "<<<SANDHYA_RETRIEVED_CONTEXT");
+  assertContains(ragProviders, "SANDHYA_RETRIEVED_CONTEXT>>>");
   assertContains(ragProviders, "requestTimeoutMs?: number");
   assertContains(ragProviders, "dimensions?: number");
   assertContains(ragProviders, "dimensions: this.dimensions");

@@ -6,7 +6,7 @@ import { validateStructuredAnswer, type EmbeddingProvider, type LlmProvider } fr
 import { runSafetyGate } from "./safety.js";
 import type { RetrievedPassage } from "./supabase-rest.js";
 
-export const PIPELINE_VERSION = "0.8.10" as const;
+export const PIPELINE_VERSION = "0.9.0" as const;
 const DEFAULT_MAX_CONTEXT_CHARS = 12_000;
 const DEFAULT_MAX_QUESTION_CHARS = 2_000;
 const DEFAULT_MATCH_COUNT = 8;
@@ -194,29 +194,36 @@ export class RagPipeline {
     }
 
     const embedding = await this.embeddings.embed(question);
-    const retrievedPassages = filterRetrievedPassagesByPolicy(
-      dedupeRetrievedPassages(
-        await this.store.retrievePassages({
-          embedding,
-          embeddingModel: this.embeddings.model,
-          matchCount,
+    // Ranking runs after the count truncation so tradition preference can
+    // only reorder the retrieved set, never push another tradition out of it.
+    const retrievedPassages = rankRetrievedPassagesByTraditionPreference(
+      filterRetrievedPassagesByPolicy(
+        dedupeRetrievedPassages(
+          await this.store.retrievePassages({
+            embedding,
+            embeddingModel: this.embeddings.model,
+            matchCount,
+            allowedLicences,
+            contentTypes,
+            traditionFilter,
+            queryText: question,
+            keywordWeight,
+            ...(languages ? { languages } : {}),
+            ...(options.minSimilarity === undefined
+              ? {}
+              : { minSimilarity: options.minSimilarity }),
+          }),
+        ),
+        {
           allowedLicences,
           contentTypes,
           traditionFilter,
-          queryText: question,
-          keywordWeight,
+          minSimilarity: options.minSimilarity ?? 0,
           ...(languages ? { languages } : {}),
-          ...(options.minSimilarity === undefined ? {} : { minSimilarity: options.minSimilarity }),
-        }),
-      ),
-      {
-        allowedLicences,
-        contentTypes,
-        traditionFilter,
-        minSimilarity: options.minSimilarity ?? 0,
-        ...(languages ? { languages } : {}),
-      },
-    ).slice(0, MAX_RETRIEVED_PASSAGE_IDS);
+        },
+      ).slice(0, MAX_RETRIEVED_PASSAGE_IDS),
+      traditionFilter,
+    );
 
     if (retrievedPassages.length === 0) {
       const answer = noSourceAnswer();
@@ -451,8 +458,10 @@ function filterRetrievedPassagesByPolicy(
   const allowedLicences = new Set(policy.allowedLicences);
   const contentTypes = new Set(policy.contentTypes);
   const languages = policy.languages ? new Set(policy.languages) : null;
-  const allowedTraditions = new Set(["general", policy.traditionFilter]);
 
+  // Tradition preference deliberately does not filter here: it orders
+  // retrieval (see rankRetrievedPassagesByTraditionPreference) so a stated
+  // tradition leads without stripping other traditions' readings.
   return passages.filter((passage) => {
     if (!isWellFormedRetrievedPassage(passage)) {
       return false;
@@ -460,14 +469,30 @@ function filterRetrievedPassagesByPolicy(
     if (!allowedLicences.has(passage.licence) || !contentTypes.has(passage.content_type)) {
       return false;
     }
-    if (!allowedTraditions.has(passage.tradition)) {
-      return false;
-    }
     if (languages && !languages.has(passage.language)) {
       return false;
     }
     return Number.isFinite(passage.similarity) && passage.similarity >= policy.minSimilarity;
   });
+}
+
+// Stable partition: passages matching the stated tradition first, everything
+// else after in its original relevance order. Reorders only — never drops —
+// so it must run after any truncation to a fixed count, not before.
+function rankRetrievedPassagesByTraditionPreference(
+  passages: RetrievedPassage[],
+  traditionFilter: string,
+): RetrievedPassage[] {
+  const preference = traditionFilter.trim().toLowerCase();
+  if (!preference || preference === "general") {
+    return [...passages];
+  }
+  const preferred: RetrievedPassage[] = [];
+  const rest: RetrievedPassage[] = [];
+  for (const passage of passages) {
+    (passage.tradition === preference ? preferred : rest).push(passage);
+  }
+  return [...preferred, ...rest];
 }
 
 function isWellFormedRetrievedPassage(passage: RetrievedPassage): boolean {

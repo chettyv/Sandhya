@@ -18,6 +18,7 @@ run("scripts/verify-migration-security.mjs");
 run("scripts/verify-database-contract.mjs");
 run("scripts/verify-edge-functions-syntax.mjs");
 run("scripts/verify-account-flow.mjs");
+run("scripts/verify-tradition-retrieval.mjs", [], { nodeArgs: ["--experimental-transform-types"] });
 run("scripts/verify-revenuecat-transfer.mjs", [], { nodeArgs: ["--experimental-transform-types"] });
 run("scripts/verify-notification-flow.mjs", [], { nodeArgs: ["--experimental-transform-types"] });
 run("scripts/verify-notification-worker.mjs", [], { nodeArgs: ["--experimental-transform-types"] });

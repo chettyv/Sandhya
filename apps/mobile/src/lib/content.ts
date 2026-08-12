@@ -12,6 +12,7 @@ import {
 import { localDateKey } from "@/lib/activity";
 import { useSubscription } from "@/lib/subscriptions";
 import { supabase } from "@/lib/supabase";
+import { describeVariations } from "@/lib/variationNotes";
 import type { Concept, Deity, Festival, Practice, SacredText } from "@/types/content";
 
 export type DailyReflectionContent = ReturnType<typeof getFallbackDailyReflection>;
@@ -140,9 +141,10 @@ async function fetchLibrary(): Promise<ContentLibrary> {
           item.full_story ??
           "Learn about this festival and the ways communities observe it.",
         observance: item.home_observance ? item.home_observance.split("\n").filter(Boolean) : [],
-        variationNote: item.regional_variations
-          ? "Dates and observances can vary by region, tradition, and local calendar."
-          : "Observances vary by family, region, and tradition.",
+        variationNote: describeVariations(
+          item.regional_variations,
+          "Observances vary by family, region, and tradition.",
+        ),
         color: "#775B82",
         isPremium: Boolean((item as { is_premium?: boolean }).is_premium),
       } satisfies Festival,
@@ -207,7 +209,10 @@ async function fetchLibrary(): Promise<ContentLibrary> {
       definition: item.short_definition ?? "A concept explored across Hindu traditions.",
       explanation: item.full_explanation ?? item.short_definition ?? "",
       variationNote: item.tradition_variations
-        ? "Interpretations vary across texts, schools, and communities."
+        ? describeVariations(
+            item.tradition_variations,
+            "Interpretations vary across texts, schools, and communities.",
+          )
         : undefined,
     } satisfies Concept;
   });
