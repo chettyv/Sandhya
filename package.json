@@ -56,7 +56,8 @@
     "rag:evaluate": "pnpm --filter @dharma-daily/rag-pipeline build && node packages/rag-pipeline/dist/evaluate.js content/_staging/evals/rag-eval.example.jsonl",
     "secrets:scan": "secretlint \"**/*\" --secretlintignore .gitignore",
     "clean": "pnpm -r exec rimraf dist .turbo coverage && rimraf node_modules",
-    "prepare": "husky"
+    "prepare": "husky",
+    "content:generate-challenge-seed": "pnpm --filter @dharma-daily/content-tools build && node scripts/generate-challenge-seed.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.0",

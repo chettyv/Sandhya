@@ -101,3 +101,12 @@ Files: +2 content docs, ~+120 lines in content-tools src, +90 test lines. No dep
 - Files: +1 migration (~250 lines), +3 mobile files (~600 lines), ~30 lines edits across CI/scripts/eslint/layout. Dependencies added: none.
 
 **Next:** seed pipeline (session markdown → SQL seed, approved-only), then the web arrival surface scaffold, then scoped AI.
+
+### Cycle 4 — 12 Aug 2026 — Content→DB seed pipeline — DONE
+
+- `content/challenges/navratri-2026/challenge.json` — real challenge metadata (11–19 Oct 2026, 9 nights, unpublished, price blank pending the pricing decision).
+- `scripts/generate-challenge-seed.mjs` + `pnpm content:generate-challenge-seed` — validates every night file via content-tools, **refuses non-approved sessions** (`--allow-draft` for local dev only), parses the six sections and multi-block shloka groups into the `content` jsonb shape, and writes migration `20260812140000_challenge_catalog.sql` (idempotent upserts, generated-file header). Same pattern as the existing authored-catalog generator.
+- Verified: draft refusal, session SQL emission via a throwaway fixture (deleted after), clean regeneration, migration security gates pass (54 migrations).
+- When the founder writes `night-01.md`, the full path is: validate → approve with named reviewer → regenerate → migrate. No hand-written SQL.
+
+**Session end state:** all work pushed to `origin/main` (`441b132` + this cycle). Working tree clean. **Next session:** web arrival surface scaffold (6 explanatory pages, static, per design spec) → scoped AI on today's content → payment rail once your-actions #1 is decided.
