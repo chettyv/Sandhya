@@ -6,6 +6,26 @@ This file contains reusable guidance for the specific stack and constraints of t
 
 The authoritative product reference is `sandhya_build_reference.docx`. When this file and the build reference conflict, the build reference wins.
 
+**The plan of record is `02-plan.md` (v3, 12 Aug 2026).** The competitive evidence behind it is `docs/05-competitors.md`. The standing rules those two documents impose are in *Competitive standing rules* below — read that section before touching content, retrieval, onboarding or the festival calendar.
+
+## Starting a session — read this first
+
+**You are one of two agents working this repo in parallel.** This file is shared by both, so it cannot tell you which one you are. **The user says so at the start of a session:**
+
+> `You are Stream A.` — content and data
+> `You are Stream B.` — app and platform
+
+**If the user has not said which stream you are, ask before touching any file.** Do not guess. The two streams own disjoint parts of the tree (see *Two-workstream file ownership* below) and a wrong guess means editing a file the other agent owns.
+
+Once you know your stream:
+
+1. Read `02-plan.md` §7 and find your stream's deliverables (A1–A8 or B1–B8).
+2. Work the lowest-numbered deliverable that is not done, unless the user names one.
+3. **Stay inside your stream's file ownership.** If a task appears to require touching the other stream's files, stop and say so rather than crossing the line.
+4. Check the *Competitive standing rules* section below before writing content, retrieval, onboarding or anything calendar-related. Those rules are non-negotiable.
+
+The user does not need to say "follow the instructions" — this file is always in effect.
+
 ## Priority order
 
 When instructions conflict, follow this order:
@@ -103,6 +123,61 @@ These are product-critical, not stylistic preferences:
 - **Licensing is hard-blocking.** Never add a source to the corpus without a row in the content tracking sheet covering: translator, source URL, copyright status, storage rights, excerpt rights, embedding rights. "It was online" is not a licence.
 - **Do not act as a guru, priest, therapist, doctor, or lawyer.** Decline and redirect.
 - **Do not mock or dismiss any Hindu tradition.**
+
+## Competitive standing rules — added 12 Aug 2026
+
+These are derived from `docs/05-competitors.md`, a teardown of five competing apps plus the category leader. **They are not style preferences. Each one records a specific, observed failure by a competitor, and each is a place where this product's only defensible advantage lives.** The plan of record is `02-plan.md` (v3).
+
+### Never do these
+
+- **Never generate devotional or deity imagery with AI, and never ship generated imagery as a devotional asset.** A named human artist or nothing. A competitor shipped a triśūla with four-to-five prongs on the card its own UI badged *"SEND TO FRIENDS AND FAMILY"*, and a devotee counted the prongs and filed it as a defect. Iconographic precision is this category's competence signal.
+- **Never display a quoted verse without a named translator and a source.** No competitor at any funding level names a translator or a commentator anywhere. The content validator already enforces the five labels (Devanagari / IAST / Say it / Meaning / Source) on `shloka` docs — do not add a code path that renders a quote outside that shape.
+- **Never publish a festival date without its reckoning.** Every date must carry: the reckoning used (**amānta or pūrṇimānta**), the **observing community named wherever practice splits** (Smārta vs Vaiṣṇava Janmāṣṭamī; Ekādaśī), the **location the timing is computed for**, and the **source, with disagreement between sources reported rather than silently resolved**. If a date cannot carry those four, do not publish the date. Competitors are wrong by up to three weeks, and one is an hour wrong abroad because it does not handle DST.
+- **Never name an AI feature after a deity, and never give the model a persona voice.** A competitor's "Ask Krishna" casts the model as the deity and the user as Arjuna, placing the entire advisory voice inside one sampradāya. A synthesised guru voice is an assertion of lineage authority no product can grant itself.
+- **Never present a single tradition's reading as the reading**, and never build retrieval that hides the others. See the tradition-filter rule below — this was a live bug in our own code.
+- **Never ship a survey question whose answer changes nothing.** One competitor asks eleven questions and consumes one; another asks five and renders the null default while claiming the experience was "crafted just for you". If an onboarding answer does not visibly route content, delete the question.
+- **Never cite research loosely.** If a statistic appears in the product: cite a responder rate *as* a responder rate, name **n**, and name the control condition. A competitor rendered a 47.1% responder rate (n=17 per arm) as a "47% median reduction", and attributed two other people's papers to "our research". Our audience will pull the DOI.
+- **Never write "Dharma Daily" anywhere a user can see it.** It is a competitor's app name. Grep for it before shipping — it has previously survived in `subscription.tsx`, in `apps/web/dist/`, in the RAG context fence, and inside a generated answer string.
+- **Never state what "Hindus do" as a universal.** Where traditions genuinely differ, say they differ and name at least one alternative. This applies to *nitya karma* and daily obligation, to the Navadurga nine-form scheme, to household ritual roles, and to festival observance — all of which vary by sampradāya, region and family.
+
+### Correctness rules that are currently violated in this codebase
+
+Fix these before building on top of them. Both are recorded as Phase 0.5 in `02-plan.md`.
+
+- **`tradition_filter` must ORDER retrieval, not NARROW it.** `supabase/functions/ask/index.ts` currently sets `allowedTraditions = new Set(["general", policy.traditionFilter])`, which structurally prevents a user who states a tradition from ever retrieving another tradition's reading — while the system prompt asks the model to "mention variation where relevant" over a context that has already had the variation stripped out. **Rank by stated tradition; return the others, labelled.**
+- **Stop discarding variation data at render.** `apps/mobile/src/lib/content.ts:139` and `:208` read `festivals.regional_variations` and `concepts.tradition_variations` from Supabase and substitute a constant boilerplate sentence. Render the actual field.
+
+### Two-workstream file ownership — in force during Phase 1
+
+Two developers work in parallel. **Respect the boundary; it is what stops them blocking each other.**
+
+| Stream | Owns | Must not touch |
+| --- | --- | --- |
+| **A — Content & Data** | `content/**`, `docs/**`, the source-rights tracker, web pages, audio | anything under `apps/`, `packages/`, `supabase/` |
+| **B — App & Platform** | `apps/**`, `packages/**`, `supabase/**`, deployment | anything under `content/` except by running the generator |
+
+**The interface is three artifacts and nothing else:** the frozen `challenge_session` doc type in `packages/content-tools/src/index.ts` (six sections in fixed order, `can_embed: false`); the generator scripts that turn markdown into bundled JSON/SQL; and `content/challenges/navratri-2026/challenge.json`. **Do not change the content schema to make application code easier.** If a change to the interface looks necessary, it is a joint decision, not a unilateral one.
+
+### Scope rules in force for the Navratri pilot
+
+- **Scoped AI is CUT from the pilot.** Do not build, wire or re-enable it. Reasons: 1 of 432 source-tracker rows is approved, so retrieval returns nothing; both AI keys are empty and `LLM_PROVIDER` defaults to `deepseek` while `LLM_DEFAULT_MODEL` is a Claude alias, so the function throws on first request; and live AI answers create a moderation queue for one person indefinitely. It ships when the corpus is cleared, not before.
+- **The live participation counter stays dark.** The code exists and is real-count-only. A number like "3 people joined" is worse than no number. Social proof at this scale is a *bought* advantage, not a designed one.
+- **Do not re-add the admin moderation console, push retry leases, or a subscription.** All three are cut in `02-plan.md` §6. Revenue is a one-off finite challenge, not a subscription.
+- **Audio is CORE, not "later".** Every shloka needs a clear reading plus a slow repeat-after-me pass. Adjustable playback speed if cheap — it is the one thing a competitor's own users asked for by name.
+
+### The classification test — apply it before recommending any competitor pattern
+
+Every borrowed idea must be classified before it is adopted:
+
+- **STRUCTURAL** — works because of something the app did not create and we cannot borrow (a daily obligatory office, an externally imposed liturgical calendar, a licensed parallel-translation ecosystem, chapter-and-verse addressing over a single canon, centralised institutions that distribute software). **Not adoptable.** Note that **there is no Hindu analogue to church software distribution** — temples are non-congregational, with no membership roll and no procurement counterparty. Do not plan around that channel.
+- **BOUGHT** — works because of scale, funding or an existing audience (a live queue that is always full, "40M users" social proof, a paid creator programme, an advertising line larger than revenue). **Not adoptable.**
+- **DESIGNED** — a product decision anyone could make. **Adoptable, but only after passing the religious-context test:** does this pattern assume a canon, a central authority, a universal daily obligation, a single calendar, or a single correct reading? If yes, it is not adoptable in that form — say what would have to change, or discard it.
+
+**Unclassified is not a recommendation.**
+
+### The one thing to remember about quality
+
+The best-crafted app in the competitive set has **~102 lifetime ratings and has shipped no features since June 2025**. The market leader is mediocre — its rating has fallen from 4.9 to 4.4 — and has 40M downloads because it spent 75% of its revenue on advertising. **Quality is why people stay and pay. It is not why they arrive.** The correct use of the quality thesis is to pick the correctness claims a stranger can check in thirty seconds — pronunciation, and a festival date with its convention stated — and put them where strangers already are. Work labelled "quality" that no stranger will ever reach is the project's single biggest documented risk (`02-plan.md` §9).
 
 ## Cost control
 
