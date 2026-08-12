@@ -3,7 +3,10 @@
     "slug": "chalisa-1",
     "textRef": "Hanuman Chalisa, chaupai 1",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "जय हनुमान ज्ञान गुन सागर । / जय कपीस तिहुँ लोक उजागर",
     "iast": "jaya hanumāna jñāna guna sāgara । / jaya kapīsa tihum̐ loka ujāgara",
@@ -57,7 +60,10 @@
     "slug": "chalisa-2",
     "textRef": "Hanuman Chalisa, chaupai 2",
     "tradition": "general",
-    "tags": ["devotion", "courage"],
+    "tags": [
+      "devotion",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "राम दूत अतुलित बल धामा । / अंजनिपुत्र पवनसुत नामा",
     "iast": "rāma dūta atulita bala dhāmā । / aṃjaniputra pavanasuta nāmā",
@@ -107,7 +113,10 @@
     "slug": "chalisa-3",
     "textRef": "Hanuman Chalisa, chaupai 3",
     "tradition": "general",
-    "tags": ["courage", "wisdom"],
+    "tags": [
+      "courage",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "महाबीर बिक्रम बजरंगी । / कुमति निवार सुमति के संगी",
     "iast": "mahābīra bikrama bajaraṃgī । / kumati nivāra sumati ke saṃgī",
@@ -157,7 +166,9 @@
     "slug": "chalisa-4",
     "textRef": "Hanuman Chalisa, chaupai 4",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "कंचन बरन बिराज सुबेसा । / कानन कुंडल कुंचित केसा",
     "iast": "kaṃcana barana birāja subesā । / kānana kuṃḍala kuṃcita kesā",
@@ -211,7 +222,10 @@
     "slug": "chalisa-5",
     "textRef": "Hanuman Chalisa, chaupai 5",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": false,
     "devanagari": "हाथ बज्र औ ध्वजा बिराजै । / काँधे मूँज जनेऊ साजै",
     "iast": "hātha bajra au dhvajā birājai । / kām̐dhe mūm̐ja janeū sājai",
@@ -269,7 +283,10 @@
     "slug": "chalisa-6",
     "textRef": "Hanuman Chalisa, chaupai 6",
     "tradition": "general",
-    "tags": ["devotion", "family"],
+    "tags": [
+      "devotion",
+      "family"
+    ],
     "dailyPool": false,
     "devanagari": "संकर सुवन केसरीनंदन । / तेज प्रताप महा जग बंदन",
     "iast": "saṃkara suvana kesarīnaṃdana । / teja pratāpa mahā jaga baṃdana",
@@ -319,7 +336,11 @@
     "slug": "chalisa-7",
     "textRef": "Hanuman Chalisa, chaupai 7",
     "tradition": "general",
-    "tags": ["wisdom", "duty", "devotion"],
+    "tags": [
+      "wisdom",
+      "duty",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "विद्यावान गुनी अति चातुर । / राम काज करिबे को आतुर",
     "iast": "vidyāvāna gunī ati cātura । / rāma kāja karibe ko ātura",
@@ -369,7 +390,10 @@
     "slug": "chalisa-8",
     "textRef": "Hanuman Chalisa, chaupai 8",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "प्रभु चरित्र सुनिबे को रसिया । / राम लखन सीता मन बसिया",
     "iast": "prabhu caritra sunibe ko rasiyā । / rāma lakhana sītā mana basiyā",
@@ -419,7 +443,10 @@
     "slug": "chalisa-9",
     "textRef": "Hanuman Chalisa, chaupai 9",
     "tradition": "general",
-    "tags": ["courage", "wisdom"],
+    "tags": [
+      "courage",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "सूक्ष्म रूप धरि सियहिं दिखावा । / बिकट रूप धरि लंक जरावा",
     "iast": "sūkṣma rūpa dhari siyahiṃ dikhāvā । / bikaṭa rūpa dhari laṃka jarāvā",
@@ -473,7 +500,10 @@
     "slug": "chalisa-10",
     "textRef": "Hanuman Chalisa, chaupai 10",
     "tradition": "general",
-    "tags": ["courage", "duty"],
+    "tags": [
+      "courage",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "भीम रूप धरि असुर सँहारे । / रामचंद्र के काज सँवारे",
     "iast": "bhīma rūpa dhari asura sam̐hāre । / rāmacaṃdra ke kāja sam̐vāre",
@@ -523,7 +553,10 @@
     "slug": "chalisa-11",
     "textRef": "Hanuman Chalisa, chaupai 11",
     "tradition": "general",
-    "tags": ["devotion", "duty"],
+    "tags": [
+      "devotion",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "लाय सजीवन लखन जियाये । / श्रीरघुबीर हरषि उर लाये",
     "iast": "lāya sajīvana lakhana jiyāye । / śrīraghubīra haraṣi ura lāye",
@@ -577,7 +610,10 @@
     "slug": "chalisa-12",
     "textRef": "Hanuman Chalisa, chaupai 12",
     "tradition": "general",
-    "tags": ["devotion", "family"],
+    "tags": [
+      "devotion",
+      "family"
+    ],
     "dailyPool": true,
     "devanagari": "रघुपति कीन्ही बहुत बड़ाई । / तुम मम प्रिय भरतहि सम भाई",
     "iast": "raghupati kīnhī bahuta baṛāī । / tuma mama priya bharatahi sama bhāī",
@@ -635,7 +671,9 @@
     "slug": "chalisa-13",
     "textRef": "Hanuman Chalisa, chaupai 13",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "सहस बदन तुम्हरो जस गावैं । / अस कहि श्रीपति कंठ लगावैं",
     "iast": "sahasa badana tumharo jasa gāvaiṃ । / asa kahi śrīpati kaṃṭha lagāvaiṃ",
@@ -689,7 +727,9 @@
     "slug": "chalisa-14",
     "textRef": "Hanuman Chalisa, chaupai 14",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "सनकादिक ब्रह्मादि मुनीसा । / नारद सारद सहित अहीसा",
     "iast": "sanakādika brahmādi munīsā । / nārada sārada sahita ahīsā",
@@ -739,7 +779,9 @@
     "slug": "chalisa-15",
     "textRef": "Hanuman Chalisa, chaupai 15",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "जम कुबेर दिगपाल जहाँ ते । / कबि कोबिद कहि सके कहाँ ते",
     "iast": "jama kubera digapāla jahām̐ te । / kabi kobida kahi sake kahām̐ te",
@@ -793,7 +835,10 @@
     "slug": "chalisa-16",
     "textRef": "Hanuman Chalisa, chaupai 16",
     "tradition": "general",
-    "tags": ["devotion", "duty"],
+    "tags": [
+      "devotion",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "तुम उपकार सुग्रीवहिं कीन्हा । / राम मिलाय राज पद दीन्हा",
     "iast": "tuma upakāra sugrīvahiṃ kīnhā । / rāma milāya rāja pada dīnhā",
@@ -843,7 +888,10 @@
     "slug": "chalisa-17",
     "textRef": "Hanuman Chalisa, chaupai 17",
     "tradition": "general",
-    "tags": ["wisdom", "courage"],
+    "tags": [
+      "wisdom",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "तुम्हरो मंत्र बिभीषन माना । / लंकेस्वर भए सब जग जाना",
     "iast": "tumharo maṃtra bibhīṣana mānā । / laṃkesvara bhae saba jaga jānā",
@@ -897,7 +945,9 @@
     "slug": "chalisa-18",
     "textRef": "Hanuman Chalisa, chaupai 18",
     "tradition": "general",
-    "tags": ["courage"],
+    "tags": [
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "जुग सहस्र जोजन पर भानू । / लील्यो ताहि मधुर फल जानू",
     "iast": "juga sahasra jojana para bhānū । / līlyo tāhi madhura phala jānū",
@@ -951,7 +1001,10 @@
     "slug": "chalisa-19",
     "textRef": "Hanuman Chalisa, chaupai 19",
     "tradition": "general",
-    "tags": ["courage", "devotion"],
+    "tags": [
+      "courage",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "प्रभु मुद्रिका मेलि मुख माहीं । / जलधि लाँघि गये अचरज नाहीं",
     "iast": "prabhu mudrikā meli mukha māhīṃ । / jaladhi lām̐ghi gaye acaraja nāhīṃ",
@@ -1005,7 +1058,10 @@
     "slug": "chalisa-20",
     "textRef": "Hanuman Chalisa, chaupai 20",
     "tradition": "general",
-    "tags": ["devotion", "courage"],
+    "tags": [
+      "devotion",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "दुर्गम काज जगत के जेते । / सुगम अनुग्रह तुम्हरे तेते",
     "iast": "durgama kāja jagata ke jete । / sugama anugraha tumhare tete",
@@ -1059,7 +1115,10 @@
     "slug": "chalisa-21",
     "textRef": "Hanuman Chalisa, chaupai 21",
     "tradition": "general",
-    "tags": ["devotion", "duty"],
+    "tags": [
+      "devotion",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "राम दुआरे तुम रखवारे । / होत न आज्ञा बिनु पैसारे",
     "iast": "rāma duāre tuma rakhavāre । / hota na ājñā binu paisāre",
@@ -1109,7 +1168,11 @@
     "slug": "chalisa-22",
     "textRef": "Hanuman Chalisa, chaupai 22",
     "tradition": "general",
-    "tags": ["devotion", "peace", "courage"],
+    "tags": [
+      "devotion",
+      "peace",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "सब सुख लहै तुम्हारी सरना । / तुम रच्छक काहू को डर ना",
     "iast": "saba sukha lahai tumhārī saranā । / tuma racchaka kāhū ko ḍara nā",
@@ -1155,7 +1218,11 @@
     "slug": "chalisa-23",
     "textRef": "Hanuman Chalisa, chaupai 23",
     "tradition": "general",
-    "tags": ["courage", "discipline", "devotion"],
+    "tags": [
+      "courage",
+      "discipline",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "आपन तेज संहारो आपै । / तीनों लोक हाँक तें काँपै",
     "iast": "āpana teja saṃhāro āpai । / tīnoṃ loka hām̐ka teṃ kām̐pai",
@@ -1209,7 +1276,11 @@
     "slug": "chalisa-24",
     "textRef": "Hanuman Chalisa, chaupai 24",
     "tradition": "general",
-    "tags": ["courage", "peace", "devotion"],
+    "tags": [
+      "courage",
+      "peace",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "भूत पिसाच निकट नहिं आवै । / महाबीर जब नाम सुनावै",
     "iast": "bhūta pisāca nikaṭa nahiṃ āvai । / mahābīra jaba nāma sunāvai",
@@ -1263,7 +1334,11 @@
     "slug": "chalisa-25",
     "textRef": "Hanuman Chalisa, chaupai 25",
     "tradition": "general",
-    "tags": ["devotion", "discipline", "peace"],
+    "tags": [
+      "devotion",
+      "discipline",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "नासै रोग हरै सब पीरा । / जपत निरंतर हनुमत बीरा",
     "iast": "nāsai roga harai saba pīrā । / japata niraṃtara hanumata bīrā",
@@ -1317,7 +1392,10 @@
     "slug": "chalisa-26",
     "textRef": "Hanuman Chalisa, chaupai 26",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "संकट तें हनुमान छुड़ावै । / मन क्रम बचन ध्यान जो लावै",
     "iast": "saṃkaṭa teṃ hanumāna chuḍāvai । / mana krama bacana dhyāna jo lāvai",
@@ -1375,7 +1453,10 @@
     "slug": "chalisa-27",
     "textRef": "Hanuman Chalisa, chaupai 27",
     "tradition": "general",
-    "tags": ["duty", "devotion"],
+    "tags": [
+      "duty",
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "सब पर राम तपस्वी राजा । / तिन के काज सकल तुम साजा",
     "iast": "saba para rāma tapasvī rājā । / tina ke kāja sakala tuma sājā",
@@ -1433,7 +1514,9 @@
     "slug": "chalisa-28",
     "textRef": "Hanuman Chalisa, chaupai 28",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "और मनोरथ जो कोई लावै । / सोई अमित जीवन फल पावै",
     "iast": "aura manoratha jo koī lāvai । / soī amita jīvana phala pāvai",
@@ -1491,7 +1574,10 @@
     "slug": "chalisa-29",
     "textRef": "Hanuman Chalisa, chaupai 29",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "चारों जुग परताप तुम्हारा । / है परसिद्ध जगत उजियारा",
     "iast": "cāroṃ juga paratāpa tumhārā । / hai parasiddha jagata ujiyārā",
@@ -1541,7 +1627,11 @@
     "slug": "chalisa-30",
     "textRef": "Hanuman Chalisa, chaupai 30",
     "tradition": "general",
-    "tags": ["devotion", "courage", "duty"],
+    "tags": [
+      "devotion",
+      "courage",
+      "duty"
+    ],
     "dailyPool": false,
     "devanagari": "साधु संत के तुम रखवारे । / असुर निकंदन राम दुलारे",
     "iast": "sādhu saṃta ke tuma rakhavāre । / asura nikaṃdana rāma dulāre",
@@ -1591,7 +1681,10 @@
     "slug": "chalisa-31",
     "textRef": "Hanuman Chalisa, chaupai 31",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "अष्ट सिद्धि नौ निधि के दाता । / अस बर दीन जानकी माता",
     "iast": "aṣṭa siddhi nau nidhi ke dātā । / asa bara dīna jānakī mātā",
@@ -1641,7 +1734,10 @@
     "slug": "chalisa-32",
     "textRef": "Hanuman Chalisa, chaupai 32",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "राम रसायन तुम्हरे पासा । / सदा रहो रघुपति के दासा",
     "iast": "rāma rasāyana tumhare pāsā । / sadā raho raghupati ke dāsā",
@@ -1687,7 +1783,10 @@
     "slug": "chalisa-33",
     "textRef": "Hanuman Chalisa, chaupai 33",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "तुम्हरे भजन राम को पावै । / जनम जनम के दुख बिसरावै",
     "iast": "tumhare bhajana rāma ko pāvai । / janama janama ke dukha bisarāvai",
@@ -1733,7 +1832,10 @@
     "slug": "chalisa-34",
     "textRef": "Hanuman Chalisa, chaupai 34",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": false,
     "devanagari": "अंत काल रघुबर पुर जाई । / जहाँ जन्म हरिभक्त कहाई",
     "iast": "aṃta kāla raghubara pura jāī । / jahām̐ janma haribhakta kahāī",
@@ -1783,7 +1885,10 @@
     "slug": "chalisa-35",
     "textRef": "Hanuman Chalisa, chaupai 35",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": false,
     "devanagari": "और देवता चित्त न धरई । / हनुमत सेई सर्ब सुख करई",
     "iast": "aura devatā citta na dharaī । / hanumata seī sarba sukha karaī",
@@ -1841,7 +1946,11 @@
     "slug": "chalisa-36",
     "textRef": "Hanuman Chalisa, chaupai 36",
     "tradition": "general",
-    "tags": ["courage", "peace", "devotion"],
+    "tags": [
+      "courage",
+      "peace",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "संकट कटै मिटै सब पीरा । / जो सुमिरै हनुमत बलबीरा",
     "iast": "saṃkaṭa kaṭai miṭai saba pīrā । / jo sumirai hanumata balabīrā",
@@ -1895,7 +2004,9 @@
     "slug": "chalisa-37",
     "textRef": "Hanuman Chalisa, chaupai 37",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "जै जै जै हनुमान गोसाईं । / कृपा करहु गुरु देव की नाईं",
     "iast": "jai jai jai hanumāna gosāīṃ । / kṛpā karahu guru deva kī nāīṃ",
@@ -1945,7 +2056,10 @@
     "slug": "chalisa-38",
     "textRef": "Hanuman Chalisa, chaupai 38",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": false,
     "devanagari": "जो सत बार पाठ कर कोई । / छूटहि बंदि महा सुख होई",
     "iast": "jo sata bāra pāṭha kara koī । / chūṭahi baṃdi mahā sukha hoī",
@@ -1995,7 +2109,10 @@
     "slug": "chalisa-39",
     "textRef": "Hanuman Chalisa, chaupai 39",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": false,
     "devanagari": "जो यह पढ़ै हनुमान चलीसा । / होय सिद्धि साखी गौरीसा",
     "iast": "jo yaha paḍhai hanumāna calīsā । / hoya siddhi sākhī gaurīsā",
@@ -2049,7 +2166,10 @@
     "slug": "chalisa-40",
     "textRef": "Hanuman Chalisa, chaupai 40",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "तुलसीदास सदा हरि चेरा । / कीजै नाथ हृदय महँ डेरा",
     "iast": "tulasīdāsa sadā hari cerā । / kījai nātha hṛdaya maham̐ ḍerā",
@@ -2103,7 +2223,10 @@
     "slug": "chalisa-doha-1",
     "textRef": "Hanuman Chalisa, opening doha 1",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि । / बरनऊँ रघुबर बिमल जसु जो दायकु फल चारि",
     "iast": "śrīguru carana saroja raja nija manu mukuru sudhāri । / baranaūm̐ raghubara bimala jasu jo dāyaku phala cāri",
@@ -2173,7 +2296,10 @@
     "slug": "chalisa-doha-2",
     "textRef": "Hanuman Chalisa, opening doha 2",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "बुद्धिहीन तनु जानिके सुमिरौं पवनकुमार । / बल बुद्धि बिद्या देहु मोहिं हरहु कलेस बिकार",
     "iast": "buddhihīna tanu jānike sumirauṃ pavanakumāra । / bala buddhi bidyā dehu mohiṃ harahu kalesa bikāra",
@@ -2247,7 +2373,11 @@
     "slug": "chalisa-doha-3",
     "textRef": "Hanuman Chalisa, closing doha",
     "tradition": "general",
-    "tags": ["devotion", "peace", "family"],
+    "tags": [
+      "devotion",
+      "peace",
+      "family"
+    ],
     "dailyPool": true,
     "devanagari": "पवनतनय संकट हरन मंगल मूरति रूप । / राम लखन सीता सहित हृदय बसहु सुर भूप",
     "iast": "pavanatanaya saṃkaṭa harana maṃgala mūrati rūpa । / rāma lakhana sītā sahita hṛdaya basahu sura bhūpa",
@@ -2305,7 +2435,9 @@
     "slug": "gita-2-13",
     "textRef": "Bhagavad Gita 2.13",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा । / तथा देहान्तरप्राप्तिर्धीरस्तत्र न मुह्यति ॥2.13॥",
     "iast": "dehino'sminyathā dehe kaumāraṃ yauvanaṃ jarā । / tathā dehāntaraprāptirdhīrastatra na muhyati ॥2.13॥",
@@ -2375,7 +2507,10 @@
     "slug": "gita-2-14",
     "textRef": "Bhagavad Gita 2.14",
     "tradition": "general",
-    "tags": ["peace", "courage"],
+    "tags": [
+      "peace",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः । / आगमापायिनोऽनित्यास्तांस्तितिक्षस्व भारत ॥2.14॥",
     "iast": "mātrāsparśāstu kaunteya śītoṣṇasukhaduḥkhadāḥ । / āgamāpāyino'nityāstāṃstitikṣasva bhārata ॥2.14॥",
@@ -2437,7 +2572,9 @@
     "slug": "gita-2-20",
     "textRef": "Bhagavad Gita 2.20",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "न जायते म्रियते वा कदाचिन्नायं भूत्वा भविता वा न भूयः । / अजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे ॥2.20॥",
     "iast": "na jāyate mriyate vā kadācinnāyaṃ bhūtvā bhavitā vā na bhūyaḥ । / ajo nityaḥ śāśvato'yaṃ purāṇo na hanyate hanyamāne śarīre ॥2.20॥",
@@ -2523,7 +2660,10 @@
     "slug": "gita-2-47",
     "textRef": "Bhagavad Gita 2.47",
     "tradition": "general",
-    "tags": ["discipline", "wisdom"],
+    "tags": [
+      "discipline",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । / मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥2.47॥",
     "iast": "karmaṇyevādhikāraste mā phaleṣu kadācana । / mā karmaphalaheturbhūrmā te saṅgo'stvakarmaṇi ॥2.47॥",
@@ -2593,7 +2733,10 @@
     "slug": "gita-2-48",
     "textRef": "Bhagavad Gita 2.48",
     "tradition": "general",
-    "tags": ["discipline", "wisdom"],
+    "tags": [
+      "discipline",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनंजय । / सिद्ध्यसिद्ध्योः समो भूत्वा समत्वं योग उच्यते ॥2.48॥",
     "iast": "yogasthaḥ kuru karmāṇi saṅgaṃ tyaktvā dhanaṃjaya । / siddhyasiddhyoḥ samo bhūtvā samatvaṃ yoga ucyate ॥2.48॥",
@@ -2663,7 +2806,10 @@
     "slug": "gita-2-62",
     "textRef": "Bhagavad Gita 2.62",
     "tradition": "general",
-    "tags": ["peace", "discipline"],
+    "tags": [
+      "peace",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते । / सङ्गात्संजायते कामः कामात्क्रोधोऽभिजायते ॥2.62॥",
     "iast": "dhyāyato viṣayānpuṃsaḥ saṅgasteṣūpajāyate । / saṅgātsaṃjāyate kāmaḥ kāmātkrodho'bhijāyate ॥2.62॥",
@@ -2733,7 +2879,10 @@
     "slug": "gita-2-63",
     "textRef": "Bhagavad Gita 2.63",
     "tradition": "general",
-    "tags": ["peace", "discipline"],
+    "tags": [
+      "peace",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "क्रोधाद्भवति संमोहः संमोहात्स्मृतिविभ्रमः । / स्मृतिभ्रंशाद्बुद्धिनाशो बुद्धिनाशात्प्रणश्यति ॥2.63॥",
     "iast": "krodhādbhavati saṃmohaḥ saṃmohātsmṛtivibhramaḥ । / smṛtibhraṃśādbuddhināśo buddhināśātpraṇaśyati ॥2.63॥",
@@ -2791,7 +2940,9 @@
     "slug": "gita-2-69",
     "textRef": "Bhagavad Gita 2.69",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "या निशा सर्वभूतानां तस्यां जागर्ति संयमी । / यस्यां जाग्रति भूतानि सा निशा पश्यतो मुनेः ॥2.69॥",
     "iast": "yā niśā sarvabhūtānāṃ tasyāṃ jāgarti saṃyamī । / yasyāṃ jāgrati bhūtāni sā niśā paśyato muneḥ ॥2.69॥",
@@ -2865,7 +3016,9 @@
     "slug": "gita-2-70",
     "textRef": "Bhagavad Gita 2.70",
     "tradition": "general",
-    "tags": ["peace"],
+    "tags": [
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "आपूर्यमाणमचलप्रतिष्ठं समुद्रमापः प्रविशन्ति यद्वत् । / तद्वत्कामा यं प्रविशन्ति सर्वे स शान्तिमाप्नोति न कामकामी ॥2.70॥",
     "iast": "āpūryamāṇamacalapratiṣṭhaṃ samudramāpaḥ praviśanti yadvat । / tadvatkāmā yaṃ praviśanti sarve sa śāntimāpnoti na kāmakāmī ॥2.70॥",
@@ -2951,7 +3104,9 @@
     "slug": "gita-2-71",
     "textRef": "Bhagavad Gita 2.71",
     "tradition": "general",
-    "tags": ["peace"],
+    "tags": [
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "विहाय कामान्यः सर्वान् पुमांश्चरति निःस्पृहः । / निर्ममो निरहंकारः स शान्तिमधिगच्छति ॥2.71॥",
     "iast": "vihāya kāmānyaḥ sarvān pumāṃścarati niḥspṛhaḥ । / nirmamo nirahaṃkāraḥ sa śāntimadhigacchati ॥2.71॥",
@@ -3021,7 +3176,10 @@
     "slug": "gita-3-4",
     "textRef": "Bhagavad Gita 3.4",
     "tradition": "general",
-    "tags": ["discipline", "duty"],
+    "tags": [
+      "discipline",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते । / न च संन्यसनादेव सिद्धिं समधिगच्छति ॥3.4॥",
     "iast": "na karmaṇāmanārambhānnaiṣkarmyaṃ puruṣo'śnute । / na ca saṃnyasanādeva siddhiṃ samadhigacchati ॥3.4॥",
@@ -3087,7 +3245,10 @@
     "slug": "gita-3-8",
     "textRef": "Bhagavad Gita 3.8",
     "tradition": "general",
-    "tags": ["discipline", "duty"],
+    "tags": [
+      "discipline",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "नियतं कुरु कर्म त्वं कर्म ज्यायो ह्यकर्मणः । / शरीरयात्रापि च ते न प्रसिद्ध्येदकर्मणः ॥3.8॥",
     "iast": "niyataṃ kuru karma tvaṃ karma jyāyo hyakarmaṇaḥ । / śarīrayātrāpi ca te na prasiddhyedakarmaṇaḥ ॥3.8॥",
@@ -3157,7 +3318,10 @@
     "slug": "gita-3-9",
     "textRef": "Bhagavad Gita 3.9",
     "tradition": "general",
-    "tags": ["devotion", "duty"],
+    "tags": [
+      "devotion",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः । / तदर्थं कर्म कौन्तेय मुक्तसङ्गः समाचर ॥3.9॥",
     "iast": "yajñārthātkarmaṇo'nyatra loko'yaṃ karmabandhanaḥ । / tadarthaṃ karma kaunteya muktasaṅgaḥ samācara ॥3.9॥",
@@ -3219,7 +3383,10 @@
     "slug": "gita-3-16",
     "textRef": "Bhagavad Gita 3.16",
     "tradition": "general",
-    "tags": ["discipline", "duty"],
+    "tags": [
+      "discipline",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "एवं प्रवर्तितं चक्रं नानुवर्तयतीह यः । / अघायुरिन्द्रियारामो मोघं पार्थ स जीवति ॥3.16॥",
     "iast": "evaṃ pravartitaṃ cakraṃ nānuvartayatīha yaḥ । / aghāyurindriyārāmo moghaṃ pārtha sa jīvati ॥3.16॥",
@@ -3289,7 +3456,10 @@
     "slug": "gita-3-19",
     "textRef": "Bhagavad Gita 3.19",
     "tradition": "general",
-    "tags": ["discipline", "duty"],
+    "tags": [
+      "discipline",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "तस्मादसक्तः सततं कार्यं कर्म समाचर । / असक्तो ह्याचरन्कर्म परमाप्नोति पूरुषः ॥3.19॥",
     "iast": "tasmādasaktaḥ satataṃ kāryaṃ karma samācara । / asakto hyācarankarma paramāpnoti pūruṣaḥ ॥3.19॥",
@@ -3355,7 +3525,10 @@
     "slug": "gita-3-21",
     "textRef": "Bhagavad Gita 3.21",
     "tradition": "general",
-    "tags": ["duty", "wisdom"],
+    "tags": [
+      "duty",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "यद्यदाचरति श्रेष्ठस्तत्तदेवेतरो जनः । / स यत्प्रमाणं कुरुते लोकस्तदनुवर्तते ॥3.21॥",
     "iast": "yadyadācarati śreṣṭhastattadevetaro janaḥ । / sa yatpramāṇaṃ kurute lokastadanuvartate ॥3.21॥",
@@ -3421,7 +3594,10 @@
     "slug": "gita-3-25",
     "textRef": "Bhagavad Gita 3.25",
     "tradition": "general",
-    "tags": ["duty", "wisdom"],
+    "tags": [
+      "duty",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "सक्ताः कर्मण्यविद्वांसो यथा कुर्वन्ति भारत । / कुर्याद्विद्वांस्तथासक्तश्चिकीर्षुर्लोकसंग्रहम् ॥3.25॥",
     "iast": "saktāḥ karmaṇyavidvāṃso yathā kurvanti bhārata । / kuryādvidvāṃstathāsaktaścikīrṣurlokasaṃgraham ॥3.25॥",
@@ -3491,7 +3667,10 @@
     "slug": "gita-3-27",
     "textRef": "Bhagavad Gita 3.27",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "प्रकृतेः क्रियमाणानि गुणैः कर्माणि सर्वशः । / अहंकारविमूढात्मा कर्ताहमिति मन्यते ॥3.27॥",
     "iast": "prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ । / ahaṃkāravimūḍhātmā kartāhamiti manyate ॥3.27॥",
@@ -3553,7 +3732,10 @@
     "slug": "gita-3-30",
     "textRef": "Bhagavad Gita 3.30",
     "tradition": "general",
-    "tags": ["devotion", "courage"],
+    "tags": [
+      "devotion",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा । / निराशीर्निर्ममो भूत्वा युध्यस्व विगतज्वरः ॥3.30॥",
     "iast": "mayi sarvāṇi karmāṇi saṃnyasyādhyātmacetasā । / nirāśīrnirmamo bhūtvā yudhyasva vigatajvaraḥ ॥3.30॥",
@@ -3615,7 +3797,10 @@
     "slug": "gita-3-35",
     "textRef": "Bhagavad Gita 3.35",
     "tradition": "general",
-    "tags": ["courage", "duty"],
+    "tags": [
+      "courage",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात् । / स्वधर्मे निधनं श्रेयः परधर्मो भयावहः ॥3.35॥",
     "iast": "śreyānsvadharmo viguṇaḥ paradharmātsvanuṣṭhitāt । / svadharme nidhanaṃ śreyaḥ paradharmo bhayāvahaḥ ॥3.35॥",
@@ -3677,7 +3862,10 @@
     "slug": "gita-4-7",
     "textRef": "Bhagavad Gita 4.7",
     "tradition": "general",
-    "tags": ["duty", "devotion"],
+    "tags": [
+      "duty",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "यदा यदा हि धर्मस्य ग्लानिर्भवति भारत । / अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम् ॥4.7॥",
     "iast": "yadā yadā hi dharmasya glānirbhavati bhārata । / abhyutthānamadharmasya tadātmānaṃ sṛjāmyaham ॥4.7॥",
@@ -3747,7 +3935,11 @@
     "slug": "gita-4-8",
     "textRef": "Bhagavad Gita 4.8",
     "tradition": "general",
-    "tags": ["courage", "duty", "devotion"],
+    "tags": [
+      "courage",
+      "duty",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "परित्राणाय साधूनां विनाशाय च दुष्कृताम् । / धर्मसंस्थापनार्थाय सम्भवामि युगे युगे ॥4.8॥",
     "iast": "paritrāṇāya sādhūnāṃ vināśāya ca duṣkṛtām । / dharmasaṃsthāpanārthāya sambhavāmi yuge yuge ॥4.8॥",
@@ -3801,7 +3993,10 @@
     "slug": "gita-4-11",
     "textRef": "Bhagavad Gita 4.11",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "ये यथा मां प्रपद्यन्ते तांस्तथैव भजाम्यहम् । / मम वर्त्मानुवर्तन्ते मनुष्याः पार्थ सर्वशः ॥4.11॥",
     "iast": "ye yathā māṃ prapadyante tāṃstathaiva bhajāmyaham । / mama vartmānuvartante manuṣyāḥ pārtha sarvaśaḥ ॥4.11॥",
@@ -3879,7 +4074,10 @@
     "slug": "gita-4-18",
     "textRef": "Bhagavad Gita 4.18",
     "tradition": "general",
-    "tags": ["wisdom", "discipline"],
+    "tags": [
+      "wisdom",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "कर्मण्यकर्म यः पश्येदकर्मणि च कर्म यः । / स बुद्धिमान्मनुष्येषु स युक्तः कृत्स्नकर्मकृत् ॥4.18॥",
     "iast": "karmaṇyakarma yaḥ paśyedakarmaṇi ca karma yaḥ । / sa buddhimānmanuṣyeṣu sa yuktaḥ kṛtsnakarmakṛt ॥4.18॥",
@@ -3957,7 +4155,10 @@
     "slug": "gita-4-33",
     "textRef": "Bhagavad Gita 4.33",
     "tradition": "general",
-    "tags": ["wisdom", "discipline"],
+    "tags": [
+      "wisdom",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "श्रेयान्द्रव्यमयाद्यज्ञाज्ज्ञानयज्ञः परन्तप । / सर्वं कर्माखिलं पार्थ ज्ञाने परिसमाप्यते ॥4.33॥",
     "iast": "śreyāndravyamayādyajñājjñānayajñaḥ parantapa । / sarvaṃ karmākhilaṃ pārtha jñāne parisamāpyate ॥4.33॥",
@@ -4023,7 +4224,11 @@
     "slug": "gita-4-34",
     "textRef": "Bhagavad Gita 4.34",
     "tradition": "general",
-    "tags": ["wisdom", "devotion", "discipline"],
+    "tags": [
+      "wisdom",
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "तद्विद्धि प्रणिपातेन परिप्रश्नेन सेवया । / उपदेक्ष्यन्ति ते ज्ञानं ज्ञानिनस्तत्त्वदर्शिनः ॥4.34॥",
     "iast": "tadviddhi praṇipātena paripraśnena sevayā । / upadekṣyanti te jñānaṃ jñāninastattvadarśinaḥ ॥4.34॥",
@@ -4085,7 +4290,10 @@
     "slug": "gita-4-36",
     "textRef": "Bhagavad Gita 4.36",
     "tradition": "general",
-    "tags": ["courage", "wisdom"],
+    "tags": [
+      "courage",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "अपि चेदसि पापेभ्यः सर्वेभ्यः पापकृत्तमः । / सर्वं ज्ञानप्लवेनैव वृजिनं सन्तरिष्यसि ॥4.36॥",
     "iast": "api cedasi pāpebhyaḥ sarvebhyaḥ pāpakṛttamaḥ । / sarvaṃ jñānaplavenaiva vṛjinaṃ santariṣyasi ॥4.36॥",
@@ -4147,7 +4355,11 @@
     "slug": "gita-4-38",
     "textRef": "Bhagavad Gita 4.38",
     "tradition": "general",
-    "tags": ["wisdom", "peace", "discipline"],
+    "tags": [
+      "wisdom",
+      "peace",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "न हि ज्ञानेन सदृशं पवित्रमिह विद्यते । / तत्स्वयं योगसंसिद्धः कालेनात्मनि विन्दति ॥4.38॥",
     "iast": "na hi jñānena sadṛśaṃ pavitramiha vidyate । / tatsvayaṃ yogasaṃsiddhaḥ kālenātmani vindati ॥4.38॥",
@@ -4221,7 +4433,11 @@
     "slug": "gita-4-39",
     "textRef": "Bhagavad Gita 4.39",
     "tradition": "general",
-    "tags": ["devotion", "wisdom", "peace"],
+    "tags": [
+      "devotion",
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "श्रद्धावाँल्लभते ज्ञानं तत्परः संयतेन्द्रियः । / ज्ञानं लब्ध्वा परां शान्तिमचिरेणाधिगच्छति ॥4.39॥",
     "iast": "śraddhāvām̐llabhate jñānaṃ tatparaḥ saṃyatendriyaḥ । / jñānaṃ labdhvā parāṃ śāntimacireṇādhigacchati ॥4.39॥",
@@ -4287,7 +4503,10 @@
     "slug": "gita-4-42",
     "textRef": "Bhagavad Gita 4.42",
     "tradition": "general",
-    "tags": ["courage", "wisdom"],
+    "tags": [
+      "courage",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "तस्मादज्ञानसम्भूतं हृत्स्थं ज्ञानासिनात्मनः । / छित्त्वैनं संशयं योगमातिष्ठोत्तिष्ठ भारत ॥4.42॥",
     "iast": "tasmādajñānasambhūtaṃ hṛtsthaṃ jñānāsinātmanaḥ । / chittvainaṃ saṃśayaṃ yogamātiṣṭhottiṣṭha bhārata ॥4.42॥",
@@ -4357,7 +4576,10 @@
     "slug": "gita-5-3",
     "textRef": "Bhagavad Gita 5.3",
     "tradition": "general",
-    "tags": ["peace", "wisdom"],
+    "tags": [
+      "peace",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "ज्ञेयः स नित्यसंन्यासी यो न द्वेष्टि न काङ्क्षति । / निर्द्वन्द्वो हि महाबाहो सुखं बन्धात्प्रमुच्यते ॥5.3॥",
     "iast": "jñeyaḥ sa nityasaṃnyāsī yo na dveṣṭi na kāṅkṣati । / nirdvandvo hi mahābāho sukhaṃ bandhātpramucyate ॥5.3॥",
@@ -4427,7 +4649,10 @@
     "slug": "gita-5-10",
     "textRef": "Bhagavad Gita 5.10",
     "tradition": "general",
-    "tags": ["discipline", "devotion"],
+    "tags": [
+      "discipline",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "ब्रह्मण्याधाय कर्माणि सङ्गं त्यक्त्वा करोति यः । / लिप्यते न स पापेन पद्मपत्रमिवाम्भसा ॥5.10॥",
     "iast": "brahmaṇyādhāya karmāṇi saṅgaṃ tyaktvā karoti yaḥ । / lipyate na sa pāpena padmapatramivāmbhasā ॥5.10॥",
@@ -4501,7 +4726,9 @@
     "slug": "gita-5-16",
     "textRef": "Bhagavad Gita 5.16",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "ज्ञानेन तु तदज्ञानं येषां नाशितमात्मनः । / तेषामादित्यवज्ज्ञानं प्रकाशयति तत्परम् ॥5.16॥",
     "iast": "jñānena tu tadajñānaṃ yeṣāṃ nāśitamātmanaḥ । / teṣāmādityavajjñānaṃ prakāśayati tatparam ॥5.16॥",
@@ -4571,7 +4798,10 @@
     "slug": "gita-5-18",
     "textRef": "Bhagavad Gita 5.18",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "विद्याविनयसंपन्ने ब्राह्मणे गवि हस्तिनि । / शुनि चैव श्वपाके च पण्डिताः समदर्शिनः ॥5.18॥",
     "iast": "vidyāvinayasaṃpanne brāhmaṇe gavi hastini । / śuni caiva śvapāke ca paṇḍitāḥ samadarśinaḥ ॥5.18॥",
@@ -4633,7 +4863,10 @@
     "slug": "gita-5-20",
     "textRef": "Bhagavad Gita 5.20",
     "tradition": "general",
-    "tags": ["peace", "wisdom"],
+    "tags": [
+      "peace",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "न प्रहृष्येत्प्रियं प्राप्य नोद्विजेत्प्राप्य चाप्रियम् । / स्थिरबुद्धिरसंमूढो ब्रह्मविद्ब्रह्मणि स्थितः ॥5.20॥",
     "iast": "na prahṛṣyetpriyaṃ prāpya nodvijetprāpya cāpriyam । / sthirabuddhirasaṃmūḍho brahmavidbrahmaṇi sthitaḥ ॥5.20॥",
@@ -4703,7 +4936,10 @@
     "slug": "gita-5-22",
     "textRef": "Bhagavad Gita 5.22",
     "tradition": "general",
-    "tags": ["discipline", "wisdom"],
+    "tags": [
+      "discipline",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "ये हि संस्पर्शजा भोगा दुःखयोनय एव ते । / आद्यन्तवन्तः कौन्तेय न तेषु रमते बुधः ॥5.22॥",
     "iast": "ye hi saṃsparśajā bhogā duḥkhayonaya eva te । / ādyantavantaḥ kaunteya na teṣu ramate budhaḥ ॥5.22॥",
@@ -4769,7 +5005,10 @@
     "slug": "gita-5-23",
     "textRef": "Bhagavad Gita 5.23",
     "tradition": "general",
-    "tags": ["discipline", "courage"],
+    "tags": [
+      "discipline",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "शक्नोतीहैव यः सोढुं प्राक्शरीरविमोक्षणात् । / कामक्रोधोद्भवं वेगं स युक्तः स सुखी नरः ॥5.23॥",
     "iast": "śaknotīhaiva yaḥ soḍhuṃ prākśarīravimokṣaṇāt । / kāmakrodhodbhavaṃ vegaṃ sa yuktaḥ sa sukhī naraḥ ॥5.23॥",
@@ -4835,7 +5074,10 @@
     "slug": "gita-5-24",
     "textRef": "Bhagavad Gita 5.24",
     "tradition": "general",
-    "tags": ["peace", "wisdom"],
+    "tags": [
+      "peace",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "योऽन्तःसुखोऽन्तरारामस्तथान्तर्ज्योतिरेव यः । / स योगी ब्रह्मनिर्वाणं ब्रह्मभूतोऽधिगच्छति ॥5.24॥",
     "iast": "yo'ntaḥsukho'ntarārāmastathāntarjyotireva yaḥ । / sa yogī brahmanirvāṇaṃ brahmabhūto'dhigacchati ॥5.24॥",
@@ -4901,7 +5143,10 @@
     "slug": "gita-5-25",
     "textRef": "Bhagavad Gita 5.25",
     "tradition": "general",
-    "tags": ["peace", "duty"],
+    "tags": [
+      "peace",
+      "duty"
+    ],
     "dailyPool": true,
     "devanagari": "लभन्ते ब्रह्मनिर्वाणमृषयः क्षीणकल्मषाः । / छिन्नद्वैधा यतात्मानः सर्वभूतहिते रताः ॥5.25॥",
     "iast": "labhante brahmanirvāṇamṛṣayaḥ kṣīṇakalmaṣāḥ । / chinnadvaidhā yatātmānaḥ sarvabhūtahite ratāḥ ॥5.25॥",
@@ -4955,7 +5200,10 @@
     "slug": "gita-5-29",
     "textRef": "Bhagavad Gita 5.29",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "भोक्तारं यज्ञतपसां सर्वलोकमहेश्वरम् । / सुहृदं सर्वभूतानां ज्ञात्वा मां शान्तिमृच्छति ॥5.29॥",
     "iast": "bhoktāraṃ yajñatapasāṃ sarvalokamaheśvaram । / suhṛdaṃ sarvabhūtānāṃ jñātvā māṃ śāntimṛcchati ॥5.29॥",
@@ -5013,7 +5261,10 @@
     "slug": "gita-6-5",
     "textRef": "Bhagavad Gita 6.5",
     "tradition": "general",
-    "tags": ["courage", "discipline"],
+    "tags": [
+      "courage",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "उद्धरेदात्मनात्मानं नात्मानमवसादयेत् । / आत्मैव ह्यात्मनो बन्धुरात्मैव रिपुरात्मनः ॥6.5॥",
     "iast": "uddharedātmanātmānaṃ nātmānamavasādayet । / ātmaiva hyātmano bandhurātmaiva ripurātmanaḥ ॥6.5॥",
@@ -5079,7 +5330,10 @@
     "slug": "gita-6-6",
     "textRef": "Bhagavad Gita 6.6",
     "tradition": "general",
-    "tags": ["discipline", "wisdom"],
+    "tags": [
+      "discipline",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "बन्धुरात्मात्मनस्तस्य येनात्मैवात्मना जितः । / अनात्मनस्तु शत्रुत्वे वर्तेतात्मैव शत्रुवत् ॥6.6॥",
     "iast": "bandhurātmātmanastasya yenātmaivātmanā jitaḥ । / anātmanastu śatrutve vartetātmaiva śatruvat ॥6.6॥",
@@ -5153,7 +5407,10 @@
     "slug": "gita-6-16",
     "textRef": "Bhagavad Gita 6.16",
     "tradition": "general",
-    "tags": ["discipline", "peace"],
+    "tags": [
+      "discipline",
+      "peace"
+    ],
     "dailyPool": false,
     "devanagari": "नात्यश्नतस्तु योगोऽस्ति न चैकान्तमनश्नतः । / न चाति स्वप्नशीलस्य जाग्रतो नैव चार्जुन ॥6.16॥",
     "iast": "nātyaśnatastu yogo'sti na caikāntamanaśnataḥ । / na cāti svapnaśīlasya jāgrato naiva cārjuna ॥6.16॥",
@@ -5219,7 +5476,10 @@
     "slug": "gita-6-17",
     "textRef": "Bhagavad Gita 6.17",
     "tradition": "general",
-    "tags": ["discipline", "peace"],
+    "tags": [
+      "discipline",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "युक्ताहारविहारस्य युक्तचेष्टस्य कर्मसु । / युक्तस्वप्नावबोधस्य योगो भवति दुःखहा ॥6.17॥",
     "iast": "yuktāhāravihārasya yuktaceṣṭasya karmasu । / yuktasvapnāvabodhasya yogo bhavati duḥkhahā ॥6.17॥",
@@ -5269,7 +5529,10 @@
     "slug": "gita-6-19",
     "textRef": "Bhagavad Gita 6.19",
     "tradition": "general",
-    "tags": ["peace", "discipline"],
+    "tags": [
+      "peace",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "यथा दीपो निवातस्थो नेङ्गते सोपमा स्मृता । / योगिनो यतचित्तस्य युञ्जतो योगमात्मनः ॥6.19॥",
     "iast": "yathā dīpo nivātastho neṅgate sopamā smṛtā । / yogino yatacittasya yuñjato yogamātmanaḥ ॥6.19॥",
@@ -5335,7 +5598,10 @@
     "slug": "gita-6-26",
     "textRef": "Bhagavad Gita 6.26",
     "tradition": "general",
-    "tags": ["discipline", "peace"],
+    "tags": [
+      "discipline",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "यतो यतो निश्चरति मनश्चञ्चलमस्थिरम् । / ततस्ततो नियम्यैतदात्मन्येव वशं नयेत् ॥6.26॥",
     "iast": "yato yato niścarati manaścañcalamasthiram । / tatastato niyamyaitadātmanyeva vaśaṃ nayet ॥6.26॥",
@@ -5401,7 +5667,10 @@
     "slug": "gita-6-29",
     "textRef": "Bhagavad Gita 6.29",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "सर्वभूतस्थमात्मानं सर्वभूतानि चात्मनि । / ईक्षते योगयुक्तात्मा सर्वत्र समदर्शनः ॥6.29॥",
     "iast": "sarvabhūtasthamātmānaṃ sarvabhūtāni cātmani । / īkṣate yogayuktātmā sarvatra samadarśanaḥ ॥6.29॥",
@@ -5459,7 +5728,10 @@
     "slug": "gita-6-30",
     "textRef": "Bhagavad Gita 6.30",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "यो मां पश्यति सर्वत्र सर्वं च मयि पश्यति । / तस्याहं न प्रणश्यामि स च मे न प्रणश्यति ॥6.30॥",
     "iast": "yo māṃ paśyati sarvatra sarvaṃ ca mayi paśyati । / tasyāhaṃ na praṇaśyāmi sa ca me na praṇaśyati ॥6.30॥",
@@ -5529,7 +5801,10 @@
     "slug": "gita-6-32",
     "textRef": "Bhagavad Gita 6.32",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "आत्मौपम्येन सर्वत्र समं पश्यति योऽर्जुन । / सुखं वा यदि वा दुःखं स योगी परमो मतः ॥6.32॥",
     "iast": "ātmaupamyena sarvatra samaṃ paśyati yo'rjuna । / sukhaṃ vā yadi vā duḥkhaṃ sa yogī paramo mataḥ ॥6.32॥",
@@ -5595,7 +5870,10 @@
     "slug": "gita-6-35",
     "textRef": "Bhagavad Gita 6.35",
     "tradition": "general",
-    "tags": ["discipline", "courage"],
+    "tags": [
+      "discipline",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "श्रीभगवानुवाच / असंशयं महाबाहो मनो दुर्निग्रहं चलम् । / अभ्यासेन तु कौन्तेय वैराग्येण च गृह्यते ॥6.35॥",
     "iast": "śrībhagavānuvāca / asaṃśayaṃ mahābāho mano durnigrahaṃ calam । / abhyāsena tu kaunteya vairāgyeṇa ca gṛhyate ॥6.35॥",
@@ -5665,7 +5943,10 @@
     "slug": "gita-9-22",
     "textRef": "Bhagavad Gita 9.22",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "अनन्याश्चिन्तयन्तो मां ये जनाः पर्युपासते । / तेषां नित्याभियुक्तानां योगक्षेमं वहाम्यहम् ॥9.22॥",
     "iast": "ananyāścintayanto māṃ ye janāḥ paryupāsate । / teṣāṃ nityābhiyuktānāṃ yogakṣemaṃ vahāmyaham ॥9.22॥",
@@ -5727,7 +6008,9 @@
     "slug": "gita-9-26",
     "textRef": "Bhagavad Gita 9.26",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "पत्रं पुष्पं फलं तोयं यो मे भक्त्या प्रयच्छति । / तदहं भक्त्युपहृतमश्नामि प्रयतात्मनः ॥9.26॥",
     "iast": "patraṃ puṣpaṃ phalaṃ toyaṃ yo me bhaktyā prayacchati । / tadahaṃ bhaktyupahṛtamaśnāmi prayatātmanaḥ ॥9.26॥",
@@ -5801,7 +6084,10 @@
     "slug": "gita-9-27",
     "textRef": "Bhagavad Gita 9.27",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "यत्करोषि यदश्नासि यज्जुहोषि ददासि यत् । / यत्तपस्यसि कौन्तेय तत्कुरुष्व मदर्पणम् ॥9.27॥",
     "iast": "yatkaroṣi yadaśnāsi yajjuhoṣi dadāsi yat । / yattapasyasi kaunteya tatkuruṣva madarpaṇam ॥9.27॥",
@@ -5859,7 +6145,10 @@
     "slug": "gita-9-29",
     "textRef": "Bhagavad Gita 9.29",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "समोऽहं सर्वभूतेषु न मे द्वेष्योऽस्ति न प्रियः । / ये भजन्ति तु मां भक्त्या मयि ते तेषु चाप्यहम् ॥9.29॥",
     "iast": "samo'haṃ sarvabhūteṣu na me dveṣyo'sti na priyaḥ । / ye bhajanti tu māṃ bhaktyā mayi te teṣu cāpyaham ॥9.29॥",
@@ -5929,7 +6218,10 @@
     "slug": "gita-9-34",
     "textRef": "Bhagavad Gita 9.34",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु । / मामेवैष्यसि युक्त्वैवमात्मानं मत्परायणः ॥9.34॥",
     "iast": "manmanā bhava madbhakto madyājī māṃ namaskuru । / māmevaiṣyasi yuktvaivamātmānaṃ matparāyaṇaḥ ॥9.34॥",
@@ -5995,7 +6287,9 @@
     "slug": "gita-12-1",
     "textRef": "Bhagavad Gita 12.1",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "अर्जुन उवाच / एवं सततयुक्ता ये भक्तास्त्वां पर्युपासते । / ये चाप्यक्षरमव्यक्तं तेषां के योगवित्तमाः ॥12.1॥",
     "iast": "arjuna uvāca / evaṃ satatayuktā ye bhaktāstvāṃ paryupāsate । / ye cāpyakṣaramavyaktaṃ teṣāṃ ke yogavittamāḥ ॥12.1॥",
@@ -6069,7 +6363,9 @@
     "slug": "gita-12-2",
     "textRef": "Bhagavad Gita 12.2",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "श्रीभगवानुवाच / मय्यावेश्य मनो ये मां नित्ययुक्ता उपासते । / श्रद्धया परयोपेतास्ते मे युक्ततमा मताः ॥12.2॥",
     "iast": "śrībhagavānuvāca / mayyāveśya mano ye māṃ nityayuktā upāsate । / śraddhayā parayopetāste me yuktatamā matāḥ ॥12.2॥",
@@ -6151,7 +6447,9 @@
     "slug": "gita-12-3",
     "textRef": "Bhagavad Gita 12.3",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "ये त्वक्षरमनिर्देश्यमव्यक्तं पर्युपासते । / सर्वत्रगमचिन्त्यं च कूटस्थमचलं ध्रुवम् ॥12.3॥",
     "iast": "ye tvakṣaramanirdeśyamavyaktaṃ paryupāsate । / sarvatragamacintyaṃ ca kūṭasthamacalaṃ dhruvam ॥12.3॥",
@@ -6221,7 +6519,9 @@
     "slug": "gita-12-4",
     "textRef": "Bhagavad Gita 12.4",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "संनियम्येन्द्रियग्रामं सर्वत्र समबुद्धयः । / ते प्राप्नुवन्ति मामेव सर्वभूतहिते रताः ॥12.4॥",
     "iast": "saṃniyamyendriyagrāmaṃ sarvatra samabuddhayaḥ । / te prāpnuvanti māmeva sarvabhūtahite ratāḥ ॥12.4॥",
@@ -6283,7 +6583,9 @@
     "slug": "gita-12-5",
     "textRef": "Bhagavad Gita 12.5",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "क्लेशोऽधिकतरस्तेषामव्यक्तासक्तचेतसाम् । / अव्यक्ता हि गतिर्दुःखं देहवद्भिरवाप्यते ॥12.5॥",
     "iast": "kleśo'dhikatarasteṣāmavyaktāsaktacetasām । / avyaktā hi gatirduḥkhaṃ dehavadbhiravāpyate ॥12.5॥",
@@ -6345,7 +6647,9 @@
     "slug": "gita-12-6",
     "textRef": "Bhagavad Gita 12.6",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्पराः । / अनन्येनैव योगेन मां ध्यायन्त उपासते ॥12.6॥",
     "iast": "ye tu sarvāṇi karmāṇi mayi saṃnyasya matparāḥ । / ananyenaiva yogena māṃ dhyāyanta upāsate ॥12.6॥",
@@ -6419,7 +6723,9 @@
     "slug": "gita-12-7",
     "textRef": "Bhagavad Gita 12.7",
     "tradition": "general",
-    "tags": ["devotion"],
+    "tags": [
+      "devotion"
+    ],
     "dailyPool": false,
     "devanagari": "तेषामहं समुद्धर्ता मृत्युसंसारसागरात् । / भवामि नचिरात्पार्थ मय्यावेशितचेतसाम् ॥12.7॥",
     "iast": "teṣāmahaṃ samuddhartā mṛtyusaṃsārasāgarāt । / bhavāmi nacirātpārtha mayyāveśitacetasām ॥12.7॥",
@@ -6477,7 +6783,10 @@
     "slug": "gita-12-8",
     "textRef": "Bhagavad Gita 12.8",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "मय्येव मन आधत्स्व मयि बुद्धिं निवेशय । / निवसिष्यसि मय्येव अत ऊर्ध्वं न संशयः ॥12.8॥",
     "iast": "mayyeva mana ādhatsva mayi buddhiṃ niveśaya । / nivasiṣyasi mayyeva ata ūrdhvaṃ na saṃśayaḥ ॥12.8॥",
@@ -6535,7 +6844,10 @@
     "slug": "gita-12-9",
     "textRef": "Bhagavad Gita 12.9",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "अथ चित्तं समाधातुं न शक्नोषि मयि स्थिरम् । / अभ्यासयोगेन ततो मामिच्छाप्तुं धनंजय ॥12.9॥",
     "iast": "atha cittaṃ samādhātuṃ na śaknoṣi mayi sthiram । / abhyāsayogena tato māmicchāptuṃ dhanaṃjaya ॥12.9॥",
@@ -6605,7 +6917,10 @@
     "slug": "gita-12-10",
     "textRef": "Bhagavad Gita 12.10",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "अभ्यासेऽप्यसमर्थोऽसि मत्कर्मपरमो भव । / मदर्थमपि कर्माणि कुर्वन्सिद्धिमवाप्स्यसि ॥12.10॥",
     "iast": "abhyāse'pyasamartho'si matkarmaparamo bhava । / madarthamapi karmāṇi kurvansiddhimavāpsyasi ॥12.10॥",
@@ -6675,7 +6990,10 @@
     "slug": "gita-12-11",
     "textRef": "Bhagavad Gita 12.11",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "अथैतदप्यशक्तोऽसि कर्तुं मद्योगमाश्रितः । / सर्वकर्मफलत्यागं ततः कुरु यतात्मवान् ॥12.11॥",
     "iast": "athaitadapyaśakto'si kartuṃ madyogamāśritaḥ । / sarvakarmaphalatyāgaṃ tataḥ kuru yatātmavān ॥12.11॥",
@@ -6737,7 +7055,10 @@
     "slug": "gita-12-12",
     "textRef": "Bhagavad Gita 12.12",
     "tradition": "general",
-    "tags": ["devotion", "discipline"],
+    "tags": [
+      "devotion",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "श्रेयो हि ज्ञानमभ्यासाज्ज्ञानाद्ध्यानं विशिष्यते । / ध्यानात्कर्मफलत्यागस्त्यागाच्छान्तिरनन्तरम् ॥12.12॥",
     "iast": "śreyo hi jñānamabhyāsājjñānāddhyānaṃ viśiṣyate । / dhyānātkarmaphalatyāgastyāgācchāntiranantaram ॥12.12॥",
@@ -6807,7 +7128,10 @@
     "slug": "gita-12-13",
     "textRef": "Bhagavad Gita 12.13",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": false,
     "devanagari": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च । / निर्ममो निरहंकारः समदुःखसुखः क्षमी ॥12.13॥",
     "iast": "adveṣṭā sarvabhūtānāṃ maitraḥ karuṇa eva ca । / nirmamo nirahaṃkāraḥ samaduḥkhasukhaḥ kṣamī ॥12.13॥",
@@ -6865,7 +7189,10 @@
     "slug": "gita-12-14",
     "textRef": "Bhagavad Gita 12.14",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": false,
     "devanagari": "संतुष्टः सततं योगी यतात्मा दृढनिश्चयः । / मय्यर्पितमनोबुद्धिर्यो मद्भक्तः स मे प्रियः ॥12.14॥",
     "iast": "saṃtuṣṭaḥ satataṃ yogī yatātmā dṛḍhaniścayaḥ । / mayyarpitamanobuddhiryo madbhaktaḥ sa me priyaḥ ॥12.14॥",
@@ -6927,7 +7254,10 @@
     "slug": "gita-12-15",
     "textRef": "Bhagavad Gita 12.15",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः । / हर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः ॥12.15॥",
     "iast": "yasmānnodvijate loko lokānnodvijate ca yaḥ । / harṣāmarṣabhayodvegairmukto yaḥ sa ca me priyaḥ ॥12.15॥",
@@ -6993,7 +7323,10 @@
     "slug": "gita-12-16",
     "textRef": "Bhagavad Gita 12.16",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः । / सर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः ॥12.16॥",
     "iast": "anapekṣaḥ śucirdakṣa udāsīno gatavyathaḥ । / sarvārambhaparityāgī yo madbhaktaḥ sa me priyaḥ ॥12.16॥",
@@ -7047,7 +7380,10 @@
     "slug": "gita-12-17",
     "textRef": "Bhagavad Gita 12.17",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति । / शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः ॥12.17॥",
     "iast": "yo na hṛṣyati na dveṣṭi na śocati na kāṅkṣati । / śubhāśubhaparityāgī bhaktimānyaḥ sa me priyaḥ ॥12.17॥",
@@ -7101,7 +7437,10 @@
     "slug": "gita-12-18",
     "textRef": "Bhagavad Gita 12.18",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": false,
     "devanagari": "समः शत्रौ च मित्रे च तथा मानापमानयोः । / शीतोष्णसुखदुःखेषु समः सङ्गविवर्जितः ॥12.18॥",
     "iast": "samaḥ śatrau ca mitre ca tathā mānāpamānayoḥ । / śītoṣṇasukhaduḥkheṣu samaḥ saṅgavivarjitaḥ ॥12.18॥",
@@ -7151,7 +7490,10 @@
     "slug": "gita-12-19",
     "textRef": "Bhagavad Gita 12.19",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": false,
     "devanagari": "तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित् । / अनिकेतः स्थिरमतिर्भक्तिमान्मे प्रियो नरः ॥12.19॥",
     "iast": "tulyanindāstutirmaunī santuṣṭo yena kenacit । / aniketaḥ sthiramatirbhaktimānme priyo naraḥ ॥12.19॥",
@@ -7209,7 +7551,10 @@
     "slug": "gita-12-20",
     "textRef": "Bhagavad Gita 12.20",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "ये तु धर्म्यामृतमिदं यथोक्तं पर्युपासते । / श्रद्दधाना मत्परमा भक्तास्तेऽतीव मे प्रियाः ॥12.20॥",
     "iast": "ye tu dharmyāmṛtamidaṃ yathoktaṃ paryupāsate । / śraddadhānā matparamā bhaktāste'tīva me priyāḥ ॥12.20॥",
@@ -7275,7 +7620,9 @@
     "slug": "gita-15-7",
     "textRef": "Bhagavad Gita 15.7",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "ममैवांशो जीवलोके जीवभूतः सनातनः । / मनःषष्ठानीन्द्रियाणि प्रकृतिस्थानि कर्षति ॥15.7॥",
     "iast": "mamaivāṃśo jīvaloke jīvabhūtaḥ sanātanaḥ । / manaḥṣaṣṭhānīndriyāṇi prakṛtisthāni karṣati ॥15.7॥",
@@ -7333,7 +7680,10 @@
     "slug": "gita-18-46",
     "textRef": "Bhagavad Gita 18.46",
     "tradition": "general",
-    "tags": ["duty", "devotion"],
+    "tags": [
+      "duty",
+      "devotion"
+    ],
     "dailyPool": true,
     "devanagari": "यतः प्रवृत्तिर्भूतानां येन सर्वमिदं ततम् । / स्वकर्मणा तमभ्यर्च्य सिद्धिं विन्दति मानवः ॥18.46॥",
     "iast": "yataḥ pravṛttirbhūtānāṃ yena sarvamidaṃ tatam । / svakarmaṇā tamabhyarcya siddhiṃ vindati mānavaḥ ॥18.46॥",
@@ -7399,7 +7749,10 @@
     "slug": "gita-18-63",
     "textRef": "Bhagavad Gita 18.63",
     "tradition": "general",
-    "tags": ["wisdom", "courage"],
+    "tags": [
+      "wisdom",
+      "courage"
+    ],
     "dailyPool": false,
     "devanagari": "इति ते ज्ञानमाख्यातं गुह्याद्‌गुह्यतरं मया । / विमृश्यैतदशेषेण यथेच्छसि तथा कुरु ॥18.63॥",
     "iast": "iti te jñānamākhyātaṃ guhyādguhyataraṃ mayā । / vimṛśyaitadaśeṣeṇa yathecchasi tathā kuru ॥18.63॥",
@@ -7465,7 +7818,10 @@
     "slug": "gita-18-65",
     "textRef": "Bhagavad Gita 18.65",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "मन्मना भव मद्भक्तो मद्याजी मां नमस्कुरु । / मामेवैष्यसि सत्यं ते प्रतिजाने प्रियोऽसि मे ॥18.65॥",
     "iast": "manmanā bhava madbhakto madyājī māṃ namaskuru । / māmevaiṣyasi satyaṃ te pratijāne priyo'si me ॥18.65॥",
@@ -7527,7 +7883,10 @@
     "slug": "gita-18-66",
     "textRef": "Bhagavad Gita 18.66",
     "tradition": "general",
-    "tags": ["devotion", "peace"],
+    "tags": [
+      "devotion",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "सर्वधर्मान्परित्यज्य मामेकं शरणं व्रज । / अहं त्वां सर्वपापेभ्यो मोक्षयिष्यामि मा शुचः ॥18.66॥",
     "iast": "sarvadharmānparityajya māmekaṃ śaraṇaṃ vraja । / ahaṃ tvāṃ sarvapāpebhyo mokṣayiṣyāmi mā śucaḥ ॥18.66॥",
@@ -7585,7 +7944,11 @@
     "slug": "isha-1",
     "textRef": "Isha Upanishad 1",
     "tradition": "general",
-    "tags": ["wisdom", "discipline", "peace"],
+    "tags": [
+      "wisdom",
+      "discipline",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "ॐ ईशावास्यमिदँ सर्वं यत्किञ्च जगत्यां जगत्। / तेन त्यक्तेन भुञ्जीथाः मा गृधः कस्यस्विद्धनम् ॥1॥",
     "iast": "oṃ īśāvāsyamidam̐ sarvaṃ yatkiñca jagatyāṃ jagat। / tena tyaktena bhuñjīthāḥ mā gṛdhaḥ kasyasviddhanam ॥1॥",
@@ -7655,7 +8018,10 @@
     "slug": "isha-2",
     "textRef": "Isha Upanishad 2",
     "tradition": "general",
-    "tags": ["duty", "discipline"],
+    "tags": [
+      "duty",
+      "discipline"
+    ],
     "dailyPool": true,
     "devanagari": "कुर्वन्नेवेह कर्माणि जिजीविषेच्छतँ समाः। / एवं त्वयि नान्यथेतोऽस्ति न कर्म लिप्यते नरे ॥2॥",
     "iast": "kurvanneveha karmāṇi jijīviṣecchatam̐ samāḥ। / evaṃ tvayi nānyatheto'sti na karma lipyate nare ॥2॥",
@@ -7725,7 +8091,9 @@
     "slug": "isha-3",
     "textRef": "Isha Upanishad 3",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "असूर्या नाम ते लोका अन्धेन तमसाऽऽवृताः। / ताँस्ते प्रेत्याभिगच्छन्ति ये के चात्महनो जनाः ॥3॥",
     "iast": "asūryā nāma te lokā andhena tamasā''vṛtāḥ। / tām̐ste pretyābhigacchanti ye ke cātmahano janāḥ ॥3॥",
@@ -7795,7 +8163,10 @@
     "slug": "isha-4",
     "textRef": "Isha Upanishad 4",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "अनेजदेकं मनसो जवीयो नैनद्देवा आप्नुवन्पूर्वमर्षत् । / तद्धावतोऽन्यानत्येति तिष्ठत्तस्मिन्नपो मातरिश्वा दधाति ॥4॥",
     "iast": "anejadekaṃ manaso javīyo nainaddevā āpnuvanpūrvamarṣat । / taddhāvato'nyānatyeti tiṣṭhattasminnapo mātariśvā dadhāti ॥4॥",
@@ -7877,7 +8248,10 @@
     "slug": "isha-5",
     "textRef": "Isha Upanishad 5",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "तदेजति तन्नैजति तद्दूरे तद्वन्तिके। / तदन्तरस्य सर्वस्य तदु सर्वस्यास्य बाह्यतः ॥5॥",
     "iast": "tadejati tannaijati taddūre tadvantike। / tadantarasya sarvasya tadu sarvasyāsya bāhyataḥ ॥5॥",
@@ -7935,7 +8309,10 @@
     "slug": "isha-6",
     "textRef": "Isha Upanishad 6",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "यस्तु सर्वाणि भूतान्यात्मन्येवानुपश्यति । / सर्वभूतेषु चात्मानं ततो न विजुगुप्सते ॥6॥",
     "iast": "yastu sarvāṇi bhūtānyātmanyevānupaśyati । / sarvabhūteṣu cātmānaṃ tato na vijugupsate ॥6॥",
@@ -7997,7 +8374,10 @@
     "slug": "isha-7",
     "textRef": "Isha Upanishad 7",
     "tradition": "general",
-    "tags": ["wisdom", "peace"],
+    "tags": [
+      "wisdom",
+      "peace"
+    ],
     "dailyPool": true,
     "devanagari": "यस्मिन्सर्वाणि भूतान्यात्मैवाभूद्विजानतः । / तत्र को मोहः कः शोक एकत्वमनुपश्यतः ॥7॥",
     "iast": "yasminsarvāṇi bhūtānyātmaivābhūdvijānataḥ । / tatra ko mohaḥ kaḥ śoka ekatvamanupaśyataḥ ॥7॥",
@@ -8059,7 +8439,9 @@
     "slug": "isha-8",
     "textRef": "Isha Upanishad 8",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "स पर्यगाच्छुक्रमकायमव्रणम् अस्नाविरँ शुद्धमपापविद्धम् । / कविर्मनीषी परिभूः स्वयम्भूःयाथातथ्यतोऽर्थान् व्यदधाच्छाश्वतीभ्यः समाभ्यः ॥8॥",
     "iast": "sa paryagācchukramakāyamavraṇam asnāviram̐ śuddhamapāpaviddham । / kavirmanīṣī paribhūḥ svayambhūḥ yāthātathyato'rthān vyadadhācchāśvatībhyaḥ samābhyaḥ ॥8॥",
@@ -8145,7 +8527,9 @@
     "slug": "isha-9",
     "textRef": "Isha Upanishad 9",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "अन्धं तमः प्रविशन्ति येऽविद्यामुपासते । / ततो भूय इव ते तमो य उ विद्यायाँ रताः ॥9॥",
     "iast": "andhaṃ tamaḥ praviśanti ye'vidyāmupāsate । / tato bhūya iva te tamo ya u vidyāyām̐ ratāḥ ॥9॥",
@@ -8215,7 +8599,9 @@
     "slug": "isha-10",
     "textRef": "Isha Upanishad 10",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "अन्यदेवाहुर्विद्ययाऽन्यदाहुरविद्यया । / इति शुश्रुम धीराणां ये नस्तद्विचचक्षिरे ॥10॥",
     "iast": "anyadevāhurvidyayā'nyadāhuravidyayā । / iti śuśruma dhīrāṇāṃ ye nastadvicacakṣire ॥10॥",
@@ -8289,7 +8675,10 @@
     "slug": "isha-11",
     "textRef": "Isha Upanishad 11",
     "tradition": "general",
-    "tags": ["wisdom", "discipline"],
+    "tags": [
+      "wisdom",
+      "discipline"
+    ],
     "dailyPool": false,
     "devanagari": "विद्यां चाविद्यां च यस्तद्वेदोभयँ सह। / अविद्यया मृत्युं तीर्त्वा विद्ययाऽमृतमश्नुते ॥11॥",
     "iast": "vidyāṃ cāvidyāṃ ca yastadvedobhayam̐ saha। / avidyayā mṛtyuṃ tīrtvā vidyayā'mṛtamaśnute ॥11॥",
@@ -8363,7 +8752,9 @@
     "slug": "isha-12",
     "textRef": "Isha Upanishad 12",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "अन्धं तमः प्रविशन्ति येऽसम्भूतिमुपासते । / ततो भूय इव ते तमो य उ सम्भूत्याँ रताः ॥12॥",
     "iast": "andhaṃ tamaḥ praviśanti ye'sambhūtimupāsate । / tato bhūya iva te tamo ya u sambhūtyām̐ ratāḥ ॥12॥",
@@ -8433,7 +8824,9 @@
     "slug": "isha-13",
     "textRef": "Isha Upanishad 13",
     "tradition": "general",
-    "tags": ["wisdom"],
+    "tags": [
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "अन्यदेवाहुः सम्भवादन्यदाहुरसम्भवात् । / इति शुश्रुम धीराणां ये नस्तद्विचचक्षिरे ॥13॥",
     "iast": "anyadevāhuḥ sambhavādanyadāhurasambhavāt । / iti śuśruma dhīrāṇāṃ ye nastadvicacakṣire ॥13॥",
@@ -8507,7 +8900,10 @@
     "slug": "isha-14",
     "textRef": "Isha Upanishad 14",
     "tradition": "general",
-    "tags": ["wisdom", "courage"],
+    "tags": [
+      "wisdom",
+      "courage"
+    ],
     "dailyPool": false,
     "devanagari": "सम्भूतिं च विनाशं च यस्तद्वेदोभयँ सह । / विनाशेन मृत्युं तीर्त्वा सम्भूत्याऽमृतमश्नुते ॥14॥",
     "iast": "sambhūtiṃ ca vināśaṃ ca yastadvedobhayam̐ saha । / vināśena mṛtyuṃ tīrtvā sambhūtyā'mṛtamaśnute ॥14॥",
@@ -8581,7 +8977,10 @@
     "slug": "isha-15",
     "textRef": "Isha Upanishad 15",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "हिरण्मयेन पात्रेण सत्यस्यापिहितं मुखम् । / तत्त्वं पूषन्नपावृणु सत्यधर्माय दृष्टये ॥15॥",
     "iast": "hiraṇmayena pātreṇa satyasyāpihitaṃ mukham । / tattvaṃ pūṣannapāvṛṇu satyadharmāya dṛṣṭaye ॥15॥",
@@ -8647,7 +9046,10 @@
     "slug": "isha-16",
     "textRef": "Isha Upanishad 16",
     "tradition": "general",
-    "tags": ["devotion", "wisdom"],
+    "tags": [
+      "devotion",
+      "wisdom"
+    ],
     "dailyPool": false,
     "devanagari": "पूषन्नेकर्षे यम सूर्य प्राजापत्य व्यूह रश्मीन् समूह । / तेजः यत्ते रूपं कल्याणतमं तत्ते पश्यामि योऽसावसौ पुरुषः सोऽहमस्मि ॥16॥",
     "iast": "pūṣannekarṣe yama sūrya prājāpatya vyūha raśmīn samūha । / tejaḥ yatte rūpaṃ kalyāṇatamaṃ tatte paśyāmi yo'sāvasau puruṣaḥ so'hamasmi ॥16॥",
@@ -8729,7 +9131,10 @@
     "slug": "isha-17",
     "textRef": "Isha Upanishad 17",
     "tradition": "general",
-    "tags": ["devotion", "courage"],
+    "tags": [
+      "devotion",
+      "courage"
+    ],
     "dailyPool": false,
     "devanagari": "वायुरनिलममृतमथेदं भस्मांतँ शरीरम् । / ॐ क्रतो स्मर कृतँ स्मर क्रतो स्मर कृतँ स्मर ॥17॥",
     "iast": "vāyuranilamamṛtamathedaṃ bhasmāṃtam̐ śarīram । / oṃ krato smara kṛtam̐ smara krato smara kṛtam̐ smara ॥17॥",
@@ -8795,7 +9200,10 @@
     "slug": "isha-18",
     "textRef": "Isha Upanishad 18",
     "tradition": "general",
-    "tags": ["devotion", "courage"],
+    "tags": [
+      "devotion",
+      "courage"
+    ],
     "dailyPool": true,
     "devanagari": "अग्ने नय सुपथा राये अस्मान् विश्वानि देव वयुनानि विद्वान् । / युयोध्यस्मज्जुहुराणमेनो भूयिष्ठां ते नम उक्तिं विधेम ॥18॥",
     "iast": "agne naya supathā rāye asmān viśvāni deva vayunāni vidvān । / yuyodhyasmajjuhurāṇameno bhūyiṣṭhāṃ te nama uktiṃ vidhema ॥18॥",
@@ -8885,7 +9293,10 @@
     "slug": "isha-shanti",
     "textRef": "Isha Upanishad, shanti mantra",
     "tradition": "general",
-    "tags": ["peace", "wisdom"],
+    "tags": [
+      "peace",
+      "wisdom"
+    ],
     "dailyPool": true,
     "devanagari": "ॐ पूर्णमदः पूर्णमिदं पूर्णात् पूर्णमुदच्यते। / पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते। / ॐ शान्तिः शान्तिः शान्तिः॥ / ॥अथ ईशोपनिषत्॥",
     "iast": "oṃ pūrṇamadaḥ pūrṇamidaṃ pūrṇāt pūrṇamudacyate। / pūrṇasya pūrṇamādāya pūrṇamevāvaśiṣyate। / oṃ śāntiḥ śāntiḥ śāntiḥ॥ / ॥atha īśopaniṣat॥",
