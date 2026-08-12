@@ -84,10 +84,10 @@ jobs:
             else
               echo 'no prepared staging corpus produced — audit/ingest skipped'
             fi
+            node packages/rag-pipeline/dist/evaluate.js --validate-only content/_staging/evals/rag-eval.example.jsonl
           else
             echo "content/_staging/raw absent — staging corpus gates skipped"
           fi
-          node packages/rag-pipeline/dist/evaluate.js --validate-only content/_staging/evals/rag-eval.example.jsonl
           pnpm rag:prepare:canonical
           pnpm rag:audit:canonical
           pnpm rag:ingest:canonical:dry-run
