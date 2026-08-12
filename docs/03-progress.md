@@ -281,3 +281,11 @@ Branch `b5-night-session-mechanics`. The plan's three additions to the night ses
 - **Verified:** 38 mobile tests, typecheck, lint, backend:check. Live render against a real session still needs the production backend (same position as the Cycle 3 challenge screens) — states and progress logic are unit-tested.
 
 **Stream B remaining, by blocker:** B1/B2 need founder accounts (keys are placeholdered, paste-ready); B3 needs A1 sessions written; B6 needs a device build (B1); B7 needs the domain decision. Next unblocked candidates: audio player scaffold (B5's last piece — needs an expo-audio dependency decision) or reduced-motion/320px acceptance sweep.
+
+### Cycle 20 — 12 Aug 2026 — STREAM B — Acceptance sweep — DONE (no fixes needed)
+
+- **320px pass:** Today, onboarding, shloka bank, verse detail (2.47), reader chapter — zero horizontal overflow on all of them (measured `scrollWidth` vs viewport in the dev server at 320×700 with mobile emulation).
+- **Keyboard nav:** onboarding chips render as native `<button type="button">` with correct tab order and a visible focus outline — native Enter/Space activation applies. (The in-app browser's synthesized key events carry an empty `key` and can't activate buttons; verified that is the harness, not the app, by capturing the keydown.)
+- **Reduced motion:** nothing to gate — the app uses no `Animated`/reanimated/`LayoutAnimation` anywhere; the only motion is platform spinners.
+- **Audio player (B5's last piece) deliberately deferred:** it needs the `expo-audio` dependency + config plugin, and there is no device build to verify the native module against and no audio assets yet (A2). Building it blind risks shipping an unverifiable module into the EAS build. It's the first thing to build once B1 gives a dev build — noted here so it isn't lost.
+- **Founder queue updated:** your-actions item 1 now flags that `.env` already carries Supabase-looking values — if that project is real, "apply migrations" is the only remaining step of B1's database half.
