@@ -243,7 +243,9 @@ function NightRow({
         <Text className="mt-0.5 text-sm text-muted">
           {unlocked
             ? `${session.deityFocus || `Night ${session.night}`} · ${session.estimatedMinutes} min`
-            : `Opens ${formatShortDate(session.unlockDate)}`}
+            : // The duration is a stated contract — visible before the night
+              // opens, not discovered after (02-plan.md A1/B5 v3).
+              `Opens ${formatShortDate(session.unlockDate)} · ${session.estimatedMinutes} min`}
         </Text>
       </View>
       {openable ? <Ionicons name="chevron-forward" size={18} color={colors.muted} /> : null}

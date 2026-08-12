@@ -16,7 +16,17 @@ import { colors, layout, shadows } from "@/theme/tokens";
 
 type IconName = ComponentProps<typeof Ionicons>["name"];
 
-export function Page({ children, scroll = true }: { children: ReactNode; scroll?: boolean }) {
+export function Page({
+  children,
+  scroll = true,
+  onScroll,
+}: {
+  children: ReactNode;
+  scroll?: boolean;
+  // Optional scroll observer (e.g. reading progress). Throttled: ~6 events/s
+  // keeps the JS thread free.
+  onScroll?: ComponentProps<typeof ScrollView>["onScroll"];
+}) {
   const { width } = useWindowDimensions();
   const contentStyle = [
     styles.pageContent,
@@ -32,6 +42,8 @@ export function Page({ children, scroll = true }: { children: ReactNode; scroll?
           contentContainerStyle={contentStyle}
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
+          onScroll={onScroll}
+          scrollEventThrottle={onScroll ? 160 : undefined}
         >
           {children}
         </ScrollView>
