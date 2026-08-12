@@ -5,38 +5,24 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { updateProfile } from "@/lib/account";
 import { configureDailyReminder } from "@/lib/notifications";
+import { householdPracticeOptions, tagsForPractices, togglePractice } from "@/lib/practices";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { colors, layout } from "@/theme/tokens";
 
-const traditions = [
-  ["All traditions", "general"],
-  ["Vaishnava", "vaishnava"],
-  ["Shaiva", "shaiva"],
-  ["Shakta", "shakta"],
-  ["Smarta", "smarta"],
-] as const;
-
-// Maps to content tags; drives which verses the daily rotation favours.
-const focusOptions = [
-  ["Courage", "courage"],
-  ["Peace of mind", "peace"],
-  ["Steadiness", "discipline"],
-  ["Devotion", "devotion"],
-  ["Understanding", "wisdom"],
-  ["Family & tradition", "family"],
-] as const;
-
+// Three questions, each of which visibly changes something (02-plan.md B4):
+// Q1 household practice routes the daily verse rotation, Q2 arms the
+// reminder, Q3 personalises copy. A survey answer that changes nothing is
+// worse than no survey — do not add questions here without wiring them.
 export default function OnboardingScreen() {
   const router = useRouter();
   const setDisplayName = useAppStore((state) => state.setDisplayName);
-  const setTraditionPreference = useAppStore((state) => state.setTraditionPreference);
   const setReminder = useAppStore((state) => state.setReminder);
   const setOnboardingComplete = useAppStore((state) => state.setOnboardingComplete);
   const setFocusTags = useAppStore((state) => state.setFocusTags);
+  const setHouseholdPractices = useAppStore((state) => state.setHouseholdPractices);
   const [name, setName] = useState("");
-  const [tradition, setTradition] = useState("All traditions");
-  const [focus, setFocus] = useState<string[]>([]);
+  const [practices, setPractices] = useState<string[]>([]);
   const [reminders, setReminders] = useState(false);
   const [reminderTime, setReminderTime] = useState("08:00");
   const [finishing, setFinishing] = useState(false);
@@ -53,15 +39,17 @@ export default function OnboardingScreen() {
       );
       const reminderEnabled = reminders && reminderResult.enabled;
       setDisplayName(name.trim() || "Friend");
-      setTraditionPreference(tradition);
-      setFocusTags(focus);
+      setHouseholdPractices(practices);
+      // Practices route content through tags; they are never mapped to a
+      // tradition identity. tradition_pref stays user-set (Settings).
+      setFocusTags(tagsForPractices(practices));
       setReminder(reminderEnabled, reminderTime);
       setOnboardingComplete();
-      track("onboarding_completed", { focus_count: focus.length });
+      track("onboarding_completed", { practice_count: practices.length });
       try {
         await updateProfile({
           display_name: name.trim() || null,
-          tradition_pref: traditions.find(([label]) => label === tradition)?.[1] ?? "general",
+          household_practices: practices,
           notification_time: reminderEnabled ? `${reminderTime}:00` : null,
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         });
@@ -91,64 +79,31 @@ export default function OnboardingScreen() {
             A small daily space for learning and practice.
           </Text>
           <Text className="mt-3 text-base leading-6 text-muted">
-            Choose how you would like the app to meet you. You can change these preferences later.
+            Three quick questions. Each one changes what you see — nothing is collected for its own
+            sake, and you can change them all later.
           </Text>
         </View>
 
-        <Text className="mb-2 mt-10 text-sm font-semibold uppercase text-muted">
-          What should we call you?
+        <Text className="mb-1 mt-10 text-sm font-semibold uppercase text-muted">
+          What do you do at home?
         </Text>
-        <TextInput
-          accessibilityLabel="Your name"
-          value={name}
-          onChangeText={setName}
-          maxLength={24}
-          placeholder="Your name (optional)"
-          placeholderTextColor={colors.muted}
-          className="rounded-card border border-[#302C25] bg-surface px-4 py-3.5 text-base text-ink"
-        />
-
-        <Text className="mb-2 mt-7 text-sm font-semibold uppercase text-muted">
-          Which perspectives would you like to see?
+        <Text className="mb-2 text-sm leading-5 text-muted">
+          Pick anything that is true for your household — it shapes which verse meets you each day.
+          Every part of the library stays open either way.
         </Text>
         <View className="flex-row flex-wrap gap-2">
-          {traditions.map(([label]) => (
-            <Pressable
-              key={label}
-              accessibilityRole="button"
-              accessibilityState={{ selected: tradition === label }}
-              onPress={() => setTradition(label)}
-              className={`rounded-full border px-3.5 py-2.5 ${tradition === label ? "border-aubergine bg-aubergine" : "border-[#302C25] bg-surface"}`}
-            >
-              <Text
-                className={`text-sm font-semibold ${tradition === label ? "text-white" : "text-ink"}`}
-              >
-                {label}
-              </Text>
-            </Pressable>
-          ))}
-        </View>
-
-        <Text className="mb-2 mt-7 text-sm font-semibold uppercase text-muted">
-          What would help most right now? (optional, up to two)
-        </Text>
-        <View className="flex-row flex-wrap gap-2">
-          {focusOptions.map(([label, tag]) => {
-            const selected = focus.includes(tag);
+          {householdPracticeOptions.map((option) => {
+            const selected = practices.includes(option.key);
             return (
               <Pressable
-                key={tag}
+                key={option.key}
                 accessibilityRole="button"
                 accessibilityState={{ selected }}
-                onPress={() =>
-                  setFocus(
-                    selected ? focus.filter((item) => item !== tag) : [...focus, tag].slice(-2),
-                  )
-                }
+                onPress={() => setPractices(togglePractice(practices, option.key))}
                 className={`rounded-full border px-3.5 py-2.5 ${selected ? "border-aubergine bg-aubergine" : "border-[#302C25] bg-surface"}`}
               >
                 <Text className={`text-sm font-semibold ${selected ? "text-white" : "text-ink"}`}>
-                  {label}
+                  {option.label}
                 </Text>
               </Pressable>
             );
@@ -159,7 +114,7 @@ export default function OnboardingScreen() {
           <View className="flex-1 pr-4">
             <Text className="font-semibold text-ink">A gentle daily reminder</Text>
             <Text className="mt-1 text-sm leading-5 text-muted">
-              You can choose the time in Settings.
+              Choose a time and the day&apos;s verse will come to you.
             </Text>
           </View>
           <Switch
@@ -195,6 +150,19 @@ export default function OnboardingScreen() {
             </Text>
           </View>
         ) : null}
+
+        <Text className="mb-2 mt-7 text-sm font-semibold uppercase text-muted">
+          What should we call you?
+        </Text>
+        <TextInput
+          accessibilityLabel="Your name"
+          value={name}
+          onChangeText={setName}
+          maxLength={24}
+          placeholder="Your name (optional)"
+          placeholderTextColor={colors.muted}
+          className="rounded-card border border-[#302C25] bg-surface px-4 py-3.5 text-base text-ink"
+        />
 
         <Pressable
           accessibilityRole="button"
