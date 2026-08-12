@@ -3,8 +3,8 @@ doc_type: web_page
 slug: nine-forms-of-durga-navratri
 title: The nine forms of Durga — who is worshipped on each night of Navratri?
 description: Shailaputri to Siddhidatri — the nine Navadurga forms honoured across the nine nights of Navratri, what each represents, and where traditions differ.
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 Across the nine nights of Navratri, many Hindus honour the goddess in nine forms — the **Navadurga**. Each night is associated with one form, from Shailaputri on the first night to Siddhidatri on the ninth. Here is the widely followed sequence, with the meaning of each name and what the form is generally understood to represent.

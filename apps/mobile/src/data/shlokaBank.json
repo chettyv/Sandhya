@@ -1,1 +1,2614 @@
-[]
+[
+  {
+    "slug": "gita-2-13",
+    "textRef": "Bhagavad Gita 2.13",
+    "tradition": "general",
+    "tags": ["wisdom"],
+    "dailyPool": true,
+    "devanagari": "देहिनोऽस्मिन्यथा देहे कौमारं यौवनं जरा । / तथा देहान्तरप्राप्तिर्धीरस्तत्र न मुह्यति ॥2.13॥",
+    "iast": "dehino'sminyathā dehe kaumāraṃ yauvanaṃ jarā । / tathā dehāntaraprāptirdhīrastatra na muhyati ॥2.13॥",
+    "sayIt": "day-hi-NO-smin ya-THAA DAY-hay kow-MAA-ram YOW-va-nam ja-RAA / ta-THAA day-HAAN-ta-ra-PRAAP-tir DHEE-ras TA-tra na MUH-ya-ti",
+    "translation": "Just as the embodied self passes through childhood, youth, and old age in this body, so at death it passes into another body; the wise person is not confused by this.",
+    "source": "Bhagavad Gita 2.13, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "dehinaḥ",
+        "meaning": "of the embodied self"
+      },
+      {
+        "word": "asmin",
+        "meaning": "in this"
+      },
+      {
+        "word": "yathā",
+        "meaning": "just as"
+      },
+      {
+        "word": "dehe",
+        "meaning": "in the body"
+      },
+      {
+        "word": "kaumāram",
+        "meaning": "childhood"
+      },
+      {
+        "word": "yauvanam",
+        "meaning": "youth"
+      },
+      {
+        "word": "jarā",
+        "meaning": "old age"
+      },
+      {
+        "word": "tathā",
+        "meaning": "in the same way"
+      },
+      {
+        "word": "deha-antara-prāptiḥ",
+        "meaning": "the obtaining of another body"
+      },
+      {
+        "word": "dhīraḥ",
+        "meaning": "the wise, steady person"
+      },
+      {
+        "word": "tatra",
+        "meaning": "in that, at this"
+      },
+      {
+        "word": "na muhyati",
+        "meaning": "is not deluded, is not confused"
+      }
+    ],
+    "meaning": "This is Krishna's first argument to Arjuna: the self that inhabits the body is not the body. Within one lifetime you already survive constant change — the child's body is gone, the youth's body is going — yet \"you\" persist through all of it. Death, the verse says, is one more such passage. For a daily practice, this is training in not panicking at change. Traditions read the \"embodied one\" differently — Advaita sees one Self appearing in many bodies, while Vishishtadvaita and Dvaita see many real individual souls — but all agree that the steady person is not thrown by the body's changes.",
+    "reflection": "The body changes constantly — what in you has watched all of it change?",
+    "translations": {
+      "hi": "जैसे देहधारी आत्मा इसी देह में बचपन, यौवन और बुढ़ापे से गुज़रती है, वैसे ही मृत्यु पर वह दूसरी देह में प्रवेश करती है; धीर व्यक्ति इससे विचलित नहीं होता।"
+    },
+    "meanings": {
+      "hi": "यह अर्जुन के लिए कृष्ण का पहला तर्क है: देह में रहने वाला आत्म देह नहीं है। एक ही जीवन के भीतर आप निरंतर परिवर्तन से गुज़रकर बचते आए हैं — बच्चे की देह जा चुकी, युवा की जा रही है — फिर भी \"आप\" इन सबके बीच बने हुए हैं। श्लोक कहता है, मृत्यु ऐसा ही एक और पड़ाव है। दैनिक साधना के लिए यह परिवर्तन पर न घबराने का प्रशिक्षण है। \"देही\" कौन है, इसे परंपराएँ अलग-अलग पढ़ती हैं — अद्वैत अनेक देहों में झलकता एक ही आत्म देखता है, जबकि विशिष्टाद्वैत और द्वैत अनेक वास्तविक, अलग-अलग जीवात्माएँ — पर सब सहमत हैं कि धीर व्यक्ति देह के परिवर्तनों से विचलित नहीं होता।"
+    }
+  },
+  {
+    "slug": "gita-2-14",
+    "textRef": "Bhagavad Gita 2.14",
+    "tradition": "general",
+    "tags": ["peace", "courage"],
+    "dailyPool": true,
+    "devanagari": "मात्रास्पर्शास्तु कौन्तेय शीतोष्णसुखदुःखदाः । / आगमापायिनोऽनित्यास्तांस्तितिक्षस्व भारत ॥2.14॥",
+    "iast": "mātrāsparśāstu kaunteya śītoṣṇasukhaduḥkhadāḥ । / āgamāpāyino'nityāstāṃstitikṣasva bhārata ॥2.14॥",
+    "sayIt": "maa-traa-spar-SHAAS too kown-TAY-ya shee-TOSH-na-soo-kha-DUH-kha-daah / aa-ga-maa-PAA-yi-no NIT-yaas taans ti-TIK-shas-va BHAA-ra-ta",
+    "translation": "Contacts between the senses and their objects, Arjuna, bring cold and heat, pleasure and pain. They come and go and do not last — endure them patiently, Bharata.",
+    "source": "Bhagavad Gita 2.14, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "mātrā-sparśāḥ",
+        "meaning": "contacts of the senses with their objects"
+      },
+      {
+        "word": "tu",
+        "meaning": "but, indeed"
+      },
+      {
+        "word": "kaunteya",
+        "meaning": "O son of Kunti (Arjuna)"
+      },
+      {
+        "word": "śīta-uṣṇa",
+        "meaning": "cold and heat"
+      },
+      {
+        "word": "sukha-duḥkha-dāḥ",
+        "meaning": "givers of pleasure and pain"
+      },
+      {
+        "word": "āgama-apāyinaḥ",
+        "meaning": "coming and going"
+      },
+      {
+        "word": "anityāḥ",
+        "meaning": "impermanent"
+      },
+      {
+        "word": "tān",
+        "meaning": "them"
+      },
+      {
+        "word": "titikṣasva",
+        "meaning": "endure patiently"
+      },
+      {
+        "word": "bhārata",
+        "meaning": "O descendant of Bharata (Arjuna)"
+      }
+    ],
+    "meaning": "Heat and cold, pleasure and pain arrive through the senses, stay a while, and leave. The verse does not tell you to stop feeling; it tells you to notice that sensations are visitors, not residents, and to practise titikṣā — patient endurance — while they pass. For daily practice this is immediately usable: the discomfort of sitting still, an irritating commute, a late-night craving are all \"contacts of the senses,\" impermanent by nature. Commentators across traditions treat this verse in essentially the same way, as basic training in steadiness — the entry-level discipline on which the Gita's later teachings build.",
+    "reflection": "What discomfort today can you meet as weather — passing, and bearable?",
+    "translations": {
+      "hi": "हे कौन्तेय, इंद्रियों का विषयों से स्पर्श ही सर्दी-गर्मी और सुख-दुख देता है। वे आते-जाते हैं, टिकते नहीं — हे भारत, उन्हें धैर्य से सहन कर।"
+    },
+    "meanings": {
+      "hi": "गर्मी-सर्दी, सुख-दुख इंद्रियों के रास्ते आते हैं, कुछ देर ठहरते हैं और चले जाते हैं। श्लोक यह नहीं कहता कि महसूस करना बंद करो; वह कहता है कि ध्यान दो — संवेदनाएँ मेहमान हैं, स्थायी निवासी नहीं — और उनके गुज़रने तक \"तितिक्षा\", यानी धैर्यपूर्ण सहनशीलता, का अभ्यास करो। दैनिक अभ्यास के लिए यह तुरंत काम आता है: स्थिर बैठने की असुविधा, खीझ दिलाने वाला सफ़र, देर रात की तलब — ये सब \"इंद्रियों के स्पर्श\" हैं, स्वभाव से ही अनित्य। टीकाकार परंपराओं के आर-पार इस श्लोक को लगभग एक ही तरह लेते हैं — स्थिरता का बुनियादी प्रशिक्षण, वह शुरुआती अनुशासन जिस पर गीता की आगे की शिक्षाएँ खड़ी होती हैं।"
+    }
+  },
+  {
+    "slug": "gita-2-20",
+    "textRef": "Bhagavad Gita 2.20",
+    "tradition": "general",
+    "tags": ["wisdom"],
+    "dailyPool": true,
+    "devanagari": "न जायते म्रियते वा कदाचिन्नायं भूत्वा भविता वा न भूयः । / अजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे ॥2.20॥",
+    "iast": "na jāyate mriyate vā kadācinnāyaṃ bhūtvā bhavitā vā na bhūyaḥ । / ajo nityaḥ śāśvato'yaṃ purāṇo na hanyate hanyamāne śarīre ॥2.20॥",
+    "sayIt": "na JAA-ya-tay MRI-ya-tay vaa ka-DAA-chin NAA-yam BHOOT-vaa bha-vi-TAA vaa na BHOO-yah / a-JO NIT-yah SHAASH-va-TO-yam poo-RAA-no na HAN-ya-tay han-ya-MAA-nay sha-REE-ray",
+    "translation": "The self is never born and never dies; having existed, it never ceases to be. Unborn, eternal, everlasting, and ancient, it is not slain when the body is slain.",
+    "source": "Bhagavad Gita 2.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "na jāyate",
+        "meaning": "is never born"
+      },
+      {
+        "word": "mriyate",
+        "meaning": "dies"
+      },
+      {
+        "word": "vā",
+        "meaning": "or"
+      },
+      {
+        "word": "kadācit",
+        "meaning": "at any time"
+      },
+      {
+        "word": "na ayam",
+        "meaning": "nor does this (self)"
+      },
+      {
+        "word": "bhūtvā",
+        "meaning": "having come to be"
+      },
+      {
+        "word": "bhavitā",
+        "meaning": "will come to be"
+      },
+      {
+        "word": "vā na bhūyaḥ",
+        "meaning": "nor will it again cease to be"
+      },
+      {
+        "word": "ajaḥ",
+        "meaning": "unborn"
+      },
+      {
+        "word": "nityaḥ",
+        "meaning": "eternal"
+      },
+      {
+        "word": "śāśvataḥ",
+        "meaning": "everlasting"
+      },
+      {
+        "word": "ayam",
+        "meaning": "this (self)"
+      },
+      {
+        "word": "purāṇaḥ",
+        "meaning": "ancient"
+      },
+      {
+        "word": "na hanyate",
+        "meaning": "is not slain"
+      },
+      {
+        "word": "hanyamāne",
+        "meaning": "when it is being slain"
+      },
+      {
+        "word": "śarīre",
+        "meaning": "the body"
+      }
+    ],
+    "meaning": "This is the Gita's most famous statement about the self: it was never born, so it can never die. Bodies begin and end; the one who wears them does not. The verse piles up four words — unborn, eternal, everlasting, ancient — to hammer home that death touches only the instrument. Traditions differ on what this deathless self is: Advaita reads it as the one universal Self, while Vishishtadvaita and Dvaita read it as each individual soul, eternally real and distinct. Either way, for daily practice the verse invites a gradual loosening of the habit of thinking \"I am only this body.\"",
+    "reflection": "If the deepest part of you cannot be harmed, what would you attempt?",
+    "translations": {
+      "hi": "आत्मा न कभी जन्म लेती है, न मरती है; एक बार होकर वह फिर कभी होना बंद नहीं करती। अजन्मी, नित्य, शाश्वत और पुरातन यह आत्मा शरीर के मारे जाने पर नहीं मरती।"
+    },
+    "meanings": {
+      "hi": "आत्म के बारे में यह गीता का सबसे प्रसिद्ध कथन है: वह कभी जन्मा ही नहीं, इसलिए मर भी नहीं सकता। देहें शुरू और ख़त्म होती हैं; उन्हें पहनने वाला नहीं। श्लोक चार शब्द एक साथ रखता है — अजन्मा, नित्य, शाश्वत, पुरातन — यह पक्का करने के लिए कि मृत्यु केवल उपकरण को छूती है। यह अमर आत्म आख़िर क्या है, इस पर परंपराएँ भिन्न हैं: अद्वैत इसे एक ही सर्वव्यापी आत्मा के रूप में पढ़ता है, जबकि विशिष्टाद्वैत और द्वैत हर जीवात्मा को नित्य रूप से वास्तविक और भिन्न मानते हैं। दोनों ही स्थितियों में, दैनिक साधना के लिए यह श्लोक \"मैं बस यह शरीर हूँ\" की आदत को धीरे-धीरे ढीला करने का न्योता है।"
+    }
+  },
+  {
+    "slug": "gita-2-47",
+    "textRef": "Bhagavad Gita 2.47",
+    "tradition": "general",
+    "tags": ["discipline", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । / मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥2.47॥",
+    "iast": "karmaṇyevādhikāraste mā phaleṣu kadācana । / mā karmaphalaheturbhūrmā te saṅgo'stvakarmaṇi ॥2.47॥",
+    "sayIt": "kar-mun-YAY-vah-dhi-KAA-ras-tay maa pha-LAY-shoo ka-DAA-cha-na / maa kar-ma-pha-la-HAY-toor-bhoor maa tay SUN-go-stva-KAR-ma-ni",
+    "translation": "Your right is to the action alone, never to its results. Do not make the results of action your motive, and do not become attached to inaction.",
+    "source": "Bhagavad Gita 2.47, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "karmaṇi",
+        "meaning": "in action"
+      },
+      {
+        "word": "eva",
+        "meaning": "only, alone"
+      },
+      {
+        "word": "adhikāraḥ",
+        "meaning": "right, entitlement"
+      },
+      {
+        "word": "te",
+        "meaning": "your"
+      },
+      {
+        "word": "mā",
+        "meaning": "never"
+      },
+      {
+        "word": "phaleṣu",
+        "meaning": "in the fruits, the results"
+      },
+      {
+        "word": "kadācana",
+        "meaning": "at any time"
+      },
+      {
+        "word": "mā karma-phala-hetuḥ bhūḥ",
+        "meaning": "do not become one whose motive is the result of action"
+      },
+      {
+        "word": "te",
+        "meaning": "your"
+      },
+      {
+        "word": "saṅgaḥ",
+        "meaning": "attachment"
+      },
+      {
+        "word": "mā astu",
+        "meaning": "let there not be"
+      },
+      {
+        "word": "akarmaṇi",
+        "meaning": "in inaction"
+      }
+    ],
+    "meaning": "Probably the most quoted verse of the Gita. You are entitled to the effort, never to the outcome — so act fully, and stop negotiating with results. The verse closes both escape routes: do not work only for the reward, and do not use detachment as an excuse to quit acting. For daily practice it is a working instruction: show up, do the task well, release the scoreboard. Commentators genuinely diverge on its depth — Advaita reads desireless action as purifying the mind on the way to knowledge, while Vishishtadvaita and Dvaita read it as acting in service of and surrender to the Lord — and the verse itself supports both readings.",
+    "reflection": "What task today deserves your full effort — with the outcome released?",
+    "translations": {
+      "hi": "तेरा अधिकार केवल कर्म पर है, उसके फलों पर कभी नहीं। कर्म के फल को अपना मक़सद मत बना, और अकर्म से भी तेरा लगाव न हो।"
+    },
+    "meanings": {
+      "hi": "शायद गीता का सबसे अधिक उद्धृत श्लोक। तुम्हारा हक़ प्रयास पर है, परिणाम पर कभी नहीं — इसलिए पूरे मन से कर्म करो, और नतीजों से सौदेबाज़ी बंद करो। श्लोक बचने के दोनों रास्ते बंद कर देता है: सिर्फ़ इनाम के लिए काम मत करो, और वैराग्य को काम छोड़ने का बहाना भी मत बनाओ। दैनिक अभ्यास के लिए यह एक काम करने लायक निर्देश है: हाज़िर रहो, काम अच्छे से करो, स्कोरबोर्ड छोड़ दो। इसकी गहराई पर टीकाकार सचमुच बँटे हुए हैं — अद्वैत निष्काम कर्म को ज्ञान की राह पर मन को शुद्ध करने वाला पढ़ता है, जबकि विशिष्टाद्वैत और द्वैत इसे भगवान की सेवा और शरणागति में किया गया कर्म — और श्लोक स्वयं दोनों पाठों को जगह देता है।"
+    }
+  },
+  {
+    "slug": "gita-2-48",
+    "textRef": "Bhagavad Gita 2.48",
+    "tradition": "general",
+    "tags": ["discipline", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनंजय । / सिद्ध्यसिद्ध्योः समो भूत्वा समत्वं योग उच्यते ॥2.48॥",
+    "iast": "yogasthaḥ kuru karmāṇi saṅgaṃ tyaktvā dhanaṃjaya । / siddhyasiddhyoḥ samo bhūtvā samatvaṃ yoga ucyate ॥2.48॥",
+    "sayIt": "yo-GAS-thah KOO-roo kar-MAA-ni SUN-gam TYAKT-vaa dha-nan-JA-ya / sid-dhya-SID-dhyoh sa-MO BHOOT-vaa sa-MAT-vam YO-ga OOCH-ya-tay",
+    "translation": "Established in yoga, do your work, Arjuna, letting go of attachment, staying even in success and failure. That evenness of mind is called yoga.",
+    "source": "Bhagavad Gita 2.48, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "yoga-sthaḥ",
+        "meaning": "established in yoga"
+      },
+      {
+        "word": "kuru",
+        "meaning": "do, perform"
+      },
+      {
+        "word": "karmāṇi",
+        "meaning": "actions"
+      },
+      {
+        "word": "saṅgam",
+        "meaning": "attachment"
+      },
+      {
+        "word": "tyaktvā",
+        "meaning": "having abandoned"
+      },
+      {
+        "word": "dhanaṁjaya",
+        "meaning": "O winner of wealth (Arjuna)"
+      },
+      {
+        "word": "siddhi-asiddhyoḥ",
+        "meaning": "in success and failure"
+      },
+      {
+        "word": "samaḥ",
+        "meaning": "even, the same"
+      },
+      {
+        "word": "bhūtvā",
+        "meaning": "having become"
+      },
+      {
+        "word": "samatvam",
+        "meaning": "evenness, equanimity"
+      },
+      {
+        "word": "yogaḥ",
+        "meaning": "yoga"
+      },
+      {
+        "word": "ucyate",
+        "meaning": "is called"
+      }
+    ],
+    "meaning": "This verse gives the Gita's working definition of yoga: samatvaṁ yoga ucyate — evenness is yoga. Not postures, not withdrawal from the world, but doing your work while staying level through success and failure. \"Established in yoga\" comes first; the acting flows from that steadiness rather than producing it. For a daily practice this reframes the goal: the win is not the result of the task but the evenness you kept while doing it. Commentators across traditions agree on the core instruction — abandon attachment, stay equal — though they differ, as with 2.47, on whether that equanimity ultimately serves knowledge or devotion.",
+    "reflection": "What would evenness look like in your hardest hour today?",
+    "translations": {
+      "hi": "हे धनंजय, योग में स्थित होकर, आसक्ति त्यागकर, सिद्धि और असिद्धि में सम रहते हुए अपने कर्म कर। यही समता योग कहलाती है।"
+    },
+    "meanings": {
+      "hi": "यह श्लोक योग की गीता वाली कार्यकारी परिभाषा देता है: \"समत्वं योग उच्यते\" — समता ही योग है। न आसन, न संसार से पलायन, बल्कि सफलता और असफलता के बीच स्तर बनाए रखते हुए अपना काम करना। \"योग में स्थित\" पहले आता है; कर्म उस स्थिरता से बहता है, उसे पैदा नहीं करता। दैनिक अभ्यास के लिए यह लक्ष्य को नए सिरे से गढ़ता है: जीत काम का नतीजा नहीं, वह समता है जो आपने काम करते हुए बनाए रखी। मूल निर्देश पर — आसक्ति छोड़ो, सम रहो — सभी परंपराओं के टीकाकार सहमत हैं, हालाँकि 2.47 की तरह यहाँ भी वे इस पर भिन्न हैं कि यह समता अंततः ज्ञान की सेवा करती है या भक्ति की।"
+    }
+  },
+  {
+    "slug": "gita-2-62",
+    "textRef": "Bhagavad Gita 2.62",
+    "tradition": "general",
+    "tags": ["peace", "discipline"],
+    "dailyPool": true,
+    "devanagari": "ध्यायतो विषयान्पुंसः सङ्गस्तेषूपजायते । / सङ्गात्संजायते कामः कामात्क्रोधोऽभिजायते ॥2.62॥",
+    "iast": "dhyāyato viṣayānpuṃsaḥ saṅgasteṣūpajāyate । / saṅgātsaṃjāyate kāmaḥ kāmātkrodho'bhijāyate ॥2.62॥",
+    "sayIt": "DHYAA-ya-to vi-sha-YAAN POOM-sah SUN-gas tay-SHOO-pa-JAA-ya-tay / sun-GAAT san-JAA-ya-tay KAA-mah kaa-MAAT KRO-dho-bhi-JAA-ya-tay",
+    "translation": "When a person keeps dwelling on the objects of the senses, attachment to them arises; from attachment desire is born, and from desire anger arises.",
+    "source": "Bhagavad Gita 2.62, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "dhyāyataḥ",
+        "meaning": "for one who keeps dwelling on"
+      },
+      {
+        "word": "viṣayān",
+        "meaning": "the objects of the senses"
+      },
+      {
+        "word": "puṁsaḥ",
+        "meaning": "of a person"
+      },
+      {
+        "word": "saṅgaḥ",
+        "meaning": "attachment"
+      },
+      {
+        "word": "teṣu",
+        "meaning": "to them"
+      },
+      {
+        "word": "upajāyate",
+        "meaning": "arises"
+      },
+      {
+        "word": "saṅgāt",
+        "meaning": "from attachment"
+      },
+      {
+        "word": "saṁjāyate",
+        "meaning": "is born"
+      },
+      {
+        "word": "kāmaḥ",
+        "meaning": "desire"
+      },
+      {
+        "word": "kāmāt",
+        "meaning": "from desire"
+      },
+      {
+        "word": "krodhaḥ",
+        "meaning": "anger"
+      },
+      {
+        "word": "abhijāyate",
+        "meaning": "arises"
+      }
+    ],
+    "meaning": "This is the Gita's precise psychology of how self-control fails. It never starts with the dramatic act; it starts with dhyāyataḥ — dwelling on, replaying, browsing. Attention lingers on an object, lingering becomes attachment, attachment sharpens into desire, and desire blocked becomes anger. The verse matters for practice because it locates the point of intervention early: you cannot easily fight a full-grown craving, but you can notice where attention is parked. Watching what the mind rehearses in idle moments is the daily discipline this verse suggests. Commentators across traditions read this chain in essentially the same way.",
+    "reflection": "What do you keep returning to in thought — and where is it leading you?",
+    "translations": {
+      "hi": "विषयों का चिंतन करते रहने वाले व्यक्ति में उनके प्रति आसक्ति पैदा होती है; आसक्ति से कामना जन्म लेती है, और कामना से क्रोध उपजता है।"
+    },
+    "meanings": {
+      "hi": "आत्म-संयम कैसे टूटता है, इसका यह गीता का सटीक मनोविज्ञान है। शुरुआत कभी किसी नाटकीय कृत्य से नहीं होती; वह \"ध्यायतः\" से होती है — सोचते रहने, दोहराने, टटोलते रहने से। ध्यान किसी विषय पर ठहरता है, ठहरना आसक्ति बनता है, आसक्ति कामना में पैनी होती है, और रोकी गई कामना क्रोध बन जाती है। अभ्यास के लिए श्लोक इसलिए महत्वपूर्ण है कि वह हस्तक्षेप का बिंदु बहुत पहले पकड़ लेता है: पूरी बढ़ चुकी तलब से लड़ना आसान नहीं, पर यह देखना संभव है कि ध्यान कहाँ खड़ा किया हुआ है। खाली क्षणों में मन क्या दोहरा रहा है, इस पर नज़र रखना ही वह दैनिक अनुशासन है जो यह श्लोक सुझाता है। इस शृंखला को टीकाकार परंपराओं के आर-पार लगभग एक ही तरह पढ़ते हैं।"
+    }
+  },
+  {
+    "slug": "gita-2-63",
+    "textRef": "Bhagavad Gita 2.63",
+    "tradition": "general",
+    "tags": ["peace", "discipline"],
+    "dailyPool": true,
+    "devanagari": "क्रोधाद्भवति संमोहः संमोहात्स्मृतिविभ्रमः । / स्मृतिभ्रंशाद्बुद्धिनाशो बुद्धिनाशात्प्रणश्यति ॥2.63॥",
+    "iast": "krodhādbhavati saṃmohaḥ saṃmohātsmṛtivibhramaḥ । / smṛtibhraṃśādbuddhināśo buddhināśātpraṇaśyati ॥2.63॥",
+    "sayIt": "kro-DHAAD BHA-va-ti sam-MO-hah sam-mo-HAAT smri-ti-vi-BHRA-mah / smri-ti-bhran-SHAAD bood-dhi-NAA-sho bood-dhi-naa-SHAAT pra-NASH-ya-ti",
+    "translation": "From anger comes delusion; from delusion, confusion of memory; from confusion of memory, the loss of discernment; and when discernment is lost, a person is ruined.",
+    "source": "Bhagavad Gita 2.63, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "krodhāt",
+        "meaning": "from anger"
+      },
+      {
+        "word": "bhavati",
+        "meaning": "comes, arises"
+      },
+      {
+        "word": "saṁmohaḥ",
+        "meaning": "delusion, bewilderment"
+      },
+      {
+        "word": "saṁmohāt",
+        "meaning": "from delusion"
+      },
+      {
+        "word": "smṛti-vibhramaḥ",
+        "meaning": "confusion of memory"
+      },
+      {
+        "word": "smṛti-bhraṁśāt",
+        "meaning": "from the failing of memory"
+      },
+      {
+        "word": "buddhi-nāśaḥ",
+        "meaning": "loss of discernment"
+      },
+      {
+        "word": "buddhi-nāśāt",
+        "meaning": "from the loss of discernment"
+      },
+      {
+        "word": "praṇaśyati",
+        "meaning": "one perishes, is ruined"
+      }
+    ],
+    "meaning": "This completes the chain begun in 2.62: anger clouds judgment, clouded judgment scrambles memory — you forget what you know, what you value, who you are — and with memory gone, discernment (buddhi) collapses. When discernment goes, the person \"perishes\": commentators broadly agree this means not physical death but the ruin of falling from one's own path. For daily practice, the chain works as a diagnostic tool: when you catch yourself acting against your own values, trace backwards — the failure usually began much earlier, in what the mind was quietly dwelling on. The practice is interrupting the chain at its earliest visible link.",
+    "reflection": "When anger last clouded you, what did you stop seeing?",
+    "translations": {
+      "hi": "क्रोध से मोह पैदा होता है; मोह से स्मृति का भ्रम; स्मृति के भ्रम से बुद्धि का नाश; और बुद्धि के नाश से मनुष्य नष्ट हो जाता है।"
+    },
+    "meanings": {
+      "hi": "यह 2.62 में शुरू हुई शृंखला को पूरा करता है: क्रोध निर्णय को धुंधला करता है, धुंधला निर्णय स्मृति को उलझा देता है — आप भूल जाते हैं कि क्या जानते हैं, आपके मूल्य क्या हैं, आप कौन हैं — और स्मृति के जाते ही विवेक (बुद्धि) ढह जाता है। विवेक के जाने पर व्यक्ति \"नष्ट\" होता है: टीकाकार मोटे तौर पर सहमत हैं कि इसका अर्थ शारीरिक मृत्यु नहीं, अपने ही मार्ग से गिर जाने की बर्बादी है। दैनिक अभ्यास के लिए यह शृंखला निदान का औज़ार है: जब आप खुद को अपने मूल्यों के विरुद्ध जाते पकड़ें, तो पीछे की ओर खोजिए — चूक प्रायः बहुत पहले शुरू हुई थी, उसमें जिस पर मन चुपचाप टिका हुआ था। साधना है — शृंखला को उसकी सबसे पहली दिखने वाली कड़ी पर तोड़ देना।"
+    }
+  },
+  {
+    "slug": "gita-2-69",
+    "textRef": "Bhagavad Gita 2.69",
+    "tradition": "general",
+    "tags": ["wisdom"],
+    "dailyPool": true,
+    "devanagari": "या निशा सर्वभूतानां तस्यां जागर्ति संयमी । / यस्यां जाग्रति भूतानि सा निशा पश्यतो मुनेः ॥2.69॥",
+    "iast": "yā niśā sarvabhūtānāṃ tasyāṃ jāgarti saṃyamī । / yasyāṃ jāgrati bhūtāni sā niśā paśyato muneḥ ॥2.69॥",
+    "sayIt": "yaa ni-SHAA sar-va-bhoo-TAA-naam TAS-yaam JAA-gar-ti san-ya-MEE / YAS-yaam JAA-gra-ti bhoo-TAA-ni saa ni-SHAA PASH-ya-to moo-NAYH",
+    "translation": "What is night for all beings is when the self-controlled one is awake; and what beings are awake in, the seeing sage knows as night.",
+    "source": "Bhagavad Gita 2.69, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "yā",
+        "meaning": "that which"
+      },
+      {
+        "word": "niśā",
+        "meaning": "night"
+      },
+      {
+        "word": "sarva-bhūtānām",
+        "meaning": "for all beings"
+      },
+      {
+        "word": "tasyām",
+        "meaning": "in that"
+      },
+      {
+        "word": "jāgarti",
+        "meaning": "is awake"
+      },
+      {
+        "word": "saṁyamī",
+        "meaning": "the self-controlled one"
+      },
+      {
+        "word": "yasyām",
+        "meaning": "in which"
+      },
+      {
+        "word": "jāgrati",
+        "meaning": "are awake"
+      },
+      {
+        "word": "bhūtāni",
+        "meaning": "beings"
+      },
+      {
+        "word": "sā",
+        "meaning": "that"
+      },
+      {
+        "word": "niśā",
+        "meaning": "night"
+      },
+      {
+        "word": "paśyataḥ",
+        "meaning": "of the seeing one"
+      },
+      {
+        "word": "muneḥ",
+        "meaning": "of the sage"
+      }
+    ],
+    "meaning": "A deliberately paradoxical verse: the sage is awake in what is night for everyone else, and asleep to what everyone else is awake in. What most people never notice — the inner self, the steady witness — is where the disciplined person is most alert; what most people chase — acquisition, status, sensation — the sage treats as darkness. It is a description, not a boast: as practice deepens, values quietly invert. For a daily practitioner the verse works as a check-in question: which of the two \"days\" am I currently awake in? Commentators across traditions read the image in essentially this way.",
+    "reflection": "What matters to you that the world around you barely notices?",
+    "translations": {
+      "hi": "जो सब प्राणियों के लिए रात है, उसमें संयमी जागता है; और जिसमें प्राणी जागते हैं, देखने वाले मुनि के लिए वही रात है।"
+    },
+    "meanings": {
+      "hi": "जान-बूझकर विरोधाभासी श्लोक: मुनि उसमें जागता है जो बाकी सबके लिए रात है, और उसके प्रति सोया रहता है जिसमें बाकी सब जागते हैं। जिस पर अधिकांश लोग कभी ध्यान नहीं देते — भीतर का आत्म, स्थिर साक्षी — वहीं अनुशासित व्यक्ति सबसे सजग रहता है; और जिसके पीछे अधिकांश लोग दौड़ते हैं — संग्रह, हैसियत, संवेदना — उसे मुनि अँधेरा मानता है। यह डींग नहीं, वर्णन है: साधना गहराने के साथ मूल्य चुपचाप उलट जाते हैं। दैनिक साधक के लिए यह श्लोक एक जाँच-प्रश्न की तरह काम करता है: इन दो \"दिनों\" में से मैं अभी किसमें जागा हुआ हूँ? टीकाकार परंपराओं के आर-पार इस छवि को लगभग इसी तरह पढ़ते हैं।"
+    }
+  },
+  {
+    "slug": "gita-2-70",
+    "textRef": "Bhagavad Gita 2.70",
+    "tradition": "general",
+    "tags": ["peace"],
+    "dailyPool": true,
+    "devanagari": "आपूर्यमाणमचलप्रतिष्ठं समुद्रमापः प्रविशन्ति यद्वत् । / तद्वत्कामा यं प्रविशन्ति सर्वे स शान्तिमाप्नोति न कामकामी ॥2.70॥",
+    "iast": "āpūryamāṇamacalapratiṣṭhaṃ samudramāpaḥ praviśanti yadvat । / tadvatkāmā yaṃ praviśanti sarve sa śāntimāpnoti na kāmakāmī ॥2.70॥",
+    "sayIt": "aa-poor-ya-MAA-nam a-cha-la-pra-TISH-tham sa-moo-DRAM AA-pah pra-vi-SHAN-ti YAD-vat / TAD-vat KAA-maa yam pra-vi-SHAN-ti SAR-vay sa SHAAN-tim aap-NO-ti na kaa-ma-KAA-mee",
+    "translation": "As waters flow into the ocean, which stays full and unmoved as they enter, so all desires enter the one who attains peace — not the one who runs after desires.",
+    "source": "Bhagavad Gita 2.70, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "āpūryamāṇam",
+        "meaning": "being filled from all sides"
+      },
+      {
+        "word": "acala-pratiṣṭham",
+        "meaning": "standing unmoved, firmly established"
+      },
+      {
+        "word": "samudram",
+        "meaning": "the ocean"
+      },
+      {
+        "word": "āpaḥ",
+        "meaning": "waters"
+      },
+      {
+        "word": "praviśanti",
+        "meaning": "enter"
+      },
+      {
+        "word": "yadvat",
+        "meaning": "just as"
+      },
+      {
+        "word": "tadvat",
+        "meaning": "in the same way"
+      },
+      {
+        "word": "kāmāḥ",
+        "meaning": "desires"
+      },
+      {
+        "word": "yam",
+        "meaning": "whom"
+      },
+      {
+        "word": "praviśanti",
+        "meaning": "enter"
+      },
+      {
+        "word": "sarve",
+        "meaning": "all"
+      },
+      {
+        "word": "saḥ",
+        "meaning": "that person"
+      },
+      {
+        "word": "śāntim",
+        "meaning": "peace"
+      },
+      {
+        "word": "āpnoti",
+        "meaning": "attains"
+      },
+      {
+        "word": "na",
+        "meaning": "not"
+      },
+      {
+        "word": "kāma-kāmī",
+        "meaning": "the desirer of desires, one who chases desires"
+      }
+    ],
+    "meaning": "The ocean image: rivers pour in constantly, yet the ocean stays full and does not overflow or change its level. Likewise, desires and impressions keep arriving in the mind of a settled person — the verse does not promise they stop — but they enter without displacing that person's fullness. Peace, on this teaching, comes not from arranging the world so that nothing provokes desire, but from an inner fullness that arriving desires cannot destabilise. The contrast is the kāma-kāmī, the desirer of desires, who chases each river upstream. For daily practice: aim at fullness, not at a world with no rivers.",
+    "reflection": "What desire could you let arrive — and pass — without chasing it today?",
+    "translations": {
+      "hi": "जैसे जल की धाराएँ समुद्र में मिलती जाती हैं और वह भरता हुआ भी अचल बना रहता है, वैसे ही जिसमें सारी कामनाएँ समा जाती हैं वही शांति पाता है — कामनाओं के पीछे भागने वाला नहीं।"
+    },
+    "meanings": {
+      "hi": "समुद्र की छवि: नदियाँ निरंतर उसमें उँड़ेलती रहती हैं, फिर भी समुद्र भरा रहता है — न उफनता है, न अपना स्तर बदलता है। वैसे ही एक ठहरे हुए व्यक्ति के मन में कामनाएँ और छापें आती रहती हैं — श्लोक यह वादा नहीं करता कि वे रुक जाएँगी — पर वे आकर भी उसकी पूर्णता को हिला नहीं पातीं। इस शिक्षा में शांति संसार को इस तरह सजाने से नहीं आती कि कुछ भी कामना न जगाए, बल्कि उस भीतरी पूर्णता से आती है जिसे आती हुई कामनाएँ डिगा नहीं सकतीं। इसके उलट है \"कामकामी\" — कामनाओं का कामी — जो हर नदी के पीछे उलटी धारा में दौड़ता है। दैनिक अभ्यास के लिए: निशाना पूर्णता पर रखिए, ऐसे संसार पर नहीं जिसमें कोई नदी ही न हो।"
+    }
+  },
+  {
+    "slug": "gita-2-71",
+    "textRef": "Bhagavad Gita 2.71",
+    "tradition": "general",
+    "tags": ["peace"],
+    "dailyPool": true,
+    "devanagari": "विहाय कामान्यः सर्वान् पुमांश्चरति निःस्पृहः । / निर्ममो निरहंकारः स शान्तिमधिगच्छति ॥2.71॥",
+    "iast": "vihāya kāmānyaḥ sarvān pumāṃścarati niḥspṛhaḥ । / nirmamo nirahaṃkāraḥ sa śāntimadhigacchati ॥2.71॥",
+    "sayIt": "vi-HAA-ya kaa-MAAN yah sar-VAAN poo-MAANSH cha-ra-ti nih-SPRI-hah / nir-ma-MO ni-ra-hun-KAA-rah sa SHAAN-tim a-dhi-GACH-cha-ti",
+    "translation": "The person who abandons all desires and moves through life free of craving, without any sense of \"mine\" or \"I\", attains peace.",
+    "source": "Bhagavad Gita 2.71, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "vihāya",
+        "meaning": "having given up, having set down"
+      },
+      {
+        "word": "kāmān",
+        "meaning": "desires"
+      },
+      {
+        "word": "yaḥ",
+        "meaning": "who"
+      },
+      {
+        "word": "sarvān",
+        "meaning": "all"
+      },
+      {
+        "word": "pumān",
+        "meaning": "the person"
+      },
+      {
+        "word": "carati",
+        "meaning": "moves, lives"
+      },
+      {
+        "word": "niḥspṛhaḥ",
+        "meaning": "free of craving"
+      },
+      {
+        "word": "nirmamaḥ",
+        "meaning": "without \"mine\", without possessiveness"
+      },
+      {
+        "word": "nirahaṁkāraḥ",
+        "meaning": "without \"I\", without ego-sense"
+      },
+      {
+        "word": "saḥ",
+        "meaning": "that person"
+      },
+      {
+        "word": "śāntim",
+        "meaning": "peace"
+      },
+      {
+        "word": "adhigacchati",
+        "meaning": "attains, reaches"
+      }
+    ],
+    "meaning": "The closing movement of chapter 2's portrait of the settled person. Peace comes to the one who moves through life having set down craving, possessiveness (\"mine\"), and self-importance (\"I\"). The verse names three distinct releases — desires, ownership, ego — suggesting they are separate habits to work on, not one switch. For daily practice it is concrete: notice each time \"mine\" or \"I did that\" tightens the chest, and loosen it once. Traditions differ on the endpoint — Advaita reads the dissolution of ego-sense as realising the one Self, while devotional schools read it as humility and surrender before the Lord — but the practice of loosening is shared.",
+    "reflection": "What one claim of \"mine\" feels heaviest right now?",
+    "translations": {
+      "hi": "जो व्यक्ति सारी कामनाएँ त्यागकर, लालसा से मुक्त होकर, \"मेरा\" और \"मैं\" के भाव के बिना जीवन में चलता है, वही शांति पाता है।"
+    },
+    "meanings": {
+      "hi": "अध्याय 2 में ठहरे हुए व्यक्ति के चित्र की यह समापन-गति है। शांति उसे मिलती है जो लालसा, ममता (\"मेरा\") और अहंभाव (\"मैं\") को उतारकर जीवन में चलता है। श्लोक तीन अलग-अलग त्याग गिनाता है — कामनाएँ, स्वामित्व, अहं — जो संकेत है कि ये अलग-अलग आदतें हैं जिन पर काम करना है, कोई एक स्विच नहीं। दैनिक अभ्यास के लिए यह ठोस है: हर बार जब \"मेरा\" या \"यह मैंने किया\" छाती को कसता महसूस हो, उसे एक बार ढीला कीजिए। अंतिम मुक़ाम पर परंपराएँ भिन्न हैं — अद्वैत अहंभाव के विलय को एक ही आत्म की अनुभूति के रूप में पढ़ता है, जबकि भक्ति-परंपराएँ इसे भगवान के सामने विनम्रता और शरणागति — पर ढीला करने की साधना साझा है।"
+    }
+  },
+  {
+    "slug": "gita-3-4",
+    "textRef": "Bhagavad Gita 3.4",
+    "tradition": "general",
+    "tags": ["discipline", "duty"],
+    "dailyPool": true,
+    "devanagari": "न कर्मणामनारम्भान्नैष्कर्म्यं पुरुषोऽश्नुते । / न च संन्यसनादेव सिद्धिं समधिगच्छति ॥3.4॥",
+    "iast": "na karmaṇāmanārambhānnaiṣkarmyaṃ puruṣo'śnute । / na ca saṃnyasanādeva siddhiṃ samadhigacchati ॥3.4॥",
+    "sayIt": "na kar-ma-NAAM a-naa-RUM-bhaan naish-KAR-myum poo-roo-SHOSH-noo-tay / na cha sun-nya-sa-NAA-day-va SID-dhim sa-ma-dhi-GUCH-cha-ti",
+    "translation": "Not by refusing to begin work does a person reach freedom from action, and not by renunciation alone does anyone arrive at perfection.",
+    "source": "Bhagavad Gita 3.4, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "na",
+        "meaning": "not"
+      },
+      {
+        "word": "karmaṇām",
+        "meaning": "of actions, of works"
+      },
+      {
+        "word": "anārambhāt",
+        "meaning": "by not undertaking, by never beginning"
+      },
+      {
+        "word": "naiṣkarmyam",
+        "meaning": "freedom from action, the actionless state"
+      },
+      {
+        "word": "puruṣaḥ",
+        "meaning": "a person"
+      },
+      {
+        "word": "aśnute",
+        "meaning": "attains, reaches"
+      },
+      {
+        "word": "na ca",
+        "meaning": "nor"
+      },
+      {
+        "word": "saṃnyasanāt",
+        "meaning": "by renunciation, by giving works up"
+      },
+      {
+        "word": "eva",
+        "meaning": "alone, merely"
+      },
+      {
+        "word": "siddhim",
+        "meaning": "perfection, the goal"
+      },
+      {
+        "word": "samadhigacchati",
+        "meaning": "fully attains"
+      }
+    ],
+    "meaning": "You cannot reach the state beyond action by simply not acting. Quitting your work is not the same as transcending it, and putting on the robes of renunciation does not by itself deliver the goal. The verse opens Krishna's case for karma yoga: the way past work runs through work done rightly, not around it. For daily practice, it names a familiar trap — mistaking avoidance for detachment. Skipping the hard task is not spiritual progress. Traditions read the destination differently: Advaita takes naishkarmya as the actionless stillness of Self-knowledge that disciplined action prepares the mind for, while Vishishtadvaita and Dvaita hold that action offered in devotion remains the path itself, with renunciation happening inwardly.",
+    "reflection": "Where in your life are you calling avoidance \"detachment\" — and what would rightly-done action look like there instead?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-8",
+    "textRef": "Bhagavad Gita 3.8",
+    "tradition": "general",
+    "tags": ["discipline", "duty"],
+    "dailyPool": true,
+    "devanagari": "नियतं कुरु कर्म त्वं कर्म ज्यायो ह्यकर्मणः । / शरीरयात्रापि च ते न प्रसिद्ध्येदकर्मणः ॥3.8॥",
+    "iast": "niyataṃ kuru karma tvaṃ karma jyāyo hyakarmaṇaḥ । / śarīrayātrāpi ca te na prasiddhyedakarmaṇaḥ ॥3.8॥",
+    "sayIt": "ni-ya-TUM KOO-roo KAR-ma tvum KAR-ma JYAA-yo hya-KAR-ma-nah / sha-REE-ra-YAA-traa-pi cha tay na pra-SID-dhyay-da-KAR-ma-nah",
+    "translation": "Do the work that is yours to do, for action is better than inaction; without action, even keeping your body going would be impossible.",
+    "source": "Bhagavad Gita 3.8, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "niyatam",
+        "meaning": "prescribed, ordained, allotted"
+      },
+      {
+        "word": "kuru",
+        "meaning": "do, perform"
+      },
+      {
+        "word": "karma",
+        "meaning": "action, work"
+      },
+      {
+        "word": "tvam",
+        "meaning": "you"
+      },
+      {
+        "word": "jyāyaḥ",
+        "meaning": "better, superior"
+      },
+      {
+        "word": "hi",
+        "meaning": "for, indeed"
+      },
+      {
+        "word": "akarmaṇaḥ",
+        "meaning": "than inaction"
+      },
+      {
+        "word": "śarīra-yātrā",
+        "meaning": "the upkeep of the body, bodily maintenance"
+      },
+      {
+        "word": "api ca",
+        "meaning": "even, and also"
+      },
+      {
+        "word": "te",
+        "meaning": "your"
+      },
+      {
+        "word": "na prasiddhyet",
+        "meaning": "would not be accomplished"
+      },
+      {
+        "word": "akarmaṇaḥ",
+        "meaning": "through inaction"
+      }
+    ],
+    "meaning": "Krishna makes the practical case against opting out: doing nothing is not actually available to you. Even staying alive — eating, moving, breathing — is action, so the choice is never between action and inaction, only between doing your allotted work and doing something lesser. For daily practice the verse is bracingly simple: identify the work that is genuinely yours today and do it, rather than drifting through substitute activity. Traditions differ on what \"prescribed action\" ultimately means — Advaita commentators emphasise ordained duties as purification that readies the mind for knowledge, while Vishishtadvaita and Dvaita read the same duties as ongoing worship offered to the Lord — but all agree the duty itself is not optional.",
+    "reflection": "What is the one piece of work that is genuinely yours today, and what substitute activity are you tempted to do instead?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-9",
+    "textRef": "Bhagavad Gita 3.9",
+    "tradition": "general",
+    "tags": ["devotion", "duty"],
+    "dailyPool": true,
+    "devanagari": "यज्ञार्थात्कर्मणोऽन्यत्र लोकोऽयं कर्मबन्धनः । / तदर्थं कर्म कौन्तेय मुक्तसङ्गः समाचर ॥3.9॥",
+    "iast": "yajñārthātkarmaṇo'nyatra loko'yaṃ karmabandhanaḥ । / tadarthaṃ karma kaunteya muktasaṅgaḥ samācara ॥3.9॥",
+    "sayIt": "yug-YAAR-thaat kar-ma-NO-nya-tra lo-KO-yum KAR-ma-BUN-dha-nah / ta-DAR-thum KAR-ma kaun-TAY-ya mook-ta-SUN-gah sa-MAA-cha-ra",
+    "translation": "Except for action done as sacrifice, this world is bound by action; so act for that purpose, son of Kunti, free from attachment.",
+    "source": "Bhagavad Gita 3.9, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "yajña-arthāt",
+        "meaning": "for the sake of sacrifice, of offering"
+      },
+      {
+        "word": "karmaṇaḥ",
+        "meaning": "than action"
+      },
+      {
+        "word": "anyatra",
+        "meaning": "other than, apart from"
+      },
+      {
+        "word": "lokaḥ ayam",
+        "meaning": "this world"
+      },
+      {
+        "word": "karma-bandhanaḥ",
+        "meaning": "bound by action"
+      },
+      {
+        "word": "tad-artham",
+        "meaning": "for that purpose"
+      },
+      {
+        "word": "karma",
+        "meaning": "action, work"
+      },
+      {
+        "word": "kaunteya",
+        "meaning": "son of Kunti (Arjuna)"
+      },
+      {
+        "word": "mukta-saṅgaḥ",
+        "meaning": "free from attachment"
+      },
+      {
+        "word": "samācara",
+        "meaning": "perform well, carry out"
+      }
+    ],
+    "meaning": "Work binds — unless it is done as an offering. The same task can chain you or free you; what changes is not the task but its direction. Action performed as yajna, as sacrifice, escapes the machinery of accumulating karma because it is not done to feed the self. For daily practice this reframes ordinary work: the email, the cooking, the caregiving can each be turned into an offering by dropping the grasping and dedicating the act. Traditions read yajna differently — Advaita commentators take it broadly as duty done for the Lord and cosmic order as purification, while Vishishtadvaita and Dvaita read it pointedly as worship of Vishnu, every act offered to him — and both readings fit the verse.",
+    "reflection": "Which ordinary task today could you perform as an offering rather than a transaction?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-16",
+    "textRef": "Bhagavad Gita 3.16",
+    "tradition": "general",
+    "tags": ["discipline", "duty"],
+    "dailyPool": true,
+    "devanagari": "एवं प्रवर्तितं चक्रं नानुवर्तयतीह यः । / अघायुरिन्द्रियारामो मोघं पार्थ स जीवति ॥3.16॥",
+    "iast": "evaṃ pravartitaṃ cakraṃ nānuvartayatīha yaḥ । / aghāyurindriyārāmo moghaṃ pārtha sa jīvati ॥3.16॥",
+    "sayIt": "AY-vum pra-var-TI-tum CHUK-rum naa-noo-var-ta-ya-TEE-ha yah / a-GHAA-yoor in-dri-YAA-raa-mo MO-ghum PAAR-tha sa JEE-va-ti",
+    "translation": "One who does not help turn the wheel thus set in motion — living wrongly, absorbed in the senses — lives in vain, Partha.",
+    "source": "Bhagavad Gita 3.16, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "evam",
+        "meaning": "thus, in this way"
+      },
+      {
+        "word": "pravartitam",
+        "meaning": "set in motion"
+      },
+      {
+        "word": "cakram",
+        "meaning": "the wheel (of mutual sustenance)"
+      },
+      {
+        "word": "na anuvartayati",
+        "meaning": "does not keep turning, does not follow along with"
+      },
+      {
+        "word": "iha",
+        "meaning": "here, in this world"
+      },
+      {
+        "word": "yaḥ",
+        "meaning": "who"
+      },
+      {
+        "word": "agha-āyuḥ",
+        "meaning": "whose life is sinful, wrongly lived"
+      },
+      {
+        "word": "indriya-ārāmaḥ",
+        "meaning": "delighting in the senses"
+      },
+      {
+        "word": "mogham",
+        "meaning": "in vain, uselessly"
+      },
+      {
+        "word": "pārtha",
+        "meaning": "O Partha (Arjuna)"
+      },
+      {
+        "word": "saḥ",
+        "meaning": "that person"
+      },
+      {
+        "word": "jīvati",
+        "meaning": "lives"
+      }
+    ],
+    "meaning": "The \"wheel\" is the cycle Krishna has just described: beings live on food, food comes from rain, rain from sacrifice, sacrifice from action — a circulation of mutual giving that sustains the world. To take from that cycle without contributing, living only for one's own pleasure, is to live pointlessly. For daily practice the verse asks a blunt question: are you a participant or only a consumer? Everyone receives constantly — from family, society, nature; the verse insists something must flow back. Commentators genuinely differ on the wheel's scope — some in the Advaita line stress the Vedic ritual cycle for those not yet renunciates, while theistic readings see the whole cosmic order of offering to the Lord — but none excuses free-riding.",
+    "reflection": "Where are you drawing from the wheel — family, community, nature — without putting anything back?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-19",
+    "textRef": "Bhagavad Gita 3.19",
+    "tradition": "general",
+    "tags": ["discipline", "duty"],
+    "dailyPool": true,
+    "devanagari": "तस्मादसक्तः सततं कार्यं कर्म समाचर । / असक्तो ह्याचरन्कर्म परमाप्नोति पूरुषः ॥3.19॥",
+    "iast": "tasmādasaktaḥ satataṃ kāryaṃ karma samācara । / asakto hyācarankarma paramāpnoti pūruṣaḥ ॥3.19॥",
+    "sayIt": "tas-MAA-da-SUK-tah sa-ta-TUM KAAR-yum KAR-ma sa-MAA-cha-ra / a-SUK-to hyaa-cha-run KAR-ma pa-ra-MAAP-no-ti POO-roo-shah",
+    "translation": "Therefore, always do the work that must be done, without attachment; for by acting unattached a person reaches the highest.",
+    "source": "Bhagavad Gita 3.19, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "tasmāt",
+        "meaning": "therefore"
+      },
+      {
+        "word": "asaktaḥ",
+        "meaning": "unattached"
+      },
+      {
+        "word": "satatam",
+        "meaning": "always, constantly"
+      },
+      {
+        "word": "kāryam",
+        "meaning": "that which ought to be done"
+      },
+      {
+        "word": "karma",
+        "meaning": "action, work"
+      },
+      {
+        "word": "samācara",
+        "meaning": "perform well, carry out"
+      },
+      {
+        "word": "hi",
+        "meaning": "for, indeed"
+      },
+      {
+        "word": "ācaran",
+        "meaning": "performing, while doing"
+      },
+      {
+        "word": "param",
+        "meaning": "the highest, the supreme"
+      },
+      {
+        "word": "āpnoti",
+        "meaning": "attains, reaches"
+      },
+      {
+        "word": "pūruṣaḥ",
+        "meaning": "a person"
+      }
+    ],
+    "meaning": "This verse compresses karma yoga into one instruction: do what needs doing, constantly, without attachment — and that very practice carries you to the highest. Notice what it does not say: it does not lower the bar on effort or excuse careless work. Detachment applies to the clinging, not the quality. For daily practice it means the dishes, the deadline, and the difficult conversation are all \"kāryam karma\" — work that must be done — and each is an opportunity to practise doing it fully while holding it lightly. Traditions read \"the highest\" differently: Advaita takes unattached action as purifying the mind for liberating Self-knowledge, while Vishishtadvaita and Dvaita see it leading to attainment of the Lord himself — and the verse leaves room for both.",
+    "reflection": "What must be done today that you could practise doing fully — and holding lightly?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-21",
+    "textRef": "Bhagavad Gita 3.21",
+    "tradition": "general",
+    "tags": ["duty", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "यद्यदाचरति श्रेष्ठस्तत्तदेवेतरो जनः । / स यत्प्रमाणं कुरुते लोकस्तदनुवर्तते ॥3.21॥",
+    "iast": "yadyadācarati śreṣṭhastattadevetaro janaḥ । / sa yatpramāṇaṃ kurute lokastadanuvartate ॥3.21॥",
+    "sayIt": "yud-ya-DAA-cha-ra-ti SHRAYSH-thus tat-ta-DAY-vay-ta-ro ja-nah / sa yat pra-MAA-num koo-roo-tay LO-kas ta-da-noo-VAR-ta-tay",
+    "translation": "Whatever a great person does, other people do the same; whatever standard such a person sets, the world follows.",
+    "source": "Bhagavad Gita 3.21, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "yat yat",
+        "meaning": "whatever"
+      },
+      {
+        "word": "ācarati",
+        "meaning": "does, practises"
+      },
+      {
+        "word": "śreṣṭhaḥ",
+        "meaning": "the best person, the respected one"
+      },
+      {
+        "word": "tat tat",
+        "meaning": "that very thing"
+      },
+      {
+        "word": "eva",
+        "meaning": "indeed"
+      },
+      {
+        "word": "itaraḥ janaḥ",
+        "meaning": "other people"
+      },
+      {
+        "word": "saḥ",
+        "meaning": "that person"
+      },
+      {
+        "word": "yat pramāṇam",
+        "meaning": "whatever standard, whatever measure"
+      },
+      {
+        "word": "kurute",
+        "meaning": "sets, establishes"
+      },
+      {
+        "word": "lokaḥ",
+        "meaning": "the world, people at large"
+      },
+      {
+        "word": "tat anuvartate",
+        "meaning": "follows that"
+      }
+    ],
+    "meaning": "People do not follow instructions; they follow examples. Whoever is looked up to — a parent, a manager, an elder sibling, anyone with even a little standing — is quietly setting the standard others live by, whether or not they intend to. Krishna offers this as a reason to keep acting even after personal need has fallen away: your conduct is never only yours. For daily practice, it turns influence into responsibility — notice who watches you, and let that sharpen how you show up. Commentators across Advaita, Vishishtadvaita, and Dvaita read this verse in essentially the same way, as the foundation for lokasangraha, acting for the world's cohesion — a rare point of broad agreement.",
+    "reflection": "Who quietly takes their standard from you, and what did your conduct teach them today?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-25",
+    "textRef": "Bhagavad Gita 3.25",
+    "tradition": "general",
+    "tags": ["duty", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "सक्ताः कर्मण्यविद्वांसो यथा कुर्वन्ति भारत । / कुर्याद्विद्वांस्तथासक्तश्चिकीर्षुर्लोकसंग्रहम् ॥3.25॥",
+    "iast": "saktāḥ karmaṇyavidvāṃso yathā kurvanti bhārata । / kuryādvidvāṃstathāsaktaścikīrṣurlokasaṃgraham ॥3.25॥",
+    "sayIt": "suk-TAAH kar-mun-ya-vid-VAAM-so ya-THAA koor-VUN-ti BHAA-ra-ta / koor-YAAD vid-VAAMS ta-THAA-suk-tush chi-KEER-shoor LO-ka-SUN-gra-hum",
+    "translation": "As the unwise act, attached to their work, Bharata, so should the wise act — unattached, wishing to hold the world together.",
+    "source": "Bhagavad Gita 3.25, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "saktāḥ",
+        "meaning": "attached"
+      },
+      {
+        "word": "karmaṇi",
+        "meaning": "to action, to work"
+      },
+      {
+        "word": "avidvāṃsaḥ",
+        "meaning": "the unwise, those without knowledge"
+      },
+      {
+        "word": "yathā",
+        "meaning": "just as"
+      },
+      {
+        "word": "kurvanti",
+        "meaning": "they act"
+      },
+      {
+        "word": "bhārata",
+        "meaning": "O Bharata (Arjuna)"
+      },
+      {
+        "word": "kuryāt",
+        "meaning": "should act"
+      },
+      {
+        "word": "vidvān",
+        "meaning": "the wise one, the knower"
+      },
+      {
+        "word": "tathā",
+        "meaning": "so, in the same way"
+      },
+      {
+        "word": "asaktaḥ",
+        "meaning": "unattached"
+      },
+      {
+        "word": "cikīrṣuḥ",
+        "meaning": "desiring to bring about"
+      },
+      {
+        "word": "loka-saṃgraham",
+        "meaning": "the holding-together, the welfare of the world"
+      }
+    ],
+    "meaning": "Watch how someone who deeply wants a result works: energetic, careful, thorough. Krishna says the wise should work with exactly that intensity — minus the clinging. Nothing about detachment licenses half-effort; the outward diligence stays identical, and only the inner motive changes, from personal gain to lokasangraha, holding the world together. For daily practice, this dissolves the excuse that spiritual maturity means caring less about doing things well. Traditions differ on who this \"wise one\" is — in Advaita, the knower has nothing left to gain and acts purely for the world's benefit, while Vishishtadvaita and Dvaita see even the realised soul continuing to act as loving service to the Lord — yet all agree the wise keep working.",
+    "reflection": "If you kept today's effort exactly the same but changed the motive from personal gain to the good of those around you, what would shift?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-27",
+    "textRef": "Bhagavad Gita 3.27",
+    "tradition": "general",
+    "tags": ["wisdom", "peace"],
+    "dailyPool": true,
+    "devanagari": "प्रकृतेः क्रियमाणानि गुणैः कर्माणि सर्वशः । / अहंकारविमूढात्मा कर्ताहमिति मन्यते ॥3.27॥",
+    "iast": "prakṛteḥ kriyamāṇāni guṇaiḥ karmāṇi sarvaśaḥ । / ahaṃkāravimūḍhātmā kartāhamiti manyate ॥3.27॥",
+    "sayIt": "pra-kri-TAYH kri-ya-MAA-naa-ni goo-NYE-hee kar-MAA-ni sar-va-SHAH / a-hung-KAA-ra-vi-MOO-dhaat-maa kar-TAA-ha-mi-ti MUN-ya-tay",
+    "translation": "All actions are carried out by the gunas of nature; one whose mind is deluded by ego thinks, \"I am the doer.\"",
+    "source": "Bhagavad Gita 3.27, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "prakṛteḥ",
+        "meaning": "of material nature"
+      },
+      {
+        "word": "kriyamāṇāni",
+        "meaning": "being performed, being carried out"
+      },
+      {
+        "word": "guṇaiḥ",
+        "meaning": "by the gunas, the qualities of nature"
+      },
+      {
+        "word": "karmāṇi",
+        "meaning": "actions"
+      },
+      {
+        "word": "sarvaśaḥ",
+        "meaning": "in every way, entirely"
+      },
+      {
+        "word": "ahaṃkāra-vimūḍha-ātmā",
+        "meaning": "one whose mind is deluded by ego"
+      },
+      {
+        "word": "kartā",
+        "meaning": "the doer"
+      },
+      {
+        "word": "aham",
+        "meaning": "I"
+      },
+      {
+        "word": "iti",
+        "meaning": "thus (marks the quoted thought)"
+      },
+      {
+        "word": "manyate",
+        "meaning": "thinks, believes"
+      }
+    ],
+    "meaning": "Every action you take runs on machinery you did not build — body, temperament, habit, circumstance, all of it the play of nature's gunas. The ego then steps in and signs its name to the finished work: \"I did that.\" Krishna calls this signature the core delusion. For daily practice, the verse loosens the grip of both pride in success and crushing guilt in failure — much of what happens through you is nature moving. The schools genuinely divide here: Advaita holds the Self never acts at all, so all doership belongs to prakriti, while Vishishtadvaita and Dvaita maintain the soul is a real but dependent agent, and the error lies in claiming independent doership apart from nature and the Lord.",
+    "reflection": "Think of something you are proud of or ashamed of from this week — how much of it was truly \"you,\" and how much was nature moving through you?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-30",
+    "textRef": "Bhagavad Gita 3.30",
+    "tradition": "general",
+    "tags": ["devotion", "courage"],
+    "dailyPool": true,
+    "devanagari": "मयि सर्वाणि कर्माणि संन्यस्याध्यात्मचेतसा । / निराशीर्निर्ममो भूत्वा युध्यस्व विगतज्वरः ॥3.30॥",
+    "iast": "mayi sarvāṇi karmāṇi saṃnyasyādhyātmacetasā । / nirāśīrnirmamo bhūtvā yudhyasva vigatajvaraḥ ॥3.30॥",
+    "sayIt": "MA-yi sar-VAA-ni kar-MAA-ni sun-nyas-YAA-dhyaat-ma-CHAY-ta-saa / ni-RAA-sheer NEER-ma-mo BHOOT-vaa YOO-dhyas-va vi-ga-ta-JVA-rah",
+    "translation": "Surrendering all actions to me, with mind resting in the Self, free of craving and possessiveness, fight — with the fever gone.",
+    "source": "Bhagavad Gita 3.30, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "mayi",
+        "meaning": "in me, to me (Krishna)"
+      },
+      {
+        "word": "sarvāṇi",
+        "meaning": "all"
+      },
+      {
+        "word": "karmāṇi",
+        "meaning": "actions"
+      },
+      {
+        "word": "saṃnyasya",
+        "meaning": "surrendering, offering up"
+      },
+      {
+        "word": "adhyātma-cetasā",
+        "meaning": "with mind fixed on the Self, with inward awareness"
+      },
+      {
+        "word": "nirāśīḥ",
+        "meaning": "free from craving, without expectation"
+      },
+      {
+        "word": "nirmamaḥ",
+        "meaning": "without \"mine\"-ness, without possessiveness"
+      },
+      {
+        "word": "bhūtvā",
+        "meaning": "having become"
+      },
+      {
+        "word": "yudhyasva",
+        "meaning": "fight"
+      },
+      {
+        "word": "vigata-jvaraḥ",
+        "meaning": "with the fever gone, free of anguish"
+      }
+    ],
+    "meaning": "Krishna's instruction to Arjuna is startlingly complete: hand every action over to me, drop the craving and the \"mine,\" and then — fight. Surrender here does not mean retreat from difficulty; it means entering the difficulty without the fever, the anxious inner burning that comes from carrying outcomes alone. For daily practice, whatever your battle is today — a diagnosis, a deadline, a conflict — the verse offers a sequence: offer it up first, release the grasping, then act wholeheartedly. Traditions read the surrender differently: Advaita commentators take it as casting actions on the Lord with the discernment that the Self is not the agent, while Vishishtadvaita and Dvaita hear a literal call to loving surrender of every act to Krishna as its true master.",
+    "reflection": "What battle are you facing with a fever of anxiety — and what would it mean to offer it up before you fight it?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-3-35",
+    "textRef": "Bhagavad Gita 3.35",
+    "tradition": "general",
+    "tags": ["courage", "duty"],
+    "dailyPool": true,
+    "devanagari": "श्रेयान्स्वधर्मो विगुणः परधर्मात्स्वनुष्ठितात् । / स्वधर्मे निधनं श्रेयः परधर्मो भयावहः ॥3.35॥",
+    "iast": "śreyānsvadharmo viguṇaḥ paradharmātsvanuṣṭhitāt । / svadharme nidhanaṃ śreyaḥ paradharmo bhayāvahaḥ ॥3.35॥",
+    "sayIt": "SHRAY-yaan sva-DHAR-mo vi-goo-NAH pa-ra-dhar-MAAT sva-noosh-thi-TAAT / sva-DHAR-may ni-dha-NUM SHRAY-yah pa-ra-DHAR-mo bha-YAA-va-hah",
+    "translation": "Better your own dharma done imperfectly than another's dharma done well; better to die in your own dharma — another's dharma invites danger.",
+    "source": "Bhagavad Gita 3.35, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "śreyān",
+        "meaning": "better"
+      },
+      {
+        "word": "sva-dharmaḥ",
+        "meaning": "one's own dharma, one's own duty"
+      },
+      {
+        "word": "viguṇaḥ",
+        "meaning": "imperfect, deficient in merit"
+      },
+      {
+        "word": "para-dharmāt",
+        "meaning": "than another's dharma"
+      },
+      {
+        "word": "su-anuṣṭhitāt",
+        "meaning": "well performed"
+      },
+      {
+        "word": "sva-dharme",
+        "meaning": "in one's own dharma"
+      },
+      {
+        "word": "nidhanam",
+        "meaning": "death"
+      },
+      {
+        "word": "śreyaḥ",
+        "meaning": "better"
+      },
+      {
+        "word": "para-dharmaḥ",
+        "meaning": "another's dharma"
+      },
+      {
+        "word": "bhaya-āvahaḥ",
+        "meaning": "fraught with fear, bringing danger"
+      }
+    ],
+    "meaning": "Doing your own work badly beats doing someone else's work brilliantly. The verse names a temptation everyone knows: another person's path always looks cleaner, easier, more rewarding than the flawed, unfinished one in front of you. Krishna's counsel is stark — stay on yours, even at cost — because a borrowed life, however polished, is built on ground that is not yours. For daily practice, it is a call to stop comparing and to work your own patch honestly. Traditions genuinely diverge on what svadharma means — duty tied to one's social station and stage of life in classical Advaita commentary, the discipline suited to one's embodied nature in Vishishtadvaita, or the calling given by the Lord to each soul's intrinsic nature in Dvaita — and none reads it as licence to disparage another's path.",
+    "reflection": "Whose path have you been envying — and what would it look like to fully commit to your own imperfect one today?",
+    "translations": {},
+    "meanings": {}
+  },
+  {
+    "slug": "gita-12-1",
+    "textRef": "Bhagavad Gita 12.1",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": true,
+    "devanagari": "अर्जुन उवाच / एवं सततयुक्ता ये भक्तास्त्वां पर्युपासते । / ये चाप्यक्षरमव्यक्तं तेषां के योगवित्तमाः ॥12.1॥",
+    "iast": "arjuna uvāca / evaṃ satatayuktā ye bhaktāstvāṃ paryupāsate । / ye cāpyakṣaramavyaktaṃ teṣāṃ ke yogavittamāḥ ॥12.1॥",
+    "sayIt": "ar-JOO-na oo-VAA-cha / AY-vam sa-ta-ta-YOOK-taa yay bhak-TAAS-tvaam par-yoo-PAA-sa-tay / yay CHAAP-yak-sha-ram av-YAK-tam TAY-shaam kay yo-ga-VIT-ta-maah",
+    "translation": "Arjuna said: Those devotees who worship you with such constant steadiness, and those who worship the imperishable and unmanifest — which of them understands yoga best?",
+    "source": "Bhagavad Gita 12.1, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "arjunaḥ uvāca",
+        "meaning": "Arjuna said"
+      },
+      {
+        "word": "evam",
+        "meaning": "thus, in this way"
+      },
+      {
+        "word": "satata-yuktāḥ",
+        "meaning": "ever steadfast, constantly disciplined"
+      },
+      {
+        "word": "ye",
+        "meaning": "those who"
+      },
+      {
+        "word": "bhaktāḥ",
+        "meaning": "devotees"
+      },
+      {
+        "word": "tvām",
+        "meaning": "you"
+      },
+      {
+        "word": "paryupāsate",
+        "meaning": "worship, attend upon fully"
+      },
+      {
+        "word": "ye ca api",
+        "meaning": "and those who, moreover"
+      },
+      {
+        "word": "akṣaram",
+        "meaning": "the imperishable"
+      },
+      {
+        "word": "avyaktam",
+        "meaning": "the unmanifest"
+      },
+      {
+        "word": "teṣām",
+        "meaning": "among these"
+      },
+      {
+        "word": "ke",
+        "meaning": "which ones"
+      },
+      {
+        "word": "yoga-vittamāḥ",
+        "meaning": "the best knowers of yoga"
+      }
+    ],
+    "meaning": "Arjuna opens the chapter on devotion with a practical question: who has the better grasp of yoga — the person who worships God as a personal presence with steady devotion, or the one who contemplates the formless, imperishable absolute? It is the question anyone building a practice eventually faces: do I direct my attention to a form I can love, or to a truth beyond all form? The chapter that follows is Krishna's answer. Traditions weigh that answer differently: Advaita readers tend to see worship of the personal form as a support on the way to formless realisation, while Vishishtadvaita and Dvaita readers hold personal devotion to be the highest path in itself.",
+    "reflection": "Which comes easier to you — the divine with a face, or the truth beyond form?",
+    "translations": {
+      "hi": "अर्जुन ने कहा: जो भक्त इस तरह निरंतर आपसे जुड़े रहकर आपकी उपासना करते हैं, और जो अविनाशी, अव्यक्त की उपासना करते हैं — इन दोनों में योग को सबसे अच्छा कौन जानता है?"
+    },
+    "meanings": {
+      "hi": "भक्ति के अध्याय की शुरुआत अर्जुन एक व्यावहारिक सवाल से करते हैं: योग की बेहतर समझ किसे है — उसे जो ईश्वर को एक व्यक्तिगत उपस्थिति मानकर स्थिर भक्ति से पूजता है, या उसे जो निराकार, अविनाशी परम तत्व का चिंतन करता है? यह वह सवाल है जो साधना गढ़ने वाले हर व्यक्ति के सामने कभी न कभी आता है: मैं अपना ध्यान किसी ऐसे रूप पर टिकाऊँ जिसे प्रेम कर सकूँ, या रूप से परे किसी सत्य पर? आगे का पूरा अध्याय कृष्ण का उत्तर है। परंपराएँ उस उत्तर को अलग-अलग तौलती हैं: अद्वैत की दृष्टि में सगुण रूप की उपासना निराकार अनुभूति की ओर एक सहारा है, जबकि विशिष्टाद्वैत और द्वैत के लिए व्यक्तिगत भक्ति अपने आप में सर्वोच्च मार्ग है।"
+    }
+  },
+  {
+    "slug": "gita-12-2",
+    "textRef": "Bhagavad Gita 12.2",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": true,
+    "devanagari": "श्रीभगवानुवाच / मय्यावेश्य मनो ये मां नित्ययुक्ता उपासते । / श्रद्धया परयोपेतास्ते मे युक्ततमा मताः ॥12.2॥",
+    "iast": "śrībhagavānuvāca / mayyāveśya mano ye māṃ nityayuktā upāsate । / śraddhayā parayopetāste me yuktatamā matāḥ ॥12.2॥",
+    "sayIt": "shree-bha-ga-VAAN oo-VAA-cha / mai-YAA-vaysh-ya MA-no yay maam nit-ya-YOOK-taa oo-PAA-sa-tay / shrad-dha-YAA pa-ra-yo-PAY-taas-tay may yook-ta-ta-MAA ma-TAAH",
+    "translation": "The Blessed Lord said: Those who fix their minds on me and worship me, always steady and filled with the highest faith — these I consider the most accomplished in yoga.",
+    "source": "Bhagavad Gita 12.2, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "śrī-bhagavān uvāca",
+        "meaning": "the Blessed Lord said"
+      },
+      {
+        "word": "mayi",
+        "meaning": "on me"
+      },
+      {
+        "word": "āveśya",
+        "meaning": "having fixed, having absorbed"
+      },
+      {
+        "word": "manaḥ",
+        "meaning": "the mind"
+      },
+      {
+        "word": "ye",
+        "meaning": "those who"
+      },
+      {
+        "word": "mām",
+        "meaning": "me"
+      },
+      {
+        "word": "nitya-yuktāḥ",
+        "meaning": "ever steadfast"
+      },
+      {
+        "word": "upāsate",
+        "meaning": "worship"
+      },
+      {
+        "word": "śraddhayā",
+        "meaning": "with faith"
+      },
+      {
+        "word": "parayā",
+        "meaning": "supreme, highest"
+      },
+      {
+        "word": "upetāḥ",
+        "meaning": "endowed, filled"
+      },
+      {
+        "word": "te",
+        "meaning": "they"
+      },
+      {
+        "word": "me",
+        "meaning": "by me"
+      },
+      {
+        "word": "yuktatamāḥ",
+        "meaning": "most fully disciplined, most accomplished in yoga"
+      },
+      {
+        "word": "matāḥ",
+        "meaning": "are considered"
+      }
+    ],
+    "meaning": "Krishna gives a direct answer to Arjuna's question: those who fix the mind on him personally, worship with constancy, and bring the highest faith are, in his view, the most accomplished in yoga. Notice the three ingredients — attention (the mind fixed), consistency (always steady), and trust (supreme faith). For a daily practice, this is a workable checklist: not intensity on one heroic day, but a mind that keeps returning, day after day, with confidence in what it returns to. Traditions differ on the verse's scope: bhakti schools such as Vishishtadvaita and Dvaita read it as ranking personal devotion supreme, while Advaita reads it as praising the more accessible path rather than the final truth.",
+    "reflection": "What would trusting your practice completely look like today?",
+    "translations": {
+      "hi": "श्रीभगवान ने कहा: जो अपना मन मुझमें एकाग्र करके, सदा स्थिर रहकर, परम श्रद्धा के साथ मेरी उपासना करते हैं — उन्हें मैं योग में सबसे श्रेष्ठ मानता हूँ।"
+    },
+    "meanings": {
+      "hi": "अर्जुन के प्रश्न का कृष्ण सीधा उत्तर देते हैं: जो मन को उनके व्यक्तिगत रूप पर टिकाते हैं, निरंतरता से उपासना करते हैं और परम श्रद्धा लेकर आते हैं, वे उनकी दृष्टि में योग में सबसे सिद्ध हैं। तीन तत्वों पर ध्यान दीजिए — ध्यान (टिका हुआ मन), निरंतरता (सदा स्थिर रहना) और भरोसा (परम श्रद्धा)। दैनिक अभ्यास के लिए यह एक काम की सूची है: किसी एक वीर दिन की तीव्रता नहीं, बल्कि ऐसा मन जो दिन-प्रतिदिन लौटता रहे, और जिस पर लौटता है उस पर भरोसा रखे। श्लोक के दायरे पर परंपराओं में मतभेद है: विशिष्टाद्वैत और द्वैत जैसी भक्ति-परंपराएँ इसे व्यक्तिगत भक्ति को सर्वोच्च ठहराने के रूप में पढ़ती हैं, जबकि अद्वैत इसे अंतिम सत्य नहीं, बल्कि अधिक सुलभ मार्ग की प्रशंसा मानता है।"
+    }
+  },
+  {
+    "slug": "gita-12-3",
+    "textRef": "Bhagavad Gita 12.3",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "ये त्वक्षरमनिर्देश्यमव्यक्तं पर्युपासते । / सर्वत्रगमचिन्त्यं च कूटस्थमचलं ध्रुवम् ॥12.3॥",
+    "iast": "ye tvakṣaramanirdeśyamavyaktaṃ paryupāsate । / sarvatragamacintyaṃ ca kūṭasthamacalaṃ dhruvam ॥12.3॥",
+    "sayIt": "yay tvak-SHA-ram a-nir-DAYSH-yam av-YAK-tam par-yoo-PAA-sa-tay / sar-vat-ra-GAM a-CHIN-tyam cha koo-ta-STHAM a-CHA-lam dhroo-VAM",
+    "translation": "But those who worship the imperishable — the indefinable, the unmanifest, the all-pervading, the inconceivable, the unchanging, the immovable, the constant — (the sentence continues in 12.4).",
+    "source": "Bhagavad Gita 12.3, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "ye",
+        "meaning": "those who"
+      },
+      {
+        "word": "tu",
+        "meaning": "but"
+      },
+      {
+        "word": "akṣaram",
+        "meaning": "the imperishable"
+      },
+      {
+        "word": "anirdeśyam",
+        "meaning": "indefinable, beyond description"
+      },
+      {
+        "word": "avyaktam",
+        "meaning": "the unmanifest"
+      },
+      {
+        "word": "paryupāsate",
+        "meaning": "worship, attend upon fully"
+      },
+      {
+        "word": "sarvatra-gam",
+        "meaning": "all-pervading, going everywhere"
+      },
+      {
+        "word": "acintyam",
+        "meaning": "inconceivable, beyond thought"
+      },
+      {
+        "word": "ca",
+        "meaning": "and"
+      },
+      {
+        "word": "kūṭa-stham",
+        "meaning": "unchanging, immutable"
+      },
+      {
+        "word": "acalam",
+        "meaning": "immovable"
+      },
+      {
+        "word": "dhruvam",
+        "meaning": "constant, fixed"
+      }
+    ],
+    "meaning": "This verse is the first half of a sentence completed in 12.4. Krishna now turns to the other kind of practitioner from Arjuna's question: those who worship not a personal form but the imperishable absolute. The string of adjectives — indefinable, unmanifest, everywhere, beyond thought, unchanging, immovable, constant — is itself a lesson in how hard this object of contemplation is to hold. Every word says what it is not, or what it never does. For someone building a daily practice, the verse honours the contemplative path while quietly showing why it demands so much: the mind is being asked to rest on something it cannot picture. Krishna's own assessment of that difficulty comes in 12.5.",
+    "reflection": "What draws people toward a truth beyond every image?",
+    "translations": {
+      "hi": "परंतु जो अविनाशी की उपासना करते हैं — जो अनिर्वचनीय है, अव्यक्त, सर्वव्यापी, अचिन्त्य, अपरिवर्तनीय, अचल और ध्रुव — (वाक्य 12.4 में पूरा होता है)।"
+    },
+    "meanings": {
+      "hi": "यह श्लोक उस वाक्य का पहला आधा हिस्सा है जो 12.4 में पूरा होता है। कृष्ण अब अर्जुन के प्रश्न में आए दूसरे प्रकार के साधक की ओर मुड़ते हैं: वे जो किसी व्यक्तिगत रूप की नहीं, बल्कि अविनाशी परम तत्व की उपासना करते हैं। विशेषणों की यह शृंखला — अनिर्वचनीय, अव्यक्त, सर्वव्यापी, विचार से परे, अपरिवर्तनीय, अचल, ध्रुव — अपने आप में एक पाठ है कि चिंतन का यह विषय पकड़ में आना कितना कठिन है। हर शब्द बताता है कि वह क्या नहीं है, या क्या कभी नहीं करता। दैनिक अभ्यास गढ़ने वाले के लिए यह श्लोक चिंतन-मार्ग का सम्मान करता है, पर चुपचाप यह भी दिखाता है कि वह इतनी माँग क्यों करता है: मन से कहा जा रहा है कि वह किसी ऐसी चीज़ पर टिके जिसकी कोई तस्वीर नहीं बनती। इस कठिनाई पर कृष्ण का अपना आकलन 12.5 में आता है।"
+    }
+  },
+  {
+    "slug": "gita-12-4",
+    "textRef": "Bhagavad Gita 12.4",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "संनियम्येन्द्रियग्रामं सर्वत्र समबुद्धयः । / ते प्राप्नुवन्ति मामेव सर्वभूतहिते रताः ॥12.4॥",
+    "iast": "saṃniyamyendriyagrāmaṃ sarvatra samabuddhayaḥ । / te prāpnuvanti māmeva sarvabhūtahite ratāḥ ॥12.4॥",
+    "sayIt": "sam-ni-YAM-yen-dri-ya-GRAA-mam sar-VAT-ra sa-ma-BOOD-dha-yah / tay praap-noo-VAN-ti MAAM-ay-va sar-va-BHOO-ta-hi-tay ra-TAAH",
+    "translation": "— those who fully restrain their senses, stay even-minded in every situation, and delight in the welfare of all beings — they too reach me.",
+    "source": "Bhagavad Gita 12.4, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "saṃniyamya",
+        "meaning": "fully restraining"
+      },
+      {
+        "word": "indriya-grāmam",
+        "meaning": "the whole group of senses"
+      },
+      {
+        "word": "sarvatra",
+        "meaning": "everywhere, in every situation"
+      },
+      {
+        "word": "sama-buddhayaḥ",
+        "meaning": "even-minded, of balanced understanding"
+      },
+      {
+        "word": "te",
+        "meaning": "they"
+      },
+      {
+        "word": "prāpnuvanti",
+        "meaning": "attain, reach"
+      },
+      {
+        "word": "mām",
+        "meaning": "me"
+      },
+      {
+        "word": "eva",
+        "meaning": "indeed, certainly"
+      },
+      {
+        "word": "sarva-bhūta-hite",
+        "meaning": "in the welfare of all beings"
+      },
+      {
+        "word": "ratāḥ",
+        "meaning": "delighting, devoted"
+      }
+    ],
+    "meaning": "Completing the sentence begun in 12.3, Krishna says that worshippers of the formless absolute also reach him — provided their contemplation is matched by conduct: senses restrained, mind even in every circumstance, and a genuine delight in the good of all beings. That last phrase matters most for daily life. The verse refuses to let formless meditation become private escape; the test of the practice is equanimity and active care for others. Both paths from Arjuna's question arrive at the same destination. Traditions gloss \"they reach me\" differently — Advaita reads it as realising the self that Krishna is, bhakti schools as attaining the Lord — but all agree the contemplative path, done fully, succeeds.",
+    "reflection": "Whose good, beyond your own, will your practice serve today?",
+    "translations": {
+      "hi": "— जो अपनी सारी इंद्रियों को पूरी तरह संयम में रखते हैं, हर स्थिति में समबुद्धि रहते हैं और सभी प्राणियों के हित में रमे रहते हैं — वे भी मुझे ही पाते हैं।"
+    },
+    "meanings": {
+      "hi": "12.3 में शुरू हुए वाक्य को पूरा करते हुए कृष्ण कहते हैं कि निराकार परम की उपासना करने वाले भी उन तक पहुँचते हैं — बशर्ते उनका चिंतन आचरण से मेल खाए: इंद्रियाँ संयमित हों, मन हर परिस्थिति में सम रहे, और सभी प्राणियों के भले में सच्चा आनंद हो। रोज़मर्रा के जीवन के लिए वही आख़िरी बात सबसे अहम है। श्लोक निराकार ध्यान को निजी पलायन नहीं बनने देता; अभ्यास की कसौटी है समता और दूसरों के लिए सक्रिय परवाह। अर्जुन के प्रश्न के दोनों मार्ग एक ही मंज़िल पर पहुँचते हैं। \"वे मुझे पाते हैं\" की व्याख्या परंपराओं में अलग है — अद्वैत इसे उस आत्म की अनुभूति मानता है जो कृष्ण हैं, भक्ति-परंपराएँ भगवान की प्राप्ति — पर सब मानते हैं कि पूरी निष्ठा से किया गया चिंतन-मार्ग सफल होता है।"
+    }
+  },
+  {
+    "slug": "gita-12-5",
+    "textRef": "Bhagavad Gita 12.5",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": true,
+    "devanagari": "क्लेशोऽधिकतरस्तेषामव्यक्तासक्तचेतसाम् । / अव्यक्ता हि गतिर्दुःखं देहवद्भिरवाप्यते ॥12.5॥",
+    "iast": "kleśo'dhikatarasteṣāmavyaktāsaktacetasām । / avyaktā hi gatirduḥkhaṃ dehavadbhiravāpyate ॥12.5॥",
+    "sayIt": "KLAY-sho dhi-ka-ta-RAS-tay-shaam av-yak-TAA-sak-ta-CHAY-ta-saam / av-yak-TAA hi ga-TEER dooh-KHAM day-ha-vad-BHEER a-VAAP-ya-tay",
+    "translation": "The struggle is greater for those whose minds are set on the unmanifest, for a goal without form is hard for embodied beings to reach.",
+    "source": "Bhagavad Gita 12.5, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "kleśaḥ",
+        "meaning": "struggle, hardship"
+      },
+      {
+        "word": "adhikataraḥ",
+        "meaning": "greater"
+      },
+      {
+        "word": "teṣām",
+        "meaning": "for those"
+      },
+      {
+        "word": "avyakta-āsakta-cetasām",
+        "meaning": "whose minds are attached to the unmanifest"
+      },
+      {
+        "word": "avyaktā",
+        "meaning": "unmanifest, formless"
+      },
+      {
+        "word": "hi",
+        "meaning": "for, because"
+      },
+      {
+        "word": "gatiḥ",
+        "meaning": "the goal, the way"
+      },
+      {
+        "word": "duḥkham",
+        "meaning": "with difficulty, painfully"
+      },
+      {
+        "word": "dehavadbhiḥ",
+        "meaning": "by embodied beings"
+      },
+      {
+        "word": "avāpyate",
+        "meaning": "is reached"
+      }
+    ],
+    "meaning": "Krishna adds an honest caveat: the formless path works, but it is harder. We are embodied creatures — we think in images, love with senses, and anchor attention in what we can perceive. Asking the mind to rest on something without any form goes against that grain, so the struggle is greater. This is not a dismissal of contemplative practice; it is practical guidance about difficulty, like a trail map marking the steeper route. For a daily practice, the takeaway is permission: using a form, a name, an image, or a lamp flame is not a lesser method — it is the path suited to beings with bodies. Advaita traditions read the difficulty as provisional rather than a ranking of truths; bhakti traditions read it as pointing to devotion's superiority.",
+    "reflection": "Where has the formless path felt hard for you — and what made it so?",
+    "translations": {
+      "hi": "जिनका मन अव्यक्त में लगा है, उनके लिए कठिनाई अधिक है; क्योंकि देहधारियों के लिए रूप-रहित लक्ष्य तक पहुँचना दुष्कर है।"
+    },
+    "meanings": {
+      "hi": "कृष्ण एक ईमानदार बात जोड़ते हैं: निराकार मार्ग काम करता है, पर वह ज़्यादा कठिन है। हम देहधारी प्राणी हैं — छवियों में सोचते हैं, इंद्रियों से प्रेम करते हैं और ध्यान उसी में टिकाते हैं जिसे महसूस कर सकें। मन से यह कहना कि वह बिना किसी रूप की चीज़ पर टिके, इस स्वभाव के विरुद्ध जाता है, इसलिए संघर्ष बड़ा है। यह चिंतन-साधना की उपेक्षा नहीं; यह कठिनाई के बारे में व्यावहारिक मार्गदर्शन है, जैसे नक्शे पर खड़ी चढ़ाई का निशान। दैनिक अभ्यास के लिए संदेश एक अनुमति है: रूप, नाम, छवि या दीये की लौ का सहारा लेना कोई कमतर तरीका नहीं — वह देहधारियों के अनुकूल मार्ग है। अद्वैत परंपराएँ इस कठिनाई को सत्यों की श्रेणी नहीं, अस्थायी बाधा मानती हैं; भक्ति-परंपराएँ इसे भक्ति की श्रेष्ठता का संकेत पढ़ती हैं।"
+    }
+  },
+  {
+    "slug": "gita-12-6",
+    "textRef": "Bhagavad Gita 12.6",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "ये तु सर्वाणि कर्माणि मयि संन्यस्य मत्पराः । / अनन्येनैव योगेन मां ध्यायन्त उपासते ॥12.6॥",
+    "iast": "ye tu sarvāṇi karmāṇi mayi saṃnyasya matparāḥ । / ananyenaiva yogena māṃ dhyāyanta upāsate ॥12.6॥",
+    "sayIt": "yay too sar-VAA-ni kar-MAA-ni MA-yi san-NYAS-ya mat-pa-RAAH / a-nan-yay-NAI-va yo-GAY-na maam dhyaa-YAN-ta oo-PAA-sa-tay",
+    "translation": "But those who dedicate all their actions to me, hold me as their highest aim, and worship me, meditating on me with undivided devotion — (the sentence continues in 12.7).",
+    "source": "Bhagavad Gita 12.6, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "ye",
+        "meaning": "those who"
+      },
+      {
+        "word": "tu",
+        "meaning": "but"
+      },
+      {
+        "word": "sarvāṇi",
+        "meaning": "all"
+      },
+      {
+        "word": "karmāṇi",
+        "meaning": "actions"
+      },
+      {
+        "word": "mayi",
+        "meaning": "in me, to me"
+      },
+      {
+        "word": "saṃnyasya",
+        "meaning": "renouncing, dedicating"
+      },
+      {
+        "word": "mat-parāḥ",
+        "meaning": "holding me as the highest aim"
+      },
+      {
+        "word": "ananyena",
+        "meaning": "undivided, exclusive"
+      },
+      {
+        "word": "eva",
+        "meaning": "indeed"
+      },
+      {
+        "word": "yogena",
+        "meaning": "through yoga, through discipline"
+      },
+      {
+        "word": "mām",
+        "meaning": "me"
+      },
+      {
+        "word": "dhyāyantaḥ",
+        "meaning": "meditating on"
+      },
+      {
+        "word": "upāsate",
+        "meaning": "worship"
+      }
+    ],
+    "meaning": "The first half of a sentence completed in 12.7, this verse describes the devotional alternative to the steep formless path. Three moves define it: dedicate every action to the divine rather than to personal gain, make that relationship your highest aim, and let attention rest on the divine without dividing it among competing refuges. Notice that the verse starts with action, not withdrawal — ordinary work continues, but its ownership changes hands. For a daily practice this is the most portable instruction in the chapter: you cannot always sit in meditation, but you can offer whatever you are already doing. What that offering earns is stated in the next verse.",
+    "reflection": "What would it mean to hand today's worries over, fully?",
+    "translations": {
+      "hi": "परंतु जो अपने सारे कर्म मुझे समर्पित करके, मुझे ही परम लक्ष्य मानकर, अनन्य योग से मेरा ध्यान करते हुए मेरी उपासना करते हैं — (वाक्य 12.7 में पूरा होता है)।"
+    },
+    "meanings": {
+      "hi": "12.7 में पूरे होने वाले वाक्य का यह पहला आधा हिस्सा उस भक्ति-विकल्प का वर्णन है जो खड़ी चढ़ाई वाले निराकार मार्ग के सामने रखा गया है। तीन कदम इसे परिभाषित करते हैं: हर कर्म निजी लाभ की बजाय ईश्वर को समर्पित करना, उस संबंध को अपना सर्वोच्च लक्ष्य बनाना, और ध्यान को कई प्रतिस्पर्धी सहारों में बाँटे बिना ईश्वर पर टिकने देना। ग़ौर कीजिए कि श्लोक की शुरुआत कर्म से होती है, संसार-त्याग से नहीं — सामान्य काम चलता रहता है, बस उसका स्वामित्व हाथ बदल लेता है। दैनिक अभ्यास के लिए यह अध्याय का सबसे साथ ले चलने लायक निर्देश है: आप हर समय ध्यान में नहीं बैठ सकते, पर जो कर ही रहे हैं उसे अर्पित कर सकते हैं। इस अर्पण का फल अगले श्लोक में बताया गया है।"
+    }
+  },
+  {
+    "slug": "gita-12-7",
+    "textRef": "Bhagavad Gita 12.7",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "तेषामहं समुद्धर्ता मृत्युसंसारसागरात् । / भवामि नचिरात्पार्थ मय्यावेशितचेतसाम् ॥12.7॥",
+    "iast": "teṣāmahaṃ samuddhartā mṛtyusaṃsārasāgarāt । / bhavāmi nacirātpārtha mayyāveśitacetasām ॥12.7॥",
+    "sayIt": "TAY-shaam a-HAM sa-mood-DHAR-taa mrit-yoo-sam-SAA-ra-saa-ga-RAAT / bha-VAA-mi na chi-RAAT PAAR-tha mai-YAA-vay-shi-ta-CHAY-ta-saam",
+    "translation": "— for them, whose minds have entered into me, I soon become the rescuer from the ocean of death-bound existence, O Partha.",
+    "source": "Bhagavad Gita 12.7, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "teṣām",
+        "meaning": "for them"
+      },
+      {
+        "word": "aham",
+        "meaning": "I"
+      },
+      {
+        "word": "samuddhartā",
+        "meaning": "the rescuer, the one who lifts up"
+      },
+      {
+        "word": "mṛtyu-saṃsāra-sāgarāt",
+        "meaning": "from the ocean of death-bound worldly existence"
+      },
+      {
+        "word": "bhavāmi",
+        "meaning": "I become"
+      },
+      {
+        "word": "na cirāt",
+        "meaning": "before long, soon"
+      },
+      {
+        "word": "pārtha",
+        "meaning": "O Partha (Arjuna, son of Pritha)"
+      },
+      {
+        "word": "mayi",
+        "meaning": "in me"
+      },
+      {
+        "word": "āveśita-cetasām",
+        "meaning": "of those whose minds have entered, are absorbed"
+      }
+    ],
+    "meaning": "Completing the sentence begun in 12.6, Krishna makes a promise: for those whose minds are absorbed in him, he himself becomes the rescuer from the ocean of samsara — and soon, not after lifetimes of effort. The image reverses the usual picture of spiritual work. On the formless path of 12.3–12.5, the practitioner climbs; here, the swimmer is lifted. The effort asked of the devotee is orientation — turning the mind toward the divine — while the crossing itself is described as God's act. For daily practice, this verse is the chapter's reassurance: the practice is not self-rescue but sustained trust. Bhakti traditions read this grace as central; Advaita readings frame the rescue as the removal of ignorance.",
+    "reflection": "Where in your life are you waiting for help you could simply ask for?",
+    "translations": {
+      "hi": "— हे पार्थ, जिनका चित्त मुझमें समा गया है, उनके लिए मैं शीघ्र ही मृत्यु से बँधे संसार-सागर से उबारने वाला बन जाता हूँ।"
+    },
+    "meanings": {
+      "hi": "12.6 में शुरू हुए वाक्य को पूरा करते हुए कृष्ण एक वचन देते हैं: जिनका मन उनमें रम गया है, उनके लिए वे स्वयं संसार-सागर से उबारने वाले बनते हैं — और शीघ्र, जन्मों की मेहनत के बाद नहीं। यह छवि आध्यात्मिक श्रम की आम तस्वीर को पलट देती है। 12.3–12.5 के निराकार मार्ग पर साधक चढ़ाई करता है; यहाँ तैरने वाले को उठा लिया जाता है। भक्त से जो प्रयास माँगा गया है वह है दिशा — मन को ईश्वर की ओर मोड़ना — जबकि पार कराना स्वयं ईश्वर का कर्म बताया गया है। दैनिक अभ्यास के लिए यह श्लोक अध्याय का आश्वासन है: साधना आत्म-उद्धार नहीं, टिका हुआ भरोसा है। भक्ति-परंपराएँ इस कृपा को केंद्रीय मानती हैं; अद्वैत की व्याख्याएँ इस उद्धार को अज्ञान के हटने के रूप में देखती हैं।"
+    }
+  },
+  {
+    "slug": "gita-12-8",
+    "textRef": "Bhagavad Gita 12.8",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "मय्येव मन आधत्स्व मयि बुद्धिं निवेशय । / निवसिष्यसि मय्येव अत ऊर्ध्वं न संशयः ॥12.8॥",
+    "iast": "mayyeva mana ādhatsva mayi buddhiṃ niveśaya । / nivasiṣyasi mayyeva ata ūrdhvaṃ na saṃśayaḥ ॥12.8॥",
+    "sayIt": "mai-YAY-va MA-na AA-dhats-va MA-yi BOOD-dhim ni-VAY-sha-ya / ni-va-SISH-ya-si mai-YAY-va A-ta OORD-hvam na san-sha-YAH",
+    "translation": "Fix your mind on me alone; settle your understanding in me. From then on you will live in me — of this there is no doubt.",
+    "source": "Bhagavad Gita 12.8, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "mayi",
+        "meaning": "on me"
+      },
+      {
+        "word": "eva",
+        "meaning": "alone, only"
+      },
+      {
+        "word": "manaḥ",
+        "meaning": "the mind"
+      },
+      {
+        "word": "ādhatsva",
+        "meaning": "fix, place"
+      },
+      {
+        "word": "buddhim",
+        "meaning": "the understanding, the intellect"
+      },
+      {
+        "word": "niveśaya",
+        "meaning": "settle, establish"
+      },
+      {
+        "word": "nivasiṣyasi",
+        "meaning": "you will dwell, you will live"
+      },
+      {
+        "word": "ataḥ ūrdhvam",
+        "meaning": "from then on, hereafter"
+      },
+      {
+        "word": "na saṃśayaḥ",
+        "meaning": "there is no doubt"
+      }
+    ],
+    "meaning": "This verse begins the chapter's famous ladder of practice. The first rung is the highest ask: fix both mind and intellect on the divine. The two words are distinct on purpose — manas is the feeling, wandering attention; buddhi is the judging, deciding faculty. Krishna asks for both: not just warm feeling that drifts elsewhere when deciding what to do, and not just intellectual conviction with no felt attention. When both settle in the same place, he says, you already dwell there — the goal is not deferred to another life. The next verses will lower the rung for those who cannot yet manage this, which is what makes the ladder humane.",
+    "reflection": "Can you give the divine one undivided minute today?",
+    "translations": {
+      "hi": "अपना मन मुझमें ही स्थिर कर, अपनी बुद्धि मुझमें लगा दे। इसके बाद तू मुझमें ही निवास करेगा — इसमें कोई संदेह नहीं।"
+    },
+    "meanings": {
+      "hi": "यहाँ से अध्याय की प्रसिद्ध अभ्यास-सीढ़ी शुरू होती है। पहला पायदान सबसे ऊँची माँग है: मन और बुद्धि दोनों को ईश्वर पर टिका देना। दोनों शब्द जान-बूझकर अलग रखे गए हैं — मनस् वह भावुक, भटकता हुआ ध्यान है; बुद्धि परखने और निर्णय लेने वाली शक्ति। कृष्ण दोनों माँगते हैं: न सिर्फ़ ऐसी गर्म भावना जो निर्णय की घड़ी में कहीं और बह जाए, और न सिर्फ़ बौद्धिक सहमति जिसमें महसूस किया हुआ ध्यान न हो। जब दोनों एक ही जगह ठहर जाते हैं, तो कृष्ण कहते हैं, तुम वहीं निवास करने लगते हो — लक्ष्य किसी अगले जन्म तक टाला नहीं गया। अगले श्लोक उन लोगों के लिए पायदान नीचे लाएँगे जो अभी इतना नहीं कर पाते — यही बात इस सीढ़ी को मानवीय बनाती है।"
+    }
+  },
+  {
+    "slug": "gita-12-9",
+    "textRef": "Bhagavad Gita 12.9",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "अथ चित्तं समाधातुं न शक्नोषि मयि स्थिरम् । / अभ्यासयोगेन ततो मामिच्छाप्तुं धनंजय ॥12.9॥",
+    "iast": "atha cittaṃ samādhātuṃ na śaknoṣi mayi sthiram । / abhyāsayogena tato māmicchāptuṃ dhanaṃjaya ॥12.9॥",
+    "sayIt": "A-tha CHIT-tam sa-maa-DHAA-toom na shak-NO-shi MA-yi sthi-RAM / ab-hyaa-sa-yo-GAY-na TA-to maam ich-CHAAP-toom dha-nan-JA-ya",
+    "translation": "But if you cannot hold your mind steadily on me, then seek to reach me through the yoga of repeated practice, O Dhananjaya.",
+    "source": "Bhagavad Gita 12.9, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "atha",
+        "meaning": "but if"
+      },
+      {
+        "word": "cittam",
+        "meaning": "the mind, the attention"
+      },
+      {
+        "word": "samādhātum",
+        "meaning": "to hold steadily, to settle"
+      },
+      {
+        "word": "na śaknoṣi",
+        "meaning": "you are not able"
+      },
+      {
+        "word": "mayi",
+        "meaning": "on me"
+      },
+      {
+        "word": "sthiram",
+        "meaning": "firmly, steadily"
+      },
+      {
+        "word": "abhyāsa-yogena",
+        "meaning": "through the yoga of repeated practice"
+      },
+      {
+        "word": "tataḥ",
+        "meaning": "then"
+      },
+      {
+        "word": "mām",
+        "meaning": "me"
+      },
+      {
+        "word": "iccha",
+        "meaning": "seek, aspire"
+      },
+      {
+        "word": "āptum",
+        "meaning": "to attain"
+      },
+      {
+        "word": "dhanaṃjaya",
+        "meaning": "O Dhananjaya, \"winner of wealth\" (Arjuna)"
+      }
+    ],
+    "meaning": "The second rung of the ladder, and the one most daily practitioners actually stand on. If steady absorption is beyond you — and Krishna assumes without judgment that it may be — then practise repeatedly: abhyasa-yoga, the discipline of returning. The mind wanders; you bring it back; it wanders again; you bring it back again. That returning is not failure at the real practice — it is the real practice at this stage. This is the verse behind every habit-shaped devotion: a daily verse, a fixed time of prayer, a repeated name. Consistency substitutes for steadiness until, gradually, it produces it. The instruction is warmly matter-of-fact: inability is met with a method, not a rebuke.",
+    "reflection": "What small, repeated practice could carry you when focus fails?",
+    "translations": {
+      "hi": "पर यदि तू अपना चित्त मुझ पर स्थिर नहीं रख पाता, तो हे धनंजय, अभ्यास-योग के द्वारा मुझे पाने की इच्छा कर।"
+    },
+    "meanings": {
+      "hi": "सीढ़ी का दूसरा पायदान — और वही, जिस पर ज़्यादातर दैनिक साधक असल में खड़े हैं। यदि स्थिर तल्लीनता तुम्हारे बस में नहीं — और कृष्ण बिना कोई फ़ैसला सुनाए मान लेते हैं कि हो सकता है न हो — तो बार-बार अभ्यास करो: अभ्यास-योग, लौटने का अनुशासन। मन भटकता है; तुम उसे वापस लाते हो; वह फिर भटकता है; तुम फिर लाते हो। यह लौटना असली साधना में असफलता नहीं — इस चरण पर यही असली साधना है। आदत की शक्ल वाली हर भक्ति के पीछे यही श्लोक है: रोज़ एक श्लोक, प्रार्थना का तय समय, दोहराया हुआ नाम। नियमितता स्थिरता की जगह लेती है, जब तक धीरे-धीरे वही उसे जन्म न दे दे। निर्देश का स्वर सहज और स्नेह भरा है: असमर्थता का उत्तर एक विधि है, फटकार नहीं।"
+    }
+  },
+  {
+    "slug": "gita-12-10",
+    "textRef": "Bhagavad Gita 12.10",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "अभ्यासेऽप्यसमर्थोऽसि मत्कर्मपरमो भव । / मदर्थमपि कर्माणि कुर्वन्सिद्धिमवाप्स्यसि ॥12.10॥",
+    "iast": "abhyāse'pyasamartho'si matkarmaparamo bhava । / madarthamapi karmāṇi kurvansiddhimavāpsyasi ॥12.10॥",
+    "sayIt": "ab-HYAA-say pya-sa-MAR-tho si mat-kar-ma-pa-ra-MO BHA-va / ma-dar-THAM a-pi kar-MAA-ni KOOR-van SID-dhim a-VAAP-sya-si",
+    "translation": "If you cannot even manage this practice, then devote yourself to working for me; even by doing actions for my sake you will reach fulfilment.",
+    "source": "Bhagavad Gita 12.10, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "abhyāse",
+        "meaning": "in repeated practice"
+      },
+      {
+        "word": "api",
+        "meaning": "even"
+      },
+      {
+        "word": "asamarthaḥ",
+        "meaning": "unable, not capable"
+      },
+      {
+        "word": "asi",
+        "meaning": "you are"
+      },
+      {
+        "word": "mat-karma-paramaḥ",
+        "meaning": "devoted above all to work for me"
+      },
+      {
+        "word": "bhava",
+        "meaning": "become"
+      },
+      {
+        "word": "mad-artham",
+        "meaning": "for my sake"
+      },
+      {
+        "word": "api",
+        "meaning": "even, merely"
+      },
+      {
+        "word": "karmāṇi",
+        "meaning": "actions"
+      },
+      {
+        "word": "kurvan",
+        "meaning": "performing"
+      },
+      {
+        "word": "siddhim",
+        "meaning": "fulfilment, perfection"
+      },
+      {
+        "word": "avāpsyasi",
+        "meaning": "you will attain"
+      }
+    ],
+    "meaning": "The ladder descends another rung. If even structured, repeated practice is beyond you right now, Krishna offers something anyone can do: act for his sake. No meditation posture, no fixed discipline — just take the work already in your hands and dedicate it. Cook, drive, care for someone, do your job, but do it as an offering rather than only for yourself. The verse promises that this alone leads to fulfilment, because the reorientation of motive is itself transformative. For someone starting a daily practice, this is the most forgiving entry point in the Gita: begin where you are, with what you are already doing, and let dedication do the early work that concentration cannot yet do.",
+    "reflection": "What ordinary work today could you do as an offering?",
+    "translations": {
+      "hi": "यदि तू यह अभ्यास भी नहीं कर पाता, तो मेरे लिए कर्म करने में लग जा; मेरे लिए कर्म करते हुए भी तू सिद्धि पा लेगा।"
+    },
+    "meanings": {
+      "hi": "सीढ़ी एक पायदान और उतरती है। यदि इस समय व्यवस्थित, दोहराया हुआ अभ्यास भी बस के बाहर है, तो कृष्ण कुछ ऐसा देते हैं जो कोई भी कर सकता है: उनके लिए कर्म करो। न ध्यान की मुद्रा, न बँधा हुआ अनुशासन — बस जो काम पहले से हाथ में है, उसे समर्पित कर दो। खाना बनाओ, गाड़ी चलाओ, किसी की देखभाल करो, अपनी नौकरी करो — पर केवल अपने लिए नहीं, एक अर्पण की तरह। श्लोक वचन देता है कि इतने भर से सिद्धि मिलती है, क्योंकि इरादे का यह नया रुख़ अपने आप में रूपांतर लाता है। दैनिक अभ्यास शुरू करने वाले के लिए यह गीता का सबसे उदार प्रवेश-द्वार है: जहाँ हो वहीं से शुरू करो, जो कर रहे हो उसी से, और शुरुआती काम समर्पण को करने दो — वह काम जो एकाग्रता अभी नहीं कर पाती।"
+    }
+  },
+  {
+    "slug": "gita-12-11",
+    "textRef": "Bhagavad Gita 12.11",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "अथैतदप्यशक्तोऽसि कर्तुं मद्योगमाश्रितः । / सर्वकर्मफलत्यागं ततः कुरु यतात्मवान् ॥12.11॥",
+    "iast": "athaitadapyaśakto'si kartuṃ madyogamāśritaḥ । / sarvakarmaphalatyāgaṃ tataḥ kuru yatātmavān ॥12.11॥",
+    "sayIt": "a-thai-ta-dap-ya-SHAK-toh-si KAR-tum mad-YO-ga-MAASH-ri-tah / sar-va-kar-ma-pha-la-TYAA-gam TA-tah KU-ru ya-TAAT-ma-vaan",
+    "translation": "And if even this is beyond you, then, taking refuge in union with me, give up the fruits of all your actions with a disciplined mind.",
+    "source": "Bhagavad Gita 12.11, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "atha",
+        "meaning": "and if, but if"
+      },
+      {
+        "word": "etat api",
+        "meaning": "even this"
+      },
+      {
+        "word": "aśaktaḥ asi",
+        "meaning": "you are unable"
+      },
+      {
+        "word": "kartum",
+        "meaning": "to do"
+      },
+      {
+        "word": "mat-yogam",
+        "meaning": "union with me, my yoga"
+      },
+      {
+        "word": "āśritaḥ",
+        "meaning": "taking refuge in, relying on"
+      },
+      {
+        "word": "sarva-karma-phala-tyāgam",
+        "meaning": "the giving up of the fruits of all actions"
+      },
+      {
+        "word": "tataḥ",
+        "meaning": "then"
+      },
+      {
+        "word": "kuru",
+        "meaning": "do, practise"
+      },
+      {
+        "word": "yata-ātmavān",
+        "meaning": "with a disciplined, self-restrained mind"
+      }
+    ],
+    "meaning": "This verse closes the ladder Krishna builds across 12.8–11. If fixing the mind wholly on him is out of reach, and steady practice too, and even working for his sake feels like too much, one door is always open: keep doing your work, and let go of its results. That release, made with some self-restraint, is itself a full spiritual practice, and it needs no special skill, free time, or temperament. Commentators read the ladder differently — Advaita teachers often see descending steps suited to different capacities, while Vaishnava commentators tend to read them as alternative routes — but all agree that relinquishing results is a door open to everyone, which is exactly what makes it a workable daily discipline.",
+    "reflection": "What outcome are you ready to surrender tonight?",
+    "translations": {
+      "hi": "और यदि यह भी तेरे बस में नहीं, तो मेरे योग का आश्रय लेकर, संयमित मन से सब कर्मों के फल का त्याग कर।"
+    },
+    "meanings": {
+      "hi": "यह श्लोक 12.8–11 में बनी कृष्ण की सीढ़ी को पूरा करता है। यदि मन को पूरी तरह उन पर टिकाना पहुँच से बाहर है, स्थिर अभ्यास भी, और उनके लिए काम करना भी बहुत लगता है, तो एक द्वार सदा खुला है: अपना काम करते रहो और उसके परिणाम छोड़ दो। थोड़े आत्म-संयम के साथ किया गया यह त्याग अपने आप में एक पूरी आध्यात्मिक साधना है, और इसके लिए कोई विशेष कौशल, खाली समय या स्वभाव नहीं चाहिए। टीकाकार इस सीढ़ी को अलग-अलग पढ़ते हैं — अद्वैत आचार्य प्रायः इन्हें भिन्न क्षमताओं के अनुसार उतरते चरण मानते हैं, जबकि वैष्णव टीकाकार इन्हें वैकल्पिक रास्ते — पर सब सहमत हैं कि फल का त्याग सबके लिए खुला द्वार है, और यही उसे एक व्यावहारिक दैनिक अनुशासन बनाता है।"
+    }
+  },
+  {
+    "slug": "gita-12-12",
+    "textRef": "Bhagavad Gita 12.12",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "श्रेयो हि ज्ञानमभ्यासाज्ज्ञानाद्ध्यानं विशिष्यते । / ध्यानात्कर्मफलत्यागस्त्यागाच्छान्तिरनन्तरम् ॥12.12॥",
+    "iast": "śreyo hi jñānamabhyāsājjñānāddhyānaṃ viśiṣyate । / dhyānātkarmaphalatyāgastyāgācchāntiranantaram ॥12.12॥",
+    "sayIt": "SHRAY-yo hi GYAA-na-mab-YAA-saaj GYAA-naad DHYAA-nam vi-SHISH-ya-tay / DHYAA-naat kar-ma-pha-la-TYAA-gas TYAA-gaach CHAAN-ti-ra-nan-ta-ram",
+    "translation": "Knowledge is better than practice; meditation is better than knowledge; giving up the fruits of action is better than meditation — for peace follows immediately upon that giving up.",
+    "source": "Bhagavad Gita 12.12, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "śreyaḥ",
+        "meaning": "better, superior"
+      },
+      {
+        "word": "hi",
+        "meaning": "indeed, for"
+      },
+      {
+        "word": "jñānam",
+        "meaning": "knowledge"
+      },
+      {
+        "word": "abhyāsāt",
+        "meaning": "than (rote) practice"
+      },
+      {
+        "word": "jñānāt",
+        "meaning": "than knowledge"
+      },
+      {
+        "word": "dhyānam",
+        "meaning": "meditation"
+      },
+      {
+        "word": "viśiṣyate",
+        "meaning": "is superior, stands out"
+      },
+      {
+        "word": "dhyānāt",
+        "meaning": "than meditation"
+      },
+      {
+        "word": "karma-phala-tyāgaḥ",
+        "meaning": "the giving up of the fruits of action"
+      },
+      {
+        "word": "tyāgāt",
+        "meaning": "from that giving up"
+      },
+      {
+        "word": "śāntiḥ",
+        "meaning": "peace"
+      },
+      {
+        "word": "anantaram",
+        "meaning": "immediately after"
+      }
+    ],
+    "meaning": "Krishna ranks the inner disciplines: knowledge is better than rote practice, meditation better than knowledge, and letting go of the results of action better still — because peace follows it immediately. For a daily practice this is encouraging rather than demanding. The step named highest here is not a rare attainment reserved for experts; it is a decision available today: do the task, release the outcome, and notice the quiet that follows. Commentators differ on how literally to take the ranking — some read it as praise of relinquishment meant to encourage the struggling practitioner rather than a fixed hierarchy of paths — so hold the sequence lightly and keep the practical point: relinquishment brings peace without delay.",
+    "reflection": "What would one moment of true letting-go feel like today?",
+    "translations": {
+      "hi": "अभ्यास से ज्ञान श्रेष्ठ है; ज्ञान से ध्यान बढ़कर है; और ध्यान से कर्मफल का त्याग — क्योंकि त्याग के तुरंत बाद शांति आती है।"
+    },
+    "meanings": {
+      "hi": "कृष्ण भीतरी अनुशासनों की श्रेणी बताते हैं: रटे हुए अभ्यास से ज्ञान बेहतर, ज्ञान से ध्यान, और कर्म के फलों को छोड़ देना उससे भी बढ़कर — क्योंकि उसके तुरंत बाद शांति आती है। दैनिक अभ्यास के लिए यह माँग नहीं, हौसला है। यहाँ जिसे सर्वोच्च कहा गया है वह विशेषज्ञों के लिए आरक्षित कोई दुर्लभ उपलब्धि नहीं; वह आज ही उपलब्ध एक निर्णय है: काम करो, परिणाम छोड़ो, और पीछे-पीछे आती शांति को महसूस करो। इस क्रम को कितना शाब्दिक लिया जाए, इस पर टीकाकारों में मतभेद है — कुछ इसे मार्गों की स्थायी श्रेणी नहीं, बल्कि जूझते साधक का हौसला बढ़ाने के लिए त्याग की प्रशंसा मानते हैं — इसलिए क्रम को हल्के से पकड़िए और व्यावहारिक बात याद रखिए: त्याग बिना देर किए शांति लाता है।"
+    }
+  },
+  {
+    "slug": "gita-12-13",
+    "textRef": "Bhagavad Gita 12.13",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": false,
+    "devanagari": "अद्वेष्टा सर्वभूतानां मैत्रः करुण एव च । / निर्ममो निरहंकारः समदुःखसुखः क्षमी ॥12.13॥",
+    "iast": "adveṣṭā sarvabhūtānāṃ maitraḥ karuṇa eva ca । / nirmamo nirahaṃkāraḥ samaduḥkhasukhaḥ kṣamī ॥12.13॥",
+    "sayIt": "ad-VESH-taa sar-va-bhoo-TAA-naam MAI-trah KA-ru-na AY-va cha / nir-MA-mo ni-ra-han-KAA-rah sa-ma-DUH-kha-su-khah KSHA-mee",
+    "translation": "One who bears no ill will toward any being, who is friendly and compassionate, free of possessiveness and self-importance, the same in sorrow and joy, and patient —",
+    "source": "Bhagavad Gita 12.13, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "adveṣṭā",
+        "meaning": "bearing ill will toward none"
+      },
+      {
+        "word": "sarva-bhūtānām",
+        "meaning": "toward all beings"
+      },
+      {
+        "word": "maitraḥ",
+        "meaning": "friendly"
+      },
+      {
+        "word": "karuṇaḥ",
+        "meaning": "compassionate"
+      },
+      {
+        "word": "eva ca",
+        "meaning": "and indeed"
+      },
+      {
+        "word": "nirmamaḥ",
+        "meaning": "free of \"mine\", without possessiveness"
+      },
+      {
+        "word": "nirahaṃkāraḥ",
+        "meaning": "free of ego, without the conceit of \"I\""
+      },
+      {
+        "word": "sama-duḥkha-sukhaḥ",
+        "meaning": "the same in sorrow and joy"
+      },
+      {
+        "word": "kṣamī",
+        "meaning": "patient, forgiving"
+      }
+    ],
+    "meaning": "Here begins the portrait Krishna paints, through verse 20, of the devotee who is dear to him — and it opens as a sentence completed in 12.14. It starts not with feats but with gentleness: no ill will toward any being, friendliness, compassion, freedom from \"me\" and \"mine\", evenness in joy and sorrow, patience. Notice that every quality is relational; this is devotion measured by how we meet whatever crosses our path. For a daily practice, the verse offers a simple evening check-in: was I friendly today, and what am I still gripping as \"mine\"? Across Vaishnava, Advaita, and other readings these verses are received remarkably alike — a shared ideal rather than a point of dispute.",
+    "reflection": "Toward whom can you practise friendliness without conditions today?",
+    "translations": {
+      "hi": "जो किसी भी प्राणी से द्वेष नहीं रखता, जो मैत्रीपूर्ण और करुणामय है, ममता और अहंकार से मुक्त, सुख-दुख में सम और क्षमाशील है —"
+    },
+    "meanings": {
+      "hi": "यहाँ से वह चित्र शुरू होता है जिसे कृष्ण श्लोक 20 तक खींचते हैं — उस भक्त का, जो उन्हें प्रिय है — और यह एक ऐसे वाक्य के रूप में खुलता है जो 12.14 में पूरा होता है। शुरुआत करतबों से नहीं, कोमलता से होती है: किसी प्राणी से द्वेष नहीं, मैत्री, करुणा, \"मैं\" और \"मेरे\" से मुक्ति, सुख-दुख में समता, धैर्य। ध्यान दीजिए कि हर गुण संबंधों का है; यह वह भक्ति है जो इस बात से मापी जाती है कि हम अपने रास्ते में आने वाली हर चीज़ से कैसे मिलते हैं। दैनिक अभ्यास के लिए श्लोक शाम की एक सीधी जाँच देता है: क्या मैं आज मैत्रीपूर्ण रहा, और किस चीज़ को अब भी \"मेरा\" कहकर जकड़े हुए हूँ? वैष्णव, अद्वैत और अन्य पाठों में ये श्लोक लगभग एक-से भाव से ग्रहण किए जाते हैं — विवाद का नहीं, साझा आदर्श का विषय।"
+    }
+  },
+  {
+    "slug": "gita-12-14",
+    "textRef": "Bhagavad Gita 12.14",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": false,
+    "devanagari": "संतुष्टः सततं योगी यतात्मा दृढनिश्चयः । / मय्यर्पितमनोबुद्धिर्यो मद्भक्तः स मे प्रियः ॥12.14॥",
+    "iast": "saṃtuṣṭaḥ satataṃ yogī yatātmā dṛḍhaniścayaḥ । / mayyarpitamanobuddhiryo madbhaktaḥ sa me priyaḥ ॥12.14॥",
+    "sayIt": "san-TUSH-tah sa-ta-tam YO-gee ya-TAAT-maa dri-dha-NISH-cha-yah / may-YAR-pi-ta-ma-no-BUD-dhir yo mad-BHAK-tah sa may PRI-yah",
+    "translation": "— that yogi who is always content, self-controlled, firm in resolve, with mind and understanding offered to me — that devotee of mine is dear to me.",
+    "source": "Bhagavad Gita 12.14, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "saṃtuṣṭaḥ",
+        "meaning": "content, satisfied"
+      },
+      {
+        "word": "satatam",
+        "meaning": "always, constantly"
+      },
+      {
+        "word": "yogī",
+        "meaning": "the yogi, one joined in practice"
+      },
+      {
+        "word": "yata-ātmā",
+        "meaning": "self-controlled"
+      },
+      {
+        "word": "dṛḍha-niścayaḥ",
+        "meaning": "of firm resolve"
+      },
+      {
+        "word": "mayi",
+        "meaning": "in me, to me"
+      },
+      {
+        "word": "arpita-manas-buddhiḥ",
+        "meaning": "with mind and understanding offered"
+      },
+      {
+        "word": "yaḥ",
+        "meaning": "who"
+      },
+      {
+        "word": "mat-bhaktaḥ",
+        "meaning": "my devotee"
+      },
+      {
+        "word": "saḥ me priyaḥ",
+        "meaning": "that one is dear to me"
+      }
+    ],
+    "meaning": "Completing the sentence begun in 12.13, the portrait turns inward: contentment that does not depend on circumstances, steadiness, self-control, firm resolve, and a mind and understanding quietly offered to the divine. The word satatam — \"always\" — matters: contentment here is a cultivated habit, not a lucky mood. For someone building a daily practice, this verse describes what regularity is for. Small, repeated acts of attention slowly firm up resolve, and offering becomes a reflex rather than an occasion. Nothing here requires leaving home or work; the offering happens in the mind and heart. Commentarial traditions place different weight on \"offered to me\" — the personal Krishna or the supreme reality — but the practice described is the same.",
+    "reflection": "What is one contentment you keep overlooking?",
+    "translations": {
+      "hi": "— जो योगी सदा संतुष्ट है, संयमी और दृढ़ निश्चय वाला, जिसने अपने मन और बुद्धि मुझे अर्पित कर दिए हैं — मेरा वह भक्त मुझे प्रिय है।"
+    },
+    "meanings": {
+      "hi": "12.13 में शुरू हुए वाक्य को पूरा करते हुए चित्र भीतर की ओर मुड़ता है: परिस्थितियों पर न टिका संतोष, स्थिरता, आत्म-संयम, दृढ़ निश्चय, और चुपचाप ईश्वर को अर्पित मन-बुद्धि। \"सततम्\" — सदा — शब्द महत्वपूर्ण है: यहाँ संतोष एक साधी हुई आदत है, कोई भाग्यशाली मनोदशा नहीं। दैनिक अभ्यास गढ़ने वाले के लिए यह श्लोक बताता है कि नियमितता आख़िर किसलिए है। ध्यान के छोटे, दोहराए हुए काम धीरे-धीरे निश्चय को पक्का करते हैं, और अर्पण किसी ख़ास अवसर की जगह सहज वृत्ति बन जाता है। इसमें घर या काम छोड़ने की कोई शर्त नहीं; अर्पण मन और हृदय में होता है। \"मुझे अर्पित\" पर टीका-परंपराएँ अलग-अलग ज़ोर देती हैं — व्यक्तिगत कृष्ण या परम तत्व — पर वर्णित साधना एक ही है।"
+    }
+  },
+  {
+    "slug": "gita-12-15",
+    "textRef": "Bhagavad Gita 12.15",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "यस्मान्नोद्विजते लोको लोकान्नोद्विजते च यः । / हर्षामर्षभयोद्वेगैर्मुक्तो यः स च मे प्रियः ॥12.15॥",
+    "iast": "yasmānnodvijate loko lokānnodvijate ca yaḥ । / harṣāmarṣabhayodvegairmukto yaḥ sa ca me priyaḥ ॥12.15॥",
+    "sayIt": "yas-MAAN-nod-vi-ja-tay LO-ko lo-KAAN-nod-vi-ja-tay cha yah / har-SHAA-mar-sha-bha-YOD-vay-gair MUK-to yah sa cha may PRI-yah",
+    "translation": "One from whom the world does not shrink and who does not shrink from the world, who is free from excitement, resentment, fear, and anxiety — that one too is dear to me.",
+    "source": "Bhagavad Gita 12.15, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "yasmāt",
+        "meaning": "from whom"
+      },
+      {
+        "word": "na udvijate",
+        "meaning": "does not shrink, is not disturbed"
+      },
+      {
+        "word": "lokaḥ",
+        "meaning": "the world, other people"
+      },
+      {
+        "word": "lokāt",
+        "meaning": "from the world"
+      },
+      {
+        "word": "ca yaḥ",
+        "meaning": "and who"
+      },
+      {
+        "word": "harṣa",
+        "meaning": "excitement, elation"
+      },
+      {
+        "word": "amarṣa",
+        "meaning": "resentment, impatience"
+      },
+      {
+        "word": "bhaya",
+        "meaning": "fear"
+      },
+      {
+        "word": "udvegaiḥ",
+        "meaning": "(and) anxiety — by these agitations"
+      },
+      {
+        "word": "muktaḥ",
+        "meaning": "freed"
+      },
+      {
+        "word": "saḥ ca me priyaḥ",
+        "meaning": "that one too is dear to me"
+      }
+    ],
+    "meaning": "This verse looks at devotion from the outside in. The dear devotee is someone the world does not shrink from, and who does not shrink from the world: not a source of agitation for others, and not agitated by them. Four disturbances are named — elation, resentment, fear, anxiety — the churn that tosses an ordinary day about. It is a gentle and slightly startling measure of progress: how do people feel around you? For daily practice, it invites noticing which of the four visits most often and meeting it with a breath rather than a reaction. Commentarial traditions read this image of mutual non-disturbance in essentially the same warm spirit.",
+    "reflection": "Do people relax around you? What would make it so?",
+    "translations": {
+      "hi": "जिससे लोग व्याकुल नहीं होते और जो लोगों से व्याकुल नहीं होता, जो हर्ष, खीझ, भय और उद्वेग से मुक्त है — वह भी मुझे प्रिय है।"
+    },
+    "meanings": {
+      "hi": "यह श्लोक भक्ति को बाहर से भीतर की ओर देखता है। प्रिय भक्त वह है जिससे संसार नहीं सिकुड़ता और जो संसार से नहीं सिकुड़ता: न दूसरों की बेचैनी का कारण, न उनसे बेचैन। चार विक्षोभ गिनाए गए हैं — उत्तेजना, खीझ, भय, चिंता — वही मथानी जो एक साधारण दिन को उलट-पलट देती है। यह प्रगति की एक कोमल और थोड़ी चौंकाने वाली कसौटी है: लोग आपके आसपास कैसा महसूस करते हैं? दैनिक अभ्यास के लिए यह न्योता है कि ध्यान दें — चारों में से कौन सबसे अधिक आता है — और उसे प्रतिक्रिया की जगह एक साँस से मिलें। आपसी अ-विक्षोभ की इस छवि को टीका-परंपराएँ लगभग इसी स्नेह भरे भाव से पढ़ती हैं।"
+    }
+  },
+  {
+    "slug": "gita-12-16",
+    "textRef": "Bhagavad Gita 12.16",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "अनपेक्षः शुचिर्दक्ष उदासीनो गतव्यथः । / सर्वारम्भपरित्यागी यो मद्भक्तः स मे प्रियः ॥12.16॥",
+    "iast": "anapekṣaḥ śucirdakṣa udāsīno gatavyathaḥ । / sarvārambhaparityāgī yo madbhaktaḥ sa me priyaḥ ॥12.16॥",
+    "sayIt": "a-na-PAYK-shah SHU-chir DAK-sha u-daa-SEE-no ga-ta-VYA-thah / sar-VAA-ram-bha-pa-ri-TYAA-gee yo mad-BHAK-tah sa may PRI-yah",
+    "translation": "One who wants nothing, who is pure, capable, impartial, and untroubled, who has given up all self-interested undertakings — that devotee of mine is dear to me.",
+    "source": "Bhagavad Gita 12.16, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "anapekṣaḥ",
+        "meaning": "expecting nothing, free of wants"
+      },
+      {
+        "word": "śuciḥ",
+        "meaning": "pure, clean"
+      },
+      {
+        "word": "dakṣaḥ",
+        "meaning": "capable, skilful"
+      },
+      {
+        "word": "udāsīnaḥ",
+        "meaning": "impartial, sitting apart from taking sides"
+      },
+      {
+        "word": "gata-vyathaḥ",
+        "meaning": "untroubled, whose anguish has gone"
+      },
+      {
+        "word": "sarva-ārambha-parityāgī",
+        "meaning": "who has given up all (self-interested) undertakings"
+      },
+      {
+        "word": "yaḥ mat-bhaktaḥ",
+        "meaning": "that devotee of mine"
+      },
+      {
+        "word": "saḥ me priyaḥ",
+        "meaning": "is dear to me"
+      }
+    ],
+    "meaning": "The qualities here are strikingly practical: wanting nothing extra, cleanliness inner and outer, capability in what one does, impartiality, freedom from anguish, and letting go of self-driven schemes. \"Giving up all undertakings\" cannot mean idleness — the Gita has spent chapters insisting on action — and commentators across traditions vary in nuance here: most take it as dropping projects driven purely by personal gain, or dropping the anxious sense of being the doer, rather than dropping work itself. For a daily practice, the pairing of dakṣa (skilful) with udāsīna (unattached) is the heart of the verse: do your work well, and hold it lightly. Those two together, not either alone, mark the dear devotee.",
+    "reflection": "What expectation could you set down to travel lighter today?",
+    "translations": {
+      "hi": "जो अपेक्षा-रहित है, पवित्र, दक्ष, तटस्थ और व्यथा से मुक्त है, जिसने सारे स्वार्थ-प्रेरित आरंभ छोड़ दिए हैं — मेरा वह भक्त मुझे प्रिय है।"
+    },
+    "meanings": {
+      "hi": "यहाँ गिनाए गुण बेहद व्यावहारिक हैं: कुछ अतिरिक्त न चाहना, भीतर-बाहर की शुद्धता, अपने काम में दक्षता, तटस्थता, व्यथा से मुक्ति, और अपने ही स्वार्थ से चलने वाली योजनाओं को छोड़ देना। \"सारे आरंभ छोड़ना\" निठल्लापन नहीं हो सकता — गीता कई अध्यायों से कर्म पर ज़ोर देती आई है — और यहाँ टीकाकारों की बारीकियाँ अलग-अलग हैं: अधिकांश इसे केवल निजी लाभ से प्रेरित परियोजनाओं को छोड़ना, या कर्ता होने के तनाव भरे भाव को छोड़ना मानते हैं, काम को नहीं। दैनिक अभ्यास के लिए दक्ष (कुशल) और उदासीन (अनासक्त) की जोड़ी ही इस श्लोक का हृदय है: अपना काम अच्छे से करो, और उसे हल्के से थामो। ये दोनों साथ-साथ — कोई एक अकेला नहीं — प्रिय भक्त की पहचान हैं।"
+    }
+  },
+  {
+    "slug": "gita-12-17",
+    "textRef": "Bhagavad Gita 12.17",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "यो न हृष्यति न द्वेष्टि न शोचति न काङ्क्षति । / शुभाशुभपरित्यागी भक्तिमान्यः स मे प्रियः ॥12.17॥",
+    "iast": "yo na hṛṣyati na dveṣṭi na śocati na kāṅkṣati । / śubhāśubhaparityāgī bhaktimānyaḥ sa me priyaḥ ॥12.17॥",
+    "sayIt": "yo na HRISH-ya-ti na DVESH-ti na SHO-cha-ti na KAANK-sha-ti / shu-BHAA-shu-bha-pa-ri-TYAA-gee bhak-ti-MAAN yah sa may PRI-yah",
+    "translation": "One who neither rejoices nor hates, neither grieves nor craves, who has let go of both the pleasant and the unpleasant — that devoted one is dear to me.",
+    "source": "Bhagavad Gita 12.17, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "yaḥ",
+        "meaning": "who"
+      },
+      {
+        "word": "na hṛṣyati",
+        "meaning": "does not (over-)rejoice"
+      },
+      {
+        "word": "na dveṣṭi",
+        "meaning": "does not hate"
+      },
+      {
+        "word": "na śocati",
+        "meaning": "does not grieve"
+      },
+      {
+        "word": "na kāṅkṣati",
+        "meaning": "does not crave"
+      },
+      {
+        "word": "śubha-aśubha-parityāgī",
+        "meaning": "who lets go of both the pleasant and the unpleasant"
+      },
+      {
+        "word": "bhaktimān",
+        "meaning": "full of devotion"
+      },
+      {
+        "word": "saḥ me priyaḥ",
+        "meaning": "that one is dear to me"
+      }
+    ],
+    "meaning": "Four quiet freedoms: not clinging to elation when things go well, not hating, not grieving, not craving. The verse is not asking for a flat, feelingless life; it points at the spikes and crashes that toss the mind around, and at the peace of letting both the pleasant and the unpleasant pass through without gripping either. For daily practice this yields a usable evening question: what did I grip today, and what did I push away? Devotion — bhaktimān — is named as what makes the letting-go possible, because the heart is resting on something steadier than events. Commentators across traditions read this verse in essentially the same spirit, with little material disagreement.",
+    "reflection": "What loss are you gripping that is asking to be released?",
+    "translations": {
+      "hi": "जो न हर्ष में बहता है, न द्वेष करता है, न शोक करता है, न कामना करता है, जिसने शुभ और अशुभ दोनों को छोड़ दिया है — वह भक्तिमान मुझे प्रिय है।"
+    },
+    "meanings": {
+      "hi": "चार शांत मुक्तियाँ: काम बन जाने पर उल्लास से न चिपकना, द्वेष न करना, शोक न करना, लालसा न करना। श्लोक किसी सपाट, भावहीन जीवन की माँग नहीं करता; वह उन उछालों और गिरावटों की ओर इशारा करता है जो मन को झकझोरती हैं, और उस शांति की ओर, जो सुखद और अप्रिय दोनों को बिना जकड़े गुज़र जाने देने में है। दैनिक अभ्यास के लिए इससे शाम का एक काम का सवाल निकलता है: आज मैंने किसे जकड़ा, और किसे धकेला? जो यह छोड़ना संभव बनाती है, उसका नाम है भक्ति — भक्तिमान — क्योंकि हृदय घटनाओं से अधिक स्थिर किसी चीज़ पर टिका है। इस श्लोक को टीकाकार परंपराओं के आर-पार लगभग एक ही भाव से पढ़ते हैं; कोई बड़ा मतभेद नहीं।"
+    }
+  },
+  {
+    "slug": "gita-12-18",
+    "textRef": "Bhagavad Gita 12.18",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": false,
+    "devanagari": "समः शत्रौ च मित्रे च तथा मानापमानयोः । / शीतोष्णसुखदुःखेषु समः सङ्गविवर्जितः ॥12.18॥",
+    "iast": "samaḥ śatrau ca mitre ca tathā mānāpamānayoḥ । / śītoṣṇasukhaduḥkheṣu samaḥ saṅgavivarjitaḥ ॥12.18॥",
+    "sayIt": "SA-mah SHA-trow cha MI-tray cha ta-THAA maa-NAA-pa-maa-na-yoh / shee-TOSH-na-su-kha-DUH-khay-shu SA-mah SAN-ga-vi-VAR-ji-tah",
+    "translation": "One who is the same toward enemy and friend, the same in honour and disgrace, in cold and heat, in pleasure and pain, and free from clinging —",
+    "source": "Bhagavad Gita 12.18, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "samaḥ",
+        "meaning": "the same, even-minded"
+      },
+      {
+        "word": "śatrau",
+        "meaning": "toward an enemy"
+      },
+      {
+        "word": "ca mitre ca",
+        "meaning": "and toward a friend"
+      },
+      {
+        "word": "tathā",
+        "meaning": "likewise"
+      },
+      {
+        "word": "māna-apamānayoḥ",
+        "meaning": "in honour and disgrace"
+      },
+      {
+        "word": "śīta-uṣṇa-sukha-duḥkheṣu",
+        "meaning": "in cold and heat, pleasure and pain"
+      },
+      {
+        "word": "saṅga-vivarjitaḥ",
+        "meaning": "free from clinging, without attachment"
+      }
+    ],
+    "meaning": "Evenness, tested exactly where it is hardest: enemy and friend, honour and disgrace, cold and heat, pleasure and pain. The verse pairs outer conditions we cannot control with the inner responses we slowly can, and it runs on into 12.19 as a single sentence. The root of the list is saṅga-vivarjitaḥ, \"free from clinging\": when we stop needing situations to arrange themselves a certain way, the same steadiness becomes available in all of them. For a daily practitioner this is not a demand to feel nothing — it is an invitation to notice where your evenness breaks first, often at honour and disgrace, and to practise gently there. Traditions read this verse in broadly the same way.",
+    "reflection": "Where can you stay steady today — in praise or in blame?",
+    "translations": {
+      "hi": "जो शत्रु और मित्र के प्रति सम है, मान और अपमान में भी वैसा ही, सर्दी-गर्मी और सुख-दुख में सम, और आसक्ति से मुक्त है —"
+    },
+    "meanings": {
+      "hi": "समता — और उसकी परीक्षा ठीक वहाँ, जहाँ वह सबसे कठिन है: शत्रु और मित्र, मान और अपमान, सर्दी और गर्मी, सुख और दुख। श्लोक उन बाहरी स्थितियों को, जिन्हें हम नियंत्रित नहीं कर सकते, उन भीतरी प्रतिक्रियाओं के साथ रखता है जिन्हें धीरे-धीरे कर सकते हैं, और यह 12.19 में एक ही वाक्य के रूप में आगे बढ़ता है। सूची की जड़ है \"सङ्गविवर्जितः\" — आसक्ति से मुक्त: जब हमें स्थितियों के किसी ख़ास ढंग से सजने की ज़रूरत नहीं रहती, तो वही स्थिरता सब स्थितियों में उपलब्ध हो जाती है। दैनिक साधक के लिए यह कुछ भी महसूस न करने की माँग नहीं — यह न्योता है कि देखें, आपकी समता सबसे पहले कहाँ टूटती है — अक्सर मान-अपमान पर — और वहीं कोमलता से अभ्यास करें। परंपराएँ इस श्लोक को मोटे तौर पर एक ही तरह पढ़ती हैं।"
+    }
+  },
+  {
+    "slug": "gita-12-19",
+    "textRef": "Bhagavad Gita 12.19",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": false,
+    "devanagari": "तुल्यनिन्दास्तुतिर्मौनी सन्तुष्टो येन केनचित् । / अनिकेतः स्थिरमतिर्भक्तिमान्मे प्रियो नरः ॥12.19॥",
+    "iast": "tulyanindāstutirmaunī santuṣṭo yena kenacit । / aniketaḥ sthiramatirbhaktimānme priyo naraḥ ॥12.19॥",
+    "sayIt": "tul-ya-nin-DAA-stu-tir MOW-nee san-TUSH-to YAY-na KAY-na-chit / a-ni-KAY-tah sthi-ra-MA-tir bhak-ti-MAAN may PRI-yo NA-rah",
+    "translation": "— alike in blame and praise, sparing with speech, content with whatever comes, at home anywhere, steady in mind, and full of devotion — that person is dear to me.",
+    "source": "Bhagavad Gita 12.19, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "tulya-nindā-stutiḥ",
+        "meaning": "the same in blame and praise"
+      },
+      {
+        "word": "maunī",
+        "meaning": "silent, sparing with speech"
+      },
+      {
+        "word": "santuṣṭaḥ",
+        "meaning": "content"
+      },
+      {
+        "word": "yena kenacit",
+        "meaning": "with whatever comes, with anything at all"
+      },
+      {
+        "word": "aniketaḥ",
+        "meaning": "without a fixed home, at home anywhere"
+      },
+      {
+        "word": "sthira-matiḥ",
+        "meaning": "steady-minded"
+      },
+      {
+        "word": "bhaktimān",
+        "meaning": "full of devotion"
+      },
+      {
+        "word": "me priyaḥ",
+        "meaning": "dear to me"
+      },
+      {
+        "word": "naraḥ",
+        "meaning": "that person"
+      }
+    ],
+    "meaning": "This verse completes the sentence begun in 12.18: alike in blame and praise, sparing with speech, content with whatever comes, at home anywhere, steady in mind, full of devotion — such a person is dear to Krishna. Two words are read differently across traditions: renunciant readings take aniketaḥ (\"homeless\") as describing the wandering monk, while householder-oriented readings take it inwardly, as not being possessed by one's possessions or address. Both agree on the core — an identity resting in devotion rather than in reputation or comfort. For daily practice, blame-and-praise is the accessible edge: notice how each one lands in you, and how long it stays.",
+    "reflection": "What is your silence like — empty, or full?",
+    "translations": {
+      "hi": "— जो निंदा और स्तुति में समान है, वाणी में संयमी, जो कुछ मिल जाए उसमें संतुष्ट, किसी ठिकाने से न बँधा हुआ, स्थिर बुद्धि वाला और भक्ति से भरा — वह मनुष्य मुझे प्रिय है।"
+    },
+    "meanings": {
+      "hi": "यह श्लोक 12.18 में शुरू हुआ वाक्य पूरा करता है: निंदा-स्तुति में समान, वाणी में संयमी, जो मिले उसमें संतुष्ट, कहीं भी घर जैसा, स्थिर मन और भक्ति से भरा — ऐसा व्यक्ति कृष्ण को प्रिय है। दो शब्दों को परंपराएँ अलग-अलग पढ़ती हैं: संन्यास-केंद्रित पाठ \"अनिकेतः\" (गृहहीन) को घुमक्कड़ संन्यासी का वर्णन मानते हैं, जबकि गृहस्थ-उन्मुख पाठ इसे भीतर की बात मानते हैं — अपनी संपत्ति या पते के क़ब्ज़े में न होना। मूल पर दोनों सहमत हैं — एक ऐसी पहचान जो प्रतिष्ठा या सुविधा पर नहीं, भक्ति पर टिकी है। दैनिक अभ्यास के लिए निंदा-और-स्तुति ही सबसे सुलभ किनारा है: देखिए, हर एक आप में कैसे उतरती है, और कितनी देर ठहरती है।"
+    }
+  },
+  {
+    "slug": "gita-12-20",
+    "textRef": "Bhagavad Gita 12.20",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "ये तु धर्म्यामृतमिदं यथोक्तं पर्युपासते । / श्रद्दधाना मत्परमा भक्तास्तेऽतीव मे प्रियाः ॥12.20॥",
+    "iast": "ye tu dharmyāmṛtamidaṃ yathoktaṃ paryupāsate । / śraddadhānā matparamā bhaktāste'tīva me priyāḥ ॥12.20॥",
+    "sayIt": "yay tu dhar-MYAAM-ri-ta-mi-dam ya-THOK-tam par-yu-PAA-sa-tay / shrad-da-DHAA-naa mat-pa-ra-MAA bhak-TAAS-tay TEE-va may pri-YAAH",
+    "translation": "But those who honour this nectar of dharma as it has been taught, full of faith and holding me as the highest — those devotees are exceedingly dear to me.",
+    "source": "Bhagavad Gita 12.20, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review",
+    "words": [
+      {
+        "word": "ye tu",
+        "meaning": "but those who"
+      },
+      {
+        "word": "dharmya-amṛtam",
+        "meaning": "nectar of dharma, this life-giving teaching in accord with dharma"
+      },
+      {
+        "word": "idam",
+        "meaning": "this"
+      },
+      {
+        "word": "yathā-uktam",
+        "meaning": "as it has been taught"
+      },
+      {
+        "word": "paryupāsate",
+        "meaning": "honour and follow with devoted attention"
+      },
+      {
+        "word": "śraddadhānāḥ",
+        "meaning": "full of faith, trusting"
+      },
+      {
+        "word": "mat-paramāḥ",
+        "meaning": "holding me as the highest"
+      },
+      {
+        "word": "bhaktāḥ",
+        "meaning": "devotees"
+      },
+      {
+        "word": "te",
+        "meaning": "they"
+      },
+      {
+        "word": "atīva",
+        "meaning": "exceedingly"
+      },
+      {
+        "word": "me priyāḥ",
+        "meaning": "dear to me"
+      }
+    ],
+    "meaning": "The chapter's closing verse gathers everything before it. Krishna calls the teaching of verses 13–19 dharmyāmṛtam — a nectar of dharma — and says that those who honour it with faith, holding him as the highest, are exceedingly dear to him. Two words carry the weight: śraddadhānāḥ, full of trust, and paryupāsate, which suggests devoted, ongoing attention rather than one-time agreement. That is precisely what a daily practice is — returning, with faith, to the same teaching until it soaks in. The verse is warmly received across traditions as the seal of the bhakti chapter, though commentators vary in how strongly they weight faith versus exclusive surrender.",
+    "reflection": "Which of these qualities is quietly already yours?",
+    "translations": {
+      "hi": "परंतु जो श्रद्धा से भरे हुए, मुझे ही परम मानते हुए, इस धर्ममय अमृत का — जैसा कहा गया है वैसा ही — आदरपूर्वक पालन करते हैं, वे भक्त मुझे अत्यंत प्रिय हैं।"
+    },
+    "meanings": {
+      "hi": "अध्याय का समापन-श्लोक अपने से पहले की सारी बातें समेट लेता है। कृष्ण श्लोक 13–19 की शिक्षा को \"धर्म्यामृतम्\" — धर्म का अमृत — कहते हैं, और कहते हैं कि जो श्रद्धा के साथ, उन्हें परम मानकर इसका आदरपूर्वक पालन करते हैं, वे उन्हें अत्यंत प्रिय हैं। दो शब्द इसका भार उठाते हैं: \"श्रद्दधानाः\" — भरोसे से भरे — और \"पर्युपासते\", जो एक बार की सहमति नहीं, बल्कि समर्पित, निरंतर ध्यान का संकेत देता है। दैनिक अभ्यास ठीक यही तो है — श्रद्धा के साथ उसी शिक्षा की ओर बार-बार लौटना, जब तक वह भीतर न उतर जाए। भक्ति-अध्याय की मुहर के रूप में यह श्लोक सभी परंपराओं में स्नेह से ग्रहण किया जाता है, हालाँकि श्रद्धा बनाम अनन्य शरणागति पर टीकाकारों का ज़ोर अलग-अलग है।"
+    }
+  }
+]

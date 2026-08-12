@@ -3,8 +3,8 @@ doc_type: web_page
 slug: why-do-we-fast-on-ekadashi
 title: Why do Hindus fast on Ekadashi?
 description: What Ekadashi is, why the eleventh lunar day became a fasting day, what people actually do, and how observance differs between traditions and families.
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 Ekadashi is the eleventh day of each lunar fortnight, which means it comes around twice a month. For many Hindus — especially in Vaishnava traditions, where the day is dear to Vishnu — it is a day of fasting, lighter eating, and turning attention toward devotion. If your mother or grandmother "keeps Ekadashi," this is what she is keeping.

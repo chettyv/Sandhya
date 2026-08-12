@@ -3,8 +3,8 @@ doc_type: web_page
 slug: what-to-say-when-lighting-a-diya
 title: What do you say when lighting a diya?
 description: Simple words and intentions for lighting a lamp at home — what is traditional, what is optional, and why silence with attention also counts.
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 The honest first answer: **you do not have to say anything.** Lighting a lamp with attention — pausing for the moment it takes the flame to steady — is itself the practice. Millions of Hindus light the evening diya in silence, or with nothing more than a moment of stillness facing the shrine. If you were hoping for permission to keep it simple: you have it.

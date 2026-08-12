@@ -3,8 +3,8 @@ doc_type: web_page
 slug: how-to-do-lakshmi-puja-at-home
 title: How do I do Lakshmi puja at home?
 description: A simple, honest guide to home Lakshmi puja — what you actually need, a gentle sequence to follow, and why your family's way is a legitimate authority.
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 If this is the first year the puja is yours to run, start with this reassurance: **a sincere, simple Lakshmi puja done with attention is a real puja.** The elaborate versions you may have seen — a priest, a long Sanskrit liturgy, dozens of items — are one way of doing it, not the entry requirement. Households have always done shorter forms, and the goddess of the home is honoured in the language of the home.

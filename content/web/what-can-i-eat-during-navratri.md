@@ -3,8 +3,8 @@ doc_type: web_page
 slug: what-can-i-eat-during-navratri
 title: What can I eat during Navratri?
 description: What Navratri fasting usually includes and avoids, why families differ, and how to fast in a way you can actually keep — without pretending there is one rulebook.
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 The short answer: most people who fast for Navratri eat one or two simple meals a day built around fruit, dairy, certain flours, and vegetables considered fast-appropriate — and avoid grains like wheat and rice, lentils, onion, garlic, meat, eggs, and alcohol. The longer answer is that "fast-appropriate" is defined by family and regional custom, not by a single rulebook, and your grandmother's list is a legitimate authority.

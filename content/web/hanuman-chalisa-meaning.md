@@ -3,8 +3,8 @@ doc_type: web_page
 slug: hanuman-chalisa-meaning
 title: What does the Hanuman Chalisa mean?
 description: What the Hanuman Chalisa is, what its forty verses actually say, why it is recited, and what to know before learning it — explained plainly.
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 The Hanuman Chalisa is a forty-verse hymn (chālīsā, from _chālīs_, forty) in praise of Hanuman, composed by the poet-saint **Tulsidas** in the sixteenth century — in Awadhi, a literary language of the Hindi family, not Sanskrit. It is plausibly the most-recited Hindu text in the world: sung at temples, played in kitchens, recited on Tuesdays and Saturdays, whispered before exams and flights and hospital visits.
