@@ -5,11 +5,11 @@ text_ref: Hanuman Chalisa, chaupai 7
 tradition_primary: general
 tags: wisdom, duty, devotion
 licence: original
-copyright_status: Awadhi text converted from the sanskritdocuments.org ITRANS file (personal-study terms — free-launch use with attribution; commercial use requires permission, see docs/SOURCES-AND-ATTRIBUTION.md); conversion machine-generated pending review; translation pending.
+copyright_status: Awadhi text converted from the sanskritdocuments.org ITRANS file (personal-study terms — free-launch use with attribution; commercial use requires permission, see docs/SOURCES-AND-ATTRIBUTION.md); conversion checked in content pass; translation, gloss, and meaning are Dharma Daily draft originals.
 source_url: https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx
 daily_pool: true
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 ## Shloka

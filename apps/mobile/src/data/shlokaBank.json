@@ -1,5 +1,2307 @@
 [
   {
+    "slug": "chalisa-1",
+    "textRef": "Hanuman Chalisa, chaupai 1",
+    "tradition": "general",
+    "tags": ["devotion", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "जय हनुमान ज्ञान गुन सागर । / जय कपीस तिहुँ लोक उजागर",
+    "iast": "jaya hanumāna jñāna guna sāgara । / jaya kapīsa tihum̐ loka ujāgara",
+    "sayIt": "JA-ya ha-nu-MAA-na GYAA-na GU-na SAA-ga-ra / JA-ya ka-PEE-sa ti-HOON LO-ka u-JAA-ga-ra",
+    "translation": "Victory to Hanuman, ocean of wisdom and virtue; victory to the lord of the monkeys, who lights up the three worlds.",
+    "source": "Hanuman Chalisa, chaupai 1, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "jaya",
+        "meaning": "victory, hail"
+      },
+      {
+        "word": "hanumāna",
+        "meaning": "Hanuman"
+      },
+      {
+        "word": "jñāna",
+        "meaning": "knowledge, wisdom"
+      },
+      {
+        "word": "guna",
+        "meaning": "virtues, good qualities"
+      },
+      {
+        "word": "sāgara",
+        "meaning": "ocean"
+      },
+      {
+        "word": "kapīsa",
+        "meaning": "lord of the monkeys"
+      },
+      {
+        "word": "tihum̐ loka",
+        "meaning": "the three worlds"
+      },
+      {
+        "word": "ujāgara",
+        "meaning": "illuminator, one who makes radiant"
+      }
+    ],
+    "meaning": "The first chaupai sets the frame for the whole portrait. Before any deed is mentioned, Hanuman is greeted for what he is: an ocean of wisdom and virtue, whose renown brightens all three worlds. The Chalisa will move from virtues to deeds to devotion to petition, and it begins deliberately with character, not strength — the strength comes later and rests on this. For the reciter, the opening \"jaya\" is a practice in itself: the day starts by hailing wisdom and goodness first, and letting power be their consequence rather than their substitute.",
+    "reflection": "If someone hailed you today, would you rather it be for your strength or your character — and why?",
+    "translations": {
+      "hi": "हनुमान की जय, जो ज्ञान और गुणों के सागर हैं; कपियों के स्वामी की जय, जो तीनों लोकों को उजागर करते हैं।"
+    },
+    "meanings": {
+      "hi": "पहली चौपाई पूरे चित्र की रूपरेखा तय कर देती है। किसी भी कारनामे से पहले हनुमान का अभिवादन उनके स्वरूप के लिए होता है: वे ज्ञान और गुणों के सागर हैं, जिनकी कीर्ति तीनों लोकों को उजागर करती है। चालीसा गुणों से कर्मों, फिर भक्ति और प्रार्थना की ओर बढ़ती है, और इसकी शुरुआत जान-बूझकर चरित्र से होती है, बल से नहीं — बल बाद में आता है और इसी नींव पर टिकता है। पाठ करने वाले के लिए यह पहली \"जय\" अपने आप में एक अभ्यास है: दिन की शुरुआत ज्ञान और अच्छाई की जयकार से हो, और शक्ति उनका परिणाम बने, विकल्प नहीं।"
+    }
+  },
+  {
+    "slug": "chalisa-2",
+    "textRef": "Hanuman Chalisa, chaupai 2",
+    "tradition": "general",
+    "tags": ["devotion", "courage"],
+    "dailyPool": true,
+    "devanagari": "राम दूत अतुलित बल धामा । / अंजनिपुत्र पवनसुत नामा",
+    "iast": "rāma dūta atulita bala dhāmā । / aṃjaniputra pavanasuta nāmā",
+    "sayIt": "RAA-ma DOO-ta a-TU-li-ta BA-la DHAA-maa / an-ja-ni-PU-tra pa-va-na-SU-ta NAA-maa",
+    "translation": "Messenger of Rama, abode of immeasurable strength; you are known as Anjani's son and the Son of the Wind.",
+    "source": "Hanuman Chalisa, chaupai 2, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "rāma dūta",
+        "meaning": "messenger of Rama"
+      },
+      {
+        "word": "atulita",
+        "meaning": "unequalled, immeasurable"
+      },
+      {
+        "word": "bala",
+        "meaning": "strength"
+      },
+      {
+        "word": "dhāmā",
+        "meaning": "abode, dwelling"
+      },
+      {
+        "word": "aṃjaniputra",
+        "meaning": "son of Anjani"
+      },
+      {
+        "word": "pavanasuta",
+        "meaning": "son of the Wind"
+      },
+      {
+        "word": "nāmā",
+        "meaning": "by name, known as"
+      }
+    ],
+    "meaning": "The second chaupai gives Hanuman his defining names, and the order matters. First he is Rama's messenger — his strength exists for someone else's work. Only then is he the abode of unmatched power, and then the son of Anjani and of the Wind, held between a mother's tenderness and the wind's speed. In the hymn's sequence this verse turns the greeting of verse one into an identity: who Hanuman is, before what he did. Reciters often linger here because it compresses the whole ideal — immense capability, entirely given over to service.",
+    "reflection": "Whose work gives your own strength its purpose?",
+    "translations": {
+      "hi": "आप राम के दूत और अतुलनीय बल के धाम हैं; अंजनी-पुत्र और पवनसुत — इन्हीं नामों से आप जाने जाते हैं।"
+    },
+    "meanings": {
+      "hi": "दूसरी चौपाई हनुमान के पहचान-नाम देती है, और क्रम महत्वपूर्ण है। पहले वे राम के दूत हैं — उनका बल किसी और के काम के लिए है। उसके बाद वे अतुल बल के धाम हैं, और फिर अंजनी के पुत्र और पवन के पुत्र — एक ओर माँ की ममता, दूसरी ओर हवा का वेग। स्तोत्र के क्रम में यह पद पहले पद के अभिवादन को पहचान में बदल देता है: कारनामों से पहले, हनुमान कौन हैं। पाठ करने वाले यहाँ अक्सर ठहरते हैं, क्योंकि इसमें पूरा आदर्श सिमटा है — अपार सामर्थ्य, पूरी तरह सेवा को समर्पित।"
+    }
+  },
+  {
+    "slug": "chalisa-3",
+    "textRef": "Hanuman Chalisa, chaupai 3",
+    "tradition": "general",
+    "tags": ["courage", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "महाबीर बिक्रम बजरंगी । / कुमति निवार सुमति के संगी",
+    "iast": "mahābīra bikrama bajaraṃgī । / kumati nivāra sumati ke saṃgī",
+    "sayIt": "ma-haa-BEE-ra BI-kra-ma ba-ja-RUN-gee / KU-ma-ti ni-VAA-ra SU-ma-ti kay SUN-gee",
+    "translation": "Great hero, mighty in valour, with limbs strong as the thunderbolt; you drive away wrong thinking and are the companion of good sense.",
+    "source": "Hanuman Chalisa, chaupai 3, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "mahābīra",
+        "meaning": "great hero"
+      },
+      {
+        "word": "bikrama",
+        "meaning": "valour, prowess"
+      },
+      {
+        "word": "bajaraṃgī",
+        "meaning": "one whose limbs are like the vajra, the thunderbolt"
+      },
+      {
+        "word": "kumati",
+        "meaning": "wrong thinking, ill judgement"
+      },
+      {
+        "word": "nivāra",
+        "meaning": "remover, dispeller"
+      },
+      {
+        "word": "sumati",
+        "meaning": "good sense, right judgement"
+      },
+      {
+        "word": "ke saṃgī",
+        "meaning": "companion of"
+      }
+    ],
+    "meaning": "This chaupai holds two halves in deliberate tension. The first line is pure power: the great hero whose body is hard as the thunderbolt — \"Bajrangi\", the name by which millions address him. The second line is entirely mental: he removes kumati, crooked thinking, and keeps company with sumati, sound judgement. Placed third in the hymn, it completes the opening portrait of virtues by insisting that real strength includes the discipline of the mind. Reciters traditionally turn to this verse when their thinking feels muddled — asking not for force, but for the companionship of good sense.",
+    "reflection": "Which crooked thought would you most like driven out today, and what good sense could take its place?",
+    "translations": {
+      "hi": "आप महावीर हैं, पराक्रमी हैं, वज्र-जैसे अंगों वाले बजरंगी हैं; आप कुबुद्धि को दूर करते हैं और सुबुद्धि के साथी हैं।"
+    },
+    "meanings": {
+      "hi": "यह चौपाई दो हिस्सों को जान-बूझकर आमने-सामने रखती है। पहली पंक्ति शुद्ध शक्ति है: महावीर, जिनका शरीर वज्र-सा कठोर है — \"बजरंगी\", जिस नाम से करोड़ों उन्हें पुकारते हैं। दूसरी पंक्ति पूरी तरह मन की है: वे कुमति को दूर करते हैं और सुमति के संगी हैं। भजन में तीसरे स्थान पर यह पद गुणों के शुरुआती चित्र को पूरा करता है, यह कहकर कि सच्ची शक्ति में मन का अनुशासन भी शामिल है। जब सोच उलझी लगे, तो पाठ करने वाले परंपरागत रूप से यही पद दोहराते हैं — बल के लिए नहीं, सुमति के साथ के लिए।"
+    }
+  },
+  {
+    "slug": "chalisa-4",
+    "textRef": "Hanuman Chalisa, chaupai 4",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "कंचन बरन बिराज सुबेसा । / कानन कुंडल कुंचित केसा",
+    "iast": "kaṃcana barana birāja subesā । / kānana kuṃḍala kuṃcita kesā",
+    "sayIt": "KUN-cha-na BA-ra-na bi-RAA-ja su-BAY-saa / KAA-na-na KUN-da-la KUN-chi-ta KAY-saa",
+    "translation": "Golden-hued, you shine in beautiful attire, with earrings in your ears and curling hair.",
+    "source": "Hanuman Chalisa, chaupai 4, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "kaṃcana",
+        "meaning": "gold"
+      },
+      {
+        "word": "barana",
+        "meaning": "colour, complexion"
+      },
+      {
+        "word": "birāja",
+        "meaning": "shines, is resplendent"
+      },
+      {
+        "word": "subesā",
+        "meaning": "beautifully dressed"
+      },
+      {
+        "word": "kānana",
+        "meaning": "in the ears"
+      },
+      {
+        "word": "kuṃḍala",
+        "meaning": "earrings"
+      },
+      {
+        "word": "kuṃcita",
+        "meaning": "curly"
+      },
+      {
+        "word": "kesā",
+        "meaning": "hair"
+      }
+    ],
+    "meaning": "Here the hymn pauses to look. After naming Hanuman's virtues, Tulsidas paints him: golden skin, fine dress, earrings, curled hair. Devotional poetry does this on purpose — before you can love a deity, you must be able to see him, and the Chalisa builds its portrait through the eyes as much as through ideas. This verse and the next form the visual panel of the hymn's opening movement. For the reciter it is an invitation to hold a definite, beautiful image in the mind, which steadies attention far better than an abstraction ever could.",
+    "reflection": "When you close your eyes to pray or reflect, what image actually holds your attention?",
+    "translations": {
+      "hi": "आपका रंग सोने-जैसा है, आप सुंदर वेश में सुशोभित हैं; कानों में कुंडल हैं और बाल घुँघराले हैं।"
+    },
+    "meanings": {
+      "hi": "यहाँ स्तोत्र रुककर देखता है। गुण गिनाने के बाद तुलसीदास हनुमान का चित्र बनाते हैं: सोने-सा रंग, सुंदर वेश, कानों में कुंडल, घुँघराले बाल। भक्ति-काव्य ऐसा जान-बूझकर करता है — किसी से प्रेम करने से पहले उसे देख पाना ज़रूरी है, और चालीसा अपना चित्र विचारों के साथ-साथ आँखों से भी गढ़ती है। यह पद और अगला पद स्तोत्र की शुरुआत का दृश्य-खंड हैं। पाठ करने वाले के लिए यह निमंत्रण है कि मन में एक निश्चित, सुंदर छवि धारण करे — जो किसी भी अमूर्त विचार से कहीं बेहतर ध्यान टिकाती है।"
+    }
+  },
+  {
+    "slug": "chalisa-5",
+    "textRef": "Hanuman Chalisa, chaupai 5",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": false,
+    "devanagari": "हाथ बज्र औ ध्वजा बिराजै । / काँधे मूँज जनेऊ साजै",
+    "iast": "hātha bajra au dhvajā birājai । / kām̐dhe mūm̐ja janeū sājai",
+    "sayIt": "HAA-tha BUJ-ra au dhva-JAA bi-RAA-jai / KAAN-dhay MOON-ja ja-nay-OO SAA-jai",
+    "translation": "In your hands shine the vajra-mace and the banner; the sacred thread of munja grass adorns your shoulder.",
+    "source": "Hanuman Chalisa, chaupai 5, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "hātha",
+        "meaning": "in the hand(s)"
+      },
+      {
+        "word": "bajra",
+        "meaning": "the vajra, thunderbolt-mace"
+      },
+      {
+        "word": "au",
+        "meaning": "and"
+      },
+      {
+        "word": "dhvajā",
+        "meaning": "banner, flag"
+      },
+      {
+        "word": "birājai",
+        "meaning": "shines, is resplendent"
+      },
+      {
+        "word": "kām̐dhe",
+        "meaning": "on the shoulder"
+      },
+      {
+        "word": "mūm̐ja",
+        "meaning": "munja grass"
+      },
+      {
+        "word": "janeū",
+        "meaning": "sacred thread"
+      },
+      {
+        "word": "sājai",
+        "meaning": "adorns, is arrayed"
+      }
+    ],
+    "meaning": "The portrait continues from face to hands and shoulder, and every item is an emblem. The mace is power ready for use; the banner is allegiance declared openly — Hanuman fights under Rama's flag, not his own. The munja-grass sacred thread marks him as a student and a man of vows, not merely a warrior. Weapon, flag, and thread together say: strength, loyalty, and discipline can belong in one body. For the reciter this completes the visual panel begun in the previous verse, giving the mind a figure who is armed, devoted, and consecrated all at once.",
+    "reflection": "What are the visible signs in your life of what you have committed yourself to?",
+    "translations": {
+      "hi": "आपके हाथों में वज्र (गदा) और ध्वजा शोभा देते हैं; कंधे पर मूँज का जनेऊ सजा है।"
+    },
+    "meanings": {
+      "hi": "चित्र चेहरे से उतरकर हाथों और कंधे तक आता है, और हर वस्तु एक प्रतीक है। गदा उपयोग के लिए तैयार शक्ति है; ध्वजा खुलेआम घोषित निष्ठा — हनुमान राम के झंडे तले लड़ते हैं, अपने नहीं। मूँज का जनेऊ उन्हें केवल योद्धा नहीं, व्रतधारी और अनुशासित साधक बताता है। शस्त्र, ध्वज और जनेऊ मिलकर कहते हैं: बल, निष्ठा और संयम एक ही देह में रह सकते हैं। पाठ करने वाले के लिए पिछले पद से शुरू हुआ दृश्य-खंड यहाँ पूरा होता है — एक ऐसी छवि जो एक साथ सशस्त्र, समर्पित और संयमित है।"
+    }
+  },
+  {
+    "slug": "chalisa-6",
+    "textRef": "Hanuman Chalisa, chaupai 6",
+    "tradition": "general",
+    "tags": ["devotion", "family"],
+    "dailyPool": false,
+    "devanagari": "संकर सुवन केसरीनंदन । / तेज प्रताप महा जग बंदन",
+    "iast": "saṃkara suvana kesarīnaṃdana । / teja pratāpa mahā jaga baṃdana",
+    "sayIt": "SUN-ka-ra SU-va-na kay-sa-ree-NUN-da-na / TAY-ja pra-TAA-pa ma-HAA JA-ga BUN-da-na",
+    "translation": "Son of Shankara, delight of Kesari; your radiance and majesty are great, and the whole world venerates you.",
+    "source": "Hanuman Chalisa, chaupai 6, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "saṃkara suvana",
+        "meaning": "son of Shankara (Shiva)"
+      },
+      {
+        "word": "kesarīnaṃdana",
+        "meaning": "delight (son) of Kesari"
+      },
+      {
+        "word": "teja",
+        "meaning": "radiance, spiritual brilliance"
+      },
+      {
+        "word": "pratāpa",
+        "meaning": "majesty, might"
+      },
+      {
+        "word": "mahā",
+        "meaning": "great"
+      },
+      {
+        "word": "jaga",
+        "meaning": "the world"
+      },
+      {
+        "word": "baṃdana",
+        "meaning": "venerated, saluted"
+      }
+    ],
+    "meaning": "This verse gives Hanuman his parentage, and it is deliberately double. He is called Shankara's son — devotional tradition widely regards Hanuman as an emanation of Shiva — and in the same breath the delight of Kesari, his monkey-king father. Divine origin and earthly family sit side by side without contradiction, and from this doubled lineage flows a radiance the whole world salutes. In the hymn's opening movement this closes the account of who Hanuman is; the deeds begin soon after. The reciter is reminded that greatness has roots — both the ones we are given and the ones beyond us.",
+    "reflection": "Which of your roots — family or beyond — most explains the strength you carry?",
+    "translations": {
+      "hi": "आप शंकर के सुवन और केसरी के नंदन हैं; आपका तेज और प्रताप महान है, सारा जगत आपकी वंदना करता है।"
+    },
+    "meanings": {
+      "hi": "यह पद हनुमान का कुल बताता है, और जान-बूझकर दोहरा। वे शंकर के सुवन कहलाते हैं — भक्ति-परंपरा उन्हें व्यापक रूप से शिव का अंश मानती है — और उसी साँस में केसरीनंदन, अपने वानरराज पिता के आनंद। दिव्य मूल और पार्थिव परिवार बिना किसी विरोध के साथ-साथ बैठे हैं, और इसी दोहरे कुल से वह तेज-प्रताप फूटता है जिसकी सारा जगत वंदना करता है। स्तोत्र की शुरुआती लय में यहीं \"हनुमान कौन हैं\" का वर्णन पूरा होता है; इसके बाद कर्म शुरू होते हैं। पाठ करने वाले को याद दिलाया जाता है कि महानता की जड़ें होती हैं — वे भी जो हमें मिलीं, और वे भी जो हमसे परे हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-7",
+    "textRef": "Hanuman Chalisa, chaupai 7",
+    "tradition": "general",
+    "tags": ["wisdom", "duty", "devotion"],
+    "dailyPool": true,
+    "devanagari": "विद्यावान गुनी अति चातुर । / राम काज करिबे को आतुर",
+    "iast": "vidyāvāna gunī ati cātura । / rāma kāja karibe ko ātura",
+    "sayIt": "vid-yaa-VAA-na gu-NEE A-ti CHAA-tu-ra / RAA-ma KAA-ja ka-ri-BAY ko AA-tu-ra",
+    "translation": "Learned, virtuous, supremely clever — and ever eager to do Rama's work.",
+    "source": "Hanuman Chalisa, chaupai 7, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "vidyāvāna",
+        "meaning": "possessed of learning"
+      },
+      {
+        "word": "gunī",
+        "meaning": "virtuous, accomplished"
+      },
+      {
+        "word": "ati",
+        "meaning": "extremely"
+      },
+      {
+        "word": "cātura",
+        "meaning": "clever, skilful"
+      },
+      {
+        "word": "rāma kāja",
+        "meaning": "Rama's work"
+      },
+      {
+        "word": "karibe ko",
+        "meaning": "to do"
+      },
+      {
+        "word": "ātura",
+        "meaning": "eager, restless"
+      }
+    ],
+    "meaning": "This chaupai is the hinge of the opening portrait. Three capabilities are stacked up — learning, virtue, sharp cleverness — and then all of them are pointed at one thing: eagerness to do Rama's work. The verse's force is in that turn. Ability without direction is only potential; Hanuman's genius is that his talents have an address. In the hymn's sequence this line prepares the leap into the deeds that follow — Sita, Lanka, the sanjivani — because eagerness is what turns capacity into action. Reciters often take it as the worker's verse: be skilled, be good, and be restless to serve.",
+    "reflection": "Your skills are real — but whose work are they eager to do?",
+    "translations": {
+      "hi": "आप विद्यावान हैं, गुणी हैं, अत्यंत चतुर हैं — और राम का काम करने के लिए सदा आतुर रहते हैं।"
+    },
+    "meanings": {
+      "hi": "यह चौपाई शुरुआती चित्र की धुरी है। तीन योग्यताएँ गिनाई जाती हैं — विद्या, गुण, गहरी चतुराई — और फिर तीनों एक ही ओर मोड़ दी जाती हैं: राम का काम करने की आतुरता। पद की ताक़त इसी मोड़ में है। दिशा के बिना योग्यता केवल संभावना है; हनुमान की प्रतिभा यह है कि उनके हुनर का एक पता है। स्तोत्र के क्रम में यह पंक्ति आगे आने वाले कर्मों — सीता की खोज, लंका, संजीवनी — की भूमिका है, क्योंकि आतुरता ही सामर्थ्य को कर्म बनाती है। पाठ करने वाले इसे कर्मयोगी का पद मानते हैं: कुशल बनो, अच्छे बनो, और सेवा के लिए बेचैन रहो।"
+    }
+  },
+  {
+    "slug": "chalisa-8",
+    "textRef": "Hanuman Chalisa, chaupai 8",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "प्रभु चरित्र सुनिबे को रसिया । / राम लखन सीता मन बसिया",
+    "iast": "prabhu caritra sunibe ko rasiyā । / rāma lakhana sītā mana basiyā",
+    "sayIt": "PRA-bhu cha-RI-tra su-ni-BAY ko ra-si-YAA / RAA-ma LA-kha-na SEE-taa MA-na ba-si-YAA",
+    "translation": "You delight in hearing the Lord's story; Rama, Lakshmana, and Sita dwell in your heart.",
+    "source": "Hanuman Chalisa, chaupai 8, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "prabhu",
+        "meaning": "the Lord"
+      },
+      {
+        "word": "caritra",
+        "meaning": "story, deeds"
+      },
+      {
+        "word": "sunibe ko",
+        "meaning": "to hear"
+      },
+      {
+        "word": "rasiyā",
+        "meaning": "one who relishes, a connoisseur"
+      },
+      {
+        "word": "rāma lakhana sītā",
+        "meaning": "Rama, Lakshmana, Sita"
+      },
+      {
+        "word": "mana",
+        "meaning": "heart, mind"
+      },
+      {
+        "word": "basiyā",
+        "meaning": "dwelling, residing"
+      }
+    ],
+    "meaning": "Two movements of love in one verse: the story comes in through the ears, and the beloved settles in the heart. Hanuman is called a rasiya — a relisher, someone who savours Rama's story the way others savour music — and the result of all that listening is indwelling: Rama, Lakshmana, and Sita have taken up residence in his mind. In the hymn's flow this is the first purely devotional note after the portrait of powers, and it quietly states the Chalisa's theory of practice: what you delight in hearing eventually lives in you. The reciter, reciting, is doing exactly that.",
+    "reflection": "What do you most love listening to — and is it something you would want living in your heart?",
+    "translations": {
+      "hi": "आप प्रभु की कथा सुनने के रसिया हैं; राम, लखन और सीता आपके मन में बसते हैं।"
+    },
+    "meanings": {
+      "hi": "एक पद में प्रेम की दो गतियाँ: कथा कानों से भीतर आती है, और प्रिय हृदय में बस जाता है। हनुमान \"रसिया\" कहलाते हैं — जो राम-कथा का वैसे रस लेते हैं जैसे कोई संगीत का — और इस निरंतर सुनने का फल है निवास: राम, लखन और सीता उनके मन में बस गए हैं। स्तोत्र की धारा में शक्तियों के चित्रण के बाद यह पहला विशुद्ध भक्ति-स्वर है, और यह चुपचाप चालीसा का अभ्यास-सूत्र कह देता है: जिसे सुनने में आनंद आता है, वही आख़िरकार भीतर बस जाता है। पाठ करने वाला, पाठ करते हुए, ठीक यही कर रहा है।"
+    }
+  },
+  {
+    "slug": "chalisa-9",
+    "textRef": "Hanuman Chalisa, chaupai 9",
+    "tradition": "general",
+    "tags": ["courage", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "सूक्ष्म रूप धरि सियहिं दिखावा । / बिकट रूप धरि लंक जरावा",
+    "iast": "sūkṣma rūpa dhari siyahiṃ dikhāvā । / bikaṭa rūpa dhari laṃka jarāvā",
+    "sayIt": "SOOK-shma ROO-pa DHA-ri si-ya-HIN di-KHAA-vaa / BI-ka-ta ROO-pa DHA-ri LUN-ka ja-RAA-vaa",
+    "translation": "Taking a minute form, you appeared before Sita; taking a fearsome form, you burned Lanka.",
+    "source": "Hanuman Chalisa, chaupai 9, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "sūkṣma",
+        "meaning": "minute, subtle"
+      },
+      {
+        "word": "rūpa",
+        "meaning": "form"
+      },
+      {
+        "word": "dhari",
+        "meaning": "taking, assuming"
+      },
+      {
+        "word": "siyahiṃ",
+        "meaning": "to Sita"
+      },
+      {
+        "word": "dikhāvā",
+        "meaning": "showed (yourself), appeared"
+      },
+      {
+        "word": "bikaṭa",
+        "meaning": "fearsome, monstrous"
+      },
+      {
+        "word": "laṃka",
+        "meaning": "Lanka"
+      },
+      {
+        "word": "jarāvā",
+        "meaning": "burned"
+      }
+    ],
+    "meaning": "With this verse the hymn pivots from portrait to deeds, and it opens with a study in range. Before Sita, grieving in captivity, Hanuman makes himself small — gentle enough not to frighten her. Before Ravana's city he becomes vast and terrible, and Lanka burns. Same person, opposite forms, chosen by what the moment needs. The verse celebrates not shape-shifting for its own sake but discernment: knowing when a situation calls for softness and when for fire. Reciters remember it on days that demand both tenderness and force from the same heart.",
+    "reflection": "Does today call for your smallest, gentlest self or your fiercest one — and can you tell the difference?",
+    "translations": {
+      "hi": "सूक्ष्म रूप धारण करके आपने सीता को दर्शन दिया; विकट रूप धारण करके लंका जला दी।"
+    },
+    "meanings": {
+      "hi": "इस पद से स्तोत्र चित्र से कर्मों की ओर मुड़ता है, और शुरुआत होती है सामर्थ्य के विस्तार से। बंदी, शोकाकुल सीता के सामने हनुमान स्वयं को छोटा कर लेते हैं — इतना कोमल कि वे डरें नहीं। रावण की नगरी के सामने वे विशाल और विकट हो जाते हैं, और लंका जल उठती है। एक ही व्यक्ति, विपरीत रूप, और चुनाव वही जो क्षण माँगता है। पद रूप बदलने का नहीं, विवेक का उत्सव है: यह जानना कि कब स्थिति कोमलता माँगती है और कब अग्नि। जिस दिन एक ही हृदय से नरमी और शक्ति दोनों माँगी जाएँ, पाठ करने वाले इसे याद करते हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-10",
+    "textRef": "Hanuman Chalisa, chaupai 10",
+    "tradition": "general",
+    "tags": ["courage", "duty"],
+    "dailyPool": true,
+    "devanagari": "भीम रूप धरि असुर सँहारे । / रामचंद्र के काज सँवारे",
+    "iast": "bhīma rūpa dhari asura sam̐hāre । / rāmacaṃdra ke kāja sam̐vāre",
+    "sayIt": "BHEE-ma ROO-pa DHA-ri A-su-ra sun-HAA-ray / raa-ma-CHUN-dra kay KAA-ja sun-VAA-ray",
+    "translation": "Taking a colossal form, you destroyed the demons and brought Ramachandra's tasks to completion.",
+    "source": "Hanuman Chalisa, chaupai 10, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "bhīma",
+        "meaning": "colossal, terrifying"
+      },
+      {
+        "word": "rūpa dhari",
+        "meaning": "taking form"
+      },
+      {
+        "word": "asura",
+        "meaning": "demons"
+      },
+      {
+        "word": "sam̐hāre",
+        "meaning": "destroyed"
+      },
+      {
+        "word": "rāmacaṃdra ke",
+        "meaning": "Ramachandra's"
+      },
+      {
+        "word": "kāja",
+        "meaning": "tasks, work"
+      },
+      {
+        "word": "sam̐vāre",
+        "meaning": "set right, accomplished"
+      }
+    ],
+    "meaning": "The verse pairs destruction with completion, and the second half is the point. Hanuman's colossal form and the slaying of demons are not freelance heroics; every act of force ends in the same clause — Rama's work, set right. The Awadhi word samvare carries the sense of tidying, arranging, finishing well: not just fighting battles but leaving the task in order. In the hymn's sequence of deeds this generalises the previous verse's episodes into a rule of Hanuman's life. For the reciter it reframes strength as stewardship: power is measured by whose work it completes.",
+    "reflection": "When you finish something difficult today, will it be left truly set in order — and for whom?",
+    "translations": {
+      "hi": "भीम रूप धारण करके आपने असुरों का संहार किया और रामचंद्र के काज सँवारे।"
+    },
+    "meanings": {
+      "hi": "यह पद संहार को संपन्नता के साथ जोड़ता है, और असली बात दूसरे चरण में है। हनुमान का भीम रूप और असुरों का वध मनमानी वीरता नहीं है; बल का हर कार्य एक ही वाक्य पर समाप्त होता है — राम का काज, सँवारा हुआ। अवधी शब्द \"सँवारे\" में सजाने, व्यवस्थित करने, अच्छी तरह पूरा करने का भाव है: केवल युद्ध लड़ना नहीं, काम को सुव्यवस्थित छोड़ना। कर्मों के क्रम में यह पद पिछले पद के प्रसंगों को हनुमान के जीवन का नियम बना देता है। पाठ करने वाले के लिए यह बल की नई परिभाषा है: शक्ति उससे मापी जाती है कि वह किसका काम पूरा करती है।"
+    }
+  },
+  {
+    "slug": "chalisa-11",
+    "textRef": "Hanuman Chalisa, chaupai 11",
+    "tradition": "general",
+    "tags": ["devotion", "duty"],
+    "dailyPool": true,
+    "devanagari": "लाय सजीवन लखन जियाये । / श्रीरघुबीर हरषि उर लाये",
+    "iast": "lāya sajīvana lakhana jiyāye । / śrīraghubīra haraṣi ura lāye",
+    "sayIt": "LAA-ya sa-JEE-va-na LA-kha-na ji-YAA-yay / shree-ra-ghu-BEE-ra HA-ra-shi U-ra LAA-yay",
+    "translation": "You brought the sanjivani herb and restored Lakshmana to life; overjoyed, Sri Raghubira clasped you to his heart.",
+    "source": "Hanuman Chalisa, chaupai 11, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "lāya",
+        "meaning": "having brought"
+      },
+      {
+        "word": "sajīvana",
+        "meaning": "the sanjivani, the life-restoring herb"
+      },
+      {
+        "word": "lakhana",
+        "meaning": "Lakshmana"
+      },
+      {
+        "word": "jiyāye",
+        "meaning": "revived, brought back to life"
+      },
+      {
+        "word": "śrīraghubīra",
+        "meaning": "Sri Raghubira, Rama"
+      },
+      {
+        "word": "haraṣi",
+        "meaning": "rejoicing"
+      },
+      {
+        "word": "ura",
+        "meaning": "chest, heart"
+      },
+      {
+        "word": "lāye",
+        "meaning": "drew, clasped"
+      }
+    ],
+    "meaning": "The most tender of the deed-verses. When Lakshmana lay dying, Hanuman flew through the night to the Himalayas and — unable to identify the sanjivani herb — carried the whole mountain back. The verse compresses that night into two beats: the herb brought, the brother revived. Then comes the reward, and it is not a boon or a title but an embrace: Rama, overjoyed, pulls Hanuman to his chest. In the hymn's sequence this is where service and love become indistinguishable. For the reciter the promise is quiet but immense — wholehearted help ends in the heart of the one you helped.",
+    "reflection": "Who in your life would you cross a mountain for tonight, without being asked twice?",
+    "translations": {
+      "hi": "आप संजीवनी लाए और लखन को जिला दिया; श्रीरघुवीर ने हर्षित होकर आपको हृदय से लगा लिया।"
+    },
+    "meanings": {
+      "hi": "कर्म-पदों में सबसे कोमल। जब लखन मृत्यु-शय्या पर थे, हनुमान रातों-रात हिमालय गए और संजीवनी न पहचान पाने पर पूरा पर्वत ही उठा लाए। पद उस रात को दो क्षणों में समेट देता है: बूटी लाई गई, भाई जी उठा। फिर पुरस्कार आता है, और वह कोई वरदान या पदवी नहीं, आलिंगन है: हर्षित राम हनुमान को हृदय से लगा लेते हैं। स्तोत्र के क्रम में यहीं सेवा और प्रेम एक हो जाते हैं। पाठ करने वाले के लिए वादा शांत पर विराट है — पूरे मन की सहायता आपको उसी के हृदय तक पहुँचा देती है जिसकी आपने सहायता की।"
+    }
+  },
+  {
+    "slug": "chalisa-12",
+    "textRef": "Hanuman Chalisa, chaupai 12",
+    "tradition": "general",
+    "tags": ["devotion", "family"],
+    "dailyPool": true,
+    "devanagari": "रघुपति कीन्ही बहुत बड़ाई । / तुम मम प्रिय भरतहि सम भाई",
+    "iast": "raghupati kīnhī bahuta baṛāī । / tuma mama priya bharatahi sama bhāī",
+    "sayIt": "ra-ghu-PA-ti KEEN-hee ba-HU-ta ba-DAA-ee / TU-ma MA-ma PRI-ya bha-ra-ta-hi SA-ma BHAA-ee",
+    "translation": "Raghupati praised you greatly: \"You are as dear to me as my brother Bharata.\"",
+    "source": "Hanuman Chalisa, chaupai 12, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "raghupati",
+        "meaning": "lord of the Raghus, Rama"
+      },
+      {
+        "word": "kīnhī",
+        "meaning": "did, made"
+      },
+      {
+        "word": "bahuta",
+        "meaning": "much, great"
+      },
+      {
+        "word": "baṛāī",
+        "meaning": "praise"
+      },
+      {
+        "word": "tuma",
+        "meaning": "you"
+      },
+      {
+        "word": "mama",
+        "meaning": "my"
+      },
+      {
+        "word": "priya",
+        "meaning": "dear"
+      },
+      {
+        "word": "bharatahi sama",
+        "meaning": "equal to Bharata"
+      },
+      {
+        "word": "bhāī",
+        "meaning": "brother"
+      }
+    ],
+    "meaning": "After the deeds comes the verdict, and Rama delivers it in the language of kinship. Bharata is the brother who refused a throne out of love for Rama — the benchmark of devotion within the family itself. To be called his equal is to be adopted into the innermost circle: Hanuman the servant is renamed Hanuman the brother. In the hymn's arc this begins the section where Rama and the great beings themselves praise Hanuman — the portrait now painted by others. For the reciter the verse holds a gentle teaching: faithful service does not stay employment; it turns into family.",
+    "reflection": "Whose faithful presence in your life deserves to be named family out loud?",
+    "translations": {
+      "hi": "रघुपति ने आपकी बहुत बड़ाई की: \"तुम मुझे भरत के समान प्रिय भाई हो।\""
+    },
+    "meanings": {
+      "hi": "कर्मों के बाद निर्णय आता है, और राम उसे रिश्ते की भाषा में सुनाते हैं। भरत वह भाई है जिसने राम के प्रेम में राजगद्दी ठुकरा दी — परिवार के भीतर ही भक्ति की कसौटी। उसके समान कहलाना अंतरतम घेरे में अपना लिया जाना है: सेवक हनुमान अब भाई हनुमान हैं। स्तोत्र की चाल में यहाँ से वह खंड शुरू होता है जहाँ राम और बड़े-बड़े देव स्वयं हनुमान की प्रशंसा करते हैं — चित्र अब दूसरों के हाथों बनता है। पाठ करने वाले के लिए पद में एक कोमल शिक्षा है: निष्ठावान सेवा नौकरी नहीं रहती; वह परिवार बन जाती है।"
+    }
+  },
+  {
+    "slug": "chalisa-13",
+    "textRef": "Hanuman Chalisa, chaupai 13",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "सहस बदन तुम्हरो जस गावैं । / अस कहि श्रीपति कंठ लगावैं",
+    "iast": "sahasa badana tumharo jasa gāvaiṃ । / asa kahi śrīpati kaṃṭha lagāvaiṃ",
+    "sayIt": "SA-ha-sa BA-da-na TUM-ha-ro JA-sa GAA-vain / A-sa KA-hi SHREE-pa-ti KUN-tha la-GAA-vain",
+    "translation": "\"May the thousand-mouthed serpent sing your glory\" — so saying, the Lord of Shri drew you into his embrace.",
+    "source": "Hanuman Chalisa, chaupai 13, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "sahasa badana",
+        "meaning": "the thousand-mouthed one (Shesha, the cosmic serpent)"
+      },
+      {
+        "word": "tumharo",
+        "meaning": "your"
+      },
+      {
+        "word": "jasa",
+        "meaning": "glory, fame"
+      },
+      {
+        "word": "gāvaiṃ",
+        "meaning": "may sing, sings"
+      },
+      {
+        "word": "asa kahi",
+        "meaning": "saying so"
+      },
+      {
+        "word": "śrīpati",
+        "meaning": "Lord of Shri (Lakshmi); Rama"
+      },
+      {
+        "word": "kaṃṭha",
+        "meaning": "neck"
+      },
+      {
+        "word": "lagāvaiṃ",
+        "meaning": "draws to, embraces"
+      }
+    ],
+    "meaning": "This verse continues Rama's speech from the last and raises it beyond human measure. Even Shesha, the cosmic serpent whose thousand mouths never stop reciting, would be needed to sing Hanuman's glory properly — praise has outgrown any single voice. And having said something words cannot finish, Rama does what words cannot do: he embraces Hanuman. The verse pairs infinite praise with a single human gesture, and lets the gesture win. In the hymn's praise section, this is the summit of Rama's own tribute; from the next verse, the gods themselves take over.",
+    "reflection": "When words run out, what simple gesture could carry your gratitude instead?",
+    "translations": {
+      "hi": "\"सहस्र मुखों वाला शेष तुम्हारा यश गाए\" — ऐसा कहकर श्रीपति (राम) आपको कंठ से लगा लेते हैं।"
+    },
+    "meanings": {
+      "hi": "यह पद पिछले पद से चल रहे राम के वचन को आगे बढ़ाकर मनुष्य की माप से ऊपर उठा देता है। हनुमान का यश ठीक से गाने के लिए तो शेष चाहिए, जिनके सहस्र मुख निरंतर पाठ करते रहते हैं — स्तुति अब किसी एक कंठ के बस की नहीं रही। और जो बात शब्द पूरी नहीं कर सकते, उसे कहकर राम वह करते हैं जो शब्द नहीं कर सकते: वे हनुमान को कंठ से लगा लेते हैं। पद अनंत स्तुति के सामने एक छोटा मानवीय स्पर्श रखता है, और स्पर्श जीत जाता है। स्तुति-खंड में यह राम की अपनी श्रद्धांजलि का शिखर है; अगले पद से देवगण यह काम सँभालते हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-14",
+    "textRef": "Hanuman Chalisa, chaupai 14",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "सनकादिक ब्रह्मादि मुनीसा । / नारद सारद सहित अहीसा",
+    "iast": "sanakādika brahmādi munīsā । / nārada sārada sahita ahīsā",
+    "sayIt": "sa-na-KAA-di-ka brah-MAA-di mu-NEE-saa / NAA-ra-da SAA-ra-da SA-hi-ta a-HEE-saa",
+    "translation": "Sanaka and the sages, Brahma and the lords among ascetics, Narada, Sharada, and the king of serpents — all sing your praise.",
+    "source": "Hanuman Chalisa, chaupai 14, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "sanakādika",
+        "meaning": "Sanaka and his brother-sages"
+      },
+      {
+        "word": "brahmādi",
+        "meaning": "Brahma and the others"
+      },
+      {
+        "word": "munīsā",
+        "meaning": "lords among sages"
+      },
+      {
+        "word": "nārada",
+        "meaning": "Narada, the celestial sage"
+      },
+      {
+        "word": "sārada",
+        "meaning": "Sharada, Saraswati"
+      },
+      {
+        "word": "sahita",
+        "meaning": "together with"
+      },
+      {
+        "word": "ahīsā",
+        "meaning": "lord of serpents, Shesha"
+      }
+    ],
+    "meaning": "The praise now widens from Rama to the whole celestial assembly. The four boy-sages who were creation's first renunciates, Brahma the creator himself, the chief ascetics, Narada who wanders the worlds singing, Saraswati who is speech itself, Shesha who bears the earth — Tulsidas empties heaven's roll-call into two lines. The sentence runs on into the next verse: even this gathering cannot tell Hanuman's glory in full. In the hymn's structure this is deliberate overflow, praise piling past capacity. The reciter joins a chorus that includes the goddess of language admitting that language is not enough.",
+    "reflection": "Have you ever admired something so much that describing it felt impossible — and what did you do then?",
+    "translations": {
+      "hi": "सनक आदि ऋषि, ब्रह्मा आदि मुनीश्वर, नारद, शारदा (सरस्वती) और शेषनाग — सभी आपका यश गाते हैं।"
+    },
+    "meanings": {
+      "hi": "स्तुति अब राम से बढ़कर पूरी देव-सभा तक फैलती है। सृष्टि के पहले वैरागी सनकादिक कुमार, स्वयं ब्रह्मा, बड़े-बड़े मुनीश्वर, लोक-लोक घूमकर गाने वाले नारद, वाणी की देवी शारदा, पृथ्वी धारण करने वाले शेष — तुलसीदास दो पंक्तियों में स्वर्ग की पूरी नामावली उँडेल देते हैं। वाक्य अगले पद में जाकर पूरा होता है: यह सभा भी हनुमान का यश पूरा नहीं कह सकती। स्तोत्र की रचना में यह जान-बूझकर किया गया अतिरेक है — क्षमता से आगे बढ़ती स्तुति। पाठ करने वाला उस समवेत स्वर में शामिल होता है जिसमें वाणी की देवी भी मानती हैं कि वाणी पर्याप्त नहीं।"
+    }
+  },
+  {
+    "slug": "chalisa-15",
+    "textRef": "Hanuman Chalisa, chaupai 15",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": false,
+    "devanagari": "जम कुबेर दिगपाल जहाँ ते । / कबि कोबिद कहि सके कहाँ ते",
+    "iast": "jama kubera digapāla jahām̐ te । / kabi kobida kahi sake kahām̐ te",
+    "sayIt": "JA-ma ku-BAY-ra di-ga-PAA-la ja-HAAN tay / KA-bi KO-bi-da KA-hi SA-kay ka-HAAN tay",
+    "translation": "Where even Yama, Kubera, and the guardians of the quarters fall short, from where could poets and scholars tell your glory in full?",
+    "source": "Hanuman Chalisa, chaupai 15, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "jama",
+        "meaning": "Yama, lord of death"
+      },
+      {
+        "word": "kubera",
+        "meaning": "Kubera, lord of wealth"
+      },
+      {
+        "word": "digapāla",
+        "meaning": "guardians of the directions"
+      },
+      {
+        "word": "jahām̐ te",
+        "meaning": "where, whence (they fall short)"
+      },
+      {
+        "word": "kabi",
+        "meaning": "poets"
+      },
+      {
+        "word": "kobida",
+        "meaning": "scholars, the learned"
+      },
+      {
+        "word": "kahi sake",
+        "meaning": "could tell"
+      },
+      {
+        "word": "kahām̐ te",
+        "meaning": "from where?"
+      }
+    ],
+    "meaning": "The overflow of the previous verse ends in a rhetorical shrug. If Yama who judges every life, Kubera who counts every treasure, and the guardians who watch every direction cannot state Hanuman's glory, what chance have poets and scholars? Tulsidas — himself among the greatest of poets — is signing an admission of defeat, and the admission is the praise. This closes the section where heaven itself does the praising; the hymn now turns back to specific kindnesses done on earth. For the reciter it is permission to stop measuring devotion by eloquence: even the professionals ran out of words.",
+    "reflection": "Is there love in your life you have stopped trying to put into words — and is that a loss or an offering?",
+    "translations": {
+      "hi": "यम, कुबेर और दिक्पाल जहाँ आपका यश नहीं कह पाते, वहाँ कवि और विद्वान उसे कहाँ से कह सकते हैं?"
+    },
+    "meanings": {
+      "hi": "पिछले पद का अतिरेक यहाँ एक अलंकारिक प्रश्न पर समाप्त होता है। हर जीवन का लेखा रखने वाले यम, हर कोष गिनने वाले कुबेर और हर दिशा के रखवाले दिक्पाल जब हनुमान का यश नहीं कह पाते, तो कवियों और विद्वानों की क्या बिसात? स्वयं महाकवि तुलसीदास हार का पत्र लिख रहे हैं — और यही हार स्तुति है। यहीं वह खंड पूरा होता है जहाँ स्वर्ग स्वयं स्तुति करता है; स्तोत्र अब धरती पर किए उपकारों की ओर लौटता है। पाठ करने वाले के लिए यह अनुमति है कि भक्ति को वाक्पटुता से न मापे: शब्दों के धनी भी शब्द हार गए।"
+    }
+  },
+  {
+    "slug": "chalisa-16",
+    "textRef": "Hanuman Chalisa, chaupai 16",
+    "tradition": "general",
+    "tags": ["devotion", "duty"],
+    "dailyPool": true,
+    "devanagari": "तुम उपकार सुग्रीवहिं कीन्हा । / राम मिलाय राज पद दीन्हा",
+    "iast": "tuma upakāra sugrīvahiṃ kīnhā । / rāma milāya rāja pada dīnhā",
+    "sayIt": "TU-ma u-pa-KAA-ra su-gree-va-HIN KEEN-haa / RAA-ma mi-LAA-ya RAA-ja PA-da DEEN-haa",
+    "translation": "You did Sugriva a great kindness: you brought him to Rama and restored him to his royal throne.",
+    "source": "Hanuman Chalisa, chaupai 16, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "tuma",
+        "meaning": "you"
+      },
+      {
+        "word": "upakāra",
+        "meaning": "kindness, help"
+      },
+      {
+        "word": "sugrīvahiṃ",
+        "meaning": "to Sugriva"
+      },
+      {
+        "word": "kīnhā",
+        "meaning": "did"
+      },
+      {
+        "word": "rāma milāya",
+        "meaning": "bringing (him) together with Rama"
+      },
+      {
+        "word": "rāja pada",
+        "meaning": "royal rank, throne"
+      },
+      {
+        "word": "dīnhā",
+        "meaning": "gave"
+      }
+    ],
+    "meaning": "Back on earth, the hymn recalls what Hanuman does for the broken. Sugriva was an exiled king — hunted by his own brother, hiding on a mountain. Hanuman's kindness was not to fight his battle but to make one introduction: he brought Sugriva to Rama, and from that friendship the throne returned. The verse quietly defines upakara, real help: connecting someone to the source of their restoration rather than making them dependent on you. In the sequence of kindnesses this opens a pair — Sugriva here, Vibhishana next — showing Hanuman as the friend of the dispossessed.",
+    "reflection": "Who around you needs not your rescue but one honest introduction you could make?",
+    "translations": {
+      "hi": "आपने सुग्रीव पर उपकार किया: उन्हें राम से मिलाया और राज-पद दिलाया।"
+    },
+    "meanings": {
+      "hi": "स्तोत्र धरती पर लौटकर याद करता है कि टूटे हुओं के लिए हनुमान क्या करते हैं। सुग्रीव निर्वासित राजा थे — अपने ही भाई के सताए, पहाड़ पर छिपे। हनुमान का उपकार उनकी लड़ाई लड़ना नहीं था, बल्कि एक भेंट कराना: उन्होंने सुग्रीव को राम से मिला दिया, और उसी मैत्री से राजगद्दी लौट आई। पद चुपचाप \"उपकार\" की परिभाषा देता है: किसी को अपने ऊपर निर्भर बनाने के बजाय उसके उद्धार के स्रोत से जोड़ देना। उपकारों के क्रम में यह जोड़ी का पहला पद है — यहाँ सुग्रीव, आगे विभीषण — जो हनुमान को बेसहारों का मित्र दिखाता है।"
+    }
+  },
+  {
+    "slug": "chalisa-17",
+    "textRef": "Hanuman Chalisa, chaupai 17",
+    "tradition": "general",
+    "tags": ["wisdom", "courage"],
+    "dailyPool": true,
+    "devanagari": "तुम्हरो मंत्र बिभीषन माना । / लंकेस्वर भए सब जग जाना",
+    "iast": "tumharo maṃtra bibhīṣana mānā । / laṃkesvara bhae saba jaga jānā",
+    "sayIt": "TUM-ha-ro MUN-tra bi-BHEE-sha-na MAA-naa / lun-KAYS-va-ra BHA-ay SA-ba JA-ga JAA-naa",
+    "translation": "Vibhishana followed your counsel and became lord of Lanka — the whole world knows it.",
+    "source": "Hanuman Chalisa, chaupai 17, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "tumharo",
+        "meaning": "your"
+      },
+      {
+        "word": "maṃtra",
+        "meaning": "counsel, advice"
+      },
+      {
+        "word": "bibhīṣana",
+        "meaning": "Vibhishana"
+      },
+      {
+        "word": "mānā",
+        "meaning": "accepted, heeded"
+      },
+      {
+        "word": "laṃkesvara",
+        "meaning": "lord of Lanka"
+      },
+      {
+        "word": "bhae",
+        "meaning": "became"
+      },
+      {
+        "word": "saba jaga",
+        "meaning": "the whole world"
+      },
+      {
+        "word": "jānā",
+        "meaning": "knows"
+      }
+    ],
+    "meaning": "The second kindness mirrors the first, but is riskier. Vibhishana was Ravana's own brother, who left everything to stand with dharma against his family and his king; sheltering such a defector was contested even in Rama's camp. Hanuman's counsel — trust Rama, come over — was believed, and its fruit was a crown: Vibhishana ruling the very Lanka that had cast him out. The verse adds that the whole world knows this, making Hanuman's advice a matter of public record. For the reciter it honours a rare skill: giving counsel so trustworthy that someone can stake a whole life on it.",
+    "reflection": "Is your advice trustworthy enough that someone could rebuild a life on it?",
+    "translations": {
+      "hi": "आपकी मंत्रणा विभीषण ने मानी और वे लंकेश्वर बने — यह सारा जग जानता है।"
+    },
+    "meanings": {
+      "hi": "दूसरा उपकार पहले का प्रतिबिंब है, पर जोखिम बड़ा है। विभीषण रावण के सगे भाई थे, जिन्होंने धर्म के पक्ष में परिवार और राजा — सब छोड़ दिया; ऐसे शरणागत को अपनाना राम के शिविर में भी विवाद का विषय था। हनुमान की मंत्रणा — राम पर भरोसा करो, उनके पास आओ — मानी गई, और उसका फल मुकुट निकला: विभीषण उसी लंका के ईश्वर बने जिसने उन्हें निकाल दिया था। पद जोड़ता है कि यह सारा जग जानता है — हनुमान की सलाह सार्वजनिक अभिलेख बन गई। पाठ करने वाले के लिए यह एक दुर्लभ कौशल का सम्मान है: ऐसी भरोसेमंद सलाह देना जिस पर कोई पूरा जीवन दाँव पर लगा सके।"
+    }
+  },
+  {
+    "slug": "chalisa-18",
+    "textRef": "Hanuman Chalisa, chaupai 18",
+    "tradition": "general",
+    "tags": ["courage"],
+    "dailyPool": true,
+    "devanagari": "जुग सहस्र जोजन पर भानू । / लील्यो ताहि मधुर फल जानू",
+    "iast": "juga sahasra jojana para bhānū । / līlyo tāhi madhura phala jānū",
+    "sayIt": "JU-ga sa-HAS-ra JO-ja-na PA-ra BHAA-noo / LEE-lyo TAA-hi MA-dhu-ra PHA-la JAA-noo",
+    "translation": "The sun, thousands upon thousands of yojanas away — you swallowed it, taking it for a sweet fruit.",
+    "source": "Hanuman Chalisa, chaupai 18, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "juga sahasra",
+        "meaning": "thousands of ages (a vast measure)"
+      },
+      {
+        "word": "jojana",
+        "meaning": "yojanas, a measure of distance"
+      },
+      {
+        "word": "para",
+        "meaning": "at, away"
+      },
+      {
+        "word": "bhānū",
+        "meaning": "the sun"
+      },
+      {
+        "word": "līlyo",
+        "meaning": "swallowed"
+      },
+      {
+        "word": "tāhi",
+        "meaning": "it"
+      },
+      {
+        "word": "madhura phala",
+        "meaning": "sweet fruit"
+      },
+      {
+        "word": "jānū",
+        "meaning": "taking it to be, thinking"
+      }
+    ],
+    "meaning": "A leap back to Hanuman's infancy, and the hymn's most playful image. The infant Hanuman saw the rising sun — by the verse's own arithmetic, unimaginably far away — took it for a ripe sweet fruit, and leapt to swallow it. What every other creature files under \"impossible,\" the child files under \"breakfast.\" Placed among the deeds, the verse explains them all: the ocean-leap and the mountain-carrying come from a nature to which scale simply does not report. For the reciter it is a verse about unlearned fearlessness — the audacity we had before anyone taught us the sun was out of reach.",
+    "reflection": "What have you filed under \"impossible\" that a bolder younger you would simply have leapt for?",
+    "translations": {
+      "hi": "सहस्रों योजन दूर स्थित सूर्य को आपने मीठा फल समझकर निगल लिया।"
+    },
+    "meanings": {
+      "hi": "स्तोत्र हनुमान के बचपन में लौटता है, और यह उसकी सबसे विनोदी छवि है। शिशु हनुमान ने उगते सूर्य को देखा — पद के अपने हिसाब से अकल्पनीय दूरी पर — उसे पका मीठा फल समझा, और निगलने को उछल पड़े। जिसे हर प्राणी \"असंभव\" के खाते में रखता है, उसे यह बालक \"नाश्ते\" के खाते में रखता है। कर्मों के बीच रखा यह पद उन सबकी व्याख्या है: समुद्र-लंघन और पर्वत उठाना उसी स्वभाव से आते हैं जिसके सामने दूरी और पैमाने की ख़बर ही नहीं पहुँचती। पाठ करने वाले के लिए यह अनसीखी निर्भयता का पद है — वह दुस्साहस जो हममें तब था जब किसी ने बताया नहीं था कि सूरज पहुँच से बाहर है।"
+    }
+  },
+  {
+    "slug": "chalisa-19",
+    "textRef": "Hanuman Chalisa, chaupai 19",
+    "tradition": "general",
+    "tags": ["courage", "devotion"],
+    "dailyPool": true,
+    "devanagari": "प्रभु मुद्रिका मेलि मुख माहीं । / जलधि लाँघि गये अचरज नाहीं",
+    "iast": "prabhu mudrikā meli mukha māhīṃ । / jaladhi lām̐ghi gaye acaraja nāhīṃ",
+    "sayIt": "PRA-bhu mu-DRI-kaa MAY-li MU-kha maa-HEEN / ja-la-DHI LAAN-ghi GA-yay a-cha-RA-ja naa-HEEN",
+    "translation": "Placing the Lord's ring in your mouth, you leapt across the ocean — and no wonder in that.",
+    "source": "Hanuman Chalisa, chaupai 19, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "prabhu",
+        "meaning": "the Lord's"
+      },
+      {
+        "word": "mudrikā",
+        "meaning": "signet ring"
+      },
+      {
+        "word": "meli",
+        "meaning": "placing"
+      },
+      {
+        "word": "mukha māhīṃ",
+        "meaning": "in the mouth"
+      },
+      {
+        "word": "jaladhi",
+        "meaning": "the ocean"
+      },
+      {
+        "word": "lām̐ghi gaye",
+        "meaning": "leapt across"
+      },
+      {
+        "word": "acaraja",
+        "meaning": "wonder, surprise"
+      },
+      {
+        "word": "nāhīṃ",
+        "meaning": "not"
+      }
+    ],
+    "meaning": "The famous ocean-leap toward Lanka, told with a wink. Hanuman carries Rama's signet ring — the token Sita will recognise — in his mouth, and crosses a hundred yojanas of sea in one bound. Then comes the verse's real point, in its last two words: no surprise. After the sun-swallowing of the previous verse, an ocean is a small errand; and one who carries the Lord's token, the tradition hears, carries the Lord's power. The wonder is relocated — not in the leap, but in the trust that made it unremarkable. Reciters love this verse for that quiet \"of course.\"",
+    "reflection": "What token of trust do you carry that could make your own ocean feel crossable?",
+    "translations": {
+      "hi": "प्रभु की मुद्रिका मुख में रखकर आप समुद्र लाँघ गए — इसमें कोई अचरज नहीं।"
+    },
+    "meanings": {
+      "hi": "लंका की ओर प्रसिद्ध समुद्र-लंघन, एक हल्की मुस्कान के साथ कहा गया। हनुमान राम की मुद्रिका — वह निशानी जिसे सीता पहचानेंगी — मुख में रखते हैं, और सौ योजन का सागर एक छलाँग में पार कर जाते हैं। फिर पद की असली बात उसके अंतिम शब्दों में आती है: अचरज नाहीं। पिछले पद के सूर्य-भक्षण के बाद समुद्र तो छोटा काम है; और परंपरा सुनती है कि जो प्रभु की निशानी धारण करता है, वह प्रभु का बल धारण करता है। विस्मय की जगह बदल दी गई है — छलाँग में नहीं, उस भरोसे में जिसने छलाँग को साधारण बना दिया। पाठ करने वाले इस पद के शांत \"और क्या\" के लिए ही इसे प्यार करते हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-20",
+    "textRef": "Hanuman Chalisa, chaupai 20",
+    "tradition": "general",
+    "tags": ["devotion", "courage"],
+    "dailyPool": true,
+    "devanagari": "दुर्गम काज जगत के जेते । / सुगम अनुग्रह तुम्हरे तेते",
+    "iast": "durgama kāja jagata ke jete । / sugama anugraha tumhare tete",
+    "sayIt": "DUR-ga-ma KAA-ja ja-GA-ta kay JAY-tay / SU-ga-ma a-nu-GRA-ha tum-HA-ray TAY-tay",
+    "translation": "However many impossible tasks there are in the world, by your grace that many become easy.",
+    "source": "Hanuman Chalisa, chaupai 20, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "durgama",
+        "meaning": "difficult, impassable"
+      },
+      {
+        "word": "kāja",
+        "meaning": "tasks, works"
+      },
+      {
+        "word": "jagata ke",
+        "meaning": "of the world"
+      },
+      {
+        "word": "jete",
+        "meaning": "however many"
+      },
+      {
+        "word": "sugama",
+        "meaning": "easy, passable"
+      },
+      {
+        "word": "anugraha",
+        "meaning": "grace, favour"
+      },
+      {
+        "word": "tumhare",
+        "meaning": "your"
+      },
+      {
+        "word": "tete",
+        "meaning": "that many, all of them"
+      }
+    ],
+    "meaning": "After the catalogue of specific deeds, the hymn draws the general law. The verse is built on a perfect symmetry — jete, however many; tete, exactly that many. Not some hard things become easy, not most: the count of the world's impossible tasks and the count of what grace makes simple are the same number. This is the pivot where the Chalisa turns from remembering Hanuman's past to trusting his present, preparing the petitions that follow. It is among the most-repeated lines of the hymn, recited before exams, journeys, and hard conversations — a portable sentence of confidence.",
+    "reflection": "Which task feels impassable today — and how would you approach it if you trusted it could become simple?",
+    "translations": {
+      "hi": "जगत में जितने भी दुर्गम काज हैं, आपके अनुग्रह से वे सब सुगम हो जाते हैं।"
+    },
+    "meanings": {
+      "hi": "विशेष कर्मों की सूची के बाद स्तोत्र सामान्य नियम निकालता है। पद एक सटीक सममिति पर बना है — जेते, जितने भी; तेते, ठीक उतने ही। कुछ कठिन काम आसान नहीं होते, अधिकांश नहीं: संसार के दुर्गम कार्यों की गिनती और अनुग्रह से सुगम हुए कार्यों की गिनती एक ही संख्या है। यही वह मोड़ है जहाँ चालीसा हनुमान के अतीत को याद करने से उनके वर्तमान पर भरोसा करने की ओर मुड़ती है, और आगे की प्रार्थनाओं की भूमिका बनती है। परीक्षा, यात्रा और कठिन बातचीत से पहले दोहराई जाने वाली यह भजन की सबसे प्रिय पंक्तियों में से है — भरोसे का एक साथ ले जाने लायक वाक्य।"
+    }
+  },
+  {
+    "slug": "chalisa-21",
+    "textRef": "Hanuman Chalisa, chaupai 21",
+    "tradition": "general",
+    "tags": ["devotion", "duty"],
+    "dailyPool": true,
+    "devanagari": "राम दुआरे तुम रखवारे । / होत न आज्ञा बिनु पैसारे",
+    "iast": "rāma duāre tuma rakhavāre । / hota na ājñā binu paisāre",
+    "sayIt": "RAA-ma du-AA-ray tum rakh-WAA-ray / HO-ta na AAG-yaa BI-nu pai-SAA-ray",
+    "translation": "You are the guardian at Rama's door; without your permission no one gains entry.",
+    "source": "Hanuman Chalisa, chaupai 21, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "rāma duāre",
+        "meaning": "at Rama's door"
+      },
+      {
+        "word": "tuma",
+        "meaning": "you"
+      },
+      {
+        "word": "rakhavāre",
+        "meaning": "guardian, keeper"
+      },
+      {
+        "word": "hota na",
+        "meaning": "does not happen"
+      },
+      {
+        "word": "ājñā",
+        "meaning": "permission, leave"
+      },
+      {
+        "word": "binu",
+        "meaning": "without"
+      },
+      {
+        "word": "paisāre",
+        "meaning": "entry, admittance"
+      }
+    ],
+    "meaning": "After recounting Hanuman's deeds in Lanka, the hymn here names his standing: he is the doorkeeper of Rama. Whoever would reach Rama passes by way of Hanuman — no one enters without his leave. In the devotional reading this is not bureaucracy but a picture of how grace works: the servant who lives closest to the Lord is the natural way in, and devotion itself is the doorway. This chaupai opens the hymn's final movement, where Tulsidas turns from praising past deeds to trusting Hanuman as present protector. For a reciter it is a reminder that access to what is highest usually comes through humble, faithful service, not force.",
+    "reflection": "What door in your life deserves a faithful guardian rather than a forced entry?",
+    "translations": {
+      "hi": "राम के द्वार पर तुम रखवाले हो; तुम्हारी आज्ञा के बिना किसी का प्रवेश नहीं होता।"
+    },
+    "meanings": {
+      "hi": "लंका में हनुमान के पराक्रम गिनाने के बाद, यहाँ भजन उनका पद बताता है: वे राम के द्वारपाल हैं। जो राम तक पहुँचना चाहे, उसे हनुमान के रास्ते से जाना होता है — उनकी आज्ञा के बिना प्रवेश नहीं। भक्ति की दृष्टि में यह कोई दफ़्तरी नियम नहीं, बल्कि कृपा के काम करने का चित्र है: जो सेवक प्रभु के सबसे निकट रहता है, वही स्वाभाविक द्वार बन जाता है, और भक्ति ही वह दरवाज़ा है। यहीं से चालीसा का अंतिम भाग शुरू होता है, जहाँ तुलसीदास बीते पराक्रमों की स्तुति से आगे बढ़कर हनुमान को वर्तमान रक्षक के रूप में भरोसे से पुकारते हैं। पाठ करने वाले के लिए संदेश यह है कि सर्वोच्च तक पहुँच प्रायः विनम्र, निष्ठावान सेवा से मिलती है, बल से नहीं।"
+    }
+  },
+  {
+    "slug": "chalisa-22",
+    "textRef": "Hanuman Chalisa, chaupai 22",
+    "tradition": "general",
+    "tags": ["devotion", "peace", "courage"],
+    "dailyPool": true,
+    "devanagari": "सब सुख लहै तुम्हारी सरना । / तुम रच्छक काहू को डर ना",
+    "iast": "saba sukha lahai tumhārī saranā । / tuma racchaka kāhū ko ḍara nā",
+    "sayIt": "sub SOOKH la-HAI tum-HAA-ree sa-ra-NAA / tum RUCH-chuk KAA-hoo ko DA-ra naa",
+    "translation": "In your refuge one finds every happiness; with you as protector, there is no fear of anyone.",
+    "source": "Hanuman Chalisa, chaupai 22, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "saba sukha",
+        "meaning": "every happiness"
+      },
+      {
+        "word": "lahai",
+        "meaning": "obtains, finds"
+      },
+      {
+        "word": "tumhārī saranā",
+        "meaning": "in your refuge, your shelter"
+      },
+      {
+        "word": "tuma racchaka",
+        "meaning": "you (as) protector"
+      },
+      {
+        "word": "kāhū ko",
+        "meaning": "of anyone"
+      },
+      {
+        "word": "ḍara nā",
+        "meaning": "no fear"
+      }
+    ],
+    "meaning": "This chaupai states the whole logic of taking refuge in two lines: shelter brings happiness, and a protector dissolves fear. It follows directly from the image of Hanuman as Rama's gatekeeper — the one who guards the door also guards those who stand within it. Tulsidas is moving the hymn from biography to relationship: what Hanuman did for Rama, he now does for the one who takes shelter in him. This is the hymn's own devotional voice, an expression of trust rather than a guarantee, and it describes how fear actually loosens — not because dangers vanish, but because the devotee no longer faces them alone. For a reciter it is the Chalisa's core promise of fearlessness.",
+    "reflection": "What fear would loosen its grip today if you truly believed you were not facing it alone?",
+    "translations": {
+      "hi": "तुम्हारी शरण में सब सुख मिलते हैं; तुम रक्षक हो, तो किसी का कोई डर नहीं।"
+    },
+    "meanings": {
+      "hi": "यह चौपाई शरणागति का पूरा तर्क दो पंक्तियों में कह देती है: शरण से सुख मिलता है, और रक्षक के होने से भय गल जाता है। यह सीधे पिछली चौपाई से जुड़ी है — जो राम के द्वार का रखवाला है, वही उन सबका भी रखवाला है जो उस द्वार के भीतर खड़े हैं। तुलसीदास यहाँ भजन को जीवनी से रिश्ते की ओर मोड़ रहे हैं: जो हनुमान ने राम के लिए किया, वही वे शरण में आए भक्त के लिए करते हैं। यह भजन की अपनी भक्तिपूर्ण वाणी है — गारंटी नहीं, भरोसे की अभिव्यक्ति — और यह बताती है कि डर असल में कैसे ढीला पड़ता है: खतरे मिट नहीं जाते, पर भक्त उनका सामना अकेले नहीं करता। पाठ करने वाले के लिए यही चालीसा का निर्भयता का मूल आश्वासन है।"
+    }
+  },
+  {
+    "slug": "chalisa-23",
+    "textRef": "Hanuman Chalisa, chaupai 23",
+    "tradition": "general",
+    "tags": ["courage", "discipline", "devotion"],
+    "dailyPool": true,
+    "devanagari": "आपन तेज संहारो आपै । / तीनों लोक हाँक तें काँपै",
+    "iast": "āpana teja saṃhāro āpai । / tīnoṃ loka hām̐ka teṃ kām̐pai",
+    "sayIt": "AA-pun tayj sun-HAA-ro AA-pai / TEE-no lok HAANK tayn KAAM-pai",
+    "translation": "You alone can contain your own splendour; all three worlds tremble at your roar.",
+    "source": "Hanuman Chalisa, chaupai 23, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "āpana",
+        "meaning": "your own"
+      },
+      {
+        "word": "teja",
+        "meaning": "splendour, fiery energy"
+      },
+      {
+        "word": "saṃhāro",
+        "meaning": "contain, restrain"
+      },
+      {
+        "word": "āpai",
+        "meaning": "you yourself, only you"
+      },
+      {
+        "word": "tīnoṃ loka",
+        "meaning": "the three worlds"
+      },
+      {
+        "word": "hām̐ka",
+        "meaning": "roar, battle-cry"
+      },
+      {
+        "word": "teṃ",
+        "meaning": "from, at"
+      },
+      {
+        "word": "kām̐pai",
+        "meaning": "tremble"
+      }
+    ],
+    "meaning": "A verse about power and its mastery. Hanuman's energy is so vast that no outside force can check it — only he himself can hold it in. Yet the same being whose single roar makes the three worlds shake chooses, always, to stand as a servant at Rama's door. Tulsidas places this chaupai right after the refuge verses so the two sides land together: the protector is gentle to those he shelters precisely because his strength is fully under his own command. For a reciter this reframes courage — real strength is not the ability to overwhelm but the self-mastery to restrain what you could unleash, and to spend it only in service.",
+    "reflection": "Where today could you hold your strength in check instead of proving it?",
+    "translations": {
+      "hi": "अपना तेज तुम स्वयं ही सँभाल सकते हो; तुम्हारी हुंकार से तीनों लोक काँप उठते हैं।"
+    },
+    "meanings": {
+      "hi": "यह चौपाई शक्ति और उसके संयम के बारे में है। हनुमान का तेज इतना विराट है कि कोई बाहरी बल उसे रोक नहीं सकता — उसे केवल वे स्वयं ही सँभाल सकते हैं। और जिसकी एक हुंकार से तीनों लोक काँप जाते हैं, वही सदा राम के द्वार पर सेवक बनकर खड़ा रहना चुनता है। तुलसीदास इस चौपाई को शरण वाली पंक्तियों के ठीक बाद रखते हैं ताकि दोनों पहलू साथ दिखें: रक्षक अपने शरणागतों के प्रति कोमल इसीलिए है क्योंकि उसकी शक्ति पूरी तरह उसके अपने वश में है। पाठ करने वाले के लिए यह साहस की परिभाषा बदल देती है — सच्चा बल दूसरों को दबा देना नहीं, बल्कि वह आत्म-संयम है जो अपनी पूरी ताक़त को रोक सके और उसे केवल सेवा में लगाए।"
+    }
+  },
+  {
+    "slug": "chalisa-24",
+    "textRef": "Hanuman Chalisa, chaupai 24",
+    "tradition": "general",
+    "tags": ["courage", "peace", "devotion"],
+    "dailyPool": true,
+    "devanagari": "भूत पिसाच निकट नहिं आवै । / महाबीर जब नाम सुनावै",
+    "iast": "bhūta pisāca nikaṭa nahiṃ āvai । / mahābīra jaba nāma sunāvai",
+    "sayIt": "bhoot pi-SAACH ni-KUT na-heen AA-vai / ma-haa-BEER jub naam su-NAA-vai",
+    "translation": "Ghosts and evil spirits do not come near when one calls out the name of Mahavira, the great hero.",
+    "source": "Hanuman Chalisa, chaupai 24, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "bhūta",
+        "meaning": "ghosts, spirits"
+      },
+      {
+        "word": "pisāca",
+        "meaning": "malevolent spirits, ghouls"
+      },
+      {
+        "word": "nikaṭa",
+        "meaning": "near"
+      },
+      {
+        "word": "nahiṃ āvai",
+        "meaning": "do not come"
+      },
+      {
+        "word": "mahābīra",
+        "meaning": "Mahavira, the great hero (Hanuman)"
+      },
+      {
+        "word": "jaba",
+        "meaning": "when"
+      },
+      {
+        "word": "nāma",
+        "meaning": "the name"
+      },
+      {
+        "word": "sunāvai",
+        "meaning": "calls out, makes heard"
+      }
+    ],
+    "meaning": "Perhaps the most widely quoted line of the Chalisa, recited across North India by people afraid of the dark, of nightmares, of unnamed dread. In the hymn's own devotional voice, speaking Hanuman's name aloud creates a protected space that hostile spirits cannot enter. In common practice — and this is folk devotion woven into the hymn, not a scriptural doctrine — the bhoot and pishach also stand for everything irrational that stalks a mind at night: anxiety, intrusive fear, the sense of being haunted. The remedy offered is strikingly simple and audible: say the name out loud. This chaupai begins the hymn's protection section, a practice of trust that fear retreats when something stronger is invoked.",
+    "reflection": "What name or truth do you reach for out loud when fear comes close?",
+    "translations": {
+      "hi": "जब कोई महावीर का नाम पुकारता है, तो भूत-पिशाच पास नहीं आते।"
+    },
+    "meanings": {
+      "hi": "यह चालीसा की शायद सबसे प्रसिद्ध पंक्ति है, जिसे उत्तर भारत में लोग अँधेरे, बुरे सपनों और अनजाने डर के समय दोहराते हैं। भजन की अपनी भक्तिपूर्ण वाणी में, हनुमान का नाम पुकारने से एक सुरक्षित घेरा बनता है जिसमें दुष्ट शक्तियाँ प्रवेश नहीं कर सकतीं। लोक-भक्ति में — और यह भजन में गुँथी हुई लोक-परंपरा है, कोई शास्त्रीय सिद्धांत नहीं — भूत-पिशाच उन सभी अतार्किक भयों के प्रतीक भी हैं जो रात में मन को घेरते हैं: चिंता, बेचैनी, किसी अनदेखे साये का एहसास। उपाय बेहद सरल और सुनाई देने वाला है: नाम को ज़ोर से बोलो। यहीं से चालीसा का रक्षा-खंड शुरू होता है — यह भरोसे का अभ्यास है कि जब किसी बड़ी शक्ति को पुकारा जाता है, तो डर पीछे हट जाता है।"
+    }
+  },
+  {
+    "slug": "chalisa-25",
+    "textRef": "Hanuman Chalisa, chaupai 25",
+    "tradition": "general",
+    "tags": ["devotion", "discipline", "peace"],
+    "dailyPool": true,
+    "devanagari": "नासै रोग हरै सब पीरा । / जपत निरंतर हनुमत बीरा",
+    "iast": "nāsai roga harai saba pīrā । / japata niraṃtara hanumata bīrā",
+    "sayIt": "NAA-sai rog ha-RAI sub PEE-raa / JA-pat ni-RUN-tar HA-nu-mat BEE-raa",
+    "translation": "Disease is destroyed and every pain is lifted for one who constantly repeats the name of brave Hanuman.",
+    "source": "Hanuman Chalisa, chaupai 25, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "nāsai",
+        "meaning": "destroys, is destroyed"
+      },
+      {
+        "word": "roga",
+        "meaning": "disease, illness"
+      },
+      {
+        "word": "harai",
+        "meaning": "removes, takes away"
+      },
+      {
+        "word": "saba pīrā",
+        "meaning": "all pain, every affliction"
+      },
+      {
+        "word": "japata",
+        "meaning": "repeating, chanting"
+      },
+      {
+        "word": "niraṃtara",
+        "meaning": "constantly, without interruption"
+      },
+      {
+        "word": "hanumata",
+        "meaning": "of Hanuman"
+      },
+      {
+        "word": "bīrā",
+        "meaning": "the brave, the hero"
+      }
+    ],
+    "meaning": "The protection section continues from spirits to sickness: constant repetition of Hanuman's name destroys disease and removes pain. The operative word is nirantara — without interruption. The verse is not describing a one-time transaction but a sustained practice, and this is the hymn's devotional voice, a declaration of trust, not a medical claim; devotees who recite it also see doctors, and the tradition does not ask otherwise. What steady japa demonstrably changes is the sufferer's relationship to suffering — a mind held by rhythm and remembrance is harder for pain to occupy completely. For a reciter, the invitation is the discipline itself: a practice repeated daily, especially through hard seasons, becomes a place to stand.",
+    "reflection": "What small practice could you repeat steadily enough that pain no longer fills the whole room?",
+    "translations": {
+      "hi": "जो निरंतर वीर हनुमान का जप करता है, उसके रोग नष्ट होते हैं और सारी पीड़ा हर ली जाती है।"
+    },
+    "meanings": {
+      "hi": "रक्षा-खंड अब आत्माओं से आगे बढ़कर रोग तक आता है: हनुमान के नाम का निरंतर जप रोग नष्ट करता है और पीड़ा हर लेता है। मुख्य शब्द है \"निरंतर\" — बिना रुके। यह किसी एक बार के सौदे की बात नहीं, बल्कि एक सतत अभ्यास का वर्णन है, और यह भजन की अपनी भक्तिपूर्ण वाणी है — भरोसे की घोषणा, चिकित्सा का दावा नहीं; चालीसा पढ़ने वाले भक्त वैद्य-डॉक्टर के पास भी जाते हैं, और परंपरा इससे मना नहीं करती। नियमित जप जो चीज़ सचमुच बदलता है, वह है दुख के साथ दुखी का रिश्ता — लय और स्मरण में टिका मन पीड़ा के लिए पूरी तरह घेरना कठिन हो जाता है। पाठ करने वाले के लिए निमंत्रण स्वयं अनुशासन है: कठिन दिनों में भी रोज़ दोहराया गया अभ्यास खड़े होने की जगह बन जाता है।"
+    }
+  },
+  {
+    "slug": "chalisa-26",
+    "textRef": "Hanuman Chalisa, chaupai 26",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "संकट तें हनुमान छुड़ावै । / मन क्रम बचन ध्यान जो लावै",
+    "iast": "saṃkaṭa teṃ hanumāna chuḍāvai । / mana krama bacana dhyāna jo lāvai",
+    "sayIt": "SUN-kut tayn ha-nu-MAAN chhu-DAA-vai / mun krum BA-chan DHYAAN jo LAA-vai",
+    "translation": "Hanuman releases from distress whoever turns attention to him in thought, deed, and word.",
+    "source": "Hanuman Chalisa, chaupai 26, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "saṃkaṭa",
+        "meaning": "distress, crisis"
+      },
+      {
+        "word": "teṃ",
+        "meaning": "from"
+      },
+      {
+        "word": "hanumāna",
+        "meaning": "Hanuman"
+      },
+      {
+        "word": "chuḍāvai",
+        "meaning": "releases, frees"
+      },
+      {
+        "word": "mana",
+        "meaning": "mind, thought"
+      },
+      {
+        "word": "krama",
+        "meaning": "deed, action"
+      },
+      {
+        "word": "bacana",
+        "meaning": "word, speech"
+      },
+      {
+        "word": "dhyāna",
+        "meaning": "attention, meditation"
+      },
+      {
+        "word": "jo lāvai",
+        "meaning": "whoever brings, whoever fixes"
+      }
+    ],
+    "meaning": "The promise of rescue comes with a condition of wholeness: Hanuman frees from crisis the one whose mind, actions, and words all point the same way. The triad mana–krama–bacana (thought, deed, speech) is a standard measure of integrity across Hindu ethics — devotion that lives only in the mouth, or only in private feeling, is not yet the devotion this verse describes. Placed in the middle of the protection section, the chaupai quietly shifts responsibility: the rescue is Hanuman's, but the alignment is ours. For a reciter it doubles as a daily audit — in trouble, ask whether what you think, what you do, and what you say are actually asking for the same help.",
+    "reflection": "Are your thoughts, words, and actions asking for the same thing today?",
+    "translations": {
+      "hi": "जो मन, कर्म और वचन से हनुमान का ध्यान लगाता है, उसे वे संकट से छुड़ा लेते हैं।"
+    },
+    "meanings": {
+      "hi": "छुटकारे का यह आश्वासन एक पूर्णता की शर्त के साथ आता है: हनुमान उसे संकट से छुड़ाते हैं जिसके मन, कर्म और वचन तीनों एक ही दिशा में हों। मन–क्रम–वचन की यह त्रयी हिंदू नीति में सच्चाई की जानी-मानी कसौटी है — जो भक्ति केवल ज़बान पर हो, या केवल निजी भावना में, वह अभी वह भक्ति नहीं है जिसकी बात यह चौपाई करती है। रक्षा-खंड के बीच में रखी यह पंक्ति ज़िम्मेदारी को धीरे से बाँट देती है: छुड़ाना हनुमान का काम है, पर तीनों को एक सीध में लाना हमारा। पाठ करने वाले के लिए यह एक दैनिक जाँच भी है — संकट में खुद से पूछिए कि जो आप सोचते, करते और कहते हैं, क्या वे तीनों सचमुच एक ही सहायता माँग रहे हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-27",
+    "textRef": "Hanuman Chalisa, chaupai 27",
+    "tradition": "general",
+    "tags": ["duty", "devotion"],
+    "dailyPool": false,
+    "devanagari": "सब पर राम तपस्वी राजा । / तिन के काज सकल तुम साजा",
+    "iast": "saba para rāma tapasvī rājā । / tina ke kāja sakala tuma sājā",
+    "sayIt": "sub pur RAAM ta-PUS-vee RAA-jaa / tin kay kaaj sa-KUL tum SAA-jaa",
+    "translation": "Over all reigns Rama, the ascetic king — and it was you who accomplished all of his tasks.",
+    "source": "Hanuman Chalisa, chaupai 27, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "saba para",
+        "meaning": "over all, above everyone"
+      },
+      {
+        "word": "rāma",
+        "meaning": "Rama"
+      },
+      {
+        "word": "tapasvī",
+        "meaning": "ascetic, austere"
+      },
+      {
+        "word": "rājā",
+        "meaning": "king"
+      },
+      {
+        "word": "tina ke",
+        "meaning": "his, of him"
+      },
+      {
+        "word": "kāja",
+        "meaning": "tasks, works"
+      },
+      {
+        "word": "sakala",
+        "meaning": "all, entire"
+      },
+      {
+        "word": "tuma",
+        "meaning": "you"
+      },
+      {
+        "word": "sājā",
+        "meaning": "accomplished, carried out"
+      }
+    ],
+    "meaning": "Right at the heart of the praise, Tulsidas restores the hierarchy: above everyone — including Hanuman — stands Rama, the tapasvi raja, a king whose authority rests on austerity rather than indulgence. And Hanuman's greatness is then defined through that order: he is the one who carried out all of Rama's work. The Chalisa never lets Hanuman's glory float free of his service; each is the measure of the other. The pairing of ascetic and king also sketches an ideal of leadership — power held by someone with self-restraint — while Hanuman models the other half: talent wholly given to a worthy purpose. For a reciter the question becomes whose work your abilities are actually serving.",
+    "reflection": "Whose work are your abilities serving right now — and is it worthy of them?",
+    "translations": {
+      "hi": "सबके ऊपर तपस्वी राजा राम हैं — और उनके सारे काम तुमने ही सँवारे।"
+    },
+    "meanings": {
+      "hi": "स्तुति के ठीक बीच में तुलसीदास क्रम फिर स्थापित कर देते हैं: सबके ऊपर — हनुमान सहित — राम हैं, तपस्वी राजा, जिनका अधिकार भोग पर नहीं, तप पर टिका है। और फिर हनुमान की महिमा उसी क्रम से परिभाषित होती है: वे ही हैं जिन्होंने राम के सारे कार्य पूरे किए। चालीसा हनुमान की महिमा को उनकी सेवा से कभी अलग नहीं होने देती; दोनों एक-दूसरे की कसौटी हैं। तपस्वी और राजा का यह मेल नेतृत्व का एक आदर्श भी खींचता है — शक्ति उसके पास हो जिसके पास आत्म-संयम है — जबकि हनुमान दूसरा आधा दिखाते हैं: पूरी प्रतिभा एक योग्य उद्देश्य को समर्पित। पाठ करने वाले के लिए प्रश्न यह बन जाता है कि आपकी योग्यताएँ असल में किसके काम में लगी हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-28",
+    "textRef": "Hanuman Chalisa, chaupai 28",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": true,
+    "devanagari": "और मनोरथ जो कोई लावै । / सोई अमित जीवन फल पावै",
+    "iast": "aura manoratha jo koī lāvai । / soī amita jīvana phala pāvai",
+    "sayIt": "aur ma-no-RUTH jo ko-EE LAA-vai / so-EE a-MIT JEE-van phul PAA-vai",
+    "translation": "And whoever brings any heart's desire to you receives the boundless fruit of life itself.",
+    "source": "Hanuman Chalisa, chaupai 28, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "aura",
+        "meaning": "and, any other"
+      },
+      {
+        "word": "manoratha",
+        "meaning": "heart's desire, wish"
+      },
+      {
+        "word": "jo koī",
+        "meaning": "whoever"
+      },
+      {
+        "word": "lāvai",
+        "meaning": "brings"
+      },
+      {
+        "word": "soī",
+        "meaning": "that very person"
+      },
+      {
+        "word": "amita",
+        "meaning": "boundless, immeasurable"
+      },
+      {
+        "word": "jīvana",
+        "meaning": "life"
+      },
+      {
+        "word": "phala",
+        "meaning": "fruit, result"
+      },
+      {
+        "word": "pāvai",
+        "meaning": "obtains"
+      }
+    ],
+    "meaning": "The hymn opens its arms to ordinary longing. Whatever desire a person carries — work, health, family, safety — they may bring it to Hanuman, and what they receive is described as amita jivana phala, the boundless fruit of life. Read carefully, the promise is larger than the request: the devotee arrives with one wish and leaves with something without limit. Devotional commentators love this asymmetry — bhakti does not screen petitions at the door but transforms the petitioner. This is the hymn's own voice of trust, an invitation rather than a transaction, and its place in the sequence matters: after teaching alignment of thought, word, and deed, the Chalisa now says even your unpolished wants are welcome here.",
+    "reflection": "What longing would you name honestly today if you trusted it would be heard without judgement?",
+    "translations": {
+      "hi": "और जो कोई अपनी मनोकामना तुम्हारे पास लाता है, वह जीवन का असीम फल पाता है।"
+    },
+    "meanings": {
+      "hi": "यहाँ भजन साधारण इच्छाओं के लिए अपनी बाँहें खोल देता है। मनुष्य जो भी कामना लेकर आए — काम, स्वास्थ्य, परिवार, सुरक्षा — वह उसे हनुमान के सामने रख सकता है, और जो मिलता है उसे \"अमित जीवन फल\" कहा गया है — जीवन का असीम फल। ध्यान से पढ़ें तो वचन माँग से बड़ा है: भक्त एक इच्छा लेकर आता है और असीम कुछ लेकर लौटता है। भक्ति-परंपरा को यह विषमता प्रिय है — भक्ति दरवाज़े पर अर्ज़ियाँ नहीं छाँटती, बल्कि अर्ज़ी लगाने वाले को ही बदल देती है। यह भजन की अपनी भरोसे की वाणी है — सौदा नहीं, निमंत्रण — और क्रम में इसकी जगह अर्थपूर्ण है: मन-वचन-कर्म की एकता सिखाने के बाद चालीसा कहती है कि तुम्हारी अनगढ़ इच्छाएँ भी यहाँ स्वीकार हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-29",
+    "textRef": "Hanuman Chalisa, chaupai 29",
+    "tradition": "general",
+    "tags": ["devotion", "wisdom"],
+    "dailyPool": false,
+    "devanagari": "चारों जुग परताप तुम्हारा । / है परसिद्ध जगत उजियारा",
+    "iast": "cāroṃ juga paratāpa tumhārā । / hai parasiddha jagata ujiyārā",
+    "sayIt": "CHAA-ro joog pur-TAAP tum-HAA-raa / hai pur-SIDH ja-GUT u-ji-YAA-raa",
+    "translation": "Your glory endures through all four ages; your fame is renowned, a light upon the world.",
+    "source": "Hanuman Chalisa, chaupai 29, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "cāroṃ juga",
+        "meaning": "all four ages (yugas)"
+      },
+      {
+        "word": "paratāpa",
+        "meaning": "glory, majesty"
+      },
+      {
+        "word": "tumhārā",
+        "meaning": "your"
+      },
+      {
+        "word": "hai",
+        "meaning": "is"
+      },
+      {
+        "word": "parasiddha",
+        "meaning": "renowned, famed"
+      },
+      {
+        "word": "jagata",
+        "meaning": "the world"
+      },
+      {
+        "word": "ujiyārā",
+        "meaning": "light, radiance"
+      }
+    ],
+    "meaning": "Tulsidas widens the frame from one lifetime to cosmic time. The four yugas — Satya, Treta, Dvapara, Kali — are the full span of a world-cycle in Hindu cosmology, and Hanuman's glory is said to run through all of them, lighting the world. Devotional tradition connects this to the belief that Hanuman is chiranjivi, one of the immortals who remains present in every age; the verse itself simply declares his fame undimmed by time. In the hymn's sequence this is the crest of the praise section, the widest camera angle before the verses turn to boons and fruits. For a reciter it poses a quiet counter-question: almost everything we chase fades in a season — what are you building that could give light beyond you?",
+    "reflection": "What are you building that could still give light when you are no longer in the room?",
+    "translations": {
+      "hi": "चारों युगों में तुम्हारा प्रताप है; तुम्हारी कीर्ति जगत में प्रसिद्ध है और उजियारा फैलाती है।"
+    },
+    "meanings": {
+      "hi": "तुलसीदास यहाँ दृष्टि एक जीवन से उठाकर ब्रह्मांडीय काल तक ले जाते हैं। चार युग — सत्य, त्रेता, द्वापर, कलि — हिंदू काल-गणना में एक पूरे विश्व-चक्र का विस्तार हैं, और कहा गया है कि हनुमान का प्रताप उन सबमें व्याप्त है, जगत को उजियारा देता हुआ। भक्ति-परंपरा इसे इस विश्वास से जोड़ती है कि हनुमान चिरंजीवी हैं — हर युग में उपस्थित रहने वाले अमर; चौपाई स्वयं बस इतना घोषित करती है कि उनकी कीर्ति समय से मलिन नहीं होती। भजन के क्रम में यह स्तुति-खंड का शिखर है — वरदानों और फलों की ओर मुड़ने से पहले का सबसे विस्तृत दृश्य। पाठ करने वाले से यह एक शांत प्रश्न पूछती है: हम जो कुछ पीछा करते हैं वह प्रायः एक मौसम में मुरझा जाता है — आप ऐसा क्या रच रहे हैं जो आपके बाद भी रोशनी दे?"
+    }
+  },
+  {
+    "slug": "chalisa-30",
+    "textRef": "Hanuman Chalisa, chaupai 30",
+    "tradition": "general",
+    "tags": ["devotion", "courage", "duty"],
+    "dailyPool": false,
+    "devanagari": "साधु संत के तुम रखवारे । / असुर निकंदन राम दुलारे",
+    "iast": "sādhu saṃta ke tuma rakhavāre । / asura nikaṃdana rāma dulāre",
+    "sayIt": "SAA-dhoo sunt kay tum rakh-WAA-ray / a-SOOR ni-KUN-dun raam du-LAA-ray",
+    "translation": "You are the guardian of sadhus and saints, the destroyer of demons, the beloved of Rama.",
+    "source": "Hanuman Chalisa, chaupai 30, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "sādhu saṃta",
+        "meaning": "sadhus and saints, the good"
+      },
+      {
+        "word": "ke",
+        "meaning": "of"
+      },
+      {
+        "word": "tuma",
+        "meaning": "you"
+      },
+      {
+        "word": "rakhavāre",
+        "meaning": "guardian, protector"
+      },
+      {
+        "word": "asura",
+        "meaning": "demons"
+      },
+      {
+        "word": "nikaṃdana",
+        "meaning": "destroyer, uprooter"
+      },
+      {
+        "word": "rāma dulāre",
+        "meaning": "beloved (darling) of Rama"
+      }
+    ],
+    "meaning": "Three titles in one breath, and together they form a complete moral portrait. Hanuman protects the good, uproots the demonic, and is cherished by Rama — shelter, strength, and belovedness as one character. The order matters: protection of the gentle comes first, and the destruction of asuras exists for the sake of that protection, never as violence for its own display. This echoes the classical role of divine power throughout the epics — force is legitimate when it guards those who cannot guard themselves. In the hymn's sequence this verse compresses everything the protection section has said before the boon verses begin. For a reciter it doubles as a standard to hold oneself to: whom do you protect, what do you refuse to tolerate, and who delights in you?",
+    "reflection": "Who around you needs guarding today, and what would it cost you to stand watch?",
+    "translations": {
+      "hi": "तुम साधु-संतों के रखवाले हो, असुरों का नाश करने वाले और राम के दुलारे हो।"
+    },
+    "meanings": {
+      "hi": "एक ही साँस में तीन उपाधियाँ, और मिलकर वे एक पूरा नैतिक चित्र बनाती हैं। हनुमान सज्जनों की रक्षा करते हैं, आसुरी का उन्मूलन करते हैं, और राम के दुलारे हैं — आश्रय, शक्ति और प्रेमपात्र होना, तीनों एक ही चरित्र में। क्रम महत्वपूर्ण है: पहले कोमल जनों की रक्षा, और असुरों का नाश उसी रक्षा के लिए है — प्रदर्शन के लिए हिंसा कभी नहीं। यही महाकाव्यों में दिव्य शक्ति की शास्त्रीय भूमिका है — बल तभी उचित है जब वह उनकी रक्षा करे जो अपनी रक्षा नहीं कर सकते। भजन के क्रम में यह चौपाई वरदान-खंड शुरू होने से पहले रक्षा-खंड का सार समेट देती है। पाठ करने वाले के लिए यह अपने लिए भी एक कसौटी है: आप किसकी रक्षा करते हैं, किसे सहन करने से इनकार करते हैं, और आप में कौन आनंद पाता है?"
+    }
+  },
+  {
+    "slug": "chalisa-31",
+    "textRef": "Hanuman Chalisa, chaupai 31",
+    "tradition": "general",
+    "tags": ["devotion", "wisdom"],
+    "dailyPool": false,
+    "devanagari": "अष्ट सिद्धि नौ निधि के दाता । / अस बर दीन जानकी माता",
+    "iast": "aṣṭa siddhi nau nidhi ke dātā । / asa bara dīna jānakī mātā",
+    "sayIt": "USHT SID-dhi nau NI-dhi kay DAA-taa / us bur DEEN JAA-na-kee MAA-taa",
+    "translation": "You are the giver of the eight siddhis and the nine nidhis — such is the boon Mother Janaki granted you.",
+    "source": "Hanuman Chalisa, chaupai 31, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "aṣṭa siddhi",
+        "meaning": "the eight siddhis (yogic attainments)"
+      },
+      {
+        "word": "nau nidhi",
+        "meaning": "the nine nidhis (treasures)"
+      },
+      {
+        "word": "ke dātā",
+        "meaning": "giver of"
+      },
+      {
+        "word": "asa",
+        "meaning": "such"
+      },
+      {
+        "word": "bara",
+        "meaning": "boon"
+      },
+      {
+        "word": "dīna",
+        "meaning": "gave, granted"
+      },
+      {
+        "word": "jānakī mātā",
+        "meaning": "Mother Janaki (Sita)"
+      }
+    ],
+    "meaning": "The boon section opens with a striking chain of grace. The eight siddhis are the classical yogic powers (becoming minute, vast, weightless, and so on) and the nine nidhis are the fabled treasures of abundance — and Hanuman does not merely possess them, he can grant them. But even this power is received, not self-made: it was Sita, Mother Janaki, who blessed him with it, in gratitude for his service in Lanka. The hymn keeps its consistent shape — every capacity Hanuman holds traces back to a relationship. There is also a quiet teaching in who gives what: the mother of the household grants the keys to both spiritual attainment and material plenty. Power flows to the servant, through grace, for giving onward.",
+    "reflection": "If real power landed in your hands today, who would you use it for first?",
+    "translations": {
+      "hi": "तुम आठ सिद्धियों और नौ निधियों के दाता हो — ऐसा वरदान माता जानकी ने तुम्हें दिया।"
+    },
+    "meanings": {
+      "hi": "वरदान-खंड कृपा की एक अद्भुत शृंखला से खुलता है। अष्ट सिद्धियाँ योग की शास्त्रीय शक्तियाँ हैं (अणु-सा सूक्ष्म होना, विराट होना, भारहीन होना, आदि) और नौ निधियाँ समृद्धि के पौराणिक कोष — और हनुमान इन्हें केवल धारण ही नहीं करते, दे भी सकते हैं। पर यह सामर्थ्य भी अर्जित नहीं, प्राप्त है: लंका में उनकी सेवा से प्रसन्न होकर माता जानकी ने ही उन्हें यह आशीर्वाद दिया। भजन अपना सुसंगत रूप बनाए रखता है — हनुमान की हर क्षमता किसी रिश्ते से निकलती है। कौन क्या देता है, इसमें भी एक मौन शिक्षा है: घर की माता ही आध्यात्मिक उपलब्धि और भौतिक समृद्धि, दोनों की कुंजियाँ सौंपती हैं। शक्ति सेवक के पास कृपा से आती है — आगे बाँटने के लिए।"
+    }
+  },
+  {
+    "slug": "chalisa-32",
+    "textRef": "Hanuman Chalisa, chaupai 32",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": true,
+    "devanagari": "राम रसायन तुम्हरे पासा । / सदा रहो रघुपति के दासा",
+    "iast": "rāma rasāyana tumhare pāsā । / sadā raho raghupati ke dāsā",
+    "sayIt": "raam ra-SAA-yun TUM-ha-ray PAA-saa / sa-DAA ra-ho ra-ghu-PA-ti kay DAA-saa",
+    "translation": "You hold the elixir of Rama's name; may you remain forever the servant of Raghupati.",
+    "source": "Hanuman Chalisa, chaupai 32, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "rāma rasāyana",
+        "meaning": "the elixir of Rama (Rama's name as alchemical medicine)"
+      },
+      {
+        "word": "tumhare pāsā",
+        "meaning": "is with you, in your keeping"
+      },
+      {
+        "word": "sadā",
+        "meaning": "always, forever"
+      },
+      {
+        "word": "raho",
+        "meaning": "remain"
+      },
+      {
+        "word": "raghupati",
+        "meaning": "Raghupati, lord of the Raghus (Rama)"
+      },
+      {
+        "word": "ke dāsā",
+        "meaning": "as the servant of"
+      }
+    ],
+    "meaning": "Rasayana is the old word for an alchemical elixir — the medicine that transmutes and restores life. Tulsidas says this elixir is Rama's own name, and its keeper is Hanuman. Yet the very next breath is not \"so rule as its master\" but \"remain forever Raghupati's servant.\" That is the paradox the whole Chalisa turns on: the one who holds the supreme remedy wants nothing except to keep serving. Holding the medicine and staying the servant are not two facts but one — service is how the elixir stays potent. For a reciter the question is what you keep closest and return to daily, and whether it actually restores you the way a medicine should.",
+    "reflection": "What do you keep closest and return to daily — and does it actually restore you?",
+    "translations": {
+      "hi": "राम-नाम का रसायन तुम्हारे पास है; तुम सदा रघुपति के दास बने रहो।"
+    },
+    "meanings": {
+      "hi": "\"रसायन\" पुराना शब्द है उस दिव्य औषधि के लिए जो जीवन को बदल और पुनर्जीवित कर देती है। तुलसीदास कहते हैं कि यह रसायन स्वयं राम का नाम है, और उसके रखवाले हैं हनुमान। पर अगली ही साँस में यह नहीं कहा गया कि \"तो उसके स्वामी बनकर राज करो,\" बल्कि यह कि \"सदा रघुपति के दास बने रहो।\" यही वह विरोधाभास है जिस पर पूरी चालीसा टिकी है: जिसके पास परम औषधि है, वह सेवा के सिवा कुछ नहीं चाहता। औषधि को सँभालना और दास बने रहना दो बातें नहीं, एक ही बात है — सेवा से ही रसायन की शक्ति बनी रहती है। पाठ करने वाले के लिए प्रश्न यह है कि आप किसे सबसे पास रखते हैं, रोज़ किसके पास लौटते हैं — और क्या वह सचमुच औषधि की तरह आपको भीतर से नया करता है।"
+    }
+  },
+  {
+    "slug": "chalisa-33",
+    "textRef": "Hanuman Chalisa, chaupai 33",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "तुम्हरे भजन राम को पावै । / जनम जनम के दुख बिसरावै",
+    "iast": "tumhare bhajana rāma ko pāvai । / janama janama ke dukha bisarāvai",
+    "sayIt": "TUM-ha-ray BHA-jun raam ko PAA-vai / JA-num JA-num kay dookh bi-sa-RAA-vai",
+    "translation": "Through singing your praise one reaches Rama, and the sorrows of birth after birth are forgotten.",
+    "source": "Hanuman Chalisa, chaupai 33, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "tumhare bhajana",
+        "meaning": "by singing your praise, by worship of you"
+      },
+      {
+        "word": "rāma ko",
+        "meaning": "Rama"
+      },
+      {
+        "word": "pāvai",
+        "meaning": "one attains, reaches"
+      },
+      {
+        "word": "janama janama ke",
+        "meaning": "of birth after birth"
+      },
+      {
+        "word": "dukha",
+        "meaning": "sorrows"
+      },
+      {
+        "word": "bisarāvai",
+        "meaning": "are forgotten, fade away"
+      }
+    ],
+    "meaning": "The circle closes: worship of the servant leads to the Lord. Singing to Hanuman does not stop at Hanuman — it delivers the devotee to Rama, which in this tradition is the whole point of Hanuman's existence; he would want nothing else. The second line makes an unusual promise. It does not say old sorrows are erased or repaid — it says they are forgotten, bisaravai. Grief accumulated over lifetimes loses its grip not through accounting but through absorption in something greater. Anyone who has sung wholeheartedly knows the small-scale version of this. As the fruits section of the hymn builds, this chaupai names the deepest fruit: not gifts or safety, but arrival — and a heart no longer rehearsing its old wounds.",
+    "reflection": "What sorrow are you ready to stop rehearsing, year after year?",
+    "translations": {
+      "hi": "तुम्हारे भजन से राम मिल जाते हैं, और जन्म-जन्म के दुख भूल जाते हैं।"
+    },
+    "meanings": {
+      "hi": "यहाँ वृत्त पूरा होता है: सेवक की उपासना स्वामी तक पहुँचा देती है। हनुमान का भजन हनुमान पर रुकता नहीं — वह भक्त को राम तक पहुँचा देता है, और इस परंपरा में हनुमान के होने का यही तो प्रयोजन है; वे और कुछ चाहते भी नहीं। दूसरी पंक्ति एक असामान्य वचन देती है। वह नहीं कहती कि पुराने दुख मिटा दिए जाते हैं या उनका हिसाब चुकता होता है — कहती है कि वे \"बिसरावै\", भुला दिए जाते हैं। जन्मों का संचित दुख हिसाब-किताब से नहीं, किसी बड़ी चीज़ में डूब जाने से अपनी पकड़ खोता है। जिसने कभी पूरे मन से गाया है, वह इसका छोटा रूप जानता है। फल-खंड के बढ़ते क्रम में यह चौपाई सबसे गहरा फल बताती है: उपहार या सुरक्षा नहीं, बल्कि पहुँच जाना — और ऐसा हृदय जो अपने पुराने घाव दोहराना बंद कर चुका है।"
+    }
+  },
+  {
+    "slug": "chalisa-34",
+    "textRef": "Hanuman Chalisa, chaupai 34",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": false,
+    "devanagari": "अंत काल रघुबर पुर जाई । / जहाँ जन्म हरिभक्त कहाई",
+    "iast": "aṃta kāla raghubara pura jāī । / jahām̐ janma haribhakta kahāī",
+    "sayIt": "unt kaal ra-ghu-BUR poor JAA-ee / ja-HAAN junm ha-ri-BHUKT ka-HAA-ee",
+    "translation": "At life's end such a devotee goes to the city of Raghubara; and wherever born again, is known as Hari's devotee.",
+    "source": "Hanuman Chalisa, chaupai 34, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "aṃta kāla",
+        "meaning": "at the time of the end, at death"
+      },
+      {
+        "word": "raghubara pura",
+        "meaning": "the city of Raghubara (Rama's abode)"
+      },
+      {
+        "word": "jāī",
+        "meaning": "goes"
+      },
+      {
+        "word": "jahām̐",
+        "meaning": "wherever"
+      },
+      {
+        "word": "janma",
+        "meaning": "birth"
+      },
+      {
+        "word": "haribhakta",
+        "meaning": "devotee of Hari"
+      },
+      {
+        "word": "kahāī",
+        "meaning": "is called, is known as"
+      }
+    ],
+    "meaning": "The hymn now faces the one fear underneath all the others — death — and answers it with two assurances. At the end, the devotee goes to Rama's own city; and if there is another birth, it will carry the identity of haribhakta, one who loves God. Notice what is not promised: escape from rebirth is not demanded, and the verse is at peace either way. Destination or devotion — both count as arrival. This is the hymn's devotional voice offering a settled relationship with mortality: what continues is not achievement or possessions but orientation of the heart. For a reciter the teaching lands earlier than the deathbed — if what survives of us is our deepest loyalty, that loyalty deserves attention today.",
+    "reflection": "If only your deepest loyalty outlives you, what does today's schedule say that loyalty is?",
+    "translations": {
+      "hi": "अंत समय में ऐसा भक्त रघुवर के धाम जाता है; और जहाँ भी जन्म ले, हरिभक्त कहलाता है।"
+    },
+    "meanings": {
+      "hi": "अब भजन उस एक भय का सामना करता है जो बाक़ी सब भयों के नीचे बैठा है — मृत्यु — और उसका उत्तर दो आश्वासनों से देता है। अंत में भक्त राम के अपने धाम जाता है; और यदि फिर जन्म हो, तो वह \"हरिभक्त\" की पहचान लेकर आता है। ध्यान दीजिए कि क्या वचन नहीं दिया गया: पुनर्जन्म से मुक्ति की माँग नहीं है, और चौपाई दोनों स्थितियों में शांत है। धाम मिले या भक्ति — दोनों ही पहुँच जाना है। यह भजन की भक्तिपूर्ण वाणी है, जो मृत्यु के साथ एक ठहरा हुआ रिश्ता देती है: जो आगे चलता है वह उपलब्धि या संपत्ति नहीं, हृदय की दिशा है। पाठ करने वाले के लिए यह शिक्षा मृत्युशय्या से बहुत पहले लागू होती है — यदि हममें से जो बचता है वह हमारी सबसे गहरी निष्ठा है, तो उस निष्ठा पर ध्यान आज ही देना चाहिए।"
+    }
+  },
+  {
+    "slug": "chalisa-35",
+    "textRef": "Hanuman Chalisa, chaupai 35",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": false,
+    "devanagari": "और देवता चित्त न धरई । / हनुमत सेई सर्ब सुख करई",
+    "iast": "aura devatā citta na dharaī । / hanumata seī sarba sukha karaī",
+    "sayIt": "aur DAY-va-taa chitt na dha-RA-ee / HA-nu-mut say-EE surb sookh ka-RA-ee",
+    "translation": "Even one who holds no other deity in mind finds that serving Hanuman brings every happiness.",
+    "source": "Hanuman Chalisa, chaupai 35, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "aura",
+        "meaning": "other"
+      },
+      {
+        "word": "devatā",
+        "meaning": "deity, god"
+      },
+      {
+        "word": "citta",
+        "meaning": "mind, heart"
+      },
+      {
+        "word": "na dharaī",
+        "meaning": "does not hold, does not fix"
+      },
+      {
+        "word": "hanumata",
+        "meaning": "Hanuman"
+      },
+      {
+        "word": "seī",
+        "meaning": "serving"
+      },
+      {
+        "word": "sarba",
+        "meaning": "all, every"
+      },
+      {
+        "word": "sukha",
+        "meaning": "happiness"
+      },
+      {
+        "word": "karaī",
+        "meaning": "brings about, accomplishes"
+      }
+    ],
+    "meaning": "This chaupai speaks the language of ishta-devata — the chosen form through which a devotee approaches the divine. Its point is the sufficiency of one-pointed devotion, not a ranking of gods: Hindu tradition honours many forms, and hymns to other deities make the same whole-hearted claim for their own ishta, as devotional poetry properly does. Tulsidas is reassuring the ordinary devotee that a single sincere attachment is enough; you need not multiply worship anxiously to cover every door, because serving Hanuman — who is himself pure service of Rama — carries the whole of it. The spiritual mechanics are those of focus: a chitta gathered in one place deepens, while scattered attention stays shallow everywhere.",
+    "reflection": "Where is your attention scattered across many doors when one deep commitment would carry you further?",
+    "translations": {
+      "hi": "और किसी देवता को चित्त में न भी धरे, तो भी हनुमान की सेवा से सब सुख मिल जाते हैं।"
+    },
+    "meanings": {
+      "hi": "यह चौपाई इष्ट-देवता की भाषा बोलती है — वह चुना हुआ रूप जिसके द्वारा भक्त परमात्मा तक पहुँचता है। इसका आशय एकनिष्ठ भक्ति की पर्याप्तता है, देवताओं की कोई श्रेणी नहीं: हिंदू परंपरा अनेक रूपों का आदर करती है, और अन्य देवताओं की स्तुतियाँ भी अपने-अपने इष्ट के लिए यही पूर्ण-हृदय दावा करती हैं — भक्ति-काव्य का यही स्वभाव है। तुलसीदास साधारण भक्त को आश्वस्त कर रहे हैं कि एक सच्चा लगाव पर्याप्त है; हर दरवाज़ा खटखटाने की बेचैनी में पूजा को गुणा करने की ज़रूरत नहीं, क्योंकि हनुमान की सेवा — जो स्वयं राम की शुद्ध सेवा हैं — में सब कुछ समा जाता है। आध्यात्मिक यांत्रिकी एकाग्रता की है: एक जगह इकट्ठा हुआ चित्त गहरा होता है, बिखरा ध्यान हर जगह उथला रह जाता है।"
+    }
+  },
+  {
+    "slug": "chalisa-36",
+    "textRef": "Hanuman Chalisa, chaupai 36",
+    "tradition": "general",
+    "tags": ["courage", "peace", "devotion"],
+    "dailyPool": true,
+    "devanagari": "संकट कटै मिटै सब पीरा । / जो सुमिरै हनुमत बलबीरा",
+    "iast": "saṃkaṭa kaṭai miṭai saba pīrā । / jo sumirai hanumata balabīrā",
+    "sayIt": "SUN-kut ka-TAI mi-TAI sub PEE-raa / jo su-mi-RAI HA-nu-mut bul-BEE-raa",
+    "translation": "Distress is cut away and every pain erased for whoever remembers Hanuman, the mighty hero.",
+    "source": "Hanuman Chalisa, chaupai 36, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "saṃkaṭa",
+        "meaning": "distress, crisis"
+      },
+      {
+        "word": "kaṭai",
+        "meaning": "is cut away"
+      },
+      {
+        "word": "miṭai",
+        "meaning": "is erased, wiped out"
+      },
+      {
+        "word": "saba pīrā",
+        "meaning": "every pain"
+      },
+      {
+        "word": "jo",
+        "meaning": "whoever"
+      },
+      {
+        "word": "sumirai",
+        "meaning": "remembers, calls to mind"
+      },
+      {
+        "word": "hanumata",
+        "meaning": "Hanuman"
+      },
+      {
+        "word": "balabīrā",
+        "meaning": "the mighty hero"
+      }
+    ],
+    "meaning": "This is the Chalisa's refrain of rescue in its most compact form, and the source of Hanuman's beloved title Sankat Mochan, the releaser from distress. Two strong verbs do the work: sankat is cut — like a rope, like a snare — and pain is erased. The required act is the gentlest in the whole hymn: sumiran, simply remembering. Not pilgrimage, not ritual, not expense — the turning of the mind toward someone stronger than the trouble. This is the hymn's devotional voice, a practice of trust rather than a contract, and its lived truth is familiar: crisis isolates, and remembering that you are accompanied is often the exact moment panic breaks. For a reciter this chaupai is the emergency line of the whole hymn.",
+    "reflection": "What trouble shrinks the moment you remember you are not facing it alone?",
+    "translations": {
+      "hi": "जो बलवीर हनुमान का स्मरण करता है, उसके संकट कट जाते हैं और सारी पीड़ा मिट जाती है।"
+    },
+    "meanings": {
+      "hi": "यह चालीसा के छुटकारे का सबसे संक्षिप्त रूप है, और हनुमान की प्रिय उपाधि \"संकट मोचन\" का स्रोत। दो सशक्त क्रियाएँ काम करती हैं: संकट \"कटता\" है — रस्सी की तरह, फंदे की तरह — और पीड़ा \"मिटती\" है। और अपेक्षित कर्म पूरे भजन का सबसे कोमल कर्म है: सुमिरन — बस याद करना। न तीर्थ, न कर्मकांड, न खर्च — बस मन का उस ओर मुड़ना जो संकट से बलवान है। यह भजन की अपनी भक्तिपूर्ण वाणी है — अनुबंध नहीं, भरोसे का अभ्यास — और इसका जिया हुआ सत्य जाना-पहचाना है: संकट अकेला कर देता है, और यह याद आना कि आप अकेले नहीं हैं, अक्सर वही क्षण होता है जब घबराहट टूटती है। पाठ करने वाले के लिए यह चौपाई पूरे भजन की आपातकालीन पुकार है।"
+    }
+  },
+  {
+    "slug": "chalisa-37",
+    "textRef": "Hanuman Chalisa, chaupai 37",
+    "tradition": "general",
+    "tags": ["devotion"],
+    "dailyPool": true,
+    "devanagari": "जै जै जै हनुमान गोसाईं । / कृपा करहु गुरु देव की नाईं",
+    "iast": "jai jai jai hanumāna gosāīṃ । / kṛpā karahu guru deva kī nāīṃ",
+    "sayIt": "jai jai jai ha-nu-MAAN go-SAA-een / kri-PAA ka-ra-hoo GU-ru dayv kee NAA-een",
+    "translation": "Victory, victory, victory to you, Lord Hanuman! Bestow your grace upon me as a guru does.",
+    "source": "Hanuman Chalisa, chaupai 37, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "jai",
+        "meaning": "victory, hail"
+      },
+      {
+        "word": "hanumāna",
+        "meaning": "Hanuman"
+      },
+      {
+        "word": "gosāīṃ",
+        "meaning": "lord, master"
+      },
+      {
+        "word": "kṛpā",
+        "meaning": "grace, kindness"
+      },
+      {
+        "word": "karahu",
+        "meaning": "bestow, do"
+      },
+      {
+        "word": "guru deva",
+        "meaning": "the guru, revered teacher"
+      },
+      {
+        "word": "kī nāīṃ",
+        "meaning": "in the manner of, like"
+      }
+    ],
+    "meaning": "The hymn crests into open acclamation — jai spoken three times, the sound of a crowd greeting its hero — and then immediately bends into a petition of a very specific shape: be gracious to me the way a guru is. Not as a king dispensing favours, nor a distant god granting boons, but as a teacher: someone who stays with a student, corrects patiently, and wants the student's growth more than their comfort. With this verse the Chalisa turns from praise to Tulsidas's closing plea, and the request tells us what he values most from Hanuman — not power or protection, which earlier verses covered, but formation. For a reciter it reframes devotion as apprenticeship: asking not only for help, but to be taught.",
+    "reflection": "Who has shaped you the way a true teacher does — and are you still willing to be taught?",
+    "translations": {
+      "hi": "हे स्वामी हनुमान, तुम्हारी जय हो, जय हो, जय हो! गुरुदेव की तरह मुझ पर कृपा करो।"
+    },
+    "meanings": {
+      "hi": "भजन यहाँ खुले जयघोष पर पहुँचता है — तीन बार \"जै\", जैसे भीड़ अपने नायक का स्वागत करती है — और फिर तुरंत एक बहुत विशिष्ट रूप की प्रार्थना में मुड़ जाता है: मुझ पर वैसे कृपा करो जैसे गुरु करता है। न कृपाएँ बाँटते राजा की तरह, न वरदान देते किसी दूर देवता की तरह, बल्कि शिक्षक की तरह: जो शिष्य के साथ बना रहता है, धैर्य से सुधारता है, और शिष्य के आराम से अधिक उसका विकास चाहता है। इस चौपाई से चालीसा स्तुति से तुलसीदास की अंतिम विनती की ओर मुड़ती है, और यह माँग बताती है कि उन्हें हनुमान से सबसे अधिक क्या चाहिए — शक्ति या रक्षा नहीं, जो पिछली चौपाइयों में आ चुकीं, बल्कि गढ़ा जाना। पाठ करने वाले के लिए यह भक्ति को शिष्यत्व बना देती है: केवल सहायता नहीं, सिखाया जाना भी माँगना।"
+    }
+  },
+  {
+    "slug": "chalisa-38",
+    "textRef": "Hanuman Chalisa, chaupai 38",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": false,
+    "devanagari": "जो सत बार पाठ कर कोई । / छूटहि बंदि महा सुख होई",
+    "iast": "jo sata bāra pāṭha kara koī । / chūṭahi baṃdi mahā sukha hoī",
+    "sayIt": "jo sut baar paath kur ko-EE / CHHOO-ta-hi BUN-di ma-HAA sookh ho-EE",
+    "translation": "Whoever recites this a hundred times is released from bondage, and great joy follows.",
+    "source": "Hanuman Chalisa, chaupai 38, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "jo koī",
+        "meaning": "whoever"
+      },
+      {
+        "word": "sata bāra",
+        "meaning": "a hundred times"
+      },
+      {
+        "word": "pāṭha kara",
+        "meaning": "recites, performs recitation"
+      },
+      {
+        "word": "chūṭahi",
+        "meaning": "is released, freed"
+      },
+      {
+        "word": "baṃdi",
+        "meaning": "bondage, captivity"
+      },
+      {
+        "word": "mahā sukha",
+        "meaning": "great joy"
+      },
+      {
+        "word": "hoī",
+        "meaning": "comes to be"
+      }
+    ],
+    "meaning": "Here the hymn begins speaking about itself: the phala-shruti, the traditional declaration of the fruits of recitation that closes many Hindu devotional texts. A hundred recitations, it promises, release the reciter from bandi — bondage — and bring great joy. Devotees have read bandi at every level: literal captivity, entangling circumstances, and the inner knots of fear and habit. This is the hymn's own devotional voice — a practice of trust, not a contract with a counter — and the number carries the real teaching: a hundred repetitions is not magic arithmetic but a commitment long enough to change the one who keeps it. What is repeated a hundred times with attention is no longer being read; it has begun reading you.",
+    "reflection": "What could a hundred honest repetitions of one practice free you from?",
+    "translations": {
+      "hi": "जो कोई इसका सौ बार पाठ करता है, वह बंधन से छूट जाता है और महासुख पाता है।"
+    },
+    "meanings": {
+      "hi": "यहाँ से भजन अपने बारे में बोलने लगता है: यह फल-श्रुति है — पाठ के फलों की वह पारंपरिक घोषणा जिससे अनेक हिंदू स्तोत्र समाप्त होते हैं। वचन है कि सौ बार पाठ करने वाला \"बंदि\" से — बंधन से — छूट जाता है और महासुख पाता है। भक्तों ने बंदि को हर स्तर पर पढ़ा है: वास्तविक क़ैद, उलझाने वाली परिस्थितियाँ, और भय तथा आदत की भीतरी गाँठें। यह भजन की अपनी भक्तिपूर्ण वाणी है — भरोसे का अभ्यास, गिनती का सौदा नहीं — और असली शिक्षा संख्या में है: सौ आवृत्तियाँ कोई जादुई अंकगणित नहीं, बल्कि इतनी लंबी प्रतिबद्धता हैं कि वह निभाने वाले को ही बदल दे। जो चीज़ सौ बार ध्यान से दोहराई जाती है, उसे आप नहीं पढ़ रहे होते; वह आपको पढ़ने लगती है।"
+    }
+  },
+  {
+    "slug": "chalisa-39",
+    "textRef": "Hanuman Chalisa, chaupai 39",
+    "tradition": "general",
+    "tags": ["devotion", "discipline"],
+    "dailyPool": false,
+    "devanagari": "जो यह पढ़ै हनुमान चलीसा । / होय सिद्धि साखी गौरीसा",
+    "iast": "jo yaha paḍhai hanumāna calīsā । / hoya siddhi sākhī gaurīsā",
+    "sayIt": "jo yeh pa-DHAI ha-nu-MAAN cha-LEE-saa / hoy SID-dhi SAA-khee gau-REE-saa",
+    "translation": "Whoever reads this Hanuman Chalisa attains fulfilment — Gauri's lord, Shiva himself, is witness.",
+    "source": "Hanuman Chalisa, chaupai 39, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "jo",
+        "meaning": "whoever"
+      },
+      {
+        "word": "yaha",
+        "meaning": "this"
+      },
+      {
+        "word": "paḍhai",
+        "meaning": "reads, recites"
+      },
+      {
+        "word": "hanumāna calīsā",
+        "meaning": "the Hanuman Chalisa"
+      },
+      {
+        "word": "hoya",
+        "meaning": "comes to be, is attained"
+      },
+      {
+        "word": "siddhi",
+        "meaning": "fulfilment, accomplishment"
+      },
+      {
+        "word": "sākhī",
+        "meaning": "witness"
+      },
+      {
+        "word": "gaurīsā",
+        "meaning": "Gauri's lord (Shiva)"
+      }
+    ],
+    "meaning": "The hymn names itself — this is the only place the words \"Hanuman Chalisa\" appear inside the text — and seals its promise with the highest witness it can call: Gaurisa, Shiva, the lord of Gauri (Parvati). The choice is meaningful. In wide devotional tradition Hanuman is honoured as an embodiment of Shiva's own power, so Shiva standing surety for this hymn is the source vouching for the stream — and it gracefully joins Shaiva and Vaishnava devotion in a single line, a very Tulsidas gesture. The promised siddhi here is fulfilment in the broadest sense: the recitation accomplishes what it was undertaken for. This is the hymn's own voice of trust, inviting practice rather than signing a guarantee.",
+    "reflection": "What would you attempt with full effort if you believed it was truly witnessed?",
+    "translations": {
+      "hi": "जो यह हनुमान चालीसा पढ़ता है, उसे सिद्धि प्राप्त होती है — इसके साक्षी स्वयं गौरी के स्वामी शिव हैं।"
+    },
+    "meanings": {
+      "hi": "भजन यहाँ स्वयं अपना नाम लेता है — पूरे पाठ में \"हनुमान चालीसा\" शब्द केवल यहीं आते हैं — और अपने वचन पर सबसे ऊँचा साक्षी बुलाता है: गौरीसा, यानी गौरी (पार्वती) के स्वामी शिव। यह चुनाव अर्थपूर्ण है। व्यापक भक्ति-परंपरा में हनुमान शिव की ही शक्ति के अवतार रूप में पूजे जाते हैं, इसलिए शिव का इस भजन की ज़मानत लेना ऐसा है जैसे स्रोत धारा की गवाही दे — और यह एक ही पंक्ति में शैव और वैष्णव भक्ति को सहज जोड़ देता है, जो तुलसीदास की विशिष्ट शैली है। यहाँ वादा की गई सिद्धि व्यापकतम अर्थ में पूर्णता है: पाठ वह पूरा कर देता है जिसके लिए वह आरंभ हुआ था। यह भजन की अपनी भरोसे की वाणी है — अभ्यास का निमंत्रण, लिखित गारंटी नहीं।"
+    }
+  },
+  {
+    "slug": "chalisa-40",
+    "textRef": "Hanuman Chalisa, chaupai 40",
+    "tradition": "general",
+    "tags": ["devotion", "peace"],
+    "dailyPool": true,
+    "devanagari": "तुलसीदास सदा हरि चेरा । / कीजै नाथ हृदय महँ डेरा",
+    "iast": "tulasīdāsa sadā hari cerā । / kījai nātha hṛdaya maham̐ ḍerā",
+    "sayIt": "tul-see-DAAS sa-DAA ha-ri CHAY-raa / KEE-jai naath hri-DAY ma-hun DAY-raa",
+    "translation": "Tulsidas is forever the servant of Hari; O Lord, make your dwelling in my heart.",
+    "source": "Hanuman Chalisa, chaupai 40, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "tulasīdāsa",
+        "meaning": "Tulsidas (the poet, naming himself)"
+      },
+      {
+        "word": "sadā",
+        "meaning": "always, forever"
+      },
+      {
+        "word": "hari",
+        "meaning": "Hari (God; Rama)"
+      },
+      {
+        "word": "cerā",
+        "meaning": "servant, disciple"
+      },
+      {
+        "word": "kījai",
+        "meaning": "please make"
+      },
+      {
+        "word": "nātha",
+        "meaning": "O Lord"
+      },
+      {
+        "word": "hṛdaya maham̐",
+        "meaning": "within the heart"
+      },
+      {
+        "word": "ḍerā",
+        "meaning": "dwelling, encampment"
+      }
+    ],
+    "meaning": "The fortieth and final chaupai is the poet's signature, in the manner of bhakti poets who fold their own name into the last verse. After thirty-nine verses about Hanuman, Tulsidas states his own position — forever Hari's servant — and makes the hymn's last request: come camp in my heart. The word dera is homely and deliberate: not a temple or a throne but an encampment, the way a traveller settles in to stay. All the protection, boons, and fruits the hymn has listed condense into this single wish for permanent inner residence — as if to say the real fruit of forty verses is not what the Lord does for you but that he stays with you. Reciters traditionally make the plea their own as they speak it.",
+    "reflection": "What would change if what you love most were not a visitor in your heart but a permanent resident?",
+    "translations": {
+      "hi": "तुलसीदास सदा हरि के दास हैं; हे नाथ, मेरे हृदय में अपना डेरा कीजिए।"
+    },
+    "meanings": {
+      "hi": "चालीसवीं और अंतिम चौपाई कवि के हस्ताक्षर हैं — भक्ति-कवियों की उस रीति में, जो अंतिम पद में अपना नाम गूँथ देते हैं। हनुमान के बारे में उनतालीस चौपाइयों के बाद तुलसीदास अपनी स्थिति कहते हैं — सदा हरि के दास — और भजन की आख़िरी विनती करते हैं: मेरे हृदय में डेरा कीजिए। \"डेरा\" शब्द घरेलू और जानबूझकर चुना हुआ है: मंदिर या सिंहासन नहीं, बल्कि पड़ाव — जैसे कोई यात्री टिकने के लिए बस जाए। भजन में गिनाए सारे संरक्षण, वरदान और फल इस एक इच्छा में सिमट जाते हैं — स्थायी भीतरी निवास — मानो कहा जा रहा हो कि चालीस पदों का असली फल यह नहीं कि प्रभु आपके लिए क्या करते हैं, बल्कि यह कि वे आपके साथ रहते हैं। पाठ करते समय भक्त परंपरा से इस विनती को अपनी बना लेते हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-doha-1",
+    "textRef": "Hanuman Chalisa, opening doha 1",
+    "tradition": "general",
+    "tags": ["devotion", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "श्रीगुरु चरन सरोज रज निज मनु मुकुरु सुधारि । / बरनऊँ रघुबर बिमल जसु जो दायकु फल चारि",
+    "iast": "śrīguru carana saroja raja nija manu mukuru sudhāri । / baranaūm̐ raghubara bimala jasu jo dāyaku phala cāri",
+    "sayIt": "shree-GU-ru CHA-ra-na sa-RO-ja RA-ja NI-ja MA-nu MU-ku-ru su-DHAA-ri / ba-ra-na-OON ra-ghu-BA-ra BI-ma-la JA-su jo DAA-ya-ku PHA-la CHAA-ri",
+    "translation": "Cleansing the mirror of my mind with the dust of my guru's lotus feet, I recount the spotless glory of Raghubara, giver of the four fruits of life.",
+    "source": "Hanuman Chalisa, opening doha 1, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "śrīguru",
+        "meaning": "the revered guru"
+      },
+      {
+        "word": "carana saroja",
+        "meaning": "lotus feet"
+      },
+      {
+        "word": "raja",
+        "meaning": "dust"
+      },
+      {
+        "word": "nija manu",
+        "meaning": "my own mind"
+      },
+      {
+        "word": "mukuru",
+        "meaning": "mirror"
+      },
+      {
+        "word": "sudhāri",
+        "meaning": "having polished, cleansed"
+      },
+      {
+        "word": "baranaūm̐",
+        "meaning": "I describe, recount"
+      },
+      {
+        "word": "raghubara",
+        "meaning": "the best of the Raghus, Rama"
+      },
+      {
+        "word": "bimala jasu",
+        "meaning": "spotless glory"
+      },
+      {
+        "word": "jo",
+        "meaning": "which"
+      },
+      {
+        "word": "dāyaku",
+        "meaning": "giver, bestower"
+      },
+      {
+        "word": "phala cāri",
+        "meaning": "the four fruits (dharma, artha, kāma, mokṣa)"
+      }
+    ],
+    "meaning": "The Chalisa opens not with Hanuman but with humility. Tulsidas begins the way a reciter should — dusting the mirror of the mind with the grace of the guru's feet, so that what follows can be seen clearly. Only then does he turn to sing Rama's spotless glory, which tradition says yields the four aims of human life: dharma, prosperity, fulfilment, and liberation. For the reciter this doha is the threshold: settle the mind first, honour whoever taught you, and let praise begin from a clean surface. Everything in the forty verses ahead rests on this quiet preparation.",
+    "reflection": "Before you begin today's most important work, what would it mean to first polish the mirror of your mind?",
+    "translations": {
+      "hi": "श्रीगुरु के चरण-कमलों की धूल से अपने मन का दर्पण साफ़ करके, मैं रघुवर के निर्मल यश का वर्णन करता हूँ, जो जीवन के चारों फल देने वाला है।"
+    },
+    "meanings": {
+      "hi": "चालीसा की शुरुआत हनुमान से नहीं, विनम्रता से होती है। तुलसीदास वैसे ही आरंभ करते हैं जैसे हर पाठ करने वाले को करना चाहिए — गुरु-चरणों की कृपा-रूपी धूल से मन का दर्पण साफ़ करके, ताकि आगे जो कहा जाए वह साफ़ दिखे। तभी वे रघुवर के निर्मल यश का गान करते हैं, जो परंपरा के अनुसार जीवन के चार फल — धर्म, अर्थ, काम और मोक्ष — देता है। पाठ करने वाले के लिए यह दोहा दहलीज़ है: पहले मन को शांत करो, अपने सिखाने वालों का सम्मान करो, और स्तुति साफ़ मन से शुरू करो। आगे के चालीस पद इसी शांत तैयारी पर टिके हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-doha-2",
+    "textRef": "Hanuman Chalisa, opening doha 2",
+    "tradition": "general",
+    "tags": ["devotion", "wisdom"],
+    "dailyPool": true,
+    "devanagari": "बुद्धिहीन तनु जानिके सुमिरौं पवनकुमार । / बल बुद्धि बिद्या देहु मोहिं हरहु कलेस बिकार",
+    "iast": "buddhihīna tanu jānike sumirauṃ pavanakumāra । / bala buddhi bidyā dehu mohiṃ harahu kalesa bikāra",
+    "sayIt": "bud-dhi-HEE-na TA-nu JAA-ni-kay su-mi-RAUN pa-va-na-ku-MAA-ra / BA-la BUD-dhi BID-yaa DAY-hu MO-hin HA-ra-hu ka-LAY-sa bi-KAA-ra",
+    "translation": "Knowing myself to be poor in understanding, I remember the Son of the Wind: grant me strength, intelligence, and knowledge, and take away my afflictions and impurities.",
+    "source": "Hanuman Chalisa, opening doha 2, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "buddhihīna",
+        "meaning": "lacking in intelligence"
+      },
+      {
+        "word": "tanu",
+        "meaning": "body, self"
+      },
+      {
+        "word": "jānike",
+        "meaning": "knowing"
+      },
+      {
+        "word": "sumirauṃ",
+        "meaning": "I remember, call to mind"
+      },
+      {
+        "word": "pavanakumāra",
+        "meaning": "Son of the Wind, Hanuman"
+      },
+      {
+        "word": "bala",
+        "meaning": "strength"
+      },
+      {
+        "word": "buddhi",
+        "meaning": "intelligence"
+      },
+      {
+        "word": "bidyā",
+        "meaning": "knowledge, learning"
+      },
+      {
+        "word": "dehu",
+        "meaning": "give"
+      },
+      {
+        "word": "mohiṃ",
+        "meaning": "to me"
+      },
+      {
+        "word": "harahu",
+        "meaning": "take away, remove"
+      },
+      {
+        "word": "kalesa",
+        "meaning": "afflictions, troubles"
+      },
+      {
+        "word": "bikāra",
+        "meaning": "impurities, faults"
+      }
+    ],
+    "meaning": "The second doha is the reciter's own voice. After honouring the guru, Tulsidas states his position plainly: I am not clever enough for this on my own. He then names exactly what he asks of Hanuman — strength, intelligence, knowledge — and exactly what he wants removed — affliction and inner distortion. It is the model petition of the whole hymn: honest about lack, specific about need, addressed directly to the one being praised. Reciting it, you do not pretend to adequacy; you begin from admitted weakness, which is precisely why the forty verses that follow can actually change something.",
+    "reflection": "What would you ask for today if you began by honestly admitting what you lack?",
+    "translations": {
+      "hi": "अपने आप को बुद्धिहीन जानकर मैं पवनकुमार का स्मरण करता हूँ: मुझे बल, बुद्धि और विद्या दीजिए, और मेरे क्लेश और विकार हर लीजिए।"
+    },
+    "meanings": {
+      "hi": "दूसरा दोहा पाठ करने वाले की अपनी आवाज़ है। गुरु को प्रणाम करने के बाद तुलसीदास सीधे कह देते हैं: मैं अपने बल पर इसके योग्य नहीं हूँ। फिर वे स्पष्ट माँगते हैं — बल, बुद्धि, विद्या — और जो हटाना है वह भी साफ़ कहते हैं: क्लेश और विकार। यह पूरे स्तोत्र की आदर्श प्रार्थना है — अपनी कमी के बारे में ईमानदार, अपनी ज़रूरत के बारे में स्पष्ट। इसे पढ़ते हुए आप काबिलियत का दिखावा नहीं करते; स्वीकार की हुई कमज़ोरी से शुरुआत करते हैं, और इसीलिए आगे के चालीस पद सचमुच कुछ बदल पाते हैं।"
+    }
+  },
+  {
+    "slug": "chalisa-doha-3",
+    "textRef": "Hanuman Chalisa, closing doha",
+    "tradition": "general",
+    "tags": ["devotion", "peace", "family"],
+    "dailyPool": true,
+    "devanagari": "पवनतनय संकट हरन मंगल मूरति रूप । / राम लखन सीता सहित हृदय बसहु सुर भूप",
+    "iast": "pavanatanaya saṃkaṭa harana maṃgala mūrati rūpa । / rāma lakhana sītā sahita hṛdaya basahu sura bhūpa",
+    "sayIt": "PA-vun ta-NAY SUN-kut HA-run MUN-gul MOO-rut roop / raam LA-khun SEE-taa sa-HIT hri-DAY BA-sa-hoo soor BHOOP",
+    "translation": "Son of the Wind, remover of distress, embodiment of blessing — with Rama, Lakshmana, and Sita, dwell in my heart, king among gods.",
+    "source": "Hanuman Chalisa, closing doha, Tulsidas (Awadhi, public domain original), via sanskritdocuments.org, https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx",
+    "words": [
+      {
+        "word": "pavanatanaya",
+        "meaning": "son of the Wind (Hanuman)"
+      },
+      {
+        "word": "saṃkaṭa harana",
+        "meaning": "remover of distress"
+      },
+      {
+        "word": "maṃgala",
+        "meaning": "auspiciousness, blessing"
+      },
+      {
+        "word": "mūrati rūpa",
+        "meaning": "embodied form, very image"
+      },
+      {
+        "word": "rāma lakhana sītā",
+        "meaning": "Rama, Lakshmana, Sita"
+      },
+      {
+        "word": "sahita",
+        "meaning": "together with"
+      },
+      {
+        "word": "hṛdaya",
+        "meaning": "heart"
+      },
+      {
+        "word": "basahu",
+        "meaning": "dwell, reside"
+      },
+      {
+        "word": "sura bhūpa",
+        "meaning": "king among gods"
+      }
+    ],
+    "meaning": "The closing doha gathers the entire Chalisa into one singable couplet, which is why it is often recited on its own. Three names summarise the forty chaupais — Son of the Wind (his origin), remover of distress (his work), embodiment of auspiciousness (his nature) — and then comes the final request, an enlargement of the last chaupai's plea: dwell in my heart, and do not come alone. Bring Rama, Lakshmana, and Sita. Hanuman never arrives without the family he serves; to house the servant is to house the whole household of Ayodhya. The hymn that began at the guru's feet ends with the heart as a home with everyone inside. As a daily verse, it is a complete morning prayer in two lines.",
+    "reflection": "If your heart were a home, who would be living in it right now?",
+    "translations": {
+      "hi": "हे पवनपुत्र, संकट हरने वाले, मंगलमूर्ति! राम, लखन और सीता सहित मेरे हृदय में निवास कीजिए, हे देवताओं में राजा।"
+    },
+    "meanings": {
+      "hi": "समापन दोहा पूरी चालीसा को एक गाने योग्य युग्म में समेट देता है — इसीलिए यह अकेला भी खूब पढ़ा जाता है। तीन नाम चालीस चौपाइयों का सार हैं — पवनतनय (उनका उद्गम), संकट हरन (उनका कार्य), मंगल मूरति (उनका स्वभाव) — और फिर अंतिम विनती आती है, जो पिछली चौपाई की प्रार्थना का विस्तार है: मेरे हृदय में बसिए, और अकेले मत आइए। राम, लखन और सीता को साथ लाइए। हनुमान कभी उस परिवार के बिना नहीं आते जिसकी वे सेवा करते हैं; सेवक को हृदय में बसाना अयोध्या के पूरे घराने को बसाना है। जो भजन गुरु के चरणों की धूल से शुरू हुआ था, वह हृदय को एक भरे-पूरे घर के रूप में समाप्त होता है। दैनिक पाठ के लिए यह दो पंक्तियों की एक संपूर्ण प्रातः-प्रार्थना है।"
+    }
+  },
+  {
     "slug": "gita-2-13",
     "textRef": "Bhagavad Gita 2.13",
     "tradition": "general",
