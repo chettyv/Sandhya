@@ -18,6 +18,25 @@ const TEXTS = [
   { slug: "kena", name: "Kena Upanishad", pages: ["केनोपनिषद्"], sectioned: true, expect: 35 },
   { slug: "mundaka", name: "Mundaka Upanishad", pages: ["मुण्डकोपनिषद्"], sectioned: true, expect: 64 },
   { slug: "mandukya", name: "Mandukya Upanishad", pages: ["माण्डुक्योपनिषद्"], sectioned: false, expect: 12 },
+  {
+    slug: "katha",
+    name: "Katha Upanishad",
+    // The mula lives in six valli subpages (two adhyayas of three vallis).
+    // Verse markers restart per valli; each page carries its section label.
+    pages: [
+      "कठोपनिषत्/प्रथमोध्यायः/प्रथमवल्ली",
+      "कठोपनिषत्/प्रथमोध्यायः/द्वितीयवल्ली",
+      "कठोपनिषत्/प्रथमोध्यायः/तृतीयवल्ली",
+      "कठोपनिषत्/द्वितीयोध्यायः/प्रथमवल्ली",
+      "कठोपनिषत्/द्वितीयोध्यायः/द्वितीयवल्ली",
+      "कठोपनिषत्/द्वितीयोध्यायः/तृतीयवल्ली",
+    ],
+    pageSections: ["1.1", "1.2", "1.3", "2.1", "2.2", "2.3"],
+    sectioned: false,
+    // Verse totals are asserted per page against the page's own final marker
+    // (self-consistent), not against a hardcoded edition count.
+    expect: null,
+  },
 ];
 
 const requested = process.argv.slice(2);
@@ -66,6 +85,9 @@ for (const text of texts) {
   }
 
   const units = [];
+  if (text.pageSections) {
+    parseSubpagedText(text, pages, units);
+  } else {
   for (const page of pages) {
     const clean = page.wikitext
       .replace(/<[^>]+>/g, "\n")
@@ -104,6 +126,8 @@ for (const text of texts) {
     }
   }
 
+  }
+
   // Re-label sequential-sectioned texts now that section boundaries are known:
   // rebuild labels in one pass (a marker <= previous starts a new section).
   if (text.sectioned) {
@@ -120,7 +144,7 @@ for (const text of texts) {
   }
 
   const verseCount = units.filter((u) => u.label !== "shanti").length;
-  if (verseCount !== text.expect) {
+  if (text.expect !== null && verseCount !== text.expect) {
     console.error(`${text.slug}: expected ${text.expect} verses, parsed ${verseCount}`);
     units.forEach((u) => console.error(`  ${u.label}: ${u.text.split("\n")[0].slice(0, 60)}`));
     process.exit(1);
@@ -155,8 +179,16 @@ for (const text of texts) {
   }
 
   let written = 0;
+  let protectedCount = 0;
   for (const unit of units) {
     const slug = `${text.slug}-${unit.label}`;
+    // Never clobber a file whose content pass is done: skeletons carry a
+    // pending **Meaning:** placeholder; anything else is human-reviewed work.
+    const target = join(outDir, `${slug}.md`);
+    if (existsSync(target) && !/\*\*Meaning:\*\* \(translation pending/.test(readFileSync(target, "utf8"))) {
+      protectedCount += 1;
+      continue;
+    }
     const ref =
       unit.label === "shanti" ? `${text.name}, shanti mantra` : `${text.name} ${unit.refNum}`;
     const devanagari = unit.text.replace(/\s*\n\s*/g, "\n") + (unit.label === "shanti" ? "" : ` ॥${unit.refNum}॥`);
@@ -167,7 +199,7 @@ for (const text of texts) {
       .filter(Boolean)
       .join(" / ");
     writeFileSync(
-      join(outDir, `${slug}.md`),
+      target,
       `---
 doc_type: shloka
 shloka_slug: ${slug}
@@ -200,7 +232,101 @@ reviewed_by: ""
     );
     written += 1;
   }
-  console.log(`${text.slug}: wrote ${written} draft file(s)`);
+  console.log(
+    `${text.slug}: wrote ${written} draft file(s)` +
+      (protectedCount ? ` (${protectedCount} existing content-passed file(s) left untouched)` : ""),
+  );
+}
+
+// Subpaged texts (e.g. Katha): each fetched page is one valli/section whose
+// markers are plain verse numbers. The first page opens with the shanti
+// mantra; later pages may repeat it (stripped, emitted once). An unnumbered
+// leading verse (pages where verse 1 has no ॥१॥ marker) is recovered from the
+// leading block and the page total is asserted against the page's own final
+// marker, so a parse slip cannot pass silently.
+function parseSubpagedText(text, pages, units) {
+  pages.forEach((page, pageIndex) => {
+    const sectionLabel = text.pageSections[pageIndex];
+    const clean = page.wikitext
+      .replace(/<[^>]+>/g, "\n")
+      .replace(/\{\{[^}]*\}\}|\{[^}]*\}|\[\[[^\]]*\]\]/g, "\n")
+      .replace(/^[|!#*=:].*$/gm, "")
+      .replaceAll("।।", "॥");
+    // Closing danda after the number is optional: these pages mix "॥ ३ ॥"
+    // with bare "॥ ३" at line end.
+    const parts = clean.split(/॥\s*([०-९0-9]+)\s*(?:॥|(?=\s)|$)/);
+    let emitted = 0;
+    let lastMarker = 0;
+
+    for (let i = 0; i + 1 < parts.length; i += 2) {
+      let verseText = parts[i];
+      const marker = devDigits(parts[i + 1]).verse;
+      lastMarker = marker;
+
+      if (i === 0) {
+        // Leading block: headers, then (first page) the shanti mantra through
+        // its closing "ॐ शान्तिः…" line, then any unnumbered leading verses.
+        const blocks = verseText
+          .split(/॥\s*(?:\n|$)/)
+          .map((block) =>
+            block
+              .split("\n")
+              .filter((line) => !/^\s*॥[^॥]*॥\s*$/.test(line) && line.trim() !== "ॐ")
+              .join("\n")
+              .trim(),
+          )
+          .filter((block) => block.replace(/[॥ॐ\s।]/g, "").length > 0);
+        const shantiEnd = blocks.findIndex((block) => /शान्तिः/.test(block));
+        let rest = blocks;
+        if (shantiEnd >= 0) {
+          const shantiText = blocks
+            .slice(0, shantiEnd + 1)
+            .map((block) => `${block} ॥`)
+            .join("\n");
+          if (!units.some((unit) => unit.label === "shanti")) {
+            units.push({ label: "shanti", text: shantiText, source: page.source_url });
+          }
+          rest = blocks.slice(shantiEnd + 1);
+        }
+        // All blocks but the last are unnumbered leading verses; the last is
+        // the text belonging to this first numbered marker.
+        for (let b = 0; b < rest.length - 1; b += 1) {
+          emitted += 1;
+          units.push({
+            label: `${sectionLabel.replace(".", "-")}-${emitted}`,
+            refNum: `${sectionLabel}.${emitted}`,
+            text: rest[b],
+            source: page.source_url,
+          });
+        }
+        verseText = rest.length > 0 ? rest[rest.length - 1] : "";
+      }
+
+      verseText = verseText.trim();
+      if (!verseText.replace(/[॥ॐ\s।]/g, "")) continue;
+      emitted += 1;
+      if (emitted !== marker) {
+        console.error(
+          `${text.slug} ${sectionLabel}: verse count drifted — emitting #${emitted} at marker ॥${marker}॥`,
+        );
+        process.exit(1);
+      }
+      units.push({
+        label: `${sectionLabel.replace(".", "-")}-${marker}`,
+        refNum: `${sectionLabel}.${marker}`,
+        text: verseText,
+        source: page.source_url,
+      });
+    }
+
+    if (emitted !== lastMarker || emitted === 0) {
+      console.error(
+        `${text.slug} ${sectionLabel}: parsed ${emitted} verses but the page's final marker is ॥${lastMarker}॥`,
+      );
+      process.exit(1);
+    }
+    console.log(`${text.slug} ${sectionLabel}: ${emitted} verses`);
+  });
 }
 
 function devDigits(value) {

@@ -196,6 +196,22 @@ Prose meaning.
     expect(validateMarkdownDocument(approvedNoReviewer, "gita-2-47.md")).toContain(
       "gita-2-47.md: approved shlokas must name a reviewer in reviewed_by",
     );
+
+    // Tags must come from the routing vocabulary — free-form tags route nothing.
+    const knownTags = shloka.replace(
+      "tradition_primary: general",
+      "tradition_primary: general\ntags: gratitude, morning",
+    );
+    expect(validateMarkdownDocument(knownTags, "gita-2-47.md")).toEqual([]);
+    const unknownTag = shloka.replace(
+      "tradition_primary: general",
+      "tradition_primary: general\ntags: wisdom, vibes",
+    );
+    expect(
+      validateMarkdownDocument(unknownTag, "gita-2-47.md").some((issue) =>
+        issue.includes("unknown tag(s): vibes"),
+      ),
+    ).toBe(true);
   });
 
   it("rejects a non-integer night", () => {

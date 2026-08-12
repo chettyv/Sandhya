@@ -260,6 +260,29 @@ function validateChallengeSession(
 // the Source label and source_url carry that provenance.
 const SHLOKA_DOC_SECTIONS = ["Shloka", "Word by word", "Meaning"] as const;
 
+// The routing vocabulary. Themes route the daily rotation and journeys;
+// contexts (morning/evening/festival) segment daily prayers. Extend here —
+// and only here — when a new journey genuinely needs a new tag; every tag
+// must route something in the app or it is noise.
+export const SHLOKA_ALLOWED_TAGS = new Set([
+  // themes
+  "courage",
+  "peace",
+  "discipline",
+  "devotion",
+  "wisdom",
+  "family",
+  "duty",
+  "gratitude",
+  "protection",
+  "surrender",
+  "clarity",
+  // contexts
+  "morning",
+  "evening",
+  "festival",
+]);
+
 function validateShloka(frontmatter: Record<string, string | boolean>, body: string): string[] {
   const issues: string[] = [];
   if (
@@ -306,13 +329,26 @@ function validateShloka(frontmatter: Record<string, string | boolean>, body: str
   if (wordSection !== null && !/^-\s+\*\*.+?\*\*\s+—\s+\S/m.test(wordSection)) {
     issues.push("## Word by word must contain at least one `- **word** — meaning` line");
   }
-  // Optional profile-journey tags: lowercase-hyphenated, comma-separated.
+  // Optional profile-journey tags: comma-separated, drawn only from the
+  // routing vocabulary. A fixed vocabulary is what lets tags actually route
+  // (onboarding practices, daily rotation, prayer segmentation) — free-form
+  // tags drift and route nothing.
   if (frontmatter.tags !== undefined) {
     if (
       typeof frontmatter.tags !== "string" ||
       !frontmatter.tags.split(",").every((tag) => /^[a-z][a-z-]*$/.test(tag.trim()))
     ) {
       issues.push("tags must be a comma-separated list of lowercase-hyphenated words");
+    } else {
+      const unknown = frontmatter.tags
+        .split(",")
+        .map((tag) => tag.trim())
+        .filter((tag) => !SHLOKA_ALLOWED_TAGS.has(tag));
+      if (unknown.length > 0) {
+        issues.push(
+          `unknown tag(s): ${unknown.join(", ")} — allowed: ${[...SHLOKA_ALLOWED_TAGS].join(", ")}`,
+        );
+      }
     }
   }
   // Only curated, standalone-meaningful verses may enter the daily rotation.
