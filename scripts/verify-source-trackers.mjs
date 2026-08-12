@@ -106,28 +106,34 @@ for (const csvPath of csvPaths) {
   }
 }
 
-const queueLines = readFileSync(path.join(repoRoot, csvPaths[1]), "utf8")
-  .split(/\r?\n/)
-  .filter(Boolean);
-const queueHeader = parseCsvLine(queueLines[0]);
-const queueIndex = Object.fromEntries(queueHeader.map((header, index) => [header, index]));
-const stagedStatuses = new Set(["downloaded_staged", "scraped_staged", "metadata_staged"]);
-const missingTargets = [];
+// Raw staged sources live on the maintainer's disk / external storage, not in
+// git. Target-existence checks only make sense where the staging tree exists.
+if (existsSync(path.join(repoRoot, "content", "_staging", "raw"))) {
+  const queueLines = readFileSync(path.join(repoRoot, csvPaths[1]), "utf8")
+    .split(/\r?\n/)
+    .filter(Boolean);
+  const queueHeader = parseCsvLine(queueLines[0]);
+  const queueIndex = Object.fromEntries(queueHeader.map((header, index) => [header, index]));
+  const stagedStatuses = new Set(["downloaded_staged", "scraped_staged", "metadata_staged"]);
+  const missingTargets = [];
 
-for (const line of queueLines.slice(1)) {
-  const fields = parseCsvLine(line);
-  const status = fields[queueIndex.status];
-  const targetPath = fields[queueIndex.target_path];
-  if (!stagedStatuses.has(status) || !targetPath) continue;
-  if (!existsSync(path.join(repoRoot, targetPath))) {
-    missingTargets.push({ work_id: fields[queueIndex.work_id], targetPath });
+  for (const line of queueLines.slice(1)) {
+    const fields = parseCsvLine(line);
+    const status = fields[queueIndex.status];
+    const targetPath = fields[queueIndex.target_path];
+    if (!stagedStatuses.has(status) || !targetPath) continue;
+    if (!existsSync(path.join(repoRoot, targetPath))) {
+      missingTargets.push({ work_id: fields[queueIndex.work_id], targetPath });
+    }
   }
-}
 
-console.log(`staged queue target misses: ${missingTargets.length}`);
-if (missingTargets.length > 0) {
-  hasError = true;
-  console.error(JSON.stringify(missingTargets, null, 2));
+  console.log(`staged queue target misses: ${missingTargets.length}`);
+  if (missingTargets.length > 0) {
+    hasError = true;
+    console.error(JSON.stringify(missingTargets, null, 2));
+  }
+} else {
+  console.log("staging tree absent — staged target existence checks skipped");
 }
 
 if (hasError) process.exit(1);

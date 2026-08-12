@@ -69,11 +69,18 @@ jobs:
         run: pnpm -r run build
 
       - name: RAG artifact gates
+        # Raw staged sources are not in git (they live on the maintainer's
+        # machine / external storage), so the staging-corpus gates only run
+        # where that tree exists. The canonical gates always run.
         run: |
-          node packages/rag-pipeline/dist/prepare-corpus.js content/_staging/raw content/_staging/prepared/rag-corpus.jsonl
-          node packages/rag-pipeline/dist/audit-prepared.js content/_staging/prepared/rag-corpus.jsonl
+          if [ -d content/_staging/raw ]; then
+            node packages/rag-pipeline/dist/prepare-corpus.js content/_staging/raw content/_staging/prepared/rag-corpus.jsonl
+            node packages/rag-pipeline/dist/audit-prepared.js content/_staging/prepared/rag-corpus.jsonl
+            node packages/rag-pipeline/dist/ingest-prepared.js content/_staging/prepared/rag-corpus.jsonl --dry-run --allow-staging
+          else
+            echo "content/_staging/raw absent — staging corpus gates skipped"
+          fi
           node packages/rag-pipeline/dist/evaluate.js --validate-only content/_staging/evals/rag-eval.example.jsonl
-          node packages/rag-pipeline/dist/ingest-prepared.js content/_staging/prepared/rag-corpus.jsonl --dry-run --allow-staging
           pnpm rag:prepare:canonical
           pnpm rag:audit:canonical
           pnpm rag:ingest:canonical:dry-run

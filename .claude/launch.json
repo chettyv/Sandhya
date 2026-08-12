@@ -1,0 +1,21 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "mobile-web-dev",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "--filter",
+        "@dharma-daily/mobile",
+        "exec",
+        "expo",
+        "start",
+        "--web",
+        "--port",
+        "8123",
+        "--offline"
+      ],
+      "port": 8123
+    }
+  ]
+}

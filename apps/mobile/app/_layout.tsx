@@ -227,6 +227,8 @@ export default function RootLayout() {
             <Stack.Screen name="onboarding" options={{ headerShown: false }} />
             <Stack.Screen name="profile" options={{ title: "Profile", presentation: "modal" }} />
             <Stack.Screen name="reflection/[id]" options={{ title: "Daily reflection" }} />
+            <Stack.Screen name="challenge/[slug]/index" options={{ title: "Challenge" }} />
+            <Stack.Screen name="challenge/[slug]/night/[night]" options={{ title: "Session" }} />
             <Stack.Screen name="festival/[id]" options={{ title: "Festival" }} />
             <Stack.Screen name="practice/[id]" options={{ title: "Practice" }} />
             <Stack.Screen name="concept/[id]" options={{ title: "Concept" }} />

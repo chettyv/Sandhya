@@ -9,6 +9,7 @@ import { FestivalRow } from "@/components/FestivalRow";
 import { PracticeRow } from "@/components/PracticeRow";
 import { Card, Page, SectionHeader } from "@/components/ui";
 import { calculateCurrentStreak, localDateKey, removeSavedItem, saveItem } from "@/lib/account";
+import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
 import { useSubscription } from "@/lib/subscriptions";
@@ -177,6 +178,8 @@ export default function HomeScreen() {
         </Pressable>
       ) : null}
 
+      <FeaturedChallengeCard />
+
       <LinearGradient
         colors={["#6E4A1E", "#142E34", "#0B0B0A"]}
         start={{ x: 0, y: 0 }}
@@ -330,6 +333,49 @@ export default function HomeScreen() {
         ))}
       </View>
     </Page>
+  );
+}
+
+function FeaturedChallengeCard() {
+  const router = useRouter();
+  const { data: challenge } = useFeaturedChallenge();
+  if (!challenge) return null;
+
+  const dayNumber =
+    Math.floor(
+      (new Date(`${localDateKey()}T12:00:00`).getTime() -
+        new Date(`${challenge.startDate}T12:00:00`).getTime()) /
+        86_400_000,
+    ) + 1;
+  const active = dayNumber >= 1 && dayNumber <= challenge.nights;
+  const eyebrow = active
+    ? `Night ${dayNumber} tonight`
+    : `Starts ${new Date(`${challenge.startDate}T12:00:00`).toLocaleDateString(undefined, {
+        day: "numeric",
+        month: "long",
+      })}`;
+
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`${challenge.title}: ${eyebrow}`}
+      onPress={() =>
+        router.push({ pathname: "/challenge/[slug]", params: { slug: challenge.slug } })
+      }
+      className="mb-2 flex-row items-center gap-3 rounded-card border border-[#302C25] bg-surface p-4"
+    >
+      <Ionicons name="moon-outline" size={23} color={colors.plum} />
+      <View className="min-w-0 flex-1">
+        <Text className="text-[11px] font-semibold uppercase text-saffron">{eyebrow}</Text>
+        <Text className="mt-0.5 font-semibold text-ink">{challenge.title}</Text>
+        {challenge.tagline ? (
+          <Text numberOfLines={2} className="mt-1 text-sm leading-5 text-muted">
+            {challenge.tagline}
+          </Text>
+        ) : null}
+      </View>
+      <Ionicons name="chevron-forward" size={18} color={colors.muted} />
+    </Pressable>
   );
 }
 

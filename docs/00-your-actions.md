@@ -74,7 +74,14 @@ Things only you can do. Items are deleted when resolved, not marked done. Catego
 - **BLOCKING:** publication + Search Console submission. Site builds and previews locally without it.
 - **ADDED:** 2026-08-12
 
-## 10 · CONFIRM: production Supabase project
+## 10 · INSTALL: Docker Desktop + Supabase CLI (local backend testing)
+
+- **WHAT:** Install Docker Desktop (https://www.docker.com/products/docker-desktop/) and the Supabase CLI (`scoop install supabase` or the Windows installer from https://github.com/supabase/cli/releases), then run `supabase start` in the repo once so the local stack exists.
+- **WHY:** This machine has no Docker, psql, or supabase CLI, so migrations (including the new challenges schema) pass static security checks but cannot be _executed_ anywhere. Every backend acceptance test — RLS two-user proof, RPC behaviour, quota atomicity — needs a running database.
+- **BLOCKING:** live verification of all SQL work; not blocking app-side build.
+- **ADDED:** 2026-08-12
+
+## 11 · CONFIRM: production Supabase project
 
 - **WHAT:** Confirm whether a production Supabase project exists (vs local only). If not: create one at https://supabase.com/dashboard, then I need its URL + anon key in `.env` (never the service-role key in anything client-side) before migrations can be applied — with your explicit go-ahead per repo rules.
 - **WHY:** Nothing can ship to a stranger without a hosted backend. All 70 migrations are ready; applying them to production needs your approval.
