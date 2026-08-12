@@ -4,12 +4,24 @@ Things only you can do. Items are deleted when resolved, not marked done. Catego
 
 ---
 
-## 1 · DECIDE: where the Navratri challenge is sold (web checkout vs app store IAP)
+## 1 · CREATE: Apple Developer + Google Play Console accounts — **START TODAY, longest lead time in the plan**
 
-- **WHAT:** Choose the payment rail for the £8–15 one-off Nine Nights purchase: (a) web checkout — Stripe or RevenueCat Web Billing — with the challenge playable on the web app and in the native app; or (b) native in-app purchase, which requires the app to be approved and live on both stores before 11 October.
-- **WHY:** The plan (§7, Week 2: "Payment page live and tested with a real card") implies web, but never says so. The existing rail is RevenueCat native IAP only; the web build cannot take payment today; the app is in neither store. Option (b) puts launch at the mercy of store review timelines. Recommendation: (a) web checkout via Stripe — no store review dependency, real-card testable, 18% lower fees.
-- **HOW:** Reply with (a) or (b). If (a): create a Stripe account at https://dashboard.stripe.com/register (test mode first — no company paperwork needed to start testing).
-- **BLOCKING:** the purchase/paywall step of the challenge flow. Schema, screens, unlock logic, and participation count are being built rail-agnostic in the meantime.
+- **WHAT:** (a) Apple Developer Program, individual enrolment, $99/yr — https://developer.apple.com/programs/enroll/. (b) Google Play Console, personal account, $25 one-off — https://play.google.com/console/signup.
+- **WHY:** You chose IAP as the payment rail, so the app must be **live in both stores before 11 October**. Apple enrolment takes ~2 days; **Google Play personal accounts must run a closed test with 12 testers for 14 consecutive days before they may publish to production** — that alone means the Android closed test must be running by mid-September. This is now the critical path of the whole launch.
+- **BLOCKING:** store builds, IAP products, the entire revenue mechanism.
+- **ADDED:** 2026-08-12
+
+## 1b · CREATE: RevenueCat account + the challenge product
+
+- **WHAT:** Create a (free-tier) RevenueCat project at https://app.revenuecat.com. After the store accounts exist: create a **non-consumable** in-app product with identifier `dd_challenge_navratri_2026` in App Store Connect (Monetisation → In-App Purchases) and in Play Console (Monetise → Products → In-app products), price tier ≈ £9.99. In RevenueCat: add both store apps, attach the product to a new entitlement `challenge_navratri_2026`, and copy the iOS + Android public SDK keys into `.env` as `EXPO_PUBLIC_REVENUECAT_API_KEY_IOS` / `_ANDROID`, plus the webhook secret as `REVENUECAT_WEBHOOK_SECRET`.
+- **WHY:** The code I am building resolves challenge access from product identifiers with this exact prefix (`dd_challenge_<slug>`); the webhook grants participation on purchase.
+- **BLOCKING:** end-to-end purchase testing (sandbox first); not blocking the code, which is being built against this contract now.
+- **ADDED:** 2026-08-12
+
+## 1c · SET: challenge price
+
+- **WHAT:** Pick the price inside the plan's £8–15 band (my recommendation: £9.99 — a store tier that exists in every country) and tell me, so `price_display` in `content/challenges/navratri-2026/challenge.json` matches the store tier you configure in 1b.
+- **BLOCKING:** publishing the challenge; nothing else.
 - **ADDED:** 2026-08-12
 
 ## 2 · DECIDE: rewriting git history to remove ~128 MiB of staged sources

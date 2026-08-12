@@ -28,6 +28,7 @@ const HANDLED_EVENTS = new Set([
   "BILLING_ISSUE",
   "TRANSFER",
 ]);
+const CHALLENGE_PRODUCT_PREFIX = "dd_challenge_";
 const MAX_REQUEST_BODY_CHARS = 256_000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
@@ -182,6 +183,41 @@ Deno.serve(async (request) => {
       );
     }
     const productId = typeof event.product_id === "string" ? event.product_id : null;
+    if (productId && productId.startsWith(CHALLENGE_PRODUCT_PREFIX)) {
+      // One-off challenge purchases never touch subscription state. A
+      // purchase grants a challenge_participants row; a refund revokes it.
+      // Store product ids cannot contain hyphens, so underscores in the
+      // product id map back to the hyphenated challenge slug.
+      const challengeSlug = productId
+        .slice(CHALLENGE_PRODUCT_PREFIX.length)
+        .replaceAll("_", "-")
+        .toLowerCase();
+      const claim = await claimBillingEvent(env, {
+        eventId: event.id,
+        eventType,
+        appUserId,
+        environment,
+      });
+      if (!claim.claimed) return claimResponse(claim);
+      claimedEventId = event.id;
+      claimedProcessingToken = claim.processingToken;
+      let action = "acknowledged";
+      if (ACTIVE_EVENTS.has(eventType)) {
+        await rest(env, "/rpc/apply_challenge_purchase", {
+          method: "POST",
+          body: JSON.stringify({ p_user_id: userId, p_challenge_slug: challengeSlug }),
+        });
+        action = "granted";
+      } else if (eventType === "REFUND") {
+        await rest(env, "/rpc/revoke_challenge_purchase", {
+          method: "POST",
+          body: JSON.stringify({ p_user_id: userId, p_challenge_slug: challengeSlug }),
+        });
+        action = "revoked";
+      }
+      await markBillingEventProcessed(env, event.id, claim.processingToken);
+      return jsonResponse({ received: true, challenge: challengeSlug, action }, 200);
+    }
     const eventExpiresAt = toIsoDate(event.expiration_at_ms);
     const inferredPlan = inferPlan(productId);
     const needsExistingState =

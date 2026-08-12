@@ -1,11 +1,13 @@
 import { Ionicons } from "@expo/vector-icons";
 import { router, useLocalSearchParams } from "expo-router";
-import { ActivityIndicator, Pressable, Text, View } from "react-native";
+import { useEffect, useState } from "react";
+import { ActivityIndicator, Platform, Pressable, Text, View } from "react-native";
 
 import { Card, EmptyState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { localDateKey } from "@/lib/activity";
 import { useAuthState } from "@/lib/authState";
 import { type ChallengeSessionMeta, useChallengeOverview } from "@/lib/challenges";
+import { purchaseChallenge } from "@/lib/subscriptions";
 import { colors } from "@/theme/tokens";
 
 // Real social proof only: below this the row is omitted entirely — no fake floor.
@@ -109,15 +111,8 @@ export default function ChallengeOverviewScreen() {
               One-off {challenge.priceDisplay} · yours for every year it returns
             </Text>
           ) : null}
-          {/* The purchase step lands with the payment-rail decision
-              (docs/00-your-actions.md #1). Challenges stay unpublished until
-              then, so the signed-in branch is reachable only in development. */}
           {authState === "signed_in" ? (
-            <Card>
-              <Text className="text-center text-[15px] leading-6 text-muted">
-                Joining opens shortly before the challenge begins.
-              </Text>
-            </Card>
+            <JoinButton slug={challenge.slug} onPurchased={() => void refetch()} />
           ) : (
             <PrimaryButton
               label="Sign in to join"
@@ -132,6 +127,71 @@ export default function ChallengeOverviewScreen() {
         </View>
       ) : null}
     </Page>
+  );
+}
+
+function JoinButton({ slug, onPurchased }: { slug: string; onPurchased: () => void }) {
+  const [state, setState] = useState<"idle" | "purchasing" | "confirming" | "error">("idle");
+  const [polls, setPolls] = useState(0);
+
+  // After a successful store purchase, participation is granted server-side by
+  // the RevenueCat webhook — poll the overview until it lands.
+  useEffect(() => {
+    if (state !== "confirming") return;
+    const timer = setInterval(() => {
+      setPolls((count) => count + 1);
+      onPurchased();
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [state, onPurchased]);
+
+  if (Platform.OS === "web") {
+    return (
+      <Card>
+        <Text className="text-center text-[15px] leading-6 text-muted">
+          Joining happens in the Dharma Daily app, where the challenge lives. Open the app to join.
+        </Text>
+      </Card>
+    );
+  }
+
+  if (state === "confirming") {
+    return (
+      <View className="items-center py-3">
+        <ActivityIndicator color={colors.saffron} />
+        <Text className="mt-2 text-center text-sm text-muted">
+          {polls < 20
+            ? "Confirming your purchase — this usually takes a few seconds."
+            : "Still confirming — your purchase is safe. You can leave this screen and come back."}
+        </Text>
+      </View>
+    );
+  }
+
+  return (
+    <View>
+      <PrimaryButton
+        label={state === "purchasing" ? "Opening the store…" : "Join the challenge"}
+        icon="arrow-forward"
+        disabled={state === "purchasing"}
+        onPress={() => {
+          setState("purchasing");
+          purchaseChallenge(slug)
+            .then((result) => {
+              if (result === "purchased") setState("confirming");
+              else if (result === "cancelled") setState("idle");
+              else setState("error");
+            })
+            .catch(() => setState("error"));
+        }}
+      />
+      {state === "error" ? (
+        <Text className="mt-3 text-center text-sm text-rose">
+          The purchase couldn't be completed. Nothing was charged beyond what the store confirmed —
+          try again, or restore purchases from Settings.
+        </Text>
+      ) : null}
+    </View>
   );
 }
 

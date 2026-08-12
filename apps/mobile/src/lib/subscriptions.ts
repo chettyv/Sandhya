@@ -53,4 +53,10 @@ export async function restorePurchases(): Promise<void> {
   );
 }
 
+export async function purchaseChallenge(
+  _slug: string,
+): Promise<"purchased" | "cancelled" | "unavailable"> {
+  return "unavailable";
+}
+
 export async function resetPurchases(): Promise<void> {}

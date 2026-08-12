@@ -110,3 +110,16 @@ Files: +2 content docs, ~+120 lines in content-tools src, +90 test lines. No dep
 - When the founder writes `night-01.md`, the full path is: validate → approve with named reviewer → regenerate → migrate. No hand-written SQL.
 
 **Session end state:** all work pushed to `origin/main` (`441b132` + this cycle). Working tree clean. **Next session:** web arrival surface scaffold (6 explanatory pages, static, per design spec) → scoped AI on today's content → payment rail once your-actions #1 is decided.
+
+### Cycle 5 — 12 Aug 2026 — IAP purchase path (founder decided: app-store IAP) — DONE
+
+Founder decisions received: **payment rail = native IAP via RevenueCat**; keep working continuously and maintain the actions list as the parallel queue.
+
+- **Product contract:** one-off non-consumable store products named `dd_challenge_<slug_with_underscores>` (store ids can't contain hyphens) map to challenge slugs. Documented in your-actions 1b for store setup.
+- **Migration `20260812150000_challenge_purchase_rpc.sql`:** `apply_challenge_purchase` / `revoke_challenge_purchase` — service-role-only SECURITY DEFINER; the only write path into `challenge_participants`. Deleted-account purchases acknowledge without granting; refunds revoke.
+- **Webhook:** challenge products branch before subscription state logic — purchase events grant, REFUND revokes, everything else acknowledges; fenced event claiming reused; subscription state never touched by challenge products.
+- **Client:** `purchaseChallenge(slug)` in `subscriptions.native.ts` (verified against installed react-native-purchases 10.4.4 API: `getProducts` + `purchaseStoreProduct`, user-cancel handled); web stub returns `unavailable`. Join flow in the overview screen: purchase → "confirming" poll until the webhook grant lands (3s interval, honest slow-path copy after 60s, stops on unmount/joined); web build shows "join in the app" card.
+- **Verified:** migration security (55), edge-function syntax (13 files), RevenueCat runtime check, mobile typecheck, lint, backend checks — all pass. **Not verified: a real sandbox purchase** — needs store accounts + RevenueCat products (your-actions 1/1b) and a native build on a device.
+- **Launch-critical consequence of IAP, now on the founder list:** Google Play personal accounts require a 12-tester, 14-day closed test before production — the Android closed test must be live by mid-September to make 11 October.
+
+**Next:** web arrival surface scaffold (six §5 pages), then scoped AI on the day's content.
