@@ -46,10 +46,16 @@ export async function configurePurchases(userId?: string): Promise<void> {
       ? process.env.EXPO_PUBLIC_REVENUECAT_API_KEY_IOS
       : process.env.EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID;
   if (!apiKey || !userId) return;
-  if (configuredUserId && configuredUserId !== userId) await Purchases.logOut();
-  if (configuredUserId === userId) return;
-  Purchases.configure({ apiKey, appUserID: `supabase:${userId}` });
-  configuredUserId = userId;
+  try {
+    if (configuredUserId && configuredUserId !== userId) await Purchases.logOut();
+    if (configuredUserId === userId) return;
+    Purchases.configure({ apiKey, appUserID: `supabase:${userId}` });
+    configuredUserId = userId;
+  } catch {
+    // Expo Go has no purchases native module; configuration failing must
+    // degrade to the unavailable-purchases state, never crash startup.
+    configuredUserId = undefined;
+  }
 }
 
 export async function getPurchaseOptions(): Promise<PurchaseOption[]> {

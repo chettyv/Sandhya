@@ -1,8 +1,19 @@
 # Founder actions — live list
 
-Things only you can do. Items are deleted when resolved, not marked done. Categories: (1) accounts/keys, (2) decisions, (3) real-world testing, (4) authentic content.
+Things only you can do. Items are deleted when resolved, not marked done. Categories: (1) accounts/keys, (2) decisions, (3) real-world testing, (4) authentic content. Open questions for you also live here — nothing blocks on them.
 
 ---
+
+## 0 · READ: two new notes written for you
+
+- **[docs/SOURCES-AND-ATTRIBUTION.md](SOURCES-AND-ATTRIBUTION.md)** — everything collected so far (242 sources staged on this machine), what attribution each class needs, which rows you can flip to approved now (pre-1929 translations + Sanskrit originals), and the short list of things only you can obtain (publisher permissions for modern translations; preferred editions). Corpus collection continues from the existing queue scripts listed there.
+- **[docs/testing-in-expo-go.md](testing-in-expo-go.md)** — how to run the app on your phone today. Purchases/push need a dev build; everything else works in Expo Go (startup is now guarded so the missing purchases module can't crash it).
+- **ADDED:** 2026-08-12
+
+## 0b · ANSWER (when convenient, not blocking): what is "our qu"?
+
+- **WHAT:** Your message said "our word banks or qu hella work" — I read "word banks" (built: word-by-word shloka gloss) and "shloka banks" (built), but couldn't decode "qu". If it means **quizzes**, say so and I'll design a reviewed-content quiz layer; if it means the **Ask/questions** feature, that's the scoped-AI work already queued.
+- **ADDED:** 2026-08-12
 
 ## 1 · CREATE: Apple Developer + Google Play Console accounts — **START TODAY, longest lead time in the plan**
 

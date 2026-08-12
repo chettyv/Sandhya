@@ -148,3 +148,19 @@ Founder redirected priorities: **free product quality first — shloka bank with
 - Open question for founder: the message mentioned "our qu" — quiz? questions? Clarify what that refers to.
 
 **Next:** verify Today-tab render with populated fixture in browser · remaining two §5 drafts · scoped AI (depth layer on the daily shloka).
+
+### Cycle 8 — 12 Aug 2026 — Founder directives round 2 + notes — DONE
+
+Directives: never stop to ask (questions go in 00-your-actions) · collect maximum corpus with attribution noted for later clearance · keep building until the app is complete, UX-polished, ready to use · Expo Go testing note.
+
+- `docs/SOURCES-AND-ATTRIBUTION.md` — human summary of the 242 staged sources, per-class attribution requirements, PD-safe rule of thumb (translator died pre-1955), founder-only acquisitions, tiered corpus-completeness target.
+- `docs/testing-in-expo-go.md` — phone testing guide; `configurePurchases` now try/caught so Expo Go's missing native module degrades instead of crashing startup.
+- your-actions: added notes pointer + the "our qu" question (non-blocking).
+
+### NEXT SESSION — do these in order, no questions
+
+1. **Corpus extraction (top priority):** write `scripts/extract-gita-verses.mjs` — fetch the sanskritdocuments.org Bhagavad Gita (ITX/HTML per chapter; their terms allow distribution with attribution — record row in inventory) or parse the staged `content/_staging/raw/sanskrit/wikisource_bhagavad_gita_sa.jsonl`, plus the staged **Besant/Bhagavan Das 1905** OCR for word-by-word English. Emit draft `content/shlokas/gita-N-M.md` files (start: chapter 2 + chapter 12, ~90 verses) with Source lines citing the staged file + URL. Drafts only — ship-gate unchanged. Also run the remaining queue collection scripts (list in SOURCES-AND-ATTRIBUTION.md) to pull the ~58 metadata-only rows.
+2. **UX polish pass** (founder: "very good looking"): walk every screen in expo web + mobile viewport; fix spacing/contrast/empty states; verify Today card, bank list, detail with populated drafts (`pnpm content:generate-shloka-bank -- --allow-draft`).
+3. Remaining two §5 web drafts (Lakshmi puja at home, Hanuman Chalisa meaning — Chalisa text itself is PD, quote with Wikisource attribution).
+4. Scoped AI on the daily shloka (depth layer; reuse `ask` with a scoping param per plan §3).
+5. Monetisation stays parked (founder order) — store items remain in your-actions with the Play 14-day warning.
