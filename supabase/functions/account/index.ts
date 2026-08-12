@@ -239,7 +239,7 @@ async function exportAccountData(
   const profileRows = await fetchRows<Record<string, unknown>>(
     supabaseUrl,
     serviceRoleKey,
-    `/profiles?id=eq.${userFilter}&select=id,display_name,language_pref,tradition_pref,location,notification_time,timezone,created_at`,
+    `/profiles?id=eq.${userFilter}&select=id,display_name,language_pref,tradition_pref,household_practices,location,notification_time,timezone,created_at`,
   );
   const conversations = await fetchRows<Record<string, unknown>>(
     supabaseUrl,

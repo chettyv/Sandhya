@@ -259,3 +259,14 @@ Plan v3's Phase 0.5, prerequisite for B4. Branch `phase-0.5-correctness-fixes`, 
 - **Verified:** typecheck (5 projects), 140 tests (117 rag-pipeline incl. new ranking test, 16 mobile, 7 content-tools), `backend:check` green (verifier pins updated to the new behaviour), lint 0 errors.
 
 **Stream B next (per plan §7 week 1):** B1 — Supabase production project + migrations + EAS env vars (blocked on founder credentials: your-actions #11/SHIP-48H), then B1 device build.
+
+### Cycle 18 — 12 Aug 2026 — STREAM B — B4 started: three-question onboarding, Q1 routes — DONE
+
+Founder directive: placeholders everywhere, keys later, don't stop. Branch `b4-onboarding-q1-routing`.
+
+- **Onboarding is now the plan's three questions**, each visibly routing: **Q1 "What do you do at home?"** — five concrete observances (multi-select; "starting from scratch" exclusive) mapping to content tags via `src/lib/practices.ts`; **Q2** reminder time arms `configureDailyReminder` + persists `notification_time` (device arming remains B6); **Q3** name. The direct sampradāya chips left onboarding (tradition stays settable in Settings); practices are stored separately (`profiles.household_practices`, checked column, in the account data export) and are **never folded into tradition_pref**.
+- **The daily rotation now ranks, never narrows** (`rotationSequence`): the full curated pool always cycles; preference-tagged verses are woven through at even density (proportional merge). Previously tags filtered the pool — same anti-pattern as the tradition bug. Live-bank proof, same date: chalisa practice → Gita 2.47; no practices → Chalisa chaupai 10.
+- **Placeholder rail confirmed**: the six production env vars gate only `EAS_BUILD_PROFILE=production` (dev/preview/local run keyless on the offline library — browser-verified banner). Root `.env` now lists every `EXPO_PUBLIC_*` key with a PASTE-HERE block. **Note: `.env` carries what look like real Supabase project values — B1's migration push is ready the moment the founder says go; not run unprompted.**
+- **Verified:** 31 mobile tests (12 new: practices, rotation), 160 workspace tests, typecheck, lint 0 errors, backend:check; full onboarding → Today flow exercised in the browser (chip exclusivity, reminder chips, name in greeting), zero console errors. `vitest.config.ts` adds the `@/` alias so src modules load under vitest.
+
+**Remaining for B4 done-done:** the second half of Q1's contract — "which commentarial reading appears first on a verse with more than one" — needs verse-level multi-reading content, which doesn't exist in the bank schema yet (single Meaning prose; variation lives inside the prose). That is a content-shape decision at the A/B interface (frozen doc types), so it's a **joint decision, not unilateral**: flagged for Stream A / founder. The routing seam (`householdPractices` in store + profile) is ready to consume it.
