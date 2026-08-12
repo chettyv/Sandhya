@@ -270,3 +270,14 @@ Founder directive: placeholders everywhere, keys later, don't stop. Branch `b4-o
 - **Verified:** 31 mobile tests (12 new: practices, rotation), 160 workspace tests, typecheck, lint 0 errors, backend:check; full onboarding → Today flow exercised in the browser (chip exclusivity, reminder chips, name in greeting), zero console errors. `vitest.config.ts` adds the `@/` alias so src modules load under vitest.
 
 **Remaining for B4 done-done:** the second half of Q1's contract — "which commentarial reading appears first on a verse with more than one" — needs verse-level multi-reading content, which doesn't exist in the bank schema yet (single Meaning prose; variation lives inside the prose). That is a content-shape decision at the A/B interface (frozen doc types), so it's a **joint decision, not unilateral**: flagged for Stream A / founder. The routing seam (`householdPractices` in store + profile) is ready to consume it.
+
+### Cycle 19 — 12 Aug 2026 — STREAM B — B5's three v3 mechanics — DONE
+
+Branch `b5-night-session-mechanics`. The plan's three additions to the night session, built ahead of A1 content against the frozen `challenge_session` shape:
+
+- **Stated duration as a pre-open contract:** locked night rows on the challenge overview now show `Opens {date} · ~N min` (duration previously appeared only after unlock; the unlocked row and night screen already carried it).
+- **Endowed progress:** the night screen gains a progress bar that **starts in credit** — the shloka block arrives marked complete, badged _"In hand from the start"_ — and the remaining sections mark themselves read as they cross a 60%-viewport read line on scroll (throttled `onScroll` pass-through added to `Page`; pure model in `src/lib/nightProgress.ts`, 7 tests).
+- **Explicit end state:** completing a night renders an end card — _"Night N is complete… Night N+1 opens {date} in the evening"_, with final-night copy on the last night — instead of swapping the button for a static line.
+- **Verified:** 38 mobile tests, typecheck, lint, backend:check. Live render against a real session still needs the production backend (same position as the Cycle 3 challenge screens) — states and progress logic are unit-tested.
+
+**Stream B remaining, by blocker:** B1/B2 need founder accounts (keys are placeholdered, paste-ready); B3 needs A1 sessions written; B6 needs a device build (B1); B7 needs the domain decision. Next unblocked candidates: audio player scaffold (B5's last piece — needs an expo-audio dependency decision) or reduced-motion/320px acceptance sweep.
