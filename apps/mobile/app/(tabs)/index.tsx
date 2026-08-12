@@ -15,6 +15,7 @@ import { useCopy } from "@/lib/i18n";
 import { paymentsEnabled } from "@/lib/payments";
 import { dailyShloka, shlokaTranslation } from "@/lib/shlokas";
 import { useSubscription } from "@/lib/subscriptions";
+import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
 
@@ -349,7 +350,10 @@ function DailyShlokaCard() {
     <Pressable
       accessibilityRole="button"
       accessibilityLabel={`Today's shloka: ${shloka.textRef}`}
-      onPress={() => router.push({ pathname: "/shloka/[slug]", params: { slug: shloka.slug } })}
+      onPress={() => {
+        track("daily_shloka_opened", { slug: shloka.slug });
+        router.push({ pathname: "/shloka/[slug]", params: { slug: shloka.slug } });
+      }}
       className="mb-2 rounded-card border border-[#302C25] bg-surface p-4"
     >
       <View className="flex-row items-center justify-between">

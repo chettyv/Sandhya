@@ -1,14 +1,21 @@
 import { router, useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
 import { FlatList, Pressable, Text, View } from "react-native";
 
 import { EmptyState, Page } from "@/components/ui";
 import { type Shloka, readerChapters, shlokaTranslation } from "@/lib/shlokas";
+import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 
 export default function ReaderChapterScreen() {
   const { chapter: chapterParam } = useLocalSearchParams<{ chapter?: string }>();
   const contentLanguage = useAppStore((state) => state.contentLanguage);
   const chapter = readerChapters().find((entry) => entry.key === chapterParam);
+
+  const chapterKey = chapter?.key ?? null;
+  useEffect(() => {
+    if (chapterKey) track("reader_chapter_opened", { chapter: chapterKey });
+  }, [chapterKey]);
 
   if (!chapter) {
     return (

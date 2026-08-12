@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { updateProfile } from "@/lib/account";
 import { configureDailyReminder } from "@/lib/notifications";
+import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { colors, layout } from "@/theme/tokens";
 
@@ -56,6 +57,7 @@ export default function OnboardingScreen() {
       setFocusTags(focus);
       setReminder(reminderEnabled, reminderTime);
       setOnboardingComplete();
+      track("onboarding_completed", { focus_count: focus.length });
       try {
         await updateProfile({
           display_name: name.trim() || null,

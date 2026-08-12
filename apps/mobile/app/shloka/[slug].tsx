@@ -1,14 +1,20 @@
 import { router, useLocalSearchParams } from "expo-router";
+import { useEffect } from "react";
 import { Text, View } from "react-native";
 
 import { Card, EmptyState, Page, SecondaryButton } from "@/components/ui";
 import { chapterKey, getShloka, shlokaMeaning, shlokaTranslation } from "@/lib/shlokas";
+import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 
 export default function ShlokaDetailScreen() {
   const { slug } = useLocalSearchParams<{ slug?: string }>();
   const contentLanguage = useAppStore((state) => state.contentLanguage);
   const shloka = getShloka(slug);
+
+  useEffect(() => {
+    if (shloka) track("shloka_viewed", { slug: shloka.slug });
+  }, [shloka]);
 
   if (!shloka) {
     return (
