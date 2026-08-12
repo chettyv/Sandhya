@@ -1,4 +1,0 @@
-RAW_WIKI ta ok=20 -> C:\Users\vaibh\Documents\GitHub\DharmaDaily\content\_staging\raw\tamil\wikisource_bharati_bhagavad_gita_ta.jsonl
-RAW_WIKI te ok=20 -> C:\Users\vaibh\Documents\GitHub\DharmaDaily\content\_staging\raw\telugu\wikisource_bhagavad_gita_translation_te.jsonl
-RAW_WIKI bn ok=2 -> C:\Users\vaibh\Documents\GitHub\DharmaDaily\content\_staging\raw\bengali\wikisource_bhagavad_gita_indexes_bn.jsonl
-RAW_WIKI gu ok=1 -> C:\Users\vaibh\Documents\GitHub\DharmaDaily\content\_staging\raw\gujarati\wikisource_gitadhvani_gu.jsonl

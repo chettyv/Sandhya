@@ -65,3 +65,6 @@ content/_staging/prepared/
 *.tgz
 .cache/
 .turbo/
+
+# Raw staged sources stay on disk / external storage, not in git (plan v2 Phase 0)
+content/_staging/raw/
