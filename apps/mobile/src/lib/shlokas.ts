@@ -31,10 +31,24 @@ export function getShloka(slug: string | undefined): Shloka | undefined {
   return shlokas.find((entry) => entry.slug === slug);
 }
 
-// Reader grouping: "gita-12-3" -> chapter key "gita-12". Works for any text
-// whose slugs end in a verse number.
+// Reader grouping. Chapter-style slugs ("gita-12-3") group per chapter
+// ("gita-12"); short texts (Hanuman Chalisa, Isha Upanishad) group whole,
+// keyed by their slug prefix, with named units (shanti mantra, dohas) placed
+// in liturgical order around the numbered verses.
 export function chapterKey(slug: string): string {
-  return slug.replace(/-\d+$/, "");
+  const chapterStyle = slug.match(/^([a-z-]+-\d+)-\d+$/);
+  if (chapterStyle?.[1]) return chapterStyle[1];
+  return slug.replace(/-(\d+|shanti|doha-\d+)$/, "");
+}
+
+// Liturgical position within a group: openings first, numbered units in
+// order, closings last.
+function readerRank(slug: string): number {
+  if (slug.endsWith("-shanti")) return -100;
+  const doha = slug.match(/-doha-(\d+)$/);
+  if (doha) return Number(doha[1]) === 3 ? 10_000 : -10 + Number(doha[1]);
+  const number = slug.match(/-(\d+)$/);
+  return number ? Number(number[1]) : 0;
 }
 
 export type ReaderChapter = { key: string; title: string; verses: Shloka[] };
@@ -48,12 +62,14 @@ export function readerChapters(): ReaderChapter[] {
     else groups.set(key, [entry]);
   }
   return [...groups.entries()].map(([key, verses]) => {
-    const match = verses[0]?.textRef.match(/^(.*?)\s+(\d+)\.\d+$/);
-    return {
-      key,
-      title: match ? `${match[1]} — Chapter ${match[2]}` : (verses[0]?.textRef ?? key),
-      verses,
-    };
+    verses.sort((a, b) => readerRank(a.slug) - readerRank(b.slug));
+    const chapterStyle = verses[0]?.textRef.match(/^(.*?)\s+(\d+)\.\d+$/);
+    const title = chapterStyle
+      ? `${chapterStyle[1]} — Chapter ${chapterStyle[2]}`
+      : (verses[0]?.textRef
+          .replace(/[,]?\s*(chaupai|opening doha|closing doha|shanti mantra).*$/i, "")
+          .replace(/\s+\d+$/, "") ?? key);
+    return { key, title, verses };
   });
 }
 
