@@ -62,6 +62,9 @@ jobs:
       - name: Validate canonical content
         run: pnpm content:validate
 
+      - name: Shloka bank freshness
+        run: node scripts/generate-shloka-bank.mjs --check
+
       - name: Full backend verification
         run: node scripts/verify-backend.mjs
 
