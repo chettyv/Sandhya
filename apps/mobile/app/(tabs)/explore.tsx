@@ -164,7 +164,7 @@ export default function ExploreScreen() {
               <Pressable
                 key={text.id}
                 accessibilityRole="button"
-                onPress={() => router.push(`/text/${text.id}` as never)}
+                onPress={() => router.push({ pathname: "/text/[id]", params: { id: text.id } })}
                 className="flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-3.5"
               >
                 <View className="h-12 w-12 items-center justify-center rounded-lg bg-[#E8E0EC]">

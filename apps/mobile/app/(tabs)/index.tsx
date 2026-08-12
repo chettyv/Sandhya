@@ -274,7 +274,7 @@ export default function HomeScreen() {
             router.push({
               pathname: "/(tabs)/ask",
               params: { prompt: dailyReflection.prompt },
-            } as never)
+            })
           }
           className="flex-row items-center gap-3"
         >

@@ -89,7 +89,7 @@ export default function DeityDetailScreen() {
               params: {
                 prompt: `How is ${requestedDeity.name} understood across Hindu traditions and communities?`,
               },
-            } as never)
+            })
           }
         />
         <SecondaryButton

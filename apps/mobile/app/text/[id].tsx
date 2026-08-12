@@ -134,7 +134,7 @@ export default function SacredTextDetailScreen() {
           router.push({
             pathname: "/(tabs)/ask",
             params: { prompt: `How do different Hindu traditions understand ${text.title}?` },
-          } as never)
+          })
         }
         className="mt-5 flex-row items-center gap-3 rounded-card border border-[#302C25] bg-surface p-4"
       >

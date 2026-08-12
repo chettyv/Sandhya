@@ -175,9 +175,7 @@ export default function ConversationDetailScreen() {
       <PrimaryButton
         label="Ask a follow-up"
         icon="sparkles"
-        onPress={() =>
-          router.push({ pathname: "/(tabs)/ask", params: { conversationId: id } } as never)
-        }
+        onPress={() => router.push({ pathname: "/(tabs)/ask", params: { conversationId: id } })}
       />
     </Page>
   );

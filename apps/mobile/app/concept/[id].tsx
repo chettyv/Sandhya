@@ -68,7 +68,7 @@ export default function ConceptDetailScreen() {
               params: {
                 prompt: `How is ${concept.term} understood in different Hindu traditions?`,
               },
-            } as never)
+            })
           }
         />
         <SecondaryButton
