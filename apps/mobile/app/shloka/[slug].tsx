@@ -2,10 +2,12 @@ import { router, useLocalSearchParams } from "expo-router";
 import { Text, View } from "react-native";
 
 import { Card, EmptyState, Page } from "@/components/ui";
-import { getShloka } from "@/lib/shlokas";
+import { getShloka, shlokaMeaning, shlokaTranslation } from "@/lib/shlokas";
+import { useAppStore } from "@/store/useAppStore";
 
 export default function ShlokaDetailScreen() {
   const { slug } = useLocalSearchParams<{ slug?: string }>();
+  const contentLanguage = useAppStore((state) => state.contentLanguage);
   const shloka = getShloka(slug);
 
   if (!shloka) {
@@ -30,7 +32,9 @@ export default function ShlokaDetailScreen() {
         <Text className="text-[19px] leading-9 text-ink">{shloka.devanagari}</Text>
         <Text className="mt-2 text-[15px] leading-6 text-muted">{shloka.iast}</Text>
         <Text className="mt-3 text-[16px] font-semibold leading-7 text-ink">{shloka.sayIt}</Text>
-        <Text className="mt-3 text-[15px] leading-6 text-ink">{shloka.translation}</Text>
+        <Text className="mt-3 text-[15px] leading-6 text-ink">
+          {shlokaTranslation(shloka, contentLanguage)}
+        </Text>
         <Text className="mt-3 text-xs leading-5 text-muted">{shloka.source}</Text>
       </Card>
 
@@ -54,7 +58,9 @@ export default function ShlokaDetailScreen() {
       {shloka.meaning ? (
         <View className="mt-6">
           <Text className="text-[17px] font-semibold text-ink">The meaning behind it</Text>
-          <Text className="mt-2 text-[15px] leading-7 text-ink">{shloka.meaning}</Text>
+          <Text className="mt-2 text-[15px] leading-7 text-ink">
+            {shlokaMeaning(shloka, contentLanguage)}
+          </Text>
         </View>
       ) : null}
 

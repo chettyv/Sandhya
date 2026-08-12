@@ -12,7 +12,8 @@ import { calculateCurrentStreak, localDateKey, removeSavedItem, saveItem } from 
 import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
-import { dailyShloka } from "@/lib/shlokas";
+import { paymentsEnabled } from "@/lib/payments";
+import { dailyShloka, shlokaTranslation } from "@/lib/shlokas";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -45,10 +46,9 @@ export default function HomeScreen() {
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
   const week = buildWeek();
-  const availablePractices =
-    subscription.plan === "free" ? practices.filter((item) => !item.isPremium) : practices;
-  const availableFestivals =
-    subscription.plan === "free" ? festivals.filter((item) => !item.isPremium) : festivals;
+  const gateFree = paymentsEnabled && subscription.plan === "free";
+  const availablePractices = gateFree ? practices.filter((item) => !item.isPremium) : practices;
+  const availableFestivals = gateFree ? festivals.filter((item) => !item.isPremium) : festivals;
   const practice = availablePractices[0];
   const availableUpcomingFestivals = availableFestivals.filter(
     (item) => item.date !== null && item.date >= localDateKey(),
@@ -162,7 +162,7 @@ export default function HomeScreen() {
         </Card>
       ) : null}
 
-      {subscription.plan === "free" && !subscriptionChecking ? (
+      {paymentsEnabled && subscription.plan === "free" && !subscriptionChecking ? (
         <Pressable
           accessibilityRole="button"
           onPress={() => router.push("/subscription")}
@@ -341,7 +341,9 @@ export default function HomeScreen() {
 
 function DailyShlokaCard() {
   const router = useRouter();
-  const shloka = dailyShloka();
+  const focusTags = useAppStore((state) => state.focusTags);
+  const contentLanguage = useAppStore((state) => state.contentLanguage);
+  const shloka = dailyShloka(focusTags);
   if (!shloka) return null;
   return (
     <Pressable
@@ -360,7 +362,7 @@ function DailyShlokaCard() {
         {shloka.devanagari}
       </Text>
       <Text className="mt-1 text-sm leading-5 text-muted" numberOfLines={2}>
-        {shloka.translation}
+        {shlokaTranslation(shloka, contentLanguage)}
       </Text>
     </Pressable>
   );

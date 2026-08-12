@@ -37,6 +37,10 @@ for (const file of files) {
     slug: frontmatter.shloka_slug,
     textRef: frontmatter.text_ref,
     tradition: frontmatter.tradition_primary,
+    tags:
+      typeof frontmatter.tags === "string"
+        ? frontmatter.tags.split(",").map((tag) => tag.trim())
+        : [],
     ...parseShlokaBody(body, file),
   });
   console.log(`${frontmatter.review_status === "approved" ? "included" : "DRAFT"}: ${frontmatter.shloka_slug}`);
@@ -68,11 +72,26 @@ function parseShlokaBody(body, displayFile) {
     (match) => ({ word: match[1].trim(), meaning: match[2].trim() }),
   );
   if (words.length === 0) fail(`${displayFile}: no word-by-word lines parsed`);
+  // Per-language variants: "**Meaning (hi):** ..." labels give translated verse
+  // lines; "## Meaning (hi)" sections give translated prose.
+  const translations = {};
+  for (const match of (sections.Shloka ?? "").matchAll(
+    /^\*\*Meaning \(([a-z]{2})\):\*\*\s+(.+)$/gm,
+  )) {
+    translations[match[1]] = match[2].trim();
+  }
+  const meanings = {};
+  for (const [title, text] of Object.entries(sections)) {
+    const match = title.match(/^Meaning \(([a-z]{2})\)$/);
+    if (match) meanings[match[1]] = text;
+  }
   return {
     ...shloka,
     words,
     meaning: sections.Meaning ?? "",
     reflection: sections.Reflection ?? "",
+    translations,
+    meanings,
   };
 }
 

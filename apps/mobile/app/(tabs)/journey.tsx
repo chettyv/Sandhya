@@ -8,6 +8,7 @@ import { Card, ListRow, Page, SectionHeader, TopBar } from "@/components/ui";
 import { calculateCurrentStreak, loadActivityDates } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -43,7 +44,7 @@ export default function JourneyScreen() {
   const { data: content } = useCuratedContent();
   const { data: subscription } = useSubscription();
   const practices = content.practices.filter(
-    (item) => subscription.plan !== "free" || !item.isPremium,
+    (item) => !paymentsEnabled || subscription.plan !== "free" || !item.isPremium,
   );
   const completedCount = completedPracticeIds.filter((id) =>
     practices.some((practice) => practice.id === id),

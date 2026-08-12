@@ -6,6 +6,7 @@ import { Card, ListRow, Page } from "@/components/ui";
 import { deleteAccount, exportAccountData, updateProfile } from "@/lib/account";
 import { useAuthState } from "@/lib/authState";
 import { configureDailyReminder } from "@/lib/notifications";
+import { availableContentLanguages } from "@/lib/shlokas";
 import { getTelemetryConsent, setTelemetryConsent } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -175,12 +176,7 @@ export default function SettingsScreen() {
             )
           }
         />
-        <ListRow
-          icon="language-outline"
-          title="Language"
-          subtitle="English"
-          onPress={() => Alert.alert("Language", "Dharma Daily is currently available in English.")}
-        />
+        <LanguageRow />
       </Card>
 
       <Text className="mb-2 mt-7 text-sm font-semibold uppercase tracking-wider text-muted">
@@ -284,5 +280,47 @@ export default function SettingsScreen() {
         Dharma Daily 1.0.0 · Made with care for diverse traditions
       </Text>
     </Page>
+  );
+}
+
+const languageNames: Record<string, string> = {
+  en: "English",
+  hi: "हिन्दी",
+  bn: "বাংলা",
+  gu: "ગુજરાતી",
+  mr: "मराठी",
+  ta: "தமிழ்",
+};
+
+function LanguageRow() {
+  const contentLanguage = useAppStore((state) => state.contentLanguage);
+  const setContentLanguage = useAppStore((state) => state.setContentLanguage);
+  const available = availableContentLanguages();
+
+  if (available.length < 2) {
+    return (
+      <ListRow
+        icon="language-outline"
+        title="Language"
+        subtitle="English — more languages arrive as translations are reviewed"
+        onPress={() =>
+          Alert.alert(
+            "Language",
+            "Dharma Daily is in English today. Hindi and other languages will appear here as reviewed translations are added.",
+          )
+        }
+      />
+    );
+  }
+
+  const currentIndex = available.indexOf(contentLanguage);
+  const next = available[(currentIndex + 1) % available.length] ?? "en";
+  return (
+    <ListRow
+      icon="language-outline"
+      title="Language"
+      subtitle={`${languageNames[contentLanguage] ?? contentLanguage} — tap to switch`}
+      onPress={() => setContentLanguage(next)}
+    />
   );
 }

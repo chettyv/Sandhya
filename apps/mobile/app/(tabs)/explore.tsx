@@ -9,6 +9,7 @@ import { PracticeRow } from "@/components/PracticeRow";
 import { Page, SectionHeader, TopBar } from "@/components/ui";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { colors } from "@/theme/tokens";
 
@@ -22,7 +23,7 @@ export default function ExploreScreen() {
   const { data: content } = useCuratedContent();
   const { concepts, deities, festivals, practices, texts } = content;
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
-  const isPlus = subscription.plan !== "free";
+  const isPlus = !paymentsEnabled || subscription.plan !== "free";
   const availablePractices = isPlus ? practices : practices.filter((item) => !item.isPremium);
   const availableFestivals = isPlus ? festivals : festivals.filter((item) => !item.isPremium);
   const search = query.trim().toLowerCase();

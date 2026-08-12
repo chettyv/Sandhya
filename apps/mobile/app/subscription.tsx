@@ -15,6 +15,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { useAuthState } from "@/lib/authState";
+import { paymentsEnabled } from "@/lib/payments";
 import {
   getPurchaseOptions,
   planLabel,
@@ -51,6 +52,31 @@ export default function SubscriptionScreen() {
   const [options, setOptions] = useState<PurchaseOption[]>([]);
   const [busy, setBusy] = useState(false);
   const signedIn = authState === "signed_in";
+
+  if (!paymentsEnabled) {
+    return (
+      <SafeAreaView edges={["bottom"]} className="flex-1 bg-parchment">
+        <View className="flex-1 items-center justify-center px-8">
+          <Ionicons name="heart-outline" size={40} color={colors.saffron} />
+          <Text className="mt-4 text-center text-xl font-semibold text-ink">
+            Everything is free right now
+          </Text>
+          <Text className="mt-3 text-center text-[15px] leading-6 text-muted">
+            The full library, daily shloka, practices, and festival guides are all open while Dharma
+            Daily is in its early free period. If a paid tier ever arrives, nothing you rely on
+            today will be taken away without clear notice.
+          </Text>
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => router.back()}
+            className="mt-6 min-h-11 items-center justify-center rounded-lg bg-saffron px-6 py-3"
+          >
+            <Text className="text-base font-semibold text-black">Back to the app</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    );
+  }
   const isPlus = subscription.plan !== "free";
   const storeSetupMessage =
     Platform.OS === "web"

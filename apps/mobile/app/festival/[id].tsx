@@ -12,6 +12,7 @@ import {
   hasFestivalReminder,
   scheduleFestivalReminder,
 } from "@/lib/notifications";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -78,7 +79,7 @@ export default function FestivalDetailScreen() {
         <PremiumGate />
       </Page>
     );
-  if (festival.isPremium && subscriptionChecking)
+  if (festival.isPremium && paymentsEnabled && subscriptionChecking)
     return (
       <Page>
         <View className="items-center py-20">
@@ -87,7 +88,7 @@ export default function FestivalDetailScreen() {
         </View>
       </Page>
     );
-  if (festival.isPremium && subscription.plan === "free")
+  if (festival.isPremium && paymentsEnabled && subscription.plan === "free")
     return (
       <Page>
         <Text className="text-2xl font-semibold text-ink">{festival.name}</Text>

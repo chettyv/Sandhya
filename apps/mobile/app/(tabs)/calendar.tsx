@@ -7,6 +7,7 @@ import { ContentSourceNotice } from "@/components/ContentSourceNotice";
 import { FestivalRow } from "@/components/FestivalRow";
 import { Card, Page, Pill, SectionHeader } from "@/components/ui";
 import { useCuratedContent } from "@/lib/content";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -57,7 +58,7 @@ export default function CalendarScreen() {
   const { data: content } = useCuratedContent();
   const { data: subscription } = useSubscription();
   const festivals =
-    subscription.plan === "free"
+    paymentsEnabled && subscription.plan === "free"
       ? content.festivals.filter((festival) => !festival.isPremium)
       : content.festivals;
   const days = useMemo(() => buildMonth(cursor.getFullYear(), cursor.getMonth()), [cursor]);

@@ -306,6 +306,15 @@ function validateShloka(frontmatter: Record<string, string | boolean>, body: str
   if (wordSection !== null && !/^-\s+\*\*.+?\*\*\s+—\s+\S/m.test(wordSection)) {
     issues.push("## Word by word must contain at least one `- **word** — meaning` line");
   }
+  // Optional profile-journey tags: lowercase-hyphenated, comma-separated.
+  if (frontmatter.tags !== undefined) {
+    if (
+      typeof frontmatter.tags !== "string" ||
+      !frontmatter.tags.split(",").every((tag) => /^[a-z][a-z-]*$/.test(tag.trim()))
+    ) {
+      issues.push("tags must be a comma-separated list of lowercase-hyphenated words");
+    }
+  }
   return issues;
 }
 

@@ -167,6 +167,17 @@ Directive: don't stop until the app is ready; placeholders only for credentials.
 - **All six §5 arrival pages now drafted** (added Lakshmi puja at home + Hanuman Chalisa meaning — the latter deliberately quotes no verses, per the named-edition rule).
 - README gains a Quickstart; **SHIP-48H checklist added to 00-your-actions** — the founder's exact 5-step path to live.
 
+### Cycle 10 — 12 Aug 2026 — Free launch, 30 drafted verses, tags + languages — DONE
+
+Founder directives: launch free (non-commercial unlocks restricted sources; paid parked behind a flag with a re-audit gate before reactivation) · all languages · tags for profile-driven journeys.
+
+- **30-verse launch set fully drafted** by three parallel writers (ch 12 complete + ch 2 essentials): translations, sandhi-split word-by-word glosses, 60–120-word meanings with honest tradition-variation notes (spot-checked 2.47 — accurate and non-flattening), stress-marked pronunciation. All draft-gated on founder review.
+- **Free mode:** `EXPO_PUBLIC_PAYMENTS_ENABLED` (default off) — Plus upsell hidden, premium filters open everything, subscription screen shows "Everything is free right now". 8 gating sites wired.
+- **Tags + personalization:** optional `tags:` frontmatter (validated), 30 launch verses tagged, store gains `focusTags` + `contentLanguage`, onboarding gains one optional "What would help most right now?" chips question (≤2), daily shloka rotates within the user's tag pool.
+- **Languages:** schema + generator support `**Meaning (xx):**` / `## Meaning (xx)` per-language variants; app prefers the user's language with English fallback; settings Language row becomes functional automatically once a second language has reviewed content.
+- **Browser-verified end to end:** onboarding (focus chips) → Today shows the devotion-pool verse (12.3, drafted translation) → detail renders three registers + full word bank + meaning + attribution. Zero app console errors. `public/_redirects` added so dynamic deep links survive static hosting.
+- Committed bank is approved-only (empty until founder review); local preview: `pnpm content:generate-shloka-bank -- --allow-draft`.
+
 ### NEXT SESSION — do these in order, no questions
 
 1. **Corpus extraction (top priority):** write `scripts/extract-gita-verses.mjs` — fetch the sanskritdocuments.org Bhagavad Gita (ITX/HTML per chapter; their terms allow distribution with attribution — record row in inventory) or parse the staged `content/_staging/raw/sanskrit/wikisource_bhagavad_gita_sa.jsonl`, plus the staged **Besant/Bhagavan Das 1905** OCR for word-by-word English. Emit draft `content/shlokas/gita-N-M.md` files (start: chapter 2 + chapter 12, ~90 verses) with Source lines citing the staged file + URL. Drafts only — ship-gate unchanged. Also run the remaining queue collection scripts (list in SOURCES-AND-ATTRIBUTION.md) to pull the ~58 metadata-only rows.

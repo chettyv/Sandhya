@@ -3,8 +3,9 @@ doc_type: shloka
 shloka_slug: gita-2-47
 text_ref: Bhagavad Gita 2.47
 tradition_primary: general
+tags: discipline, wisdom
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated pending review; translation pending.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
 review_status: draft
 reviewed_by: ""
@@ -14,14 +15,25 @@ reviewed_by: ""
 
 **Devanagari:** कर्मण्येवाधिकारस्ते मा फलेषु कदाचन । / मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि ॥2.47॥
 **IAST:** karmaṇyevādhikāraste mā phaleṣu kadācana । / mā karmaphalaheturbhūrmā te saṅgo'stvakarmaṇi ॥2.47॥
-**Say it:** karmaṇyevādhikāraste mā phaleṣu kadācana । / mā karmaphalaheturbhūrmā te saṅgo'stvakarmaṇi (draft — add stress CAPS in review)
-**Meaning:** (translation pending — align a cleared public-domain translation in review)
-**Source:** Bhagavad Gita 2.47, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+**Say it:** kar-mun-YAY-vah-dhi-KAA-ras-tay maa pha-LAY-shoo ka-DAA-cha-na / maa kar-ma-pha-la-HAY-toor-bhoor maa tay SUN-go-stva-KAR-ma-ni
+**Meaning:** Your right is to the action alone, never to its results. Do not make the results of action your motive, and do not become attached to inaction.
+**Source:** Bhagavad Gita 2.47, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
 
-- **(word)** — (add gloss in review; Besant/Bhagavan Das 1905 staged OCR is the word-by-word reference)
+- **karmaṇi** — in action
+- **eva** — only, alone
+- **adhikāraḥ** — right, entitlement
+- **te** — your
+- **mā** — never
+- **phaleṣu** — in the fruits, the results
+- **kadācana** — at any time
+- **mā karma-phala-hetuḥ bhūḥ** — do not become one whose motive is the result of action
+- **te** — your
+- **saṅgaḥ** — attachment
+- **mā astu** — let there not be
+- **akarmaṇi** — in inaction
 
 ## Meaning
 
-(Write the plain-prose meaning in review; keep scripture and commentary separate.)
+Probably the most quoted verse of the Gita. You are entitled to the effort, never to the outcome — so act fully, and stop negotiating with results. The verse closes both escape routes: do not work only for the reward, and do not use detachment as an excuse to quit acting. For daily practice it is a working instruction: show up, do the task well, release the scoreboard. Commentators genuinely diverge on its depth — Advaita reads desireless action as purifying the mind on the way to knowledge, while Vishishtadvaita and Dvaita read it as acting in service of and surrender to the Lord — and the verse itself supports both readings.

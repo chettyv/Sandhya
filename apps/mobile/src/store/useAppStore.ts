@@ -14,6 +14,8 @@ type AppState = {
   reminderEnabled: boolean;
   reminderTime: string;
   traditionPreference: string;
+  focusTags: string[];
+  contentLanguage: string;
   hasCompletedOnboarding: boolean;
   hydrated: boolean;
   lastActiveDate: string;
@@ -22,6 +24,8 @@ type AppState = {
   completeToday: (id: string) => void;
   setReminder: (enabled: boolean, time?: string) => void;
   setTraditionPreference: (tradition: string) => void;
+  setFocusTags: (tags: string[]) => void;
+  setContentLanguage: (language: string) => void;
   setDisplayName: (name: string) => void;
   setSavedIds: (ids: string[]) => void;
   setSavedItems: (items: SavedItem[]) => void;
@@ -52,6 +56,8 @@ export const useAppStore = create<AppState>()(
       reminderEnabled: false,
       reminderTime: "08:00",
       traditionPreference: "All traditions",
+      focusTags: [],
+      contentLanguage: "en",
       hasCompletedOnboarding: false,
       hydrated: false,
       lastActiveDate: todayKey(),
@@ -87,6 +93,8 @@ export const useAppStore = create<AppState>()(
       setReminder: (enabled, time) =>
         set((state) => ({ reminderEnabled: enabled, reminderTime: time ?? state.reminderTime })),
       setTraditionPreference: (traditionPreference) => set({ traditionPreference }),
+      setFocusTags: (focusTags) => set({ focusTags }),
+      setContentLanguage: (contentLanguage) => set({ contentLanguage }),
       setDisplayName: (displayName) => set({ displayName }),
       setSavedIds: (savedIds) =>
         set((state) => ({ savedIds: [...new Set([...state.savedIds, ...savedIds])] })),
@@ -115,6 +123,7 @@ export const useAppStore = create<AppState>()(
           completedDateKeys: [],
           displayName: "Friend",
           traditionPreference: "All traditions",
+          focusTags: [],
           reminderEnabled: false,
           reminderTime: "08:00",
         }),

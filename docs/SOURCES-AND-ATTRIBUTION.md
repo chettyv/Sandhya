@@ -1,5 +1,7 @@
 # Sources & attribution — founder note
 
+> **FREE-LAUNCH MODE (12 Aug):** the app ships free/non-commercial for now, which makes personal-use sources (sanskritdocuments.org, most GRETIL files) usable **with attribution** in the meantime. **Hard gate:** before payments are ever re-enabled (`EXPO_PUBLIC_PAYMENTS_ENABLED`), every shipped source must be re-audited for commercial rights — permission obtained or the text re-sourced (Wikisource is the commercial-safe path).
+
 Living note. What we hold, what each source needs from you before it can ship, and what only you can obtain. Machine state lives in `docs/source_inventory_template.csv` (432 rows) and `docs/source_download_queue_2026-06-19.csv` (383 rows); this note is the human summary.
 
 ## What is already collected on this machine (content/\_staging/raw — not in git)

@@ -8,6 +8,7 @@ import { PremiumGate } from "@/components/PremiumGate";
 import { Card, EmptyState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { recordPracticeCompletion, syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -42,7 +43,7 @@ export default function PracticeDetailScreen() {
         <PremiumGate />
       </Page>
     );
-  if (practice.isPremium && subscriptionChecking)
+  if (practice.isPremium && paymentsEnabled && subscriptionChecking)
     return (
       <Page>
         <View className="items-center py-20">
@@ -51,7 +52,7 @@ export default function PracticeDetailScreen() {
         </View>
       </Page>
     );
-  if (practice.isPremium && subscription.plan === "free")
+  if (practice.isPremium && paymentsEnabled && subscription.plan === "free")
     return (
       <Page>
         <Text className="text-2xl font-semibold text-ink">{practice.title}</Text>

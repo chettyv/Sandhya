@@ -15,6 +15,7 @@ import { PremiumGate } from "@/components/PremiumGate";
 import { Card, EmptyState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { saveJournalEntry, syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -41,7 +42,7 @@ export default function ReflectionDetailScreen() {
       </Page>
     );
   const dailyReflection = requestedReflection;
-  if (dailyReflection.isPremium && subscriptionChecking)
+  if (dailyReflection.isPremium && paymentsEnabled && subscriptionChecking)
     return (
       <Page>
         <View className="items-center py-20">
@@ -50,7 +51,7 @@ export default function ReflectionDetailScreen() {
         </View>
       </Page>
     );
-  if (dailyReflection.isPremium && subscription.plan === "free")
+  if (dailyReflection.isPremium && paymentsEnabled && subscription.plan === "free")
     return (
       <Page>
         <Text className="text-2xl font-semibold text-ink">{dailyReflection.title}</Text>

@@ -16,14 +16,26 @@ const traditions = [
   ["Smarta", "smarta"],
 ] as const;
 
+// Maps to content tags; drives which verses the daily rotation favours.
+const focusOptions = [
+  ["Courage", "courage"],
+  ["Peace of mind", "peace"],
+  ["Steadiness", "discipline"],
+  ["Devotion", "devotion"],
+  ["Understanding", "wisdom"],
+  ["Family & tradition", "family"],
+] as const;
+
 export default function OnboardingScreen() {
   const router = useRouter();
   const setDisplayName = useAppStore((state) => state.setDisplayName);
   const setTraditionPreference = useAppStore((state) => state.setTraditionPreference);
   const setReminder = useAppStore((state) => state.setReminder);
   const setOnboardingComplete = useAppStore((state) => state.setOnboardingComplete);
+  const setFocusTags = useAppStore((state) => state.setFocusTags);
   const [name, setName] = useState("");
   const [tradition, setTradition] = useState("All traditions");
+  const [focus, setFocus] = useState<string[]>([]);
   const [reminders, setReminders] = useState(false);
   const [reminderTime, setReminderTime] = useState("08:00");
   const [finishing, setFinishing] = useState(false);
@@ -41,6 +53,7 @@ export default function OnboardingScreen() {
       const reminderEnabled = reminders && reminderResult.enabled;
       setDisplayName(name.trim() || "Friend");
       setTraditionPreference(tradition);
+      setFocusTags(focus);
       setReminder(reminderEnabled, reminderTime);
       setOnboardingComplete();
       try {
@@ -112,6 +125,32 @@ export default function OnboardingScreen() {
               </Text>
             </Pressable>
           ))}
+        </View>
+
+        <Text className="mb-2 mt-7 text-sm font-semibold uppercase text-muted">
+          What would help most right now? (optional, up to two)
+        </Text>
+        <View className="flex-row flex-wrap gap-2">
+          {focusOptions.map(([label, tag]) => {
+            const selected = focus.includes(tag);
+            return (
+              <Pressable
+                key={tag}
+                accessibilityRole="button"
+                accessibilityState={{ selected }}
+                onPress={() =>
+                  setFocus(
+                    selected ? focus.filter((item) => item !== tag) : [...focus, tag].slice(-2),
+                  )
+                }
+                className={`rounded-full border px-3.5 py-2.5 ${selected ? "border-aubergine bg-aubergine" : "border-[#302C25] bg-surface"}`}
+              >
+                <Text className={`text-sm font-semibold ${selected ? "text-white" : "text-ink"}`}>
+                  {label}
+                </Text>
+              </Pressable>
+            );
+          })}
         </View>
 
         <View className="mt-7 flex-row items-center justify-between rounded-card border border-[#302C25] bg-surface p-4">
