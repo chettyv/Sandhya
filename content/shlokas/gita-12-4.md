@@ -35,3 +35,7 @@ reviewed_by: ""
 ## Meaning
 
 Completing the sentence begun in 12.3, Krishna says that worshippers of the formless absolute also reach him — provided their contemplation is matched by conduct: senses restrained, mind even in every circumstance, and a genuine delight in the good of all beings. That last phrase matters most for daily life. The verse refuses to let formless meditation become private escape; the test of the practice is equanimity and active care for others. Both paths from Arjuna's question arrive at the same destination. Traditions gloss "they reach me" differently — Advaita reads it as realising the self that Krishna is, bhakti schools as attaining the Lord — but all agree the contemplative path, done fully, succeeds.
+
+## Reflection
+
+Whose good, beyond your own, will your practice serve today?

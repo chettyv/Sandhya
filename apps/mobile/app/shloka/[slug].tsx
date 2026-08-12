@@ -1,8 +1,8 @@
 import { router, useLocalSearchParams } from "expo-router";
 import { Text, View } from "react-native";
 
-import { Card, EmptyState, Page } from "@/components/ui";
-import { getShloka, shlokaMeaning, shlokaTranslation } from "@/lib/shlokas";
+import { Card, EmptyState, Page, SecondaryButton } from "@/components/ui";
+import { chapterKey, getShloka, shlokaMeaning, shlokaTranslation } from "@/lib/shlokas";
 import { useAppStore } from "@/store/useAppStore";
 
 export default function ShlokaDetailScreen() {
@@ -70,6 +70,19 @@ export default function ShlokaDetailScreen() {
           <Text className="mt-2 text-[15px] leading-7 text-ink">{shloka.reflection}</Text>
         </Card>
       ) : null}
+
+      <View className="mt-6">
+        <SecondaryButton
+          label="Read this verse in its chapter"
+          icon="library-outline"
+          onPress={() =>
+            router.push({
+              pathname: "/read/[chapter]",
+              params: { chapter: chapterKey(shloka.slug) },
+            })
+          }
+        />
+      </View>
     </Page>
   );
 }

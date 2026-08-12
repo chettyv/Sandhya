@@ -10,6 +10,7 @@ export type Shloka = {
   textRef: string;
   tradition: string;
   tags: string[];
+  dailyPool: boolean;
   devanagari: string;
   iast: string;
   sayIt: string;
@@ -28,6 +29,32 @@ export const shlokas = shlokaBank as Shloka[];
 
 export function getShloka(slug: string | undefined): Shloka | undefined {
   return shlokas.find((entry) => entry.slug === slug);
+}
+
+// Reader grouping: "gita-12-3" -> chapter key "gita-12". Works for any text
+// whose slugs end in a verse number.
+export function chapterKey(slug: string): string {
+  return slug.replace(/-\d+$/, "");
+}
+
+export type ReaderChapter = { key: string; title: string; verses: Shloka[] };
+
+export function readerChapters(): ReaderChapter[] {
+  const groups = new Map<string, Shloka[]>();
+  for (const entry of shlokas) {
+    const key = chapterKey(entry.slug);
+    const group = groups.get(key);
+    if (group) group.push(entry);
+    else groups.set(key, [entry]);
+  }
+  return [...groups.entries()].map(([key, verses]) => {
+    const match = verses[0]?.textRef.match(/^(.*?)\s+(\d+)\.\d+$/);
+    return {
+      key,
+      title: match ? `${match[1]} — Chapter ${match[2]}` : (verses[0]?.textRef ?? key),
+      verses,
+    };
+  });
 }
 
 export function availableContentLanguages(): string[] {
@@ -55,11 +82,15 @@ export function dailyShloka(
   dateKey = localDateKey(),
 ): Shloka | undefined {
   if (shlokas.length === 0) return undefined;
+  // Only curated daily_pool verses rotate — many Gita verses are fragments of
+  // longer sentences and belong to the reader, not a standalone daily verse.
+  const curated = shlokas.filter((entry) => entry.dailyPool);
+  const base = curated.length > 0 ? curated : shlokas;
   const pool =
     focusTags.length > 0
-      ? shlokas.filter((entry) => entry.tags.some((tag) => focusTags.includes(tag)))
+      ? base.filter((entry) => entry.tags.some((tag) => focusTags.includes(tag)))
       : [];
-  const source = pool.length > 0 ? pool : shlokas;
+  const source = pool.length > 0 ? pool : base;
   const [year = 0, month = 1, day = 1] = dateKey.split("-").map(Number);
   const date = new Date(year, month - 1, day);
   const startOfYear = new Date(year, 0, 1);

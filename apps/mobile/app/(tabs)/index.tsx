@@ -364,6 +364,11 @@ function DailyShlokaCard() {
       <Text className="mt-1 text-sm leading-5 text-muted" numberOfLines={2}>
         {shlokaTranslation(shloka, contentLanguage)}
       </Text>
+      {shloka.reflection ? (
+        <Text className="mt-2 text-sm leading-5 text-plum" numberOfLines={2}>
+          Carry it today: {shloka.reflection}
+        </Text>
+      ) : null}
     </Pressable>
   );
 }

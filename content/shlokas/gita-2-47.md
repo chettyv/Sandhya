@@ -7,6 +7,7 @@ tags: discipline, wisdom
 licence: original
 copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+daily_pool: true
 review_status: draft
 reviewed_by: ""
 ---
@@ -37,3 +38,7 @@ reviewed_by: ""
 ## Meaning
 
 Probably the most quoted verse of the Gita. You are entitled to the effort, never to the outcome — so act fully, and stop negotiating with results. The verse closes both escape routes: do not work only for the reward, and do not use detachment as an excuse to quit acting. For daily practice it is a working instruction: show up, do the task well, release the scoreboard. Commentators genuinely diverge on its depth — Advaita reads desireless action as purifying the mind on the way to knowledge, while Vishishtadvaita and Dvaita read it as acting in service of and surrender to the Lord — and the verse itself supports both readings.
+
+## Reflection
+
+What task today deserves your full effort — with the outcome released?

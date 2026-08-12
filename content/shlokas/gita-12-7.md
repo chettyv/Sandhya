@@ -34,3 +34,7 @@ reviewed_by: ""
 ## Meaning
 
 Completing the sentence begun in 12.6, Krishna makes a promise: for those whose minds are absorbed in him, he himself becomes the rescuer from the ocean of samsara — and soon, not after lifetimes of effort. The image reverses the usual picture of spiritual work. On the formless path of 12.3–12.5, the practitioner climbs; here, the swimmer is lifted. The effort asked of the devotee is orientation — turning the mind toward the divine — while the crossing itself is described as God's act. For daily practice, this verse is the chapter's reassurance: the practice is not self-rescue but sustained trust. Bhakti traditions read this grace as central; Advaita readings frame the rescue as the removal of ignorance.
+
+## Reflection
+
+Where in your life are you waiting for help you could simply ask for?

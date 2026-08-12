@@ -182,6 +182,16 @@ Founder directives: launch free (non-commercial unlocks restricted sources; paid
 
 All 700 verses now carry theme tags (curated tags on the 30 launch verses; defensible chapter-level tags elsewhere: ch1 courage/family, ch2 wisdom/courage, ch7–12 devotion-weighted, etc.). Personalized rotation works across the whole bank the moment more verses are approved.
 
+### Cycle 12 — 12 Aug 2026 — Product evaluation fixes: reader, curated pool, verse-linked spine — DONE
+
+Founder's product evaluation surfaced three real flaws; all three fixed and browser-verified:
+
+- **Scripture reader** (`/read` + `/read/[chapter]`): continuous chapter-by-chapter reading of all 700 verses — Devanagari + translation per verse, tap-through to the full word-bank detail, virtualized. Linked from Journey tab and from every verse detail ("Read this verse in its chapter"). Verified in browser: all 18 chapters with canonical verse counts, chapter 12 reads continuously, zero console errors.
+- **`daily_pool` curation flag** — the Bible-verse-of-the-day problem solved honestly: many Gita verses are sentence fragments (12.3→12.4 etc.) and must never appear as standalone daily verses. Only curated verses rotate; 22 of the 30 launch verses flagged (the 8 sentence-pair fragments excluded — they live in the reader). Verified: pool contains no fragments; fallback keeps the app working if nothing is flagged.
+- **Verse-linked daily spine** — every launch verse now carries its own one-line reflection prompt (30 written, draft-gated like everything else); the Today card shows "Carry it today: …" under the verse, and the detail screen is the full spine: verse → word bank → meaning → reflection → read-in-context.
+
+Founder review note: the 30 files gained `daily_pool` flags and `## Reflection` sections since the last look — the SHIP-48H review covers these too.
+
 ### NEXT SESSION — priorities (founder said don't stop)
 
 1. **Hanuman Chalisa into the bank:** staged `content/_staging/raw/hindi/sanskritdocuments_hanuman_chalisa_hi.itx` is clean but ITRANS-encoded — write an ITRANS→Devanagari converter (deterministic, mirrors the IAST work in `extract-gita-shlokas.mjs`) and emit draft files (free-mode legal with attribution; Hindi Wikisource page lookup failed on three title guesses — try their search API or the `hanumAnachAlisAsaMskRRita.itx` Sanskrit variant).

@@ -230,6 +230,8 @@ export default function RootLayout() {
             <Stack.Screen name="challenge/[slug]/index" options={{ title: "Challenge" }} />
             <Stack.Screen name="shlokas" options={{ title: "Shloka bank" }} />
             <Stack.Screen name="shloka/[slug]" options={{ title: "Shloka" }} />
+            <Stack.Screen name="read/index" options={{ title: "Read the scriptures" }} />
+            <Stack.Screen name="read/[chapter]" options={{ title: "Reading" }} />
             <Stack.Screen name="challenge/[slug]/night/[night]" options={{ title: "Session" }} />
             <Stack.Screen name="festival/[id]" options={{ title: "Festival" }} />
             <Stack.Screen name="practice/[id]" options={{ title: "Practice" }} />

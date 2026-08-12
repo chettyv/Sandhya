@@ -7,6 +7,7 @@ tags: wisdom
 licence: original
 copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+daily_pool: true
 review_status: draft
 reviewed_by: ""
 ---
@@ -41,3 +42,7 @@ reviewed_by: ""
 ## Meaning
 
 This is the Gita's most famous statement about the self: it was never born, so it can never die. Bodies begin and end; the one who wears them does not. The verse piles up four words — unborn, eternal, everlasting, ancient — to hammer home that death touches only the instrument. Traditions differ on what this deathless self is: Advaita reads it as the one universal Self, while Vishishtadvaita and Dvaita read it as each individual soul, eternally real and distinct. Either way, for daily practice the verse invites a gradual loosening of the habit of thinking "I am only this body."
+
+## Reflection
+
+If the deepest part of you cannot be harmed, what would you attempt?

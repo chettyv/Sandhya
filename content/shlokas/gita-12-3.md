@@ -37,3 +37,7 @@ reviewed_by: ""
 ## Meaning
 
 This verse is the first half of a sentence completed in 12.4. Krishna now turns to the other kind of practitioner from Arjuna's question: those who worship not a personal form but the imperishable absolute. The string of adjectives — indefinable, unmanifest, everywhere, beyond thought, unchanging, immovable, constant — is itself a lesson in how hard this object of contemplation is to hold. Every word says what it is not, or what it never does. For someone building a daily practice, the verse honours the contemplative path while quietly showing why it demands so much: the mind is being asked to rest on something it cannot picture. Krishna's own assessment of that difficulty comes in 12.5.
+
+## Reflection
+
+What draws people toward a truth beyond every image?

@@ -38,3 +38,7 @@ reviewed_by: ""
 ## Meaning
 
 The first half of a sentence completed in 12.7, this verse describes the devotional alternative to the steep formless path. Three moves define it: dedicate every action to the divine rather than to personal gain, make that relationship your highest aim, and let attention rest on the divine without dividing it among competing refuges. Notice that the verse starts with action, not withdrawal — ordinary work continues, but its ownership changes hands. For a daily practice this is the most portable instruction in the chapter: you cannot always sit in meditation, but you can offer whatever you are already doing. What that offering earns is stated in the next verse.
+
+## Reflection
+
+What would it mean to hand today's worries over, fully?

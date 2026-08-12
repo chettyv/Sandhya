@@ -41,6 +41,7 @@ for (const file of files) {
       typeof frontmatter.tags === "string"
         ? frontmatter.tags.split(",").map((tag) => tag.trim())
         : [],
+    dailyPool: frontmatter.daily_pool === true,
     ...parseShlokaBody(body, file),
   });
   console.log(`${frontmatter.review_status === "approved" ? "included" : "DRAFT"}: ${frontmatter.shloka_slug}`);

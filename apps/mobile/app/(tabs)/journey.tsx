@@ -111,6 +111,12 @@ export default function JourneyScreen() {
       <SectionHeader title="Your journey" />
       <Card>
         <ListRow
+          icon="library-outline"
+          title="Read the scriptures"
+          subtitle="Chapter by chapter, verse by verse"
+          onPress={() => router.push("/read")}
+        />
+        <ListRow
           icon="book-outline"
           title="Shloka bank"
           subtitle="Verses with pronunciation, word meanings, and sources"

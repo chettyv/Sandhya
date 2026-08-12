@@ -7,6 +7,7 @@ tags: devotion
 licence: original
 copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%AD%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%BF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+daily_pool: true
 review_status: draft
 reviewed_by: ""
 ---
@@ -38,3 +39,7 @@ reviewed_by: ""
 ## Meaning
 
 Arjuna opens the chapter on devotion with a practical question: who has the better grasp of yoga — the person who worships God as a personal presence with steady devotion, or the one who contemplates the formless, imperishable absolute? It is the question anyone building a practice eventually faces: do I direct my attention to a form I can love, or to a truth beyond all form? The chapter that follows is Krishna's answer. Traditions weigh that answer differently: Advaita readers tend to see worship of the personal form as a support on the way to formless realisation, while Vishishtadvaita and Dvaita readers hold personal devotion to be the highest path in itself.
+
+## Reflection
+
+Which comes easier to you — the divine with a face, or the truth beyond form?

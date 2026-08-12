@@ -7,6 +7,7 @@ tags: wisdom
 licence: original
 copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%B8%E0%A4%BE%E0%A4%99%E0%A5%8D%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+daily_pool: true
 review_status: draft
 reviewed_by: ""
 ---
@@ -37,3 +38,7 @@ reviewed_by: ""
 ## Meaning
 
 This is Krishna's first argument to Arjuna: the self that inhabits the body is not the body. Within one lifetime you already survive constant change — the child's body is gone, the youth's body is going — yet "you" persist through all of it. Death, the verse says, is one more such passage. For a daily practice, this is training in not panicking at change. Traditions read the "embodied one" differently — Advaita sees one Self appearing in many bodies, while Vishishtadvaita and Dvaita see many real individual souls — but all agree that the steady person is not thrown by the body's changes.
+
+## Reflection
+
+The body changes constantly — what in you has watched all of it change?

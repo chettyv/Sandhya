@@ -315,6 +315,11 @@ function validateShloka(frontmatter: Record<string, string | boolean>, body: str
       issues.push("tags must be a comma-separated list of lowercase-hyphenated words");
     }
   }
+  // Only curated, standalone-meaningful verses may enter the daily rotation.
+  // Verses that are fragments of longer sentences belong to the reader only.
+  if (frontmatter.daily_pool !== undefined && typeof frontmatter.daily_pool !== "boolean") {
+    issues.push("daily_pool must be true or false");
+  }
   return issues;
 }
 
