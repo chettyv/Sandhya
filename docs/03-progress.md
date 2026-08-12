@@ -212,3 +212,7 @@ Founder review note: the 30 files gained `daily_pool` flags and `## Reflection` 
 8. Remaining two §5 web drafts (Lakshmi puja at home, Hanuman Chalisa meaning — Chalisa text itself is PD, quote with Wikisource attribution).
 9. Scoped AI on the daily shloka (depth layer; reuse `ask` with a scoping param per plan §3).
 10. Monetisation stays parked (founder order) — store items remain in your-actions with the Play 14-day warning.
+
+### Cycle 14 — 12 Aug 2026 — Pool expansion: 40 more verses live — DONE
+
+Four writer batches (ch4, ch5, ch6, ch9/15/18 incl. the charama shloka with side-by-side tradition readings). Writers honestly excluded 5.16, 6.16, 18.63 from the daily pool (backreferencing verses). Two machine-IAST artifacts caught and fixed (4.39 candrabindu, 18.63 ZWNJ). **Approved under the founder blanket directive ("I approve everything") with reviewer name applied — founder should spot-check these 40 files.** Live bank: 80 verses, 69-verse daily pool. Next: Hindi parity for the new 40, Chalisa ITRANS converter, Upanishads.

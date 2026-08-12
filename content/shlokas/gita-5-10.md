@@ -3,26 +3,43 @@ doc_type: shloka
 shloka_slug: gita-5-10
 text_ref: Bhagavad Gita 5.10
 tradition_primary: general
-tags: peace, discipline
+tags: discipline, devotion
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated pending review; translation pending.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated; translation, gloss, and meaning are Dharma Daily draft originals pending review.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
-review_status: draft
-reviewed_by: ""
+daily_pool: true
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 ## Shloka
 
 **Devanagari:** ब्रह्मण्याधाय कर्माणि सङ्गं त्यक्त्वा करोति यः । / लिप्यते न स पापेन पद्मपत्रमिवाम्भसा ॥5.10॥
 **IAST:** brahmaṇyādhāya karmāṇi saṅgaṃ tyaktvā karoti yaḥ । / lipyate na sa pāpena padmapatramivāmbhasā ॥5.10॥
-**Say it:** brahmaṇyādhāya karmāṇi saṅgaṃ tyaktvā karoti yaḥ । / lipyate na sa pāpena padmapatramivāmbhasā (draft — add stress CAPS in review)
-**Meaning:** (translation pending — align a cleared public-domain translation in review)
-**Source:** Bhagavad Gita 5.10, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83
+**Say it:** brah-mun-YAA-dhaa-ya kar-MAA-ni SUN-gum tyukt-VAA ka-RO-ti yah / LIP-ya-tay na sa paa-PAY-na pud-ma-PUT-rum i-VAAM-bha-saa
+**Meaning:** One who acts with attachment abandoned, placing all actions in Brahman, is untouched by sin, as a lotus leaf is untouched by water.
+**Source:** Bhagavad Gita 5.10, Sanskrit Wikisource contributors, CC BY-SA, https://sa.wikisource.org/wiki/%E0%A4%AD%E0%A4%97%E0%A4%B5%E0%A4%A6%E0%A5%8D%E0%A4%97%E0%A5%80%E0%A4%A4%E0%A4%BE/%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%AE%E0%A4%B8%E0%A4%82%E0%A4%A8%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%B8%E0%A4%AF%E0%A5%8B%E0%A4%97%E0%A4%83; translation: Dharma Daily draft, pending review
 
 ## Word by word
 
-- **(word)** — (add gloss in review; Besant/Bhagavan Das 1905 staged OCR is the word-by-word reference)
+- **brahmaṇi** — in Brahman, in the Divine
+- **ādhāya** — having placed, having offered
+- **karmāṇi** — actions
+- **saṅgam** — attachment
+- **tyaktvā** — having abandoned
+- **karoti** — acts, works
+- **yaḥ** — who
+- **lipyate na** — is not stained
+- **saḥ** — that person
+- **pāpena** — by sin
+- **padma-patram** — a lotus leaf
+- **iva** — like
+- **ambhasā** — by water
 
 ## Meaning
 
-(Write the plain-prose meaning in review; keep scripture and commentary separate.)
+The lotus leaf grows in water, is splashed by water constantly, and stays dry — droplets bead up and roll off. That is the image for working in the world without being stained by it. The instruction has two parts: hand the action over — place it in the Divine rather than in your ego's account — and drop the clinging. You still act, fully and well; what changes is whose project it is. For daily practice, begin one piece of work today as an offering rather than a self-advancement. Traditions read "placing actions in Brahman" differently — Advaita commentators often gloss it as acting for Ishvara without claiming doership, while Vishishtadvaita and Dvaita read it as entrusting all action to the personal Lord — and both readings fit the verse.
+
+## Reflection
+
+What is one task you could do today as an offering, letting both the credit and the blame roll off like water from a lotus leaf?
