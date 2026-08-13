@@ -37,6 +37,23 @@ const TEXTS = [
     // (self-consistent), not against a hardcoded edition count.
     expect: null,
   },
+  {
+    slug: "shvetashvatara",
+    name: "Shvetashvatara Upanishad",
+    // Six adhyaya subpages; plain per-page verse markers; the shanti
+    // (saha navavatu) opens adhyaya 1.
+    pages: [
+      "श्वेताश्वतरोपनिषत्/प्रथमः अध्यायः",
+      "श्वेताश्वतरोपनिषत्/द्वितीयः अध्यायः",
+      "श्वेताश्वतरोपनिषत्/तृतीयः अध्यायः",
+      "श्वेताश्वतरोपनिषत्/चतुर्थः अध्यायः",
+      "श्वेताश्वतरोपनिषत्/पञ्चमः अध्यायः",
+      "श्वेताश्वतरोपनिषत्/षष्ठः अध्यायः",
+    ],
+    pageSections: ["1", "2", "3", "4", "5", "6"],
+    sectioned: false,
+    expect: null,
+  },
 ];
 
 const requested = process.argv.slice(2);
@@ -271,7 +288,14 @@ function parseSubpagedText(text, pages, units) {
           .map((block) =>
             block
               .split("\n")
-              .filter((line) => !/^\s*॥[^॥]*॥\s*$/.test(line) && line.trim() !== "ॐ")
+              // Drop section-title lines: fully danda-wrapped, or opening
+              // with ॥ (the closing danda was consumed by the block split).
+              .filter(
+                (line) =>
+                  !/^\s*॥[^॥]*॥\s*$/.test(line) &&
+                  !/^\s*॥/.test(line) &&
+                  line.trim() !== "ॐ",
+              )
               .join("\n")
               .trim(),
           )
