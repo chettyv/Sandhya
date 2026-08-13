@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import { dailyShlokaFrom, rotationSequence, type Shloka } from "./shlokas";
+import {
+  dailyPrayer,
+  dailyShlokaFrom,
+  prayerContextForHour,
+  rotationSequence,
+  type Shloka,
+} from "./shlokas";
 
 function verse(slug: string, tags: string[], dailyPool = true): Shloka {
   return {
@@ -101,5 +107,32 @@ describe("dailyShlokaFrom", () => {
 
   it("returns undefined on an empty bank", () => {
     expect(dailyShlokaFrom([], ["devotion"], "2026-10-11")).toBeUndefined();
+  });
+});
+
+describe("daily prayer segmentation", () => {
+  const prayers: Shloka[] = [
+    { ...verse("shanti-1", ["peace", "morning", "evening"], false) },
+    { ...verse("morning-1", ["gratitude", "morning"], false) },
+    { ...verse("verse-1", ["wisdom"]) },
+  ];
+
+  it("maps hours to the sandhya contexts", () => {
+    expect(prayerContextForHour(6)).toBe("morning");
+    expect(prayerContextForHour(14)).toBe("morning");
+    expect(prayerContextForHour(15)).toBe("evening");
+    expect(prayerContextForHour(20)).toBe("evening");
+    expect(prayerContextForHour(2)).toBe("evening");
+  });
+
+  it("picks only context-tagged units, deterministically per date", () => {
+    const morning = dailyPrayer("morning", "2026-10-11", prayers);
+    expect(["shanti-1", "morning-1"]).toContain(morning?.slug);
+    expect(dailyPrayer("morning", "2026-10-11", prayers)?.slug).toBe(morning?.slug);
+    expect(dailyPrayer("evening", "2026-10-11", prayers)?.slug).toBe("shanti-1");
+  });
+
+  it("hides entirely when no prayer-tagged content is live", () => {
+    expect(dailyPrayer("morning", "2026-10-11", [verse("v", ["wisdom"])])).toBeUndefined();
   });
 });

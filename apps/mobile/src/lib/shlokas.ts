@@ -119,6 +119,31 @@ export function dailyShlokaFrom(
   return sequence[dayOfYear % sequence.length];
 }
 
+// Daily prayer segmentation: units carrying the morning/evening context tags
+// (shanti mantras, recited prayers) surface by local time of day — the
+// sandhyā moments the app is named for. Deterministic per date so everyone
+// sees the same prayer on the same day; hidden entirely while no prayer-
+// tagged content is live in the bank.
+export type PrayerContext = "morning" | "evening";
+
+export function prayerContextForHour(hour: number): PrayerContext {
+  return hour >= 4 && hour < 15 ? "morning" : "evening";
+}
+
+export function dailyPrayer(
+  context: PrayerContext,
+  dateKey = localDateKey(),
+  bank: Shloka[] = shlokas,
+): Shloka | undefined {
+  const pool = bank.filter((entry) => entry.tags.includes(context));
+  if (pool.length === 0) return undefined;
+  const [year = 0, month = 1, day = 1] = dateKey.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const startOfYear = new Date(year, 0, 1);
+  const dayOfYear = Math.floor((date.getTime() - startOfYear.getTime()) / 86_400_000);
+  return pool[dayOfYear % pool.length];
+}
+
 // The reordered daily pool: every curated verse exactly once, with
 // tag-matching verses distributed evenly through the sequence (proportional
 // merge), so any join date lands in a preference-flavoured rotation.
