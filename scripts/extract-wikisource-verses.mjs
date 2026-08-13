@@ -54,6 +54,26 @@ const TEXTS = [
     sectioned: false,
     expect: null,
   },
+  {
+    slug: "prashna",
+    name: "Prashna Upanishad",
+    // BLOCKED at the source: the Wikisource transcription of the third
+    // prashna omits the ॥४॥ marker (sections 4–5 run together), so the
+    // drift guard refuses the whole text. Needs the source fixed upstream
+    // or a hand-verified boundary from a printed edition before extraction.
+    // Six prashna (question) subpages; prose sections with plain markers.
+    pages: [
+      "प्रश्नोपनिषत्/प्रथमः प्रश्नः",
+      "प्रश्नोपनिषत्/द्वितीयः प्रश्नः",
+      "प्रश्नोपनिषत्/तृतीयः प्रश्नः",
+      "प्रश्नोपनिषत्/चतुर्थः प्रश्नः",
+      "प्रश्नोपनिषत्/पञ्चमः प्रश्नः",
+      "प्रश्नोपनिषत्/षष्ठः प्रश्नः",
+    ],
+    pageSections: ["1", "2", "3", "4", "5", "6"],
+    sectioned: false,
+    expect: null,
+  },
 ];
 
 const requested = process.argv.slice(2);
