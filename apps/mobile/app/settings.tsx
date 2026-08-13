@@ -138,7 +138,7 @@ export default function SettingsScreen() {
       );
       return;
     }
-    void Linking.openURL(`mailto:${supportEmail}?subject=Dharma%20Daily%20support`).catch(() =>
+    void Linking.openURL(`mailto:${supportEmail}?subject=Sandhya%20support`).catch(() =>
       Alert.alert("Support", `Please email ${supportEmail} for help.`),
     );
   };
