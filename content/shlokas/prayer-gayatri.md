@@ -8,8 +8,8 @@ licence: original
 copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST checked in content pass; translation, gloss, and meaning are Sandhya draft originals.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%8B%E0%A4%97%E0%A5%8D%E0%A4%B5%E0%A5%87%E0%A4%A6%E0%A4%83_%E0%A4%B8%E0%A5%82%E0%A4%95%E0%A5%8D%E0%A4%A4%E0%A4%82_%E0%A5%A9.%E0%A5%AC%E0%A5%A8
 daily_pool: true
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 ## Shloka
