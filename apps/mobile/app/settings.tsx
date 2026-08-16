@@ -6,6 +6,7 @@ import { Card, ListRow, Page } from "@/components/ui";
 import { deleteAccount, exportAccountData, updateProfile } from "@/lib/account";
 import { useAuthState } from "@/lib/authState";
 import { configureDailyReminder } from "@/lib/notifications";
+import { householdPracticeOptions, tagsForPractices, togglePractice } from "@/lib/practices";
 import { availableContentLanguages } from "@/lib/shlokas";
 import { getTelemetryConsent, setTelemetryConsent } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
@@ -18,6 +19,9 @@ export default function SettingsScreen() {
   const setReminder = useAppStore((state) => state.setReminder);
   const storedTradition = useAppStore((state) => state.traditionPreference);
   const setTraditionPreference = useAppStore((state) => state.setTraditionPreference);
+  const householdPractices = useAppStore((state) => state.householdPractices);
+  const setHouseholdPractices = useAppStore((state) => state.setHouseholdPractices);
+  const setFocusTags = useAppStore((state) => state.setFocusTags);
   const [tradition, setTradition] = useState(
     storedTradition === "general" ? "All traditions" : storedTradition,
   );
@@ -134,7 +138,7 @@ export default function SettingsScreen() {
       );
       return;
     }
-    void Linking.openURL(`mailto:${supportEmail}?subject=Dharma%20Daily%20support`).catch(() =>
+    void Linking.openURL(`mailto:${supportEmail}?subject=Sandhya%20support`).catch(() =>
       Alert.alert("Support", `Please email ${supportEmail} for help.`),
     );
   };
@@ -180,11 +184,42 @@ export default function SettingsScreen() {
       </Card>
 
       <Text className="mb-2 mt-7 text-sm font-semibold uppercase tracking-wider text-muted">
+        What you do at home
+      </Text>
+      <Text className="mb-3 text-sm leading-5 text-muted">
+        The onboarding question, changeable any time. It shapes which verse leads your daily
+        rotation — the whole library stays open either way.
+      </Text>
+      <View className="flex-row flex-wrap gap-2">
+        {householdPracticeOptions.map((option) => {
+          const selected = householdPractices.includes(option.key);
+          return (
+            <Pressable
+              key={option.key}
+              accessibilityRole="button"
+              accessibilityState={{ selected }}
+              onPress={() => {
+                const next = togglePractice(householdPractices, option.key);
+                setHouseholdPractices(next);
+                setFocusTags(tagsForPractices(next));
+                savePreference({ household_practices: next });
+              }}
+              className={`rounded-full px-4 py-2.5 ${selected ? "bg-saffron" : "border border-[#302C25] bg-surface"}`}
+            >
+              <Text className={`text-sm font-semibold ${selected ? "text-black" : "text-muted"}`}>
+                {option.label}
+              </Text>
+            </Pressable>
+          );
+        })}
+      </View>
+
+      <Text className="mb-2 mt-7 text-sm font-semibold uppercase tracking-wider text-muted">
         Tradition preference
       </Text>
       <Text className="mb-3 text-sm leading-5 text-muted">
-        This filters and contextualises content; it never hides the existence of other
-        interpretations.
+        This orders and contextualises content — your tradition&apos;s reading leads, and other
+        readings stay visible and labelled. It never hides them.
       </Text>
       <View className="flex-row flex-wrap gap-2">
         {traditions.map((item) => (

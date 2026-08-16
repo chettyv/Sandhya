@@ -12,7 +12,8 @@ Mission-critical first: accounts and keys only you can create, in the order they
   - Project URL → `EXPO_PUBLIC_SUPABASE_URL` (Settings → API → Project URL)
   - anon public key → `EXPO_PUBLIC_SUPABASE_ANON_KEY` (Settings → API → anon key)
   - service_role key → `SUPABASE_SERVICE_ROLE_KEY` (same page — server-side only, never ships in the app)
-- **THEN:** tell me "apply migrations" — I run all 72 against it (your explicit approval is required by repo rules). Without this the app still runs fully offline on the bundled 80 verses; with it you get accounts, sync, and Ask.
+- **THEN:** tell me "apply migrations" — I run all of them against it (your explicit approval is required by repo rules). Without this the app still runs fully offline on the bundled verse bank; with it you get accounts, sync, and challenge unlock.
+- **STATUS 12 Aug (Stream B):** `.env` already carries Supabase-looking values (project ref, URL, service key, DB password) — if that project is real and yours, the words "apply migrations" are all that's left of this item. The six production-build keys (`EXPO_PUBLIC_EAS_PROJECT_ID`, both RevenueCat keys, support email, privacy/terms URLs) are appended to the bottom of `.env` as empty PASTE-HERE lines; dev/preview builds run without them.
 - **ADDED:** 2026-08-12
 
 ### 2 · Expo account + EAS project (~10 min) — unblocks phone builds beyond Expo Go

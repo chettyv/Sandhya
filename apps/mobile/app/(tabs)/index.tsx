@@ -13,7 +13,7 @@ import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
 import { paymentsEnabled } from "@/lib/payments";
-import { dailyShloka, shlokaTranslation } from "@/lib/shlokas";
+import { dailyPrayer, dailyShloka, prayerContextForHour, shlokaTranslation } from "@/lib/shlokas";
 import { useSubscription } from "@/lib/subscriptions";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
@@ -182,6 +182,7 @@ export default function HomeScreen() {
 
       <FeaturedChallengeCard />
 
+      <DailyPrayerCard />
       <DailyShlokaCard />
 
       <LinearGradient
@@ -337,6 +338,40 @@ export default function HomeScreen() {
         ))}
       </View>
     </Page>
+  );
+}
+
+// The sandhya moments the app is named for: a recited prayer for the time of
+// day, drawn from morning/evening-tagged units. Renders nothing until
+// prayer-tagged content is live in the bank.
+function DailyPrayerCard() {
+  const router = useRouter();
+  const prayerContext = prayerContextForHour(new Date().getHours());
+  const prayer = dailyPrayer(prayerContext);
+  if (!prayer) return null;
+  return (
+    <Pressable
+      accessibilityRole="button"
+      accessibilityLabel={`${prayerContext === "morning" ? "Morning" : "Evening"} prayer: ${prayer.textRef}`}
+      onPress={() => {
+        track("daily_prayer_opened", { slug: prayer.slug, context: prayerContext });
+        router.push({ pathname: "/shloka/[slug]", params: { slug: prayer.slug } });
+      }}
+      className="mb-2 rounded-card border border-[#302C25] bg-surface p-4"
+    >
+      <View className="flex-row items-center justify-between">
+        <Text className="text-[11px] font-semibold uppercase text-saffron">
+          {prayerContext === "morning" ? "Morning" : "Evening"} prayer · {prayer.textRef}
+        </Text>
+        <Ionicons name="chevron-forward" size={16} color={colors.muted} />
+      </View>
+      <Text className="mt-2 text-[17px] leading-8 text-ink" numberOfLines={2}>
+        {prayer.devanagari}
+      </Text>
+      <Text className="mt-1 text-sm leading-5 text-muted" numberOfLines={2}>
+        {prayer.sayIt}
+      </Text>
+    </Pressable>
   );
 }
 

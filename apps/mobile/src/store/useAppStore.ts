@@ -15,6 +15,7 @@ type AppState = {
   reminderTime: string;
   traditionPreference: string;
   focusTags: string[];
+  householdPractices: string[];
   contentLanguage: string;
   hasCompletedOnboarding: boolean;
   hydrated: boolean;
@@ -25,6 +26,7 @@ type AppState = {
   setReminder: (enabled: boolean, time?: string) => void;
   setTraditionPreference: (tradition: string) => void;
   setFocusTags: (tags: string[]) => void;
+  setHouseholdPractices: (practices: string[]) => void;
   setContentLanguage: (language: string) => void;
   setDisplayName: (name: string) => void;
   setSavedIds: (ids: string[]) => void;
@@ -57,6 +59,7 @@ export const useAppStore = create<AppState>()(
       reminderTime: "08:00",
       traditionPreference: "All traditions",
       focusTags: [],
+      householdPractices: [],
       contentLanguage: "en",
       hasCompletedOnboarding: false,
       hydrated: false,
@@ -94,6 +97,7 @@ export const useAppStore = create<AppState>()(
         set((state) => ({ reminderEnabled: enabled, reminderTime: time ?? state.reminderTime })),
       setTraditionPreference: (traditionPreference) => set({ traditionPreference }),
       setFocusTags: (focusTags) => set({ focusTags }),
+      setHouseholdPractices: (householdPractices) => set({ householdPractices }),
       setContentLanguage: (contentLanguage) => set({ contentLanguage }),
       setDisplayName: (displayName) => set({ displayName }),
       setSavedIds: (savedIds) =>
@@ -124,6 +128,7 @@ export const useAppStore = create<AppState>()(
           displayName: "Friend",
           traditionPreference: "All traditions",
           focusTags: [],
+          householdPractices: [],
           reminderEnabled: false,
           reminderTime: "08:00",
         }),

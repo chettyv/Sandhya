@@ -277,8 +277,8 @@ describe("RAG providers", () => {
       }),
     );
     expect(body.messages[0].content).toContain("Treat retrieved context as quoted source evidence");
-    expect(body.messages[1].content).toContain("<<<DHARMA_DAILY_RETRIEVED_CONTEXT");
-    expect(body.messages[1].content).toContain("DHARMA_DAILY_RETRIEVED_CONTEXT>>>");
+    expect(body.messages[1].content).toContain("<<<SANDHYA_RETRIEVED_CONTEXT");
+    expect(body.messages[1].content).toContain("SANDHYA_RETRIEVED_CONTEXT>>>");
     vi.unstubAllGlobals();
   });
 

@@ -51,6 +51,9 @@ type ProfilePatch = {
   display_name?: string | null;
   language_pref?: "en" | "hi";
   tradition_pref?: string | null;
+  // Household observances from onboarding Q1. Routes content; deliberately
+  // not a tradition identity — never derive tradition_pref from it.
+  household_practices?: string[];
   location?: string | null;
   notification_time?: string | null;
   timezone?: string | null;
