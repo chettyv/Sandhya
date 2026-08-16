@@ -4,55 +4,44 @@ Source corpus, added as Markdown files following the authoritative schema in
 `docs/sandhya_build_reference.docx` and the rights policy summarized in
 `CURRENT_SUMMARY.md`.
 
-## Expected layout (added in Phase 2/3)
+## Current layout
 
 ```
 content/
-├── bhagavad-gita/
-│   ├── chapter-1.md
-│   ├── chapter-2.md
-│   └── ...
-├── upanishads/
-│   ├── isha.md
-│   └── ...
-├── concepts/
-│   ├── dharma.md
-│   └── ...
-├── festivals/
-│   ├── diwali.md
-│   └── ...
-├── practice-guides/
-│   ├── morning-puja.md
-│   └── ...
-└── daily-reflections/
-    ├── 001.md
-    └── ...
+├── shlokas/                 # shloka and prayer Markdown, validated by content-tools
+├── challenges/              # frozen challenge_session documents
+├── web/                     # reviewed arrival-site web_page documents
+├── original/                # canonical RAG source Markdown
+└── _staging/                # raw and prepared material; never publish directly
 ```
 
 ## File format
 
-Each file is YAML frontmatter + Markdown body:
+Canonical documents are YAML frontmatter plus Markdown body. Shloka files use the
+schema and house style in [`shlokas/_template.md`](shlokas/_template.md); challenge
+sessions use [`challenges/README.md`](challenges/README.md). A representative shloka
+frontmatter block is:
 
 ```markdown
 ---
-text_slug: bhagavad_gita
-text_title: Bhagavad Gita
-section: Chapter 2
-translator: Edwin Arnold
-licence: public_domain
-copyright_status: Public domain edition; verify deployment jurisdiction.
-source_url: https://archive.org/details/...
+doc_type: shloka
+shloka_slug: gita-2-47
+text_ref: Bhagavad Gita 2.47
 tradition_primary: general
-can_store: true
-can_show_excerpts: true
-can_embed: true
+tags: duty, discipline
+licence: original
+copyright_status: Verse text and provenance details
+source_url: https://sa.wikisource.org/...
+review_status: draft
+reviewed_by: ""
 ---
 
-## 2.47
+## Shloka
 
-**Sanskrit:** ...
-**Transliteration:** ...
-**Translation:** ...
+**Devanagari:** ...
+**IAST:** ...
+**Say it:** ...
+**Meaning:** ...
 ```
 
 Licensing fields are mandatory on every file. The validator (`pnpm content:validate`) refuses to pass files without them; use `pnpm content:stats` for a rights summary. Raw and staged files under `content/_staging/` are not canonical Markdown and must go through the RAG preparation/audit flow first.
@@ -65,11 +54,6 @@ and removes Markdown formatting before chunking. Keep unreviewed downloads in
 The controlled pipeline commands are:
 
 ```bash
-pnpm content validate content
-pnpm content stats content
-pnpm content ingest --dry-run
-pnpm content ingest       # requires Supabase service-role + embedding credentials
-pnpm content reembed      # deliberate full re-embed; requires explicit operational approval
 pnpm content:validate
 pnpm content:stats
 pnpm rag:prepare
@@ -79,7 +63,6 @@ pnpm rag:prepare:canonical
 pnpm rag:audit:canonical
 pnpm rag:ingest:canonical:dry-run
 pnpm content:ingest       # requires Supabase service-role + embedding credentials
-pnpm content:ingest:canonical # first-party canonical corpus only
 pnpm content:reembed      # deliberate full re-embed; requires explicit operational approval
 ```
 

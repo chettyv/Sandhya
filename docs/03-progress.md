@@ -1,7 +1,25 @@
 # Sandhya — Build Progress Log
 
 **Started:** 12 August 2026. Maintained by the build agent; updated at the end of every work cycle.
-Inputs: `01-review.md` (repo root), `02-plan.md` v2 (repo root), `CURRENT_SUMMARY.md`, and a direct survey of the code on 12 Aug 2026.
+Inputs: `01-review.md` (repo root), `02-plan.md` v3 (repo root), `CURRENT_SUMMARY.md`, and direct verification of the code and Git state on 16 Aug 2026.
+
+## CURRENT STATE — 16 AUGUST 2026
+
+This dated block is the source of truth for the present handoff. The cycle notes below are historical records and retain the numbers and decisions that were true when each cycle closed.
+
+### Done and verified
+
+- `main` and `origin/main` are both at `460247e` (`content: complete Katha pass and language layers`). The verified draft content batch and the generated 259-entry shloka bank are committed and pushed.
+- All 11 duplicate topic branches were archived as pushed tags under `archive/2026-08-16/*` and deleted locally and remotely. There are no open PRs, no additional worktrees, and no stashes.
+- `pnpm typecheck`, `pnpm test`, `pnpm backend:check`, `pnpm content:validate`, `pnpm content:generate-shloka-bank -- --check`, and `git diff --check` pass. Tests currently total 170 across the workspaces; lint has two non-blocking import-order warnings in extraction scripts and no errors.
+- Content validation covers 1,121 Markdown files. The approved bank contains 259 units and 156 daily-pool units. Katha (121) and Shvetashvatara (114) are complete draft corpora but remain excluded until review.
+
+### Partial, blocked, or intentionally parked
+
+- The product is still a free, offline-capable launch. Supabase production setup, migration application, EAS/device builds, real telemetry, and store submission are founder-controlled external work in `docs/00-your-actions.md`.
+- Scoped AI on the daily verse and audio are not built. Navratri challenge payments, the arrival site, and purchase testing remain deliberately parked behind the free-launch/re-audit gates.
+- The 620 non-live Gita files, all Katha files, and all Shvetashvatara files remain drafts. The remaining content review, rights checks, and language expansion are editorial work, not generated-bank failures.
+- The user-visible rename sweep is clean in `apps/`, `packages/`, `supabase/`, `scripts/`, and generated artifacts. Historical competitor-analysis references to the old name remain intentional documentation, not product strings.
 
 ---
 
@@ -309,3 +327,33 @@ Founder: keep going on everything; don't worry about permissions (ledger instead
 - **Shvetashvatara Upanishad extracted** (113 verses + shanti, per-adhyaya counts match the canonical edition; 6.23 spot-checked) after teaching the parser to drop danda-wrapped section-title remnants — the per-page drift guard caught the leak. **Prashna is BLOCKED at the source**: Wikisource's third-prashna transcription omits the ॥४॥ marker (sections 4–5 run together); config carries the note; needs an upstream fix or a hand-verified boundary.
 - **Extraction queue next:** Taittiriya/Aitareya (structure survey), stotra ITX conversions (Bhaja Govindam, Aditya Hridayam — ledger row 1 terms), content passes for Shvetashvatara, language scale-out beyond the launch 30.
 - **Source survey results (13 Aug):** Taittiriya's dedicated Wikisource valli pages interleave Śaṅkara bhāṣya with the mūla (Brahmānanda valli: 50k chars for 9 anuvākas — sampled, unmistakably commentary) — same defect class as the old Gita dump; unusable without commentary-separation risk. The 108-Upanishad composite page (`ईशादिविंशोत्तरशतोपनिषदः/उपनिषद‌-०१-१०`) has clean-looking Aitareya mūla but is visibly unproofread — transcriber notes like "? where are 5 anuvaks?" sit in the Taittiriya section and a "devi upanishad ?" heading — below the scripture bar. **Clean path for Taittiriya/Aitareya/Prashna + stotras: the sanskritdocuments ITX files** (professionally maintained; free-launch usable with attribution under the founder directive and the Chalisa precedent; commercial ask tracked as ledger row 1; ITRANS converter already built). Also spotted en route: two more shanti mantras worth prayer units once their texts land — śaṁ no mitraḥ (Taittiriya Shiksha) and vāṅ me manasi (Aitareya).
+
+---
+
+## HANDOFF SUMMARY — 16 AUGUST 2026
+
+### Merged into `main`
+
+- Committed and pushed `460247e`, containing the existing 122-file Gita/Katha content pass and language-layer work plus the regenerated `apps/mobile/src/data/shlokaBank.json`.
+- Updated `CURRENT_SUMMARY.md` and this progress log to match the verified current state. No feature work, dependency upgrade, refactor, or history rewrite was performed.
+
+### Closed, archived, or deleted
+
+- The only PR found was PR #1, already merged. No open PRs remained to close.
+- The duplicate branches `Frontend`, `RAG_Pipeline`, `Source_Collection`, `approve-upanishad-wave`, `b4-onboarding-q1-routing`, `b5-night-session-mechanics`, `katha-and-corpus-tools`, `phase-0.5-correctness-fixes`, `preserve/2026-08-12-full-state`, `upanishad-wave-2`, and `wave-3-katha-languages` were all 0 commits ahead of `main`. Each was tagged and pushed under `archive/2026-08-16/` before local and remote deletion.
+
+### Branches still standing
+
+- Only `main` remains locally and on `origin`; there is no unresolved branch or PR. Final verification after this handoff commit must report a clean working tree.
+
+### Judgement calls
+
+- Treated the 122 unstaged content files as a completed draft wave because all files had real glosses, meanings, pronunciation, and reflections, `content:validate` passed for 1,121 files, the generated bank was reproducible, and the root/backend checks passed. Draft status was preserved; no editorial approval was invented.
+- Kept historical references in `02-plan.md`, `docs/05-competitors.md`, and old cycle entries. They describe evidence or past states, not user-visible product copy. Current docs now state which numbers are historical.
+- Archived duplicate branches instead of leaving them as apparent active work. Tags make every deletion recoverable without rewriting shared history.
+
+### Open loops for a human
+
+- Provide or confirm the Supabase/EAS/store credentials before applying migrations or producing native builds; do not use the local `.env` values without confirmation.
+- Review and approve the draft Katha and Shvetashvatara corpora before promoting them into the bundled bank; complete the remaining Gita editorial waves and rights review.
+- Decide when to fund audio and scoped daily-verse AI, and keep Navratri payments/arrival work parked until the free-launch and commercial-rights gates are intentionally reopened.

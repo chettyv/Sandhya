@@ -1,14 +1,14 @@
 # Content-pass runbook — how to draft, approve, and ship verse content
 
-Turnkey instructions for any agent/session. This is the exact process that produced the live Gita/Chalisa/Isha content. Nothing here requires conversation history.
+Turnkey instructions for any agent/session. This is the exact process that produced the approved Gita, Chalisa, Isha, Kena, Mundaka, Mandukya, and prayer content. Nothing here requires conversation history.
 
-## PENDING RIGHT NOW: three interrupted writer passes
+## Current queue — 16 August 2026
 
-Killed by the session usage limit before writing anything (skeletons intact, committed). Relaunch three parallel writer agents with the prompt template below and these targets:
+The Kena, Mundaka, and Mandukya passes described in the original 12 August handoff are complete and approved on `main`. The next content work is draft-only until a named reviewer approves it:
 
-1. **Kena Upanishad** — `content/shlokas/kena-shanti.md` + all `kena-*-*.md` (36 files). Text notes for step 7: khandas 1–2 are the "that which the mind cannot think" teaching (2.3's paradox "to whom it is not known, to him it is known" is the landmark); khandas 3–4 are the Uma–Indra story — narrative, keep scripture-vs-story framing clear; story verses mostly don't stand alone.
-2. **Mundaka 1–2** — `mundaka-shanti.md` + all `mundaka-1-*-*.md` and `mundaka-2-*-*.md` (~33 files). Landmarks: para/apara vidya (1.1.4–5), spark-from-fire (2.1.1). Much of Mundaka is sequential argument — pool sparingly.
-3. **Mundaka 3 + Mandukya** — all `mundaka-3-*-*.md` (~21) + `mandukya-shanti.md` + `mandukya-1..12.md` (13). Landmarks: **3.1.1 two birds** (most contested image between Advaita and theistic schools — one self appearing as two vs jiva and Ishvara as two real entities), **3.1.6 satyameva jayate** (India's national motto — say so). Mandukya is one continuous four-states analysis of ॐ (7 is the turiya verse); most verses stay out of the pool.
+1. **Katha Upanishad** — review the 121-file draft pass now on `main`; do not mark it approved without the required source and content review.
+2. **Shvetashvatara Upanishad** — complete and review the 114-file draft corpus; retain the tradition notes and source-artifact comments.
+3. **Remaining Gita waves and language layers** — work in small, reviewable batches across the 620 draft skeletons; regenerate the bank only after validation.
 
 ## The writer-prompt template
 

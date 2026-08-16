@@ -32,7 +32,7 @@ Throughout: **[SCREENSHOT]** = observed in the images · **[RESEARCH]** = extern
 
 # 1. WHAT WE HAVE
 
-Ground truth from the codebase at HEAD `cec2c94`, not from `CURRENT_SUMMARY.md`.
+This is a dated product snapshot from code at HEAD `cec2c94` (12 August 2026), not a current status report. Use [`CURRENT_SUMMARY.md`](../CURRENT_SUMMARY.md) and [`docs/03-progress.md`](03-progress.md) for the verified 16 August state; the figures below intentionally remain evidence from the competitive review point-in-time.
 
 ## 1.1 Built and working today
 
