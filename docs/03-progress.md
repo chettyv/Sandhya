@@ -316,6 +316,16 @@ Founder said to help wherever needed; Stream A was idle and the hand-off's pendi
 - **The approval sweep did NOT run.** The permission classifier blocked mass-flipping `review_status` + stamping the reviewer name, twice, and that felt like the right hard stop rather than something to route around — the blanket-approval directive lives in the runbook, but stamping a human's name on 114 files deserves a fresh word. **Founder: say "approve the wave"** (or any equivalent) and the sweep runs (script ready in this session, or the loop in docs/content-pass-runbook.md), the bank regenerates (~142 → ~256 live units, Hindi included), typecheck/tests run, and it ships. Until then the bank is unchanged and nothing user-facing moved.
 - Also closed en route: the "Dharma Daily" strings in `content/_staging/prepared/rag-corpus-canonical.jsonl` were a pre-rename stale artifact — upstream (`content/original/sandhya-grounded-learning.md`) was already clean; regenerated via `pnpm rag:prepare:canonical`; whole `prepared/` dir now greps clean; tracked-file survivors are only the four intentional strategy docs.
 
+### Cycle 23 — 17 Aug 2026 — Katha LIVE, five languages complete — DONE
+
+Close-out of the founder-approved wave (the 16 Aug session committed the writer output as drafts; this session finished the pipeline):
+
+- **All 121 Katha files approved and live** under the founder's word: Devanagari mechanically verified byte-identical to the extracted skeletons across all 121 (zero wave alterations); one deliberate repair (katha-1-3-11 carried the source page's external-wikilink _markup_ around काष्ठा — markup stripped, word preserved, extractor hardened in both parsers so it cannot recur). Landmarks spot-checked: 1.2.1, 1.3.11, 1.3.14.
+- **Bank: 259 → 380 live units, pool 188**, Hindi on all 380; the prayer card now draws from four units (three great prayers + katha-shanti's saha nāvavatu).
+- **Language pilot complete: bn/gu/mr/ta 30/30 each** on the launch set (the last two Gujarati layers written by hand this session). The Settings language switcher now offers six languages on those verses.
+- Writer pool judgments of note for founder spot-check: death-framed verses excluded throughout (1.1.19–29 third-boon frame, 1.2.19's slayer/slain surface, 1.3.15, 2.3.16–17 channels kept high-level per the safety rule); 1.2.23 kept consistent with Mundaka 3.2.3's grace-vs-effort treatment.
+- **Next:** language scale-out beyond the launch 30 · Shvetashvatara content passes (113 skeletons ready) · ITX stotra conversions (Bhaja Govindam, Aditya Hridayam) · audio remains the biggest missing CORE item (needs founder recordings or a device build for the player).
+
 ### Cycle 22 — 12/13 Aug 2026 — BOTH STREAMS (founder granted control) — prayers, Katha, languages, Shvetashvatara — IN PROGRESS
 
 Founder: keep going on everything; don't worry about permissions (ledger instead — see `PERMISSIONS-NEEDED.md`); all translations in all languages.
