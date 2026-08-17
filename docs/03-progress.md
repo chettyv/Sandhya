@@ -3,16 +3,17 @@
 **Started:** 12 August 2026. Maintained by the build agent; updated at the end of every work cycle.
 Inputs: `01-review.md` (repo root), `02-plan.md` v3 (repo root), `CURRENT_SUMMARY.md`, and direct verification of the code and Git state on 16 Aug 2026.
 
-## CURRENT STATE — 16 AUGUST 2026
+## CURRENT STATE — 17 AUGUST 2026
 
 This dated block is the source of truth for the present handoff. The cycle notes below are historical records and retain the numbers and decisions that were true when each cycle closed.
 
 ### Done and verified
 
-- `main` and `origin/main` are both at `460247e` (`content: complete Katha pass and language layers`). The verified draft content batch and the generated 259-entry shloka bank are committed and pushed.
+- `main` and `origin/main` are current through the Katha go-live (cycle 23). CI green.
+- **The approved bank contains 380 units and a 188-verse daily pool** — Gita launch set, Chalisa, Isha, Kena, Katha, Mundaka, Mandukya, and the three great daily prayers — Hindi on all 380, and Bengali/Gujarati/Marathi/Tamil complete on the 30-verse launch set. Katha was approved under the founder's explicit in-session word (17 Aug) with Devanagari mechanically verified against the extracted skeletons.
 - All 11 duplicate topic branches were archived as pushed tags under `archive/2026-08-16/*` and deleted locally and remotely. There are no open PRs, no additional worktrees, and no stashes.
-- `pnpm typecheck`, `pnpm test`, `pnpm backend:check`, `pnpm content:validate`, `pnpm content:generate-shloka-bank -- --check`, and `git diff --check` pass. Tests currently total 170 across the workspaces; lint has two non-blocking import-order warnings in extraction scripts and no errors.
-- Content validation covers 1,121 Markdown files. The approved bank contains 259 units and 156 daily-pool units. Katha (121) and Shvetashvatara (114) are complete draft corpora but remain excluded until review.
+- `pnpm typecheck`, `pnpm test`, `pnpm backend:check`, `pnpm content:validate`, `pnpm content:generate-shloka-bank -- --check`, and `git diff --check` pass; lint has non-blocking import-order warnings in extraction scripts and no errors.
+- Content validation covers 1,121 Markdown files. **Shvetashvatara (114) remains a skeleton corpus awaiting its content-pass wave**; the 620 non-launch Gita files remain drafts.
 
 ### Partial, blocked, or intentionally parked
 
