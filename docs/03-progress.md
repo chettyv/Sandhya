@@ -10,10 +10,10 @@ This dated block is the source of truth for the present handoff. The cycle notes
 ### Done and verified
 
 - `main` and `origin/main` are current through the Katha go-live (cycle 23). CI green.
-- **The approved bank contains 380 units and a 188-verse daily pool** — Gita launch set, Chalisa, Isha, Kena, Katha, Mundaka, Mandukya, and the three great daily prayers — Hindi on all 380, and Bengali/Gujarati/Marathi/Tamil complete on the 30-verse launch set. Katha was approved under the founder's explicit in-session word (17 Aug) with Devanagari mechanically verified against the extracted skeletons.
+- **The approved bank contains 494 units, a 214-verse daily pool, and a nine-prayer sandhyā rotation** — six principal Upanishads live in full (Isha, Kena, Katha, Mundaka, Mandukya, Shvetashvatara), the Gita launch set, Chalisa, and the three great daily prayers — Hindi on all 494, Bengali/Gujarati/Marathi/Tamil complete on the 30-verse launch set. Katha and Shvetashvatara were approved under the founder's explicit in-session word (17 Aug) with Devanagari mechanically verified byte-identical against the extracted skeletons in both waves (one documented markup repair in katha-1-3-11).
 - All 11 duplicate topic branches were archived as pushed tags under `archive/2026-08-16/*` and deleted locally and remotely. There are no open PRs, no additional worktrees, and no stashes.
 - `pnpm typecheck`, `pnpm test`, `pnpm backend:check`, `pnpm content:validate`, `pnpm content:generate-shloka-bank -- --check`, and `git diff --check` pass; lint has non-blocking import-order warnings in extraction scripts and no errors.
-- Content validation covers 1,121 Markdown files. **Shvetashvatara (114) remains a skeleton corpus awaiting its content-pass wave**; the 620 non-launch Gita files remain drafts.
+- Content validation covers 1,121 Markdown files. **The 620 non-launch Gita files remain drafts** (rolling content-pass waves are the next corpus work), followed by language scale-out beyond the launch 30 and the ITX stotra conversions. Taittiriya/Aitareya/Prashna stay blocked on source quality (see cycle 22 survey); audio remains the biggest missing CORE item.
 
 ### Partial, blocked, or intentionally parked
 
