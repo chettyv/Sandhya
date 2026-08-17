@@ -130,6 +130,7 @@ for (const text of texts) {
       .replace(/<[^>]+>/g, "\n")
       .replace(/\{\{[^}]*\}\}|\{[^}]*\}|\[\[[^\]]*\]\]/g, "\n")
       .replace(/^[|!#*=:].*$/gm, "")
+      .replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, "$1")
       .replaceAll("।।", "॥");
     const parts = clean.split(/॥\s*([०-९0-9]+(?:\.[०-९0-9]+){0,2})\s*॥/);
     let section = 1;
@@ -288,6 +289,7 @@ function parseSubpagedText(text, pages, units) {
       .replace(/<[^>]+>/g, "\n")
       .replace(/\{\{[^}]*\}\}|\{[^}]*\}|\[\[[^\]]*\]\]/g, "\n")
       .replace(/^[|!#*=:].*$/gm, "")
+      .replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, "$1")
       .replaceAll("।।", "॥");
     // Closing danda after the number is optional: these pages mix "॥ ३ ॥"
     // with bare "॥ ३" at line end.

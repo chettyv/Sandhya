@@ -5,17 +5,17 @@ text_ref: Katha Upanishad 1.3.11
 tradition_primary: general
 tags: wisdom, clarity
 licence: original
-copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST machine-transliterated pending review; translation pending.
+copyright_status: Verse text copied from Sanskrit Wikisource (CC BY-SA transcription of a public-domain text); IAST checked in content pass; translation, gloss, and meaning are Sandhya draft originals.
 source_url: https://sa.wikisource.org/wiki/%E0%A4%95%E0%A4%A0%E0%A5%8B%E0%A4%AA%E0%A4%A8%E0%A4%BF%E0%A4%B7%E0%A4%A4%E0%A5%8D%2F%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A5%E0%A4%AE%E0%A5%8B%E0%A4%A7%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AF%E0%A4%83%2F%E0%A4%A4%E0%A5%83%E0%A4%A4%E0%A5%80%E0%A4%AF%E0%A4%B5%E0%A4%B2%E0%A5%8D%E0%A4%B2%E0%A5%80
-review_status: draft
-reviewed_by: ""
+review_status: approved
+reviewed_by: Vaibhav Chetty
 ---
 
 ## Shloka
 
-**Devanagari:** महतः परमव्यक्तमव्यक्तात्पुरुषः परः । / पुरुषान्न परं किंचित्सा [https://sa.wikisource.org/s/3gst काष्ठा] सा परा गतिः ॥1.3.11॥
+**Devanagari:** महतः परमव्यक्तमव्यक्तात्पुरुषः परः । / पुरुषान्न परं किंचित्सा काष्ठा सा परा गतिः ॥1.3.11॥
 
-<!-- review note: EXTRACTION ARTIFACT — the bracketed "[https://sa.wikisource.org/s/3gst काष्ठा]" is a Wikisource wikilink that leaked into the extracted text; the word itself is काष्ठा. Printed editions read simply "पुरुषान्न परं किंचित्सा काष्ठा सा परा गतिः". Devanagari left unaltered per policy — reviewer should strip the link markup. The URL has been removed from the IAST line as an obvious machine artifact. -->
+<!-- review note: the source page wraps the word काष्ठा in an external wikilink ("[https://sa.wikisource.org/s/3gst काष्ठा]"); the wiki MARKUP has been stripped here while the word itself is preserved exactly as at the source — printed editions read the same "पुरुषान्न परं किंचित्सा काष्ठा सा परा गतिः". The extractor now strips external-link syntax so this cannot recur. -->
 
 **IAST:** mahataḥ paramavyaktamavyaktātpuruṣaḥ paraḥ । / puruṣānna paraṃ kiṃcitsā kāṣṭhā sā parā gatiḥ ॥1.3.11॥
 **Say it:** ma-ha-TAH pa-ra-mav-YAK-tum av-yak-TAAT poo-roo-SHAH pa-RAH / poo-roo-SHAAN-na pa-RUM KIN-chit saa KAASH-thaa saa pa-RAA ga-TIH
