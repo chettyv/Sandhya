@@ -21,6 +21,8 @@ reviewed_by: Vaibhav Chetty
 
 <!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->
 
+<!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->
+
 **Say it:** tap-ta-chaa-mee-ka-RAA-bhaa-ya vah-na-YAY vish-va-kar-ma-NAY / na-mas-ta-MO-bhi-nigh-NAA-ya ru-cha-YAY lo-ka-SAAK-shi-nay
 **Meaning:** Homage to the one who glows like molten gold, to the fire, to the maker of all; homage to the striker-down of darkness, to the splendour, to the witness of the worlds.
 **Meaning (hi):** तपे हुए सोने-सी आभा वाले को नमस्कार, अग्निरूप को, विश्व के रचयिता को; अंधकार को जड़ से मिटाने वाले, कांतिमान, लोकों के साक्षी को नमस्कार।

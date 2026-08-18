@@ -99,8 +99,8 @@ for (const text of texts) {
           line
             .replace(/%.*$/, "")
             .replace(/##[^#]*##/g, "")
-            .replace(/\\-/g, "")
-            .replace(/\.h(?=[\s|.]|$)/g, "")
+            // Latin-only parentheticals are ITX variant apparatus, never text.
+            .replace(/\([a-zA-Z.,'~^ -]+\)/g, "")
             .trim(),
         )
         .filter(
@@ -109,9 +109,19 @@ for (const text of texts) {
             !line.startsWith("\\") &&
             !line.startsWith("{") &&
             !/^\|\|.*\|\|$/.test(line) &&
-            // Part labels like "AnandalaharI (1\-40)" are headings, not text.
-            !/\(\d+\\?-\d+\)\s*$/.test(line),
+            // Part/section headings like "AnandalaharI (1\-40)" or an
+            // embedded part-two title are headings, not text. Test BEFORE
+            // stripping \- so the range pattern still matches.
+            !/\(\d+\\?-\d+\)\s*$/.test(line) &&
+            !/^[A-Z][A-Za-z]*\s*$/.test(line),
         )
+        .map((line) =>
+          line
+            .replace(/\\-/g, "")
+            .replace(/\.h(?=[\s|.]|$)/g, "")
+            .trim(),
+        )
+        .filter(Boolean)
         .join("\n")
         .trim();
       const number = Number(parts[i + 1]);

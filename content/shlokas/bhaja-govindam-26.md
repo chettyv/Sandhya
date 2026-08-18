@@ -21,6 +21,8 @@ reviewed_by: Vaibhav Chetty
 
 <!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->
 
+<!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->
+
 **Say it:** KAA-mum KRO-dhum LO-bhum MO-hum / tyakt-VAAT-maa-num BHAA-va-ya KO-hum / AAT-ma-GYAA-na-vi-HEE-naa MOO-dhaas / tay pach-YAN-tay NA-ra-ka-ni-GOO-dhaah
 **Meaning:** Setting aside desire, anger, greed, and delusion, turn to yourself and ponder: "Who am I?" Those without knowledge of the Self are fools who stew, sunk out of sight in hell.
 **Meaning (hi):** काम, क्रोध, लोभ और मोह को छोड़कर अपने भीतर विचार करो — "मैं कौन हूँ?" आत्मज्ञान से रहित मूढ़ नरक में डूबे हुए पकते-तपते हैं।

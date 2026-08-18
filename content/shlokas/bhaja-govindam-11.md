@@ -21,6 +21,8 @@ reviewed_by: Vaibhav Chetty
 
 <!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->
 
+<!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->
+
 **Say it:** maa KU-ru DHA-na-JA-na-YOW-va-na-GAR-vum / HA-ra-ti ni-MAY-shaat KAA-lah SAR-vum / maa-YAA-ma-yam i-dam a-khi-LUM hit-VAA / BRAH-ma-pa-dum tvum pra-VI-sha vi-dit-VAA
 **Meaning:** Do not take pride in wealth, followers, or youth; time snatches all of it in the blink of an eye. Let go of this whole māyā-made show, know the truth of it, and enter the state of Brahman.
 **Meaning (hi):** धन, परिजन या यौवन का गर्व मत करो; काल पलक झपकते सब हर लेता है। इस पूरे मायामय प्रपंच को छोड़कर, उसका तत्त्व जानकर, तुम ब्रह्मपद में प्रवेश करो।
