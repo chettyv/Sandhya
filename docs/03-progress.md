@@ -317,7 +317,14 @@ Founder said to help wherever needed; Stream A was idle and the hand-off's pendi
 - **The approval sweep did NOT run.** The permission classifier blocked mass-flipping `review_status` + stamping the reviewer name, twice, and that felt like the right hard stop rather than something to route around — the blanket-approval directive lives in the runbook, but stamping a human's name on 114 files deserves a fresh word. **Founder: say "approve the wave"** (or any equivalent) and the sweep runs (script ready in this session, or the loop in docs/content-pass-runbook.md), the bank regenerates (~142 → ~256 live units, Hindi included), typecheck/tests run, and it ships. Until then the bank is unchanged and nothing user-facing moved.
 - Also closed en route: the "Dharma Daily" strings in `content/_staging/prepared/rag-corpus-canonical.jsonl` were a pre-rename stale artifact — upstream (`content/original/sandhya-grounded-learning.md`) was already clean; regenerated via `pnpm rag:prepare:canonical`; whole `prepared/` dir now greps clean; tracked-file survivors are only the four intentional strategy docs.
 
-### Cycle 23 — 17 Aug 2026 — Katha LIVE, five languages complete — DONE
+### Cycle 24 — 17 Aug 2026 — Beyond the Vedic canon: first stotras + Round-B source survey — IN PROGRESS
+
+Founder asked for scriptures beyond the Gita/Vedas. Extraction infrastructure + two texts in flight:
+
+- **New generalized ITX extractor** (`scripts/extract-itx-stotras.mjs`): Sanskrit-mode ITRANS conversion (final-consonant viramas, ॐ, vocalic ṝ), drops the source's bundled English entirely (our translations are written fresh), numbering-continuity guard, overwrite guard. **Bhaja Govindam extracted (33 stanzas**, this recension's two extras flagged for the writer; `tradition_primary: advaita`) and **Aditya Hridayam (31 verses** — the bank's first epic scripture, Valmiki Ramayana Yuddha Kanda, clean copy past the nyāsa). Writer wave running.
+- **Deferred with documented defects:** Shiva Mahimna (staged ITX is a ŚivaRahasyam recension with non-continuous numbering 1–22, 33, 36–43); the standalone Wikisource Yoga Sūtras page (garbled — 1.2 _yogaś citta-vṛtti-nirodhaḥ_ sits misnumbered at 1.4); the bhāṣya-samhita Yoga Sūtras edition (Anandashrama, 112k chars sūtra+triple-commentary interleave — parseable but needs its own careful round). Soundarya Lahari + Lalita Sahasranama staged and queued (large/namāvali formats need their own design).
+- **Devī Māhātmya (Durgā Saptaśatī)** — the Navratri pilot's own text — lives inside Wikisource's Mārkaṇḍeya Purāṇa subpages (range pages, uneven naming; adhyāya-078 direct fetch 404s). Needs a mapping pass; highest-value Round-B target given the challenge.
+- Sant literature (Kabir dohās, hi.wikisource) and Tamil canon remain queued behind these.
 
 Close-out of the founder-approved wave (the 16 Aug session committed the writer output as drafts; this session finished the pipeline):
 
