@@ -55,6 +55,23 @@ const TEXTS = [
     expect: null,
   },
   {
+    slug: "devi-mahatmya",
+    name: "Devi Mahatmya",
+    // The Saptashati = Markandeya Purana adhyayas 81–93, transcribed with
+    // dotted adhyaya.verse markers in the zero-padded range-page series.
+    // Sections are filtered to the Saptashati and remapped to its own
+    // chapter numbers (81 -> 1 … 93 -> 13).
+    pages: [
+      "मार्कण्डेयपुराणम्/अध्यायः ०८१-०८५",
+      "मार्कण्डेयपुराणम्/अध्यायः ०८६-०९०",
+      "मार्कण्डेयपुराणम्/अध्यायः ०९१-०९५",
+    ],
+    sectioned: true,
+    sectionFilter: (section) => Number(section) >= 81 && Number(section) <= 93,
+    mapSection: (section) => String(Number(section) - 80),
+    expect: null,
+  },
+  {
     slug: "prashna",
     name: "Prashna Upanishad",
     // BLOCKED at the source: the Wikisource transcription of the third

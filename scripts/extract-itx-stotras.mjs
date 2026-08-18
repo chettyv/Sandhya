@@ -35,6 +35,18 @@ const TEXTS = [
       `Bhaja Govindam ${n} (attributed to Adi Shankaracharya and his disciples), sanskritdocuments.org ITRANS file, personal-study terms`,
   },
   {
+    slug: "soundarya-lahari",
+    name: "Soundarya Lahari",
+    file: "soundarya_lahari.itx",
+    url: "https://sanskritdocuments.org/doc_devii/soundaryalahari.itx",
+    anchor: "\\endtitles",
+    expect: 103,
+    tradition: "shakta",
+    ref: (n) => `Soundarya Lahari ${n}`,
+    sourceLine: (n) =>
+      `Soundarya Lahari ${n} (traditionally attributed to Adi Shankaracharya), sanskritdocuments.org ITRANS file, personal-study terms`,
+  },
+  {
     slug: "aditya-hridayam",
     name: "Aditya Hridayam",
     file: "aditya_hridayam.itx",
@@ -51,7 +63,8 @@ const TEXTS = [
   },
 ];
 
-const requested = process.argv.slice(2);
+const repairMode = process.argv.includes("--repair");
+const requested = process.argv.slice(2).filter((a) => a !== "--repair");
 const texts = requested.length ? TEXTS.filter((t) => requested.includes(t.slug)) : TEXTS;
 
 for (const text of texts) {
@@ -79,13 +92,25 @@ for (const text of texts) {
     for (let i = 0; i + 1 < parts.length; i += 2) {
       const verseText = parts[i]
         .split(/\r?\n/)
-        .map((line) => line.replace(/%.*$/, "").trim())
+        // Strip: comments, inline "## … ##" variant apparatus, LaTeX soft
+        // hyphens. ITRANS ".h" (explicit halant) is redundant in Sanskrit
+        // mode (finals already take virama) — drop it before tokenizing.
+        .map((line) =>
+          line
+            .replace(/%.*$/, "")
+            .replace(/##[^#]*##/g, "")
+            .replace(/\\-/g, "")
+            .replace(/\.h(?=[\s|.]|$)/g, "")
+            .trim(),
+        )
         .filter(
           (line) =>
             line &&
             !line.startsWith("\\") &&
             !line.startsWith("{") &&
-            !/^\|\|.*\|\|$/.test(line),
+            !/^\|\|.*\|\|$/.test(line) &&
+            // Part labels like "AnandalaharI (1\-40)" are headings, not text.
+            !/\(\d+\\?-\d+\)\s*$/.test(line),
         )
         .join("\n")
         .trim();
@@ -107,6 +132,7 @@ for (const text of texts) {
 
   let written = 0;
   let protectedCount = 0;
+  let repaired = 0;
   for (const unit of units) {
     const slug = `${text.slug}-${unit.number}`;
     const target = join(outDir, `${slug}.md`);
@@ -114,6 +140,24 @@ for (const text of texts) {
       existsSync(target) &&
       !/\*\*Meaning:\*\* \(translation pending/.test(readFileSync(target, "utf8"))
     ) {
+      // --repair: content-passed files get ONLY their Devanagari/IAST lines
+      // refreshed when a converter fix changes the conversion; everything the
+      // writer authored is preserved.
+      if (repairMode) {
+        const freshDev =
+          itransToDevanagari(unit.text).replace(/\s*\n\s*/g, "\n") + ` ॥${unit.number}॥`;
+        const freshIast = devanagariToIast(freshDev);
+        const current = readFileSync(target, "utf8");
+        const currentDev = current.match(/^\*\*Devanagari:\*\* (.*)$/m)?.[1];
+        const freshDevLine = freshDev.replaceAll("\n", " / ");
+        if (currentDev !== freshDevLine) {
+          const next = current
+            .replace(/^\*\*Devanagari:\*\* .*$/m, `**Devanagari:** ${freshDevLine}`)
+            .replace(/^\*\*IAST:\*\* .*$/m, `**IAST:** ${freshIast.replaceAll("\n", " / ")}\n<!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \\- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->`);
+          writeFileSync(target, next);
+          repaired += 1;
+        }
+      }
       protectedCount += 1;
       continue;
     }
@@ -161,7 +205,8 @@ reviewed_by: ""
   }
   console.log(
     `${text.slug}: wrote ${written} draft file(s)` +
-      (protectedCount ? ` (${protectedCount} content-passed file(s) untouched)` : ""),
+      (protectedCount ? ` (${protectedCount} content-passed file(s) preserved)` : "") +
+      (repaired ? ` (${repaired} Devanagari/IAST line(s) repaired)` : ""),
   );
 }
 
@@ -182,7 +227,7 @@ function itransToDevanagari(text) {
     i: ["इ", "ि"], U: ["ऊ", "ू"], u: ["उ", "ु"], RRI: ["ॠ", "ॄ"], "R^I": ["ॠ", "ॄ"],
     RRi: ["ऋ", "ृ"], "R^i": ["ऋ", "ृ"], "L^i": ["ऌ", "ॢ"], e: ["ए", "े"], o: ["ओ", "ो"],
   };
-  const S = { OM: "ॐ", ".n": "ं", M: "ं", ".m": "ं", ".N": "ँ", H: "ः", "|": "।", _: "", "'": "ऽ" };
+  const S = { OM: "ॐ", ".a": "ऽ", ".n": "ं", M: "ं", ".m": "ं", ".N": "ँ", H: "ः", "|": "।", _: "", "'": "ऽ" };
   const tokens = [...Object.keys(C), ...Object.keys(V), ...Object.keys(S)].sort(
     (a, b) => b.length - a.length,
   );
