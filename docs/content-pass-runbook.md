@@ -1,14 +1,14 @@
 # Content-pass runbook — how to draft, approve, and ship verse content
 
-Turnkey instructions for any agent/session. This is the exact process that produced the approved Gita, Chalisa, Isha, Kena, Mundaka, Mandukya, and prayer content. Nothing here requires conversation history.
+Turnkey instructions for any agent/session. This is the exact process that produced the approved Gita, Chalisa, Isha, Kena, Mundaka, Mandukya, Katha, Shvetashvatara, stotra, and prayer content. Nothing here requires conversation history.
 
-## Current queue — 16 August 2026
+## Current queue — 18 August 2026
 
-The Kena, Mundaka, and Mandukya passes described in the original 12 August handoff are complete and approved on `main`. The next content work is draft-only until a named reviewer approves it:
+The Kena, Mundaka, Mandukya, Katha, Shvetashvatara, Bhaja Govindam, Aditya Hridayam, Soundarya Lahari, and prayer passes are complete and approved on `main`. The next content work is draft-only until a named reviewer approves it:
 
-1. **Katha Upanishad** — review the 121-file draft pass now on `main`; do not mark it approved without the required source and content review.
-2. **Shvetashvatara Upanishad** — complete and review the 114-file draft corpus; retain the tradition notes and source-artifact comments.
-3. **Remaining Gita waves and language layers** — work in small, reviewable batches across the 620 draft skeletons; regenerate the bank only after validation.
+1. **Devi Mahatmya** — continue the 588-file draft corpus. The current wave has completed 51 files; 537 extracted skeletons remain. Preserve source/numbering flags and do not approve without named review.
+2. **Remaining Gita waves and language layers** — work in small, reviewable batches across the 620 draft skeletons; regenerate the bank only after validation.
+3. **Next source queue** — Prashna remains blocked on its malformed source boundary; Taittiriya/Aitareya need a cleaner source and rights review before extraction.
 
 ## The writer-prompt template
 
@@ -49,7 +49,7 @@ Then: `node scripts/content-cli.mjs validate content` → `node scripts/generate
 
 ## After this wave — the extraction queue (docs/03-progress.md corpus ledger)
 
-Katha/Prashna/Shvetashvatara/Taittiriya/Aitareya (extend `scripts/extract-wikisource-verses.mjs` with subpage fetching — Katha's mula lives in subpages) · great mantras · staged ITX stotras (`scripts/extract-chalisa.mjs` shows the ITRANS pattern) · rolling waves through the 620 remaining Gita verses (batches of ~10 per writer, chapter landmarks in each prompt) · epics via bulk reader + RAG pipeline (design task).
+Prashna/Taittiriya/Aitareya (source-quality and rights work first) · great mantras · remaining staged ITX stotras · rolling waves through the 620 remaining Gita verses (batches of ~10 per writer, chapter landmarks in each prompt) · the 537 remaining Devi Mahatmya drafts · epics via bulk reader + RAG pipeline (design task).
 
 ## Quality bar (non-negotiable, enforced by validator + prompt)
 

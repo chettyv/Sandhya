@@ -1,4 +1,157 @@
-# Founder actions — live list
+# Founder actions — current setup checklist
+
+This is the simple, beginner-friendly checklist for setting up Sandhya. Follow the current checklist first. The older action queue is kept below for historical context and may contain superseded priorities.
+
+Last updated: 18 August 2026
+
+## Current decisions
+
+| Area                | Decision                                   |
+| ------------------- | ------------------------------------------ |
+| Launch              | Free launch                                |
+| Supabase            | Set up for authentication and syncing only |
+| EAS/device build    | Optional; later                            |
+| Apple/Google stores | Not now                                    |
+| Content             | Keep improving and expanding               |
+| Audio               | Not now                                    |
+| Payments/RevenueCat | Not now                                    |
+| Website/domain      | Not now                                    |
+| Sentry/PostHog      | Not now                                    |
+
+## What access is needed
+
+- Local coding, content, validation, tests, and generators need no MCP or plugin access.
+- Supabase can be connected through the Supabase plugin, or I can use the confirmed local project configuration. Do not send keys or passwords in chat.
+- EAS uses an Expo login later; no MCP connection is required now.
+- GitHub and Cloudflare access are only needed when the website is intentionally hosted.
+- Sentry and PostHog access are only needed when monitoring is intentionally enabled.
+
+## 1. Verify the correct Supabase project
+
+Do not create a second project yet. The repository already has a local Supabase configuration.
+
+### You do
+
+1. Open <https://supabase.com/dashboard>.
+2. Sign in.
+3. Open the project you believe is Sandhya's project.
+4. Look at the browser address. It should contain:
+
+   `supabase.com/dashboard/project/PROJECT_REFERENCE`
+
+5. Open the local `.env` file in the repository.
+6. Compare the project reference in the browser address with `SUPABASE_PROJECT_REF`.
+7. In Supabase, open **Project Settings → API**.
+8. Compare the **Project URL** with both `EXPO_PUBLIC_SUPABASE_URL` and `SUPABASE_URL`.
+9. Compare the public/anon key with both `EXPO_PUBLIC_SUPABASE_ANON_KEY` and `SUPABASE_ANON_KEY`.
+10. Open **Table Editor**.
+11. If the project contains unrelated personal or business data, stop and report it.
+12. Do not create tables manually and do not paste any key or password into chat.
+
+The local configuration has already passed a safe internal consistency check: the URLs match, the public keys match, the project reference matches the URL, and HTTPS is used. The dashboard check is still needed to confirm that the project is actually yours.
+
+Reply with this, without including secrets:
+
+```text
+Supabase project name:
+Project reference:
+Project URL matches .env: yes/no
+Unrelated data in project: yes/no
+Use: auth and sync only
+```
+
+### I do
+
+After confirmation, I will:
+
+1. Check the remote migration history.
+2. Preview the database changes.
+3. Tell you what will be created.
+4. Wait for explicit approval.
+5. Apply the migrations.
+6. Check the tables and indexes.
+7. Check that user tables have Row Level Security enabled.
+8. Check that vector search is available.
+9. Run the backend checks.
+
+See [supabase/migrations/migration_checklist.md](C:/Users/vaibh/Documents/GitHub/DharmaDaily/supabase/migrations/migration_checklist.md). Supabase's documented deployment flow is to link the project, preview migrations, and push the migration files rather than manually creating production tables: <https://supabase.com/docs/guides/deployment/database-migrations>.
+
+## 2. Turn on simple email login
+
+### You do
+
+1. In Supabase, open **Authentication**.
+2. Open **Providers**.
+3. Make sure **Email** is enabled.
+4. Leave Apple and Google login disabled for now.
+5. Open **URL Configuration**.
+6. Add this redirect URL:
+
+   `sandhya://auth/callback`
+
+7. Do not change the website URL yet.
+
+Supabase requires mobile redirect URLs to be added to the allowed list: <https://supabase.com/docs/guides/auth/redirect-urls>.
+
+### I do
+
+I will test account creation, email confirmation, sign-in, sign-out, password reset, guest access, saved-item syncing, journal syncing, and preference syncing.
+
+## 3. AI setup
+
+Do not set up AI yet. Free launch can use offline content and optional account syncing without AI keys.
+
+If AI is enabled later, the keys must be server-side Supabase secrets, never mobile-app variables: `OPENAI_API_KEY`, the selected answer-provider key, `SUPABASE_SERVICE_ROLE_KEY`, and `LLM_MONTHLY_BUDGET_USD`. Do not send these values in chat.
+
+## 4. EAS and a real phone build — later
+
+This is optional now. Expo Go is sufficient for current free-launch testing.
+
+When a native build is needed:
+
+1. Create or confirm an account at <https://expo.dev>.
+2. Sign in locally.
+3. Tell me `Expo account ready`.
+4. I initialize the EAS project.
+5. I add `EXPO_PUBLIC_EAS_PROJECT_ID` locally.
+6. I create a development build.
+7. We install it on a phone and test native features.
+
+## 5. Apple and Google stores — not now
+
+There is nothing for you to do now. Later: create the developer accounts, create app records, create signing credentials, build and test on real phones, complete Google's closed-test requirement, prepare listings, and submit only after explicit approval.
+
+## 6. Content — active work
+
+You do not need to provide more information now. I will continue improving explanations, tradition notes, regional differences, scripture units, daily reflections, practice guides, concepts, prayers, stotras, Hindi layers, and additional languages where sources are reliable.
+
+After each batch I will validate the content, regenerate the content bank, run tests, and preserve draft/approved status. Rights and source information remain tracked in [docs/PERMISSIONS-NEEDED.md](C:/Users/vaibh/Documents/GitHub/DharmaDaily/docs/PERMISSIONS-NEEDED.md). Free launch does not remove the need to clear commercial rights before payments are ever enabled.
+
+## 7. Audio — not now
+
+There is nothing for you to do now. Later, audio will require approved recordings, an audio player, slow playback, repeat-after-me playback, and physical-device testing.
+
+## 8. Payments and RevenueCat — not now
+
+Keep payments disabled. Later, if paid access is approved: recheck commercial rights, create Apple/Google products, configure RevenueCat, connect products to entitlements, add server secrets, configure signed webhooks, test sandbox purchase/refunds/restores, and enable payments only after all tests pass.
+
+## 9. Website and domain — not now
+
+There is nothing for you to do now. Later: choose a domain, connect GitHub and Cloudflare Pages, publish the existing pages, add privacy and terms URLs, add Search Console, and test every page on mobile. The website is an acquisition channel, not a requirement for the free app launch.
+
+## 10. Sentry and PostHog — not now
+
+There is nothing for you to do now. Later: create the projects, save the DSN/key/host locally, tell me `Telemetry ready`, and I will connect and verify that private questions, answers, emails, tokens, and journal entries are not sent.
+
+## What to do now
+
+Complete only the Supabase verification in Section 1 and send the confirmation block. Everything else is either handled by me locally or deliberately deferred.
+
+---
+
+## Historical founder action queue
+
+The older queue below is retained for context. The current free-launch checklist above takes priority.
 
 Mission-critical first: accounts and keys only you can create, in the order they unblock the app. Resolved items get deleted. Parked items live at the bottom so they don't clutter the critical path.
 

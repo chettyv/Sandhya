@@ -22,8 +22,8 @@ A RAG pipeline where the model cannot cite what was not retrieved, and cannot re
 
 ## Verification culture
 
-131 automated tests; workspace-wide typecheck; 20+ standalone verification scripts covering backend source contracts, migration security, release contracts, seed invariants, push-token flows, and RevenueCat transfer semantics; secret scanning on every commit; CI with release-contract verification. All green as of 12 August 2026.
+170 workspace tests plus admin checks; workspace-wide typecheck; 20+ standalone verification scripts covering backend source contracts, migration security, release contracts, seed invariants, push-token flows, and RevenueCat transfer semantics; secret scanning on every commit; CI with release-contract verification. All green as of 18 August 2026.
 
 ## The design stance worth talking about
 
-Handling tradition-sensitive religious content without flattening it: multiple Hindu traditions modelled as overlapping preferences rather than a denomination enum; tradition-aware retrieval filtering; answers required to surface where traditions differ; and a hard rule — enforced in code, not style guides — that the system never invents a scripture reference it did not retrieve.
+Handling tradition-sensitive religious content without flattening it: multiple Hindu traditions modelled as overlapping preferences rather than a denomination enum; stated tradition ranked first without hiding other readings; answers required to surface where traditions differ; and a hard rule — enforced in code, not style guides — that the system never invents a scripture reference it did not retrieve.

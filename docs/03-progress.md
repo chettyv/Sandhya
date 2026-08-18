@@ -1,25 +1,25 @@
 # Sandhya — Build Progress Log
 
 **Started:** 12 August 2026. Maintained by the build agent; updated at the end of every work cycle.
-Inputs: `01-review.md` (repo root), `02-plan.md` v3 (repo root), `CURRENT_SUMMARY.md`, and direct verification of the code and Git state on 16 Aug 2026.
+Inputs: `01-review.md` (repo root), `02-plan.md` v3 (repo root), `CURRENT_SUMMARY.md`, and direct verification of the code and Git state on 18 Aug 2026.
 
-## CURRENT STATE — 17 AUGUST 2026
+## CURRENT STATE — 18 AUGUST 2026
 
 This dated block is the source of truth for the present handoff. The cycle notes below are historical records and retain the numbers and decisions that were true when each cycle closed.
 
 ### Done and verified
 
-- `main` and `origin/main` are current through the Katha go-live (cycle 23). CI green.
-- **The approved bank contains 494 units, a 214-verse daily pool, and a nine-prayer sandhyā rotation** — six principal Upanishads live in full (Isha, Kena, Katha, Mundaka, Mandukya, Shvetashvatara), the Gita launch set, Chalisa, and the three great daily prayers — Hindi on all 494, Bengali/Gujarati/Marathi/Tamil complete on the 30-verse launch set. Katha and Shvetashvatara were approved under the founder's explicit in-session word (17 Aug) with Devanagari mechanically verified byte-identical against the extracted skeletons in both waves (one documented markup repair in katha-1-3-11).
+- `main` and `origin/main` are current through the audited content handoff. The generated bank is reproducible and excludes all draft Devi Mahatmya files.
+- **The approved bank contains 661 units, a 252-verse daily pool, and a nine-prayer sandhyā rotation** — six principal Upanishads live in full (Isha, Kena, Katha, Mundaka, Mandukya, Shvetashvatara), the Gita launch set, Chalisa, Bhaja Govindam, Aditya Hridayam, Soundarya Lahari, and the three great daily prayers — Hindi on all 661, Bengali/Gujarati/Marathi/Tamil complete on the 30-verse launch set. Katha and Shvetashvatara were approved under the founder's explicit in-session word (17 Aug) with Devanagari mechanically verified against the extracted skeletons.
 - All 11 duplicate topic branches were archived as pushed tags under `archive/2026-08-16/*` and deleted locally and remotely. There are no open PRs, no additional worktrees, and no stashes.
-- `pnpm typecheck`, `pnpm test`, `pnpm backend:check`, `pnpm content:validate`, `pnpm content:generate-shloka-bank -- --check`, and `git diff --check` pass; lint has non-blocking import-order warnings in extraction scripts and no errors.
-- Content validation covers 1,121 Markdown files. **The 620 non-launch Gita files remain drafts** (rolling content-pass waves are the next corpus work), followed by language scale-out beyond the launch 30 and the ITX stotra conversions. Taittiriya/Aitareya/Prashna stay blocked on source quality (see cycle 22 survey); audio remains the biggest missing CORE item.
+- `pnpm content:validate`, the regenerated bank check, and `git diff --check` pass; the last full workspace verification also passed, with only non-blocking import-order warnings in extraction scripts.
+- Content validation covers 1,876 Markdown files. **The 620 non-launch Gita files and all 588 Devi Mahatmya files remain drafts** (51 Devi files now have a content pass; 537 remain extracted skeletons). Taittiriya/Aitareya/Prashna stay blocked on source quality (see cycle 22 survey); audio remains the biggest missing CORE item.
 
 ### Partial, blocked, or intentionally parked
 
 - The product is still a free, offline-capable launch. Supabase production setup, migration application, EAS/device builds, real telemetry, and store submission are founder-controlled external work in `docs/00-your-actions.md`.
 - Scoped AI on the daily verse and audio are not built. Navratri challenge payments, the arrival site, and purchase testing remain deliberately parked behind the free-launch/re-audit gates.
-- The 620 non-live Gita files, all Katha files, and all Shvetashvatara files remain drafts. The remaining content review, rights checks, and language expansion are editorial work, not generated-bank failures.
+- The 620 non-live Gita files and all 588 Devi Mahatmya files remain drafts. The remaining content review, rights checks, and language expansion are editorial work, not generated-bank failures.
 - The user-visible rename sweep is clean in `apps/`, `packages/`, `supabase/`, `scripts/`, and generated artifacts. Historical competitor-analysis references to the old name remain intentional documentation, not product strings.
 
 ---
@@ -348,7 +348,16 @@ Founder: keep going on everything; don't worry about permissions (ledger instead
 
 ---
 
-## HANDOFF SUMMARY — 16 AUGUST 2026
+### Cycle 25 — 18 Aug 2026 — Devi Mahatmya content pass — IN PROGRESS
+
+- The extracted Devi Mahatmya corpus contains **588 draft files**. The current working wave adds a real content pass to **51 files**: source-aware review notes, stress-marked "Say it", original English meaning, Hindi meaning, word-by-word gloss, tags, and reflection prompts.
+- **537 files remain extracted skeletons.** All 588 retain `review_status: draft` and an empty reviewer field. None was promoted into the live bank, and no named editorial approval was invented.
+- The content validator passes **1,876 Markdown files with 0 invalid**. The generated shloka bank remains at **661 approved units / 252 daily-pool units** because draft Devi files are excluded.
+- **Next:** continue the draft wave in small reviewable batches, preserve transcription/numbering flags, then obtain named human review and rights confirmation before any promotion. Audio, founder-controlled production setup, and the parked challenge/web/AI work remain open separately.
+
+---
+
+## HISTORICAL HANDOFF SUMMARY — 16 AUGUST 2026
 
 ### Merged into `main`
 
@@ -373,5 +382,12 @@ Founder: keep going on everything; don't worry about permissions (ledger instead
 ### Open loops for a human
 
 - Provide or confirm the Supabase/EAS/store credentials before applying migrations or producing native builds; do not use the local `.env` values without confirmation.
-- Review and approve the draft Katha and Shvetashvatara corpora before promoting them into the bundled bank; complete the remaining Gita editorial waves and rights review.
+- Historical item closed in Cycle 23: Katha and Shvetashvatara were approved and promoted into the bundled bank. The remaining Gita editorial waves and rights review are still open.
 - Decide when to fund audio and scoped daily-verse AI, and keep Navratri payments/arrival work parked until the free-launch and commercial-rights gates are intentionally reopened.
+
+## HANDOFF SUMMARY — 18 AUGUST 2026
+
+- The current working tree contains the 51-file Devi Mahatmya draft content pass described in Cycle 25. Preserve all 51 files when starting on another PC; do not treat them as approved or live.
+- The generated bank is intentionally unchanged at 661 approved units and 252 daily-pool units. Run `pnpm content:validate` and `pnpm content:generate-shloka-bank -- --check` before beginning the next content wave.
+- The unfinished queues are explicit: 537 Devi skeletons, 620 non-launch Gita drafts, audio recording/player verification, source-rights and named-review work, plus founder-controlled Supabase/EAS/device/store setup.
+- Deliberately parked: scoped daily-verse AI for the pilot, Navratri payments/publication, sandbox purchases, and the web arrival site. Do not re-enable them without the documented gates.
