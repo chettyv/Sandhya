@@ -64,11 +64,20 @@ const TEXTS = [
     pages: [
       "मार्कण्डेयपुराणम्/अध्यायः ०८१-०८५",
       "मार्कण्डेयपुराणम्/अध्यायः ०८६-०९०",
-      "मार्कण्डेयपुराणम्/अध्यायः ०९१-०९५",
+      "मार्कण्डेयपुराणम्/अध्यायः ९१-९३",
     ],
     sectioned: true,
     sectionFilter: (section) => Number(section) >= 81 && Number(section) <= 93,
     mapSection: (section) => String(Number(section) - 80),
+    // Page furniture between adhyayas: "81(78)" concordance lines, adhyaya
+    // title lines, the Devimahatmya heading, and "iti…" colophons. The uvaca
+    // speaker lines are part of the text and are kept.
+    stripLines: [
+      /^\s*\d+\(\d+\)\s*$/,
+      /ऽध्यायः/,
+      /^\s*देवीमाहात्म्यम्\s*$/,
+      /^\s*इति\s+श्री/,
+    ],
     expect: null,
   },
   {
@@ -148,8 +157,16 @@ for (const text of texts) {
       .replace(/\{\{[^}]*\}\}|\{[^}]*\}|\[\[[^\]]*\]\]/g, "\n")
       .replace(/^[|!#*=:].*$/gm, "")
       .replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, "$1")
+      .replaceAll("'''", "")
       .replaceAll("।।", "॥");
-    const parts = clean.split(/॥\s*([०-९0-9]+(?:\.[०-९0-9]+){0,2})\s*॥/);
+    const cleanLines = text.stripLines
+      ? clean
+          .split("\n")
+          .filter((line) => !text.stripLines.some((pattern) => pattern.test(line)))
+          .join("\n")
+      : clean;
+    // Dotted markers may carry a stray space after the dot ("॥८६. ६॥").
+    const parts = cleanLines.split(/॥\s*([०-९0-9]+(?:\.\s*[०-९0-9]+){0,2})\s*॥/);
     let section = 1;
     let previousNumber = 0;
     for (let i = 0; i + 1 < parts.length; i += 2) {
@@ -170,7 +187,11 @@ for (const text of texts) {
       if (marker.verse !== undefined) {
         // Dotted marker carries its own section.
         section = marker.section ?? section;
-        units.push({ label: `${text.sectioned ? `${String(section).replaceAll(".", "-")}-` : ""}${marker.verse}`, refNum: text.sectioned ? `${section}.${marker.verse}` : `${marker.verse}`, dotted: marker.section !== undefined, text: verseText, source: page.source_url });
+        if (text.sectionFilter && marker.section !== undefined && !text.sectionFilter(marker.section)) {
+          continue;
+        }
+        const displaySection = text.mapSection ? text.mapSection(section) : section;
+        units.push({ label: `${text.sectioned ? `${String(displaySection).replaceAll(".", "-")}-` : ""}${marker.verse}`, refNum: text.sectioned ? `${displaySection}.${marker.verse}` : `${marker.verse}`, dotted: marker.section !== undefined, text: verseText, source: page.source_url });
         if (marker.section === undefined) {
           // Sequential markers: a drop back to 1 opens the next khanda.
           if (marker.verse <= previousNumber) section += 1;
