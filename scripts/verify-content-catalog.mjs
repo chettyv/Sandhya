@@ -61,7 +61,9 @@ if (!authored.includes("no scripture quotations") || !authored.includes("not med
   throw new Error("App-authored catalog is missing its rights/safety framing.");
 }
 if (
-  !remoteContent.includes("const normalizedDate = date ?? null") ||
+  // A date is published only with its reckoning; without one it is demoted
+  // to a date-less explainer (CLAUDE.md festival rule).
+  !remoteContent.includes("const normalizedDate = date && reckoning ? date : null") ||
   !remoteContent.includes('monthLabel: "GUIDE"') ||
   !remoteContent.includes('.split("\\n")')
 ) {

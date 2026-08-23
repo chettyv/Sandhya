@@ -36,6 +36,14 @@ const journalStorage = readFileSync(
 );
 const persistedStorage = readFileSync(join(root, "apps/mobile/src/lib/chunkedStorage.ts"), "utf8");
 const onboarding = readFileSync(join(root, "apps/mobile/app/onboarding.tsx"), "utf8");
+const onboardingResultStep = readFileSync(
+  join(root, "apps/mobile/src/features/onboarding/components/steps/ResultStep.tsx"),
+  "utf8",
+);
+const onboardingFlowButton = readFileSync(
+  join(root, "apps/mobile/src/features/onboarding/components/FlowButton.tsx"),
+  "utf8",
+);
 const legal = readFileSync(join(root, "apps/mobile/app/legal.tsx"), "utf8");
 const nativeSubscriptions = readFileSync(
   join(root, "apps/mobile/src/lib/subscriptions.native.ts"),
@@ -162,9 +170,11 @@ for (const [label, source, patterns] of [
   ],
   ["chunked persisted state", persistedStorage, ["chunkedStorage", "CHUNK_SIZE", "removeItem"]],
   [
+    // The finish button moved into ResultStep -> FlowButton; the invariant is
+    // still that it is disabled while finishing and exposes that to a11y.
     "onboarding reminder failure handling",
-    onboarding,
-    ["finishing", "Reminder not enabled", "accessibilityState={{ disabled: finishing }}"],
+    onboarding + onboardingResultStep + onboardingFlowButton,
+    ["finishing", "Reminder not enabled", "disabled={finishing}", "accessibilityState={{ disabled }}"],
   ],
   [
     "legal release disclosure",

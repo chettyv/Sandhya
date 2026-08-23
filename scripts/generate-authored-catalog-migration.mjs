@@ -15,11 +15,14 @@ try {
     join(root, "apps/mobile/src/data/appAuthoredCatalog.ts"),
     "utf8",
   ).replaceAll("@/types/content", "./types.ts");
+  const sourceActivity = readFileSync(join(root, "apps/mobile/src/lib/activity.ts"), "utf8");
   const sourceContent = readFileSync(join(root, "apps/mobile/src/data/content.ts"), "utf8")
     .replaceAll('from "./appAuthoredCatalog"', 'from "./appAuthoredCatalog.ts"')
-    .replaceAll("@/types/content", "./types.ts");
+    .replaceAll("@/types/content", "./types.ts")
+    .replaceAll("@/lib/activity", "./activity.ts");
 
   writeFileSync(join(tempRoot, "types.ts"), `${sourceTypes}\n`);
+  writeFileSync(join(tempRoot, "activity.ts"), sourceActivity);
   writeFileSync(join(tempRoot, "appAuthoredCatalog.ts"), sourceCatalog);
   writeFileSync(join(tempRoot, "content.ts"), sourceContent);
 
