@@ -77,11 +77,11 @@ export default function JourneyScreen() {
             <Text className="mt-1 text-xs font-medium text-muted">Practices completed</Text>
           </View>
           <View className="flex-1 rounded-card bg-surface2 p-3">
-            <Text className="text-2xl font-bold text-saffron">{currentStreak}</Text>
+            <Text className="text-2xl font-bold text-saffronText">{currentStreak}</Text>
             <Text className="mt-1 text-xs font-medium text-muted">Day streak</Text>
           </View>
           <View className="flex-1 rounded-card bg-surface2 p-3">
-            <Text className="text-2xl font-bold text-sage">{savedCount}</Text>
+            <Text className="text-2xl font-bold text-sageText">{savedCount}</Text>
             <Text className="mt-1 text-xs font-medium text-muted">Items saved</Text>
           </View>
         </View>

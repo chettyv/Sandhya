@@ -171,7 +171,7 @@ export default function JournalScreen() {
               entries.map((entry) => (
                 <Card key={entry.id} className="mb-3">
                   <View className="mb-3 flex-row items-center justify-between">
-                    <Text className="text-xs font-semibold uppercase tracking-wider text-saffron">
+                    <Text className="text-xs font-semibold uppercase tracking-wider text-saffronText">
                       {entry.mood}
                     </Text>
                     <View className="flex-row items-center gap-3">

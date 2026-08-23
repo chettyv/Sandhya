@@ -112,7 +112,7 @@ export default function ConversationDetailScreen() {
             ) : null}
             {message.safetyNote ? (
               <View className="mt-4 rounded-card bg-roseSoft p-3.5">
-                <Text className="text-sm leading-5 text-rose">{message.safetyNote}</Text>
+                <Text className="text-sm leading-5 text-roseText">{message.safetyNote}</Text>
               </View>
             ) : null}
             {message.traditionNotes.length ? (

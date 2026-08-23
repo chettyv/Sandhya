@@ -12,12 +12,12 @@ export function FestivalRow({ festival, onPress }: { festival: Festival; onPress
       className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-4"
     >
       <View className="h-12 w-12 items-center justify-center rounded-2xl bg-warm">
-        <Text className="text-[10px] font-bold uppercase" style={{ color: colors.saffron }}>
+        <Text className="text-[10px] font-bold uppercase" style={{ color: colors.saffronText }}>
           {festival.monthLabel}
         </Text>
         <Text
           className={`font-bold ${festival.date ? "text-xl leading-6" : "text-[11px] leading-4"}`}
-          style={{ color: colors.saffron }}
+          style={{ color: colors.saffronText }}
         >
           {festival.date ? festival.dayLabel : "READ"}
         </Text>

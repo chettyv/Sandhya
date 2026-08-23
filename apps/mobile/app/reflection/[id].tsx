@@ -76,7 +76,7 @@ export default function ReflectionDetailScreen() {
         <Card className="mt-7 bg-surface2">
           <View className="mb-3 flex-row items-center gap-2">
             <Ionicons name="sparkles-outline" size={18} color={colors.saffron} />
-            <Text className="font-semibold text-saffron">Carry this into the day</Text>
+            <Text className="font-semibold text-saffronText">Carry this into the day</Text>
           </View>
           <Text className="text-[16px] leading-6 text-ink">{dailyReflection.practicePrompt}</Text>
         </Card>
@@ -94,7 +94,7 @@ export default function ReflectionDetailScreen() {
           className="min-h-36 rounded-lg border border-line bg-surface p-4 text-[15px] leading-6 text-ink"
         />
         {recorded ? (
-          <Text className="mt-2 text-sm font-medium text-sage">
+          <Text className="mt-2 text-sm font-medium text-sageText">
             {savedSynced
               ? "Saved to your private journal and synced to your account."
               : "Saved privately on this device."}

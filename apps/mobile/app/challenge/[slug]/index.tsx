@@ -68,7 +68,7 @@ export default function ChallengeOverviewScreen() {
 
   return (
     <Page>
-      <Text className="text-[11px] font-semibold uppercase text-saffron">{dateRange}</Text>
+      <Text className="text-[11px] font-semibold uppercase text-saffronText">{dateRange}</Text>
       <Text className="mt-1 text-[26px] font-semibold leading-8 text-ink">{challenge.title}</Text>
       {challenge.tagline ? (
         <Text className="mt-2 text-[15px] leading-6 text-muted">{challenge.tagline}</Text>
@@ -86,7 +86,7 @@ export default function ChallengeOverviewScreen() {
 
       {joined && tonight ? (
         <Card className="mt-5 border-l-2 border-l-saffron" onPress={() => openNight(slug, tonight)}>
-          <Text className="text-[11px] font-semibold uppercase text-saffron">
+          <Text className="text-[11px] font-semibold uppercase text-saffronText">
             Tonight · Night {tonight.night} of {challenge.nights}
           </Text>
           <Text className="mt-1 text-lg font-semibold text-ink">{tonight.title}</Text>
@@ -200,7 +200,7 @@ function JoinButton({ slug, onPurchased }: { slug: string; onPurchased: () => vo
         }}
       />
       {state === "error" ? (
-        <Text className="mt-3 text-center text-sm text-rose">
+        <Text className="mt-3 text-center text-sm text-roseText">
           The purchase couldn't be completed. Nothing was charged beyond what the store confirmed —
           try again, or restore purchases from Settings.
         </Text>

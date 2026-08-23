@@ -51,7 +51,7 @@ export default function ShlokaDetailScreen() {
 
   return (
     <Page>
-      <Text className="text-[11px] font-semibold uppercase text-saffron">{shloka.textRef}</Text>
+      <Text className="text-[11px] font-semibold uppercase text-saffronText">{shloka.textRef}</Text>
 
       <Card className="mt-3">
         <VerseLines verse={shloka} preference={scriptPreference} />
@@ -97,7 +97,9 @@ export default function ShlokaDetailScreen() {
 
       {shloka.reflection ? (
         <Card className="mt-6">
-          <Text className="text-[11px] font-semibold uppercase text-saffron">Carry it today</Text>
+          <Text className="text-[11px] font-semibold uppercase text-saffronText">
+            Carry it today
+          </Text>
           <Text className="mt-2 text-[15px] leading-7 text-ink">{shloka.reflection}</Text>
         </Card>
       ) : null}

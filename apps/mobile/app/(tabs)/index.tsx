@@ -146,7 +146,7 @@ export default function HomeScreen() {
       <View className="mb-6">
         <View className="mb-3 flex-row items-end justify-between">
           <Text className="text-[24px] font-semibold text-ink">Progress today</Text>
-          <Text className="text-[24px] font-semibold text-saffron">
+          <Text className="text-[24px] font-semibold text-saffronText">
             {Math.round(progress * 100)}%
           </Text>
         </View>
@@ -385,7 +385,7 @@ function DailyPrayerCard() {
       className="mb-2 rounded-card border border-line bg-surface p-4"
     >
       <View className="flex-row items-center justify-between">
-        <Text className="text-[11px] font-semibold uppercase text-saffron">
+        <Text className="text-[11px] font-semibold uppercase text-saffronText">
           {prayerContext === "morning" ? "Morning" : "Evening"} prayer · {prayer.textRef}
         </Text>
         <Ionicons name="chevron-forward" size={16} color={colors.muted} />
@@ -426,7 +426,7 @@ function DailyShlokaCard() {
       className="mb-2 rounded-card border border-line bg-surface p-4"
     >
       <View className="flex-row items-center justify-between">
-        <Text className="text-[11px] font-semibold uppercase text-saffron">
+        <Text className="text-[11px] font-semibold uppercase text-saffronText">
           Today's shloka · {shloka.textRef}
         </Text>
         <Ionicons name="chevron-forward" size={16} color={colors.muted} />
@@ -479,7 +479,7 @@ function FeaturedChallengeCard() {
     >
       <Ionicons name="moon-outline" size={23} color={colors.plum} />
       <View className="min-w-0 flex-1">
-        <Text className="text-[11px] font-semibold uppercase text-saffron">{eyebrow}</Text>
+        <Text className="text-[11px] font-semibold uppercase text-saffronText">{eyebrow}</Text>
         <Text className="mt-0.5 font-semibold text-ink">{challenge.title}</Text>
         {challenge.tagline ? (
           <Text numberOfLines={2} className="mt-1 text-sm leading-5 text-muted">

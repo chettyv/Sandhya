@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: "600",
     letterSpacing: 4,
-    color: colors.saffron,
+    color: colors.saffronText,
   },
   rule: {
     height: 2,

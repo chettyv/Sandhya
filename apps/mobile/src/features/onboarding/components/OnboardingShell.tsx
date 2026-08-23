@@ -154,7 +154,7 @@ export function StepLayout({
               style={[styles.eyebrowRow, centered && styles.centeredRow]}
             >
               <View style={styles.eyebrowDot} />
-              <Text className="text-[11px] font-semibold uppercase tracking-[1.5px] text-saffron">
+              <Text className="text-[11px] font-semibold uppercase tracking-[1.5px] text-saffronText">
                 {eyebrow}
               </Text>
             </Animated.View>

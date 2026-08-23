@@ -99,7 +99,7 @@ export default function SacredTextDetailScreen() {
       ) : passages.data?.length ? (
         passages.data.map((passage) => (
           <Card key={passage.id} className="mb-3">
-            <Text className="text-xs font-semibold uppercase tracking-wider text-saffron">
+            <Text className="text-xs font-semibold uppercase tracking-wider text-saffronText">
               {[passage.section, passage.verse_number].filter(Boolean).join(" · ") ||
                 "Source passage"}
             </Text>

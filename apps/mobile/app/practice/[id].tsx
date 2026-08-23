@@ -125,7 +125,7 @@ export default function PracticeDetailScreen() {
 
       <Card>
         <View className="mb-5 h-10 w-10 items-center justify-center rounded-full bg-warm">
-          <Text className="font-bold text-saffron">{activeStep + 1}</Text>
+          <Text className="font-bold text-saffronText">{activeStep + 1}</Text>
         </View>
         <Text className="text-xl font-semibold leading-8 text-ink">{steps[activeStep]}</Text>
         <View className="mt-8 flex-row gap-3">
@@ -172,7 +172,7 @@ export default function PracticeDetailScreen() {
       {practice.warnings ? (
         <View className="mt-4 flex-row items-start gap-2 rounded-card bg-roseSoft p-4">
           <Ionicons name="warning-outline" size={19} color={colors.rose} />
-          <Text className="flex-1 text-sm leading-5 text-rose">{practice.warnings}</Text>
+          <Text className="flex-1 text-sm leading-5 text-roseText">{practice.warnings}</Text>
         </View>
       ) : null}
       <View className="mt-5">
@@ -189,7 +189,7 @@ export default function PracticeDetailScreen() {
       {practice.category === "Puja" && !practice.warnings ? (
         <View className="mt-4 flex-row items-start gap-2 rounded-card bg-roseSoft p-4">
           <Ionicons name="warning-outline" size={19} color={colors.rose} />
-          <Text className="flex-1 text-sm leading-5 text-rose">
+          <Text className="flex-1 text-sm leading-5 text-roseText">
             Never leave a flame unattended. Use a stable, heat-safe surface and keep it away from
             children, pets, fabrics, and draughts.
           </Text>

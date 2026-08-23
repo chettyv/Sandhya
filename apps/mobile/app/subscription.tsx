@@ -191,7 +191,7 @@ export default function SubscriptionScreen() {
             Support carefully sourced Hindu learning and make more room for your own questions.
           </Text>
           <View className="mt-5 rounded-full bg-warm px-4 py-2">
-            <Text className="text-sm font-semibold text-saffron">
+            <Text className="text-sm font-semibold text-saffronText">
               {subscriptionChecking
                 ? "Checking plan…"
                 : isPlus
@@ -297,14 +297,14 @@ export default function SubscriptionScreen() {
           )
         ) : (
           <View className="mt-8 rounded-card bg-sageSoft p-4">
-            <Text className="font-semibold text-sage">
+            <Text className="font-semibold text-sageText">
               {subscription.status === "billing_issue"
                 ? "Your Plus billing needs attention."
                 : subscription.status === "cancelled"
                   ? "Your Plus access is active until the end of the current period."
                   : "Your Plus access is active."}
             </Text>
-            <Text className="mt-1 text-sm leading-5 text-sage">
+            <Text className="mt-1 text-sm leading-5 text-sageText">
               {subscription.status === "billing_issue"
                 ? "Update your store payment method to keep uninterrupted access."
                 : "Thank you for supporting a respectful, source-conscious learning space."}
@@ -315,7 +315,7 @@ export default function SubscriptionScreen() {
                 onPress={manageSubscription}
                 className="mt-3 self-start rounded-full border border-sage px-4 py-2"
               >
-                <Text className="text-sm font-semibold text-sage">Manage subscription</Text>
+                <Text className="text-sm font-semibold text-sageText">Manage subscription</Text>
               </Pressable>
             ) : null}
           </View>
@@ -353,7 +353,7 @@ function PlanButton({
             {option?.price ? `${option.price} · ${fallbackSubtitle}` : fallbackSubtitle}
           </Text>
         </View>
-        <Text className="font-semibold text-saffron">Upgrade</Text>
+        <Text className="font-semibold text-saffronText">Upgrade</Text>
       </View>
     </Pressable>
   );

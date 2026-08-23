@@ -89,7 +89,7 @@ function VerseRow({
     >
       {verseNumber ? (
         <View className="flex-row items-baseline gap-2">
-          <Text className="text-xs font-semibold text-saffron">{verseNumber}</Text>
+          <Text className="text-xs font-semibold text-saffronText">{verseNumber}</Text>
         </View>
       ) : null}
       <View className="mt-1">

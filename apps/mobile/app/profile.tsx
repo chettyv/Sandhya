@@ -84,7 +84,7 @@ export default function ProfileScreen() {
             }}
           >
             <Text className="mt-4 text-2xl font-semibold text-ink">
-              {displayName} <Text className="text-base text-saffron">Edit</Text>
+              {displayName} <Text className="text-base text-saffronText">Edit</Text>
             </Text>
           </Pressable>
         )}
@@ -109,7 +109,7 @@ export default function ProfileScreen() {
             </Text>
           </View>
           <Pressable accessibilityRole="button" onPress={() => router.push("/subscription")}>
-            <Text className="font-semibold text-saffron">Manage</Text>
+            <Text className="font-semibold text-saffronText">Manage</Text>
           </Pressable>
         </View>
       ) : (

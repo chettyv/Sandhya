@@ -236,7 +236,7 @@ export default function SignInScreen() {
             }}
             className="mt-6 p-3"
           >
-            <Text className="font-semibold text-saffron">Use another email</Text>
+            <Text className="font-semibold text-saffronText">Use another email</Text>
           </Pressable>
         </View>
       </Page>
@@ -327,7 +327,7 @@ export default function SignInScreen() {
                 onPress={() => setAuthMode(authMode === "sign-in" ? "sign-up" : "sign-in")}
                 className="p-1"
               >
-                <Text className="text-sm font-semibold text-saffron">
+                <Text className="text-sm font-semibold text-saffronText">
                   {authMode === "sign-in" ? "Create an account" : "I already have an account"}
                 </Text>
               </Pressable>

@@ -66,7 +66,7 @@ export function TextStep({
         entering={animate ? FadeInUp.delay(220).duration(360).easing(EASE_OUT) : undefined}
       >
         <Animated.View style={[styles.field, fieldStyle]}>
-          <Text className="mb-2 text-[11px] font-semibold uppercase tracking-[1.5px] text-saffron">
+          <Text className="mb-2 text-[11px] font-semibold uppercase tracking-[1.5px] text-saffronText">
             Name
           </Text>
           <TextInput

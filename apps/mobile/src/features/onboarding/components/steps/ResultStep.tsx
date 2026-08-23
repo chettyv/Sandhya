@@ -141,7 +141,7 @@ export function Result({
           </Animated.View>
           <View style={styles.cardHeader}>
             <View style={styles.eyebrowDot} />
-            <Text className="text-[11px] font-semibold uppercase tracking-[1px] text-saffron">
+            <Text className="text-[11px] font-semibold uppercase tracking-[1px] text-saffronText">
               Today's verse · {shloka.textRef}
             </Text>
           </View>
@@ -161,7 +161,7 @@ export function Result({
             <Ionicons name="flag-outline" size={20} color={colors.black} />
           </View>
           <View style={styles.startText}>
-            <Text className="text-[11px] font-semibold uppercase tracking-[1px] text-saffron">
+            <Text className="text-[11px] font-semibold uppercase tracking-[1px] text-saffronText">
               Start here
             </Text>
             <Text className="mt-1 text-[20px] font-semibold leading-7 text-ink">
@@ -174,7 +174,7 @@ export function Result({
 
       {rows.length > 0 ? (
         <Animated.View entering={enter(700)} style={styles.summary}>
-          <Text className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-saffron">
+          <Text className="mb-1 text-[11px] font-semibold uppercase tracking-[1px] text-saffronText">
             What you told us
           </Text>
           {rows.map((row, index) => (

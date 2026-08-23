@@ -5,6 +5,12 @@ export const colors = {
   plum: "#7F6278",
   aubergine: "#5A2E22",
   saffron: "#D97824",
+  // Text-safe accents. The brand saffron is a fill colour (black on it is
+  // 6.7:1) but as text on paper it is only 3.2:1; these pass 4.5:1 on every
+  // light ground in use (paper, parchment, warm, sand, surface2).
+  saffronText: "#A04F17",
+  sageText: "#4F6E54",
+  roseText: "#A33A2A",
   gold: "#E9B949",
   parchment: "#FCF8EF",
   paper: "#FFFFFF",

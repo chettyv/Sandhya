@@ -217,7 +217,9 @@ export default function AskScreen() {
               ))}
               <View className="mt-3 flex-row items-start gap-2 rounded-card bg-sageSoft p-3.5">
                 <Ionicons name="shield-checkmark-outline" size={19} color={colors.sage} />
-                <Text className="flex-1 text-sm leading-5 text-sage">{t("groundedNotice")}</Text>
+                <Text className="flex-1 text-sm leading-5 text-sageText">
+                  {t("groundedNotice")}
+                </Text>
               </View>
             </>
           ) : null}
@@ -313,7 +315,7 @@ export default function AskScreen() {
                 ) : null}
                 {mutation.data.answer.safety_note ? (
                   <View className="mt-4 rounded-card bg-roseSoft p-3.5">
-                    <Text className="text-sm leading-5 text-rose">
+                    <Text className="text-sm leading-5 text-roseText">
                       {mutation.data.answer.safety_note}
                     </Text>
                   </View>
@@ -332,7 +334,7 @@ export default function AskScreen() {
                 ) : null}
                 {mutation.data.answer.suggested_practice ? (
                   <View className="mt-5 rounded-card bg-warm p-3.5">
-                    <Text className="mb-1 text-sm font-semibold text-saffron">
+                    <Text className="mb-1 text-sm font-semibold text-saffronText">
                       {t("suggestedPractice")}
                     </Text>
                     <Text className="text-sm leading-5 text-ink">
@@ -421,7 +423,7 @@ export default function AskScreen() {
                 }}
                 className="mt-4 items-center py-3"
               >
-                <Text className="font-semibold text-saffron">{t("newConversation")}</Text>
+                <Text className="font-semibold text-saffronText">{t("newConversation")}</Text>
               </Pressable>
             </View>
           ) : null}

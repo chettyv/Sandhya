@@ -114,10 +114,10 @@ export default function FestivalDetailScreen() {
         style={{ backgroundColor: `${festival.color}18` }}
       >
         <View className="h-16 w-16 items-center justify-center rounded-card bg-warm">
-          <Text className="text-xs font-bold uppercase" style={{ color: colors.saffron }}>
+          <Text className="text-xs font-bold uppercase" style={{ color: colors.saffronText }}>
             {festival.monthLabel}
           </Text>
-          <Text className="text-2xl font-bold" style={{ color: colors.saffron }}>
+          <Text className="text-2xl font-bold" style={{ color: colors.saffronText }}>
             {festival.dayLabel}
           </Text>
         </View>
@@ -159,7 +159,7 @@ export default function FestivalDetailScreen() {
                   </Text>
                   <Text className="text-sm leading-5 text-muted">Source: {reckoning.source}</Text>
                   {reckoning.disagreement ? (
-                    <Text className="mt-1 text-sm leading-5 text-rose">
+                    <Text className="mt-1 text-sm leading-5 text-roseText">
                       Sources disagree: {reckoning.disagreement}
                     </Text>
                   ) : null}
@@ -184,7 +184,7 @@ export default function FestivalDetailScreen() {
         {festival.observance.map((item, index) => (
           <View key={item} className="mb-4 flex-row gap-3 last:mb-0">
             <View className="h-7 w-7 items-center justify-center rounded-full bg-warm">
-              <Text className="text-xs font-bold text-saffron">{index + 1}</Text>
+              <Text className="text-xs font-bold text-saffronText">{index + 1}</Text>
             </View>
             <Text className="flex-1 text-[15px] leading-6 text-ink">{item}</Text>
           </View>

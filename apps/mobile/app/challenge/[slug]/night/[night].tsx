@@ -147,7 +147,7 @@ export default function ChallengeNightScreen() {
 
   return (
     <Page onScroll={handleScroll}>
-      <Text className="text-[11px] font-semibold uppercase text-saffron">
+      <Text className="text-[11px] font-semibold uppercase text-saffronText">
         Night {session.night}
         {totalNights ? ` of ${totalNights}` : ""}
         {session.deityFocus ? ` · ${session.deityFocus}` : ""}
@@ -208,7 +208,7 @@ export default function ChallengeNightScreen() {
       {session.content.reflection ? (
         <View onLayout={recordOffset("reflection")}>
           <Card className="mt-6">
-            <Text className="text-[11px] font-semibold uppercase text-saffron">Reflect</Text>
+            <Text className="text-[11px] font-semibold uppercase text-saffronText">Reflect</Text>
             <Text className="mt-2 text-[15px] leading-7 text-ink">
               {session.content.reflection}
             </Text>
@@ -248,7 +248,7 @@ export default function ChallengeNightScreen() {
           />
         )}
         {completion.data === false ? (
-          <Text className="mt-3 text-center text-sm text-rose">
+          <Text className="mt-3 text-center text-sm text-roseText">
             We couldn't save that just now. Check your connection and try again.
           </Text>
         ) : null}
@@ -273,7 +273,9 @@ function ShlokaCard({ block, endowed }: { block: ShlokaBlock; endowed?: boolean 
       {endowed ? (
         <View className="mb-2 flex-row items-center gap-1.5">
           <Ionicons name="checkmark-circle" size={16} color={colors.sage} />
-          <Text className="text-xs font-semibold uppercase text-sage">In hand from the start</Text>
+          <Text className="text-xs font-semibold uppercase text-sageText">
+            In hand from the start
+          </Text>
         </View>
       ) : null}
       <Text className="text-[19px] leading-9 text-ink">{block.devanagari}</Text>

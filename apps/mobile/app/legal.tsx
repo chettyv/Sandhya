@@ -32,7 +32,7 @@ export default function LegalScreen() {
             accessibilityRole="alert"
             className="mt-5 rounded-card border border-saffron bg-warm p-4"
           >
-            <Text className="font-semibold text-saffron">Release links are not configured</Text>
+            <Text className="font-semibold text-saffronText">Release links are not configured</Text>
             <Text className="mt-1 text-sm leading-5 text-muted">
               This preview contains the app&apos;s data summary, but the final build must publish
               its Privacy Policy and Terms of Use URLs before distribution.

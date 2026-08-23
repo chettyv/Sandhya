@@ -73,7 +73,9 @@ export function TopBar({
     <View className="mb-4 flex-row items-center justify-between gap-3">
       <View className="min-w-0 flex-1">
         {eyebrow ? (
-          <Text className="mb-0.5 text-[11px] font-semibold uppercase text-saffron">{eyebrow}</Text>
+          <Text className="mb-0.5 text-[11px] font-semibold uppercase text-saffronText">
+            {eyebrow}
+          </Text>
         ) : null}
         <Text numberOfLines={1} className="text-[22px] font-semibold leading-7 text-ink">
           {title}
@@ -129,7 +131,7 @@ export function SectionHeader({
       <Text className="text-[17px] font-semibold text-ink">{title}</Text>
       {action && onAction ? (
         <Pressable accessibilityRole="button" onPress={onAction} hitSlop={10}>
-          <Text className="text-sm font-semibold text-saffron">{action}</Text>
+          <Text className="text-sm font-semibold text-saffronText">{action}</Text>
         </Pressable>
       ) : null}
     </View>
@@ -146,7 +148,8 @@ export function Pill({
   tone?: "neutral" | "warm" | "sage";
 }) {
   const style = tone === "warm" ? "bg-warm" : tone === "sage" ? "bg-sageSoft" : "bg-sand";
-  const color = tone === "sage" ? colors.sage : tone === "warm" ? colors.saffron : colors.muted;
+  const color =
+    tone === "sage" ? colors.sageText : tone === "warm" ? colors.saffronText : colors.ink;
   return (
     <View className={`self-start flex-row items-center gap-1.5 rounded-md px-2.5 py-1 ${style}`}>
       {icon ? <Ionicons name={icon} size={13} color={color} /> : null}
@@ -268,7 +271,7 @@ export function ListRow({
         <Ionicons name={icon} size={19} color={danger ? colors.rose : colors.plum} />
       </View>
       <View className="min-w-0 flex-1">
-        <Text className={`text-[15px] font-semibold ${danger ? "text-rose" : "text-ink"}`}>
+        <Text className={`text-[15px] font-semibold ${danger ? "text-roseText" : "text-ink"}`}>
           {title}
         </Text>
         {subtitle ? <Text className="mt-0.5 text-sm leading-5 text-muted">{subtitle}</Text> : null}

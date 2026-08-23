@@ -67,7 +67,7 @@ export function StartingPointCard() {
       >
         <Ionicons name="flag-outline" size={23} color={colors.saffron} />
         <View className="min-w-0 flex-1">
-          <Text className="text-[11px] font-semibold uppercase text-saffron">
+          <Text className="text-[11px] font-semibold uppercase text-saffronText">
             Your starting point
           </Text>
           <Text className="mt-0.5 font-semibold text-ink">{point.title}</Text>
