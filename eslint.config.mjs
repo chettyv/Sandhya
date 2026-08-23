@@ -74,8 +74,11 @@ export default tseslint.config(
       "scripts/**/*.{js,mjs,cjs,ts}",
       "apps/admin/**/*.{js,mjs,cjs}",
       "apps/web/build.mjs",
+      // jest-expo smoke harness: CommonJS setup files evaluated by Jest itself.
+      "apps/mobile/jest.*.js",
     ],
     ...tseslint.configs.disableTypeChecked,
+    languageOptions: { globals: { jest: "readonly", require: "readonly", module: "writable" } },
     rules: {
       ...tseslint.configs.disableTypeChecked.rules,
       "no-console": "off",
