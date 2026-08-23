@@ -77,12 +77,19 @@ export async function fetchFeaturedChallenge(): Promise<ChallengeSummary | null>
   return candidates[0] ?? null;
 }
 
+/**
+ * Resolves to null only when the challenge does not exist (or is not
+ * published). A missing client or a failed request throws, so the screen can
+ * tell "not found" apart from "could not load" instead of blaming the
+ * connection for both.
+ */
 export async function fetchChallengeOverview(slug: string): Promise<ChallengeOverview | null> {
-  if (!supabase) return null;
+  if (!supabase) throw new Error("Challenge service unavailable");
   const { data, error } = (await supabase.rpc("get_challenge_overview", {
     p_slug: slug,
-  })) as unknown as { data: unknown; error: unknown };
-  if (error || data === null || typeof data !== "object") return null;
+  })) as unknown as { data: unknown; error: { message?: string } | null };
+  if (error) throw new Error(error.message ?? "Challenge request failed");
+  if (data === null || typeof data !== "object") return null;
   const raw = data as Record<string, unknown>;
   const challenge = parseChallengeRow(raw.challenge);
   if (!challenge) return null;
@@ -106,11 +113,20 @@ export async function fetchChallengeSession(
   night: number,
 ): Promise<ChallengeSessionResult> {
   if (!supabase) return { status: "unavailable" };
+  // get_challenge_session is granted to authenticated users only; calling it
+  // signed out yields a PostgREST permission error, which must read as
+  // "sign in", not as a connectivity failure.
+  const { data: auth } = await supabase.auth.getSession();
+  if (!auth.session) return { status: "auth_required" };
   const { data, error } = (await supabase.rpc("get_challenge_session", {
     p_slug: slug,
     p_night: night,
-  })) as unknown as { data: unknown; error: unknown };
-  if (error || data === null || typeof data !== "object") return { status: "unavailable" };
+  })) as unknown as { data: unknown; error: { code?: string; message?: string } | null };
+  if (error) {
+    const denied = error.code === "42501" || /permission denied/i.test(error.message ?? "");
+    return { status: denied ? "auth_required" : "unavailable" };
+  }
+  if (data === null || typeof data !== "object") return { status: "unavailable" };
   const raw = data as Record<string, unknown>;
   if (raw.status === "locked" && typeof raw.unlock_date === "string") {
     return { status: "locked", unlockDate: raw.unlock_date };

@@ -7,12 +7,29 @@ export type ContentKind =
   | "text"
   | "passage";
 
+/**
+ * How a published festival date was reckoned. A date is only trustworthy with
+ * all four of: the calendar system, the observing community wherever practice
+ * splits, the location the timing was computed for, and the source — with any
+ * disagreement between sources reported rather than silently resolved.
+ */
+export type FestivalDateReckoning = {
+  system: "amanta" | "purnimanta" | "solar" | "other";
+  /** e.g. "Smārta" / "Vaiṣṇava" — required wherever the observance splits. */
+  community?: string;
+  location: string;
+  source: string;
+  disagreement?: string;
+};
+
 export type Festival = {
   id: string;
   name: string;
   variant?: string;
   /** Null means the guide is available but this preview does not calculate a local date. */
   date: string | null;
+  /** Absent until the date carries its reckoning; the UI says so explicitly. */
+  dateReckoning?: FestivalDateReckoning | null;
   dayLabel: string;
   monthLabel: string;
   summary: string;

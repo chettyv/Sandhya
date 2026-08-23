@@ -13,7 +13,14 @@ import { localDateKey } from "@/lib/activity";
 import { useSubscription } from "@/lib/subscriptions";
 import { supabase } from "@/lib/supabase";
 import { describeVariations } from "@/lib/variationNotes";
-import type { Concept, Deity, Festival, Practice, SacredText } from "@/types/content";
+import type {
+  Concept,
+  Deity,
+  Festival,
+  FestivalDateReckoning,
+  Practice,
+  SacredText,
+} from "@/types/content";
 
 export type DailyReflectionContent = ReturnType<typeof getFallbackDailyReflection>;
 export type ContentSource = "fallback" | "partial" | "connected";
@@ -47,6 +54,29 @@ function dateParts(date: string) {
   return {
     dayLabel: String(parsed.getDate()).padStart(2, "0"),
     monthLabel: parsed.toLocaleDateString("en-GB", { month: "short" }).toUpperCase(),
+  };
+}
+
+const RECKONING_SYSTEMS = new Set(["amanta", "purnimanta", "solar", "other"]);
+
+/** Accepts the festivals.date_reckoning jsonb; anything incomplete is treated as absent. */
+function parseDateReckoning(value: unknown): FestivalDateReckoning | null {
+  if (!value || typeof value !== "object") return null;
+  const raw = value as Record<string, unknown>;
+  const system = typeof raw.system === "string" ? raw.system.toLowerCase() : "";
+  const location = typeof raw.location === "string" ? raw.location.trim() : "";
+  const source = typeof raw.source === "string" ? raw.source.trim() : "";
+  if (!RECKONING_SYSTEMS.has(system) || !location || !source) return null;
+  return {
+    system: system as FestivalDateReckoning["system"],
+    community:
+      typeof raw.community === "string" && raw.community.trim() ? raw.community.trim() : undefined,
+    location,
+    source,
+    disagreement:
+      typeof raw.disagreement === "string" && raw.disagreement.trim()
+        ? raw.disagreement.trim()
+        : undefined,
   };
 }
 
@@ -118,6 +148,7 @@ async function fetchLibrary(): Promise<ContentLibrary> {
       meaning?: string | null;
       home_observance?: string | null;
       regional_variations?: Record<string, unknown> | null;
+      date_reckoning?: Record<string, unknown> | null;
       traditions?: string[];
       image_url?: string | null;
     };
@@ -134,6 +165,7 @@ async function fetchLibrary(): Promise<ContentLibrary> {
         name: item.name,
         variant: item.name_variants?.[0],
         date: normalizedDate,
+        dateReckoning: normalizedDate ? parseDateReckoning(item.date_reckoning) : null,
         ...parts,
         summary: item.short_description ?? "A festival in the Hindu calendar.",
         meaning:
@@ -145,7 +177,7 @@ async function fetchLibrary(): Promise<ContentLibrary> {
           item.regional_variations,
           "Observances vary by family, region, and tradition.",
         ),
-        color: "#775B82",
+        color: "#7F6278",
         isPremium: Boolean((item as { is_premium?: boolean }).is_premium),
       } satisfies Festival,
     ];
@@ -268,20 +300,13 @@ async function fetchLibrary(): Promise<ContentLibrary> {
     deityResult,
     textResult,
   ].filter((result) => result.error).length;
-  const remoteMissing = [
-    !reflectionResult.data,
-    !(Array.isArray(festivalResult.data) && festivalResult.data.length),
-    !(Array.isArray(practiceResult.data) && practiceResult.data.length),
-    !(Array.isArray(conceptResult.data) && conceptResult.data.length),
-    !(Array.isArray(deityResult.data) && deityResult.data.length),
-    !(Array.isArray(textResult.data) && textResult.data.length),
-  ].filter(Boolean).length;
+  // The notice this feeds tells the user the live library could not be
+  // reached, so only failed requests count. A table that answers with zero
+  // rows is not a connectivity problem: the bundled library is the library
+  // for that section by design, and warning about it on every screen while
+  // the backend is still being seeded would be false.
   const source: ContentSource =
-    remoteErrors === 6 || remoteMissing === 6
-      ? "fallback"
-      : remoteErrors > 0 || remoteMissing > 0
-        ? "partial"
-        : "connected";
+    remoteErrors === 6 ? "fallback" : remoteErrors > 0 ? "partial" : "connected";
 
   return {
     source,
@@ -305,6 +330,11 @@ export function useCuratedContent() {
   return useQuery({
     queryKey: ["curated-content", subscription.plan],
     queryFn: fetchLibrary,
+    // The bundled library renders synchronously, but it must count as stale
+    // from the start: with the default 5-minute staleTime, initialData alone
+    // is treated as fresh and the live Supabase fetch never runs, so every
+    // screen shows the "offline library" notice even when online.
     initialData: getFallbackLibrary(),
+    initialDataUpdatedAt: 0,
   });
 }
