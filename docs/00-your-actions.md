@@ -10,7 +10,7 @@ Last updated: 18 August 2026
 | ------------------- | ------------------------------------------ |
 | Launch              | Free launch                                |
 | Supabase            | Set up for authentication and syncing only |
-| EAS/device build    | Optional; later                            |
+| EAS project/build   | Project linked; device build later         |
 | Apple/Google stores | Not now                                    |
 | Content             | Keep improving and expanding               |
 | Audio               | Not now                                    |
@@ -22,7 +22,7 @@ Last updated: 18 August 2026
 
 - Local coding, content, validation, tests, and generators need no MCP or plugin access.
 - Supabase can be connected through the Supabase plugin, or I can use the confirmed local project configuration. Do not send keys or passwords in chat.
-- EAS uses an Expo login later; no MCP connection is required now.
+- EAS is linked to the existing Expo project under `chettyvs-team`; no MCP connection is required.
 - GitHub and Cloudflare access are only needed when the website is intentionally hosted.
 - Sentry and PostHog access are only needed when monitoring is intentionally enabled.
 
@@ -103,19 +103,16 @@ Do not set up AI yet. Free launch can use offline content and optional account s
 
 If AI is enabled later, the keys must be server-side Supabase secrets, never mobile-app variables: `OPENAI_API_KEY`, the selected answer-provider key, `SUPABASE_SERVICE_ROLE_KEY`, and `LLM_MONTHLY_BUDGET_USD`. Do not send these values in chat.
 
-## 4. EAS and a real phone build — later
+## 4. EAS project — set up; real phone build later
 
-This is optional now. Expo Go is sufficient for current free-launch testing.
+The Expo account and EAS project are now connected:
 
-When a native build is needed:
+- Expo account/team: `chettyvs-team`
+- Expo project: `Sandhya` / `sandhya`
+- EAS project ID: stored in `apps/mobile/app.json` and the local `.env`
+- App owner: `chettyvs-team`
 
-1. Create or confirm an account at <https://expo.dev>.
-2. Sign in locally.
-3. Tell me `Expo account ready`.
-4. I initialize the EAS project.
-5. I add `EXPO_PUBLIC_EAS_PROJECT_ID` locally.
-6. I create a development build.
-7. We install it on a phone and test native features.
+No cloud build has been started. When native testing is needed, I will run a development build after the local EAS CLI login is available, then we will install it on a phone and test native features.
 
 ## 5. Apple and Google stores — not now
 
@@ -145,7 +142,7 @@ There is nothing for you to do now. Later: create the projects, save the DSN/key
 
 ## What to do now
 
-Complete only the Supabase verification in Section 1 and send the confirmation block. Everything else is either handled by me locally or deliberately deferred.
+The Supabase setup and EAS project link are complete. Everything else is either handled by me locally or deliberately deferred.
 
 ---
 

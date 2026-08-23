@@ -23,7 +23,11 @@ pnpm --filter @sandhya/mobile ios
 pnpm --filter @sandhya/mobile web
 ```
 
-For native purchase and push testing, create a development build with the included `eas.json`; Expo Go is only suitable for the web/local UI loop, not real store purchases or Android remote push.
+`start`, `android` and `ios` run in **Expo Go mode** (`expo start --go`), so the QR code opens directly in Expo Go when scanned with the iPhone Camera app. Because `expo-dev-client` is installed, a bare `npx expo start` defaults to development-build mode and prints a `sandhya://` QR that a phone without a development build cannot open — use the scripts above, or press `s` in the terminal to switch.
+
+The app is pinned to **Expo SDK 54**: the App Store build of Expo Go stops at SDK 54 (newer SDKs need the builds from <https://expo.dev/go>). Do not bump `expo` without also deciding how the phone will run it. Check the phone's SDK in Expo Go → profile tab if the project refuses to load.
+
+For native purchase and push testing, create a development build with the included `eas.json` and run `pnpm --filter @sandhya/mobile start:dev-client`; Expo Go is only suitable for the web/local UI loop, not real store purchases or Android remote push.
 
 ## Environment
 

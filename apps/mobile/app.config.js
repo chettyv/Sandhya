@@ -17,7 +17,7 @@ if (fs.existsSync(notificationsPackage)) {
   plugins.push([
     "expo-notifications",
     {
-      color: "#F6B83F",
+      color: "#D97824",
       defaultChannel: "daily-reflections",
     },
   ]);

@@ -2,11 +2,12 @@
   "expo": {
     "name": "Sandhya",
     "slug": "sandhya",
+    "owner": "chettyvs-team",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/sandhya-icon.png",
     "scheme": "sandhya",
-    "userInterfaceStyle": "automatic",
+    "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "app.sandhya.mobile",
@@ -17,7 +18,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/sandhya-icon.png",
-        "backgroundColor": "#26172B"
+        "backgroundColor": "#D97824"
       },
       "predictiveBackGestureEnabled": true,
       "package": "app.sandhya.mobile"
@@ -30,21 +31,28 @@
     "plugins": [
       "expo-router",
       "expo-secure-store",
+      "expo-font",
+      "expo-web-browser",
       [
         "expo-splash-screen",
         {
           "image": "./assets/images/sandhya-icon.png",
           "imageWidth": 180,
           "resizeMode": "contain",
-          "backgroundColor": "#26172B",
+          "backgroundColor": "#FCF8EF",
           "dark": {
-            "backgroundColor": "#170F1B"
+            "backgroundColor": "#F4E9DA"
           }
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9f09c3de-e627-4973-bc30-3b3ac2653b5c"
+      }
     }
   }
 }

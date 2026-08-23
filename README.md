@@ -52,10 +52,10 @@ Sandhya/
 
 ```bash
 pnpm install
-cd apps/mobile && npx expo start
+pnpm --filter @sandhya/mobile start
 ```
 
-Scan the QR with Expo Go on your phone ([full guide](docs/testing-in-expo-go.md)), or press `w` for the web build. The app runs fully offline on the bundled catalog; add `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` to `.env` for auth + live data.
+Scan the QR with Expo Go on your phone ([full guide](docs/testing-in-expo-go.md)), or press `w` for the web build. The `start` script forces Expo Go mode (`expo start --go`); a bare `npx expo start` defaults to development-build mode because `expo-dev-client` is installed, and its QR cannot be opened by a phone that has no development build. The app is pinned to Expo SDK 54 — the last SDK the App Store build of Expo Go runs ([details](apps/mobile/README.md#run-locally)). The app runs fully offline on the bundled catalog; add `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` to `.env` for auth + live data.
 
 ## Prerequisites
 
