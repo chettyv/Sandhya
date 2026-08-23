@@ -11,10 +11,7 @@ export function FestivalRow({ festival, onPress }: { festival: Festival; onPress
       onPress={onPress}
       className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-4"
     >
-      <View
-        className="h-12 w-12 items-center justify-center rounded-2xl"
-        style={{ backgroundColor: "#FFF1D6" }}
-      >
+      <View className="h-12 w-12 items-center justify-center rounded-2xl bg-warm">
         <Text className="text-[10px] font-bold uppercase" style={{ color: colors.saffron }}>
           {festival.monthLabel}
         </Text>

@@ -1,4 +1,4 @@
-import { localDateKey } from "./activity";
+import { dayOfYear, localDateKey } from "./activity";
 
 import shlokaBank from "@/data/shlokaBank.core.json";
 
@@ -74,7 +74,15 @@ function readerRank(slug: string): number {
 
 export type ReaderChapter = { key: string; title: string; verses: Shloka[] };
 
+// Grouping 661 verses is pure and the bank is static, so it is done once.
+let readerChaptersCache: ReaderChapter[] | undefined;
+
 export function readerChapters(): ReaderChapter[] {
+  readerChaptersCache ??= buildReaderChapters();
+  return readerChaptersCache;
+}
+
+function buildReaderChapters(): ReaderChapter[] {
   const groups = new Map<string, Shloka[]>();
   for (const entry of shlokas) {
     const key = chapterKey(entry.slug);
@@ -154,6 +162,19 @@ export function readableSource(source: string): string {
   }
 }
 
+// One source line for a whole chapter or text, for list surfaces that show
+// many verses: the lead verse's source with its own reference stripped
+// ("Katha Upanishad 2.2.9, Sanskrit Wikisource…" -> "Sanskrit Wikisource…").
+// Every verse in a chapter comes from the same edition in this bank.
+export function chapterSource(verses: Shloka[]): string {
+  const lead = verses.find((verse) => !verse.slug.endsWith("-shanti")) ?? verses[0];
+  if (!lead) return "";
+  const source = readableSource(lead.source);
+  return source.startsWith(lead.textRef)
+    ? source.slice(lead.textRef.length).replace(/^[\s,]+/, "")
+    : source;
+}
+
 export function shlokaTranslation(shloka: Shloka, language: string): string {
   return (language !== "en" && shloka.translations[language]) || shloka.translation;
 }
@@ -186,11 +207,7 @@ export function dailyShlokaFrom(
 ): Shloka | undefined {
   const sequence = rotationSequence(bank, preferenceTags, preferredPrefixes);
   if (sequence.length === 0) return undefined;
-  const [year = 0, month = 1, day = 1] = dateKey.split("-").map(Number);
-  const date = new Date(year, month - 1, day);
-  const startOfYear = new Date(year, 0, 1);
-  const dayOfYear = Math.floor((date.getTime() - startOfYear.getTime()) / 86_400_000);
-  return sequence[dayOfYear % sequence.length];
+  return sequence[dayOfYear(dateKey) % sequence.length];
 }
 
 // Daily prayer segmentation: units carrying the morning/evening context tags
@@ -211,11 +228,7 @@ export function dailyPrayer(
 ): Shloka | undefined {
   const pool = bank.filter((entry) => entry.tags.includes(context));
   if (pool.length === 0) return undefined;
-  const [year = 0, month = 1, day = 1] = dateKey.split("-").map(Number);
-  const date = new Date(year, month - 1, day);
-  const startOfYear = new Date(year, 0, 1);
-  const dayOfYear = Math.floor((date.getTime() - startOfYear.getTime()) / 86_400_000);
-  return pool[dayOfYear % pool.length];
+  return pool[dayOfYear(dateKey) % pool.length];
 }
 
 // The reordered daily pool: every curated verse exactly once, with

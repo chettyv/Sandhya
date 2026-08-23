@@ -1,7 +1,7 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { ContentSourceNotice } from "@/components/ContentSourceNotice";
@@ -15,13 +15,19 @@ import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
 import { paymentsEnabled } from "@/lib/payments";
-import { dailyPrayer, dailyShloka, prayerContextForHour, shlokaTranslation } from "@/lib/shlokas";
+import {
+  dailyPrayer,
+  dailyShloka,
+  prayerContextForHour,
+  readableSource,
+  shlokaTranslation,
+} from "@/lib/shlokas";
 import { pickConcepts, pickStartingPractice } from "@/lib/startingPoint";
 import { useSubscription } from "@/lib/subscriptions";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { useStartingProfile } from "@/store/useStartingProfile";
-import { colors } from "@/theme/tokens";
+import { colors, fonts } from "@/theme/tokens";
 
 function buildWeek() {
   const today = new Date();
@@ -51,7 +57,8 @@ export default function HomeScreen() {
   const { data: content } = useCuratedContent();
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
-  const week = buildWeek();
+  const todayKey = localDateKey();
+  const week = useMemo(() => buildWeek(), [todayKey]);
   const gateFree = paymentsEnabled && subscription.plan === "free";
   const availablePractices = gateFree ? practices.filter((item) => !item.isPremium) : practices;
   const availableFestivals = gateFree ? festivals.filter((item) => !item.isPremium) : festivals;
@@ -105,8 +112,9 @@ export default function HomeScreen() {
         </View>
         <Pressable
           accessibilityRole="button"
+          accessibilityLabel={`${currentStreak} day streak. Open the calendar`}
           onPress={() => router.push("/(tabs)/calendar")}
-          className="flex-row items-center gap-2 rounded-full bg-surface2 px-3 py-2"
+          className="min-h-11 flex-row items-center gap-2 rounded-full bg-surface2 px-3 py-2"
         >
           <Ionicons name="flame" size={18} color={colors.saffron} />
           <Text className="font-semibold text-ink">{currentStreak}</Text>
@@ -124,7 +132,7 @@ export default function HomeScreen() {
             <View key={`${item.day}-${item.date}`} className="items-center gap-2">
               <Text className="text-xs font-semibold text-muted">{item.day}</Text>
               <View
-                className={`h-12 w-12 items-center justify-center rounded-2xl border ${active ? "border-saffron bg-surface2" : done ? "border-saffron bg-[#FFF1D6]" : "border-line bg-sand"}`}
+                className={`h-12 w-12 items-center justify-center rounded-2xl border ${active ? "border-saffron bg-surface2" : done ? "border-saffron bg-warm" : "border-line bg-sand"}`}
               >
                 <Text className={`text-base font-semibold ${active ? "text-ink" : "text-muted"}`}>
                   {item.date}
@@ -180,7 +188,7 @@ export default function HomeScreen() {
         <Pressable
           accessibilityRole="button"
           onPress={() => router.push("/subscription")}
-          className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-[#FFF1D6] p-4"
+          className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-warm p-4"
         >
           <Ionicons name="sparkles-outline" size={23} color={colors.saffron} />
           <View className="min-w-0 flex-1">
@@ -218,6 +226,7 @@ export default function HomeScreen() {
               savedIds.includes(dailyReflection.id) ? "Remove saved reflection" : "Save reflection"
             }
             accessibilityRole="button"
+            hitSlop={10}
             onPress={() => syncSaved(dailyReflection.id)}
           >
             <Ionicons
@@ -341,7 +350,7 @@ export default function HomeScreen() {
             key={concept.id}
             accessibilityRole="button"
             onPress={() => router.push(`/concept/${concept.id}`)}
-            className={`min-h-32 flex-1 rounded-[22px] border border-line p-3.5 ${index === 0 ? "bg-[#FFF1D6]" : "bg-[#F0E6DA]"}`}
+            className={`min-h-32 flex-1 rounded-[22px] border border-line p-3.5 ${index === 0 ? "bg-warm" : "bg-[#F0E6DA]"}`}
           >
             <Text className="text-2xl text-plum">{concept.sanskrit}</Text>
             <Text className="mt-auto text-[16px] font-semibold text-ink">{concept.term}</Text>
@@ -360,8 +369,10 @@ export default function HomeScreen() {
 // prayer-tagged content is live in the bank.
 function DailyPrayerCard() {
   const router = useRouter();
+  const scriptPreference = useAppStore((state) => state.scriptPreference);
+  const todayKey = localDateKey();
   const prayerContext = prayerContextForHour(new Date().getHours());
-  const prayer = dailyPrayer(prayerContext);
+  const prayer = useMemo(() => dailyPrayer(prayerContext, todayKey), [prayerContext, todayKey]);
   if (!prayer) return null;
   return (
     <Pressable
@@ -379,11 +390,14 @@ function DailyPrayerCard() {
         </Text>
         <Ionicons name="chevron-forward" size={16} color={colors.muted} />
       </View>
-      <Text className="mt-2 text-[17px] leading-8 text-ink" numberOfLines={2}>
-        {prayer.devanagari}
-      </Text>
+      <View className="mt-2">
+        <VerseLines verse={prayer} preference={scriptPreference} compact numberOfLines={2} />
+      </View>
       <Text className="mt-1 text-sm leading-5 text-muted" numberOfLines={2}>
-        {prayer.sayIt}
+        {scriptPreference === "roman" ? prayer.iast : prayer.sayIt}
+      </Text>
+      <Text className="mt-2 text-xs leading-4 text-muted" numberOfLines={1}>
+        {readableSource(prayer.source)}
       </Text>
     </Pressable>
   );
@@ -395,7 +409,11 @@ function DailyShlokaCard() {
   const preferredTextPrefixes = useAppStore((state) => state.preferredTextPrefixes);
   const contentLanguage = useAppStore((state) => state.contentLanguage);
   const scriptPreference = useAppStore((state) => state.scriptPreference);
-  const shloka = dailyShloka(focusTags, undefined, preferredTextPrefixes);
+  const todayKey = localDateKey();
+  const shloka = useMemo(
+    () => dailyShloka(focusTags, todayKey, preferredTextPrefixes),
+    [focusTags, todayKey, preferredTextPrefixes],
+  );
   if (!shloka) return null;
   return (
     <Pressable
@@ -424,6 +442,9 @@ function DailyShlokaCard() {
           Carry it today: {shloka.reflection}
         </Text>
       ) : null}
+      <Text className="mt-2 text-xs leading-4 text-muted" numberOfLines={1}>
+        {readableSource(shloka.source)}
+      </Text>
     </Pressable>
   );
 }
@@ -473,7 +494,7 @@ function FeaturedChallengeCard() {
 
 const styles = StyleSheet.create({
   display: {
-    fontFamily: "Georgia",
+    fontFamily: fonts.display,
   },
   reflectionCard: {
     marginTop: 28,

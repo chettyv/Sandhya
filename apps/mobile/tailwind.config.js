@@ -15,6 +15,7 @@ module.exports = {
         surface: "#FFFFFF",
         surface2: "#FFF4E4",
         sand: "#F4E9DA",
+        warm: "#FFF1D6",
         sage: "#6D8C71",
         sageSoft: "#EAF1E9",
         rose: "#B94735",

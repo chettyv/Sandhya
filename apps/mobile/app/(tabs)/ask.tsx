@@ -292,7 +292,7 @@ export default function AskScreen() {
               </View>
               <Card>
                 <View className="mb-4 flex-row items-center gap-2">
-                  <View className="h-8 w-8 items-center justify-center rounded-full bg-[#FFF1D6]">
+                  <View className="h-8 w-8 items-center justify-center rounded-full bg-warm">
                     <Ionicons name="sparkles" size={16} color={colors.saffron} />
                   </View>
                   <Text className="font-semibold text-ink">Sandhya</Text>
@@ -331,7 +331,7 @@ export default function AskScreen() {
                   </View>
                 ) : null}
                 {mutation.data.answer.suggested_practice ? (
-                  <View className="mt-5 rounded-card bg-[#FFF1D6] p-3.5">
+                  <View className="mt-5 rounded-card bg-warm p-3.5">
                     <Text className="mb-1 text-sm font-semibold text-saffron">
                       {t("suggestedPractice")}
                     </Text>

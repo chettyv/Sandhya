@@ -190,7 +190,7 @@ export default function SubscriptionScreen() {
           <Text className="mt-2 text-center leading-6 text-[#FFF3DE]">
             Support carefully sourced Hindu learning and make more room for your own questions.
           </Text>
-          <View className="mt-5 rounded-full bg-[#FFF1D6] px-4 py-2">
+          <View className="mt-5 rounded-full bg-warm px-4 py-2">
             <Text className="text-sm font-semibold text-saffron">
               {subscriptionChecking
                 ? "Checking plan…"

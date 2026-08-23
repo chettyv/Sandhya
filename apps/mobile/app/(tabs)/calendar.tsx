@@ -206,7 +206,7 @@ export default function CalendarScreen() {
                 >
                   {day ? (
                     <View
-                      className={`h-12 w-12 items-center justify-center rounded-2xl border-2 ${isToday ? "border-saffron bg-parchment" : complete ? "border-sage bg-sageSoft" : festival ? "border-saffron bg-[#FFF1D6]" : "border-line bg-sand"}`}
+                      className={`h-12 w-12 items-center justify-center rounded-2xl border-2 ${isToday ? "border-saffron bg-parchment" : complete ? "border-sage bg-sageSoft" : festival ? "border-saffron bg-warm" : "border-line bg-sand"}`}
                     >
                       {festival && !isToday ? (
                         <Ionicons name="flame" size={23} color={colors.saffron} />

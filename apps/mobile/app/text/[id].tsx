@@ -107,13 +107,11 @@ export default function SacredTextDetailScreen() {
               <Text className="mt-3 text-lg leading-8 text-ink">{passage.original_text}</Text>
             ) : null}
             {passage.transliteration ? (
-              <Text className="mt-3 text-sm italic leading-6 text-muted">
-                {passage.transliteration}
-              </Text>
+              <Text className="mt-3 text-sm leading-6 text-muted">{passage.transliteration}</Text>
             ) : null}
-            {passage.translation_en ? (
-              <Text className="mt-3 text-[16px] leading-7 text-ink">{passage.translation_en}</Text>
-            ) : null}
+            {/* The passages table records no translator, and a translation is
+                never shown without one (CLAUDE.md). The original and its
+                transliteration stand on their own until that column exists. */}
           </Card>
         ))
       ) : (

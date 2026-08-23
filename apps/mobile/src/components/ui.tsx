@@ -145,7 +145,7 @@ export function Pill({
   icon?: IconName;
   tone?: "neutral" | "warm" | "sage";
 }) {
-  const style = tone === "warm" ? "bg-[#FFF1D6]" : tone === "sage" ? "bg-sageSoft" : "bg-sand";
+  const style = tone === "warm" ? "bg-warm" : tone === "sage" ? "bg-sageSoft" : "bg-sand";
   const color = tone === "sage" ? colors.sage : tone === "warm" ? colors.saffron : colors.muted;
   return (
     <View className={`self-start flex-row items-center gap-1.5 rounded-md px-2.5 py-1 ${style}`}>
@@ -294,7 +294,7 @@ export function EmptyState({
 }) {
   return (
     <View className="items-center rounded-card border border-dashed border-line bg-surface px-6 py-9">
-      <View className="mb-4 h-14 w-14 items-center justify-center rounded-full bg-[#FFF1D6]">
+      <View className="mb-4 h-14 w-14 items-center justify-center rounded-full bg-warm">
         <Ionicons name={icon} size={25} color={colors.saffron} />
       </View>
       <Text className="text-center text-xl font-semibold text-ink">{title}</Text>

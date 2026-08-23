@@ -5,6 +5,7 @@ import {
   type AppAuthoredReflection,
 } from "./appAuthoredCatalog";
 
+import { dayOfYear, localDateKey } from "@/lib/activity";
 import type { Concept, Deity, Festival, Practice, SacredText } from "@/types/content";
 
 export const dailyReflection = {
@@ -27,10 +28,7 @@ export const dailyReflections: AppAuthoredReflection[] = [
 ];
 
 export function getFallbackDailyReflection(date = new Date()): AppAuthoredReflection {
-  const startOfYear = Date.UTC(date.getFullYear(), 0, 1);
-  const currentDay = Math.floor(
-    (Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()) - startOfYear) / 86_400_000,
-  );
+  const currentDay = dayOfYear(localDateKey(date));
   return dailyReflections[currentDay % dailyReflections.length];
 }
 

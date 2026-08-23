@@ -270,7 +270,7 @@ export default function ExploreScreen() {
         <Pressable
           accessibilityRole="button"
           onPress={() => router.push("/subscription")}
-          className="mt-6 rounded-card border border-saffron bg-[#FFF1D6] p-4"
+          className="mt-6 rounded-card border border-saffron bg-warm p-4"
         >
           <Text className="font-semibold text-ink">Go deeper with Plus</Text>
           <Text className="mt-1 text-sm leading-5 text-muted">

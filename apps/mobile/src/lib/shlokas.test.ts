@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  chapterSource,
   dailyPrayer,
   dailyShlokaFrom,
   prayerContextForHour,
@@ -224,5 +225,21 @@ describe("readerChapters", () => {
   it("keeps the chapter keys the starting-point mapping relies on", () => {
     for (const key of ["gita-2", "chalisa", "isha", "soundarya-lahari", "bhaja-govindam"])
       expect(byKey.has(key)).toBe(true);
+  });
+});
+
+describe("chapterSource", () => {
+  it("names the edition once for a chapter, without the lead verse's own reference", () => {
+    const chapter = [
+      { ...verse("katha-shanti", ["peace"]), textRef: "Katha Upanishad, shanti mantra" },
+      {
+        ...verse("katha-1-1-1", ["wisdom"]),
+        textRef: "Katha Upanishad 1.1.1",
+        source:
+          "Katha Upanishad 1.1.1, Sanskrit Wikisource contributors, CC BY-SA, https://x/%E0%A4%95",
+      },
+    ];
+    expect(chapterSource(chapter)).toBe("Sanskrit Wikisource contributors, CC BY-SA, https://x/क");
+    expect(chapterSource([])).toBe("");
   });
 });

@@ -86,11 +86,18 @@ export function captureMobileError(error: unknown, tags: Record<string, string> 
   });
 }
 
+let consentCache: boolean | undefined;
+
+// Read once per launch; setTelemetryConsent keeps the cache in step. Every
+// track() call consults this, so it must not hit SecureStore each time.
 export async function getTelemetryConsent(): Promise<boolean> {
-  return (await SecureStore.getItemAsync(TELEMETRY_CONSENT_KEY).catch(() => null)) === "granted";
+  consentCache ??=
+    (await SecureStore.getItemAsync(TELEMETRY_CONSENT_KEY).catch(() => null)) === "granted";
+  return consentCache;
 }
 
 export async function setTelemetryConsent(enabled: boolean): Promise<void> {
+  consentCache = enabled;
   if (enabled) {
     await SecureStore.setItemAsync(TELEMETRY_CONSENT_KEY, "granted");
   } else {

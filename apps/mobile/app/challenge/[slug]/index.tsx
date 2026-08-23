@@ -239,7 +239,7 @@ function NightRow({
     >
       <View
         className={`h-9 w-9 items-center justify-center rounded-full ${
-          completed ? "bg-sageSoft" : isTonight ? "bg-[#FFF1D6]" : "bg-sand"
+          completed ? "bg-sageSoft" : isTonight ? "bg-warm" : "bg-sand"
         }`}
       >
         {completed ? (

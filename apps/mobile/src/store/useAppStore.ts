@@ -11,6 +11,7 @@ import type {
   StepId,
 } from "@/features/onboarding/types";
 import type { SavedItem, SavedItemType } from "@/lib/account";
+import { localDateKey } from "@/lib/activity";
 import { chunkedStorage } from "@/lib/chunkedStorage";
 
 export type OnboardingDraft = { answers: OnboardingAnswers; stepId: StepId };
@@ -66,10 +67,7 @@ type AppState = {
   setHydrated: (hydrated: boolean) => void;
 };
 
-const todayKey = () => {
-  const now = new Date();
-  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
-};
+const todayKey = () => localDateKey();
 
 const storage = createJSONStorage<AppState>(() => chunkedStorage);
 

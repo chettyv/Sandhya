@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Platform, Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
+import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 import Animated, {
   Easing,
   FadeIn,
@@ -15,7 +15,7 @@ import { FlowButton } from "../FlowButton";
 import { EASE_OUT } from "../motion";
 import { RisingText } from "../RisingText";
 
-import { colors, layout } from "@/theme/tokens";
+import { colors, fonts, layout } from "@/theme/tokens";
 
 // One screen, one idea, one tap. No carousel, no social proof: the first
 // question is a better introduction than seven slides about it. The
@@ -126,7 +126,7 @@ const styles = StyleSheet.create({
     minHeight: 32,
   },
   display: {
-    fontFamily: Platform.select({ ios: "Georgia", android: "serif", default: "Georgia" }),
+    fontFamily: fonts.display,
     color: colors.ink,
   },
 });

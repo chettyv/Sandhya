@@ -27,7 +27,7 @@ export function PracticeRow({
       onPress={onPress}
       className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-4"
     >
-      <View className="h-11 w-11 items-center justify-center rounded-2xl bg-[#FFF1D6]">
+      <View className="h-11 w-11 items-center justify-center rounded-2xl bg-warm">
         <Ionicons
           name={completed ? "checkmark" : icons[practice.category]}
           size={22}

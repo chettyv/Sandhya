@@ -7,7 +7,7 @@ import { colors } from "@/theme/tokens";
 export function PremiumGate({ label = "Continue with Plus" }: { label?: string }) {
   const router = useRouter();
   return (
-    <View className="mt-6 items-center rounded-[24px] border border-saffron bg-[#FFF1D6] p-5">
+    <View className="mt-6 items-center rounded-[24px] border border-saffron bg-warm p-5">
       <Ionicons name="sparkles" size={27} color={colors.saffron} />
       <Text className="mt-3 text-center text-lg font-semibold text-ink">
         A deeper library awaits

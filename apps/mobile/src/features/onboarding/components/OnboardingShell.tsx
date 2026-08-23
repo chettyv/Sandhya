@@ -27,7 +27,7 @@ import { ProgressBar } from "./ProgressBar";
 import { RisingText } from "./RisingText";
 import { useStepPhase } from "./StepTransition";
 
-import { colors, layout } from "@/theme/tokens";
+import { colors, fonts, layout } from "@/theme/tokens";
 
 const HEADER_HEIGHT = 56;
 const BACK_SPRING = { damping: 16, stiffness: 300 };
@@ -275,6 +275,6 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   display: {
-    fontFamily: Platform.select({ ios: "Georgia", android: "serif", default: "Georgia" }),
+    fontFamily: fonts.display,
   },
 });

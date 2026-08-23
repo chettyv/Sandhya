@@ -9,6 +9,8 @@ export const colors = {
   parchment: "#FCF8EF",
   paper: "#FFFFFF",
   sand: "#F4E9DA",
+  // Warm highlight tint behind selected / featured surfaces.
+  warm: "#FFF1D6",
   sage: "#6D8C71",
   sageSoft: "#EAF1E9",
   rose: "#B94735",

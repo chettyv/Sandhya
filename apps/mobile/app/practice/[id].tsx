@@ -124,7 +124,7 @@ export default function PracticeDetailScreen() {
       </View>
 
       <Card>
-        <View className="mb-5 h-10 w-10 items-center justify-center rounded-full bg-[#FFF1D6]">
+        <View className="mb-5 h-10 w-10 items-center justify-center rounded-full bg-warm">
           <Text className="font-bold text-saffron">{activeStep + 1}</Text>
         </View>
         <Text className="text-xl font-semibold leading-8 text-ink">{steps[activeStep]}</Text>

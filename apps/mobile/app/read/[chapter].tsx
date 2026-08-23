@@ -5,7 +5,7 @@ import { FlatList, Pressable, Text, View } from "react-native";
 import { EmptyState, Page } from "@/components/ui";
 import { VerseLines } from "@/components/VerseLines";
 import type { ScriptPreference } from "@/features/onboarding/types";
-import { type Shloka, readerChapters, shlokaTranslation } from "@/lib/shlokas";
+import { type Shloka, chapterSource, readerChapters, shlokaTranslation } from "@/lib/shlokas";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 
@@ -41,7 +41,12 @@ export default function ReaderChapterScreen() {
         keyExtractor={(item) => item.slug}
         showsVerticalScrollIndicator={false}
         ListHeaderComponent={
-          <Text className="mb-3 text-[22px] font-semibold leading-7 text-ink">{chapter.title}</Text>
+          <View className="mb-3">
+            <Text className="text-[22px] font-semibold leading-7 text-ink">{chapter.title}</Text>
+            <Text className="mt-1 text-xs leading-4 text-muted">
+              {chapterSource(chapter.verses)}
+            </Text>
+          </View>
         }
         renderItem={({ item }) => (
           <VerseRow shloka={item} language={contentLanguage} script={scriptPreference} />

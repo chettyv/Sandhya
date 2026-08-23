@@ -30,7 +30,7 @@ export default function LegalScreen() {
         {!process.env.EXPO_PUBLIC_PRIVACY_URL || !process.env.EXPO_PUBLIC_TERMS_URL ? (
           <View
             accessibilityRole="alert"
-            className="mt-5 rounded-card border border-saffron bg-[#FFF1D6] p-4"
+            className="mt-5 rounded-card border border-saffron bg-warm p-4"
           >
             <Text className="font-semibold text-saffron">Release links are not configured</Text>
             <Text className="mt-1 text-sm leading-5 text-muted">
