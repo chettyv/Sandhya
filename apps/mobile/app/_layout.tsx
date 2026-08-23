@@ -81,17 +81,51 @@ export default function RootLayout() {
     const client = supabase;
     if (!client) return;
     let mounted = true;
-    // Server-held onboarding answers that route content. Only applied when
-    // the server actually has a value, so a guest's local choices survive a
-    // sign-in to a blank profile (syncGuestPreferences pushes them first).
-    function applyRoutingPreferences(profile: Awaited<ReturnType<typeof loadProfile>>) {
-      if (!profile) return;
+    // The server profile, applied to the store. Routing answers (household
+    // practices, language) are only applied when the server actually has a
+    // value, so a guest's local choices survive a sign-in to a blank profile
+    // (syncGuestPreferences pushes them first).
+    function applyProfile(profile: NonNullable<Awaited<ReturnType<typeof loadProfile>>>) {
+      setDisplayName(profile.display_name ?? "Friend");
+      setTraditionPreference(
+        profile.tradition_pref === "general" || !profile.tradition_pref
+          ? "All traditions"
+          : profile.tradition_pref,
+      );
+      setReminder(
+        Boolean(profile.notification_time),
+        profile.notification_time?.slice(0, 5) ?? "08:00",
+      );
       if (profile.household_practices && profile.household_practices.length > 0) {
         setHouseholdPractices(profile.household_practices);
         setFocusTags(tagsForPractices(profile.household_practices));
       }
       if (profile.language_pref) setContentLanguage(profile.language_pref);
     }
+    // Everything server-held that the store mirrors. Waits for the persisted
+    // store to rehydrate first: zustand's rehydrate replaces state with the
+    // on-disk copy, so anything applied before it would be overwritten.
+    const loadAccountState = async (
+      profileLoader: () => Promise<Awaited<ReturnType<typeof loadProfile>>>,
+    ) => {
+      await waitForStoreHydration();
+      void profileLoader()
+        .then((profile) => {
+          if (mounted && profile) applyProfile(profile);
+        })
+        .catch(() => undefined);
+      void loadActivityDates()
+        .then((keys) => {
+          if (mounted) setCompletedDateKeys(keys);
+        })
+        .catch(() => undefined);
+      void loadPracticeCompletionKeys()
+        .then((ids) => {
+          if (mounted) setCompletedPracticeIds(ids);
+        })
+        .catch(() => undefined);
+      void syncLocalJournalEntries().catch(() => undefined);
+    };
     const hydrateSavedItems = async () => {
       await waitForStoreHydration();
       const state = useAppStore.getState();
@@ -104,31 +138,7 @@ export default function RootLayout() {
       const items = await loadSavedItems();
       if (mounted) setSavedItems(items);
     };
-    void loadProfile()
-      .then((profile) => {
-        if (!mounted || !profile) return;
-        setDisplayName(profile.display_name ?? "Friend");
-        setTraditionPreference(
-          profile.tradition_pref === "general" || !profile.tradition_pref
-            ? "All traditions"
-            : profile.tradition_pref,
-        );
-        setReminder(
-          Boolean(profile.notification_time),
-          profile.notification_time?.slice(0, 5) ?? "08:00",
-        );
-        applyRoutingPreferences(profile);
-      })
-      .catch(() => undefined);
-    void loadActivityDates()
-      .then(setCompletedDateKeys)
-      .catch(() => undefined);
-    void loadPracticeCompletionKeys()
-      .then(setCompletedPracticeIds)
-      .catch(() => undefined);
-    void waitForStoreHydration()
-      .then(() => syncLocalJournalEntries())
-      .catch(() => undefined);
+    void loadAccountState(loadProfile);
     void client.auth
       .getSession()
       .then(async ({ data }) => {
@@ -159,41 +169,11 @@ export default function RootLayout() {
         queryClient.removeQueries({ queryKey: ["saved-messages"] });
         void queryClient.invalidateQueries({ queryKey: ["subscription-status"] });
       }
-      const loadAndApplyProfile = async () => {
+      void loadAccountState(async () => {
         if (event === "SIGNED_IN") await syncGuestPreferences().catch(() => undefined);
         return loadProfile();
-      };
-      void loadAndApplyProfile()
-        .then((profile) => {
-          if (!mounted || !profile) return;
-          const hadReminderEnabled = useAppStore.getState().reminderEnabled;
-          setDisplayName(profile.display_name ?? "Friend");
-          setTraditionPreference(
-            profile.tradition_pref === "general" || !profile.tradition_pref
-              ? "All traditions"
-              : profile.tradition_pref,
-          );
-          setReminder(
-            Boolean(profile.notification_time),
-            profile.notification_time?.slice(0, 5) ?? "08:00",
-          );
-          if (profile.notification_time && hadReminderEnabled)
-            void configureDailyReminder(true, profile.notification_time.slice(0, 5)).catch(
-              () => undefined,
-            );
-          applyRoutingPreferences(profile);
-        })
-        .catch(() => undefined);
+      });
       if (event === "SIGNED_IN") void hydrateSavedItems().catch(() => undefined);
-      void loadActivityDates()
-        .then(setCompletedDateKeys)
-        .catch(() => undefined);
-      void loadPracticeCompletionKeys()
-        .then(setCompletedPracticeIds)
-        .catch(() => undefined);
-      void waitForStoreHydration()
-        .then(() => syncLocalJournalEntries())
-        .catch(() => undefined);
       void configurePurchases(session?.user.id).catch(() => undefined);
     });
     return () => {
@@ -214,9 +194,12 @@ export default function RootLayout() {
     syncDailyState,
   ]);
 
+  // Keeps the OS schedule in step with the store: re-arms on launch and on
+  // any change, and cancels when the reminder was switched off here or on
+  // another device (the profile sync above flips reminderEnabled).
   useEffect(() => {
-    if (hydrated && reminderEnabled)
-      void configureDailyReminder(true, reminderTime).catch(() => undefined);
+    if (!hydrated) return;
+    void configureDailyReminder(reminderEnabled, reminderTime).catch(() => undefined);
   }, [hydrated, reminderEnabled, reminderTime]);
 
   useEffect(() => subscribeToNotificationResponses(routeNotification), [routeNotification]);

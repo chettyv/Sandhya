@@ -7,7 +7,7 @@ import { deleteAccount, exportAccountData, updateProfile } from "@/lib/account";
 import { useAuthState } from "@/lib/authState";
 import { configureDailyReminder } from "@/lib/notifications";
 import { householdPracticeOptions, tagsForPractices, togglePractice } from "@/lib/practices";
-import { availableContentLanguages } from "@/lib/shlokas";
+import { availableContentLanguages, contentLanguageNames } from "@/lib/shlokas";
 import { getTelemetryConsent, setTelemetryConsent } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -329,15 +329,6 @@ export default function SettingsScreen() {
   );
 }
 
-const languageNames: Record<string, string> = {
-  en: "English",
-  hi: "हिन्दी",
-  bn: "বাংলা",
-  gu: "ગુજરાતી",
-  mr: "मराठी",
-  ta: "தமிழ்",
-};
-
 const scriptLabels: Record<string, string> = {
   devanagari: "Devanagari first",
   both: "Devanagari with Roman letters",
@@ -365,6 +356,12 @@ function ScriptRow() {
 function LanguageRow() {
   const contentLanguage = useAppStore((state) => state.contentLanguage);
   const setContentLanguage = useAppStore((state) => state.setContentLanguage);
+  // Only English and Hindi exist server-side; the profile sync on launch
+  // would otherwise revert a device-only choice to the server's value.
+  const persist = (language: string) => {
+    if (language !== "en" && language !== "hi") return;
+    void updateProfile({ language_pref: language }).catch(() => undefined);
+  };
   const available = availableContentLanguages();
 
   if (available.length < 2) {
@@ -389,8 +386,11 @@ function LanguageRow() {
     <ListRow
       icon="language-outline"
       title="Language"
-      subtitle={`${languageNames[contentLanguage] ?? contentLanguage} — tap to switch`}
-      onPress={() => setContentLanguage(next)}
+      subtitle={`${contentLanguageNames[contentLanguage] ?? contentLanguage} — tap to switch`}
+      onPress={() => {
+        setContentLanguage(next);
+        persist(next);
+      }}
     />
   );
 }

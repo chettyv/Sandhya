@@ -152,6 +152,9 @@ export const useAppStore = create<AppState>()(
         set((state) => ({
           completedDateKeys: [...new Set([...state.completedDateKeys, ...keys])],
         })),
+      // Account data only. The device's onboarding answers (intent, script,
+      // branch answers) have no server copy and stay with the device, as
+      // hasCompletedOnboarding does.
       clearAccountScopedState: () =>
         set({
           savedIds: [],
@@ -165,12 +168,6 @@ export const useAppStore = create<AppState>()(
           householdPractices: [],
           reminderEnabled: false,
           reminderTime: "08:00",
-          onboardingIntent: null,
-          scriptPreference: "both",
-          practiceMinutes: null,
-          startingText: null,
-          curiosity: null,
-          preferredTextPrefixes: [],
         }),
       setOnboardingComplete: (version) =>
         set({ hasCompletedOnboarding: true, onboardingVersion: version, onboardingDraft: null }),

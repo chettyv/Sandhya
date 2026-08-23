@@ -123,6 +123,17 @@ export function readerChapterTitle(textRef: string): string {
     .replace(/\s+\d+$/, "");
 }
 
+// Display names for the content languages the bank can carry, in the
+// reader's own script.
+export const contentLanguageNames: Record<string, string> = {
+  en: "English",
+  hi: "हिन्दी",
+  bn: "বাংলা",
+  gu: "ગુજરાતી",
+  mr: "मराठी",
+  ta: "தமிழ்",
+};
+
 export function availableContentLanguages(): string[] {
   // Every language with a prose meaning also has a verse translation, so the
   // core view is enough to enumerate the offer.

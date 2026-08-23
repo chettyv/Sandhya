@@ -6,6 +6,7 @@ import { ActivityIndicator, Alert, Pressable, Text, TextInput, View } from "reac
 import { Card, ListRow, Page, PrimaryButton, SecondaryButton } from "@/components/ui";
 import { signOut, updateProfile } from "@/lib/account";
 import { useAuthState } from "@/lib/authState";
+import { contentLanguageNames } from "@/lib/shlokas";
 import { planLabel, useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -15,6 +16,7 @@ export default function ProfileScreen() {
   const displayName = useAppStore((state) => state.displayName);
   const setDisplayName = useAppStore((state) => state.setDisplayName);
   const reminderEnabled = useAppStore((state) => state.reminderEnabled);
+  const contentLanguage = useAppStore((state) => state.contentLanguage);
   const reminderTime = useAppStore((state) => state.reminderTime);
   const traditionPreference = useAppStore((state) => state.traditionPreference);
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
@@ -158,7 +160,7 @@ export default function ProfileScreen() {
         <ListRow
           icon="language-outline"
           title="Language"
-          subtitle="English"
+          subtitle={contentLanguageNames[contentLanguage] ?? contentLanguage}
           onPress={() => router.push("/settings")}
         />
         <ListRow
