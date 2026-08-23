@@ -1,18 +1,34 @@
+import { useQuery } from "@tanstack/react-query";
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
-import { Text, View } from "react-native";
+import { ActivityIndicator, Text, View } from "react-native";
 
 import { Card, EmptyState, Page, SecondaryButton } from "@/components/ui";
 import { VerseLines } from "@/components/VerseLines";
-import { chapterKey, getShloka, shlokaMeaning, shlokaTranslation } from "@/lib/shlokas";
+import {
+  chapterKey,
+  getShloka,
+  getShlokaDetails,
+  shlokaMeaning,
+  shlokaTranslation,
+} from "@/lib/shlokas";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
+import { colors } from "@/theme/tokens";
 
 export default function ShlokaDetailScreen() {
   const { slug } = useLocalSearchParams<{ slug?: string }>();
   const contentLanguage = useAppStore((state) => state.contentLanguage);
   const scriptPreference = useAppStore((state) => state.scriptPreference);
   const shloka = getShloka(slug);
+  // Word-by-word gloss and prose meanings are bundled separately from the
+  // verse itself and fetched the first time any verse page opens.
+  const { data: details, isPending: detailsPending } = useQuery({
+    queryKey: ["shloka-details", slug],
+    queryFn: () => getShlokaDetails(slug ?? "").then((value) => value ?? null),
+    enabled: Boolean(slug),
+    staleTime: Infinity,
+  });
 
   useEffect(() => {
     if (shloka) track("shloka_viewed", { slug: shloka.slug });
@@ -44,28 +60,36 @@ export default function ShlokaDetailScreen() {
         <Text className="mt-3 text-xs leading-5 text-muted">{readableSource(shloka.source)}</Text>
       </Card>
 
-      <View className="mt-6">
-        <Text className="text-[17px] font-semibold text-ink">Word by word</Text>
-        <Card className="mt-2.5">
-          {shloka.words.map((entry, index) => (
-            <View
-              key={index}
-              className="flex-row gap-3 border-b border-line py-2.5 last:border-b-0"
-            >
-              <Text className="min-w-[110px] text-[15px] font-semibold text-plum">
-                {entry.word}
-              </Text>
-              <Text className="flex-1 text-[15px] leading-6 text-ink">{entry.meaning}</Text>
-            </View>
-          ))}
-        </Card>
-      </View>
+      {detailsPending ? (
+        <View className="mt-6 items-center py-6">
+          <ActivityIndicator color={colors.saffron} />
+        </View>
+      ) : null}
 
-      {shloka.meaning ? (
+      {details && details.words.length ? (
+        <View className="mt-6">
+          <Text className="text-[17px] font-semibold text-ink">Word by word</Text>
+          <Card className="mt-2.5">
+            {details.words.map((entry, index) => (
+              <View
+                key={index}
+                className="flex-row gap-3 border-b border-line py-2.5 last:border-b-0"
+              >
+                <Text className="min-w-[110px] text-[15px] font-semibold text-plum">
+                  {entry.word}
+                </Text>
+                <Text className="flex-1 text-[15px] leading-6 text-ink">{entry.meaning}</Text>
+              </View>
+            ))}
+          </Card>
+        </View>
+      ) : null}
+
+      {details?.meaning ? (
         <View className="mt-6">
           <Text className="text-[17px] font-semibold text-ink">The meaning behind it</Text>
           <Text className="mt-2 text-[15px] leading-7 text-ink">
-            {shlokaMeaning(shloka, contentLanguage)}
+            {shlokaMeaning(details, contentLanguage)}
           </Text>
         </View>
       ) : null}

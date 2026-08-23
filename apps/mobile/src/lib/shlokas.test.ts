@@ -5,6 +5,7 @@ import {
   dailyShlokaFrom,
   prayerContextForHour,
   readerChapterTitle,
+  readerChapters,
   rotationSequence,
   type Shloka,
 } from "./shlokas";
@@ -21,11 +22,8 @@ function verse(slug: string, tags: string[], dailyPool = true): Shloka {
     sayIt: "om",
     translation: "Test translation.",
     source: "Test source.",
-    words: [],
-    meaning: "Test meaning.",
     reflection: "Test reflection.",
     translations: {},
-    meanings: {},
   };
 }
 
@@ -202,5 +200,29 @@ describe("readerChapterTitle", () => {
     expect(readerChapterTitle("Gāyatrī mantra (Rig Veda 3.62.10)")).toBe(
       "Gāyatrī mantra (Rig Veda 3.62.10)",
     );
+  });
+});
+
+describe("readerChapters", () => {
+  const chapters = readerChapters();
+  const byKey = new Map(chapters.map((chapter) => [chapter.key, chapter]));
+
+  it("folds a chaptered text's shanti mantra into its first chapter, first in order", () => {
+    for (const text of ["katha", "kena", "mundaka", "shvetashvatara"]) {
+      expect(byKey.has(text)).toBe(false);
+      const first = chapters.find((chapter) => chapter.key.startsWith(`${text}-`));
+      expect(first?.verses[0]?.slug).toBe(`${text}-shanti`);
+      expect(first?.title).not.toMatch(/shanti/i);
+    }
+  });
+
+  it("keeps single-chapter texts as one group that opens with the shanti mantra", () => {
+    expect(byKey.get("isha")?.verses[0]?.slug).toBe("isha-shanti");
+    expect(byKey.get("mandukya")?.verses[0]?.slug).toBe("mandukya-shanti");
+  });
+
+  it("keeps the chapter keys the starting-point mapping relies on", () => {
+    for (const key of ["gita-2", "chalisa", "isha", "soundarya-lahari", "bhaja-govindam"])
+      expect(byKey.has(key)).toBe(true);
   });
 });

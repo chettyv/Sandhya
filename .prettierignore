@@ -25,3 +25,5 @@ CLAUDE.md
 **/AGENTS.md
 supabase/migrations/migration_checklist.md
 apps/mobile/src/data/shlokaBank.json
+apps/mobile/src/data/shlokaBank.core.json
+apps/mobile/src/data/shlokaBank.details.json

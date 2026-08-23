@@ -8,7 +8,14 @@ import { pathToFileURL } from "node:url";
 
 const root = resolve(process.cwd());
 const contentDir = join(root, "content", "shlokas");
-const outputPath = join(root, "apps", "mobile", "src", "data", "shlokaBank.json");
+const dataDir = join(root, "apps", "mobile", "src", "data");
+const outputPath = join(dataDir, "shlokaBank.json");
+// The app bundles two derived views of the bank so a cold start only pays for
+// what the list and daily-verse surfaces need: `core` (everything except the
+// word-by-word gloss and the prose meanings) and `details` (those fields,
+// keyed by slug), which the verse page loads on demand. Both are compact.
+const corePath = join(dataDir, "shlokaBank.core.json");
+const detailsPath = join(dataDir, "shlokaBank.details.json");
 const allowDraft = process.argv.includes("--allow-draft");
 const checkOnly = process.argv.includes("--check");
 
@@ -48,13 +55,25 @@ for (const file of files) {
 }
 
 const json = `${JSON.stringify(entries, null, 2)}\n`;
+const core = entries.map(({ words: _words, meaning: _meaning, meanings: _meanings, ...rest }) => rest);
+const details = Object.fromEntries(
+  entries.map(({ slug, words, meaning, meanings }) => [slug, { words, meaning, meanings }]),
+);
+const outputs = [
+  [outputPath, json],
+  [corePath, `${JSON.stringify(core)}\n`],
+  [detailsPath, `${JSON.stringify(details)}\n`],
+];
 if (checkOnly) {
-  const current = existsSync(outputPath) ? readFileSync(outputPath, "utf8") : "";
-  if (current !== json) fail("shloka bank is stale — run pnpm content:generate-shloka-bank");
+  for (const [path, content] of outputs) {
+    const current = existsSync(path) ? readFileSync(path, "utf8") : "";
+    if (current !== content)
+      fail(`shloka bank is stale (${path}) — run pnpm content:generate-shloka-bank`);
+  }
   console.log("shloka bank is up to date");
 } else {
-  writeFileSync(outputPath, json);
-  console.log(`wrote ${entries.length} shloka(s) -> ${outputPath}`);
+  for (const [path, content] of outputs) writeFileSync(path, content);
+  console.log(`wrote ${entries.length} shloka(s) -> ${outputPath} (+ core, details)`);
 }
 
 function parseShlokaBody(body, displayFile) {

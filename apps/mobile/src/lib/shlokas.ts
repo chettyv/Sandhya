@@ -1,10 +1,20 @@
 import { localDateKey } from "./activity";
 
-import shlokaBank from "@/data/shlokaBank.json";
+import shlokaBank from "@/data/shlokaBank.core.json";
 
 // Generated from content/shlokas/** by scripts/generate-shloka-bank.mjs —
-// reviewed entries only. Bundled so the daily shloka works offline.
+// reviewed entries only. Bundled so the daily shloka works offline. The core
+// view carries everything the lists, reader and daily card need; the
+// word-by-word gloss and prose meanings live in shlokaBank.details.json and
+// are loaded by the verse page on demand, so a cold start does not pay for
+// them (see loadShlokaDetails).
 export type ShlokaWord = { word: string; meaning: string };
+export type ShlokaDetails = {
+  words: ShlokaWord[];
+  meaning: string;
+  // Per-language prose meanings keyed by ISO 639-1 code; English is `meaning`.
+  meanings: Record<string, string>;
+};
 export type Shloka = {
   slug: string;
   textRef: string;
@@ -16,19 +26,30 @@ export type Shloka = {
   sayIt: string;
   translation: string;
   source: string;
-  words: ShlokaWord[];
-  meaning: string;
   reflection: string;
-  // Per-language variants keyed by ISO 639-1 code; English lives in
-  // translation/meaning above.
+  // Per-language verse translations keyed by ISO 639-1 code; English is
+  // `translation`.
   translations: Record<string, string>;
-  meanings: Record<string, string>;
 };
 
 export const shlokas = shlokaBank as Shloka[];
 
 export function getShloka(slug: string | undefined): Shloka | undefined {
   return shlokas.find((entry) => entry.slug === slug);
+}
+
+let detailsPromise: Promise<Record<string, ShlokaDetails>> | undefined;
+
+/** Loads the word-by-word gloss and meanings for every verse; cached after the first call. */
+export function loadShlokaDetails(): Promise<Record<string, ShlokaDetails>> {
+  detailsPromise ??= import("@/data/shlokaBank.details.json").then(
+    (module) => (module.default ?? module) as Record<string, ShlokaDetails>,
+  );
+  return detailsPromise;
+}
+
+export async function getShlokaDetails(slug: string): Promise<ShlokaDetails | undefined> {
+  return (await loadShlokaDetails())[slug];
 }
 
 // Reader grouping. Chapter-style slugs ("gita-12-3") group per chapter
@@ -61,9 +82,23 @@ export function readerChapters(): ReaderChapter[] {
     if (group) group.push(entry);
     else groups.set(key, [entry]);
   }
+  // A chaptered text's opening shanti mantra ("katha-shanti") keys to the bare
+  // text name, which would otherwise surface as a one-verse "chapter" of its
+  // own. Fold it into the text's first chapter, where readerRank already
+  // places it before verse 1.
+  for (const [key, verses] of groups) {
+    if (!verses.every((verse) => verse.slug.endsWith("-shanti"))) continue;
+    const firstChapter = [...groups.keys()].find(
+      (candidate) => candidate !== key && candidate.startsWith(`${key}-`),
+    );
+    if (!firstChapter) continue;
+    groups.get(firstChapter)!.push(...verses);
+    groups.delete(key);
+  }
   return [...groups.entries()].map(([key, verses]) => {
     verses.sort((a, b) => readerRank(a.slug) - readerRank(b.slug));
-    return { key, title: readerChapterTitle(verses[0]?.textRef ?? key), verses };
+    const lead = verses.find((verse) => !verse.slug.endsWith("-shanti")) ?? verses[0];
+    return { key, title: readerChapterTitle(lead?.textRef ?? key), verses };
   });
 }
 
@@ -89,10 +124,11 @@ export function readerChapterTitle(textRef: string): string {
 }
 
 export function availableContentLanguages(): string[] {
+  // Every language with a prose meaning also has a verse translation, so the
+  // core view is enough to enumerate the offer.
   const languages = new Set(["en"]);
   for (const entry of shlokas) {
     for (const code of Object.keys(entry.translations)) languages.add(code);
-    for (const code of Object.keys(entry.meanings)) languages.add(code);
   }
   return [...languages];
 }
@@ -101,8 +137,8 @@ export function shlokaTranslation(shloka: Shloka, language: string): string {
   return (language !== "en" && shloka.translations[language]) || shloka.translation;
 }
 
-export function shlokaMeaning(shloka: Shloka, language: string): string {
-  return (language !== "en" && shloka.meanings[language]) || shloka.meaning;
+export function shlokaMeaning(details: ShlokaDetails, language: string): string {
+  return (language !== "en" && details.meanings[language]) || details.meaning;
 }
 
 // Deterministic daily pick: everyone with the same preferences sees the same
