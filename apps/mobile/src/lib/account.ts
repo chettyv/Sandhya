@@ -117,10 +117,6 @@ export async function syncSavedItem(
   else await removeSavedItem(itemType, itemId);
 }
 
-export async function loadSavedItemIds(): Promise<string[]> {
-  return (await loadSavedItems()).map((item) => item.itemId);
-}
-
 export async function loadSavedItems(): Promise<SavedItem[]> {
   const userId = await currentUserId();
   const { data, error } = await supabase!

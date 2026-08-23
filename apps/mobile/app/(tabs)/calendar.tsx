@@ -5,7 +5,7 @@ import { Pressable, Text, View } from "react-native";
 
 import { ContentSourceNotice } from "@/components/ContentSourceNotice";
 import { FestivalRow } from "@/components/FestivalRow";
-import { Card, Page, Pill, SectionHeader } from "@/components/ui";
+import { Card, IconCircle, Page, Pill, SectionHeader } from "@/components/ui";
 import { useCuratedContent } from "@/lib/content";
 import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
@@ -101,14 +101,11 @@ export default function CalendarScreen() {
             {mode === "calendar" ? <View className="mt-3 h-1 rounded-full bg-saffron" /> : null}
           </Pressable>
         </View>
-        <Pressable
-          accessibilityLabel="Open profile"
-          accessibilityRole="button"
+        <IconCircle
+          icon="person-outline"
+          label="Open profile"
           onPress={() => router.push("/profile")}
-          className="h-10 w-10 items-center justify-center rounded-full border border-line bg-surface2"
-        >
-          <Ionicons name="person-outline" size={19} color={colors.plum} />
-        </Pressable>
+        />
       </View>
       <ContentSourceNotice source={content.source} />
 

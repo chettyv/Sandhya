@@ -16,7 +16,7 @@ content/.cache
 content/.tmp
 content/_staging/raw/**
 content/_staging/prepared/**
-apps/mobile/dist-all/**
+apps/mobile/dist*/**
 *.docx
 *.svg
 

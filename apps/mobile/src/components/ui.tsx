@@ -64,38 +64,23 @@ export function TopBar({
   eyebrow,
   title,
   onProfile,
-  leading,
 }: {
   eyebrow?: string;
   title: string;
   onProfile?: () => void;
-  leading?: ReactNode;
 }) {
   return (
     <View className="mb-4 flex-row items-center justify-between gap-3">
-      <View className="min-w-0 flex-1 flex-row items-center gap-3">
-        {leading}
-        <View className="min-w-0 flex-1">
-          {eyebrow ? (
-            <Text className="mb-0.5 text-[11px] font-semibold uppercase text-saffron">
-              {eyebrow}
-            </Text>
-          ) : null}
-          <Text numberOfLines={1} className="text-[22px] font-semibold leading-7 text-ink">
-            {title}
-          </Text>
-        </View>
+      <View className="min-w-0 flex-1">
+        {eyebrow ? (
+          <Text className="mb-0.5 text-[11px] font-semibold uppercase text-saffron">{eyebrow}</Text>
+        ) : null}
+        <Text numberOfLines={1} className="text-[22px] font-semibold leading-7 text-ink">
+          {title}
+        </Text>
       </View>
       {onProfile ? (
-        <Pressable
-          accessibilityLabel="Open profile"
-          accessibilityRole="button"
-          onPress={onProfile}
-          className="h-10 w-10 items-center justify-center rounded-full border border-line bg-surface2"
-          style={({ pressed }) => pressed && styles.pressed}
-        >
-          <Ionicons name="person-outline" size={19} color={colors.plum} />
-        </Pressable>
+        <IconCircle icon="person-outline" label="Open profile" onPress={onProfile} />
       ) : null}
     </View>
   );
@@ -250,7 +235,7 @@ export function IconCircle({
       className={`h-10 w-10 items-center justify-center rounded-full ${filled ? "bg-saffron" : "border border-line bg-surface2"}`}
       style={({ pressed }) => pressed && styles.pressed}
     >
-      <Ionicons name={icon} size={20} color={filled ? colors.black : colors.plum} />
+      <Ionicons name={icon} size={19} color={filled ? colors.black : colors.plum} />
     </Pressable>
   );
 }
