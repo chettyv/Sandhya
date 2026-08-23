@@ -155,7 +155,10 @@ async function fetchLibrary(): Promise<ContentLibrary> {
     const date =
       (item.upcoming_dates ?? []).filter((candidate) => candidate >= localDateKey(now)).sort()[0] ??
       item.upcoming_dates?.[0];
-    const normalizedDate = date ?? null;
+    // A date is published only with its reckoning (CLAUDE.md); without one
+    // the row is shown as a guide, never as a bare date.
+    const reckoning = date ? parseDateReckoning(item.date_reckoning) : null;
+    const normalizedDate = date && reckoning ? date : null;
     const parts = normalizedDate
       ? dateParts(normalizedDate)
       : { dayLabel: "—", monthLabel: "GUIDE" };
@@ -165,7 +168,7 @@ async function fetchLibrary(): Promise<ContentLibrary> {
         name: item.name,
         variant: item.name_variants?.[0],
         date: normalizedDate,
-        dateReckoning: normalizedDate ? parseDateReckoning(item.date_reckoning) : null,
+        dateReckoning: reckoning,
         ...parts,
         summary: item.short_description ?? "A festival in the Hindu calendar.",
         meaning:

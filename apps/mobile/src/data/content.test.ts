@@ -44,9 +44,12 @@ describe("curated mobile seed content", () => {
     }
   });
 
-  it("provides valid festival dates and variation context", () => {
+  it("publishes no festival date without its reckoning, and keeps variation context", () => {
     for (const festival of festivals) {
-      if (festival.date) expect(Number.isNaN(Date.parse(festival.date))).toBe(false);
+      if (festival.date) {
+        expect(Number.isNaN(Date.parse(festival.date))).toBe(false);
+        expect(festival.dateReckoning).toBeTruthy();
+      }
       expect(festival.variationNote.length).toBeGreaterThan(20);
     }
     expect(festivals.length).toBeGreaterThanOrEqual(20);

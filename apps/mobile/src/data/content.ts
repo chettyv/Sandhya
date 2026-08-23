@@ -32,13 +32,17 @@ export function getFallbackDailyReflection(date = new Date()): AppAuthoredReflec
   return dailyReflections[currentDay % dailyReflections.length];
 }
 
+// Starter guides ship without a local date: a date is published only with its
+// reckoning (amānta/pūrṇimānta), the observing community where practice
+// splits, the location it is computed for and its source (CLAUDE.md). Those
+// come from the reviewed festival-date table via Supabase, not from here.
 const starterFestivals: Festival[] = [
   {
     id: "00000000-0000-0000-0000-000000000402",
     name: "Guru Purnima",
-    date: "2026-07-29",
-    dayLabel: "29",
-    monthLabel: "JUL",
+    date: null,
+    dayLabel: "—",
+    monthLabel: "GUIDE",
     summary: "A day of gratitude for teachers and the lineages of learning.",
     meaning:
       "Guru Purnima honours teachers—spiritual and otherwise—who help remove confusion and illuminate understanding.",
@@ -54,9 +58,9 @@ const starterFestivals: Festival[] = [
   {
     id: "00000000-0000-0000-0000-000000000403",
     name: "Raksha Bandhan",
-    date: "2026-08-28",
-    dayLabel: "28",
-    monthLabel: "AUG",
+    date: null,
+    dayLabel: "—",
+    monthLabel: "GUIDE",
     summary: "A celebration of care, protection, and sibling bonds.",
     meaning: "Raksha Bandhan centres on a bond of mutual care, often symbolised by tying a rakhi.",
     observance: [
@@ -72,9 +76,9 @@ const starterFestivals: Festival[] = [
     id: "00000000-0000-0000-0000-000000000404",
     name: "Krishna Janmashtami",
     variant: "Gokulashtami",
-    date: "2026-09-04",
-    dayLabel: "04",
-    monthLabel: "SEP",
+    date: null,
+    dayLabel: "—",
+    monthLabel: "GUIDE",
     summary: "Celebrating the birth of Krishna through devotion, song, and story.",
     meaning:
       "Janmashtami remembers Krishna’s birth and the divine presence expressed through love, play, courage, and dharma.",
@@ -91,9 +95,9 @@ const starterFestivals: Festival[] = [
     id: "00000000-0000-0000-0000-000000000401",
     name: "Diwali",
     variant: "Deepavali",
-    date: "2026-11-08",
-    dayLabel: "08",
-    monthLabel: "NOV",
+    date: null,
+    dayLabel: "—",
+    monthLabel: "GUIDE",
     summary: "A festival of light observed through stories, worship, generosity, and renewal.",
     meaning:
       "Diwali is understood differently across communities, including celebrations connected with Rama, Lakshmi, Krishna, or Kali.",

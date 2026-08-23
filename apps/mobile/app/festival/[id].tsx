@@ -103,8 +103,9 @@ export default function FestivalDetailScreen() {
       </Page>
     );
   const saved = savedIds.includes(festival.id);
-  const hasDate = Boolean(festival.date);
-  const reckoning = hasDate ? (festival.dateReckoning ?? null) : null;
+  // A date is only ever present together with its reckoning (lib/content).
+  const reckoning = festival.date ? (festival.dateReckoning ?? null) : null;
+  const hasDate = Boolean(festival.date && reckoning);
 
   return (
     <Page>
@@ -127,11 +128,9 @@ export default function FestivalDetailScreen() {
         <View className="mt-4">
           <Pill
             label={
-              !hasDate
-                ? "Local date not calculated"
-                : reckoning
-                  ? `${RECKONING_LABEL[reckoning.system]} · ${reckoning.location}`
-                  : "Reckoning not stated"
+              hasDate && reckoning
+                ? `${RECKONING_LABEL[reckoning.system]} · ${reckoning.location}`
+                : "Local date not calculated"
             }
             icon={reckoning ? "calendar-outline" : "location-outline"}
             tone="warm"
