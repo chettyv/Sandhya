@@ -13,6 +13,14 @@ import { householdPracticeOptions } from "@/lib/practices";
 
 export const ONBOARDING_VERSION = 2;
 
+const householdShortLabels: Record<string, string> = {
+  lamp: "The evening lamp",
+  ekadashi: "Ekādaśī",
+  chalisa: "Hanuman Chalisa",
+  "mandir-festivals": "Mandir at festivals",
+  scratch: "Starting fresh",
+};
+
 const householdIcons: Record<string, string> = {
   lamp: "flame-outline",
   ekadashi: "moon-outline",
@@ -35,24 +43,28 @@ export const onboardingSteps: OnboardingStep[] = [
         value: "practice",
         icon: "sunny-outline",
         label: "A small daily practice",
+        shortLabel: "A daily practice",
         detail: "A few minutes, most days",
       },
       {
         value: "understand",
         icon: "home-outline",
         label: "To understand what my family does",
+        shortLabel: "Understanding home",
         detail: "The lamp, the fasts, the prayers — and why",
       },
       {
         value: "read",
         icon: "book-outline",
         label: "To read the scriptures properly",
+        shortLabel: "Reading properly",
         detail: "Verse by verse, with the words explained",
       },
       {
         value: "explore",
         icon: "compass-outline",
         label: "I'm curious, starting from scratch",
+        shortLabel: "Starting fresh",
         detail: "No background needed",
       },
     ],
@@ -84,6 +96,7 @@ export const onboardingSteps: OnboardingStep[] = [
       value: option.key,
       exclusive: option.exclusive,
       icon: householdIcons[option.key] ?? "ellipse-outline",
+      shortLabel: householdShortLabels[option.key],
       label: (answers) =>
         option.key === "scratch" && answers.intent === "explore"
           ? "None of these yet"

@@ -10,6 +10,7 @@ import Animated, {
   useAnimatedStyle,
   useReducedMotion,
   useSharedValue,
+  withDelay,
   withSequence,
   withSpring,
   withTiming,
@@ -40,6 +41,7 @@ export function ChoiceCard({
   icon,
   selected,
   dimmed = false,
+  nudge = 0,
   kind,
   index,
   onPress,
@@ -49,6 +51,8 @@ export function ChoiceCard({
   icon?: string;
   selected: boolean;
   dimmed?: boolean;
+  // Increment to shake the card sideways once (a screen asking for an answer).
+  nudge?: number;
   kind: "radio" | "checkbox";
   index: number;
   onPress: () => void;
@@ -59,6 +63,17 @@ export function ChoiceCard({
   const selection = useSharedValue(selected ? 1 : 0);
   const ripple = useSharedValue(0);
   const dim = useSharedValue(dimmed ? 1 : 0);
+  const shake = useSharedValue(0);
+
+  useEffect(() => {
+    if (nudge === 0 || reducedMotion || selected) return;
+    shake.value = withSequence(
+      withDelay(index * 40, withTiming(1, { duration: 70 })),
+      withTiming(-1, { duration: 70 }),
+      withTiming(0.5, { duration: 70 }),
+      withTiming(0, { duration: 90 }),
+    );
+  }, [nudge, index, reducedMotion, selected, shake]);
 
   useEffect(() => {
     if (reducedMotion) {
@@ -79,7 +94,7 @@ export function ChoiceCard({
   }, [dimmed, dim, reducedMotion]);
 
   const cardStyle = useAnimatedStyle(() => ({
-    transform: [{ scale: scale.value * (1 - dim.value * 0.015) }],
+    transform: [{ translateX: shake.value * 6 }, { scale: scale.value * (1 - dim.value * 0.015) }],
     opacity: 1 - dim.value * 0.5,
     borderColor: interpolateColor(selection.value, [0, 1], [colors.line, colors.saffron]),
     backgroundColor: interpolateColor(selection.value, [0, 1], [colors.paper, SELECTED_FILL]),

@@ -100,6 +100,11 @@ export function MultiChoice({
   };
 
   const ready = selected.length >= step.minSelected;
+  // Tapping Continue with nothing chosen nudges the cards instead of doing
+  // nothing: the answer to "why will it not go" is on screen, not in a toast.
+  const [nudge, setNudge] = useState(0);
+  const label =
+    selected.length > 0 ? `${step.continueLabel} · ${selected.length} chosen` : step.continueLabel;
 
   return (
     <StepLayout
@@ -107,10 +112,11 @@ export function MultiChoice({
       subtitle={resolveOptionalCopy(step.subtitle, answers)}
       footer={
         <FlowButton
-          label={step.continueLabel}
+          label={label}
           icon="arrow-forward"
           disabled={!ready}
           onPress={onNext}
+          onDisabledPress={() => setNudge((count) => count + 1)}
         />
       }
     >
@@ -124,6 +130,7 @@ export function MultiChoice({
             label={resolveCopy(option.label, answers)}
             detail={option.detail ? resolveCopy(option.detail, answers) : undefined}
             selected={selected.includes(option.value)}
+            nudge={nudge}
             onPress={() => toggle(option.value)}
           />
         ))}

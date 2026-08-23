@@ -1,6 +1,7 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import { Pressable, Text, View } from "react-native";
+import Animated, { FadeInDown, useReducedMotion } from "react-native-reanimated";
 
 import { useCuratedContent } from "@/lib/content";
 import { startingPointFor, type StartingPoint } from "@/lib/startingPoint";
@@ -24,6 +25,7 @@ export function StartingPointCard() {
   const dismissed = useAppStore((state) => state.startingPointDismissed);
   const dismiss = useAppStore((state) => state.dismissStartingPoint);
   const { data: content } = useCuratedContent();
+  const reducedMotion = useReducedMotion();
 
   if (!intent || dismissed) return null;
   const point = startingPointFor(
@@ -67,7 +69,10 @@ export function StartingPointCard() {
   };
 
   return (
-    <View className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-[#FFF4E4] p-4">
+    <Animated.View
+      entering={reducedMotion ? undefined : FadeInDown.delay(120).duration(420)}
+      className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-[#FFF4E4] p-4"
+    >
       <Pressable
         accessibilityRole="button"
         accessibilityLabel={`Your starting point: ${point.title}`}
@@ -94,6 +99,6 @@ export function StartingPointCard() {
       >
         <Ionicons name="close" size={22} color={colors.muted} />
       </Pressable>
-    </View>
+    </Animated.View>
   );
 }

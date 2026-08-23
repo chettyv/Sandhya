@@ -1,8 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 import Animated, { FadeIn, FadeInUp, useReducedMotion } from "react-native-reanimated";
 
-import { resolveCopy } from "../../engine";
+import { answerChips, resolveCopy } from "../../engine";
 import type { InterstitialStep as InterstitialConfig, OnboardingAnswers } from "../../types";
+import { AnswerChips } from "../AnswerChips";
 import { FlowButton } from "../FlowButton";
 import { EASE_OUT } from "../motion";
 import { StepLayout } from "../OnboardingShell";
@@ -27,7 +28,8 @@ export function Interstitial({
   const phase = useStepPhase();
   const animate = !reducedMotion && phase === "active";
   const lines = step.lines(answers);
-  const base = 420;
+  const chips = answerChips(answers);
+  const base = 520 + chips.length * 110;
   const gap = 300;
 
   return (
@@ -37,6 +39,7 @@ export function Interstitial({
       title={resolveCopy(step.title, answers)}
       footer={<FlowButton label={step.continueLabel} icon="arrow-forward" onPress={onNext} />}
     >
+      <AnswerChips chips={chips} delay={360} />
       <View style={styles.lines}>
         {lines.map((line, index) => (
           <View key={line} style={styles.line}>
@@ -74,7 +77,7 @@ export function Interstitial({
 const styles = StyleSheet.create({
   lines: {
     gap: 20,
-    paddingTop: 10,
+    paddingTop: 30,
   },
   line: {
     flexDirection: "row",

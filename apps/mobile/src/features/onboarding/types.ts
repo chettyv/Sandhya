@@ -57,6 +57,8 @@ export type ChoiceOption = {
   // Ionicons outline name, shown in a tinted circle at the card's left edge.
   // Every option on a screen carries one, or none do.
   icon?: string;
+  // A two-or-three-word form for chips that echo the choice elsewhere.
+  shortLabel?: string;
   // Selecting an exclusive option clears the others (multi-choice only).
   exclusive?: boolean;
 };
@@ -138,4 +140,8 @@ export type SummaryRow = {
   stepId: StepId;
   label: string;
   value: string;
+  icon?: string;
 };
+
+// An answer echoed back as a chip: the option's icon and short label.
+export type AnswerChip = { key: string; label: string; icon?: string };

@@ -1,5 +1,6 @@
 import { onboardingSteps } from "./steps";
 import type {
+  AnswerChip,
   AnswerKey,
   Copy,
   OnboardingAnswers,
@@ -117,13 +118,19 @@ export function summaryRows(answers: OnboardingAnswers): SummaryRow[] {
   const rows: SummaryRow[] = [];
   const tags = tagsForPractices(answers.practices ?? []).slice(0, 2);
   if (tags.length > 0) {
-    rows.push({ stepId: "practices", label: "Daily verse leads with", value: tags.join(" and ") });
+    rows.push({
+      stepId: "practices",
+      label: "Daily verse leads with",
+      value: tags.join(" and "),
+      icon: "home-outline",
+    });
   }
   if (answers.intent === "practice" && answers.practiceMinutes) {
     rows.push({
       stepId: "practice-minutes",
       label: "Daily practice",
       value: `${answers.practiceMinutes} minutes`,
+      icon: optionIcon("practice-minutes", String(answers.practiceMinutes)),
     });
   }
   if (answers.intent === "read" && answers.startingText && answers.startingText !== "any") {
@@ -131,6 +138,7 @@ export function summaryRows(answers: OnboardingAnswers): SummaryRow[] {
       stepId: "starting-text",
       label: "Reading leads with",
       value: startingTextName(answers),
+      icon: optionIcon("starting-text", answers.startingText),
     });
   }
   if (answers.script) {
@@ -138,6 +146,7 @@ export function summaryRows(answers: OnboardingAnswers): SummaryRow[] {
       stepId: "script",
       label: "Verses shown",
       value: scriptLabel[answers.script] ?? "",
+      icon: optionIcon("script", answers.script),
     });
   }
   if (answers.script && answers.script !== "roman" && answers.language) {
@@ -145,6 +154,7 @@ export function summaryRows(answers: OnboardingAnswers): SummaryRow[] {
       stepId: "language",
       label: "Meanings in",
       value: answers.language === "hi" ? "हिन्दी" : "English",
+      icon: optionIcon("language", answers.language),
     });
   }
   if (answers.reminder) {
@@ -152,9 +162,39 @@ export function summaryRows(answers: OnboardingAnswers): SummaryRow[] {
       stepId: "reminder",
       label: "Reminder",
       value: reminderLabel[answers.reminder] ?? "",
+      icon: optionIcon("reminder", answers.reminder),
     });
   }
   return rows;
+}
+
+function optionIcon(stepId: StepId, value: string): string | undefined {
+  const step = onboardingSteps.find((entry) => entry.id === stepId);
+  if (!step || (step.kind !== "single" && step.kind !== "multi")) return undefined;
+  return step.options.find((option) => option.value === value)?.icon;
+}
+
+// The answers given so far, as chips: the intent first, then each household
+// practice, each with the icon it was chosen with. Used by the interstitial
+// to show the choices back before saying what they change.
+export function answerChips(answers: OnboardingAnswers): AnswerChip[] {
+  const chips: AnswerChip[] = [];
+  const pick = (stepId: StepId, values: string[]) => {
+    const step = onboardingSteps.find((entry) => entry.id === stepId);
+    if (!step || (step.kind !== "single" && step.kind !== "multi")) return;
+    for (const value of values) {
+      const option = step.options.find((candidate) => candidate.value === value);
+      if (!option) continue;
+      chips.push({
+        key: `${stepId}:${value}`,
+        label: option.shortLabel ?? resolveCopy(option.label, answers),
+        icon: option.icon,
+      });
+    }
+  };
+  if (answers.intent) pick("intent", [answers.intent]);
+  pick("practices", answers.practices ?? []);
+  return chips;
 }
 
 const startingTextNames: Record<string, string> = {

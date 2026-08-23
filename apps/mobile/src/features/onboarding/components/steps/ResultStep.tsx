@@ -1,6 +1,6 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { LinearGradient } from "expo-linear-gradient";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, type ComponentProps } from "react";
 import { Platform, Pressable, StyleSheet, Text, View } from "react-native";
 import Animated, {
   Easing,
@@ -25,6 +25,8 @@ import { useCuratedContent } from "@/lib/content";
 import { dailyShloka, shlokaTranslation } from "@/lib/shlokas";
 import { startingPointFor } from "@/lib/startingPoint";
 import { colors } from "@/theme/tokens";
+
+type IconName = ComponentProps<typeof Ionicons>["name"];
 
 // The payoff. Not a loader and not a recap of defaults: the actual verse the
 // profile produces for today, rendered the way the reader asked for it with
@@ -196,6 +198,11 @@ export function Result({
                 onPress={() => onChange(row.stepId)}
                 style={({ pressed }) => [styles.row, pressed && styles.pressed]}
               >
+                {row.icon ? (
+                  <View style={styles.rowIcon}>
+                    <Ionicons name={row.icon as IconName} size={17} color={colors.plum} />
+                  </View>
+                ) : null}
                 <View style={styles.rowText}>
                   <Text className="text-[13px] text-muted">{row.label}</Text>
                   <Text className="mt-0.5 text-[16px] font-semibold text-ink">{row.value}</Text>
@@ -285,6 +292,15 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: colors.line,
+  },
+  rowIcon: {
+    width: 34,
+    height: 34,
+    borderRadius: 11,
+    backgroundColor: colors.sand,
+    alignItems: "center",
+    justifyContent: "center",
+    marginRight: 4,
   },
   rowText: {
     flex: 1,

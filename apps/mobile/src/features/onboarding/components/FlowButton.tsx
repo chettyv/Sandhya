@@ -24,12 +24,16 @@ export function FlowButton({
   label,
   icon,
   onPress,
+  onDisabledPress,
   disabled = false,
   variant = "primary",
 }: {
   label: string;
   icon?: IconName;
   onPress: () => void;
+  // Called instead of onPress while disabled, so a screen can explain itself
+  // (e.g. nudge the unanswered cards) rather than swallow the tap.
+  onDisabledPress?: () => void;
   disabled?: boolean;
   variant?: "primary" | "ghost";
 }) {
@@ -59,14 +63,18 @@ export function FlowButton({
     <Pressable
       accessibilityRole="button"
       accessibilityState={{ disabled }}
-      disabled={disabled}
+      disabled={disabled && !onDisabledPress}
       onPressIn={() => {
-        if (!reducedMotion) press.value = withSpring(1, SPRING);
+        if (!reducedMotion && !disabled) press.value = withSpring(1, SPRING);
       }}
       onPressOut={() => {
         press.value = withSpring(0, SPRING);
       }}
       onPress={() => {
+        if (disabled) {
+          onDisabledPress?.();
+          return;
+        }
         void Haptics.selectionAsync();
         onPress();
       }}
