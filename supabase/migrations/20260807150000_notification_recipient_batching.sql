@@ -21,7 +21,7 @@ set search_path = public
 as $$
   with localised as (
     select
-      p.user_id,
+      p.id as user_id,
       p.display_name,
       p.notification_time,
       (

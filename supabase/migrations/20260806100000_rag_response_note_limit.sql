@@ -87,7 +87,8 @@ as $$
       )
     ),
     false
-  );
+  )
+  from shaped;
 $$;
 
 revoke all on function public.is_valid_rag_structured_response(jsonb) from public;

@@ -48,21 +48,23 @@ alter table public.cached_answers
 
 create or replace function public.is_valid_rag_structured_response(response jsonb)
 returns boolean
-language sql
+language plpgsql
 immutable
 strict
 set search_path = public
 as $$
-  with shaped as (
-    select
-      case
-        when jsonb_typeof(response->'sources') = 'array' then response->'sources'
-        else '[]'::jsonb
-      end as sources,
-      case
-        when jsonb_typeof(response->'tradition_notes') = 'array' then response->'tradition_notes'
-        else '[]'::jsonb
-      end as tradition_notes
+declare
+  sources_json jsonb := case
+    when jsonb_typeof(response->'sources') = 'array' then response->'sources'
+    else '[]'::jsonb
+  end;
+  tradition_notes_json jsonb := case
+    when jsonb_typeof(response->'tradition_notes') = 'array' then response->'tradition_notes'
+    else '[]'::jsonb
+  end;
+begin
+  return (with shaped as (
+    select sources_json as sources, tradition_notes_json as tradition_notes
   )
   select coalesce((
     jsonb_typeof(response) = 'object'
@@ -117,8 +119,11 @@ as $$
     and (
       jsonb_typeof(response->'suggested_practice') = 'null'
       or length(trim(response->>'suggested_practice')) > 0
-    ), false)
-  from shaped;
+    )),
+    false
+  )
+  from shaped);
+end;
 $$;
 
 create or replace function public.rag_response_citations_match_retrieved_ids(
