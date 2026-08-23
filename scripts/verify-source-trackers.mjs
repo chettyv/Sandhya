@@ -69,16 +69,26 @@ for (const csvPath of csvPaths) {
         console.error(`production row ${row.work_id} must have an http(s) source_url`);
         hasError = true;
       }
-      if (!/^yes$/i.test(row.can_store) || !/^yes$/i.test(row.can_show_excerpts) || !/^yes$/i.test(row.can_embed_full_text)) {
-        console.error(`production row ${row.work_id} must have unconditional storage, excerpt, and embedding rights`);
+      if (
+        !/^yes$/i.test(row.can_store) ||
+        !/^yes$/i.test(row.can_show_excerpts) ||
+        !/^yes$/i.test(row.can_embed_full_text)
+      ) {
+        console.error(
+          `production row ${row.work_id} must have unconditional storage, excerpt, and embedding rights`,
+        );
         hasError = true;
       }
       if (!/^yes,? can ingest$/i.test(row.can_use_for_rag.trim())) {
-        console.error(`production row ${row.work_id} must say "Yes, can ingest" in can_use_for_rag`);
+        console.error(
+          `production row ${row.work_id} must say "Yes, can ingest" in can_use_for_rag`,
+        );
         hasError = true;
       }
       if (!/^no\b/i.test(row.permission_needed.trim())) {
-        console.error(`production row ${row.work_id} must have permission_needed beginning with "No"`);
+        console.error(
+          `production row ${row.work_id} must have permission_needed beginning with "No"`,
+        );
         hasError = true;
       }
       if (!row.review_needed.trim()) {

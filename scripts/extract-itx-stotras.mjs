@@ -163,7 +163,10 @@ for (const text of texts) {
         if (currentDev !== freshDevLine) {
           const next = current
             .replace(/^\*\*Devanagari:\*\* .*$/m, `**Devanagari:** ${freshDevLine}`)
-            .replace(/^\*\*IAST:\*\* .*$/m, `**IAST:** ${freshIast.replaceAll("\n", " / ")}\n<!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \\- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->`);
+            .replace(
+              /^\*\*IAST:\*\* .*$/m,
+              `**IAST:** ${freshIast.replaceAll("\n", " / ")}\n<!-- conversion re-run with the fixed ITRANS converter (avagraha dots, \\- hyphens, ## variant apparatus, .h halants resolved); earlier artifact notes may reference forms no longer present. -->`,
+            );
           writeFileSync(target, next);
           repaired += 1;
         }
@@ -225,19 +228,80 @@ reviewed_by: ""
 // stays written). Longest-match tokenizer.
 function itransToDevanagari(text) {
   const C = {
-    ".Dh": "ढ़", ".D": "ड़",
-    kh: "ख", gh: "घ", chh: "छ", Ch: "छ", jh: "झ", Th: "ठ", Dh: "ढ", th: "थ", dh: "ध",
-    ph: "फ", bh: "भ", sh: "श", Sh: "ष", GY: "ज्ञ", "j~n": "ज्ञ", x: "क्ष", "~N": "ङ",
-    "N^": "ङ", "~n": "ञ", JN: "ञ", k: "क", g: "ग", ch: "च", c: "च", j: "ज", T: "ट",
-    D: "ड", N: "ण", t: "त", d: "द", n: "न", p: "प", b: "ब", m: "म", y: "य", r: "र",
-    l: "ल", v: "व", w: "व", s: "स", h: "ह", L: "ळ",
+    ".Dh": "ढ़",
+    ".D": "ड़",
+    kh: "ख",
+    gh: "घ",
+    chh: "छ",
+    Ch: "छ",
+    jh: "झ",
+    Th: "ठ",
+    Dh: "ढ",
+    th: "थ",
+    dh: "ध",
+    ph: "फ",
+    bh: "भ",
+    sh: "श",
+    Sh: "ष",
+    GY: "ज्ञ",
+    "j~n": "ज्ञ",
+    x: "क्ष",
+    "~N": "ङ",
+    "N^": "ङ",
+    "~n": "ञ",
+    JN: "ञ",
+    k: "क",
+    g: "ग",
+    ch: "च",
+    c: "च",
+    j: "ज",
+    T: "ट",
+    D: "ड",
+    N: "ण",
+    t: "त",
+    d: "द",
+    n: "न",
+    p: "प",
+    b: "ब",
+    m: "म",
+    y: "य",
+    r: "र",
+    l: "ल",
+    v: "व",
+    w: "व",
+    s: "स",
+    h: "ह",
+    L: "ळ",
   };
   const V = {
-    A: ["आ", "ा"], ai: ["ऐ", "ै"], au: ["औ", "ौ"], a: ["अ", ""], I: ["ई", "ी"],
-    i: ["इ", "ि"], U: ["ऊ", "ू"], u: ["उ", "ु"], RRI: ["ॠ", "ॄ"], "R^I": ["ॠ", "ॄ"],
-    RRi: ["ऋ", "ृ"], "R^i": ["ऋ", "ृ"], "L^i": ["ऌ", "ॢ"], e: ["ए", "े"], o: ["ओ", "ो"],
+    A: ["आ", "ा"],
+    ai: ["ऐ", "ै"],
+    au: ["औ", "ौ"],
+    a: ["अ", ""],
+    I: ["ई", "ी"],
+    i: ["इ", "ि"],
+    U: ["ऊ", "ू"],
+    u: ["उ", "ु"],
+    RRI: ["ॠ", "ॄ"],
+    "R^I": ["ॠ", "ॄ"],
+    RRi: ["ऋ", "ृ"],
+    "R^i": ["ऋ", "ृ"],
+    "L^i": ["ऌ", "ॢ"],
+    e: ["ए", "े"],
+    o: ["ओ", "ो"],
   };
-  const S = { OM: "ॐ", ".a": "ऽ", ".n": "ं", M: "ं", ".m": "ं", ".N": "ँ", H: "ः", "|": "।", _: "", "'": "ऽ" };
+  const S = {
+    OM: "ॐ",
+    ".a": "ऽ",
+    ".n": "ं",
+    M: "ं",
+    ".m": "ं",
+    ".N": "ँ",
+    H: "ः",
+    "|": "।",
+    _: "",
+    "'": "ऽ",
+  };
   const tokens = [...Object.keys(C), ...Object.keys(V), ...Object.keys(S)].sort(
     (a, b) => b.length - a.length,
   );
@@ -275,9 +339,73 @@ function itransToDevanagari(text) {
 // Same Devanagari -> IAST mapping as scripts/extract-chalisa.mjs, plus the
 // long vocalic r/l pairs.
 function devanagariToIast(text) {
-  const V = { अ: "a", आ: "ā", इ: "i", ई: "ī", उ: "u", ऊ: "ū", ऋ: "ṛ", ॠ: "ṝ", ऌ: "ḷ", ए: "e", ऐ: "ai", ओ: "o", औ: "au" };
-  const M = { "ा": "ā", "ि": "i", "ी": "ī", "ु": "u", "ू": "ū", "ृ": "ṛ", "ॄ": "ṝ", "ॢ": "ḷ", "े": "e", "ै": "ai", "ो": "o", "ौ": "au" };
-  const C = { क: "k", ख: "kh", ग: "g", घ: "gh", ङ: "ṅ", च: "c", छ: "ch", ज: "j", झ: "jh", ञ: "ñ", ट: "ṭ", ठ: "ṭh", ड: "ḍ", ढ: "ḍh", ण: "ṇ", त: "t", थ: "th", द: "d", ध: "dh", न: "n", प: "p", फ: "ph", ब: "b", भ: "bh", म: "m", य: "y", र: "r", ल: "l", व: "v", श: "ś", ष: "ṣ", स: "s", ह: "h", ळ: "ḻ", "ड़": "ṛ", "ढ़": "ṛh" };
+  const V = {
+    अ: "a",
+    आ: "ā",
+    इ: "i",
+    ई: "ī",
+    उ: "u",
+    ऊ: "ū",
+    ऋ: "ṛ",
+    ॠ: "ṝ",
+    ऌ: "ḷ",
+    ए: "e",
+    ऐ: "ai",
+    ओ: "o",
+    औ: "au",
+  };
+  const M = {
+    "ा": "ā",
+    "ि": "i",
+    "ी": "ī",
+    "ु": "u",
+    "ू": "ū",
+    "ृ": "ṛ",
+    "ॄ": "ṝ",
+    "ॢ": "ḷ",
+    "े": "e",
+    "ै": "ai",
+    "ो": "o",
+    "ौ": "au",
+  };
+  const C = {
+    क: "k",
+    ख: "kh",
+    ग: "g",
+    घ: "gh",
+    ङ: "ṅ",
+    च: "c",
+    छ: "ch",
+    ज: "j",
+    झ: "jh",
+    ञ: "ñ",
+    ट: "ṭ",
+    ठ: "ṭh",
+    ड: "ḍ",
+    ढ: "ḍh",
+    ण: "ṇ",
+    त: "t",
+    थ: "th",
+    द: "d",
+    ध: "dh",
+    न: "n",
+    प: "p",
+    फ: "ph",
+    ब: "b",
+    भ: "bh",
+    म: "m",
+    य: "y",
+    र: "r",
+    ल: "l",
+    व: "v",
+    श: "ś",
+    ष: "ṣ",
+    स: "s",
+    ह: "h",
+    ळ: "ḻ",
+    ड़: "ṛ",
+    ढ़: "ṛh",
+  };
   let out = "";
   const chars = [...text.normalize("NFC")];
   for (let i = 0; i < chars.length; i += 1) {

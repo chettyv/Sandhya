@@ -18,15 +18,15 @@ async function fetchText(url) {
 }
 
 function writeMetadata(targetPath, metadata) {
-  const metadataPath = targetPath.replace(/\.(txt|ocr\.txt|html|jsonl|itx|xml)$/i, ".metadata.json");
+  const metadataPath = targetPath.replace(
+    /\.(txt|ocr\.txt|html|jsonl|itx|xml)$/i,
+    ".metadata.json",
+  );
   writeFileSync(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`, "utf8");
 }
 
 async function stageLalita() {
-  const targetPath = path.join(
-    rawRoot,
-    "sacred_texts/lalita_sahasranama_gherwal_1930_en.jsonl",
-  );
+  const targetPath = path.join(rawRoot, "sacred_texts/lalita_sahasranama_gherwal_1930_en.jsonl");
   mkdirSync(path.dirname(targetPath), { recursive: true });
   const pages = [
     {
@@ -66,7 +66,8 @@ async function stageLalita() {
     source_url: "https://www.sacred-texts.com/hin/kmu/index.htm",
     source_name: "Sacred Texts",
     licence: "public_domain",
-    copyright_status: "Public-domain candidate; provenance and translation authorship require review",
+    copyright_status:
+      "Public-domain candidate; provenance and translation authorship require review",
     can_store: true,
     can_show_excerpts: true,
     can_embed: true,
@@ -76,13 +77,21 @@ async function stageLalita() {
     notes:
       "The Sacred Texts index attributes the work to Rishi Singh Gherwal but says the provenance/originality is uncertain. Staged for review only.",
   });
-  return { work_id: "lalita_sahasranama_gherwal_1930_en", target_path: path.relative(repoRoot, targetPath), pages: rows.length };
+  return {
+    work_id: "lalita_sahasranama_gherwal_1930_en",
+    target_path: path.relative(repoRoot, targetPath),
+    pages: rows.length,
+  };
 }
 
 async function stageAditya() {
   const targetPath = path.join(rawRoot, "aditya_hridayam_wikisource_en.html");
   mkdirSync(path.dirname(targetPath), { recursive: true });
-  writeFileSync(targetPath, await fetchText("https://en.wikisource.org/wiki/Aditya_Hridayam"), "utf8");
+  writeFileSync(
+    targetPath,
+    await fetchText("https://en.wikisource.org/wiki/Aditya_Hridayam"),
+    "utf8",
+  );
   writeMetadata(targetPath, {
     work_id: "aditya_hridayam_wikisource_en",
     work_title: "Aditya Hridayam",
@@ -101,7 +110,11 @@ async function stageAditya() {
     review_needed: "legal; source attribution; Sanskrit/English alignment; segmentation",
     notes: "Preserve Wikisource attribution and page history. Staged for review only.",
   });
-  return { work_id: "aditya_hridayam_wikisource_en", target_path: path.relative(repoRoot, targetPath), pages: 1 };
+  return {
+    work_id: "aditya_hridayam_wikisource_en",
+    target_path: path.relative(repoRoot, targetPath),
+    pages: 1,
+  };
 }
 
 function stageDevi() {
@@ -125,15 +138,15 @@ function stageDevi() {
     source_url: "https://archive.org/details/in.ernet.dli.2015.163375",
     source_name: "Internet Archive scan; derived from existing staged Dutt text",
     licence: "public_domain",
-    copyright_status: "Public-domain candidate; verify edition, OCR provenance, and deployment jurisdiction",
+    copyright_status:
+      "Public-domain candidate; verify edition, OCR provenance, and deployment jurisdiction",
     can_store: true,
     can_show_excerpts: true,
     can_embed: true,
     permission_needed: "Unclear",
     provenance_confidence: "Medium",
     review_needed: "legal; Shakta review; OCR proofing; section boundaries; attribution",
-    notes:
-      `Derived from ${path.relative(repoRoot, sourcePath)}. Extract starts at OCR chapter heading line ${start + 1} and ends after the OCR chapter XCIII section near line ${end + 62}; this is not a proofread critical text.`,
+    notes: `Derived from ${path.relative(repoRoot, sourcePath)}. Extract starts at OCR chapter heading line ${start + 1} and ends after the OCR chapter XCIII section near line ${end + 62}; this is not a proofread critical text.`,
   });
   return {
     work_id: "devi_mahatmya_markandeya_dutt_1896_en",
@@ -146,12 +159,16 @@ const staged = [stageDevi(), await stageLalita(), await stageAditya()];
 const manifestPath = path.join(rawRoot, `english_gap_source_stage_manifest_${stagedDate}.json`);
 writeFileSync(
   manifestPath,
-  `${JSON.stringify({
-    staged_at: `${stagedDate}T00:00:00Z`,
-    language_scope: ["en"],
-    policy: "review-first staging; no source is approved for production retrieval by this script",
-    sources: staged,
-  }, null, 2)}\n`,
+  `${JSON.stringify(
+    {
+      staged_at: `${stagedDate}T00:00:00Z`,
+      language_scope: ["en"],
+      policy: "review-first staging; no source is approved for production retrieval by this script",
+      sources: staged,
+    },
+    null,
+    2,
+  )}\n`,
   "utf8",
 );
 

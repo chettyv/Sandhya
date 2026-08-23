@@ -11,7 +11,12 @@ import { join, resolve } from "node:path";
 
 const root = resolve(process.cwd());
 const sourcePath = join(
-  root, "content", "_staging", "raw", "hindi", "sanskritdocuments_hanuman_chalisa_hi.itx",
+  root,
+  "content",
+  "_staging",
+  "raw",
+  "hindi",
+  "sanskritdocuments_hanuman_chalisa_hi.itx",
 );
 const outDir = join(root, "content", "shlokas");
 const sourceUrl = "https://sanskritdocuments.org/doc_hanumaana/hanuman40.itx";
@@ -41,7 +46,10 @@ for (const rawLine of body.split(/\r?\n/)) {
   }
   current.push(line.replace(/\s*\.\.\s*$/, "").replace(/\s*\.\s*$/, " ।"));
   if (/\.\.\s*$/.test(rawLine.trim())) {
-    units.push({ mode: mode === "doha" ? (sawChaupai ? "closing" : "opening") : "chaupai", text: current.join("\n") });
+    units.push({
+      mode: mode === "doha" ? (sawChaupai ? "closing" : "opening") : "chaupai",
+      text: current.join("\n"),
+    });
     current = [];
   }
 }
@@ -74,7 +82,9 @@ if (chaupais.length !== 40 || openings.length !== 2 || closings.length !== 1) {
   console.error(
     `unexpected structure: ${openings.length} opening dohas, ${chaupais.length} chaupais, ${closings.length} closing — expected 2/40/1`,
   );
-  chaupais.forEach((unit, index) => console.error(`chaupai ${index + 1}: ${unit.text.split("\n")[0]}`));
+  chaupais.forEach((unit, index) =>
+    console.error(`chaupai ${index + 1}: ${unit.text.split("\n")[0]}`),
+  );
   process.exit(1);
 }
 
@@ -139,19 +149,68 @@ console.log(`wrote ${written} draft chalisa file(s) -> ${outDir}`);
 // (final schwa stays written, as Devanagari orthography does for Hindi).
 function itransToDevanagari(text) {
   const C = {
-    ".Dh": "ढ़", ".D": "ड़",
-    kh: "ख", gh: "घ", chh: "छ", Ch: "छ", jh: "झ", Th: "ठ", Dh: "ढ", th: "थ", dh: "ध",
-    ph: "फ", bh: "भ", sh: "श", Sh: "ष", GY: "ज्ञ", "j~n": "ज्ञ", "~N": "ङ", "N^": "ङ",
-    "~n": "ञ", JN: "ञ", k: "क", g: "ग", ch: "च", c: "च", j: "ज", T: "ट", D: "ड", N: "ण",
-    t: "त", d: "द", n: "न", p: "प", b: "ब", m: "म", y: "य", r: "र", l: "ल", v: "व",
-    w: "व", s: "स", h: "ह", L: "ळ",
+    ".Dh": "ढ़",
+    ".D": "ड़",
+    kh: "ख",
+    gh: "घ",
+    chh: "छ",
+    Ch: "छ",
+    jh: "झ",
+    Th: "ठ",
+    Dh: "ढ",
+    th: "थ",
+    dh: "ध",
+    ph: "फ",
+    bh: "भ",
+    sh: "श",
+    Sh: "ष",
+    GY: "ज्ञ",
+    "j~n": "ज्ञ",
+    "~N": "ङ",
+    "N^": "ङ",
+    "~n": "ञ",
+    JN: "ञ",
+    k: "क",
+    g: "ग",
+    ch: "च",
+    c: "च",
+    j: "ज",
+    T: "ट",
+    D: "ड",
+    N: "ण",
+    t: "त",
+    d: "द",
+    n: "न",
+    p: "प",
+    b: "ब",
+    m: "म",
+    y: "य",
+    r: "र",
+    l: "ल",
+    v: "व",
+    w: "व",
+    s: "स",
+    h: "ह",
+    L: "ळ",
   };
-  const V = { A: ["आ", "ा"], ai: ["ऐ", "ै"], au: ["औ", "ौ"], a: ["अ", ""], I: ["ई", "ी"],
-    i: ["इ", "ि"], U: ["ऊ", "ू"], u: ["उ", "ु"], RRi: ["ऋ", "ृ"], "R^i": ["ऋ", "ृ"], e: ["ए", "े"], o: ["ओ", "ो"] };
+  const V = {
+    A: ["आ", "ा"],
+    ai: ["ऐ", "ै"],
+    au: ["औ", "ौ"],
+    a: ["अ", ""],
+    I: ["ई", "ी"],
+    i: ["इ", "ि"],
+    U: ["ऊ", "ू"],
+    u: ["उ", "ु"],
+    RRi: ["ऋ", "ृ"],
+    "R^i": ["ऋ", "ृ"],
+    e: ["ए", "े"],
+    o: ["ओ", "ो"],
+  };
   const S = { ".n": "ं", M: "ं", ".m": "ं", ".N": "ँ", H: "ः", "|": "।", _: "" };
-  const tokens = [
-    ...Object.keys(C), ...Object.keys(V), ...Object.keys(S),
-  ].sort((a, b) => b.length - a.length);
+  const tokens = [...Object.keys(C), ...Object.keys(V), ...Object.keys(S)].sort(
+    (a, b) => b.length - a.length,
+  );
 
   let out = "";
   let i = 0;
@@ -183,9 +242,69 @@ function itransToDevanagari(text) {
 
 // Same Devanagari -> IAST mapping as scripts/extract-gita-shlokas.mjs.
 function devanagariToIast(text) {
-  const V = { अ: "a", आ: "ā", इ: "i", ई: "ī", उ: "u", ऊ: "ū", ऋ: "ṛ", ए: "e", ऐ: "ai", ओ: "o", औ: "au" };
-  const M = { "ा": "ā", "ि": "i", "ी": "ī", "ु": "u", "ू": "ū", "ृ": "ṛ", "े": "e", "ै": "ai", "ो": "o", "ौ": "au" };
-  const C = { क: "k", ख: "kh", ग: "g", घ: "gh", ङ: "ṅ", च: "c", छ: "ch", ज: "j", झ: "jh", ञ: "ñ", ट: "ṭ", ठ: "ṭh", ड: "ḍ", ढ: "ḍh", ण: "ṇ", त: "t", थ: "th", द: "d", ध: "dh", न: "n", प: "p", फ: "ph", ब: "b", भ: "bh", म: "m", य: "y", र: "r", ल: "l", व: "v", श: "ś", ष: "ṣ", स: "s", ह: "h", ळ: "ḷ", "ड़": "ṛ", "ढ़": "ṛh" };
+  const V = {
+    अ: "a",
+    आ: "ā",
+    इ: "i",
+    ई: "ī",
+    उ: "u",
+    ऊ: "ū",
+    ऋ: "ṛ",
+    ए: "e",
+    ऐ: "ai",
+    ओ: "o",
+    औ: "au",
+  };
+  const M = {
+    "ा": "ā",
+    "ि": "i",
+    "ी": "ī",
+    "ु": "u",
+    "ू": "ū",
+    "ृ": "ṛ",
+    "े": "e",
+    "ै": "ai",
+    "ो": "o",
+    "ौ": "au",
+  };
+  const C = {
+    क: "k",
+    ख: "kh",
+    ग: "g",
+    घ: "gh",
+    ङ: "ṅ",
+    च: "c",
+    छ: "ch",
+    ज: "j",
+    झ: "jh",
+    ञ: "ñ",
+    ट: "ṭ",
+    ठ: "ṭh",
+    ड: "ḍ",
+    ढ: "ḍh",
+    ण: "ṇ",
+    त: "t",
+    थ: "th",
+    द: "d",
+    ध: "dh",
+    न: "n",
+    प: "p",
+    फ: "ph",
+    ब: "b",
+    भ: "bh",
+    म: "m",
+    य: "y",
+    र: "r",
+    ल: "l",
+    व: "v",
+    श: "ś",
+    ष: "ṣ",
+    स: "s",
+    ह: "h",
+    ळ: "ḷ",
+    ड़: "ṛ",
+    ढ़: "ṛh",
+  };
   let out = "";
   const chars = [...text];
   for (let i = 0; i < chars.length; i += 1) {

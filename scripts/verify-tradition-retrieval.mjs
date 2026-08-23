@@ -25,10 +25,7 @@ const passages = [
 ];
 
 const filtered = retrieval.filterRetrievedPassagesByPolicy(passages, policy);
-assert(
-  filtered.length === 5,
-  "a stated tradition must not filter out other traditions' passages",
-);
+assert(filtered.length === 5, "a stated tradition must not filter out other traditions' passages");
 assert(
   filtered.filter((p) => p.tradition === "vaishnava" || p.tradition === "advaita").length === 2,
   "passages from non-stated traditions must be retained",

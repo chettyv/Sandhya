@@ -51,11 +51,15 @@ for (const file of files) {
     dailyPool: frontmatter.daily_pool === true,
     ...parseShlokaBody(body, file),
   });
-  console.log(`${frontmatter.review_status === "approved" ? "included" : "DRAFT"}: ${frontmatter.shloka_slug}`);
+  console.log(
+    `${frontmatter.review_status === "approved" ? "included" : "DRAFT"}: ${frontmatter.shloka_slug}`,
+  );
 }
 
 const json = `${JSON.stringify(entries, null, 2)}\n`;
-const core = entries.map(({ words: _words, meaning: _meaning, meanings: _meanings, ...rest }) => rest);
+const core = entries.map(
+  ({ words: _words, meaning: _meaning, meanings: _meanings, ...rest }) => rest,
+);
 const details = Object.fromEntries(
   entries.map(({ slug, words, meaning, meanings }) => [slug, { words, meaning, meanings }]),
 );
@@ -82,15 +86,21 @@ function parseShlokaBody(body, displayFile) {
     sections[match[1]] = match[2].trim();
   }
   const shloka = {};
-  const labelKeys = { Devanagari: "devanagari", IAST: "iast", "Say it": "sayIt", Meaning: "translation", Source: "source" };
+  const labelKeys = {
+    Devanagari: "devanagari",
+    IAST: "iast",
+    "Say it": "sayIt",
+    Meaning: "translation",
+    Source: "source",
+  };
   for (const match of (sections.Shloka ?? "").matchAll(
     /^\*\*(Devanagari|IAST|Say it|Meaning|Source):\*\*\s+(.+)$/gm,
   )) {
     shloka[labelKeys[match[1]]] = match[2].trim();
   }
-  const words = [...(sections["Word by word"] ?? "").matchAll(/^-\s+\*\*(.+?)\*\*\s+—\s+(.+)$/gm)].map(
-    (match) => ({ word: match[1].trim(), meaning: match[2].trim() }),
-  );
+  const words = [
+    ...(sections["Word by word"] ?? "").matchAll(/^-\s+\*\*(.+?)\*\*\s+—\s+(.+)$/gm),
+  ].map((match) => ({ word: match[1].trim(), meaning: match[2].trim() }));
   if (words.length === 0) fail(`${displayFile}: no word-by-word lines parsed`);
   // Per-language variants: "**Meaning (hi):** ..." labels give translated verse
   // lines; "## Meaning (hi)" sections give translated prose.

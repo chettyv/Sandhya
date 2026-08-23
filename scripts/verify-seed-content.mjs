@@ -18,9 +18,7 @@ if (conceptIds.length < 4) {
 
 const practiceSection = seed.slice(seed.indexOf("insert into public.practice_guides"));
 const practiceRows = [
-  ...practiceSection.matchAll(
-    /'([0-9a-f-]{36})',\s*'([^']+)',\s*'([^']+)',\s*'([^']+)',/g,
-  ),
+  ...practiceSection.matchAll(/'([0-9a-f-]{36})',\s*'([^']+)',\s*'([^']+)',\s*'([^']+)',/g),
 ];
 if (practiceRows.length < 4) {
   fail(`Expected at least 4 practice rows, found ${practiceRows.length}.`);

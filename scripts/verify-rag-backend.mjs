@@ -796,10 +796,7 @@ function checkBackendInvariants() {
   assertContains(budgetReservationMigration, "create or replace function public.reserve_ai_budget");
   assertContains(budgetReservationMigration, "release_ai_budget_reservation");
   assertContains(globalBudgetMigration, "project-wide circuit breaker");
-  assertContains(
-    globalBudgetMigration,
-    "pg_advisory_xact_lock(hashtext('sandhya_ai_budget'))",
-  );
+  assertContains(globalBudgetMigration, "pg_advisory_xact_lock(hashtext('sandhya_ai_budget'))");
   assertContains(globalBudgetMigration, "from public.messages m");
   assertContains(globalBudgetMigration, "from public.cost_log l");
   assertContains(globalBudgetMigration, "from public.ai_budget_reservations r");
@@ -1085,7 +1082,10 @@ function checkBackendInvariants() {
     "drop function if exists public.cached_answer_sources_are_allowed",
   );
   assertContains(traditionRanksMigration, "cs.can_embed is not true");
-  assertContains(traditionRanksMigration, "grant execute on function public.match_passage_embeddings");
+  assertContains(
+    traditionRanksMigration,
+    "grant execute on function public.match_passage_embeddings",
+  );
   assertContains(
     traditionRanksMigration,
     "grant execute on function public.cached_answer_sources_are_allowed",

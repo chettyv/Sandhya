@@ -9,15 +9,36 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 
 const root = resolve(process.cwd());
-const sourcePath = join(root, "content", "_staging", "raw", "sanskrit", "wikisource_bhagavad_gita_sa.jsonl");
+const sourcePath = join(
+  root,
+  "content",
+  "_staging",
+  "raw",
+  "sanskrit",
+  "wikisource_bhagavad_gita_sa.jsonl",
+);
 const outDir = join(root, "content", "shlokas");
 const chapters = (process.argv[2] ?? "2,12").split(",").map(Number);
 
 const CHAPTER_TITLES = [
-  "अर्जुनविषादयोगः", "साङ्ख्ययोगः", "कर्मयोगः", "ज्ञानकर्मसंन्यासयोगः", "कर्मसंन्यासयोगः",
-  "आत्मसंयमयोगः", "ज्ञानविज्ञानयोगः", "अक्षरब्रह्मयोगः", "राजविद्याराजगुह्ययोगः", "विभूतियोगः",
-  "विश्वरूपदर्शनयोगः", "भक्तियोगः", "क्षेत्रक्षेत्रज्ञविभागयोगः", "गुणत्रयविभागयोगः", "पुरुषोत्तमयोगः",
-  "दैवासुरसंपद्विभागयोगः", "श्रद्धात्रयविभागयोगः", "मोक्षसंन्यासयोगः",
+  "अर्जुनविषादयोगः",
+  "साङ्ख्ययोगः",
+  "कर्मयोगः",
+  "ज्ञानकर्मसंन्यासयोगः",
+  "कर्मसंन्यासयोगः",
+  "आत्मसंयमयोगः",
+  "ज्ञानविज्ञानयोगः",
+  "अक्षरब्रह्मयोगः",
+  "राजविद्याराजगुह्ययोगः",
+  "विभूतियोगः",
+  "विश्वरूपदर्शनयोगः",
+  "भक्तियोगः",
+  "क्षेत्रक्षेत्रज्ञविभागयोगः",
+  "गुणत्रयविभागयोगः",
+  "पुरुषोत्तमयोगः",
+  "दैवासुरसंपद्विभागयोगः",
+  "श्रद्धात्रयविभागयोगः",
+  "मोक्षसंन्यासयोगः",
 ];
 
 const records = readFileSync(sourcePath, "utf8")
@@ -49,11 +70,17 @@ for (const chapter of chapters) {
   }
   const poems = [...record.wikitext.matchAll(/<poem>([\s\S]*?)<\/poem>/g)].map((m) => m[1]);
   for (const poem of poems) {
-    const clean = poem.replaceAll("'''", "").replace(/<[^>]+>/g, "").trim();
+    const clean = poem
+      .replaceAll("'''", "")
+      .replace(/<[^>]+>/g, "")
+      .trim();
     // Verses end with ॥<dev-digits>- <dev-digits>॥ (chapter- verse).
     const parts = clean.split(/॥\s*([०-९]+)\s*-\s*([०-९]+)\s*॥/);
     for (let i = 0; i + 2 < parts.length; i += 3) {
-      const verseText = parts[i].trim().replace(/^ॐ$|^श्रीपरमात्मने नमः$/gm, "").trim();
+      const verseText = parts[i]
+        .trim()
+        .replace(/^ॐ$|^श्रीपरमात्मने नमः$/gm, "")
+        .trim();
       const verse = devDigits(parts[i + 2]);
       const chapterNum = devDigits(parts[i + 1]);
       if (chapterNum !== chapter || !verseText) continue;
@@ -109,9 +136,69 @@ function devDigits(value) {
 
 // Deterministic Devanagari -> IAST. Draft quality: reviewer-checked before ship.
 function transliterate(text) {
-  const V = { अ: "a", आ: "ā", इ: "i", ई: "ī", उ: "u", ऊ: "ū", ऋ: "ṛ", ॠ: "ṝ", ऌ: "ḷ", ए: "e", ऐ: "ai", ओ: "o", औ: "au" };
-  const M = { "ा": "ā", "ि": "i", "ी": "ī", "ु": "u", "ू": "ū", "ृ": "ṛ", "ॄ": "ṝ", "े": "e", "ै": "ai", "ो": "o", "ौ": "au" };
-  const C = { क: "k", ख: "kh", ग: "g", घ: "gh", ङ: "ṅ", च: "c", छ: "ch", ज: "j", झ: "jh", ञ: "ñ", ट: "ṭ", ठ: "ṭh", ड: "ḍ", ढ: "ḍh", ण: "ṇ", त: "t", थ: "th", द: "d", ध: "dh", न: "n", प: "p", फ: "ph", ब: "b", भ: "bh", म: "m", य: "y", र: "r", ल: "l", व: "v", श: "ś", ष: "ṣ", स: "s", ह: "h" };
+  const V = {
+    अ: "a",
+    आ: "ā",
+    इ: "i",
+    ई: "ī",
+    उ: "u",
+    ऊ: "ū",
+    ऋ: "ṛ",
+    ॠ: "ṝ",
+    ऌ: "ḷ",
+    ए: "e",
+    ऐ: "ai",
+    ओ: "o",
+    औ: "au",
+  };
+  const M = {
+    "ा": "ā",
+    "ि": "i",
+    "ी": "ī",
+    "ु": "u",
+    "ू": "ū",
+    "ृ": "ṛ",
+    "ॄ": "ṝ",
+    "े": "e",
+    "ै": "ai",
+    "ो": "o",
+    "ौ": "au",
+  };
+  const C = {
+    क: "k",
+    ख: "kh",
+    ग: "g",
+    घ: "gh",
+    ङ: "ṅ",
+    च: "c",
+    छ: "ch",
+    ज: "j",
+    झ: "jh",
+    ञ: "ñ",
+    ट: "ṭ",
+    ठ: "ṭh",
+    ड: "ḍ",
+    ढ: "ḍh",
+    ण: "ṇ",
+    त: "t",
+    थ: "th",
+    द: "d",
+    ध: "dh",
+    न: "n",
+    प: "p",
+    फ: "ph",
+    ब: "b",
+    भ: "bh",
+    म: "m",
+    य: "y",
+    र: "r",
+    ल: "l",
+    व: "v",
+    श: "ś",
+    ष: "ṣ",
+    स: "s",
+    ह: "h",
+  };
   let out = "";
   const chars = [...text];
   for (let i = 0; i < chars.length; i += 1) {

@@ -37,7 +37,11 @@ for (const file of files) {
   }
   const html = page(frontmatter, marked.parse(body), approved);
   writeFileSync(join(outDir, `${frontmatter.slug}.html`), html);
-  pages.push({ slug: frontmatter.slug, title: frontmatter.title, description: frontmatter.description });
+  pages.push({
+    slug: frontmatter.slug,
+    title: frontmatter.title,
+    description: frontmatter.description,
+  });
   console.log(`${approved ? "published" : "DRAFT"}: ${frontmatter.slug}.html`);
 }
 
@@ -50,7 +54,10 @@ ${[{ slug: "" }, ...pages].map(({ slug }) => `  <url><loc>${siteUrl}/${slug}</lo
 </urlset>
 `,
 );
-writeFileSync(join(outDir, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`);
+writeFileSync(
+  join(outDir, "robots.txt"),
+  `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`,
+);
 console.log(`built ${pages.length} page(s) + index, sitemap, robots.txt -> ${outDir}`);
 
 function page(fm, bodyHtml, approved) {

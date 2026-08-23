@@ -2,7 +2,7 @@
 import { pathToFileURL } from "node:url";
 
 const grouping = await import(
-  `${pathToFileURL("supabase/functions/_shared/notification-grouping.ts").href}?test=${Date.now()}`,
+  `${pathToFileURL("supabase/functions/_shared/notification-grouping.ts").href}?test=${Date.now()}`
 );
 const userA = "00000000-0000-0000-0000-000000000001";
 const userB = "00000000-0000-0000-0000-000000000002";

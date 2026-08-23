@@ -8,16 +8,28 @@
 // stay pending for the content pass — same flow as Gita/Chalisa/Isha.
 // Usage: node scripts/extract-wikisource-verses.mjs [slug ...]  (default: all)
 import { existsSync, readFileSync, writeFileSync } from "node:fs";
-import { join, resolve } from "node:path";
 import https from "node:https";
+import { join, resolve } from "node:path";
 
 const root = resolve(process.cwd());
 const outDir = join(root, "content", "shlokas");
 
 const TEXTS = [
   { slug: "kena", name: "Kena Upanishad", pages: ["केनोपनिषद्"], sectioned: true, expect: 35 },
-  { slug: "mundaka", name: "Mundaka Upanishad", pages: ["मुण्डकोपनिषद्"], sectioned: true, expect: 64 },
-  { slug: "mandukya", name: "Mandukya Upanishad", pages: ["माण्डुक्योपनिषद्"], sectioned: false, expect: 12 },
+  {
+    slug: "mundaka",
+    name: "Mundaka Upanishad",
+    pages: ["मुण्डकोपनिषद्"],
+    sectioned: true,
+    expect: 64,
+  },
+  {
+    slug: "mandukya",
+    name: "Mandukya Upanishad",
+    pages: ["माण्डुक्योपनिषद्"],
+    sectioned: false,
+    expect: 12,
+  },
   {
     slug: "katha",
     name: "Katha Upanishad",
@@ -72,12 +84,7 @@ const TEXTS = [
     // Page furniture between adhyayas: "81(78)" concordance lines, adhyaya
     // title lines, the Devimahatmya heading, and "iti…" colophons. The uvaca
     // speaker lines are part of the text and are kept.
-    stripLines: [
-      /^\s*\d+\(\d+\)\s*$/,
-      /ऽध्यायः/,
-      /^\s*देवीमाहात्म्यम्\s*$/,
-      /^\s*इति\s+श्री/,
-    ],
+    stripLines: [/^\s*\d+\(\d+\)\s*$/, /ऽध्यायः/, /^\s*देवीमाहात्म्यम्\s*$/, /^\s*इति\s+श्री/],
     expect: null,
   },
   {
@@ -118,11 +125,19 @@ const get = (url) =>
 
 for (const text of texts) {
   const stagePath = join(
-    root, "content", "_staging", "raw", "sanskrit", `wikisource_${text.slug}_upanishad_sa.jsonl`,
+    root,
+    "content",
+    "_staging",
+    "raw",
+    "sanskrit",
+    `wikisource_${text.slug}_upanishad_sa.jsonl`,
   );
   let pages;
   if (existsSync(stagePath)) {
-    pages = readFileSync(stagePath, "utf8").split("\n").filter(Boolean).map((l) => JSON.parse(l));
+    pages = readFileSync(stagePath, "utf8")
+      .split("\n")
+      .filter(Boolean)
+      .map((l) => JSON.parse(l));
     console.log(`${text.slug}: using staged copy`);
   } else {
     pages = [];
@@ -151,57 +166,66 @@ for (const text of texts) {
   if (text.pageSections) {
     parseSubpagedText(text, pages, units);
   } else {
-  for (const page of pages) {
-    const clean = page.wikitext
-      .replace(/<[^>]+>/g, "\n")
-      .replace(/\{\{[^}]*\}\}|\{[^}]*\}|\[\[[^\]]*\]\]/g, "\n")
-      .replace(/^[|!#*=:].*$/gm, "")
-      .replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, "$1")
-      .replaceAll("'''", "")
-      .replaceAll("।।", "॥");
-    const cleanLines = text.stripLines
-      ? clean
-          .split("\n")
-          .filter((line) => !text.stripLines.some((pattern) => pattern.test(line)))
-          .join("\n")
-      : clean;
-    // Dotted markers may carry a stray space after the dot ("॥८६. ६॥").
-    const parts = cleanLines.split(/॥\s*([०-९0-9]+(?:\.\s*[०-९0-9]+){0,2})\s*॥/);
-    let section = 1;
-    let previousNumber = 0;
-    for (let i = 0; i + 1 < parts.length; i += 2) {
-      let verseText = parts[i].trim();
-      const marker = devDigits(parts[i + 1]);
-      // First block: strip page headers, keep from the shanti mantra's ॐ.
-      if (units.length === 0) {
-        const omStart = verseText.indexOf("ॐ");
-        if (omStart > 0) verseText = verseText.slice(omStart);
-        // An unnumbered shanti mantra ends with a standalone ॥ before verse 1.
-        const shantiSplit = verseText.split(/॥\s*\n/);
-        if (shantiSplit.length > 1 && shantiSplit[0].includes("ॐ")) {
-          units.push({ label: "shanti", text: shantiSplit[0].trim(), source: page.source_url });
-          verseText = shantiSplit.slice(1).join("॥\n").trim();
+    for (const page of pages) {
+      const clean = page.wikitext
+        .replace(/<[^>]+>/g, "\n")
+        .replace(/\{\{[^}]*\}\}|\{[^}]*\}|\[\[[^\]]*\]\]/g, "\n")
+        .replace(/^[|!#*=:].*$/gm, "")
+        .replace(/\[https?:\/\/\S+\s+([^\]]*)\]/g, "$1")
+        .replaceAll("'''", "")
+        .replaceAll("।।", "॥");
+      const cleanLines = text.stripLines
+        ? clean
+            .split("\n")
+            .filter((line) => !text.stripLines.some((pattern) => pattern.test(line)))
+            .join("\n")
+        : clean;
+      // Dotted markers may carry a stray space after the dot ("॥८६. ६॥").
+      const parts = cleanLines.split(/॥\s*([०-९0-9]+(?:\.\s*[०-९0-9]+){0,2})\s*॥/);
+      let section = 1;
+      let previousNumber = 0;
+      for (let i = 0; i + 1 < parts.length; i += 2) {
+        let verseText = parts[i].trim();
+        const marker = devDigits(parts[i + 1]);
+        // First block: strip page headers, keep from the shanti mantra's ॐ.
+        if (units.length === 0) {
+          const omStart = verseText.indexOf("ॐ");
+          if (omStart > 0) verseText = verseText.slice(omStart);
+          // An unnumbered shanti mantra ends with a standalone ॥ before verse 1.
+          const shantiSplit = verseText.split(/॥\s*\n/);
+          if (shantiSplit.length > 1 && shantiSplit[0].includes("ॐ")) {
+            units.push({ label: "shanti", text: shantiSplit[0].trim(), source: page.source_url });
+            verseText = shantiSplit.slice(1).join("॥\n").trim();
+          }
         }
-      }
-      if (!verseText.replace(/[॥ॐ\s।]/g, "")) continue;
-      if (marker.verse !== undefined) {
-        // Dotted marker carries its own section.
-        section = marker.section ?? section;
-        if (text.sectionFilter && marker.section !== undefined && !text.sectionFilter(marker.section)) {
-          continue;
-        }
-        const displaySection = text.mapSection ? text.mapSection(section) : section;
-        units.push({ label: `${text.sectioned ? `${String(displaySection).replaceAll(".", "-")}-` : ""}${marker.verse}`, refNum: text.sectioned ? `${displaySection}.${marker.verse}` : `${marker.verse}`, dotted: marker.section !== undefined, text: verseText, source: page.source_url });
-        if (marker.section === undefined) {
-          // Sequential markers: a drop back to 1 opens the next khanda.
-          if (marker.verse <= previousNumber) section += 1;
-          previousNumber = marker.verse;
-          if (marker.verse <= 1) previousNumber = marker.verse;
+        if (!verseText.replace(/[॥ॐ\s।]/g, "")) continue;
+        if (marker.verse !== undefined) {
+          // Dotted marker carries its own section.
+          section = marker.section ?? section;
+          if (
+            text.sectionFilter &&
+            marker.section !== undefined &&
+            !text.sectionFilter(marker.section)
+          ) {
+            continue;
+          }
+          const displaySection = text.mapSection ? text.mapSection(section) : section;
+          units.push({
+            label: `${text.sectioned ? `${String(displaySection).replaceAll(".", "-")}-` : ""}${marker.verse}`,
+            refNum: text.sectioned ? `${displaySection}.${marker.verse}` : `${marker.verse}`,
+            dotted: marker.section !== undefined,
+            text: verseText,
+            source: page.source_url,
+          });
+          if (marker.section === undefined) {
+            // Sequential markers: a drop back to 1 opens the next khanda.
+            if (marker.verse <= previousNumber) section += 1;
+            previousNumber = marker.verse;
+            if (marker.verse <= 1) previousNumber = marker.verse;
+          }
         }
       }
     }
-  }
-
   }
 
   // Re-label sequential-sectioned texts now that section boundaries are known:
@@ -244,10 +268,16 @@ for (const text of texts) {
     if (shantiEnd >= 0) {
       // Everything through the closing śāntiḥ line belongs to the shanti unit.
       const shantiUnit = units.find((unit) => unit.label === "shanti");
-      const shantiText = lines.slice(0, shantiEnd + 1).join("\n").trim();
+      const shantiText = lines
+        .slice(0, shantiEnd + 1)
+        .join("\n")
+        .trim();
       if (shantiUnit) shantiUnit.text = `${shantiUnit.text}\n${shantiText}`.trim();
       else units.unshift({ label: "shanti", text: shantiText, source: firstVerse.source });
-      firstVerse.text = lines.slice(shantiEnd + 1).join("\n").trim();
+      firstVerse.text = lines
+        .slice(shantiEnd + 1)
+        .join("\n")
+        .trim();
     } else {
       const lastOm = lines.map((line) => line.trimStart().startsWith("ॐ")).lastIndexOf(true);
       if (lastOm > 0) firstVerse.text = lines.slice(lastOm).join("\n");
@@ -261,13 +291,17 @@ for (const text of texts) {
     // Never clobber a file whose content pass is done: skeletons carry a
     // pending **Meaning:** placeholder; anything else is human-reviewed work.
     const target = join(outDir, `${slug}.md`);
-    if (existsSync(target) && !/\*\*Meaning:\*\* \(translation pending/.test(readFileSync(target, "utf8"))) {
+    if (
+      existsSync(target) &&
+      !/\*\*Meaning:\*\* \(translation pending/.test(readFileSync(target, "utf8"))
+    ) {
       protectedCount += 1;
       continue;
     }
     const ref =
       unit.label === "shanti" ? `${text.name}, shanti mantra` : `${text.name} ${unit.refNum}`;
-    const devanagari = unit.text.replace(/\s*\n\s*/g, "\n") + (unit.label === "shanti" ? "" : ` ॥${unit.refNum}॥`);
+    const devanagari =
+      unit.text.replace(/\s*\n\s*/g, "\n") + (unit.label === "shanti" ? "" : ` ॥${unit.refNum}॥`);
     const iast = devanagariToIast(devanagari);
     const sayIt = iast
       .split(/\n/)
@@ -352,9 +386,7 @@ function parseSubpagedText(text, pages, units) {
               // with ॥ (the closing danda was consumed by the block split).
               .filter(
                 (line) =>
-                  !/^\s*॥[^॥]*॥\s*$/.test(line) &&
-                  !/^\s*॥/.test(line) &&
-                  line.trim() !== "ॐ",
+                  !/^\s*॥[^॥]*॥\s*$/.test(line) && !/^\s*॥/.test(line) && line.trim() !== "ॐ",
               )
               .join("\n")
               .trim(),
@@ -416,14 +448,73 @@ function parseSubpagedText(text, pages, units) {
 function devDigits(value) {
   const normalized = value.replaceAll(/[०-९]/g, (d) => "०१२३४५६७८९".indexOf(d));
   const dotted = normalized.split(".");
-  if (dotted.length > 1) return { section: dotted.slice(0, -1).join("."), verse: Number(dotted.at(-1)) };
+  if (dotted.length > 1)
+    return { section: dotted.slice(0, -1).join("."), verse: Number(dotted.at(-1)) };
   return { verse: Number(normalized) };
 }
 
 function devanagariToIast(text) {
-  const V = { अ: "a", आ: "ā", इ: "i", ई: "ī", उ: "u", ऊ: "ū", ऋ: "ṛ", ए: "e", ऐ: "ai", ओ: "o", औ: "au" };
-  const M = { "ा": "ā", "ि": "i", "ी": "ī", "ु": "u", "ू": "ū", "ृ": "ṛ", "े": "e", "ै": "ai", "ो": "o", "ौ": "au" };
-  const C = { क: "k", ख: "kh", ग: "g", घ: "gh", ङ: "ṅ", च: "c", छ: "ch", ज: "j", झ: "jh", ञ: "ñ", ट: "ṭ", ठ: "ṭh", ड: "ḍ", ढ: "ḍh", ण: "ṇ", त: "t", थ: "th", द: "d", ध: "dh", न: "n", प: "p", फ: "ph", ब: "b", भ: "bh", म: "m", य: "y", र: "r", ल: "l", व: "v", श: "ś", ष: "ṣ", स: "s", ह: "h", ळ: "ḷ" };
+  const V = {
+    अ: "a",
+    आ: "ā",
+    इ: "i",
+    ई: "ī",
+    उ: "u",
+    ऊ: "ū",
+    ऋ: "ṛ",
+    ए: "e",
+    ऐ: "ai",
+    ओ: "o",
+    औ: "au",
+  };
+  const M = {
+    "ा": "ā",
+    "ि": "i",
+    "ी": "ī",
+    "ु": "u",
+    "ू": "ū",
+    "ृ": "ṛ",
+    "े": "e",
+    "ै": "ai",
+    "ो": "o",
+    "ौ": "au",
+  };
+  const C = {
+    क: "k",
+    ख: "kh",
+    ग: "g",
+    घ: "gh",
+    ङ: "ṅ",
+    च: "c",
+    छ: "ch",
+    ज: "j",
+    झ: "jh",
+    ञ: "ñ",
+    ट: "ṭ",
+    ठ: "ṭh",
+    ड: "ḍ",
+    ढ: "ḍh",
+    ण: "ṇ",
+    त: "t",
+    थ: "th",
+    द: "d",
+    ध: "dh",
+    न: "n",
+    प: "p",
+    फ: "ph",
+    ब: "b",
+    भ: "bh",
+    म: "m",
+    य: "y",
+    र: "r",
+    ल: "l",
+    व: "v",
+    श: "ś",
+    ष: "ṣ",
+    स: "s",
+    ह: "h",
+    ळ: "ḷ",
+  };
   let out = "";
   const chars = [...text.normalize("NFC")];
   for (let i = 0; i < chars.length; i += 1) {

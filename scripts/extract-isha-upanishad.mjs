@@ -5,11 +5,18 @@
 // (isha-1..18 plus the shanti mantra). Translations stay pending for the
 // content pass, mirroring the Gita/Chalisa extraction flow.
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
-import { join, resolve } from "node:path";
 import https from "node:https";
+import { join, resolve } from "node:path";
 
 const root = resolve(process.cwd());
-const stagePath = join(root, "content", "_staging", "raw", "sanskrit", "wikisource_isha_upanishad_sa.jsonl");
+const stagePath = join(
+  root,
+  "content",
+  "_staging",
+  "raw",
+  "sanskrit",
+  "wikisource_isha_upanishad_sa.jsonl",
+);
 const outDir = join(root, "content", "shlokas");
 const PAGE_TITLE = "ईशावास्‍योपनिषद्"; // ZWJ is part of the actual page title
 const sourceUrl = `https://sa.wikisource.org/wiki/${encodeURIComponent(PAGE_TITLE)}`;
@@ -137,9 +144,67 @@ console.log(`wrote ${written} draft isha file(s) -> ${outDir}`);
 // Vedic anusvara-candrabindu ँ after vowels (ईशावास्यमिदँ) and jihvamuliya-free
 // basics sufficient for draft review.
 function devanagariToIast(text) {
-  const V = { अ: "a", आ: "ā", इ: "i", ई: "ī", उ: "u", ऊ: "ū", ऋ: "ṛ", ए: "e", ऐ: "ai", ओ: "o", औ: "au" };
-  const M = { "ा": "ā", "ि": "i", "ी": "ī", "ु": "u", "ू": "ū", "ृ": "ṛ", "े": "e", "ै": "ai", "ो": "o", "ौ": "au" };
-  const C = { क: "k", ख: "kh", ग: "g", घ: "gh", ङ: "ṅ", च: "c", छ: "ch", ज: "j", झ: "jh", ञ: "ñ", ट: "ṭ", ठ: "ṭh", ड: "ḍ", ढ: "ḍh", ण: "ṇ", त: "t", थ: "th", द: "d", ध: "dh", न: "n", प: "p", फ: "ph", ब: "b", भ: "bh", म: "m", य: "y", र: "r", ल: "l", व: "v", श: "ś", ष: "ṣ", स: "s", ह: "h", ळ: "ḷ" };
+  const V = {
+    अ: "a",
+    आ: "ā",
+    इ: "i",
+    ई: "ī",
+    उ: "u",
+    ऊ: "ū",
+    ऋ: "ṛ",
+    ए: "e",
+    ऐ: "ai",
+    ओ: "o",
+    औ: "au",
+  };
+  const M = {
+    "ा": "ā",
+    "ि": "i",
+    "ी": "ī",
+    "ु": "u",
+    "ू": "ū",
+    "ृ": "ṛ",
+    "े": "e",
+    "ै": "ai",
+    "ो": "o",
+    "ौ": "au",
+  };
+  const C = {
+    क: "k",
+    ख: "kh",
+    ग: "g",
+    घ: "gh",
+    ङ: "ṅ",
+    च: "c",
+    छ: "ch",
+    ज: "j",
+    झ: "jh",
+    ञ: "ñ",
+    ट: "ṭ",
+    ठ: "ṭh",
+    ड: "ḍ",
+    ढ: "ḍh",
+    ण: "ṇ",
+    त: "t",
+    थ: "th",
+    द: "d",
+    ध: "dh",
+    न: "n",
+    प: "p",
+    फ: "ph",
+    ब: "b",
+    भ: "bh",
+    म: "m",
+    य: "y",
+    र: "r",
+    ल: "l",
+    व: "v",
+    श: "ś",
+    ष: "ṣ",
+    स: "s",
+    ह: "h",
+    ळ: "ḷ",
+  };
   let out = "";
   const chars = [...text];
   for (let i = 0; i < chars.length; i += 1) {
