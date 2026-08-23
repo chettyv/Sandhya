@@ -133,6 +133,16 @@ export function availableContentLanguages(): string[] {
   return [...languages];
 }
 
+// Source lines from the bank often carry a percent-encoded Wikisource URL;
+// show the decoded form (falls back to the raw string on a malformed one).
+export function readableSource(source: string): string {
+  try {
+    return decodeURI(source);
+  } catch {
+    return source;
+  }
+}
+
 export function shlokaTranslation(shloka: Shloka, language: string): string {
   return (language !== "en" && shloka.translations[language]) || shloka.translation;
 }

@@ -22,7 +22,7 @@ import { useStepPhase } from "../StepTransition";
 
 import { VerseLines } from "@/components/VerseLines";
 import { useCuratedContent } from "@/lib/content";
-import { dailyShloka, shlokaTranslation } from "@/lib/shlokas";
+import { dailyShloka, readableSource, shlokaTranslation } from "@/lib/shlokas";
 import { startingPointFor } from "@/lib/startingPoint";
 import { colors } from "@/theme/tokens";
 
@@ -56,20 +56,7 @@ export function Result({
     [profile.focusTags, profile.preferredTextPrefixes],
   );
   const startingPoint = useMemo(
-    () =>
-      startingPointFor(
-        {
-          intent: profile.intent,
-          practiceMinutes: profile.practiceMinutes,
-          startingText: profile.startingText,
-          curiosity: profile.curiosity,
-          householdPractices: profile.householdPractices,
-          reminderEnabled: profile.reminderEnabled,
-          reminderTime: profile.reminderTime,
-        },
-        content.practices,
-        content.concepts,
-      ),
+    () => startingPointFor(profile, content.practices, content.concepts),
     [profile, content.practices, content.concepts],
   );
   const rows = summaryRows(answers);
@@ -164,7 +151,7 @@ export function Result({
           <Text className="mt-3 text-[15px] leading-6 text-ink" numberOfLines={4}>
             {shlokaTranslation(shloka, profile.contentLanguage)}
           </Text>
-          <Text className="mt-3 text-xs leading-5 text-muted">{shloka.source}</Text>
+          <Text className="mt-3 text-xs leading-5 text-muted">{readableSource(shloka.source)}</Text>
         </Animated.View>
       ) : null}
 

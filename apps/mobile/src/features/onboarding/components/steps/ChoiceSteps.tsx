@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import { View } from "react-native";
 
-import { listAnswer, resolveCopy, resolveOptionalCopy, stringAnswer } from "../../engine";
+import { choiceAnswer, listAnswer, resolveCopy, resolveOptionalCopy } from "../../engine";
 import type { MultiChoiceStep, OnboardingAnswers, SingleChoiceStep } from "../../types";
 import { ChoiceCard } from "../ChoiceCard";
 import { FlowButton } from "../FlowButton";
 import { StepLayout } from "../OnboardingShell";
+import { useStepPhase } from "../StepTransition";
 
 // Tap an answer and the flow moves on by itself after a short beat: the
 // chosen card warms up and ripples, the others fall back, then the next
@@ -24,10 +25,18 @@ export function SingleChoice({
   onAnswer: (value: string) => void;
   onNext: () => void;
 }) {
-  const selected = stringAnswer(answers, step.answerKey);
+  const selected = choiceAnswer(answers, step.answerKey);
+  const phase = useStepPhase();
   const [pending, setPending] = useState<string | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
+  // The screen stays mounted while it animates out; a pending auto-advance
+  // must not fire after the user has already gone Back.
+  useEffect(() => {
+    if (phase === "active") return;
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = null;
+  }, [phase]);
   useEffect(
     () => () => {
       if (timer.current) clearTimeout(timer.current);

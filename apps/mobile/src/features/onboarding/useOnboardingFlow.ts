@@ -1,13 +1,17 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { BackHandler } from "react-native";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { BackHandler, Platform } from "react-native";
 
-import { isStepSatisfied, progressFor, visibleSteps, withAnswer } from "./engine";
-import type { AnswerKey, OnboardingAnswers, OnboardingStep, StepId } from "./types";
+import { progressFor, restoreDraft, stepIndex, visibleSteps, withAnswer } from "./engine";
+import type { AnswerKey, FlowEnv, OnboardingAnswers, OnboardingStep, StepId } from "./types";
 
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 
 type FlowState = { answers: OnboardingAnswers; stepId: StepId };
+
+// Reminders are scheduled natively; on web the step is not asked.
+const FLOW_ENV: FlowEnv = { remindersAvailable: Platform.OS !== "web" };
+const DRAFT_PERSIST_MS = 400;
 
 // Flow controller: which step is showing, the answers so far, and how to
 // move. Steps are configuration; this hook only walks the visible list.
@@ -18,31 +22,52 @@ export function useOnboardingFlow() {
   const draft = useAppStore((state) => state.onboardingDraft);
   const setOnboardingDraft = useAppStore((state) => state.setOnboardingDraft);
   const [direction, setDirection] = useState<1 | -1>(1);
-  const [state, setState] = useState<FlowState>(() => restore(draft));
+  const [state, setState] = useState<FlowState>(() => {
+    const { displayName } = useAppStore.getState();
+    return restoreDraft(
+      draft,
+      { name: displayName === "Friend" ? undefined : displayName },
+      FLOW_ENV,
+    );
+  });
 
   const move = useCallback((nextDirection: 1 | -1, update: (current: FlowState) => FlowState) => {
     setDirection(nextDirection);
     setState(update);
   }, []);
 
-  const steps = useMemo(() => visibleSteps(state.answers), [state.answers]);
-  const index = Math.max(
-    0,
-    steps.findIndex((step) => step.id === state.stepId),
-  );
+  const steps = useMemo(() => visibleSteps(state.answers, undefined, FLOW_ENV), [state.answers]);
+  const index = Math.max(0, stepIndex(state.answers, state.stepId, undefined, FLOW_ENV));
   const step: OnboardingStep = steps[index] ?? steps[0];
-  const progress = progressFor(state.answers, step.id);
+  const progress = progressFor(state.answers, step.id, undefined, FLOW_ENV);
 
   useEffect(() => {
     track("onboarding_step_viewed", { step_id: step.id, position: index });
   }, [step.id, index]);
 
-  // Persist the draft so closing the app mid-flow resumes in place. Cleared by
-  // finish() via setOnboardingComplete.
+  // Persist the draft so closing the app mid-flow resumes in place. Debounced:
+  // every write goes through the persisted store and SecureStore, and the
+  // name field would otherwise write on every keystroke. Flushed on unmount.
+  // Cleared by finish() via setOnboardingComplete.
+  const pendingDraft = useRef<FlowState | null>(null);
   useEffect(() => {
     if (state.stepId === "welcome") return;
-    setOnboardingDraft({ answers: state.answers, stepId: state.stepId });
+    pendingDraft.current = state;
+    const timer = setTimeout(() => {
+      pendingDraft.current = null;
+      setOnboardingDraft({ answers: state.answers, stepId: state.stepId });
+    }, DRAFT_PERSIST_MS);
+    return () => clearTimeout(timer);
   }, [state, setOnboardingDraft]);
+  useEffect(
+    () => () => {
+      const pending = pendingDraft.current;
+      if (pending && useAppStore.getState().onboardingDraft !== null) {
+        setOnboardingDraft({ answers: pending.answers, stepId: pending.stepId });
+      }
+    },
+    [setOnboardingDraft],
+  );
 
   const setAnswer = useCallback((key: AnswerKey, value: string | string[] | undefined) => {
     setState((current) => ({ ...current, answers: withAnswer(current.answers, key, value) }));
@@ -50,16 +75,16 @@ export function useOnboardingFlow() {
 
   const next = useCallback(() => {
     move(1, (current) => {
-      const list = visibleSteps(current.answers);
-      const position = list.findIndex((entry) => entry.id === current.stepId);
+      const list = visibleSteps(current.answers, undefined, FLOW_ENV);
+      const position = stepIndex(current.answers, current.stepId, undefined, FLOW_ENV);
       const target = list[Math.min(position + 1, list.length - 1)];
       return target ? { ...current, stepId: target.id } : current;
     });
   }, [move]);
 
   const back = useCallback((): boolean => {
-    const list = visibleSteps(state.answers);
-    const position = list.findIndex((entry) => entry.id === state.stepId);
+    const list = visibleSteps(state.answers, undefined, FLOW_ENV);
+    const position = stepIndex(state.answers, state.stepId, undefined, FLOW_ENV);
     if (position <= 0) return false;
     const target = list[position - 1];
     move(-1, (current) => ({ ...current, stepId: target.id }));
@@ -88,20 +113,9 @@ export function useOnboardingFlow() {
     progress,
     direction,
     canGoBack: index > 0,
-    satisfied: isStepSatisfied(step, state.answers),
     setAnswer,
     next,
     back,
     goTo,
   };
-}
-
-// Resume a saved draft at its step, provided that step still exists for the
-// saved answers; otherwise start from the first unsatisfied step.
-function restore(draft: { answers: OnboardingAnswers; stepId: StepId } | null): FlowState {
-  if (!draft) return { answers: {}, stepId: "welcome" };
-  const list = visibleSteps(draft.answers);
-  if (list.some((step) => step.id === draft.stepId)) return draft;
-  const firstOpen = list.find((step) => !isStepSatisfied(step, draft.answers)) ?? list[0];
-  return { answers: draft.answers, stepId: firstOpen.id };
 }

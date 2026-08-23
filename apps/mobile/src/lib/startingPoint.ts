@@ -106,6 +106,7 @@ export type StartingPoint =
   | { kind: "chapter"; chapter: string; title: string; detail: string }
   | { kind: "concept"; concept: Concept; title: string; detail: string }
   | { kind: "shloka"; slug: string; title: string; detail: string }
+  | { kind: "reader"; title: string; detail: string }
   | { kind: "explore"; title: string; detail: string };
 
 // One recommended first action, derived from intent and its branch answer.
@@ -129,7 +130,7 @@ export function startingPointFor(
       const chapter = profile.startingText ? startingTextChapter[profile.startingText] : null;
       if (!chapter)
         return {
-          kind: "explore",
+          kind: "reader",
           title: "Open the reader",
           detail: "Twelve texts, verse by verse",
         };

@@ -7,6 +7,7 @@ import { useCuratedContent } from "@/lib/content";
 import { startingPointFor, type StartingPoint } from "@/lib/startingPoint";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
+import { useStartingProfile } from "@/store/useStartingProfile";
 import { colors } from "@/theme/tokens";
 
 // The onboarding payoff, carried onto the home tab: the one first action the
@@ -15,36 +16,18 @@ import { colors } from "@/theme/tokens";
 // a recommendation.
 export function StartingPointCard() {
   const router = useRouter();
-  const intent = useAppStore((state) => state.onboardingIntent);
-  const practiceMinutes = useAppStore((state) => state.practiceMinutes);
-  const startingText = useAppStore((state) => state.startingText);
-  const curiosity = useAppStore((state) => state.curiosity);
-  const householdPractices = useAppStore((state) => state.householdPractices);
-  const reminderEnabled = useAppStore((state) => state.reminderEnabled);
-  const reminderTime = useAppStore((state) => state.reminderTime);
+  const profile = useStartingProfile();
   const dismissed = useAppStore((state) => state.startingPointDismissed);
   const dismiss = useAppStore((state) => state.dismissStartingPoint);
   const { data: content } = useCuratedContent();
   const reducedMotion = useReducedMotion();
 
-  if (!intent || dismissed) return null;
-  const point = startingPointFor(
-    {
-      intent,
-      practiceMinutes,
-      startingText,
-      curiosity,
-      householdPractices,
-      reminderEnabled,
-      reminderTime,
-    },
-    content.practices,
-    content.concepts,
-  );
+  if (!profile.intent || dismissed) return null;
+  const point = startingPointFor(profile, content.practices, content.concepts);
   if (!point) return null;
 
   const open = () => {
-    track("starting_point_opened", { kind: point.kind, intent });
+    track("starting_point_opened", { kind: point.kind, intent: profile.intent });
     dismiss();
     navigate(point);
   };
@@ -62,6 +45,9 @@ export function StartingPointCard() {
         return;
       case "shloka":
         router.push({ pathname: "/shloka/[slug]", params: { slug: target.slug } });
+        return;
+      case "reader":
+        router.push("/read");
         return;
       default:
         router.push("/(tabs)/explore");

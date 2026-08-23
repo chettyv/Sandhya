@@ -50,7 +50,9 @@ exist for them.
 
 ## Tests
 
-`engine.test.ts` covers branching, progress, coercion, copy that reacts to earlier
-answers, profile building and summary rows. Components are not unit-tested (the
-vitest setup cannot import React Native); walk the flow on a device or on
-`expo start --web` after changing them.
+`engine.test.ts` covers branching (including the environment gate that drops the
+reminder step on web), progress, coercion, copy that reacts to earlier answers,
+draft resume, answer chips, profile building and summary rows. Components are
+not unit-tested under vitest (that config cannot import React Native); the
+jest-expo smoke suite in `smoke/` renders every route, and the flow should be
+walked on a device or on `expo start --web` after changing components.

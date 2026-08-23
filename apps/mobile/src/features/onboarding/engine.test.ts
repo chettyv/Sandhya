@@ -1,10 +1,13 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  answerChips,
   buildProfile,
+  choiceAnswer,
   isStepSatisfied,
   progressFor,
   resolveCopy,
+  restoreDraft,
   stepIndex,
   summaryRows,
   visibleSteps,
@@ -41,6 +44,14 @@ describe("visibleSteps — branching", () => {
     expect(ids({})).not.toContain("language");
   });
 
+  it("drops the reminder question where reminders cannot be scheduled", () => {
+    const env = { remindersAvailable: false };
+    expect(visibleSteps({ intent: "read" }, onboardingSteps, env).map((s) => s.id)).not.toContain(
+      "reminder",
+    );
+    expect(progressFor({ intent: "read" }, "result", onboardingSteps, env)).toBe(1);
+  });
+
   it("always starts with welcome and ends with the result", () => {
     for (const intent of ["practice", "understand", "read", "explore"] as const) {
       const list = ids({ intent, script: "both" });
@@ -49,7 +60,7 @@ describe("visibleSteps — branching", () => {
     }
   });
 
-  it("keeps every question between five and seven screens long", () => {
+  it("asks six questions on the shortest path and seven on the longest", () => {
     const shortest = ids({ intent: "read", script: "roman" }).filter(
       (id) => !["welcome", "result", "reflect"].includes(id),
     );
@@ -96,6 +107,52 @@ describe("isStepSatisfied", () => {
 
   it("treats the name as optional", () => {
     expect(isStepSatisfied(find("name"), {})).toBe(true);
+  });
+});
+
+describe("choiceAnswer", () => {
+  it("reads a numeric answer back as the option string so its card shows selected", () => {
+    const answers = withAnswer({}, "practiceMinutes", "5");
+    expect(choiceAnswer(answers, "practiceMinutes")).toBe("5");
+    expect(choiceAnswer({ intent: "read" }, "intent")).toBe("read");
+    expect(choiceAnswer({ practices: ["lamp"] }, "practices")).toBeUndefined();
+    expect(choiceAnswer({}, "script")).toBeUndefined();
+  });
+});
+
+describe("restoreDraft", () => {
+  it("starts at the welcome with the existing name pre-filled", () => {
+    expect(restoreDraft(null, { name: "Priya" })).toEqual({
+      answers: { name: "Priya" },
+      stepId: "welcome",
+    });
+    expect(restoreDraft(null)).toEqual({ answers: {}, stepId: "welcome" });
+  });
+
+  it("resumes a draft at its step when that step still exists", () => {
+    const draft = { answers: { intent: "read" as const }, stepId: "starting-text" as const };
+    expect(restoreDraft(draft)).toEqual(draft);
+  });
+
+  it("falls back to the first unanswered step when the saved step no longer applies", () => {
+    const draft = { answers: { intent: "read" as const }, stepId: "practice-minutes" as const };
+    expect(restoreDraft(draft).stepId).toBe("practices");
+  });
+});
+
+describe("answerChips", () => {
+  it("echoes the intent first, then each household practice, with icons", () => {
+    const chips = answerChips({ intent: "practice", practices: ["lamp", "ekadashi"] });
+    expect(chips.map((chip) => chip.label)).toEqual([
+      "A daily practice",
+      "The evening lamp",
+      "Ekādaśī",
+    ]);
+    expect(chips.every((chip) => Boolean(chip.icon))).toBe(true);
+  });
+
+  it("returns nothing before anything is answered", () => {
+    expect(answerChips({})).toEqual([]);
   });
 });
 

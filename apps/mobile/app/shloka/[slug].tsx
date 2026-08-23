@@ -9,6 +9,7 @@ import {
   chapterKey,
   getShloka,
   getShlokaDetails,
+  readableSource,
   shlokaMeaning,
   shlokaTranslation,
 } from "@/lib/shlokas";
@@ -119,10 +120,3 @@ export default function ShlokaDetailScreen() {
 
 // Source lines cite Wikisource pages whose Devanagari paths arrive
 // percent-encoded; show the readable IRI so the citation is legible.
-function readableSource(source: string): string {
-  try {
-    return decodeURI(source);
-  } catch {
-    return source;
-  }
-}

@@ -1,6 +1,6 @@
 import type { OnboardingAnswers, OnboardingStep } from "./types";
 
-import { householdPracticeOptions } from "@/lib/practices";
+import { householdPracticeOptions, tagsForPractices } from "@/lib/practices";
 
 // The onboarding flow, as data. Order here is screen order; `when` predicates
 // remove branch steps that do not apply. Copy is a function wherever an
@@ -264,7 +264,7 @@ export const onboardingSteps: OnboardingStep[] = [
     when: (answers) => answers.script !== undefined && answers.script !== "roman",
     title: "Which language for the meanings?",
     subtitle:
-      "Every verse has a reviewed English and Hindi meaning. More languages live in Settings as they are reviewed.",
+      "Every verse carries an English and a Hindi meaning. More languages live in Settings as translations are reviewed.",
     options: [
       { value: "en", icon: "language-outline", label: "English" },
       { value: "hi", icon: "language-outline", label: "हिन्दी (Hindi)" },
@@ -275,12 +275,13 @@ export const onboardingSteps: OnboardingStep[] = [
     id: "reminder",
     kind: "single",
     answerKey: "reminder",
+    when: (_answers, env) => env.remindersAvailable,
     title: (answers) =>
       answers.intent === "practice"
         ? "When would a few minutes fit?"
         : "When should the day's verse reach you?",
     subtitle:
-      "One quiet notification at that time. No streaks, no nagging, and you can switch it off any time.",
+      "One quiet notification at that time. No nagging, and you can switch it off any time.",
     options: [
       {
         value: "08:00",
@@ -334,12 +335,7 @@ export function joinWords(words: string[]): string {
 // not actually do.
 export function reflectionLines(answers: OnboardingAnswers): string[] {
   const practices = answers.practices ?? [];
-  const tags: string[] = [];
-  for (const key of practices) {
-    const option = householdPracticeOptions.find((candidate) => candidate.key === key);
-    for (const tag of option?.tags ?? []) if (!tags.includes(tag)) tags.push(tag);
-  }
-  const leading = tags.slice(0, 2);
+  const leading = tagsForPractices(practices).slice(0, 2);
   const lines: string[] = [];
   if (practices.length === 1 && practices[0] === "scratch") {
     lines.push("Your daily verse will lead with peace and wisdom — good places to start.");

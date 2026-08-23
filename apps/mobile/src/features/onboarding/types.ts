@@ -63,11 +63,19 @@ export type ChoiceOption = {
   exclusive?: boolean;
 };
 
+// Facts about the device the flow runs on that decide which steps apply.
+export type FlowEnv = {
+  // Daily reminders cannot be scheduled on web, so the step is not asked.
+  remindersAvailable: boolean;
+};
+
+export const DEFAULT_FLOW_ENV: FlowEnv = { remindersAvailable: true };
+
 type StepBase = {
   id: StepId;
   // Branching: a step is in the flow only while `when` holds for the current
-  // answers. Branch steps are skipped, not shown disabled.
-  when?: (answers: OnboardingAnswers) => boolean;
+  // answers and environment. Branch steps are skipped, not shown disabled.
+  when?: (answers: OnboardingAnswers, env: FlowEnv) => boolean;
 };
 
 export type WelcomeStep = StepBase & { kind: "welcome" };

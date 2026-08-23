@@ -101,6 +101,12 @@ describe("startingPointFor", () => {
     if (point?.kind === "practice") expect(point.practice.durationMinutes).toBeLessThanOrEqual(2);
   });
 
+  it("opens the reader for a reader who asked to be surprised", () => {
+    expect(
+      startingPointFor({ ...base, intent: "read", startingText: "any" }, practices, concepts)?.kind,
+    ).toBe("reader");
+  });
+
   it("routes each curiosity somewhere different", () => {
     const kinds = (["lamp", "mantras", "festivals", "ideas"] as const).map(
       (curiosity) =>

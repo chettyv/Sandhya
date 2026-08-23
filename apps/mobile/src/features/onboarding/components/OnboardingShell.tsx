@@ -33,9 +33,10 @@ const HEADER_HEIGHT = 56;
 const BACK_SPRING = { damping: 16, stiffness: 300 };
 
 // The frame every step shares: the ambient backdrop, a 56pt header with
-// back, progress and an optional right-hand action, then a full-bleed stage
-// the step transition fills. The header never moves between steps so the
-// eye always knows where the bar and the back control are.
+// back and progress (balanced by an empty slot on the right), then a
+// full-bleed stage the step transition fills. The header never moves
+// between steps so the eye always knows where the bar and the back control
+// are.
 export function OnboardingShell({
   progress,
   position,
@@ -45,7 +46,6 @@ export function OnboardingShell({
   onBack,
   mood,
   seed,
-  rightAction,
   children,
 }: {
   progress: number;
@@ -56,7 +56,6 @@ export function OnboardingShell({
   onBack: () => void;
   mood: BackdropMood;
   seed: number;
-  rightAction?: { label: string; onPress: () => void };
   children: ReactNode;
 }) {
   const reducedMotion = useReducedMotion();
@@ -100,13 +99,7 @@ export function OnboardingShell({
           ) : (
             <View style={styles.flex} />
           )}
-          <View style={[styles.headerSlot, styles.headerSlotEnd]}>
-            {rightAction ? (
-              <Pressable accessibilityRole="button" hitSlop={8} onPress={rightAction.onPress}>
-                <Text className="text-sm font-semibold text-plum">{rightAction.label}</Text>
-              </Pressable>
-            ) : null}
-          </View>
+          <View style={styles.headerSlot} />
         </View>
         <View style={styles.stage}>{children}</View>
       </SafeAreaView>
@@ -231,9 +224,6 @@ const styles = StyleSheet.create({
   headerSlot: {
     width: 48,
     alignItems: "flex-start",
-  },
-  headerSlotEnd: {
-    alignItems: "flex-end",
   },
   backButton: {
     width: 40,

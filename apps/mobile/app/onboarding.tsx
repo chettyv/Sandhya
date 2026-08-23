@@ -38,16 +38,15 @@ export default function OnboardingScreen() {
     track("onboarding_started");
   }, []);
 
-  // Screen readers hear each new question as it arrives.
+  // Screen readers hear each new question as it arrives — once per step, not
+  // on every answer change or keystroke.
   const { step, answers } = flow;
+  const announcedStep = useRef<string | null>(null);
   useEffect(() => {
-    const title =
-      step.kind === "single" || step.kind === "multi" || step.kind === "text"
-        ? resolveCopy(step.title, answers)
-        : step.kind === "interstitial"
-          ? resolveCopy(step.title, answers)
-          : null;
-    if (title) AccessibilityInfo.announceForAccessibility(title);
+    if (announcedStep.current === step.id) return;
+    announcedStep.current = step.id;
+    if (step.kind === "welcome" || step.kind === "result") return;
+    AccessibilityInfo.announceForAccessibility(resolveCopy(step.title, answers));
   }, [step, answers]);
 
   // A light tap as each screen arrives, a firmer one when the space is ready.
@@ -159,10 +158,7 @@ export default function OnboardingScreen() {
             answers={answers}
             onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
             onNext={() => advance(flow.next)}
-            onSkip={() => {
-              flow.setAnswer(step.answerKey, undefined);
-              advance(flow.next);
-            }}
+            onSkip={() => advance(flow.next)}
           />
         );
       case "interstitial":

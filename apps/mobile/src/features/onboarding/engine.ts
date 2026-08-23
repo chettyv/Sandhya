@@ -1,8 +1,10 @@
 import { onboardingSteps } from "./steps";
+import { DEFAULT_FLOW_ENV } from "./types";
 import type {
   AnswerChip,
   AnswerKey,
   Copy,
+  FlowEnv,
   OnboardingAnswers,
   OnboardingProfile,
   OnboardingStep,
@@ -33,16 +35,18 @@ export function resolveOptionalCopy(
 export function visibleSteps(
   answers: OnboardingAnswers,
   steps: OnboardingStep[] = onboardingSteps,
+  env: FlowEnv = DEFAULT_FLOW_ENV,
 ): OnboardingStep[] {
-  return steps.filter((step) => !step.when || step.when(answers));
+  return steps.filter((step) => !step.when || step.when(answers, env));
 }
 
 export function stepIndex(
   answers: OnboardingAnswers,
   stepId: StepId,
   steps: OnboardingStep[] = onboardingSteps,
+  env: FlowEnv = DEFAULT_FLOW_ENV,
 ): number {
-  return visibleSteps(answers, steps).findIndex((step) => step.id === stepId);
+  return visibleSteps(answers, steps, env).findIndex((step) => step.id === stepId);
 }
 
 // Progress counts every screen the user will tap through after the welcome,
@@ -52,8 +56,9 @@ export function progressFor(
   answers: OnboardingAnswers,
   stepId: StepId,
   steps: OnboardingStep[] = onboardingSteps,
+  env: FlowEnv = DEFAULT_FLOW_ENV,
 ): number {
-  const counted = visibleSteps(answers, steps).filter((step) => step.kind !== "welcome");
+  const counted = visibleSteps(answers, steps, env).filter((step) => step.kind !== "welcome");
   const position = counted.findIndex((step) => step.id === stepId);
   if (position < 0 || counted.length === 0) return 0;
   return (position + 1) / counted.length;
@@ -84,6 +89,36 @@ export function listAnswer(answers: OnboardingAnswers, key: AnswerKey): string[]
   return Array.isArray(value) ? value : [];
 }
 
+// The selected option value of a single-choice answer, as the string the
+// option carries. practiceMinutes is stored as a number (see withAnswer), so
+// a plain stringAnswer() would never match its card.
+export function choiceAnswer(answers: OnboardingAnswers, key: AnswerKey): string | undefined {
+  const value = answers[key];
+  if (value === undefined || Array.isArray(value)) return undefined;
+  return String(value);
+}
+
+export type FlowDraft = { answers: OnboardingAnswers; stepId: StepId };
+
+// Where a fresh run starts: the welcome, with the device's existing name
+// pre-filled so skipping the name question keeps it rather than erasing it.
+// A saved draft resumes at its step, provided that step still exists for the
+// saved answers; otherwise at the first unsatisfied step.
+export function restoreDraft(
+  draft: FlowDraft | null,
+  seed: { name?: string } = {},
+  env: FlowEnv = DEFAULT_FLOW_ENV,
+): FlowDraft {
+  if (!draft) {
+    const answers: OnboardingAnswers = seed.name ? { name: seed.name } : {};
+    return { answers, stepId: "welcome" };
+  }
+  const list = visibleSteps(draft.answers, onboardingSteps, env);
+  if (list.some((step) => step.id === draft.stepId)) return draft;
+  const firstOpen = list.find((step) => !isStepSatisfied(step, draft.answers)) ?? list[0];
+  return { answers: draft.answers, stepId: firstOpen.id };
+}
+
 // Answers are stored by key; choice values arrive as strings from the UI and
 // are coerced here so the rest of the app sees typed values.
 export function withAnswer(
@@ -111,9 +146,12 @@ const scriptLabel: Record<string, string> = {
   roman: "Roman letters first",
 };
 
-// What the result screen shows back, one row per consumed answer, each with
-// the step to jump to if the user wants to change it. Rows for branch steps
-// that were not shown are omitted.
+// What the result screen shows back: one row per setting the answers
+// produced (verse order, practice length, reading text, script, language,
+// reminder), each with the step to jump to if the user wants to change it.
+// Intent, curiosity and name are not rows — they show up as the starting
+// point and the greeting instead. Rows for branch steps that were not shown
+// are omitted.
 export function summaryRows(answers: OnboardingAnswers): SummaryRow[] {
   const rows: SummaryRow[] = [];
   const tags = tagsForPractices(answers.practices ?? []).slice(0, 2);

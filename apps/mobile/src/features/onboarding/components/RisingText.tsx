@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View, type StyleProp, type TextStyle } from "react-native";
-import Animated, { FadeIn, FadeInUp, useReducedMotion } from "react-native-reanimated";
+import Animated, { FadeInUp, useReducedMotion } from "react-native-reanimated";
 
 import { EASE_OUT } from "./motion";
 import { useStepPhase } from "./StepTransition";
@@ -47,13 +47,9 @@ export function RisingText({
       {words.map((word, index) => (
         <Animated.View
           key={`${index}-${word}`}
-          entering={
-            reducedMotion
-              ? FadeIn.duration(120)
-              : FadeInUp.delay(delay + index * step)
-                  .duration(420)
-                  .easing(EASE_OUT)
-          }
+          entering={FadeInUp.delay(delay + index * step)
+            .duration(420)
+            .easing(EASE_OUT)}
         >
           <Text className={className} style={style}>
             {word}

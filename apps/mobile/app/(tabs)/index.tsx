@@ -20,6 +20,7 @@ import { pickConcepts, pickStartingPractice } from "@/lib/startingPoint";
 import { useSubscription } from "@/lib/subscriptions";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
+import { useStartingProfile } from "@/store/useStartingProfile";
 import { colors } from "@/theme/tokens";
 
 function buildWeek() {
@@ -46,12 +47,7 @@ export default function HomeScreen() {
   const completedTodayIds = useAppStore((state) => state.completedTodayIds);
   const completedDateKeys = useAppStore((state) => state.completedDateKeys);
   const reminderEnabled = useAppStore((state) => state.reminderEnabled);
-  const reminderTime = useAppStore((state) => state.reminderTime);
-  const onboardingIntent = useAppStore((state) => state.onboardingIntent);
-  const practiceMinutes = useAppStore((state) => state.practiceMinutes);
-  const startingText = useAppStore((state) => state.startingText);
-  const curiosity = useAppStore((state) => state.curiosity);
-  const householdPractices = useAppStore((state) => state.householdPractices);
+  const startingProfile = useStartingProfile();
   const { data: content } = useCuratedContent();
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
@@ -62,16 +58,8 @@ export default function HomeScreen() {
   // Onboarding answers choose today's practice (minutes offered, household
   // practice, time of day) and the two learning tiles; with no answers the
   // catalogue order stands, exactly as before.
-  const practice = pickStartingPractice(availablePractices, {
-    intent: onboardingIntent,
-    practiceMinutes,
-    startingText,
-    curiosity,
-    householdPractices,
-    reminderEnabled,
-    reminderTime,
-  });
-  const learningConcepts = pickConcepts(concepts, curiosity);
+  const practice = pickStartingPractice(availablePractices, startingProfile);
+  const learningConcepts = pickConcepts(concepts, startingProfile.curiosity);
   const availableUpcomingFestivals = availableFestivals.filter(
     (item) => item.date !== null && item.date >= localDateKey(),
   );

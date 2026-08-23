@@ -1,4 +1,11 @@
-import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
+import {
+  createContext,
+  useContext,
+  useLayoutEffect,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 import { StyleSheet } from "react-native";
 import Animated, {
   Easing,
@@ -28,9 +35,12 @@ type Snapshot = { key: string; node: ReactNode };
 // layout animations so it behaves identically on iOS, Android and web, and
 // so the exit can read the direction at the moment the move starts.
 //
-// The outgoing element keeps its React key, so it is never remounted: its
-// state, focus and scroll position stay exactly as they were while it
-// leaves.
+// The departing screen must be in the same commit as the arriving one, under
+// its original key, or React would unmount it and remount a copy a frame
+// later (losing its scroll position and pending state). So the snapshot of
+// the previous step is taken during render, from a ref, and the keyed
+// "leaving" view is rendered from that snapshot in the very render in which
+// the key changes; state catches up in the effect that starts the animation.
 export function StepTransition({
   stepKey,
   direction,
@@ -47,14 +57,22 @@ export function StepTransition({
   const exit = useSharedValue(1);
   const travel = useSharedValue<1 | -1>(1);
 
+  // During the render where the key changes, the ref still holds the
+  // previous step; after the effect below runs it holds the current one.
+  const departingNow = previous.current.key !== stepKey ? previous.current : null;
+  const departing = departingNow ?? (leaving && leaving.key !== stepKey ? leaving : null);
+
   const clearLeaving = (key: string) => {
     setLeaving((current) => (current?.key === key ? null : current));
   };
 
-  useEffect(() => {
+  // Layout effect: the shared values are reset before the frame paints, so
+  // neither screen flashes at the wrong opacity on the transition's first
+  // frame.
+  useLayoutEffect(() => {
     if (previous.current.key !== stepKey) {
-      const departing = previous.current;
-      setLeaving(departing);
+      const snapshot = previous.current;
+      setLeaving(snapshot);
       travel.value = direction;
       exit.value = 0;
       enter.value = 0;
@@ -63,7 +81,7 @@ export function StepTransition({
         1,
         { duration: slide ? EXIT_MS : 120, easing: Easing.in(Easing.quad) },
         (finished) => {
-          if (finished) runOnJS(clearLeaving)(departing.key);
+          if (finished) runOnJS(clearLeaving)(snapshot.key);
         },
       );
       enter.value = withDelay(
@@ -91,13 +109,13 @@ export function StepTransition({
 
   return (
     <>
-      {leaving ? (
+      {departing ? (
         <Animated.View
-          key={leaving.key}
+          key={departing.key}
           pointerEvents="none"
           style={[StyleSheet.absoluteFill, exitStyle]}
         >
-          <StepPhaseContext.Provider value="leaving">{leaving.node}</StepPhaseContext.Provider>
+          <StepPhaseContext.Provider value="leaving">{departing.node}</StepPhaseContext.Provider>
         </Animated.View>
       ) : null}
       <Animated.View key={stepKey} style={[StyleSheet.absoluteFill, enterStyle]}>
