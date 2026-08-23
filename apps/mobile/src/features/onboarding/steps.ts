@@ -13,6 +13,14 @@ import { householdPracticeOptions } from "@/lib/practices";
 
 export const ONBOARDING_VERSION = 2;
 
+const householdIcons: Record<string, string> = {
+  lamp: "flame-outline",
+  ekadashi: "moon-outline",
+  chalisa: "musical-notes-outline",
+  "mandir-festivals": "business-outline",
+  scratch: "sparkles-outline",
+};
+
 export const onboardingSteps: OnboardingStep[] = [
   { id: "welcome", kind: "welcome" },
 
@@ -23,19 +31,27 @@ export const onboardingSteps: OnboardingStep[] = [
     title: "What brings you here?",
     subtitle: "This sets where your home screen begins.",
     options: [
-      { value: "practice", label: "A small daily practice", detail: "A few minutes, most days" },
+      {
+        value: "practice",
+        icon: "sunny-outline",
+        label: "A small daily practice",
+        detail: "A few minutes, most days",
+      },
       {
         value: "understand",
+        icon: "home-outline",
         label: "To understand what my family does",
         detail: "The lamp, the fasts, the prayers — and why",
       },
       {
         value: "read",
+        icon: "book-outline",
         label: "To read the scriptures properly",
         detail: "Verse by verse, with the words explained",
       },
       {
         value: "explore",
+        icon: "compass-outline",
         label: "I'm curious, starting from scratch",
         detail: "No background needed",
       },
@@ -67,6 +83,7 @@ export const onboardingSteps: OnboardingStep[] = [
     options: householdPracticeOptions.map((option) => ({
       value: option.key,
       exclusive: option.exclusive,
+      icon: householdIcons[option.key] ?? "ellipse-outline",
       label: (answers) =>
         option.key === "scratch" && answers.intent === "explore"
           ? "None of these yet"
@@ -92,9 +109,24 @@ export const onboardingSteps: OnboardingStep[] = [
     title: "How long can you give it each day?",
     subtitle: "This picks the practice that sits at the top of your day.",
     options: [
-      { value: "2", label: "2 minutes", detail: "A pause, a breath, one verse" },
-      { value: "5", label: "5 minutes", detail: "Light a lamp, say a verse, sit" },
-      { value: "10", label: "10 minutes", detail: "A fuller practice, with time to reflect" },
+      {
+        value: "2",
+        icon: "leaf-outline",
+        label: "2 minutes",
+        detail: "A pause, a breath, one verse",
+      },
+      {
+        value: "5",
+        icon: "flame-outline",
+        label: "5 minutes",
+        detail: "Light a lamp, say a verse, sit",
+      },
+      {
+        value: "10",
+        icon: "hourglass-outline",
+        label: "10 minutes",
+        detail: "A fuller practice, with time to reflect",
+      },
     ],
   },
   {
@@ -105,16 +137,42 @@ export const onboardingSteps: OnboardingStep[] = [
     title: "Where would you like to begin?",
     subtitle: "This text leads your daily verse and opens first in the reader.",
     options: [
-      { value: "gita", label: "Bhagavad Gita", detail: "Chapter 2, where the teaching begins" },
-      { value: "chalisa", label: "Hanuman Chalisa", detail: "Forty verses, read whole" },
-      { value: "upanishads", label: "The Upanishads", detail: "Isha first — eighteen verses" },
+      {
+        value: "gita",
+        icon: "book-outline",
+        label: "Bhagavad Gita",
+        detail: "Chapter 2, where the teaching begins",
+      },
+      {
+        value: "chalisa",
+        icon: "musical-notes-outline",
+        label: "Hanuman Chalisa",
+        detail: "Forty verses, read whole",
+      },
+      {
+        value: "upanishads",
+        icon: "library-outline",
+        label: "The Upanishads",
+        detail: "Isha first — eighteen verses",
+      },
       {
         value: "soundarya-lahari",
+        icon: "flower-outline",
         label: "Soundarya Lahari",
         detail: "A hundred verses to the Devi",
       },
-      { value: "bhaja-govindam", label: "Bhaja Govindam", detail: "Verses on what lasts" },
-      { value: "any", label: "Surprise me", detail: "A verse from across the library" },
+      {
+        value: "bhaja-govindam",
+        icon: "water-outline",
+        label: "Bhaja Govindam",
+        detail: "Verses on what lasts",
+      },
+      {
+        value: "any",
+        icon: "shuffle-outline",
+        label: "Surprise me",
+        detail: "A verse from across the library",
+      },
     ],
   },
   {
@@ -128,18 +186,30 @@ export const onboardingSteps: OnboardingStep[] = [
         : "Where shall we start?",
     subtitle: "This picks the first guide you'll see, and the ideas that follow it.",
     options: [
-      { value: "lamp", label: "Why the lamp is lit", detail: "And what to say when you light it" },
+      {
+        value: "lamp",
+        icon: "flame-outline",
+        label: "Why the lamp is lit",
+        detail: "And what to say when you light it",
+      },
       {
         value: "mantras",
+        icon: "chatbubble-ellipses-outline",
         label: "What the mantras mean",
         detail: "Word by word, with how to say them",
       },
       {
         value: "festivals",
+        icon: "calendar-outline",
         label: "What the festivals are for",
         detail: "One guide per festival, variations named",
       },
-      { value: "ideas", label: "The big ideas", detail: "Dharma, karma, moksha — plainly" },
+      {
+        value: "ideas",
+        icon: "bulb-outline",
+        label: "The big ideas",
+        detail: "Dharma, karma, moksha — plainly",
+      },
     ],
   },
 
@@ -153,11 +223,22 @@ export const onboardingSteps: OnboardingStep[] = [
     options: [
       {
         value: "devanagari",
+        icon: "checkmark-done-outline",
         label: "Yes, easily",
         detail: "Devanagari leads, Roman letters below",
       },
-      { value: "both", label: "Slowly, with help", detail: "Both together, pronunciation in bold" },
-      { value: "roman", label: "Not yet", detail: "Roman letters first, Devanagari kept small" },
+      {
+        value: "both",
+        icon: "glasses-outline",
+        label: "Slowly, with help",
+        detail: "Both together, pronunciation in bold",
+      },
+      {
+        value: "roman",
+        icon: "text-outline",
+        label: "Not yet",
+        detail: "Roman letters first, Devanagari kept small",
+      },
     ],
   },
 
@@ -172,8 +253,8 @@ export const onboardingSteps: OnboardingStep[] = [
     subtitle:
       "Every verse has a reviewed English and Hindi meaning. More languages live in Settings as they are reviewed.",
     options: [
-      { value: "en", label: "English" },
-      { value: "hi", label: "हिन्दी (Hindi)" },
+      { value: "en", icon: "language-outline", label: "English" },
+      { value: "hi", icon: "language-outline", label: "हिन्दी (Hindi)" },
     ],
   },
 
@@ -188,14 +269,30 @@ export const onboardingSteps: OnboardingStep[] = [
     subtitle:
       "One quiet notification at that time. No streaks, no nagging, and you can switch it off any time.",
     options: [
-      { value: "08:00", label: "Morning", detail: "8:00 — before the day starts" },
-      { value: "12:00", label: "Midday", detail: "12:00 — a pause in the middle" },
+      {
+        value: "08:00",
+        icon: "sunny-outline",
+        label: "Morning",
+        detail: "8:00 — before the day starts",
+      },
+      {
+        value: "12:00",
+        icon: "partly-sunny-outline",
+        label: "Midday",
+        detail: "12:00 — a pause in the middle",
+      },
       {
         value: "20:00",
+        icon: "moon-outline",
         label: "Evening",
         detail: "8:00 pm — sandhyā, when many households light the lamp",
       },
-      { value: "none", label: "No reminder", detail: "I'll come on my own" },
+      {
+        value: "none",
+        icon: "notifications-off-outline",
+        label: "No reminder",
+        detail: "I'll come on my own",
+      },
     ],
   },
 

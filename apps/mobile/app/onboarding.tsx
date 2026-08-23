@@ -1,7 +1,9 @@
+import * as Haptics from "expo-haptics";
 import { useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
-import { AccessibilityInfo, Alert } from "react-native";
+import { AccessibilityInfo, Alert, Platform } from "react-native";
 
+import type { BackdropMood } from "@/features/onboarding/components/Backdrop";
 import { OnboardingShell } from "@/features/onboarding/components/OnboardingShell";
 import { MultiChoice, SingleChoice } from "@/features/onboarding/components/steps/ChoiceSteps";
 import { Interstitial } from "@/features/onboarding/components/steps/InterstitialStep";
@@ -48,6 +50,12 @@ export default function OnboardingScreen() {
     if (title) AccessibilityInfo.announceForAccessibility(title);
   }, [step, answers]);
 
+  // A light tap as each screen arrives, a firmer one when the space is ready.
+  const advance = (move: () => void) => {
+    if (Platform.OS !== "web") void Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+    move();
+  };
+
   const skipSetup = () => {
     track("onboarding_skipped", { step_id: step.id });
     setOnboardingComplete(ONBOARDING_VERSION);
@@ -70,6 +78,8 @@ export default function OnboardingScreen() {
       // tradition identity. tradition_pref stays user-set (Settings).
       setOnboardingProfile({ ...profile, reminderEnabled });
       setOnboardingComplete(ONBOARDING_VERSION);
+      if (Platform.OS !== "web")
+        void Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
       track("onboarding_completed", {
         intent: profile.intent,
         practice_count: profile.householdPractices.length,
@@ -111,7 +121,7 @@ export default function OnboardingScreen() {
       case "welcome":
         return (
           <WelcomeStep
-            onBegin={flow.next}
+            onBegin={() => advance(flow.next)}
             onSkip={skipSetup}
             onSignIn={() => {
               // Returning users: their profile restores the answers on sign-in.
@@ -128,7 +138,7 @@ export default function OnboardingScreen() {
             step={step}
             answers={answers}
             onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
-            onNext={flow.next}
+            onNext={() => advance(flow.next)}
           />
         );
       case "multi":
@@ -138,7 +148,7 @@ export default function OnboardingScreen() {
             step={step}
             answers={answers}
             onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
-            onNext={flow.next}
+            onNext={() => advance(flow.next)}
           />
         );
       case "text":
@@ -148,15 +158,22 @@ export default function OnboardingScreen() {
             step={step}
             answers={answers}
             onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
-            onNext={flow.next}
+            onNext={() => advance(flow.next)}
             onSkip={() => {
               flow.setAnswer(step.answerKey, undefined);
-              flow.next();
+              advance(flow.next);
             }}
           />
         );
       case "interstitial":
-        return <Interstitial key={step.id} step={step} answers={answers} onNext={flow.next} />;
+        return (
+          <Interstitial
+            key={step.id}
+            step={step}
+            answers={answers}
+            onNext={() => advance(flow.next)}
+          />
+        );
       case "result":
         return (
           <Result
@@ -170,11 +187,24 @@ export default function OnboardingScreen() {
     }
   })();
 
+  const mood: BackdropMood =
+    step.kind === "result"
+      ? "bright"
+      : step.kind === "interstitial" || step.kind === "welcome"
+        ? "warm"
+        : "quiet";
+  const counted = flow.steps.filter((entry) => entry.kind !== "welcome");
+  const position = Math.max(1, counted.findIndex((entry) => entry.id === step.id) + 1);
+
   return (
     <OnboardingShell
       progress={flow.progress}
+      position={position}
+      total={counted.length}
       showProgress={step.kind !== "welcome"}
       canGoBack={flow.canGoBack && !finishing}
+      mood={mood}
+      seed={flow.index}
       onBack={() => {
         flow.back();
       }}

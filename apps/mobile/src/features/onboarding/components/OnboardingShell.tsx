@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import type { ReactNode } from "react";
 import {
   KeyboardAvoidingView,
@@ -10,71 +10,115 @@ import {
   View,
   useWindowDimensions,
 } from "react-native";
+import Animated, {
+  FadeIn,
+  FadeInDown,
+  FadeInUp,
+  useAnimatedStyle,
+  useReducedMotion,
+  useSharedValue,
+  withSpring,
+} from "react-native-reanimated";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 
+import { Backdrop, type BackdropMood } from "./Backdrop";
+import { EASE_OUT } from "./motion";
 import { ProgressBar } from "./ProgressBar";
-
-const HEADER_HEIGHT = 56;
+import { RisingText } from "./RisingText";
+import { useStepPhase } from "./StepTransition";
 
 import { colors, layout } from "@/theme/tokens";
 
-// The frame every step shares: a 56pt header with back, progress and an
-// optional right-hand action, then a full-bleed stage the step transition
-// fills. The header never moves between steps so the eye always knows where
-// the bar and the back control are.
+const HEADER_HEIGHT = 56;
+const BACK_SPRING = { damping: 16, stiffness: 300 };
+
+// The frame every step shares: the ambient backdrop, a 56pt header with
+// back, progress and an optional right-hand action, then a full-bleed stage
+// the step transition fills. The header never moves between steps so the
+// eye always knows where the bar and the back control are.
 export function OnboardingShell({
   progress,
+  position,
+  total,
   showProgress,
   canGoBack,
   onBack,
+  mood,
+  seed,
   rightAction,
   children,
 }: {
   progress: number;
+  position: number;
+  total: number;
   showProgress: boolean;
   canGoBack: boolean;
   onBack: () => void;
+  mood: BackdropMood;
+  seed: number;
   rightAction?: { label: string; onPress: () => void };
   children: ReactNode;
 }) {
+  const reducedMotion = useReducedMotion();
+  const backScale = useSharedValue(1);
+  const backStyle = useAnimatedStyle(() => ({ transform: [{ scale: backScale.value }] }));
+
   return (
-    <SafeAreaView edges={["top", "bottom"]} style={styles.root}>
-      <View style={styles.header}>
-        <View style={styles.headerSlot}>
-          {canGoBack ? (
-            <Pressable
-              accessibilityRole="button"
-              accessibilityLabel="Back"
-              hitSlop={8}
-              onPress={onBack}
-              style={({ pressed }) => [styles.backButton, pressed && styles.pressed]}
-            >
-              <Ionicons name="arrow-back" size={20} color={colors.ink} />
-            </Pressable>
-          ) : null}
+    <View style={styles.root}>
+      <Backdrop mood={mood} seed={seed} />
+      <SafeAreaView edges={["top", "bottom"]} style={styles.safe}>
+        <View style={styles.header}>
+          <View style={styles.headerSlot}>
+            {canGoBack ? (
+              <Animated.View entering={reducedMotion ? FadeIn.duration(120) : FadeIn.duration(220)}>
+                <Pressable
+                  accessibilityRole="button"
+                  accessibilityLabel="Back"
+                  hitSlop={8}
+                  onPressIn={() => {
+                    if (!reducedMotion) backScale.value = withSpring(0.9, BACK_SPRING);
+                  }}
+                  onPressOut={() => {
+                    backScale.value = withSpring(1, BACK_SPRING);
+                  }}
+                  onPress={onBack}
+                >
+                  <Animated.View style={[styles.backButton, backStyle]}>
+                    <Ionicons name="arrow-back" size={20} color={colors.ink} />
+                  </Animated.View>
+                </Pressable>
+              </Animated.View>
+            ) : null}
+          </View>
+          {showProgress ? (
+            <ProgressBar
+              progress={progress}
+              position={position}
+              total={total}
+              label="Setup progress"
+            />
+          ) : (
+            <View style={styles.flex} />
+          )}
+          <View style={[styles.headerSlot, styles.headerSlotEnd]}>
+            {rightAction ? (
+              <Pressable accessibilityRole="button" hitSlop={8} onPress={rightAction.onPress}>
+                <Text className="text-sm font-semibold text-plum">{rightAction.label}</Text>
+              </Pressable>
+            ) : null}
+          </View>
         </View>
-        {showProgress ? (
-          <ProgressBar progress={progress} label="Setup progress" />
-        ) : (
-          <View style={styles.flex} />
-        )}
-        <View style={[styles.headerSlot, styles.headerSlotEnd]}>
-          {rightAction ? (
-            <Pressable accessibilityRole="button" hitSlop={8} onPress={rightAction.onPress}>
-              <Text className="text-sm font-semibold text-plum">{rightAction.label}</Text>
-            </Pressable>
-          ) : null}
-        </View>
-      </View>
-      <View style={styles.stage}>{children}</View>
-    </SafeAreaView>
+        <View style={styles.stage}>{children}</View>
+      </SafeAreaView>
+    </View>
   );
 }
 
 // A step's body: the question pinned in the upper band, its answers below,
 // and a footer that stays put at the bottom regardless of option count — so
 // a three-option screen and a six-option screen put Continue in the same
-// place. Scrolls only when the content genuinely needs it.
+// place. The heading rises in word by word; the subtitle follows. Scrolls
+// only when the content genuinely needs it.
 export function StepLayout({
   eyebrow,
   title,
@@ -94,7 +138,14 @@ export function StepLayout({
 }) {
   const { width } = useWindowDimensions();
   const insets = useSafeAreaInsets();
+  const reducedMotion = useReducedMotion();
+  const phase = useStepPhase();
   const wide = width > 760;
+  const animate = !reducedMotion && phase === "active";
+  const centered = align === "center";
+  const wordCount = title.split(" ").length;
+  const subtitleDelay = 120 + wordCount * 38;
+
   const body = (
     <>
       <ScrollView
@@ -103,32 +154,50 @@ export function StepLayout({
         keyboardShouldPersistTaps="handled"
         showsVerticalScrollIndicator={false}
       >
-        <View style={align === "center" ? styles.centered : undefined}>
+        <View style={centered ? styles.centered : undefined}>
           {eyebrow ? (
-            <Text
-              className={`mb-3 text-[11px] font-semibold uppercase tracking-[1.5px] text-saffron ${align === "center" ? "text-center" : ""}`}
+            <Animated.View
+              entering={animate ? FadeInDown.duration(300).easing(EASE_OUT) : undefined}
+              style={[styles.eyebrowRow, centered && styles.centeredRow]}
             >
-              {eyebrow}
-            </Text>
+              <View style={styles.eyebrowDot} />
+              <Text className="text-[11px] font-semibold uppercase tracking-[1.5px] text-saffron">
+                {eyebrow}
+              </Text>
+            </Animated.View>
           ) : null}
-          <Text
+          <RisingText
             accessibilityRole="header"
-            className={`text-[30px] font-semibold leading-[38px] text-ink ${align === "center" ? "text-center" : ""}`}
+            text={title}
+            delay={eyebrow ? 80 : 0}
+            align={align}
+            className={`text-[31px] font-semibold leading-[39px] text-ink ${centered ? "text-center" : ""}`}
             style={styles.display}
-          >
-            {title}
-          </Text>
+          />
           {subtitle ? (
-            <Text
-              className={`mt-3 text-[16px] leading-6 text-muted ${align === "center" ? "text-center" : ""}`}
+            <Animated.View
+              entering={
+                animate ? FadeInUp.delay(subtitleDelay).duration(360).easing(EASE_OUT) : undefined
+              }
             >
-              {subtitle}
-            </Text>
+              <Text
+                className={`mt-3 text-[16px] leading-6 text-muted ${centered ? "text-center" : ""}`}
+              >
+                {subtitle}
+              </Text>
+            </Animated.View>
           ) : null}
         </View>
         {children ? <View style={styles.children}>{children}</View> : null}
       </ScrollView>
-      {footer ? <View style={[styles.footer, wide && styles.contentWide]}>{footer}</View> : null}
+      {footer ? (
+        <Animated.View
+          entering={animate ? FadeInUp.delay(260).duration(360) : undefined}
+          style={[styles.footer, wide && styles.contentWide]}
+        >
+          {footer}
+        </Animated.View>
+      ) : null}
     </>
   );
   if (!keyboard) return <View style={styles.flex}>{body}</View>;
@@ -147,6 +216,9 @@ const styles = StyleSheet.create({
   root: {
     flex: 1,
     backgroundColor: colors.parchment,
+  },
+  safe: {
+    flex: 1,
   },
   flex: { flex: 1 },
   header: {
@@ -171,18 +243,14 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 1,
     borderColor: colors.line,
-    backgroundColor: colors.paper,
-  },
-  pressed: {
-    opacity: 0.72,
-    transform: [{ scale: 0.985 }],
+    backgroundColor: "rgba(255,255,255,0.85)",
   },
   stage: {
     flex: 1,
   },
   content: {
     paddingHorizontal: layout.screenPadding,
-    paddingTop: 24,
+    paddingTop: 26,
     paddingBottom: 24,
   },
   contentWide: {
@@ -192,6 +260,21 @@ const styles = StyleSheet.create({
   },
   centered: {
     alignItems: "center",
+  },
+  centeredRow: {
+    justifyContent: "center",
+  },
+  eyebrowRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+    marginBottom: 14,
+  },
+  eyebrowDot: {
+    width: 6,
+    height: 6,
+    borderRadius: 3,
+    backgroundColor: colors.saffron,
   },
   children: {
     marginTop: 28,

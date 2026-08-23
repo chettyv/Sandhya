@@ -4,13 +4,14 @@ import { View } from "react-native";
 import { listAnswer, resolveCopy, resolveOptionalCopy, stringAnswer } from "../../engine";
 import type { MultiChoiceStep, OnboardingAnswers, SingleChoiceStep } from "../../types";
 import { ChoiceCard } from "../ChoiceCard";
+import { FlowButton } from "../FlowButton";
 import { StepLayout } from "../OnboardingShell";
 
-import { PrimaryButton } from "@/components/ui";
-
-// Tap an answer and the flow moves on by itself after a short beat — long
-// enough to see the card change state, short enough to feel like one motion.
-const AUTO_ADVANCE_MS = 280;
+// Tap an answer and the flow moves on by itself after a short beat: the
+// chosen card warms up and ripples, the others fall back, then the next
+// screen arrives — long enough to see the choice land, short enough to
+// feel like one motion.
+const AUTO_ADVANCE_MS = 420;
 
 export function SingleChoice({
   step,
@@ -44,6 +45,8 @@ export function SingleChoice({
     }, AUTO_ADVANCE_MS);
   };
 
+  const current = pending ?? selected;
+
   return (
     <StepLayout
       title={resolveCopy(step.title, answers)}
@@ -55,9 +58,11 @@ export function SingleChoice({
             key={option.value}
             index={index}
             kind="radio"
+            icon={option.icon}
             label={resolveCopy(option.label, answers)}
             detail={option.detail ? resolveCopy(option.detail, answers) : undefined}
-            selected={(pending ?? selected) === option.value}
+            selected={current === option.value}
+            dimmed={pending !== null && pending !== option.value}
             onPress={() => choose(option.value)}
           />
         ))}
@@ -101,7 +106,7 @@ export function MultiChoice({
       title={resolveCopy(step.title, answers)}
       subtitle={resolveOptionalCopy(step.subtitle, answers)}
       footer={
-        <PrimaryButton
+        <FlowButton
           label={step.continueLabel}
           icon="arrow-forward"
           disabled={!ready}
@@ -115,6 +120,7 @@ export function MultiChoice({
             key={option.value}
             index={index}
             kind="checkbox"
+            icon={option.icon}
             label={resolveCopy(option.label, answers)}
             detail={option.detail ? resolveCopy(option.detail, answers) : undefined}
             selected={selected.includes(option.value)}

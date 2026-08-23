@@ -1,17 +1,19 @@
 import { StyleSheet, Text, View } from "react-native";
-import Animated, { FadeIn, FadeInDown, useReducedMotion } from "react-native-reanimated";
+import Animated, { FadeIn, FadeInUp, useReducedMotion } from "react-native-reanimated";
 
 import { resolveCopy } from "../../engine";
 import type { InterstitialStep as InterstitialConfig, OnboardingAnswers } from "../../types";
+import { FlowButton } from "../FlowButton";
+import { EASE_OUT } from "../motion";
 import { StepLayout } from "../OnboardingShell";
+import { useStepPhase } from "../StepTransition";
 
-import { PrimaryButton } from "@/components/ui";
 import { colors } from "@/theme/tokens";
 
 // A breather between question blocks that reflects the answers so far and
-// states, line by line, what each one changes. Lines arrive one after
-// another; nothing here is a loader, a percentage or a claim the app does
-// not keep.
+// states, line by line, what each one changes. A saffron rule draws down
+// beside each line a beat before its text arrives. Nothing here is a
+// loader, a percentage or a claim the app does not keep.
 export function Interstitial({
   step,
   answers,
@@ -22,28 +24,47 @@ export function Interstitial({
   onNext: () => void;
 }) {
   const reducedMotion = useReducedMotion();
+  const phase = useStepPhase();
+  const animate = !reducedMotion && phase === "active";
   const lines = step.lines(answers);
+  const base = 420;
+  const gap = 300;
+
   return (
     <StepLayout
       align="center"
       eyebrow={resolveCopy(step.eyebrow, answers)}
       title={resolveCopy(step.title, answers)}
-      footer={<PrimaryButton label={step.continueLabel} icon="arrow-forward" onPress={onNext} />}
+      footer={<FlowButton label={step.continueLabel} icon="arrow-forward" onPress={onNext} />}
     >
       <View style={styles.lines}>
         {lines.map((line, index) => (
-          <Animated.View
-            key={line}
-            entering={
-              reducedMotion
-                ? FadeIn.duration(120)
-                : FadeInDown.delay(260 + index * 220).duration(360)
-            }
-            style={styles.line}
-          >
-            <View style={styles.rule} />
-            <Text className="flex-1 text-[18px] leading-7 text-ink">{line}</Text>
-          </Animated.View>
+          <View key={line} style={styles.line}>
+            <Animated.View
+              entering={
+                animate
+                  ? FadeIn.delay(base + index * gap).duration(260)
+                  : reducedMotion
+                    ? FadeIn.duration(120)
+                    : undefined
+              }
+              style={styles.rule}
+            />
+            <Animated.View
+              entering={
+                animate
+                  ? FadeInUp.delay(base + 90 + index * gap)
+                      .duration(420)
+                      .easing(EASE_OUT)
+                  : reducedMotion
+                    ? FadeIn.duration(120)
+                    : undefined
+              }
+              style={styles.lineText}
+            >
+              <Text className="text-[18px] leading-7 text-ink">{line}</Text>
+            </Animated.View>
+          </View>
         ))}
       </View>
     </StepLayout>
@@ -52,20 +73,22 @@ export function Interstitial({
 
 const styles = StyleSheet.create({
   lines: {
-    gap: 18,
-    paddingTop: 8,
+    gap: 20,
+    paddingTop: 10,
   },
   line: {
     flexDirection: "row",
     gap: 14,
-    alignItems: "flex-start",
+    alignItems: "stretch",
   },
   rule: {
     width: 3,
-    alignSelf: "stretch",
     borderRadius: 2,
     backgroundColor: colors.saffron,
     marginTop: 4,
     marginBottom: 4,
+  },
+  lineText: {
+    flex: 1,
   },
 });

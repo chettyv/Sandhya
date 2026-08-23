@@ -54,6 +54,9 @@ export type ChoiceOption = {
   value: string;
   label: Copy;
   detail?: Copy;
+  // Ionicons outline name, shown in a tinted circle at the card's left edge.
+  // Every option on a screen carries one, or none do.
+  icon?: string;
   // Selecting an exclusive option clears the others (multi-choice only).
   exclusive?: boolean;
 };

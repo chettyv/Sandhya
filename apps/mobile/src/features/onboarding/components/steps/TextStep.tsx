@@ -1,15 +1,27 @@
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { useEffect, useState } from "react";
+import { Pressable, StyleSheet, Text, TextInput } from "react-native";
+import Animated, {
+  FadeInUp,
+  interpolateColor,
+  useAnimatedStyle,
+  useReducedMotion,
+  useSharedValue,
+  withTiming,
+} from "react-native-reanimated";
 
 import { resolveCopy, resolveOptionalCopy, stringAnswer } from "../../engine";
 import type { OnboardingAnswers, TextStep as TextStepConfig } from "../../types";
+import { FlowButton } from "../FlowButton";
+import { EASE_OUT } from "../motion";
 import { StepLayout } from "../OnboardingShell";
+import { useStepPhase } from "../StepTransition";
 
-import { PrimaryButton } from "@/components/ui";
 import { colors } from "@/theme/tokens";
 
 // A single field with the action directly beneath it, above the keyboard,
-// and the keyboard's return key doing the same job. Optional: Skip is a
-// real control, not a hidden one.
+// and the keyboard's return key doing the same job. The field's border
+// warms to saffron while it has focus. Optional: Skip is a real control,
+// not a hidden one.
 export function TextStep({
   step,
   answers,
@@ -23,8 +35,26 @@ export function TextStep({
   onNext: () => void;
   onSkip: () => void;
 }) {
+  const reducedMotion = useReducedMotion();
+  const phase = useStepPhase();
   const value = stringAnswer(answers, step.answerKey) ?? "";
   const ready = step.optional || value.trim().length > 0;
+  const [focused, setFocused] = useState(false);
+  const focus = useSharedValue(0);
+  useEffect(() => {
+    focus.value = reducedMotion
+      ? focused
+        ? 1
+        : 0
+      : withTiming(focused ? 1 : 0, { duration: 200 });
+  }, [focused, focus, reducedMotion]);
+
+  const fieldStyle = useAnimatedStyle(() => ({
+    borderColor: interpolateColor(focus.value, [0, 1], [colors.line, colors.saffron]),
+    transform: [{ scale: 1 + focus.value * 0.01 }],
+  }));
+
+  const animate = !reducedMotion && phase === "active";
 
   return (
     <StepLayout
@@ -32,29 +62,38 @@ export function TextStep({
       title={resolveCopy(step.title, answers)}
       subtitle={resolveOptionalCopy(step.subtitle, answers)}
     >
-      <View style={styles.field}>
-        <Text className="mb-2 text-[11px] font-semibold uppercase tracking-[1.5px] text-saffron">
-          Name
-        </Text>
-        <TextInput
-          accessibilityLabel="Your name"
-          autoFocus
-          autoCapitalize="words"
-          autoCorrect={false}
-          value={value}
-          onChangeText={onAnswer}
-          maxLength={step.maxLength}
-          placeholder={step.placeholder}
-          placeholderTextColor={colors.muted}
-          returnKeyType="done"
-          onSubmitEditing={() => {
-            if (ready) onNext();
-          }}
-          style={styles.input}
-        />
-      </View>
-      <View style={styles.actions}>
-        <PrimaryButton
+      <Animated.View
+        entering={animate ? FadeInUp.delay(220).duration(360).easing(EASE_OUT) : undefined}
+      >
+        <Animated.View style={[styles.field, fieldStyle]}>
+          <Text className="mb-2 text-[11px] font-semibold uppercase tracking-[1.5px] text-saffron">
+            Name
+          </Text>
+          <TextInput
+            accessibilityLabel="Your name"
+            autoFocus={phase === "active"}
+            autoCapitalize="words"
+            autoCorrect={false}
+            value={value}
+            onChangeText={onAnswer}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            maxLength={step.maxLength}
+            placeholder={step.placeholder}
+            placeholderTextColor={colors.muted}
+            returnKeyType="done"
+            onSubmitEditing={() => {
+              if (ready) onNext();
+            }}
+            style={styles.input}
+          />
+        </Animated.View>
+      </Animated.View>
+      <Animated.View
+        entering={animate ? FadeInUp.delay(340).duration(360).easing(EASE_OUT) : undefined}
+        style={styles.actions}
+      >
+        <FlowButton
           label={step.continueLabel}
           icon="arrow-forward"
           disabled={!ready}
@@ -65,7 +104,7 @@ export function TextStep({
             <Text className="text-sm font-semibold text-plum">Skip</Text>
           </Pressable>
         ) : null}
-      </View>
+      </Animated.View>
     </StepLayout>
   );
 }
@@ -73,8 +112,7 @@ export function TextStep({
 const styles = StyleSheet.create({
   field: {
     borderWidth: 1.5,
-    borderColor: colors.line,
-    borderRadius: 16,
+    borderRadius: 18,
     backgroundColor: colors.paper,
     paddingHorizontal: 18,
     paddingTop: 14,
