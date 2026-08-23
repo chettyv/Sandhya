@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Text, View } from "react-native";
 
 import type { ContentSource } from "@/lib/content";
@@ -12,7 +12,7 @@ export function ContentSourceNotice({ source }: { source: ContentSource }) {
   return (
     <View
       accessibilityRole="alert"
-      className="mb-3 flex-row items-start gap-2 rounded-card border border-[#5D5040] bg-surface2 px-3 py-2.5"
+      className="mb-3 flex-row items-start gap-2 rounded-card border border-line bg-surface2 px-3 py-2.5"
     >
       <Ionicons
         name={partial ? "cloud-offline-outline" : "phone-portrait-outline"}

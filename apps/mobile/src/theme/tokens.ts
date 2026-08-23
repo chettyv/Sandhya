@@ -1,39 +1,49 @@
 import { Platform } from "react-native";
 
 export const colors = {
-  ink: "#F7F2E8",
-  plum: "#D6C8E6",
-  aubergine: "#0F0E0C",
-  saffron: "#FFC928",
-  gold: "#F6B53B",
-  parchment: "#080807",
-  paper: "#12110F",
-  sand: "#242017",
-  sage: "#89B8A1",
-  sageSoft: "#1F332B",
-  rose: "#EA8C7F",
-  roseSoft: "#351C1A",
-  muted: "#A9A29A",
-  line: "#302C25",
+  ink: "#2A211B",
+  plum: "#7F6278",
+  aubergine: "#5A2E22",
+  saffron: "#D97824",
+  gold: "#E9B949",
+  parchment: "#FCF8EF",
+  paper: "#FFFFFF",
+  sand: "#F4E9DA",
+  sage: "#6D8C71",
+  sageSoft: "#EAF1E9",
+  rose: "#B94735",
+  roseSoft: "#F9E4DD",
+  muted: "#7A6A5D",
+  line: "#E8DCCB",
   white: "#FFFFFF",
   black: "#000000",
 } as const;
 
 export const shadows = {
   card: Platform.select({
-    web: { boxShadow: "0 1px 12px rgba(0, 0, 0, 0.35)" },
+    web: { boxShadow: "0 2px 14px rgba(90, 46, 34, 0.10)" },
     default: {
-      shadowColor: colors.black,
-      shadowOffset: { width: 0, height: 5 },
-      shadowOpacity: 0.18,
-      shadowRadius: 12,
-      elevation: 4,
+      shadowColor: colors.aubergine,
+      shadowOffset: { width: 0, height: 3 },
+      shadowOpacity: 0.12,
+      shadowRadius: 10,
+      elevation: 3,
     },
   }),
+} as const;
+
+export const fonts = {
+  // Serif display face for headings. Georgia ships on iOS and most desktop
+  // browsers but not on Android, where an unknown family silently falls back
+  // to the sans default; ask for the platform's generic serif there instead.
+  display: Platform.select({ ios: "Georgia", android: "serif", default: "Georgia" }),
 } as const;
 
 export const layout = {
   maxWidth: 430,
   screenPadding: 16,
-  tabBarHeight: 64,
+  // Height of the absolute bottom tab bar in app/(tabs)/_layout.tsx. Anything
+  // pinned above the tab bar (the Ask composer) or padding content clear of it
+  // must use this so the two never drift apart.
+  tabBarHeight: Platform.select({ ios: 86, default: 70 }),
 } as const;

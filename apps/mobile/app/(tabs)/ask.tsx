@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
@@ -40,7 +40,7 @@ function askErrorTitle(error: unknown): string {
     case "rate_limited":
       return "Please slow down for a moment";
     case "monthly_budget_exceeded":
-      return "Dharma is taking a short pause";
+      return "Answers are paused for now";
     case "question_too_long":
       return "Please shorten your question";
     default:
@@ -150,14 +150,20 @@ export default function AskScreen() {
   };
 
   return (
-    <SafeAreaView edges={["top"]} className="flex-1 bg-parchment">
+    <SafeAreaView
+      edges={["top"]}
+      className="flex-1 bg-parchment"
+      style={{ flex: 1, backgroundColor: colors.parchment }}
+    >
       <KeyboardAvoidingView
         className="flex-1"
+        style={{ flex: 1 }}
         behavior={Platform.OS === "ios" ? "padding" : undefined}
         keyboardVerticalOffset={8}
       >
         <ScrollView
           className="flex-1"
+          style={{ flex: 1 }}
           contentContainerStyle={{
             paddingHorizontal: layout.screenPadding,
             paddingTop: 8,
@@ -178,7 +184,7 @@ export default function AskScreen() {
           {!mutation.data && !mutation.isPending && !mutation.isError ? (
             <>
               <View className="pb-5 pt-1">
-                <View className="mb-4 h-11 w-11 items-center justify-center rounded-lg bg-[#F1E3E8]">
+                <View className="mb-4 h-11 w-11 items-center justify-center rounded-lg bg-[#F1E6F0]">
                   <Ionicons name="sparkles" size={22} color={colors.plum} />
                 </View>
                 <Text className="text-[21px] font-semibold leading-7 text-ink">
@@ -202,7 +208,7 @@ export default function AskScreen() {
                   key={item}
                   accessibilityRole="button"
                   onPress={() => setQuestion(item)}
-                  className="mb-2 flex-row items-center gap-3 rounded-card border border-[#302C25] bg-surface px-3.5 py-3"
+                  className="mb-2 flex-row items-center gap-3 rounded-card border border-line bg-surface px-3.5 py-3"
                 >
                   <Ionicons name="chatbubble-ellipses-outline" size={18} color={colors.saffron} />
                   <Text className="flex-1 text-[15px] leading-5 text-ink">{item}</Text>
@@ -269,7 +275,7 @@ export default function AskScreen() {
                     <Pressable
                       accessibilityRole="button"
                       onPress={submit}
-                      className="mt-3 self-start rounded-full border border-[#5D5040] px-4 py-2"
+                      className="mt-3 self-start rounded-full border border-line px-4 py-2"
                     >
                       <Text className="text-sm font-semibold text-plum">Try again</Text>
                     </Pressable>
@@ -286,7 +292,7 @@ export default function AskScreen() {
               </View>
               <Card>
                 <View className="mb-4 flex-row items-center gap-2">
-                  <View className="h-8 w-8 items-center justify-center rounded-full bg-[#3E3413]">
+                  <View className="h-8 w-8 items-center justify-center rounded-full bg-[#FFF1D6]">
                     <Ionicons name="sparkles" size={16} color={colors.saffron} />
                   </View>
                   <Text className="font-semibold text-ink">Sandhya</Text>
@@ -325,7 +331,7 @@ export default function AskScreen() {
                   </View>
                 ) : null}
                 {mutation.data.answer.suggested_practice ? (
-                  <View className="mt-5 rounded-card bg-[#3E3413] p-3.5">
+                  <View className="mt-5 rounded-card bg-[#FFF1D6] p-3.5">
                     <Text className="mb-1 text-sm font-semibold text-saffron">
                       {t("suggestedPractice")}
                     </Text>
@@ -339,7 +345,7 @@ export default function AskScreen() {
                   mutation.data.answer.sources.map((source) => (
                     <View
                       key={`${source.title}-${source.location}`}
-                      className="mb-2 rounded-card border border-[#302C25] p-3"
+                      className="mb-2 rounded-card border border-line p-3"
                     >
                       <Text className="font-semibold text-ink">
                         {source.title} · {source.location}
@@ -422,16 +428,16 @@ export default function AskScreen() {
         </ScrollView>
 
         <View
-          className="absolute left-0 right-0 border-t border-[#302C25] bg-[#191916] px-3 pb-2.5 pt-2.5"
-          style={{ bottom: Platform.select({ ios: 82, android: 66, default: 66 }) }}
+          className="absolute left-0 right-0 border-t border-line bg-[#FFFDF8] px-3 pb-2.5 pt-2.5"
+          style={{ bottom: layout.tabBarHeight }}
         >
-          <View className="mx-auto w-full max-w-[430px] flex-row items-end gap-2 rounded-[18px] border border-[#302C25] bg-surface p-2 pl-3">
+          <View className="mx-auto w-full max-w-[430px] flex-row items-end gap-2 rounded-[18px] border border-line bg-surface p-2 pl-3">
             <TextInput
               accessibilityLabel={t("askPlaceholder")}
               value={question}
               onChangeText={setQuestion}
               placeholder={t("askPlaceholder")}
-              placeholderTextColor="#9A8E9B"
+              placeholderTextColor={colors.muted}
               multiline
               maxLength={MAX_ASK_CHARS}
               className="max-h-28 min-h-10 flex-1 py-2 text-[15px] leading-5 text-ink"
@@ -441,7 +447,7 @@ export default function AskScreen() {
               accessibilityRole="button"
               disabled={!question.trim() || mutation.isPending}
               onPress={submit}
-              className={`h-11 w-11 items-center justify-center rounded-full ${question.trim() && !mutation.isPending ? "bg-saffron" : "bg-[#3D3932]"}`}
+              className={`h-11 w-11 items-center justify-center rounded-full ${question.trim() && !mutation.isPending ? "bg-saffron" : "bg-sand"}`}
             >
               <Ionicons name="arrow-up" size={20} color={colors.black} />
             </Pressable>

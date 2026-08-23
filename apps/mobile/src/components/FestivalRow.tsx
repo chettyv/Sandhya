@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Pressable, Text, View } from "react-native";
 
 import { colors } from "@/theme/tokens";
@@ -9,16 +9,19 @@ export function FestivalRow({ festival, onPress }: { festival: Festival; onPress
     <Pressable
       accessibilityRole="button"
       onPress={onPress}
-      className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-4"
+      className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-4"
     >
       <View
         className="h-12 w-12 items-center justify-center rounded-2xl"
-        style={{ backgroundColor: "#3E3413" }}
+        style={{ backgroundColor: "#FFF1D6" }}
       >
         <Text className="text-[10px] font-bold uppercase" style={{ color: colors.saffron }}>
           {festival.monthLabel}
         </Text>
-        <Text className="text-xl font-bold leading-6" style={{ color: colors.saffron }}>
+        <Text
+          className={`font-bold ${festival.date ? "text-xl leading-6" : "text-[11px] leading-4"}`}
+          style={{ color: colors.saffron }}
+        >
           {festival.date ? festival.dayLabel : "READ"}
         </Text>
       </View>
@@ -28,7 +31,7 @@ export function FestivalRow({ festival, onPress }: { festival: Festival; onPress
           {festival.summary}
         </Text>
       </View>
-      <Ionicons name="chevron-forward" size={22} color={colors.white} />
+      <Ionicons name="chevron-forward" size={22} color={colors.muted} />
     </Pressable>
   );
 }

@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { router, useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Platform, Pressable, Text, View } from "react-native";
@@ -29,7 +29,7 @@ export default function ChallengeOverviewScreen() {
     );
   }
 
-  if (isError || !data) {
+  if (isError) {
     return (
       <Page>
         <EmptyState
@@ -38,6 +38,20 @@ export default function ChallengeOverviewScreen() {
           body="We couldn't load this challenge. Check your connection and try again."
           action="Try again"
           onAction={() => void refetch()}
+        />
+      </Page>
+    );
+  }
+
+  if (!data) {
+    return (
+      <Page>
+        <EmptyState
+          icon="moon-outline"
+          title="Challenge not found"
+          body="This challenge isn't open yet or is no longer available."
+          action="Go back"
+          onAction={() => router.back()}
         />
       </Page>
     );
@@ -220,12 +234,12 @@ function NightRow({
       }`}
       disabled={!openable}
       onPress={onPress}
-      className="min-h-14 flex-row items-center gap-3 border-b border-[#302C25] py-3 last:border-b-0"
+      className="min-h-14 flex-row items-center gap-3 border-b border-line py-3 last:border-b-0"
       style={({ pressed }) => pressed && openable && { opacity: 0.72 }}
     >
       <View
         className={`h-9 w-9 items-center justify-center rounded-full ${
-          completed ? "bg-sageSoft" : isTonight ? "bg-[#4A3514]" : "bg-[#24211D]"
+          completed ? "bg-sageSoft" : isTonight ? "bg-[#FFF1D6]" : "bg-sand"
         }`}
       >
         {completed ? (

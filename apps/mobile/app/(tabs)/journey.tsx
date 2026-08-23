@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Pressable, Text, View } from "react-native";
@@ -88,7 +88,7 @@ export default function JourneyScreen() {
       </Card>
 
       <SectionHeader title="This week" />
-      <View className="flex-row justify-between rounded-card border border-[#302C25] bg-surface p-3.5">
+      <View className="flex-row justify-between rounded-card border border-line bg-surface p-3.5">
         {["M", "T", "W", "T", "F", "S", "S"].map((day, index) => {
           const active = activitySet.has(weekKeys[index]);
           return (
@@ -100,7 +100,7 @@ export default function JourneyScreen() {
                 {active ? (
                   <Ionicons name="leaf" size={16} color={colors.sage} />
                 ) : (
-                  <View className="h-1.5 w-1.5 rounded-full bg-[#6B645D]" />
+                  <View className="h-1.5 w-1.5 rounded-full bg-muted" />
                 )}
               </View>
             </View>
@@ -160,7 +160,7 @@ export default function JourneyScreen() {
           </View>
           <View className="flex-1">
             <Text className="text-base font-semibold text-white">{nextPractice.title}</Text>
-            <Text className="mt-1 text-sm text-[#DCCEDF]">{nextPractice.summary}</Text>
+            <Text className="mt-1 text-sm text-[#FFF3DE]">{nextPractice.summary}</Text>
           </View>
           <Ionicons name="arrow-forward" size={20} color={colors.white} />
         </Pressable>

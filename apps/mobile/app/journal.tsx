@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useEffect, useState } from "react";
 import {
   Alert,
@@ -115,7 +115,7 @@ export default function JournalScreen() {
                   accessibilityRole="button"
                   accessibilityState={{ selected: mood === item }}
                   onPress={() => setMood(item)}
-                  className={`rounded-full px-4 py-2 ${mood === item ? "bg-saffron" : "border border-[#302C25] bg-surface"}`}
+                  className={`rounded-full px-4 py-2 ${mood === item ? "bg-saffron" : "border border-line bg-surface"}`}
                 >
                   <Text
                     className={`text-sm font-semibold ${mood === item ? "text-black" : "text-muted"}`}
@@ -130,12 +130,12 @@ export default function JournalScreen() {
               value={draft}
               onChangeText={setDraft}
               placeholder="Begin where you are…"
-              placeholderTextColor="#9A8E9B"
+              placeholderTextColor={colors.muted}
               multiline
               autoFocus
               maxLength={4000}
               textAlignVertical="top"
-              className="min-h-52 rounded-lg border border-[#302C25] bg-surface p-4 text-[16px] leading-7 text-ink"
+              className="min-h-52 rounded-lg border border-line bg-surface p-4 text-[16px] leading-7 text-ink"
             />
             <View className="mt-4 gap-3">
               <PrimaryButton

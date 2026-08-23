@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
 import {
@@ -70,10 +70,10 @@ export default function ReflectionDetailScreen() {
         <Text className="mt-5 text-[30px] font-semibold leading-[40px] text-ink">
           {dailyReflection.title}
         </Text>
-        <View className="my-6 h-px bg-[#302C25]" />
+        <View className="my-6 h-px bg-line" />
         <Text className="text-[17px] leading-8 text-ink">{dailyReflection.body}</Text>
 
-        <Card className="mt-7 bg-[#3E3413]">
+        <Card className="mt-7 bg-surface2">
           <View className="mb-3 flex-row items-center gap-2">
             <Ionicons name="sparkles-outline" size={18} color={colors.saffron} />
             <Text className="font-semibold text-saffron">Carry this into the day</Text>
@@ -88,10 +88,10 @@ export default function ReflectionDetailScreen() {
           value={entry}
           onChangeText={setEntry}
           placeholder="Write without judging what comes up…"
-          placeholderTextColor="#9A8E9B"
+          placeholderTextColor={colors.muted}
           multiline
           textAlignVertical="top"
-          className="min-h-36 rounded-lg border border-[#302C25] bg-surface p-4 text-[15px] leading-6 text-ink"
+          className="min-h-36 rounded-lg border border-line bg-surface p-4 text-[15px] leading-6 text-ink"
         />
         {recorded ? (
           <Text className="mt-2 text-sm font-medium text-sage">

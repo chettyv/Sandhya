@@ -1,7 +1,7 @@
 import { useRouter } from "expo-router";
 
 import { PracticeRow } from "@/components/PracticeRow";
-import { EmptyState, Page, SectionHeader } from "@/components/ui";
+import { EmptyState, Page } from "@/components/ui";
 import { useCuratedContent } from "@/lib/content";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
@@ -18,7 +18,6 @@ export default function PracticeHistoryScreen() {
 
   return (
     <Page>
-      <SectionHeader title="Practice history" />
       {completed.length ? (
         completed.map((practice) => (
           <PracticeRow

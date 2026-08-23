@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams } from "expo-router";
 import { useEffect, useState } from "react";
 import { ActivityIndicator, Alert, Text, View } from "react-native";
@@ -16,6 +16,13 @@ import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
+
+const RECKONING_LABEL = {
+  amanta: "Amānta",
+  purnimanta: "Pūrṇimānta",
+  solar: "Solar",
+  other: "Other calendar",
+} as const;
 
 export default function FestivalDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
@@ -97,6 +104,7 @@ export default function FestivalDetailScreen() {
     );
   const saved = savedIds.includes(festival.id);
   const hasDate = Boolean(festival.date);
+  const reckoning = hasDate ? (festival.dateReckoning ?? null) : null;
 
   return (
     <Page>
@@ -104,7 +112,7 @@ export default function FestivalDetailScreen() {
         className="items-center rounded-[30px] px-6 py-9"
         style={{ backgroundColor: `${festival.color}18` }}
       >
-        <View className="h-16 w-16 items-center justify-center rounded-card bg-[#3E3413]">
+        <View className="h-16 w-16 items-center justify-center rounded-card bg-[#FFF1D6]">
           <Text className="text-xs font-bold uppercase" style={{ color: colors.saffron }}>
             {festival.monthLabel}
           </Text>
@@ -117,9 +125,57 @@ export default function FestivalDetailScreen() {
           <Text className="mt-1 text-sm text-muted">Also known as {festival.variant}</Text>
         ) : null}
         <View className="mt-4">
-          <Pill label="Date may vary locally" icon="location-outline" tone="warm" />
+          <Pill
+            label={
+              !hasDate
+                ? "Local date not calculated"
+                : reckoning
+                  ? `${RECKONING_LABEL[reckoning.system]} · ${reckoning.location}`
+                  : "Reckoning not stated"
+            }
+            icon={reckoning ? "calendar-outline" : "location-outline"}
+            tone="warm"
+          />
         </View>
       </View>
+
+      {hasDate ? (
+        <Card className="mt-4 bg-surface2">
+          <View className="flex-row items-start gap-3">
+            <Ionicons name="calendar-outline" size={21} color={colors.plum} />
+            <View className="flex-1">
+              <Text className="font-semibold text-plum">How this date is reckoned</Text>
+              {reckoning ? (
+                <View className="mt-1.5 gap-1">
+                  <Text className="text-sm leading-5 text-muted">
+                    Calendar: {RECKONING_LABEL[reckoning.system]}
+                  </Text>
+                  {reckoning.community ? (
+                    <Text className="text-sm leading-5 text-muted">
+                      Observed by: {reckoning.community}
+                    </Text>
+                  ) : null}
+                  <Text className="text-sm leading-5 text-muted">
+                    Timing computed for: {reckoning.location}
+                  </Text>
+                  <Text className="text-sm leading-5 text-muted">Source: {reckoning.source}</Text>
+                  {reckoning.disagreement ? (
+                    <Text className="mt-1 text-sm leading-5 text-rose">
+                      Sources disagree: {reckoning.disagreement}
+                    </Text>
+                  ) : null}
+                </View>
+              ) : (
+                <Text className="mt-1.5 text-sm leading-5 text-muted">
+                  This date does not yet record its calendar system (amānta or pūrṇimānta), the
+                  observing community, the location it was computed for, or its source. Confirm with
+                  a local panchang or temple before observing.
+                </Text>
+              )}
+            </View>
+          </View>
+        </Card>
+      ) : null}
 
       <Text className="mb-3 mt-8 text-xl font-semibold text-ink">Meaning</Text>
       <Text className="text-[16px] leading-7 text-ink">{festival.meaning}</Text>
@@ -128,7 +184,7 @@ export default function FestivalDetailScreen() {
       <Card>
         {festival.observance.map((item, index) => (
           <View key={item} className="mb-4 flex-row gap-3 last:mb-0">
-            <View className="h-7 w-7 items-center justify-center rounded-full bg-[#3E3413]">
+            <View className="h-7 w-7 items-center justify-center rounded-full bg-[#FFF1D6]">
               <Text className="text-xs font-bold text-saffron">{index + 1}</Text>
             </View>
             <Text className="flex-1 text-[15px] leading-6 text-ink">{item}</Text>

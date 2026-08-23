@@ -1,4 +1,4 @@
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { Alert, Linking, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -9,6 +9,7 @@ export default function LegalScreen() {
   return (
     <SafeAreaView className="flex-1 bg-parchment">
       <ScrollView contentContainerStyle={{ padding: layout.screenPadding, paddingBottom: 48 }}>
+        <Stack.Screen options={{ headerShown: false }} />
         <View className="flex-row items-center justify-between">
           <Pressable
             accessibilityLabel="Close legal information"
@@ -16,7 +17,7 @@ export default function LegalScreen() {
             onPress={() => router.back()}
             className="h-10 w-10 items-center justify-center"
           >
-            <Text className="text-3xl text-white">×</Text>
+            <Text className="text-3xl text-ink">×</Text>
           </Pressable>
           <Text className="text-base font-semibold text-muted">Privacy and terms</Text>
           <View className="h-10 w-10" />
@@ -29,7 +30,7 @@ export default function LegalScreen() {
         {!process.env.EXPO_PUBLIC_PRIVACY_URL || !process.env.EXPO_PUBLIC_TERMS_URL ? (
           <View
             accessibilityRole="alert"
-            className="mt-5 rounded-card border border-[#8A5A32] bg-[#3E3413] p-4"
+            className="mt-5 rounded-card border border-saffron bg-[#FFF1D6] p-4"
           >
             <Text className="font-semibold text-saffron">Release links are not configured</Text>
             <Text className="mt-1 text-sm leading-5 text-muted">
@@ -103,7 +104,7 @@ export default function LegalScreen() {
 
 function Section({ title, children }: { title: string; children: string }) {
   return (
-    <View className="mt-7 rounded-card border border-[#302C25] bg-surface p-4">
+    <View className="mt-7 rounded-card border border-line bg-surface p-4">
       <Text className="text-lg font-semibold text-ink">{title}</Text>
       <Text className="mt-2 text-[15px] leading-6 text-muted">{children}</Text>
     </View>
@@ -119,7 +120,7 @@ function ExternalLink({ label, url }: { label: string; url: string }) {
           Alert.alert("Could not open link", "Please try again or contact support from Settings."),
         )
       }
-      className="rounded-full border border-[#302C25] bg-surface px-4 py-2.5"
+      className="rounded-full border border-line bg-surface px-4 py-2.5"
     >
       <Text className="font-semibold text-plum">{label}</Text>
     </Pressable>

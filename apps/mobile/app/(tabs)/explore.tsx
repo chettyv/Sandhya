@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
 import { Pressable, ScrollView, Text, TextInput, View } from "react-native";
@@ -80,14 +80,14 @@ export default function ExploreScreen() {
         onProfile={() => router.push("/profile")}
       />
       <ContentSourceNotice source={content.source} />
-      <View className="mb-4 flex-row items-center gap-2 rounded-lg border border-[#302C25] bg-surface px-3">
+      <View className="mb-4 flex-row items-center gap-2 rounded-lg border border-line bg-surface px-3">
         <Ionicons name="search-outline" size={20} color={colors.muted} />
         <TextInput
           accessibilityLabel="Search the library"
           value={query}
           onChangeText={setQuery}
           placeholder="Search texts, concepts, deities…"
-          placeholderTextColor="#9A8E9B"
+          placeholderTextColor={colors.muted}
           className="h-13 flex-1 text-[15px] text-ink"
         />
         {query ? (
@@ -113,7 +113,7 @@ export default function ExploreScreen() {
             accessibilityRole="button"
             accessibilityState={{ selected: filter === item }}
             onPress={() => setFilter(item)}
-            className={`rounded-lg px-3.5 py-2 ${filter === item ? "bg-saffron" : "border border-[#302C25] bg-surface"}`}
+            className={`rounded-lg px-3.5 py-2 ${filter === item ? "bg-saffron" : "border border-line bg-surface"}`}
           >
             <Text
               className={`text-sm font-semibold ${filter === item ? "text-black" : "text-muted"}`}
@@ -129,11 +129,11 @@ export default function ExploreScreen() {
           <SectionHeader title="Browse by" />
           <View className="flex-row flex-wrap gap-3">
             {[
-              { label: "Sacred texts", icon: "book-outline", color: "#6C5076" },
-              { label: "Concepts", icon: "bulb-outline", color: "#B8665B" },
-              { label: "Deities", icon: "heart-outline", color: "#8A5A44" },
-              { label: "Practices", icon: "leaf-outline", color: "#668477" },
-              { label: "Festivals", icon: "sparkles-outline", color: "#E98032" },
+              { label: "Sacred texts", icon: "book-outline", color: colors.plum },
+              { label: "Concepts", icon: "bulb-outline", color: colors.saffron },
+              { label: "Deities", icon: "heart-outline", color: colors.rose },
+              { label: "Practices", icon: "leaf-outline", color: colors.sage },
+              { label: "Festivals", icon: "sparkles-outline", color: colors.saffron },
             ].map((item) => (
               <Pressable
                 key={item.label}
@@ -141,7 +141,7 @@ export default function ExploreScreen() {
                 onPress={() =>
                   setFilter(item.label === "Sacred texts" ? "Texts" : (item.label as Filter))
                 }
-                className="min-h-24 w-[48%] flex-grow rounded-[22px] border border-[#302C25] bg-surface p-3.5"
+                className="min-h-24 w-[48%] flex-grow rounded-[22px] border border-line bg-surface p-3.5"
               >
                 <View
                   className="h-9 w-9 items-center justify-center rounded-lg"
@@ -165,10 +165,12 @@ export default function ExploreScreen() {
                 key={text.id}
                 accessibilityRole="button"
                 onPress={() => router.push({ pathname: "/text/[id]", params: { id: text.id } })}
-                className="flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-3.5"
+                className="flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-3.5"
               >
-                <View className="h-12 w-12 items-center justify-center rounded-lg bg-[#E8E0EC]">
-                  <Text className="text-xl text-plum">{text.sanskrit ?? "ॐ"}</Text>
+                <View className="h-12 min-w-12 items-center justify-center rounded-lg bg-[#F1E6F0] px-2">
+                  <Text numberOfLines={1} className="text-lg text-plum">
+                    {text.sanskrit ?? "ॐ"}
+                  </Text>
                 </View>
                 <View className="min-w-0 flex-1">
                   <Text className="text-[16px] font-semibold text-ink">{text.title}</Text>
@@ -192,10 +194,12 @@ export default function ExploreScreen() {
                 key={concept.id}
                 accessibilityRole="button"
                 onPress={() => router.push(`/concept/${concept.id}`)}
-                className="flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-3.5"
+                className="flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-3.5"
               >
-                <View className="h-12 w-12 items-center justify-center rounded-lg bg-[#E8E0EC]">
-                  <Text className="text-2xl text-plum">{concept.sanskrit}</Text>
+                <View className="h-12 min-w-12 items-center justify-center rounded-lg bg-[#F1E6F0] px-2">
+                  <Text numberOfLines={1} className="text-lg text-plum">
+                    {concept.sanskrit}
+                  </Text>
                 </View>
                 <View className="min-w-0 flex-1">
                   <Text className="text-[16px] font-semibold text-ink">{concept.term}</Text>
@@ -219,10 +223,10 @@ export default function ExploreScreen() {
                 key={deity.id}
                 accessibilityRole="button"
                 onPress={() => router.push(`/deity/${deity.id}`)}
-                className="flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-3.5"
+                className="flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-3.5"
               >
-                <View className="h-12 w-12 items-center justify-center rounded-lg bg-[#F3E3D6]">
-                  <Ionicons name="heart-outline" size={24} color="#8A5A44" />
+                <View className="h-12 w-12 items-center justify-center rounded-lg bg-[#FBE9D5]">
+                  <Ionicons name="heart-outline" size={24} color={colors.rose} />
                 </View>
                 <View className="min-w-0 flex-1">
                   <Text className="text-[16px] font-semibold text-ink">{deity.name}</Text>
@@ -266,7 +270,7 @@ export default function ExploreScreen() {
         <Pressable
           accessibilityRole="button"
           onPress={() => router.push("/subscription")}
-          className="mt-6 rounded-card border border-saffron bg-[#3E3413] p-4"
+          className="mt-6 rounded-card border border-saffron bg-[#FFF1D6] p-4"
         >
           <Text className="font-semibold text-ink">Go deeper with Plus</Text>
           <Text className="mt-1 text-sm leading-5 text-muted">

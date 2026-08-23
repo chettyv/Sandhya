@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { LinearGradient } from "expo-linear-gradient";
 import { Pressable, Text, View } from "react-native";
 
@@ -16,14 +16,14 @@ export function ReflectionCard({
 }) {
   return (
     <LinearGradient
-      colors={["#6E4A1E", "#142E34", "#0B0B0A"]}
+      colors={["#E9B949", "#D97824", "#A54835"]}
       start={{ x: 0, y: 0 }}
       end={{ x: 1, y: 1 }}
       style={[shadows.card, { borderRadius: 8, overflow: "hidden", padding: 18 }]}
     >
       <View className="mb-4 flex-row items-center justify-between">
         <View className="flex-row items-center gap-2">
-          <View className="h-7 w-7 items-center justify-center rounded-md bg-[#FFFFFF16]">
+          <View className="h-7 w-7 items-center justify-center rounded-md bg-[#FFF3DE40]">
             <Ionicons name="sunny-outline" size={16} color={colors.gold} />
           </View>
           <Text className="text-xs font-semibold uppercase text-gold">Daily reflection</Text>
@@ -37,13 +37,13 @@ export function ReflectionCard({
           <Ionicons name={saved ? "bookmark" : "bookmark-outline"} size={22} color={colors.white} />
         </Pressable>
       </View>
-      <Text className="mb-3 text-sm font-medium leading-5 text-[#EACFAE]">
+      <Text className="mb-3 text-sm font-medium leading-5 text-[#FFF3DE]">
         {dailyReflection.eyebrow}
       </Text>
       <Text className="text-[21px] font-semibold leading-[28px] text-white">
         {dailyReflection.title}
       </Text>
-      <Text className="mt-4 text-[15px] leading-6 text-[#E8DDE9]">{dailyReflection.body}</Text>
+      <Text className="mt-4 text-[15px] leading-6 text-[#FFF3DE]">{dailyReflection.body}</Text>
       <Pressable
         accessibilityRole="button"
         onPress={onOpen}

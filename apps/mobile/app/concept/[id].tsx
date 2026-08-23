@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
@@ -31,10 +31,12 @@ export default function ConceptDetailScreen() {
 
   return (
     <Page>
-      <View className="items-center rounded-[30px] bg-[#E8E0EC] px-6 py-9">
+      <View className="items-center rounded-[30px] bg-[#F1E6F0] px-6 py-9">
         <Text className="text-6xl text-plum">{concept.sanskrit}</Text>
         <Text className="mt-4 text-[32px] font-semibold text-ink">{concept.term}</Text>
-        <Pill label="Key concept" tone="warm" />
+        <View className="mt-4">
+          <Pill label="Key concept" tone="warm" />
+        </View>
       </View>
       <Text className="mt-7 text-xl font-semibold leading-8 text-ink">{concept.definition}</Text>
       <Text className="mt-5 text-[16px] leading-7 text-ink">{concept.explanation}</Text>

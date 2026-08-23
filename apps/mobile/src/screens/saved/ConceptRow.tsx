@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import type { ComponentProps } from "react";
 import { Pressable, Text, View } from "react-native";
 
@@ -19,9 +19,9 @@ export function ConceptRow({
     <Pressable
       accessibilityRole="button"
       onPress={onPress}
-      className="mb-2 flex-row items-center gap-3 rounded-card border border-[#302C25] bg-surface p-3.5"
+      className="mb-2 flex-row items-center gap-3 rounded-card border border-line bg-surface p-3.5"
     >
-      <View className="h-10 w-10 items-center justify-center rounded-lg bg-[#3E3413]">
+      <View className="h-10 w-10 items-center justify-center rounded-lg bg-[#FFF1D6]">
         <Ionicons name={icon} size={20} color={colors.saffron} />
       </View>
       <View className="min-w-0 flex-1">

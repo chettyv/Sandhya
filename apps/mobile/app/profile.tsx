@@ -1,5 +1,5 @@
-import { Ionicons } from "@expo/vector-icons";
-import { useRouter } from "expo-router";
+import Ionicons from "@expo/vector-icons/Ionicons";
+import { Stack, useRouter } from "expo-router";
 import { useState } from "react";
 import { ActivityIndicator, Alert, Pressable, Text, TextInput, View } from "react-native";
 
@@ -24,6 +24,7 @@ export default function ProfileScreen() {
   const [nameDraft, setNameDraft] = useState(displayName);
   return (
     <Page>
+      <Stack.Screen options={{ headerShown: false }} />
       <View className="mb-2 flex-row items-center justify-between">
         <Pressable
           accessibilityLabel="Close profile"
@@ -31,7 +32,7 @@ export default function ProfileScreen() {
           onPress={() => router.back()}
           className="h-10 w-10 items-center justify-center"
         >
-          <Ionicons name="close" size={28} color={colors.white} />
+          <Ionicons name="close" size={28} color={colors.ink} />
         </Pressable>
         <Text className="text-base font-semibold text-muted">Profile</Text>
         <View className="h-10 w-10" />
@@ -50,7 +51,7 @@ export default function ProfileScreen() {
               onChangeText={setNameDraft}
               autoFocus
               maxLength={24}
-              className="h-11 flex-1 rounded-lg border border-[#302C25] bg-surface px-3 text-center text-[17px] text-ink"
+              className="h-11 flex-1 rounded-lg border border-line bg-surface px-3 text-center text-[17px] text-ink"
             />
             <Pressable
               accessibilityLabel="Save display name"
@@ -98,7 +99,7 @@ export default function ProfileScreen() {
       </View>
 
       {authState === "loading" ? null : signedIn ? (
-        <View className="flex-row items-center justify-between rounded-card border border-[#302C25] bg-surface p-4">
+        <View className="flex-row items-center justify-between rounded-card border border-line bg-surface p-4">
           <View>
             <Text className="font-semibold text-ink">Current plan</Text>
             <Text className="mt-1 text-sm text-muted">

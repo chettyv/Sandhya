@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
 import { Pressable, Text, View } from "react-native";
@@ -88,7 +88,7 @@ export default function CalendarScreen() {
             <Text className={`text-[20px] ${mode === "streak" ? "text-ink" : "text-muted"}`}>
               Daily Streak
             </Text>
-            {mode === "streak" ? <View className="mt-3 h-1 rounded-full bg-white" /> : null}
+            {mode === "streak" ? <View className="mt-3 h-1 rounded-full bg-saffron" /> : null}
           </Pressable>
           <Pressable
             accessibilityRole="button"
@@ -98,14 +98,14 @@ export default function CalendarScreen() {
             <Text className={`text-[20px] ${mode === "calendar" ? "text-ink" : "text-muted"}`}>
               Holy Calendar
             </Text>
-            {mode === "calendar" ? <View className="mt-3 h-1 rounded-full bg-white" /> : null}
+            {mode === "calendar" ? <View className="mt-3 h-1 rounded-full bg-saffron" /> : null}
           </Pressable>
         </View>
         <Pressable
           accessibilityLabel="Open profile"
           accessibilityRole="button"
           onPress={() => router.push("/profile")}
-          className="h-10 w-10 items-center justify-center rounded-full border border-[#3B372F] bg-surface2"
+          className="h-10 w-10 items-center justify-center rounded-full border border-line bg-surface2"
         >
           <Ionicons name="person-outline" size={19} color={colors.plum} />
         </Pressable>
@@ -119,12 +119,12 @@ export default function CalendarScreen() {
             A gentle record of the days you made space for practice.
           </Text>
           <View className="mt-8 flex-row gap-3">
-            <View className="flex-1 rounded-[22px] border border-[#302C25] bg-surface p-5">
+            <View className="flex-1 rounded-[22px] border border-line bg-surface p-5">
               <Ionicons name="flame" size={25} color={colors.saffron} />
               <Text className="mt-4 text-3xl font-semibold text-ink">{currentStreak}</Text>
               <Text className="mt-1 text-sm text-muted">Current streak</Text>
             </View>
-            <View className="flex-1 rounded-[22px] border border-[#302C25] bg-surface p-5">
+            <View className="flex-1 rounded-[22px] border border-line bg-surface p-5">
               <Ionicons name="trophy-outline" size={25} color={colors.gold} />
               <Text className="mt-4 text-3xl font-semibold text-ink">{longestStreak}</Text>
               <Text className="mt-1 text-sm text-muted">Longest streak</Text>
@@ -171,7 +171,7 @@ export default function CalendarScreen() {
               onPress={() => changeMonth(1)}
               className="h-11 w-11 items-center justify-center"
             >
-              <Ionicons name="chevron-forward" size={34} color={colors.white} />
+              <Ionicons name="chevron-forward" size={34} color={colors.muted} />
             </Pressable>
           </View>
 
@@ -209,7 +209,7 @@ export default function CalendarScreen() {
                 >
                   {day ? (
                     <View
-                      className={`h-12 w-12 items-center justify-center rounded-2xl border-2 ${isToday ? "border-saffron bg-parchment" : complete ? "border-sage bg-sageSoft" : festival ? "border-[#3E3413] bg-[#3E3413]" : "border-[#5D5D5F] bg-[#2E2E2F]"}`}
+                      className={`h-12 w-12 items-center justify-center rounded-2xl border-2 ${isToday ? "border-saffron bg-parchment" : complete ? "border-sage bg-sageSoft" : festival ? "border-saffron bg-[#FFF1D6]" : "border-line bg-sand"}`}
                     >
                       {festival && !isToday ? (
                         <Ionicons name="flame" size={23} color={colors.saffron} />
@@ -217,7 +217,7 @@ export default function CalendarScreen() {
                         <Ionicons name="checkmark" size={22} color={colors.sage} />
                       ) : (
                         <Text
-                          className={`text-[16px] font-semibold ${isToday ? "text-white" : "text-muted"}`}
+                          className={`text-[16px] font-semibold ${isToday ? "text-ink" : "text-muted"}`}
                         >
                           {day}
                         </Text>
@@ -269,7 +269,7 @@ export default function CalendarScreen() {
 
           <SectionHeader title="Calendar guide" />
           <View className="flex-row flex-wrap gap-2">
-            <Pill label="Festival" tone="warm" />
+            <Pill label="Festival" icon="flame" tone="warm" />
             <Pill label="Today" icon="ellipse" />
             <Pill label="Location-sensitive" icon="location-outline" tone="sage" />
           </View>

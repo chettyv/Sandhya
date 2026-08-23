@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useQuery } from "@tanstack/react-query";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
@@ -60,10 +60,8 @@ export default function SacredTextDetailScreen() {
       <View className="rounded-[30px] bg-aubergine p-7">
         <Pill label={text.category} icon="book-outline" tone="warm" />
         <Text className="mt-5 text-[30px] font-semibold leading-9 text-white">{text.title}</Text>
-        {text.sanskrit ? (
-          <Text className="mt-2 text-2xl text-[#DCCEDF]">{text.sanskrit}</Text>
-        ) : null}
-        <Text className="mt-4 text-[15px] leading-6 text-[#DCCEDF]">{text.description}</Text>
+        {text.sanskrit ? <Text className="mt-2 text-2xl text-gold">{text.sanskrit}</Text> : null}
+        <Text className="mt-4 text-[15px] leading-6 text-surface2">{text.description}</Text>
       </View>
 
       <Card className="mt-6 bg-surface2">
@@ -136,7 +134,7 @@ export default function SacredTextDetailScreen() {
             params: { prompt: `How do different Hindu traditions understand ${text.title}?` },
           })
         }
-        className="mt-5 flex-row items-center gap-3 rounded-card border border-[#302C25] bg-surface p-4"
+        className="mt-5 flex-row items-center gap-3 rounded-card border border-line bg-surface p-4"
       >
         <Ionicons name="sparkles-outline" size={22} color={colors.saffron} />
         <View className="flex-1">

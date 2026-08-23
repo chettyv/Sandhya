@@ -31,7 +31,7 @@ export default function ReaderIndexScreen() {
             key={chapter.key}
             icon="library-outline"
             title={chapter.title}
-            subtitle={`${chapter.verses.length} verses`}
+            subtitle={`${chapter.verses.length} ${chapter.verses.length === 1 ? "verse" : "verses"}`}
             onPress={() =>
               router.push({ pathname: "/read/[chapter]", params: { chapter: chapter.key } })
             }

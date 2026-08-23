@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { Pressable, Text, View } from "react-native";
 
 import { Pill } from "@/components/ui";
@@ -25,9 +25,9 @@ export function PracticeRow({
     <Pressable
       accessibilityRole="button"
       onPress={onPress}
-      className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-4"
+      className="mb-3 flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-4"
     >
-      <View className="h-11 w-11 items-center justify-center rounded-2xl bg-[#3E3413]">
+      <View className="h-11 w-11 items-center justify-center rounded-2xl bg-[#FFF1D6]">
         <Ionicons
           name={completed ? "checkmark" : icons[practice.category]}
           size={22}
@@ -41,7 +41,7 @@ export function PracticeRow({
           <Pill label={practice.level} tone="sage" />
         </View>
       </View>
-      <Ionicons name="chevron-forward" size={22} color={colors.white} />
+      <Ionicons name="chevron-forward" size={22} color={colors.muted} />
     </Pressable>
   );
 }

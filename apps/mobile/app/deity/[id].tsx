@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
@@ -32,15 +32,17 @@ export default function DeityDetailScreen() {
 
   return (
     <Page>
-      <View className="items-center rounded-[30px] bg-[#F3E3D6] px-6 py-9">
-        <Ionicons name="heart-outline" size={48} color="#8A5A44" />
+      <View className="items-center rounded-[30px] bg-[#FBE9D5] px-6 py-9">
+        <Ionicons name="heart-outline" size={48} color="#B94735" />
         <Text className="mt-4 text-[32px] font-semibold text-ink">{requestedDeity.name}</Text>
         {requestedDeity.otherNames.length ? (
           <Text className="mt-2 text-center text-sm text-muted">
             Also known as {requestedDeity.otherNames.join(" · ")}
           </Text>
         ) : null}
-        <Pill label="Learn with context" tone="warm" />
+        <View className="mt-4">
+          <Pill label="Learn with context" tone="warm" />
+        </View>
       </View>
 
       <Text className="mt-7 text-xl font-semibold leading-8 text-ink">

@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Haptics from "expo-haptics";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
@@ -73,7 +73,7 @@ export default function PracticeDetailScreen() {
   return (
     <Page>
       <View className="rounded-[30px] bg-aubergine p-7">
-        <View className="mb-5 h-12 w-12 items-center justify-center rounded-lg bg-[#FFFFFF18]">
+        <View className="mb-5 h-12 w-12 items-center justify-center rounded-lg bg-[#FFF3DE40]">
           <Ionicons
             name={
               practice.category === "Puja"
@@ -87,7 +87,7 @@ export default function PracticeDetailScreen() {
           />
         </View>
         <Text className="text-[29px] font-semibold leading-9 text-white">{practice.title}</Text>
-        <Text className="mt-3 text-[15px] leading-6 text-[#DCCEDF]">{practice.summary}</Text>
+        <Text className="mt-3 text-[15px] leading-6 text-[#FFF3DE]">{practice.summary}</Text>
         <View className="mt-5 flex-row gap-2">
           <Pill label={`${practice.durationMinutes} min`} icon="time-outline" tone="warm" />
           <Pill label={practice.level} tone="sage" />
@@ -116,7 +116,7 @@ export default function PracticeDetailScreen() {
           {activeStep + 1} of {steps.length}
         </Text>
       </View>
-      <View className="my-4 h-1.5 overflow-hidden rounded-full bg-[#302C25]">
+      <View className="my-4 h-1.5 overflow-hidden rounded-full bg-sand">
         <View
           className="h-full rounded-full bg-saffron"
           style={{ width: `${((activeStep + 1) / steps.length) * 100}%` }}
@@ -124,7 +124,7 @@ export default function PracticeDetailScreen() {
       </View>
 
       <Card>
-        <View className="mb-5 h-10 w-10 items-center justify-center rounded-full bg-[#3E3413]">
+        <View className="mb-5 h-10 w-10 items-center justify-center rounded-full bg-[#FFF1D6]">
           <Text className="font-bold text-saffron">{activeStep + 1}</Text>
         </View>
         <Text className="text-xl font-semibold leading-8 text-ink">{steps[activeStep]}</Text>
@@ -133,7 +133,7 @@ export default function PracticeDetailScreen() {
             <Pressable
               accessibilityRole="button"
               onPress={() => setActiveStep((value) => value - 1)}
-              className="h-11 w-11 items-center justify-center rounded-lg border border-[#3B372F]"
+              className="h-11 w-11 items-center justify-center rounded-lg border border-line"
             >
               <Ionicons name="arrow-back" size={20} color={colors.plum} />
             </Pressable>
@@ -186,7 +186,7 @@ export default function PracticeDetailScreen() {
           }}
         />
       </View>
-      {practice.category === "Puja" ? (
+      {practice.category === "Puja" && !practice.warnings ? (
         <View className="mt-4 flex-row items-start gap-2 rounded-card bg-roseSoft p-4">
           <Ionicons name="warning-outline" size={19} color={colors.rose} />
           <Text className="flex-1 text-sm leading-5 text-rose">

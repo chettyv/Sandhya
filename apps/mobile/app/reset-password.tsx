@@ -91,7 +91,7 @@ export default function ResetPasswordScreen() {
         autoComplete="new-password"
         placeholder="At least 8 characters"
         placeholderTextColor={colors.muted}
-        className="h-14 rounded-lg border border-[#302C25] bg-surface px-4 text-[16px] text-ink"
+        className="h-14 rounded-lg border border-line bg-surface px-4 text-[16px] text-ink"
       />
       <Text className="mb-2 mt-4 text-sm font-semibold text-ink">Confirm new password</Text>
       <TextInput
@@ -104,7 +104,7 @@ export default function ResetPasswordScreen() {
         autoComplete="new-password"
         placeholder="Enter it again"
         placeholderTextColor={colors.muted}
-        className="h-14 rounded-lg border border-[#302C25] bg-surface px-4 text-[16px] text-ink"
+        className="h-14 rounded-lg border border-line bg-surface px-4 text-[16px] text-ink"
       />
       <View className="mt-6">
         <PrimaryButton

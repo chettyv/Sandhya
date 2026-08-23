@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Linking from "expo-linking";
 import { useRouter } from "expo-router";
 import * as WebBrowser from "expo-web-browser";
@@ -275,9 +275,9 @@ export default function SignInScreen() {
           />
         </View>
         <View className="my-6 flex-row items-center gap-3">
-          <View className="h-px flex-1 bg-[#302C25]" />
+          <View className="h-px flex-1 bg-line" />
           <Text className="text-xs font-medium uppercase tracking-wider text-muted">or email</Text>
-          <View className="h-px flex-1 bg-[#302C25]" />
+          <View className="h-px flex-1 bg-line" />
         </View>
         <Text className="mb-2 text-sm font-semibold text-ink">Email address</Text>
         <TextInput
@@ -289,8 +289,8 @@ export default function SignInScreen() {
           autoComplete="email"
           keyboardType="email-address"
           placeholder="you@example.com"
-          placeholderTextColor="#9A8E9B"
-          className="h-14 rounded-lg border border-[#302C25] bg-surface px-4 text-[16px] text-ink"
+          placeholderTextColor={colors.muted}
+          className="h-14 rounded-lg border border-line bg-surface px-4 text-[16px] text-ink"
         />
         {emailMode === "password" ? (
           <>
@@ -304,8 +304,8 @@ export default function SignInScreen() {
               autoCapitalize="none"
               autoComplete={authMode === "sign-up" ? "new-password" : "password"}
               placeholder="At least 8 characters"
-              placeholderTextColor="#9A8E9B"
-              className="h-14 rounded-lg border border-[#302C25] bg-surface px-4 text-[16px] text-ink"
+              placeholderTextColor={colors.muted}
+              className="h-14 rounded-lg border border-line bg-surface px-4 text-[16px] text-ink"
             />
             {authMode === "sign-up" ? (
               <TextInput
@@ -317,8 +317,8 @@ export default function SignInScreen() {
                 autoCapitalize="none"
                 autoComplete="new-password"
                 placeholder="Confirm password"
-                placeholderTextColor="#9A8E9B"
-                className="mt-3 h-14 rounded-lg border border-[#302C25] bg-surface px-4 text-[16px] text-ink"
+                placeholderTextColor={colors.muted}
+                className="mt-3 h-14 rounded-lg border border-line bg-surface px-4 text-[16px] text-ink"
               />
             ) : null}
             <View className="mt-3 flex-row items-center justify-between">

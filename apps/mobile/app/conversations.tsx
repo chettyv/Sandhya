@@ -1,9 +1,9 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "expo-router";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 
-import { EmptyState, Page, SectionHeader } from "@/components/ui";
+import { EmptyState, Page } from "@/components/ui";
 import { useAuthState } from "@/lib/authState";
 import { loadConversations } from "@/lib/conversations";
 import { colors } from "@/theme/tokens";
@@ -67,7 +67,6 @@ export default function ConversationsScreen() {
 
   return (
     <Page>
-      <SectionHeader title="Conversation history" />
       {conversations.data.length ? (
         <View className="gap-3">
           {conversations.data.map((conversation) => (
@@ -75,9 +74,9 @@ export default function ConversationsScreen() {
               key={conversation.id}
               accessibilityRole="button"
               onPress={() => router.push(`/conversation/${conversation.id}`)}
-              className="flex-row items-center gap-3 rounded-[22px] border border-[#302C25] bg-surface p-4"
+              className="flex-row items-center gap-3 rounded-[22px] border border-line bg-surface p-4"
             >
-              <View className="h-11 w-11 items-center justify-center rounded-lg bg-[#F1E3E8]">
+              <View className="h-11 w-11 items-center justify-center rounded-lg bg-[#F1E6F0]">
                 <Ionicons name="chatbubble-ellipses-outline" size={21} color={colors.plum} />
               </View>
               <View className="min-w-0 flex-1">

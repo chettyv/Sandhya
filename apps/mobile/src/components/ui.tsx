@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Haptics from "expo-haptics";
 import type { ComponentProps, ReactNode } from "react";
 import {
@@ -35,10 +35,11 @@ export function Page({
   ];
 
   return (
-    <SafeAreaView edges={["top"]} className="flex-1 bg-parchment">
+    <SafeAreaView edges={["top"]} className="flex-1 bg-parchment" style={styles.page}>
       {scroll ? (
         <ScrollView
           className="flex-1"
+          style={styles.flex}
           contentContainerStyle={contentStyle}
           showsVerticalScrollIndicator={false}
           keyboardShouldPersistTaps="handled"
@@ -48,7 +49,10 @@ export function Page({
           {children}
         </ScrollView>
       ) : (
-        <View style={contentStyle} className="flex-1">
+        // Non-scrolling pages host their own list; the list supplies its own
+        // bottom inset, so the wrapper must not reserve tab-bar space or the
+        // list is clipped above the bottom of the screen.
+        <View style={[contentStyle, styles.pageContentStatic, styles.flex]} className="flex-1">
           {children}
         </View>
       )}
@@ -87,7 +91,7 @@ export function TopBar({
           accessibilityLabel="Open profile"
           accessibilityRole="button"
           onPress={onProfile}
-          className="h-10 w-10 items-center justify-center rounded-full border border-[#3B372F] bg-surface2"
+          className="h-10 w-10 items-center justify-center rounded-full border border-line bg-surface2"
           style={({ pressed }) => pressed && styles.pressed}
         >
           <Ionicons name="person-outline" size={19} color={colors.plum} />
@@ -108,7 +112,7 @@ export function Card({
 }) {
   const content = (
     <View
-      className={`rounded-card border border-[#302C25] bg-surface p-4 ${className}`}
+      className={`rounded-card border border-line bg-surface p-4 ${className}`}
       style={shadows.card}
     >
       {children}
@@ -156,8 +160,7 @@ export function Pill({
   icon?: IconName;
   tone?: "neutral" | "warm" | "sage";
 }) {
-  const style =
-    tone === "warm" ? "bg-[#4A3514]" : tone === "sage" ? "bg-[#1F332B]" : "bg-[#24211D]";
+  const style = tone === "warm" ? "bg-[#FFF1D6]" : tone === "sage" ? "bg-sageSoft" : "bg-sand";
   const color = tone === "sage" ? colors.sage : tone === "warm" ? colors.saffron : colors.muted;
   return (
     <View className={`self-start flex-row items-center gap-1.5 rounded-md px-2.5 py-1 ${style}`}>
@@ -189,7 +192,7 @@ export function PrimaryButton({
         void Haptics.selectionAsync();
         onPress();
       }}
-      className={`min-h-11 flex-row items-center justify-center gap-2 rounded-lg px-5 py-3 ${disabled ? "bg-[#3C3934]" : "bg-saffron"}`}
+      className={`min-h-11 flex-row items-center justify-center gap-2 rounded-lg px-5 py-3 ${disabled ? "bg-sand" : "bg-saffron"}`}
       style={({ pressed }) => pressed && !disabled && styles.pressed}
     >
       <Text className="text-base font-semibold text-black">{label}</Text>
@@ -215,7 +218,7 @@ export function SecondaryButton({
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      className={`min-h-11 flex-row items-center justify-center gap-2 rounded-lg border border-[#3B372F] bg-surface px-5 py-3 ${disabled ? "opacity-60" : ""}`}
+      className={`min-h-11 flex-row items-center justify-center gap-2 rounded-lg border border-line bg-surface px-5 py-3 ${disabled ? "opacity-60" : ""}`}
       style={({ pressed }) => pressed && !disabled && styles.pressed}
     >
       {icon ? (
@@ -244,7 +247,7 @@ export function IconCircle({
       accessibilityLabel={label}
       accessibilityRole="button"
       onPress={onPress}
-      className={`h-10 w-10 items-center justify-center rounded-full ${filled ? "bg-saffron" : "border border-[#3B372F] bg-surface2"}`}
+      className={`h-10 w-10 items-center justify-center rounded-full ${filled ? "bg-saffron" : "border border-line bg-surface2"}`}
       style={({ pressed }) => pressed && styles.pressed}
     >
       <Ionicons name={icon} size={20} color={filled ? colors.black : colors.plum} />
@@ -271,11 +274,11 @@ export function ListRow({
     <Pressable
       accessibilityRole={onPress ? "button" : undefined}
       onPress={onPress}
-      className="min-h-14 flex-row items-center gap-3 border-b border-[#302C25] py-3 last:border-b-0"
+      className="min-h-14 flex-row items-center gap-3 border-b border-line py-3 last:border-b-0"
       style={({ pressed }) => (pressed && onPress ? styles.pressed : undefined)}
     >
       <View
-        className={`h-9 w-9 items-center justify-center rounded-lg ${danger ? "bg-[#351C1A]" : "bg-[#24211D]"}`}
+        className={`h-9 w-9 items-center justify-center rounded-lg ${danger ? "bg-roseSoft" : "bg-sand"}`}
       >
         <Ionicons name={icon} size={19} color={danger ? colors.rose : colors.plum} />
       </View>
@@ -305,8 +308,8 @@ export function EmptyState({
   onAction?: () => void;
 }) {
   return (
-    <View className="items-center rounded-card border border-dashed border-[#3B372F] bg-surface px-6 py-9">
-      <View className="mb-4 h-14 w-14 items-center justify-center rounded-full bg-[#4A3514]">
+    <View className="items-center rounded-card border border-dashed border-line bg-surface px-6 py-9">
+      <View className="mb-4 h-14 w-14 items-center justify-center rounded-full bg-[#FFF1D6]">
         <Ionicons name={icon} size={25} color={colors.saffron} />
       </View>
       <Text className="text-center text-xl font-semibold text-ink">{title}</Text>
@@ -319,6 +322,13 @@ export function EmptyState({
 }
 
 const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: colors.parchment,
+  },
+  flex: {
+    flex: 1,
+  },
   pageContent: {
     paddingHorizontal: layout.screenPadding,
     paddingBottom: 104,
@@ -326,6 +336,9 @@ const styles = StyleSheet.create({
   },
   pageContentWeb: {
     minHeight: "100%",
+  },
+  pageContentStatic: {
+    paddingBottom: 0,
   },
   pageContentWide: {
     width: "100%",

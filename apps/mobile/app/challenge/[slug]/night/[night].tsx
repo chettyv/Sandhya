@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { router, useLocalSearchParams } from "expo-router";
 import { useMemo, useRef, useState } from "react";
 import {
@@ -163,7 +163,7 @@ export default function ChallengeNightScreen() {
           accessibilityLabel={`Tonight's progress: ${progress.done} of ${progress.total} parts`}
           accessibilityValue={{ min: 0, max: progress.total, now: progress.done }}
         >
-          <View className="h-1.5 overflow-hidden rounded-full bg-[#24211D]">
+          <View className="h-1.5 overflow-hidden rounded-full bg-sand">
             <View
               className="h-1.5 rounded-full bg-saffron"
               style={{ width: `${Math.round(progress.ratio * 100)}%` }}

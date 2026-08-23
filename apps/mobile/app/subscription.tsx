@@ -1,6 +1,6 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { useQueryClient } from "@tanstack/react-query";
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import {
   ActivityIndicator,
@@ -62,8 +62,8 @@ export default function SubscriptionScreen() {
             Everything is free right now
           </Text>
           <Text className="mt-3 text-center text-[15px] leading-6 text-muted">
-            The full library, daily shloka, practices, and festival guides are all open while Dharma
-            Daily is in its early free period. If a paid tier ever arrives, nothing you rely on
+            The full library, daily shloka, practices, and festival guides are all open while
+            Sandhya is in its early free period. If a paid tier ever arrives, nothing you rely on
             today will be taken away without clear notice.
           </Text>
           <Pressable
@@ -169,6 +169,7 @@ export default function SubscriptionScreen() {
   return (
     <SafeAreaView className="flex-1 bg-parchment">
       <ScrollView contentContainerStyle={{ padding: layout.screenPadding, paddingBottom: 48 }}>
+        <Stack.Screen options={{ headerShown: false }} />
         <View className="flex-row items-center justify-between">
           <Pressable
             accessibilityLabel="Close subscription"
@@ -176,7 +177,7 @@ export default function SubscriptionScreen() {
             onPress={() => router.back()}
             className="h-10 w-10 items-center justify-center"
           >
-            <Ionicons name="close" size={26} color={colors.white} />
+            <Ionicons name="close" size={26} color={colors.ink} />
           </Pressable>
           <Text className="text-base font-semibold text-muted">Sandhya Plus</Text>
           <View className="h-10 w-10" />
@@ -186,10 +187,10 @@ export default function SubscriptionScreen() {
           <Text className="mt-4 text-center text-[28px] font-semibold text-white">
             A deeper daily practice.
           </Text>
-          <Text className="mt-2 text-center leading-6 text-[#E9E2D8]">
+          <Text className="mt-2 text-center leading-6 text-[#FFF3DE]">
             Support carefully sourced Hindu learning and make more room for your own questions.
           </Text>
-          <View className="mt-5 rounded-full bg-[#3E3413] px-4 py-2">
+          <View className="mt-5 rounded-full bg-[#FFF1D6] px-4 py-2">
             <Text className="text-sm font-semibold text-saffron">
               {subscriptionChecking
                 ? "Checking plan…"
@@ -203,7 +204,7 @@ export default function SubscriptionScreen() {
           {benefits.map(([icon, title, body]) => (
             <View
               key={title}
-              className="flex-row gap-3 rounded-card border border-[#302C25] bg-surface p-4"
+              className="flex-row gap-3 rounded-card border border-line bg-surface p-4"
             >
               <Ionicons name={icon} size={23} color={colors.saffron} />
               <View className="flex-1">
@@ -214,7 +215,7 @@ export default function SubscriptionScreen() {
           ))}
         </View>
         {subscriptionChecking || authState === "loading" ? (
-          <View className="mt-8 items-center rounded-card border border-[#302C25] bg-surface p-5">
+          <View className="mt-8 items-center rounded-card border border-line bg-surface p-5">
             <ActivityIndicator color={colors.saffron} />
             <Text className="mt-3 text-sm text-muted">Checking your current entitlement…</Text>
           </View>
@@ -229,7 +230,7 @@ export default function SubscriptionScreen() {
                 cancelled; lifetime is a one-time purchase.
               </Text>
               {!options.length ? (
-                <View className="rounded-card border border-[#5D5040] bg-surface2 p-4">
+                <View className="rounded-card border border-line bg-surface2 p-4">
                   <Text className="text-sm leading-5 text-muted">{storeSetupMessage}</Text>
                 </View>
               ) : null}
@@ -279,7 +280,7 @@ export default function SubscriptionScreen() {
               {busy ? <ActivityIndicator className="mt-3" color={colors.saffron} /> : null}
             </>
           ) : (
-            <View className="mt-8 rounded-card border border-[#302C25] bg-surface p-5">
+            <View className="mt-8 rounded-card border border-line bg-surface p-5">
               <Text className="text-lg font-semibold text-ink">Sign in to continue</Text>
               <Text className="mt-1 text-sm leading-5 text-muted">
                 Your subscription is linked to your Sandhya account so access and purchases can be
@@ -343,7 +344,7 @@ function PlanButton({
       accessibilityState={{ disabled }}
       disabled={disabled}
       onPress={onPress}
-      className="mt-3 rounded-card border border-[#302C25] bg-surface p-4"
+      className="mt-3 rounded-card border border-line bg-surface p-4"
     >
       <View className="flex-row items-center justify-between">
         <View>

@@ -51,7 +51,7 @@ const starterFestivals: Festival[] = [
     ],
     variationNote:
       "Observances differ by lineage, region, and family. Buddhist and Jain communities also mark this full moon in distinct ways.",
-    color: "#775B82",
+    color: "#7F6278",
   },
   {
     id: "00000000-0000-0000-0000-000000000403",
@@ -68,7 +68,7 @@ const starterFestivals: Festival[] = [
     ],
     variationNote:
       "The relationship celebrated and the ritual details vary widely across communities.",
-    color: "#B8665B",
+    color: "#D97824",
   },
   {
     id: "00000000-0000-0000-0000-000000000404",
@@ -87,7 +87,7 @@ const starterFestivals: Festival[] = [
     ],
     variationNote:
       "Fasting, midnight worship, temple customs, and calendar dates vary by region and sampradaya.",
-    color: "#3F6C84",
+    color: "#6D8C71",
   },
   {
     id: "00000000-0000-0000-0000-000000000401",
@@ -106,7 +106,7 @@ const starterFestivals: Festival[] = [
     ],
     variationNote:
       "Names, dates, stories, fasting, and observances vary by region, calendar method, and tradition.",
-    color: "#B8665B",
+    color: "#D97824",
   },
 ];
 
@@ -129,7 +129,7 @@ function festivalGuide(
     meaning,
     observance,
     variationNote,
-    color: "#775B82",
+    color: "#7F6278",
     ...options,
   };
 }
