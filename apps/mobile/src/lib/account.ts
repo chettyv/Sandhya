@@ -32,6 +32,10 @@ export type ProfilePreferences = {
   tradition_pref: string | null;
   notification_time: string | null;
   timezone: string | null;
+  // Read back so a fresh install restores the onboarding answers that route
+  // content, not just the name and reminder.
+  household_practices: string[] | null;
+  language_pref: "en" | "hi" | null;
 };
 
 export async function loadProfile(): Promise<ProfilePreferences | null> {
@@ -40,7 +44,9 @@ export async function loadProfile(): Promise<ProfilePreferences | null> {
   if (!userId) return null;
   const { data, error } = await supabase
     .from("profiles")
-    .select("display_name, tradition_pref, notification_time, timezone")
+    .select(
+      "display_name, tradition_pref, notification_time, timezone, household_practices, language_pref",
+    )
     .eq("id", userId)
     .maybeSingle();
   if (error) throw error;

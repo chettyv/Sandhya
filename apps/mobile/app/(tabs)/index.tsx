@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import Ionicons from "@expo/vector-icons/Ionicons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useState } from "react";
@@ -7,13 +7,16 @@ import { Pressable, StyleSheet, Text, View } from "react-native";
 import { ContentSourceNotice } from "@/components/ContentSourceNotice";
 import { FestivalRow } from "@/components/FestivalRow";
 import { PracticeRow } from "@/components/PracticeRow";
+import { StartingPointCard } from "@/components/StartingPointCard";
 import { Card, Page, SectionHeader } from "@/components/ui";
+import { VerseLines } from "@/components/VerseLines";
 import { calculateCurrentStreak, localDateKey, removeSavedItem, saveItem } from "@/lib/account";
 import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
 import { paymentsEnabled } from "@/lib/payments";
 import { dailyPrayer, dailyShloka, prayerContextForHour, shlokaTranslation } from "@/lib/shlokas";
+import { pickConcepts, pickStartingPractice } from "@/lib/startingPoint";
 import { useSubscription } from "@/lib/subscriptions";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
@@ -43,6 +46,12 @@ export default function HomeScreen() {
   const completedTodayIds = useAppStore((state) => state.completedTodayIds);
   const completedDateKeys = useAppStore((state) => state.completedDateKeys);
   const reminderEnabled = useAppStore((state) => state.reminderEnabled);
+  const reminderTime = useAppStore((state) => state.reminderTime);
+  const onboardingIntent = useAppStore((state) => state.onboardingIntent);
+  const practiceMinutes = useAppStore((state) => state.practiceMinutes);
+  const startingText = useAppStore((state) => state.startingText);
+  const curiosity = useAppStore((state) => state.curiosity);
+  const householdPractices = useAppStore((state) => state.householdPractices);
   const { data: content } = useCuratedContent();
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
@@ -50,7 +59,19 @@ export default function HomeScreen() {
   const gateFree = paymentsEnabled && subscription.plan === "free";
   const availablePractices = gateFree ? practices.filter((item) => !item.isPremium) : practices;
   const availableFestivals = gateFree ? festivals.filter((item) => !item.isPremium) : festivals;
-  const practice = availablePractices[0];
+  // Onboarding answers choose today's practice (minutes offered, household
+  // practice, time of day) and the two learning tiles; with no answers the
+  // catalogue order stands, exactly as before.
+  const practice = pickStartingPractice(availablePractices, {
+    intent: onboardingIntent,
+    practiceMinutes,
+    startingText,
+    curiosity,
+    householdPractices,
+    reminderEnabled,
+    reminderTime,
+  });
+  const learningConcepts = pickConcepts(concepts, curiosity);
   const availableUpcomingFestivals = availableFestivals.filter(
     (item) => item.date !== null && item.date >= localDateKey(),
   );
@@ -86,7 +107,11 @@ export default function HomeScreen() {
           <Text className="text-[30px] leading-9 text-ink" style={styles.display}>
             Today's Journey
           </Text>
-          <Text numberOfLines={1} className="mt-1 text-[21px] text-muted" style={styles.display}>
+          <Text
+            numberOfLines={2}
+            className="mt-1 text-[17px] leading-[22px] text-muted"
+            style={styles.display}
+          >
             {dailyReflection.eyebrow}
           </Text>
         </View>
@@ -111,9 +136,9 @@ export default function HomeScreen() {
             <View key={`${item.day}-${item.date}`} className="items-center gap-2">
               <Text className="text-xs font-semibold text-muted">{item.day}</Text>
               <View
-                className={`h-12 w-12 items-center justify-center rounded-2xl border ${active ? "border-white" : done ? "border-saffron bg-[#3A2C10]" : "border-[#5A5755] bg-[#242424]"}`}
+                className={`h-12 w-12 items-center justify-center rounded-2xl border ${active ? "border-saffron bg-surface2" : done ? "border-saffron bg-[#FFF1D6]" : "border-line bg-sand"}`}
               >
-                <Text className={`text-base font-semibold ${active ? "text-white" : "text-muted"}`}>
+                <Text className={`text-base font-semibold ${active ? "text-ink" : "text-muted"}`}>
                   {item.date}
                 </Text>
               </View>
@@ -129,9 +154,9 @@ export default function HomeScreen() {
             {Math.round(progress * 100)}%
           </Text>
         </View>
-        <View className="h-2.5 overflow-hidden rounded-full bg-white">
+        <View className="h-2.5 overflow-hidden rounded-full bg-sand">
           <LinearGradient
-            colors={["#FFE85B", "#FF9B4A"]}
+            colors={["#E9B949", "#D97824"]}
             start={{ x: 0, y: 0 }}
             end={{ x: 1, y: 0 }}
             style={{ height: "100%", width: `${progress * 100}%` }}
@@ -142,7 +167,7 @@ export default function HomeScreen() {
       {showReminder && !reminderEnabled ? (
         <Card>
           <View className="flex-row items-center gap-3">
-            <Ionicons name="notifications-outline" size={27} color={colors.white} />
+            <Ionicons name="notifications-outline" size={27} color={colors.saffron} />
             <Pressable
               accessibilityRole="button"
               onPress={() => router.push("/settings")}
@@ -157,7 +182,7 @@ export default function HomeScreen() {
               onPress={() => setShowReminder(false)}
               hitSlop={10}
             >
-              <Ionicons name="close" size={26} color={colors.white} />
+              <Ionicons name="close" size={26} color={colors.muted} />
             </Pressable>
           </View>
         </Card>
@@ -167,7 +192,7 @@ export default function HomeScreen() {
         <Pressable
           accessibilityRole="button"
           onPress={() => router.push("/subscription")}
-          className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-[#3E3413] p-4"
+          className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-[#FFF1D6] p-4"
         >
           <Ionicons name="sparkles-outline" size={23} color={colors.saffron} />
           <View className="min-w-0 flex-1">
@@ -182,16 +207,17 @@ export default function HomeScreen() {
 
       <FeaturedChallengeCard />
 
+      <StartingPointCard />
       <DailyPrayerCard />
       <DailyShlokaCard />
 
       <LinearGradient
-        colors={["#6E4A1E", "#142E34", "#0B0B0A"]}
+        colors={["#D97824", "#B7663E", "#7A2F2A"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
         style={styles.reflectionCard}
       >
-        <View className="absolute inset-0 bg-black/20" />
+        <View className="absolute inset-0 bg-black/10" />
         <View className="mb-14 flex-row items-center justify-between">
           <View className="flex-row items-center gap-2">
             <Ionicons name="book-outline" size={28} color={colors.white} />
@@ -222,14 +248,14 @@ export default function HomeScreen() {
         <Text className="text-[28px] font-semibold leading-[35px] text-white">
           {dailyReflection.title}
         </Text>
-        <Text numberOfLines={3} className="mt-3 text-[16px] leading-6 text-[#E9E2D8]">
+        <Text numberOfLines={3} className="mt-3 text-[16px] leading-6 text-[#FFF3DE]">
           {dailyReflection.body}
         </Text>
         <View className="mt-6 flex-row gap-3">
           <Pressable
             accessibilityRole="button"
             onPress={() => router.push(`/reflection/${dailyReflection.id}`)}
-            className="min-h-12 flex-1 flex-row items-center justify-center gap-2 rounded-2xl bg-[#514D46]"
+            className="min-h-12 flex-1 flex-row items-center justify-center gap-2 rounded-2xl bg-[#8E442F]"
           >
             <Ionicons name="book-outline" size={21} color={colors.white} />
             <Text className="text-[18px] font-semibold text-white">
@@ -239,7 +265,7 @@ export default function HomeScreen() {
           <Pressable
             accessibilityRole="button"
             onPress={() => router.push(`/reflection/${dailyReflection.id}`)}
-            className="min-h-12 flex-1 flex-row items-center justify-center gap-2 rounded-2xl bg-[#5E8178]"
+            className="min-h-12 flex-1 flex-row items-center justify-center gap-2 rounded-2xl bg-[#B7663E]"
           >
             <Ionicons name="document-text-outline" size={21} color={colors.white} />
             <Text className="text-[18px] font-semibold text-white">Read</Text>
@@ -264,7 +290,7 @@ export default function HomeScreen() {
       )}
 
       <LinearGradient
-        colors={["#2B0B3B", "#18051E"]}
+        colors={["#B7663E", "#7A2F2A"]}
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
         style={styles.askStrip}
@@ -281,10 +307,10 @@ export default function HomeScreen() {
         >
           <Ionicons name="create-outline" size={28} color={colors.white} />
           <View className="min-w-0 flex-1">
-            <Text className="text-[15px] font-bold uppercase text-white">
+            <Text className="text-[12px] font-bold uppercase text-white">
               Personalized reflection • 3 min
             </Text>
-            <Text numberOfLines={1} className="mt-1 text-sm text-[#D7CDD9]">
+            <Text numberOfLines={1} className="mt-1 text-sm text-[#F7E8D8]">
               {dailyReflection.prompt}
             </Text>
           </View>
@@ -322,12 +348,12 @@ export default function HomeScreen() {
         onAction={() => router.push("/(tabs)/explore")}
       />
       <View className="flex-row gap-3">
-        {concepts.slice(0, 2).map((concept, index) => (
+        {learningConcepts.map((concept, index) => (
           <Pressable
             key={concept.id}
             accessibilityRole="button"
             onPress={() => router.push(`/concept/${concept.id}`)}
-            className={`min-h-32 flex-1 rounded-[22px] border border-[#302C25] p-3.5 ${index === 0 ? "bg-[#2C2230]" : "bg-[#1F332B]"}`}
+            className={`min-h-32 flex-1 rounded-[22px] border border-line p-3.5 ${index === 0 ? "bg-[#FFF1D6]" : "bg-[#F0E6DA]"}`}
           >
             <Text className="text-2xl text-plum">{concept.sanskrit}</Text>
             <Text className="mt-auto text-[16px] font-semibold text-ink">{concept.term}</Text>
@@ -357,7 +383,7 @@ function DailyPrayerCard() {
         track("daily_prayer_opened", { slug: prayer.slug, context: prayerContext });
         router.push({ pathname: "/shloka/[slug]", params: { slug: prayer.slug } });
       }}
-      className="mb-2 rounded-card border border-[#302C25] bg-surface p-4"
+      className="mb-2 rounded-card border border-line bg-surface p-4"
     >
       <View className="flex-row items-center justify-between">
         <Text className="text-[11px] font-semibold uppercase text-saffron">
@@ -378,8 +404,10 @@ function DailyPrayerCard() {
 function DailyShlokaCard() {
   const router = useRouter();
   const focusTags = useAppStore((state) => state.focusTags);
+  const preferredTextPrefixes = useAppStore((state) => state.preferredTextPrefixes);
   const contentLanguage = useAppStore((state) => state.contentLanguage);
-  const shloka = dailyShloka(focusTags);
+  const scriptPreference = useAppStore((state) => state.scriptPreference);
+  const shloka = dailyShloka(focusTags, undefined, preferredTextPrefixes);
   if (!shloka) return null;
   return (
     <Pressable
@@ -389,7 +417,7 @@ function DailyShlokaCard() {
         track("daily_shloka_opened", { slug: shloka.slug });
         router.push({ pathname: "/shloka/[slug]", params: { slug: shloka.slug } });
       }}
-      className="mb-2 rounded-card border border-[#302C25] bg-surface p-4"
+      className="mb-2 rounded-card border border-line bg-surface p-4"
     >
       <View className="flex-row items-center justify-between">
         <Text className="text-[11px] font-semibold uppercase text-saffron">
@@ -397,9 +425,9 @@ function DailyShlokaCard() {
         </Text>
         <Ionicons name="chevron-forward" size={16} color={colors.muted} />
       </View>
-      <Text className="mt-2 text-[17px] leading-8 text-ink" numberOfLines={2}>
-        {shloka.devanagari}
-      </Text>
+      <View className="mt-2">
+        <VerseLines verse={shloka} preference={scriptPreference} compact numberOfLines={2} />
+      </View>
       <Text className="mt-1 text-sm leading-5 text-muted" numberOfLines={2}>
         {shlokaTranslation(shloka, contentLanguage)}
       </Text>
@@ -438,7 +466,7 @@ function FeaturedChallengeCard() {
       onPress={() =>
         router.push({ pathname: "/challenge/[slug]", params: { slug: challenge.slug } })
       }
-      className="mb-2 flex-row items-center gap-3 rounded-card border border-[#302C25] bg-surface p-4"
+      className="mb-2 flex-row items-center gap-3 rounded-card border border-line bg-surface p-4"
     >
       <Ionicons name="moon-outline" size={23} color={colors.plum} />
       <View className="min-w-0 flex-1">
@@ -464,7 +492,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     borderRadius: 26,
     borderWidth: 1,
-    borderColor: "#403C36",
+    borderColor: "#E1B58E",
     padding: 20,
   },
   askStrip: {

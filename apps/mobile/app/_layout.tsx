@@ -24,6 +24,7 @@ import {
   getInitialNotificationRoute,
   subscribeToNotificationResponses,
 } from "@/lib/notifications";
+import { tagsForPractices } from "@/lib/practices";
 import { configurePurchases, resetPurchases } from "@/lib/subscriptions";
 import { supabase } from "@/lib/supabase";
 import { track } from "@/lib/telemetry";
@@ -49,6 +50,9 @@ export default function RootLayout() {
   const setCompletedPracticeIds = useAppStore((state) => state.setCompletedPracticeIds);
   const clearAccountScopedState = useAppStore((state) => state.clearAccountScopedState);
   const setReminder = useAppStore((state) => state.setReminder);
+  const setHouseholdPractices = useAppStore((state) => state.setHouseholdPractices);
+  const setFocusTags = useAppStore((state) => state.setFocusTags);
+  const setContentLanguage = useAppStore((state) => state.setContentLanguage);
   const hydrated = useAppStore((state) => state.hydrated);
   const reminderEnabled = useAppStore((state) => state.reminderEnabled);
   const reminderTime = useAppStore((state) => state.reminderTime);
@@ -77,6 +81,17 @@ export default function RootLayout() {
     const client = supabase;
     if (!client) return;
     let mounted = true;
+    // Server-held onboarding answers that route content. Only applied when
+    // the server actually has a value, so a guest's local choices survive a
+    // sign-in to a blank profile (syncGuestPreferences pushes them first).
+    function applyRoutingPreferences(profile: Awaited<ReturnType<typeof loadProfile>>) {
+      if (!profile) return;
+      if (profile.household_practices && profile.household_practices.length > 0) {
+        setHouseholdPractices(profile.household_practices);
+        setFocusTags(tagsForPractices(profile.household_practices));
+      }
+      if (profile.language_pref) setContentLanguage(profile.language_pref);
+    }
     const hydrateSavedItems = async () => {
       await waitForStoreHydration();
       const state = useAppStore.getState();
@@ -102,6 +117,7 @@ export default function RootLayout() {
           Boolean(profile.notification_time),
           profile.notification_time?.slice(0, 5) ?? "08:00",
         );
+        applyRoutingPreferences(profile);
       })
       .catch(() => undefined);
     void loadActivityDates()
@@ -165,6 +181,7 @@ export default function RootLayout() {
             void configureDailyReminder(true, profile.notification_time.slice(0, 5)).catch(
               () => undefined,
             );
+          applyRoutingPreferences(profile);
         })
         .catch(() => undefined);
       if (event === "SIGNED_IN") void hydrateSavedItems().catch(() => undefined);
@@ -187,7 +204,10 @@ export default function RootLayout() {
     clearAccountScopedState,
     setCompletedDateKeys,
     setCompletedPracticeIds,
+    setContentLanguage,
     setDisplayName,
+    setFocusTags,
+    setHouseholdPractices,
     setReminder,
     setSavedItems,
     setTraditionPreference,
@@ -213,7 +233,7 @@ export default function RootLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
         <QueryClientProvider client={queryClient}>
-          <StatusBar style="light" />
+          <StatusBar style="dark" />
           <Stack
             screenOptions={{
               headerStyle: { backgroundColor: colors.parchment },
@@ -224,7 +244,12 @@ export default function RootLayout() {
             }}
           >
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-            <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+            <Stack.Screen
+              name="onboarding"
+              // The flow has its own back control; the edge-swipe would pop
+              // the whole route and lose the user's place.
+              options={{ headerShown: false, gestureEnabled: false }}
+            />
             <Stack.Screen name="profile" options={{ title: "Profile", presentation: "modal" }} />
             <Stack.Screen name="reflection/[id]" options={{ title: "Daily reflection" }} />
             <Stack.Screen name="challenge/[slug]/index" options={{ title: "Challenge" }} />
@@ -279,6 +304,15 @@ async function syncGuestPreferences(): Promise<void> {
   if (!profile.notification_time && state.reminderEnabled) {
     patch.notification_time = `${state.reminderTime}:00`;
     patch.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }
+  if (
+    (!profile.household_practices || profile.household_practices.length === 0) &&
+    state.householdPractices.length > 0
+  ) {
+    patch.household_practices = state.householdPractices;
+  }
+  if (profile.language_pref !== "hi" && state.contentLanguage === "hi") {
+    patch.language_pref = "hi";
   }
   if (Object.keys(patch).length) await updateProfile(patch);
 }

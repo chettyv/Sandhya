@@ -1,8 +1,19 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
+import type {
+  Curiosity,
+  Intent,
+  OnboardingAnswers,
+  OnboardingProfile,
+  ScriptPreference,
+  StartingText,
+  StepId,
+} from "@/features/onboarding/types";
 import type { SavedItem, SavedItemType } from "@/lib/account";
 import { chunkedStorage } from "@/lib/chunkedStorage";
+
+export type OnboardingDraft = { answers: OnboardingAnswers; stepId: StepId };
 
 type AppState = {
   savedIds: string[];
@@ -18,6 +29,18 @@ type AppState = {
   householdPractices: string[];
   contentLanguage: string;
   hasCompletedOnboarding: boolean;
+  // Bumped when the onboarding flow changes shape; installs below the current
+  // version are routed back through it (ONBOARDING_VERSION in steps.ts).
+  onboardingVersion: number;
+  onboardingIntent: Intent | null;
+  scriptPreference: ScriptPreference;
+  practiceMinutes: number | null;
+  startingText: StartingText | null;
+  curiosity: Curiosity | null;
+  preferredTextPrefixes: string[];
+  // In-progress answers, so closing the app mid-flow resumes where it left.
+  onboardingDraft: OnboardingDraft | null;
+  startingPointDismissed: boolean;
   hydrated: boolean;
   lastActiveDate: string;
   toggleSaved: (id: string, itemType?: SavedItemType) => void;
@@ -34,7 +57,12 @@ type AppState = {
   setCompletedPracticeIds: (ids: string[]) => void;
   setCompletedDateKeys: (keys: string[]) => void;
   clearAccountScopedState: () => void;
-  setOnboardingComplete: () => void;
+  setOnboardingComplete: (version: number) => void;
+  setOnboardingProfile: (profile: OnboardingProfile) => void;
+  setOnboardingDraft: (draft: OnboardingDraft | null) => void;
+  setScriptPreference: (preference: ScriptPreference) => void;
+  dismissStartingPoint: () => void;
+  resetOnboarding: () => void;
   syncDailyState: () => void;
   setHydrated: (hydrated: boolean) => void;
 };
@@ -62,6 +90,15 @@ export const useAppStore = create<AppState>()(
       householdPractices: [],
       contentLanguage: "en",
       hasCompletedOnboarding: false,
+      onboardingVersion: 0,
+      onboardingIntent: null,
+      scriptPreference: "both",
+      practiceMinutes: null,
+      startingText: null,
+      curiosity: null,
+      preferredTextPrefixes: [],
+      onboardingDraft: null,
+      startingPointDismissed: false,
       hydrated: false,
       lastActiveDate: todayKey(),
       toggleSaved: (id, itemType) =>
@@ -131,8 +168,36 @@ export const useAppStore = create<AppState>()(
           householdPractices: [],
           reminderEnabled: false,
           reminderTime: "08:00",
+          onboardingIntent: null,
+          scriptPreference: "both",
+          practiceMinutes: null,
+          startingText: null,
+          curiosity: null,
+          preferredTextPrefixes: [],
         }),
-      setOnboardingComplete: () => set({ hasCompletedOnboarding: true }),
+      setOnboardingComplete: (version) =>
+        set({ hasCompletedOnboarding: true, onboardingVersion: version, onboardingDraft: null }),
+      setOnboardingProfile: (profile) =>
+        set({
+          displayName: profile.displayName,
+          householdPractices: profile.householdPractices,
+          focusTags: profile.focusTags,
+          preferredTextPrefixes: profile.preferredTextPrefixes,
+          scriptPreference: profile.scriptPreference,
+          contentLanguage: profile.contentLanguage,
+          reminderEnabled: profile.reminderEnabled,
+          reminderTime: profile.reminderTime,
+          onboardingIntent: profile.intent,
+          practiceMinutes: profile.practiceMinutes,
+          startingText: profile.startingText,
+          curiosity: profile.curiosity,
+          startingPointDismissed: false,
+        }),
+      setOnboardingDraft: (onboardingDraft) => set({ onboardingDraft }),
+      setScriptPreference: (scriptPreference) => set({ scriptPreference }),
+      dismissStartingPoint: () => set({ startingPointDismissed: true }),
+      resetOnboarding: () =>
+        set({ hasCompletedOnboarding: false, onboardingVersion: 0, onboardingDraft: null }),
       syncDailyState: () =>
         set((state) =>
           state.lastActiveDate === todayKey()

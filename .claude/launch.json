@@ -16,6 +16,22 @@
         "--offline"
       ],
       "port": 8123
+    },
+    {
+      "name": "mobile-web-onboarding",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": [
+        "--filter",
+        "@sandhya/mobile",
+        "exec",
+        "expo",
+        "start",
+        "--web",
+        "--port",
+        "8124",
+        "--offline"
+      ],
+      "port": 8124
     }
   ]
 }

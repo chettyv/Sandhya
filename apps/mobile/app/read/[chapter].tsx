@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { FlatList, Pressable, Text, View } from "react-native";
 
 import { EmptyState, Page } from "@/components/ui";
+import { VerseLines } from "@/components/VerseLines";
+import type { ScriptPreference } from "@/features/onboarding/types";
 import { type Shloka, readerChapters, shlokaTranslation } from "@/lib/shlokas";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
@@ -10,6 +12,7 @@ import { useAppStore } from "@/store/useAppStore";
 export default function ReaderChapterScreen() {
   const { chapter: chapterParam } = useLocalSearchParams<{ chapter?: string }>();
   const contentLanguage = useAppStore((state) => state.contentLanguage);
+  const scriptPreference = useAppStore((state) => state.scriptPreference);
   const chapter = readerChapters().find((entry) => entry.key === chapterParam);
 
   const chapterKey = chapter?.key ?? null;
@@ -40,27 +43,53 @@ export default function ReaderChapterScreen() {
         ListHeaderComponent={
           <Text className="mb-3 text-[22px] font-semibold leading-7 text-ink">{chapter.title}</Text>
         }
-        renderItem={({ item }) => <VerseRow shloka={item} language={contentLanguage} />}
+        renderItem={({ item }) => (
+          <VerseRow shloka={item} language={contentLanguage} script={scriptPreference} />
+        )}
         contentContainerStyle={{ paddingBottom: 96 }}
       />
     </Page>
   );
 }
 
-function VerseRow({ shloka, language }: { shloka: Shloka; language: string }) {
-  const verseNumber = shloka.textRef.match(/(\d+\.\d+)$/)?.[1] ?? "";
+// Unit label within a chapter, across every textRef shape in the bank:
+// "Hanuman Chalisa, chaupai 3" -> "chaupai 3"; "Katha Upanishad 1.2.5" ->
+// "1.2.5"; "Isha Upanishad 5" -> "5"; "Aditya Hridayam 4 (Valmiki
+// Ramayana, …)" -> "4"; single-unit prayers carry no label.
+function verseLabel(textRef: string): string {
+  const unit = textRef.match(/,\s*([^,()]+)$/)?.[1];
+  if (unit) return unit.trim();
+  const numeric = textRef.match(/\s(\d+(?:\.\d+)*)$/)?.[1];
+  if (numeric) return numeric;
+  return textRef.match(/\s(\d+)\s*\(/)?.[1] ?? "";
+}
+
+function VerseRow({
+  shloka,
+  language,
+  script,
+}: {
+  shloka: Shloka;
+  language: string;
+  script: ScriptPreference;
+}) {
+  const verseNumber = verseLabel(shloka.textRef);
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={`Verse ${verseNumber}: open pronunciation and word meanings`}
+      accessibilityLabel={`${verseNumber ? `Verse ${verseNumber}` : shloka.textRef}: open pronunciation and word meanings`}
       onPress={() => router.push({ pathname: "/shloka/[slug]", params: { slug: shloka.slug } })}
-      className="border-b border-[#302C25] py-4"
+      className="border-b border-line py-4"
       style={({ pressed }) => pressed && { opacity: 0.72 }}
     >
-      <View className="flex-row items-baseline gap-2">
-        <Text className="text-xs font-semibold text-saffron">{verseNumber}</Text>
+      {verseNumber ? (
+        <View className="flex-row items-baseline gap-2">
+          <Text className="text-xs font-semibold text-saffron">{verseNumber}</Text>
+        </View>
+      ) : null}
+      <View className="mt-1">
+        <VerseLines verse={shloka} preference={script} compact />
       </View>
-      <Text className="mt-1 text-[17px] leading-8 text-ink">{shloka.devanagari}</Text>
       <Text className="mt-1.5 text-[15px] leading-6 text-muted">
         {shlokaTranslation(shloka, language)}
       </Text>

@@ -1,193 +1,187 @@
 import { useRouter } from "expo-router";
-import { useState } from "react";
-import { Alert, Pressable, ScrollView, Switch, Text, TextInput, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useEffect, useRef, useState } from "react";
+import { AccessibilityInfo, Alert } from "react-native";
 
+import { OnboardingShell } from "@/features/onboarding/components/OnboardingShell";
+import { MultiChoice, SingleChoice } from "@/features/onboarding/components/steps/ChoiceSteps";
+import { Interstitial } from "@/features/onboarding/components/steps/InterstitialStep";
+import { Result } from "@/features/onboarding/components/steps/ResultStep";
+import { TextStep } from "@/features/onboarding/components/steps/TextStep";
+import { WelcomeStep } from "@/features/onboarding/components/steps/WelcomeStep";
+import { StepTransition } from "@/features/onboarding/components/StepTransition";
+import { buildProfile, resolveCopy } from "@/features/onboarding/engine";
+import { ONBOARDING_VERSION } from "@/features/onboarding/steps";
+import { useOnboardingFlow } from "@/features/onboarding/useOnboardingFlow";
 import { updateProfile } from "@/lib/account";
 import { configureDailyReminder } from "@/lib/notifications";
-import { householdPracticeOptions, tagsForPractices, togglePractice } from "@/lib/practices";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
-import { colors, layout } from "@/theme/tokens";
 
-// Three questions, each of which visibly changes something (02-plan.md B4):
-// Q1 household practice routes the daily verse rotation, Q2 arms the
-// reminder, Q3 personalises copy. A survey answer that changes nothing is
-// worse than no survey — do not add questions here without wiring them.
+// One route, one flow controller, one configured list of steps. Each screen
+// asks one thing; the answers are consumed by the home tab, the verse
+// surfaces, the reminder and the greeting (see features/onboarding/steps.ts
+// for what each one routes). A survey answer that changes nothing is worse
+// than no survey — do not add a step here without wiring its consumer.
 export default function OnboardingScreen() {
   const router = useRouter();
-  const setDisplayName = useAppStore((state) => state.setDisplayName);
-  const setReminder = useAppStore((state) => state.setReminder);
+  const flow = useOnboardingFlow();
+  const setOnboardingProfile = useAppStore((state) => state.setOnboardingProfile);
   const setOnboardingComplete = useAppStore((state) => state.setOnboardingComplete);
-  const setFocusTags = useAppStore((state) => state.setFocusTags);
-  const setHouseholdPractices = useAppStore((state) => state.setHouseholdPractices);
-  const [name, setName] = useState("");
-  const [practices, setPractices] = useState<string[]>([]);
-  const [reminders, setReminders] = useState(false);
-  const [reminderTime, setReminderTime] = useState("08:00");
   const [finishing, setFinishing] = useState(false);
+  const startedRef = useRef(false);
 
-  const finish = async () => {
+  useEffect(() => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    track("onboarding_started");
+  }, []);
+
+  // Screen readers hear each new question as it arrives.
+  const { step, answers } = flow;
+  useEffect(() => {
+    const title =
+      step.kind === "single" || step.kind === "multi" || step.kind === "text"
+        ? resolveCopy(step.title, answers)
+        : step.kind === "interstitial"
+          ? resolveCopy(step.title, answers)
+          : null;
+    if (title) AccessibilityInfo.announceForAccessibility(title);
+  }, [step, answers]);
+
+  const skipSetup = () => {
+    track("onboarding_skipped", { step_id: step.id });
+    setOnboardingComplete(ONBOARDING_VERSION);
+    router.replace("/(tabs)");
+  };
+
+  const finish = async (thenSignIn: boolean) => {
     if (finishing) return;
     setFinishing(true);
     try {
-      const reminderResult = await configureDailyReminder(reminders, reminderTime).catch(
-        (error: unknown) => ({
-          enabled: false,
-          reason: error instanceof Error ? error.message : "Reminders could not be enabled.",
-        }),
-      );
-      const reminderEnabled = reminders && reminderResult.enabled;
-      setDisplayName(name.trim() || "Friend");
-      setHouseholdPractices(practices);
+      const profile = buildProfile(answers);
+      const reminderResult = profile.reminderEnabled
+        ? await configureDailyReminder(true, profile.reminderTime).catch((error: unknown) => ({
+            enabled: false,
+            reason: error instanceof Error ? error.message : "Reminders could not be enabled.",
+          }))
+        : { enabled: false, reason: undefined };
+      const reminderEnabled = profile.reminderEnabled && reminderResult.enabled;
       // Practices route content through tags; they are never mapped to a
       // tradition identity. tradition_pref stays user-set (Settings).
-      setFocusTags(tagsForPractices(practices));
-      setReminder(reminderEnabled, reminderTime);
-      setOnboardingComplete();
-      track("onboarding_completed", { practice_count: practices.length });
+      setOnboardingProfile({ ...profile, reminderEnabled });
+      setOnboardingComplete(ONBOARDING_VERSION);
+      track("onboarding_completed", {
+        intent: profile.intent,
+        practice_count: profile.householdPractices.length,
+        reminder_enabled: reminderEnabled,
+        script: profile.scriptPreference,
+        language: profile.contentLanguage,
+        version: ONBOARDING_VERSION,
+      });
       try {
         await updateProfile({
-          display_name: name.trim() || null,
-          household_practices: practices,
-          notification_time: reminderEnabled ? `${reminderTime}:00` : null,
+          display_name: profile.displayName === "Friend" ? null : profile.displayName,
+          household_practices: profile.householdPractices,
+          language_pref: profile.contentLanguage,
+          notification_time: reminderEnabled ? `${profile.reminderTime}:00` : null,
           timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
         });
       } catch {
-        // Guests can complete onboarding locally and sync after signing in.
+        // Guests complete onboarding locally; syncGuestPreferences pushes
+        // these the moment they sign in.
       }
-      if (reminders && !reminderEnabled) {
+      if (profile.reminderEnabled && !reminderEnabled) {
         Alert.alert(
           "Reminder not enabled",
           reminderResult.reason ?? "You can allow reminders later from Settings.",
         );
       }
       router.replace("/(tabs)");
+      if (thenSignIn) {
+        track("onboarding_account_prompt");
+        router.push("/sign-in");
+      }
     } finally {
       setFinishing(false);
     }
   };
 
-  return (
-    <SafeAreaView className="flex-1 bg-parchment">
-      <ScrollView contentContainerStyle={{ padding: layout.screenPadding, paddingBottom: 40 }}>
-        <View className="mt-10">
-          <Text className="text-sm font-semibold uppercase tracking-[2px] text-saffron">
-            Sandhya
-          </Text>
-          <Text className="mt-3 text-[32px] font-semibold leading-10 text-ink">
-            A small daily space for learning and practice.
-          </Text>
-          <Text className="mt-3 text-base leading-6 text-muted">
-            Three quick questions. Each one changes what you see — nothing is collected for its own
-            sake, and you can change them all later.
-          </Text>
-        </View>
-
-        <Text className="mb-1 mt-10 text-sm font-semibold uppercase text-muted">
-          What do you do at home?
-        </Text>
-        <Text className="mb-2 text-sm leading-5 text-muted">
-          Pick anything that is true for your household — it shapes which verse meets you each day.
-          Every part of the library stays open either way.
-        </Text>
-        <View className="flex-row flex-wrap gap-2">
-          {householdPracticeOptions.map((option) => {
-            const selected = practices.includes(option.key);
-            return (
-              <Pressable
-                key={option.key}
-                accessibilityRole="button"
-                accessibilityState={{ selected }}
-                onPress={() => setPractices(togglePractice(practices, option.key))}
-                className={`rounded-full border px-3.5 py-2.5 ${selected ? "border-aubergine bg-aubergine" : "border-[#302C25] bg-surface"}`}
-              >
-                <Text className={`text-sm font-semibold ${selected ? "text-white" : "text-ink"}`}>
-                  {option.label}
-                </Text>
-              </Pressable>
-            );
-          })}
-        </View>
-
-        <View className="mt-7 flex-row items-center justify-between rounded-card border border-[#302C25] bg-surface p-4">
-          <View className="flex-1 pr-4">
-            <Text className="font-semibold text-ink">A gentle daily reminder</Text>
-            <Text className="mt-1 text-sm leading-5 text-muted">
-              Choose a time and the day&apos;s verse will come to you.
-            </Text>
-          </View>
-          <Switch
-            accessibilityLabel="Enable daily reminders"
-            value={reminders}
-            onValueChange={setReminders}
-            trackColor={{ false: "#6D665C", true: colors.saffron }}
-            thumbColor={colors.parchment}
+  const content = (() => {
+    switch (step.kind) {
+      case "welcome":
+        return (
+          <WelcomeStep
+            onBegin={flow.next}
+            onSkip={skipSetup}
+            onSignIn={() => {
+              // Returning users: their profile restores the answers on sign-in.
+              setOnboardingComplete(ONBOARDING_VERSION);
+              router.replace("/(tabs)");
+              router.push("/sign-in");
+            }}
           />
-        </View>
-        {reminders ? (
-          <View className="mt-3 rounded-card border border-[#302C25] bg-surface p-4">
-            <Text className="text-sm font-semibold text-ink">Choose a reminder time</Text>
-            <View className="mt-3 flex-row flex-wrap gap-2">
-              {["07:00", "08:00", "12:00", "20:00"].map((time) => (
-                <Pressable
-                  key={time}
-                  accessibilityRole="button"
-                  accessibilityState={{ selected: reminderTime === time }}
-                  onPress={() => setReminderTime(time)}
-                  className={`rounded-full border px-3.5 py-2.5 ${reminderTime === time ? "border-aubergine bg-aubergine" : "border-[#302C25] bg-surface"}`}
-                >
-                  <Text
-                    className={`text-sm font-semibold ${reminderTime === time ? "text-white" : "text-ink"}`}
-                  >
-                    {time}
-                  </Text>
-                </Pressable>
-              ))}
-            </View>
-            <Text className="mt-2 text-xs leading-5 text-muted">
-              You can change this later in Settings.
-            </Text>
-          </View>
-        ) : null}
+        );
+      case "single":
+        return (
+          <SingleChoice
+            key={step.id}
+            step={step}
+            answers={answers}
+            onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
+            onNext={flow.next}
+          />
+        );
+      case "multi":
+        return (
+          <MultiChoice
+            key={step.id}
+            step={step}
+            answers={answers}
+            onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
+            onNext={flow.next}
+          />
+        );
+      case "text":
+        return (
+          <TextStep
+            key={step.id}
+            step={step}
+            answers={answers}
+            onAnswer={(value) => flow.setAnswer(step.answerKey, value)}
+            onNext={flow.next}
+            onSkip={() => {
+              flow.setAnswer(step.answerKey, undefined);
+              flow.next();
+            }}
+          />
+        );
+      case "interstitial":
+        return <Interstitial key={step.id} step={step} answers={answers} onNext={flow.next} />;
+      case "result":
+        return (
+          <Result
+            answers={answers}
+            finishing={finishing}
+            onBegin={() => void finish(false)}
+            onSaveToAccount={() => void finish(true)}
+            onChange={flow.goTo}
+          />
+        );
+    }
+  })();
 
-        <Text className="mb-2 mt-7 text-sm font-semibold uppercase text-muted">
-          What should we call you?
-        </Text>
-        <TextInput
-          accessibilityLabel="Your name"
-          value={name}
-          onChangeText={setName}
-          maxLength={24}
-          placeholder="Your name (optional)"
-          placeholderTextColor={colors.muted}
-          className="rounded-card border border-[#302C25] bg-surface px-4 py-3.5 text-base text-ink"
-        />
-
-        <Pressable
-          accessibilityRole="button"
-          accessibilityState={{ disabled: finishing }}
-          disabled={finishing}
-          onPress={() => void finish()}
-          className={`mt-9 items-center rounded-full px-5 py-4 ${finishing ? "bg-[#3C3934]" : "bg-saffron"}`}
-        >
-          <Text className={`font-semibold ${finishing ? "text-muted" : "text-black"}`}>
-            {finishing ? "Setting up your space…" : "Begin my journey"}
-          </Text>
-        </Pressable>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityState={{ disabled: finishing }}
-          disabled={finishing}
-          onPress={() => {
-            setOnboardingComplete();
-            router.replace("/(tabs)");
-          }}
-          className="mt-3 items-center py-3"
-        >
-          <Text className="font-semibold text-plum">Skip for now</Text>
-        </Pressable>
-      </ScrollView>
-    </SafeAreaView>
+  return (
+    <OnboardingShell
+      progress={flow.progress}
+      showProgress={step.kind !== "welcome"}
+      canGoBack={flow.canGoBack && !finishing}
+      onBack={() => {
+        flow.back();
+      }}
+    >
+      <StepTransition stepKey={step.id} direction={flow.direction}>
+        {content}
+      </StepTransition>
+    </OnboardingShell>
   );
 }

@@ -22,6 +22,7 @@ export default function SettingsScreen() {
   const householdPractices = useAppStore((state) => state.householdPractices);
   const setHouseholdPractices = useAppStore((state) => state.setHouseholdPractices);
   const setFocusTags = useAppStore((state) => state.setFocusTags);
+  const resetOnboarding = useAppStore((state) => state.resetOnboarding);
   const [tradition, setTradition] = useState(
     storedTradition === "general" ? "All traditions" : storedTradition,
   );
@@ -158,7 +159,7 @@ export default function SettingsScreen() {
               value={reminder}
               disabled={reminderBusy}
               onValueChange={(value) => void changeReminder(value)}
-              trackColor={{ false: "#3D3932", true: "#8C7118" }}
+              trackColor={{ false: "#D8C8B5", true: colors.saffron }}
               thumbColor={reminder ? colors.saffron : "#FFFFFF"}
             />
           }
@@ -172,15 +173,25 @@ export default function SettingsScreen() {
         <ListRow
           icon="moon-outline"
           title="Appearance"
-          subtitle="Sandhya dark"
+          subtitle="Sandhya light"
           onPress={() =>
             Alert.alert(
               "Appearance",
-              "Sandhya uses a calm dark palette designed for reading and reflection.",
+              "Sandhya uses a calm light palette with saffron-orange accents designed for easy reading and reflection.",
             )
           }
         />
         <LanguageRow />
+        <ScriptRow />
+        <ListRow
+          icon="refresh-outline"
+          title="Redo the setup questions"
+          subtitle="Go through the short setup again and change any answer"
+          onPress={() => {
+            resetOnboarding();
+            router.replace("/onboarding");
+          }}
+        />
       </Card>
 
       <Text className="mb-2 mt-7 text-sm font-semibold uppercase tracking-wider text-muted">
@@ -204,7 +215,7 @@ export default function SettingsScreen() {
                 setFocusTags(tagsForPractices(next));
                 savePreference({ household_practices: next });
               }}
-              className={`rounded-full px-4 py-2.5 ${selected ? "bg-saffron" : "border border-[#302C25] bg-surface"}`}
+              className={`rounded-full px-4 py-2.5 ${selected ? "bg-saffron" : "border border-line bg-surface"}`}
             >
               <Text className={`text-sm font-semibold ${selected ? "text-black" : "text-muted"}`}>
                 {option.label}
@@ -234,7 +245,7 @@ export default function SettingsScreen() {
                 tradition_pref: item === "All traditions" ? "general" : item.toLowerCase(),
               });
             }}
-            className={`rounded-full px-4 py-2.5 ${tradition === item ? "bg-saffron" : "border border-[#302C25] bg-surface"}`}
+            className={`rounded-full px-4 py-2.5 ${tradition === item ? "bg-saffron" : "border border-line bg-surface"}`}
           >
             <Text
               className={`text-sm font-semibold ${tradition === item ? "text-black" : "text-muted"}`}
@@ -269,7 +280,7 @@ export default function SettingsScreen() {
               accessibilityLabel="Anonymous diagnostics"
               value={telemetryEnabled}
               onValueChange={(value) => void changeTelemetry(value)}
-              trackColor={{ false: "#3D3932", true: "#8C7118" }}
+              trackColor={{ false: "#D8C8B5", true: colors.saffron }}
               thumbColor={telemetryEnabled ? colors.saffron : "#FFFFFF"}
             />
           }
@@ -326,6 +337,30 @@ const languageNames: Record<string, string> = {
   mr: "मराठी",
   ta: "தமிழ்",
 };
+
+const scriptLabels: Record<string, string> = {
+  devanagari: "Devanagari first",
+  both: "Devanagari with Roman letters",
+  roman: "Roman letters first",
+};
+const scriptOrder = ["both", "devanagari", "roman"] as const;
+
+// The onboarding "Can you read Devanagari?" answer, changeable here. Orders
+// the Devanagari / IAST / Say-it lines on every verse.
+function ScriptRow() {
+  const scriptPreference = useAppStore((state) => state.scriptPreference);
+  const setScriptPreference = useAppStore((state) => state.setScriptPreference);
+  const currentIndex = scriptOrder.indexOf(scriptPreference);
+  const next = scriptOrder[(currentIndex + 1) % scriptOrder.length] ?? "both";
+  return (
+    <ListRow
+      icon="text-outline"
+      title="Verses shown"
+      subtitle={`${scriptLabels[scriptPreference] ?? scriptPreference} — tap to switch`}
+      onPress={() => setScriptPreference(next)}
+    />
+  );
+}
 
 function LanguageRow() {
   const contentLanguage = useAppStore((state) => state.contentLanguage);

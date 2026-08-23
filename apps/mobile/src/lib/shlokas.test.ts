@@ -4,6 +4,7 @@ import {
   dailyPrayer,
   dailyShlokaFrom,
   prayerContextForHour,
+  readerChapterTitle,
   rotationSequence,
   type Shloka,
 } from "./shlokas";
@@ -134,5 +135,72 @@ describe("daily prayer segmentation", () => {
 
   it("hides entirely when no prayer-tagged content is live", () => {
     expect(dailyPrayer("morning", "2026-10-11", [verse("v", ["wisdom"])])).toBeUndefined();
+  });
+});
+
+describe("rotationSequence with a preferred text", () => {
+  const mixed: Shloka[] = [
+    verse("gita-2-47", ["duty"]),
+    verse("gita-2-48", ["peace"]),
+    verse("chalisa-1", ["devotion"]),
+    verse("chalisa-2", ["courage"]),
+    verse("isha-1", ["wisdom"]),
+    verse("isha-2", ["peace"]),
+  ];
+
+  it("leads with the chosen text and keeps every verse (rank, never narrow)", () => {
+    const sequence = rotationSequence(mixed, [], ["chalisa-"]);
+    expect(sequence).toHaveLength(mixed.length);
+    expect(sequence[0].slug.startsWith("chalisa-")).toBe(true);
+    expect(new Set(sequence.map((entry) => entry.slug))).toEqual(
+      new Set(mixed.map((entry) => entry.slug)),
+    );
+  });
+
+  it("applies household tags within the chosen text", () => {
+    const sequence = rotationSequence(mixed, ["courage"], ["chalisa-"]);
+    expect(sequence[0].slug).toBe("chalisa-2");
+  });
+
+  it("falls back to tag ordering when no verse matches the prefix", () => {
+    expect(rotationSequence(mixed, ["wisdom"], ["soundarya-"])[0].slug).toBe("isha-1");
+  });
+
+  it("threads the prefix through dailyShlokaFrom", () => {
+    expect(dailyShlokaFrom(mixed, [], "2026-01-01", ["isha-"])?.slug.startsWith("isha-")).toBe(
+      true,
+    );
+  });
+});
+
+describe("readerChapterTitle", () => {
+  it("names chaptered texts by chapter, not by the first verse", () => {
+    expect(readerChapterTitle("Bhagavad Gita 2.13")).toBe("Bhagavad Gita — Chapter 2");
+    expect(readerChapterTitle("Kena Upanishad 3.1")).toBe("Kena Upanishad — Chapter 3");
+  });
+
+  it("keeps adhyaya.valli for three-part references and drops the verse", () => {
+    expect(readerChapterTitle("Katha Upanishad 1.2.5")).toBe("Katha Upanishad 1.2");
+    expect(readerChapterTitle("Mundaka Upanishad 3.2.1")).toBe("Mundaka Upanishad 3.2");
+  });
+
+  it("strips the verse number but keeps a trailing source parenthetical", () => {
+    expect(readerChapterTitle("Aditya Hridayam 1 (Valmiki Ramayana, Yuddha Kanda)")).toBe(
+      "Aditya Hridayam (Valmiki Ramayana, Yuddha Kanda)",
+    );
+  });
+
+  it("strips unit labels and bare verse numbers", () => {
+    expect(readerChapterTitle("Hanuman Chalisa, chaupai 1")).toBe("Hanuman Chalisa");
+    expect(readerChapterTitle("Hanuman Chalisa, opening doha 1")).toBe("Hanuman Chalisa");
+    expect(readerChapterTitle("Katha Upanishad, shanti mantra")).toBe("Katha Upanishad");
+    expect(readerChapterTitle("Isha Upanishad 1")).toBe("Isha Upanishad");
+    expect(readerChapterTitle("Soundarya Lahari 25")).toBe("Soundarya Lahari");
+  });
+
+  it("leaves single-unit prayers with a parenthetical source untouched", () => {
+    expect(readerChapterTitle("Gāyatrī mantra (Rig Veda 3.62.10)")).toBe(
+      "Gāyatrī mantra (Rig Veda 3.62.10)",
+    );
   });
 });

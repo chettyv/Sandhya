@@ -63,14 +63,29 @@ export function readerChapters(): ReaderChapter[] {
   }
   return [...groups.entries()].map(([key, verses]) => {
     verses.sort((a, b) => readerRank(a.slug) - readerRank(b.slug));
-    const chapterStyle = verses[0]?.textRef.match(/^(.*?)\s+(\d+)\.\d+$/);
-    const title = chapterStyle
-      ? `${chapterStyle[1]} — Chapter ${chapterStyle[2]}`
-      : (verses[0]?.textRef
-          .replace(/[,]?\s*(chaupai|opening doha|closing doha|shanti mantra).*$/i, "")
-          .replace(/\s+\d+$/, "") ?? key);
-    return { key, title, verses };
+    return { key, title: readerChapterTitle(verses[0]?.textRef ?? key), verses };
   });
+}
+
+/**
+ * A chapter title from the textRef of the group's first verse, with that
+ * verse's own number removed — the group is the chapter, not its opening line.
+ *
+ *   "Bhagavad Gita 2.13"                                → "Bhagavad Gita — Chapter 2"
+ *   "Katha Upanishad 1.2.5"                             → "Katha Upanishad 1.2"
+ *   "Aditya Hridayam 1 (Valmiki Ramayana, Yuddha Kanda)" → "Aditya Hridayam (Valmiki Ramayana, Yuddha Kanda)"
+ *   "Hanuman Chalisa, chaupai 1"                        → "Hanuman Chalisa"
+ *   "Isha Upanishad 1"                                  → "Isha Upanishad"
+ */
+export function readerChapterTitle(textRef: string): string {
+  const threePart = textRef.match(/^(.*?)\s+(\d+\.\d+)\.\d+$/);
+  if (threePart) return `${threePart[1]} ${threePart[2]}`;
+  const chapterStyle = textRef.match(/^(.*?)\s+(\d+)\.\d+$/);
+  if (chapterStyle) return `${chapterStyle[1]} — Chapter ${chapterStyle[2]}`;
+  return textRef
+    .replace(/[,]?\s*(chaupai|opening doha|closing doha|shanti mantra).*$/i, "")
+    .replace(/\s+\d+(\s*\(.*\))$/, "$1")
+    .replace(/\s+\d+$/, "");
 }
 
 export function availableContentLanguages(): string[] {
@@ -99,8 +114,9 @@ export function shlokaMeaning(shloka: Shloka, language: string): string {
 export function dailyShloka(
   preferenceTags: string[] = [],
   dateKey = localDateKey(),
+  preferredPrefixes: string[] = [],
 ): Shloka | undefined {
-  return dailyShlokaFrom(shlokas, preferenceTags, dateKey);
+  return dailyShlokaFrom(shlokas, preferenceTags, dateKey, preferredPrefixes);
 }
 
 // Injectable-bank variant so rotation behaviour is testable while the
@@ -109,8 +125,9 @@ export function dailyShlokaFrom(
   bank: Shloka[],
   preferenceTags: string[] = [],
   dateKey = localDateKey(),
+  preferredPrefixes: string[] = [],
 ): Shloka | undefined {
-  const sequence = rotationSequence(bank, preferenceTags);
+  const sequence = rotationSequence(bank, preferenceTags, preferredPrefixes);
   if (sequence.length === 0) return undefined;
   const [year = 0, month = 1, day = 1] = dateKey.split("-").map(Number);
   const date = new Date(year, month - 1, day);
@@ -147,17 +164,43 @@ export function dailyPrayer(
 // The reordered daily pool: every curated verse exactly once, with
 // tag-matching verses distributed evenly through the sequence (proportional
 // merge), so any join date lands in a preference-flavoured rotation.
-export function rotationSequence(bank: Shloka[], preferenceTags: string[] = []): Shloka[] {
+//
+// Two ordering signals, both from onboarding, both ORDER and never narrow:
+// - preferredPrefixes: the text the user chose to begin with ("read" intent).
+//   Verses from that text are woven to the front at even density.
+// - preferenceTags: household-practice tags, applied within each half.
+export function rotationSequence(
+  bank: Shloka[],
+  preferenceTags: string[] = [],
+  preferredPrefixes: string[] = [],
+): Shloka[] {
   // Only curated daily_pool verses rotate — many Gita verses are fragments of
   // longer sentences and belong to the reader, not a standalone daily verse.
   const curated = bank.filter((entry) => entry.dailyPool);
   const base = curated.length > 0 ? curated : bank;
-  if (preferenceTags.length === 0) return base;
-  const preferred = base.filter((entry) => entry.tags.some((tag) => preferenceTags.includes(tag)));
-  if (preferred.length === 0 || preferred.length === base.length) return base;
-  const rest = base.filter((entry) => !preferred.includes(entry));
-  // Proportional merge; ties favour the preferred list so day one leads with
-  // the user's own practice.
+  const byTags = (pool: Shloka[]) => {
+    if (preferenceTags.length === 0) return pool;
+    const preferred = pool.filter((entry) =>
+      entry.tags.some((tag) => preferenceTags.includes(tag)),
+    );
+    if (preferred.length === 0 || preferred.length === pool.length) return pool;
+    return weave(
+      preferred,
+      pool.filter((entry) => !preferred.includes(entry)),
+    );
+  };
+  if (preferredPrefixes.length === 0) return byTags(base);
+  const fromText = base.filter((entry) =>
+    preferredPrefixes.some((prefix) => entry.slug.startsWith(prefix)),
+  );
+  if (fromText.length === 0 || fromText.length === base.length) return byTags(base);
+  const others = base.filter((entry) => !fromText.includes(entry));
+  return weave(byTags(fromText), byTags(others));
+}
+
+// Proportional merge; ties favour the preferred list so the sequence leads
+// with the user's own choice.
+function weave(preferred: Shloka[], rest: Shloka[]): Shloka[] {
   const woven: Shloka[] = [];
   let preferredIndex = 0;
   let restIndex = 0;
