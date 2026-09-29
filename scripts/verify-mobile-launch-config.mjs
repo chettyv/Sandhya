@@ -14,6 +14,8 @@ export const PUBLIC_MOBILE_CONFIG = [
   "EXPO_PUBLIC_TERMS_URL",
 ];
 
+const SUPABASE_ANON_ROLE = "anon";
+
 const SUPABASE_URL = "EXPO_PUBLIC_SUPABASE_URL";
 const SUPABASE_ANON_KEY = "EXPO_PUBLIC_SUPABASE_ANON_KEY";
 const EAS_PROJECT_ID = "EXPO_PUBLIC_EAS_PROJECT_ID";
@@ -95,9 +97,15 @@ function isHttpsUrl(value) {
 }
 
 function isSupabaseAnonKey(value) {
-  return /^(?:sb_publishable_[A-Za-z0-9_-]+|[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+)$/.test(
-    value,
-  );
+  if (/^sb_publishable_[A-Za-z0-9_-]+$/.test(value)) return true;
+  if (!/^[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/.test(value)) return false;
+
+  try {
+    const payload = JSON.parse(Buffer.from(value.split(".")[1], "base64url").toString("utf8"));
+    return payload && payload.role === SUPABASE_ANON_ROLE;
+  } catch {
+    return false;
+  }
 }
 
 function isRevenueCatKey(value, prefix) {
@@ -110,6 +118,21 @@ function isUuid(value) {
 
 function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+}
+
+export function resolveEasProjectId(configuredProjectId, environmentProjectId) {
+  const configured = normalizeProjectId(configuredProjectId);
+  const environment = normalizeProjectId(environmentProjectId);
+  if (!environment) return configured;
+  if (configured && environment !== configured) {
+    throw new Error("EXPO_PUBLIC_EAS_PROJECT_ID does not match the configured EAS project ID.");
+  }
+  return environment;
+}
+
+function normalizeProjectId(value) {
+  const normalized = typeof value === "string" ? value.trim() : "";
+  return isMissingOrPlaceholder(normalized) ? undefined : normalized;
 }
 
 function selectedProfile(args, env) {

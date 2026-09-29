@@ -3,7 +3,10 @@ import { spawnSync } from "node:child_process";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 
-import { verifyMobileLaunchConfig } from "./verify-mobile-launch-config.mjs";
+import {
+  resolveEasProjectId,
+  verifyMobileLaunchConfig,
+} from "./verify-mobile-launch-config.mjs";
 
 const scriptPath = fileURLToPath(new URL("./verify-mobile-launch-config.mjs", import.meta.url));
 const publicConfigNames = [
@@ -20,8 +23,8 @@ const publicConfigNames = [
 const validProductionEnv = {
   EXPO_PUBLIC_SUPABASE_URL: "https://sandhya-prod.supabase.co",
   EXPO_PUBLIC_SUPABASE_ANON_KEY:
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSJ9.signature",
-  EXPO_PUBLIC_EAS_PROJECT_ID: "123e4567-e89b-42d3-a456-426614174000",
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJhbm9uIn0.signature",
+  EXPO_PUBLIC_EAS_PROJECT_ID: "9f09c3de-e627-4973-bc30-3b3ac2653b5c",
   EXPO_PUBLIC_REVENUECAT_API_KEY_IOS: "appl_sandhya_public_ios",
   EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID: "goog_sandhya_public_android",
   EXPO_PUBLIC_SUPPORT_EMAIL: "support@sandhya.app",
@@ -90,6 +93,51 @@ test("production accepts complete public configuration", () => {
     missing: [],
     invalid: [],
   });
+});
+
+test("production rejects a Supabase service-role JWT in the public anon-key slot", () => {
+  const result = verifyMobileLaunchConfig(
+    {
+      ...validProductionEnv,
+      EXPO_PUBLIC_SUPABASE_ANON_KEY:
+        "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic2VydmljZV9yb2xlIn0.signature",
+    },
+    "production",
+  );
+
+  assert.deepEqual(result.invalid, ["EXPO_PUBLIC_SUPABASE_ANON_KEY"]);
+});
+
+test("production rejects a Supabase admin JWT in the public anon-key slot", () => {
+  const result = verifyMobileLaunchConfig(
+    {
+      ...validProductionEnv,
+      EXPO_PUBLIC_SUPABASE_ANON_KEY:
+        "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoic3VwYWJhc2VfYWRtaW4ifQ.signature",
+    },
+    "production",
+  );
+
+  assert.deepEqual(result.invalid, ["EXPO_PUBLIC_SUPABASE_ANON_KEY"]);
+});
+
+test("EAS project resolution preserves the configured project when env is omitted or a placeholder", () => {
+  const configured = "9f09c3de-e627-4973-bc30-3b3ac2653b5c";
+
+  assert.equal(resolveEasProjectId(configured, undefined), configured);
+  assert.equal(resolveEasProjectId(configured, "your-eas-project-id"), configured);
+  assert.equal(resolveEasProjectId(configured, configured), configured);
+});
+
+test("EAS project resolution rejects a conflicting environment project ID", () => {
+  assert.throws(
+    () =>
+      resolveEasProjectId(
+        "9f09c3de-e627-4973-bc30-3b3ac2653b5c",
+        "123e4567-e89b-42d3-a456-426614174000",
+      ),
+    /does not match the configured EAS project ID/,
+  );
 });
 
 test("CLI exits nonzero for an invalid selected production profile without printing values", () => {

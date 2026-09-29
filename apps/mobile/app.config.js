@@ -1,11 +1,15 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const { verifyMobileLaunchConfig } = require("../../scripts/verify-mobile-launch-config.mjs");
+const {
+  resolveEasProjectId,
+  verifyMobileLaunchConfig,
+} = require("../../scripts/verify-mobile-launch-config.mjs");
 
 const baseConfig = require("./app.json");
 const plugins = [...(baseConfig.expo.plugins ?? [])];
-const projectId = process.env.EXPO_PUBLIC_EAS_PROJECT_ID?.trim() || undefined;
+const configuredProjectId = baseConfig.expo.extra?.eas?.projectId;
+const projectId = resolveEasProjectId(configuredProjectId, process.env.EXPO_PUBLIC_EAS_PROJECT_ID);
 const buildProfile = process.env.EAS_BUILD_PROFILE ?? "development";
 const isProductionBuild = process.env.EAS_BUILD_PROFILE === "production";
 
