@@ -4,7 +4,7 @@ import {
   GUEST_JOURNAL_SCOPE,
   readLocalJournal,
   removeLocalJournalEntry,
-  writeLocalJournal,
+  updateLocalJournal,
   type LocalJournalEntry,
 } from "./localJournalStorage";
 import { configureDailyReminder } from "./notifications";
@@ -196,11 +196,10 @@ export async function saveJournalEntry(
     }
   }
 
-  const previous = await readLocalJournal(journalScope);
-  await writeLocalJournal(
-    [localEntry, ...previous.filter((item) => item.id !== localEntry.id)],
-    journalScope,
-  );
+  await updateLocalJournal(journalScope, (previous) => [
+    localEntry,
+    ...previous.filter((item) => item.id !== localEntry.id),
+  ]);
   return { id: localEntry.id, date: localEntry.date, synced: false };
 }
 
@@ -264,16 +263,10 @@ async function syncLocalJournalEntriesInternal(): Promise<void> {
       [...new Set(pending.map((item) => item.date))].map((date) => recordActivityDay(date)),
     );
   }
-  const remainingGuest = (await readLocalJournal(GUEST_JOURNAL_SCOPE)).filter(
-    (item) => !handledIds.has(item.id),
+  await updateLocalJournal(GUEST_JOURNAL_SCOPE, (entries) =>
+    entries.filter((item) => !handledIds.has(item.id)),
   );
-  const remainingAccount = (await readLocalJournal(userId)).filter(
-    (item) => !handledIds.has(item.id),
-  );
-  if (remainingGuest.length) await writeLocalJournal(remainingGuest, GUEST_JOURNAL_SCOPE);
-  else await clearLocalJournal(GUEST_JOURNAL_SCOPE);
-  if (remainingAccount.length) await writeLocalJournal(remainingAccount, userId);
-  else await clearLocalJournal(userId);
+  await updateLocalJournal(userId, (entries) => entries.filter((item) => !handledIds.has(item.id)));
 }
 
 export async function deleteJournalEntry(entryId: string): Promise<void> {

@@ -45,7 +45,7 @@ export default function RootLayout() {
   const setDisplayName = useAppStore((state) => state.setDisplayName);
   const setTraditionPreference = useAppStore((state) => state.setTraditionPreference);
   const syncDailyState = useAppStore((state) => state.syncDailyState);
-  const setSavedItems = useAppStore((state) => state.setSavedItems);
+  const replaceSavedItems = useAppStore((state) => state.replaceSavedItems);
   const setCompletedDateKeys = useAppStore((state) => state.setCompletedDateKeys);
   const setCompletedPracticeIds = useAppStore((state) => state.setCompletedPracticeIds);
   const clearAccountScopedState = useAppStore((state) => state.clearAccountScopedState);
@@ -136,7 +136,7 @@ export default function RootLayout() {
         }),
       ).catch(() => undefined);
       const items = await loadSavedItems();
-      if (mounted) setSavedItems(items);
+      if (mounted) replaceSavedItems(items);
     };
     void loadAccountState(loadProfile);
     void client.auth
@@ -189,7 +189,7 @@ export default function RootLayout() {
     setFocusTags,
     setHouseholdPractices,
     setReminder,
-    setSavedItems,
+    replaceSavedItems,
     setTraditionPreference,
     syncDailyState,
   ]);

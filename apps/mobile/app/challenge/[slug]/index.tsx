@@ -1,11 +1,12 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { router, useLocalSearchParams } from "expo-router";
-import { useEffect, useState } from "react";
-import { ActivityIndicator, Platform, Pressable, Text, View } from "react-native";
+import { router, useLocalSearchParams, useNavigation } from "expo-router";
+import { useCallback, useEffect, useState } from "react";
+import { ActivityIndicator, AppState, Platform, Pressable, Text, View } from "react-native";
 
 import { Card, EmptyState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { localDateKey } from "@/lib/activity";
 import { useAuthState } from "@/lib/authState";
+import { useChallengePolling } from "@/lib/challengePolling";
 import { type ChallengeSessionMeta, useChallengeOverview } from "@/lib/challenges";
 import { purchaseChallenge } from "@/lib/subscriptions";
 import { colors } from "@/theme/tokens";
@@ -17,6 +18,9 @@ export default function ChallengeOverviewScreen() {
   const { slug } = useLocalSearchParams<{ slug?: string }>();
   const { data, isPending, isError, refetch } = useChallengeOverview(slug);
   const authState = useAuthState();
+  const refreshChallenge = useCallback(() => {
+    void refetch();
+  }, [refetch]);
 
   if (isPending) {
     return (
@@ -126,7 +130,7 @@ export default function ChallengeOverviewScreen() {
             </Text>
           ) : null}
           {authState === "signed_in" ? (
-            <JoinButton slug={challenge.slug} onPurchased={() => void refetch()} />
+            <JoinButton slug={challenge.slug} onPurchased={refreshChallenge} />
           ) : (
             <PrimaryButton
               label="Sign in to join"
@@ -146,18 +150,35 @@ export default function ChallengeOverviewScreen() {
 
 function JoinButton({ slug, onPurchased }: { slug: string; onPurchased: () => void }) {
   const [state, setState] = useState<"idle" | "purchasing" | "confirming" | "error">("idle");
-  const [polls, setPolls] = useState(0);
+  const [appState, setAppState] = useState(AppState.currentState);
+  const navigation = useNavigation();
+  const [isFocused, setIsFocused] = useState(true);
+
+  useEffect(() => {
+    setIsFocused(navigation.isFocused());
+    const focus = navigation.addListener("focus", () => setIsFocused(true));
+    const blur = navigation.addListener("blur", () => setIsFocused(false));
+    return () => {
+      focus();
+      blur();
+    };
+  }, [navigation]);
+
+  useEffect(() => {
+    const subscription = AppState.addEventListener("change", setAppState);
+    return () => subscription.remove();
+  }, []);
+
+  const polling = useChallengePolling({
+    enabled: state === "confirming",
+    isFocused,
+    appState,
+    onPoll: onPurchased,
+  });
 
   // After a successful store purchase, participation is granted server-side by
-  // the RevenueCat webhook — poll the overview until it lands.
-  useEffect(() => {
-    if (state !== "confirming") return;
-    const timer = setInterval(() => {
-      setPolls((count) => count + 1);
-      onPurchased();
-    }, 3000);
-    return () => clearInterval(timer);
-  }, [state, onPurchased]);
+  // the RevenueCat webhook — poll the overview until it lands. The polling
+  // hook pauses when this route is hidden or the app is backgrounded.
 
   if (Platform.OS === "web") {
     return (
@@ -170,11 +191,24 @@ function JoinButton({ slug, onPurchased }: { slug: string; onPurchased: () => vo
   }
 
   if (state === "confirming") {
+    if (polling.timedOut) {
+      return (
+        <View className="py-3">
+          <Text accessibilityRole="alert" className="text-center text-sm leading-5 text-roseText">
+            We couldn't confirm the purchase yet. Your store purchase is safe; try again when you
+            are online.
+          </Text>
+          <View className="mt-3">
+            <PrimaryButton label="Try again" icon="refresh" onPress={() => polling.retry()} />
+          </View>
+        </View>
+      );
+    }
     return (
       <View className="items-center py-3">
         <ActivityIndicator color={colors.saffron} />
-        <Text className="mt-2 text-center text-sm text-muted">
-          {polls < 20
+        <Text accessibilityLiveRegion="polite" className="mt-2 text-center text-sm text-muted">
+          {polling.attempts < 10
             ? "Confirming your purchase — this usually takes a few seconds."
             : "Still confirming — your purchase is safe. You can leave this screen and come back."}
         </Text>

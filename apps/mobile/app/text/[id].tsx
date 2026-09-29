@@ -3,7 +3,15 @@ import { useQuery } from "@tanstack/react-query";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 
-import { Card, EmptyState, Page, Pill, PrimaryButton, SecondaryButton } from "@/components/ui";
+import {
+  Card,
+  EmptyState,
+  LoadingState,
+  Page,
+  Pill,
+  PrimaryButton,
+  SecondaryButton,
+} from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { supabase } from "@/lib/supabase";
@@ -24,7 +32,7 @@ const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{
 export default function SacredTextDetailScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { data: content } = useCuratedContent();
+  const { data: content, isFetching } = useCuratedContent();
   const text = content.texts.find((item) => item.id === id);
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
@@ -44,6 +52,12 @@ export default function SacredTextDetailScreen() {
     },
   });
 
+  if (!text && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading source…" />
+      </Page>
+    );
   if (!text)
     return (
       <Page>

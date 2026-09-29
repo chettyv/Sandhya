@@ -2,7 +2,15 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
-import { Card, EmptyState, Page, Pill, PrimaryButton, SecondaryButton } from "@/components/ui";
+import {
+  Card,
+  EmptyState,
+  LoadingState,
+  Page,
+  Pill,
+  PrimaryButton,
+  SecondaryButton,
+} from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { useAppStore } from "@/store/useAppStore";
@@ -11,12 +19,18 @@ import { colors } from "@/theme/tokens";
 export default function ConceptDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { data: content } = useCuratedContent();
+  const { data: content, isFetching } = useCuratedContent();
   const concepts = content.concepts;
   const requestedConcept = concepts.find((item) => item.id === id);
   const concept = requestedConcept ?? concepts[0];
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
+  if (!requestedConcept && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading concept…" />
+      </Page>
+    );
   if (!requestedConcept || !concept)
     return (
       <Page>

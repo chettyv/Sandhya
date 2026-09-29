@@ -2,7 +2,15 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
-import { Card, EmptyState, Page, Pill, PrimaryButton, SecondaryButton } from "@/components/ui";
+import {
+  Card,
+  EmptyState,
+  LoadingState,
+  Page,
+  Pill,
+  PrimaryButton,
+  SecondaryButton,
+} from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { useAppStore } from "@/store/useAppStore";
@@ -11,11 +19,17 @@ import { colors } from "@/theme/tokens";
 export default function DeityDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { data: content } = useCuratedContent();
+  const { data: content, isFetching } = useCuratedContent();
   const requestedDeity = content.deities.find((item) => item.id === id);
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
 
+  if (!requestedDeity && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading deity…" />
+      </Page>
+    );
   if (!requestedDeity)
     return (
       <Page>

@@ -11,11 +11,22 @@ const LEGACY_KEY = "sandhya-local-journal";
 const INDEX_KEY = "sandhya-local-journal-index";
 const CHUNK_SIZE = 512;
 const MAX_ENTRIES = 50;
+const MAX_CHUNKS = 512;
+const MAX_SERIALIZED_LENGTH = CHUNK_SIZE * MAX_CHUNKS;
 export const GUEST_JOURNAL_SCOPE = "guest";
 
 type JournalIndex = { prefix: string; count: number };
+type JournalUpdater = (
+  entries: LocalJournalEntry[],
+) => LocalJournalEntry[] | Promise<LocalJournalEntry[]>;
+
+const scopeLocks = new Map<string, Promise<void>>();
 
 export async function readLocalJournal(scope = GUEST_JOURNAL_SCOPE): Promise<LocalJournalEntry[]> {
+  return withScopeLock(scope, () => readLocalJournalUnsafe(scope));
+}
+
+async function readLocalJournalUnsafe(scope: string): Promise<LocalJournalEntry[]> {
   const index = await readIndex(scope);
   if (index) {
     const chunks = await Promise.all(
@@ -32,10 +43,27 @@ export async function readLocalJournal(scope = GUEST_JOURNAL_SCOPE): Promise<Loc
   return parseEntries(legacy) ?? [];
 }
 
+export async function updateLocalJournal(
+  scope: string,
+  updater: JournalUpdater,
+): Promise<LocalJournalEntry[]> {
+  return withScopeLock(scope, async () => {
+    const current = await readLocalJournalUnsafe(scope);
+    const next = (await updater(current)).slice(0, MAX_ENTRIES);
+    if (next.length) await writeLocalJournalUnsafe(next, scope);
+    else await clearLocalJournalUnsafe(scope);
+    return next;
+  });
+}
+
 export async function writeLocalJournal(
   entries: LocalJournalEntry[],
   scope = GUEST_JOURNAL_SCOPE,
 ): Promise<void> {
+  await withScopeLock(scope, () => writeLocalJournalUnsafe(entries, scope));
+}
+
+async function writeLocalJournalUnsafe(entries: LocalJournalEntry[], scope: string): Promise<void> {
   const bounded = entries.slice(0, MAX_ENTRIES);
   const serialized = JSON.stringify(bounded);
   const prefix = `${journalPrefix(scope)}-${uniqueSuffix()}`;
@@ -51,6 +79,10 @@ export async function writeLocalJournal(
 }
 
 export async function clearLocalJournal(scope = GUEST_JOURNAL_SCOPE): Promise<void> {
+  await withScopeLock(scope, () => clearLocalJournalUnsafe(scope));
+}
+
+async function clearLocalJournalUnsafe(scope: string): Promise<void> {
   const index = await readIndex(scope);
   await removeChunks(index);
   await SecureStore.deleteItemAsync(indexKey(scope));
@@ -62,12 +94,28 @@ export async function removeLocalJournalEntry(
   scopes: string[] = [GUEST_JOURNAL_SCOPE],
 ): Promise<void> {
   for (const scope of [...new Set(scopes)]) {
-    const entries = await readLocalJournal(scope);
-    const remaining = entries.filter((item) => item.id !== entryId);
-    if (remaining.length === entries.length) continue;
-    if (remaining.length) await writeLocalJournal(remaining, scope);
-    else await clearLocalJournal(scope);
+    await withScopeLock(scope, async () => {
+      const entries = await readLocalJournalUnsafe(scope);
+      const remaining = entries.filter((item) => item.id !== entryId);
+      if (remaining.length === entries.length) return;
+      if (remaining.length) await writeLocalJournalUnsafe(remaining, scope);
+      else await clearLocalJournalUnsafe(scope);
+    });
   }
+}
+
+function withScopeLock<T>(scope: string, operation: () => Promise<T>): Promise<T> {
+  const key = indexKey(scope);
+  const previous = scopeLocks.get(key) ?? Promise.resolve();
+  const current = previous.then(operation, operation);
+  const settled = current.then(
+    () => undefined,
+    () => undefined,
+  );
+  scopeLocks.set(key, settled);
+  return current.finally(() => {
+    if (scopeLocks.get(key) === settled) scopeLocks.delete(key);
+  });
 }
 
 async function readIndex(scope: string): Promise<JournalIndex | null> {
@@ -82,7 +130,7 @@ async function readIndex(scope: string): Promise<JournalIndex | null> {
       typeof count === "number" &&
       Number.isInteger(count) &&
       count >= 0 &&
-      count <= 2_000
+      count <= MAX_CHUNKS
     ) {
       return { prefix: parsed.prefix, count };
     }
@@ -116,7 +164,7 @@ async function removeChunks(index: JournalIndex | null): Promise<void> {
 }
 
 function parseEntries(value: string | null): LocalJournalEntry[] | null {
-  if (!value) return null;
+  if (!value || value.length > MAX_SERIALIZED_LENGTH) return null;
   try {
     const parsed = JSON.parse(value) as unknown;
     if (!Array.isArray(parsed)) return null;
@@ -131,9 +179,13 @@ function isLocalJournalEntry(value: unknown): value is LocalJournalEntry {
   const entry = value as Partial<LocalJournalEntry>;
   return (
     typeof entry.id === "string" &&
+    entry.id.length <= 200 &&
     typeof entry.text === "string" &&
+    entry.text.length <= 4_000 &&
     typeof entry.mood === "string" &&
-    typeof entry.date === "string"
+    entry.mood.length <= 80 &&
+    typeof entry.date === "string" &&
+    entry.date.length <= 40
   );
 }
 
