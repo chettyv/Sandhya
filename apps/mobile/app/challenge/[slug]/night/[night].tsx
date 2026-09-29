@@ -247,7 +247,7 @@ export default function ChallengeNightScreen() {
             }}
           />
         )}
-        {completion.data === false ? (
+        {completion.data === false || completion.isError ? (
           <Text className="mt-3 text-center text-sm text-roseText">
             We couldn't save that just now. Check your connection and try again.
           </Text>

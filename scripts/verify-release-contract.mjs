@@ -53,9 +53,17 @@ for (const functionName of requiredFunctions) {
   if (!exists(path)) fail(`Missing deployable Edge Function: ${path}`);
 }
 
-const jwtDisabled = [
-  ...configToml.matchAll(/^\[functions\.([^\]]+)\][\s\S]*?^verify_jwt\s*=\s*false\s*$/gm),
-].map((match) => match[1]);
+const functionSections = [...configToml.matchAll(/^\[functions\.([^\]]+)\]\r?$/gm)];
+const jwtDisabled = functionSections
+  .map((section, index) => ({
+    name: section[1],
+    body: configToml.slice(
+      (section.index ?? 0) + section[0].length,
+      functionSections[index + 1]?.index ?? configToml.length,
+    ),
+  }))
+  .filter(({ body }) => /^\s*verify_jwt\s*=\s*false\s*$/m.test(body))
+  .map(({ name }) => name);
 const expectedJwtDisabled = new Set(["revenuecat-webhook", "send-daily-reflections"]);
 if (
   jwtDisabled.length !== expectedJwtDisabled.size ||

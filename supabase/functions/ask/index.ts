@@ -1,5 +1,6 @@
 import { reportBackendError } from "../_shared/observability.ts";
 import { classifyQuestion, isCacheableQuestion } from "../_shared/classifier.ts";
+import { readBodyWithLimit, RequestBodyTooLargeError } from "../_shared/read-body.ts";
 import {
   filterRetrievedPassagesByPolicy,
   rankRetrievedPassagesByTraditionPreference,
@@ -24,7 +25,7 @@ const DEFAULT_REQUEST_TIMEOUT_MS = 30_000;
 const DEFAULT_MATCH_COUNT = 8;
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_KEYWORD_WEIGHT = 0.15;
-const MAX_REQUEST_BODY_CHARS = 64_000;
+const MAX_REQUEST_BODY_BYTES = 64_000;
 const MAX_ANSWER_CHARS = 12_000;
 const MAX_SUMMARY_CHARS = 2_000;
 const MAX_SOURCE_FIELD_CHARS = 1_000;
@@ -125,11 +126,21 @@ Deno.serve(async (request) => {
     return jsonResponse({ error: "Method not allowed", code: "method_not_allowed" }, 405);
   }
 
-  if (await requestWantsStream(request)) {
-    return streamAskResponse(request);
+  let requestBody: Uint8Array;
+  try {
+    requestBody = await readBodyWithLimit(request, MAX_REQUEST_BODY_BYTES);
+  } catch (error) {
+    if (error instanceof RequestBodyTooLargeError) {
+      return jsonResponse({ error: "Request body is too large.", code: "request_too_large" }, 413);
+    }
+    throw error;
   }
 
-  return handleAskRequest(request);
+  if (requestWantsStream(request, requestBody)) {
+    return streamAskResponse(request, requestBody);
+  }
+
+  return handleAskRequest(request, requestBody);
 });
 
 type AskStreamEvent =
@@ -142,17 +153,17 @@ type AskStreamEvent =
 
 type AskStreamEmitter = (event: AskStreamEvent) => void;
 
-async function requestWantsStream(request: Request): Promise<boolean> {
+function requestWantsStream(request: Request, requestBody: Uint8Array): boolean {
   if (request.headers.get("accept")?.includes("text/event-stream")) return true;
   try {
-    const body = (await request.clone().json()) as { stream?: unknown };
+    const body = JSON.parse(new TextDecoder().decode(requestBody)) as { stream?: unknown };
     return body?.stream === true;
   } catch {
     return false;
   }
 }
 
-function streamAskResponse(request: Request): Response {
+function streamAskResponse(request: Request, requestBody: Uint8Array): Response {
   const encoder = new TextEncoder();
   let closed = false;
   // A mobile screen can unmount while the provider is still generating. Keep
@@ -182,7 +193,7 @@ function streamAskResponse(request: Request): Response {
       };
 
       emit({ type: "started", stage: "request" });
-      void handleAskRequest(request, emit, cancellation.signal)
+      void handleAskRequest(request, requestBody, emit, cancellation.signal)
         .then(async (response) => {
           if (closed) {
             cleanupRequestListener();
@@ -252,6 +263,7 @@ function streamAskResponse(request: Request): Response {
 
 async function handleAskRequest(
   request: Request,
+  requestBody: Uint8Array,
   emit?: AskStreamEmitter,
   requestSignal: AbortSignal | undefined = request.signal ?? undefined,
 ): Promise<Response> {
@@ -273,7 +285,7 @@ async function handleAskRequest(
 
     const user = await getUser(env, authorization);
     emit?.({ type: "status", stage: "authenticated" });
-    const body = await readAskRequest(request);
+    const body = await readAskRequest(requestBody);
     const question = body.question?.trim();
     if (!question) {
       return jsonResponse({ error: "question is required.", code: "bad_request" }, 400);
@@ -697,17 +709,8 @@ function readEnv(requestSignal?: AbortSignal) {
   return { ...config, requestSignal };
 }
 
-async function readAskRequest(request: Request): Promise<AskRequest> {
-  const contentLength = Number(request.headers.get("content-length"));
-  if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BODY_CHARS) {
-    throw new HttpError("Request body is too large.", "request_too_large", 413);
-  }
-
-  const rawBody = await request.text();
-  if (rawBody.length > MAX_REQUEST_BODY_CHARS) {
-    throw new HttpError("Request body is too large.", "request_too_large", 413);
-  }
-
+async function readAskRequest(requestBody: Uint8Array): Promise<AskRequest> {
+  const rawBody = new TextDecoder().decode(requestBody);
   let body: unknown;
   try {
     body = JSON.parse(rawBody) as unknown;

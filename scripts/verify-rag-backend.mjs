@@ -626,7 +626,8 @@ function checkBackendInvariants() {
   assertContains(pushFunction, "60,");
   assertContains(pushFunction, 'code: "rate_limited"');
   assertContains(billingFunction, "x-revenuecat-webhook-signature");
-  assertContains(billingFunction, "MAX_REQUEST_BODY_CHARS");
+  assertContains(billingFunction, "MAX_REQUEST_BODY_BYTES");
+  assertContains(billingFunction, "readBodyWithLimit");
   assertContains(billingFunction, "WebhookAuthenticationError");
   assertContains(billingFunction, 'code: "unauthorized"');
   assertContains(billingFunction, "crypto.subtle.verify");
@@ -1195,15 +1196,16 @@ function checkBackendInvariants() {
 
   assertContains(askFunction, "runSafetyGate(question)");
   assertContains(askFunction, "classifyQuestion(question)");
-  assertContains(askFunction, "const body = await readAskRequest(request)");
+  assertContains(askFunction, "const body = await readAskRequest(requestBody)");
   assertContains(askFunction, "async function readAskRequest");
   assertContains(askFunction, "Request body must be valid JSON.");
   assertContains(askFunction, "Request body must be a JSON object.");
-  assertContains(askFunction, "MAX_REQUEST_BODY_CHARS");
+  assertContains(askFunction, "MAX_REQUEST_BODY_BYTES");
+  assertContains(askFunction, "readBodyWithLimit");
   assertContains(askFunction, '"request_too_large"');
   assertContains(askFunction, "MAX_ANSWER_CHARS");
-  assertContains(askFunction, "streamAskResponse(request)");
-  assertContains(askFunction, "handleAskRequest(request, emit, cancellation.signal)");
+  assertContains(askFunction, "streamAskResponse(request, requestBody)");
+  assertContains(askFunction, "handleAskRequest(request, requestBody, emit, cancellation.signal)");
   assertContains(askFunction, "cancellation.abort()");
   assertContains(askFunction, "requestSignal: env.requestSignal");
   assertContains(askFunction, "signal: input.requestSignal");
