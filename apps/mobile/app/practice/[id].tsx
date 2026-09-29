@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 
 import { PremiumGate } from "@/components/PremiumGate";
-import { Card, EmptyState, Page, Pill, PrimaryButton } from "@/components/ui";
+import { Card, EmptyState, LoadingState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { recordPracticeCompletion, syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { paymentsEnabled } from "@/lib/payments";
@@ -15,7 +15,7 @@ import { colors } from "@/theme/tokens";
 
 export default function PracticeDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
-  const { data: content } = useCuratedContent();
+  const { data: content, isFetching } = useCuratedContent();
   const practices = content.practices;
   const requestedPractice = practices.find((item) => item.id === id);
   const practice = requestedPractice ?? practices[0];
@@ -32,6 +32,12 @@ export default function PracticeDetailScreen() {
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
   const completed = practice ? completedIds.includes(practice.id) : false;
+  if (!requestedPractice && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading practice…" />
+      </Page>
+    );
   if (!requestedPractice || !practice)
     return (
       <Page>
@@ -131,6 +137,8 @@ export default function PracticeDetailScreen() {
         <View className="mt-8 flex-row gap-3">
           {activeStep > 0 ? (
             <Pressable
+              accessibilityLabel="Previous step"
+              accessibilityHint="Go to the previous guided step"
               accessibilityRole="button"
               onPress={() => setActiveStep((value) => value - 1)}
               className="h-11 w-11 items-center justify-center rounded-lg border border-line"

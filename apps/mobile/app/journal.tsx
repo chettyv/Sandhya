@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useEffect, useState } from "react";
 import {
   Alert,
+  FlatList,
   KeyboardAvoidingView,
   Platform,
   Pressable,
@@ -10,7 +11,7 @@ import {
   View,
 } from "react-native";
 
-import { Card, EmptyState, Page, PrimaryButton } from "@/components/ui";
+import { Card, EmptyState, LoadingState, Page, PrimaryButton } from "@/components/ui";
 import { deleteJournalEntry, saveJournalEntry, syncLocalJournalEntries } from "@/lib/account";
 import { readLocalJournal, GUEST_JOURNAL_SCOPE } from "@/lib/localJournalStorage";
 import { supabase } from "@/lib/supabase";
@@ -25,48 +26,67 @@ export default function JournalScreen() {
   const [mood, setMood] = useState("Thoughtful");
   const [entries, setEntries] = useState<Entry[]>([]);
   const [composing, setComposing] = useState(false);
+  const [loadState, setLoadState] = useState<"loading" | "ready" | "stale" | "error">("loading");
+  const [reloadKey, setReloadKey] = useState(0);
 
   useEffect(() => {
     let active = true;
     void (async () => {
-      const session = supabase ? (await supabase.auth.getSession()).data.session : null;
-      const localEntries = session
-        ? [
-            ...(await readLocalJournal(GUEST_JOURNAL_SCOPE)),
-            ...(await readLocalJournal(session.user.id)),
-          ]
-        : await readLocalJournal(GUEST_JOURNAL_SCOPE);
-      if (active && localEntries.length) setEntries(localEntries);
-      if (!supabase) return;
-      if (!session) return;
-      await syncLocalJournalEntries().catch(() => undefined);
-      const remainingLocalEntries = [
-        ...(await readLocalJournal(GUEST_JOURNAL_SCOPE)),
-        ...(await readLocalJournal(session.user.id)),
-      ];
-      const { data, error } = await supabase
-        .from("journal_entries")
-        .select("id, entry, mood, date")
-        .order("date", { ascending: false })
-        .order("created_at", { ascending: false });
-      if (!active || error) return;
-      const rows = (data ?? []) as unknown as JournalRow[];
-      const remoteEntries = rows.map((item) => ({
-        id: item.id,
-        text: item.entry,
-        mood: item.mood ?? "Thoughtful",
-        date: item.date,
-      }));
-      const remoteKeys = new Set(remoteEntries.map((item) => `${item.date}:${item.text}`));
-      setEntries([
-        ...remoteEntries,
-        ...remainingLocalEntries.filter((item) => !remoteKeys.has(`${item.date}:${item.text}`)),
-      ]);
+      try {
+        const session = supabase ? (await supabase.auth.getSession()).data.session : null;
+        const localEntries = session
+          ? [
+              ...(await readLocalJournal(GUEST_JOURNAL_SCOPE)),
+              ...(await readLocalJournal(session.user.id)),
+            ]
+          : await readLocalJournal(GUEST_JOURNAL_SCOPE);
+        if (active) setEntries(localEntries);
+        if (!supabase || !session) {
+          if (active) setLoadState("ready");
+          return;
+        }
+        await syncLocalJournalEntries().catch(() => undefined);
+        const remainingLocalEntries = [
+          ...(await readLocalJournal(GUEST_JOURNAL_SCOPE)),
+          ...(await readLocalJournal(session.user.id)),
+        ];
+        const { data, error } = await supabase
+          .from("journal_entries")
+          .select("id, entry, mood, date")
+          .order("date", { ascending: false })
+          .order("created_at", { ascending: false });
+        if (error) {
+          if (active) setLoadState(localEntries.length ? "stale" : "error");
+          return;
+        }
+        const rows = (data ?? []) as unknown as JournalRow[];
+        const remoteEntries = rows.map((item) => ({
+          id: item.id,
+          text: item.entry,
+          mood: item.mood ?? "Thoughtful",
+          date: item.date,
+        }));
+        const remoteKeys = new Set(remoteEntries.map((item) => `${item.date}:${item.text}`));
+        if (active) {
+          setEntries([
+            ...remoteEntries,
+            ...remainingLocalEntries.filter((item) => !remoteKeys.has(`${item.date}:${item.text}`)),
+          ]);
+          setLoadState("ready");
+        }
+      } catch {
+        if (active) setLoadState("error");
+      }
     })();
     return () => {
       active = false;
     };
-  }, []);
+  }, [reloadKey]);
+
+  const retryLoad = () => {
+    setLoadState("loading");
+    setReloadKey((value) => value + 1);
+  };
 
   const addEntry = () => {
     if (!draft.trim()) return;
@@ -101,7 +121,7 @@ export default function JournalScreen() {
       className="flex-1"
       behavior={Platform.OS === "ios" ? "padding" : undefined}
     >
-      <Page>
+      <Page scroll={false}>
         {composing ? (
           <>
             <Text className="mb-2 text-xl font-semibold text-ink">How is your inner weather?</Text>
@@ -155,21 +175,46 @@ export default function JournalScreen() {
           </>
         ) : (
           <>
-            <Card className="mb-5 bg-surface2">
-              <View className="flex-row items-start gap-3">
-                <Ionicons name="lock-closed-outline" size={20} color={colors.plum} />
-                <View className="flex-1">
-                  <Text className="font-semibold text-ink">Your private space</Text>
-                  <Text className="mt-1 text-sm leading-5 text-muted">
-                    Guest entries remain on this device. Sign in to enable secure syncing across
-                    devices.
-                  </Text>
-                </View>
-              </View>
-            </Card>
-            {entries.length ? (
-              entries.map((entry) => (
-                <Card key={entry.id} className="mb-3">
+            <FlatList
+              data={entries}
+              keyExtractor={(entry) => entry.id}
+              showsVerticalScrollIndicator={false}
+              keyboardShouldPersistTaps="handled"
+              contentContainerStyle={{ paddingBottom: 8 }}
+              ListHeaderComponent={
+                <>
+                  <Card className="mb-5 bg-surface2">
+                    <View className="flex-row items-start gap-3">
+                      <Ionicons name="lock-closed-outline" size={20} color={colors.plum} />
+                      <View className="flex-1">
+                        <Text className="font-semibold text-ink">Your private space</Text>
+                        <Text className="mt-1 text-sm leading-5 text-muted">
+                          Guest entries remain on this device. Sign in to enable secure syncing
+                          across devices.
+                        </Text>
+                      </View>
+                    </View>
+                  </Card>
+                  {loadState === "stale" ? (
+                    <Card className="mb-4 bg-surface2">
+                      <Text className="font-semibold text-ink">Showing the latest saved copy</Text>
+                      <Text className="mt-1 text-sm leading-5 text-muted">
+                        Your journal is available offline. We couldn't refresh the account copy.
+                      </Text>
+                      <Pressable
+                        accessibilityRole="button"
+                        accessibilityLabel="Retry loading journal"
+                        onPress={retryLoad}
+                        className="mt-3 self-start rounded-full bg-surface px-4 py-2.5"
+                      >
+                        <Text className="text-sm font-semibold text-plum">Try again</Text>
+                      </Pressable>
+                    </Card>
+                  ) : null}
+                </>
+              }
+              renderItem={({ item: entry }) => (
+                <Card className="mb-3">
                   <View className="mb-3 flex-row items-center justify-between">
                     <Text className="text-xs font-semibold uppercase tracking-wider text-saffronText">
                       {entry.mood}
@@ -188,21 +233,36 @@ export default function JournalScreen() {
                   </View>
                   <Text className="text-[15px] leading-6 text-ink">{entry.text}</Text>
                 </Card>
-              ))
-            ) : (
-              <EmptyState
-                icon="journal-outline"
-                title="A quiet page is waiting"
-                body="Capture a reflection, question, gratitude, or intention. There is no streak to maintain."
-              />
-            )}
-            <View className="mt-5">
-              <PrimaryButton
-                label="Write a new entry"
-                icon="create-outline"
-                onPress={() => setComposing(true)}
-              />
-            </View>
+              )}
+              ListEmptyComponent={
+                loadState === "loading" ? (
+                  <LoadingState label="Loading your journal…" />
+                ) : loadState === "error" ? (
+                  <EmptyState
+                    icon="cloud-offline-outline"
+                    title="Your journal is unavailable"
+                    body="We couldn't load your private entries. Check your connection and try again."
+                    action="Try again"
+                    onAction={retryLoad}
+                  />
+                ) : (
+                  <EmptyState
+                    icon="journal-outline"
+                    title="A quiet page is waiting"
+                    body="Capture a reflection, question, gratitude, or intention. There is no streak to maintain."
+                  />
+                )
+              }
+              ListFooterComponent={
+                <View className="mt-5">
+                  <PrimaryButton
+                    label="Write a new entry"
+                    icon="create-outline"
+                    onPress={() => setComposing(true)}
+                  />
+                </View>
+              }
+            />
           </>
         )}
       </Page>

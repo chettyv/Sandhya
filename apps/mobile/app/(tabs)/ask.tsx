@@ -158,8 +158,8 @@ export default function AskScreen() {
       <KeyboardAvoidingView
         className="flex-1"
         style={{ flex: 1 }}
-        behavior={Platform.OS === "ios" ? "padding" : undefined}
-        keyboardVerticalOffset={8}
+        behavior={Platform.OS === "ios" ? "padding" : "height"}
+        keyboardVerticalOffset={Platform.OS === "ios" ? 8 : 0}
       >
         <ScrollView
           className="flex-1"

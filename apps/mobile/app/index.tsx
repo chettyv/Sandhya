@@ -10,7 +10,12 @@ export default function Index() {
   const onboardingVersion = useAppStore((state) => state.onboardingVersion);
   if (!hydrated)
     return (
-      <View className="flex-1 items-center justify-center bg-parchment">
+      <View
+        accessibilityRole="progressbar"
+        accessibilityLabel="Loading Sandhya"
+        accessibilityLiveRegion="polite"
+        className="flex-1 items-center justify-center bg-parchment"
+      >
         <ActivityIndicator />
       </View>
     );

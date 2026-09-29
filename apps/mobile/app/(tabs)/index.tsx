@@ -2,7 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, View, useWindowDimensions } from "react-native";
 
 import { ContentSourceNotice } from "@/components/ContentSourceNotice";
 import { FestivalRow } from "@/components/FestivalRow";
@@ -27,7 +27,7 @@ import { useSubscription } from "@/lib/subscriptions";
 import { track } from "@/lib/telemetry";
 import { useAppStore } from "@/store/useAppStore";
 import { useStartingProfile } from "@/store/useStartingProfile";
-import { colors, fonts } from "@/theme/tokens";
+import { colors, fonts, layout } from "@/theme/tokens";
 
 function buildWeek() {
   const today = new Date();
@@ -47,6 +47,7 @@ function buildWeek() {
 export default function HomeScreen() {
   const router = useRouter();
   const t = useCopy();
+  const { width } = useWindowDimensions();
   const displayName = useAppStore((state) => state.displayName);
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
@@ -54,11 +55,16 @@ export default function HomeScreen() {
   const completedDateKeys = useAppStore((state) => state.completedDateKeys);
   const reminderEnabled = useAppStore((state) => state.reminderEnabled);
   const startingProfile = useStartingProfile();
-  const { data: content } = useCuratedContent();
+  const contentQuery = useCuratedContent();
+  const { data: content } = contentQuery;
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
   const todayKey = localDateKey();
   const week = useMemo(() => buildWeek(), [todayKey]);
+  const dateCircleSize = Math.min(
+    48,
+    Math.max(32, Math.floor((width - layout.screenPadding * 2) / 7) - 4),
+  );
   const gateFree = paymentsEnabled && subscription.plan === "free";
   const availablePractices = gateFree ? practices.filter((item) => !item.isPremium) : practices;
   const availableFestivals = gateFree ? festivals.filter((item) => !item.isPremium) : festivals;
@@ -122,17 +128,27 @@ export default function HomeScreen() {
           <Ionicons name="calendar" size={18} color={colors.muted} />
         </Pressable>
       </View>
-      <ContentSourceNotice source={content.source} />
+      <ContentSourceNotice
+        source={content.source}
+        retrying={contentQuery.isFetching}
+        onRetry={() => void contentQuery.refetch()}
+      />
 
-      <View className="mb-7 flex-row justify-between">
+      <View className="mb-7 flex-row">
         {week.map((item) => {
           const active = item.active;
           const done = completedDateKeys.includes(item.key);
           return (
-            <View key={`${item.day}-${item.date}`} className="items-center gap-2">
+            <View
+              key={`${item.day}-${item.date}`}
+              className="items-center gap-2"
+              style={{ width: `${100 / 7}%` }}
+            >
               <Text className="text-xs font-semibold text-muted">{item.day}</Text>
               <View
-                className={`h-12 w-12 items-center justify-center rounded-2xl border ${active ? "border-saffron bg-surface2" : done ? "border-saffron bg-warm" : "border-line bg-sand"}`}
+                accessibilityLabel={`${item.day}, ${item.date}${active ? ", today" : done ? ", complete" : ""}`}
+                style={{ width: dateCircleSize, height: dateCircleSize }}
+                className={`items-center justify-center rounded-2xl border ${active ? "border-saffron bg-surface2" : done ? "border-saffron bg-warm" : "border-line bg-sand"}`}
               >
                 <Text className={`text-base font-semibold ${active ? "text-ink" : "text-muted"}`}>
                   {item.date}

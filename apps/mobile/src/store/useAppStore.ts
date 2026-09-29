@@ -53,6 +53,8 @@ type AppState = {
   setHouseholdPractices: (practices: string[]) => void;
   setContentLanguage: (language: string) => void;
   setDisplayName: (name: string) => void;
+  replaceSavedItems: (items: SavedItem[]) => void;
+  /** @deprecated Use replaceSavedItems for remote snapshots. */
   setSavedItems: (items: SavedItem[]) => void;
   setCompletedPracticeIds: (ids: string[]) => void;
   setCompletedDateKeys: (keys: string[]) => void;
@@ -68,6 +70,13 @@ type AppState = {
 };
 
 const todayKey = () => localDateKey();
+
+function savedItemsState(items: SavedItem[]): Pick<AppState, "savedIds" | "savedItemTypes"> {
+  const savedItemTypes = Object.fromEntries(
+    items.map((item) => [item.itemId, item.itemType]),
+  ) as Record<string, SavedItemType>;
+  return { savedIds: Object.keys(savedItemTypes), savedItemTypes };
+}
 
 const storage = createJSONStorage<AppState>(() => chunkedStorage);
 
@@ -134,14 +143,8 @@ export const useAppStore = create<AppState>()(
       setHouseholdPractices: (householdPractices) => set({ householdPractices }),
       setContentLanguage: (contentLanguage) => set({ contentLanguage }),
       setDisplayName: (displayName) => set({ displayName }),
-      setSavedItems: (items) =>
-        set((state) => ({
-          savedIds: [...new Set([...state.savedIds, ...items.map((item) => item.itemId)])],
-          savedItemTypes: {
-            ...state.savedItemTypes,
-            ...Object.fromEntries(items.map((item) => [item.itemId, item.itemType])),
-          },
-        })),
+      replaceSavedItems: (items) => set(savedItemsState(items)),
+      setSavedItems: (items) => set(savedItemsState(items)),
       setCompletedPracticeIds: (ids) =>
         set((state) => ({
           completedPracticeIds: [...new Set([...state.completedPracticeIds, ...ids])],
@@ -202,7 +205,10 @@ export const useAppStore = create<AppState>()(
       name: "sandhya-app-state",
       storage,
       partialize: (state) => ({ ...state, hydrated: false }),
-      onRehydrateStorage: () => (state) => state?.setHydrated(true),
+      onRehydrateStorage: () => (state) => {
+        if (state) state.setHydrated(true);
+        else useAppStore.setState({ hydrated: true });
+      },
     },
   ),
 );

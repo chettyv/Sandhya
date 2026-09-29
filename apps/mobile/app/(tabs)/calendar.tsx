@@ -1,7 +1,7 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useRouter } from "expo-router";
 import { useMemo, useState } from "react";
-import { Pressable, Text, View } from "react-native";
+import { Pressable, Text, View, useWindowDimensions } from "react-native";
 
 import { ContentSourceNotice } from "@/components/ContentSourceNotice";
 import { FestivalRow } from "@/components/FestivalRow";
@@ -10,7 +10,7 @@ import { useCuratedContent } from "@/lib/content";
 import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
-import { colors } from "@/theme/tokens";
+import { colors, layout } from "@/theme/tokens";
 
 const weekDays = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"];
 
@@ -50,12 +50,14 @@ function getStreaks(dateKeys: string[]) {
 
 export default function CalendarScreen() {
   const router = useRouter();
+  const { width } = useWindowDimensions();
   const today = new Date();
   const [cursor, setCursor] = useState(new Date(today.getFullYear(), today.getMonth(), 1));
   const [mode, setMode] = useState<"streak" | "calendar">("calendar");
   const completedDateKeys = useAppStore((state) => state.completedDateKeys);
   const completedTodayIds = useAppStore((state) => state.completedTodayIds);
-  const { data: content } = useCuratedContent();
+  const contentQuery = useCuratedContent();
+  const { data: content } = contentQuery;
   const { data: subscription } = useSubscription();
   const festivals =
     paymentsEnabled && subscription.plan === "free"
@@ -63,6 +65,10 @@ export default function CalendarScreen() {
       : content.festivals;
   const days = useMemo(() => buildMonth(cursor.getFullYear(), cursor.getMonth()), [cursor]);
   const monthTitle = cursor.toLocaleDateString("en-GB", { month: "long", year: "numeric" });
+  const calendarCellSize = Math.min(
+    48,
+    Math.max(32, Math.floor((width - layout.screenPadding * 2) / 7) - 1),
+  );
   const visibleFestivals = festivals.filter((festival) => {
     if (!festival.date) return false;
     const date = new Date(`${festival.date}T12:00:00`);
@@ -107,7 +113,11 @@ export default function CalendarScreen() {
           onPress={() => router.push("/profile")}
         />
       </View>
-      <ContentSourceNotice source={content.source} />
+      <ContentSourceNotice
+        source={content.source}
+        retrying={contentQuery.isFetching}
+        onRetry={() => void contentQuery.refetch()}
+      />
 
       {mode === "streak" ? (
         <View>
@@ -160,7 +170,13 @@ export default function CalendarScreen() {
               <Ionicons name="chevron-back" size={34} color={colors.muted} />
             </Pressable>
             <View className="items-center">
-              <Text className="text-[29px] font-bold text-ink">{monthTitle}</Text>
+              <Text
+                numberOfLines={1}
+                adjustsFontSizeToFit
+                className="text-[29px] font-bold text-ink"
+              >
+                {monthTitle}
+              </Text>
             </View>
             <Pressable
               accessibilityLabel="Next month"
@@ -197,8 +213,11 @@ export default function CalendarScreen() {
                 <Pressable
                   key={`${dateKey}-${index}`}
                   accessibilityLabel={
-                    festival ? `${day}, ${festival.name}` : day ? String(day) : undefined
+                    day
+                      ? `${monthTitle}, ${day}${festival ? `, ${festival.name}` : ""}${isToday ? ", today" : ""}`
+                      : undefined
                   }
+                  accessibilityHint={festival ? "Opens the festival details" : undefined}
                   accessibilityRole={festival ? "button" : undefined}
                   disabled={!festival}
                   onPress={() => festival && router.push(`/festival/${festival.id}`)}
@@ -206,7 +225,8 @@ export default function CalendarScreen() {
                 >
                   {day ? (
                     <View
-                      className={`h-12 w-12 items-center justify-center rounded-2xl border-2 ${isToday ? "border-saffron bg-parchment" : complete ? "border-sage bg-sageSoft" : festival ? "border-saffron bg-warm" : "border-line bg-sand"}`}
+                      style={{ width: calendarCellSize, height: calendarCellSize }}
+                      className={`items-center justify-center rounded-2xl border-2 ${isToday ? "border-saffron bg-parchment" : complete ? "border-sage bg-sageSoft" : festival ? "border-saffron bg-warm" : "border-line bg-sand"}`}
                     >
                       {festival && !isToday ? (
                         <Ionicons name="flame" size={23} color={colors.saffron} />

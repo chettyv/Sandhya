@@ -49,6 +49,7 @@ export const fonts = {
 
 export const layout = {
   maxWidth: 430,
+  compactScreenWidth: 360,
   screenPadding: 16,
   // Height of the absolute bottom tab bar in app/(tabs)/_layout.tsx. Anything
   // pinned above the tab bar (the Ask composer) or padding content clear of it
