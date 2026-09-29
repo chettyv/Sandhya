@@ -1,9 +1,13 @@
 import assert from "node:assert/strict";
+import { existsSync, mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import test from "node:test";
 
 import {
   buildRuntimeManifest,
   compareApprovedEntries,
+  writeRuntimeManifest,
   validateRuntimeDocument,
 } from "./verify-runtime-content.mjs";
 
@@ -104,4 +108,47 @@ test("detects generated-bank drift in approved entries", () => {
   const issues = compareApprovedEntries([document], [generated]);
 
   assert.ok(issues.some((issue) => issue.includes("generated entry drift: sample-1.translation")));
+});
+
+test("does not write a manifest when validation has failed", () => {
+  const directory = mkdtempSync(join(tmpdir(), "sandhya-runtime-manifest-"));
+  const manifestPath = join(directory, "runtime-content-manifest.json");
+
+  try {
+    assert.throws(
+      () => writeRuntimeManifest({ manifestPath, serialized: '{"unsafe":true}\n', issues: ["invalid source"] }),
+      /invalid source/,
+    );
+    assert.equal(existsSync(manifestPath), false);
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("marks source rights clear only when every tracker approval field is explicit", () => {
+  const document = makeDocument();
+  const clearRow = {
+    work_id: "sample-source",
+    source_url: "https://example.org/sample",
+    status: "approved",
+    can_store: "Yes",
+    can_show_excerpts: "Yes",
+    can_embed_full_text: "Yes",
+    can_use_for_rag: "Yes, can ingest",
+    permission_needed: "No",
+    review_needed: "Content review completed",
+  };
+  const manifest = buildRuntimeManifest({
+    documents: [document],
+    generatedEntries: [],
+    sourceRightsRows: [clearRow],
+  });
+  assert.equal(manifest.entries[0].sourceStatus.status, "clear");
+
+  const incomplete = buildRuntimeManifest({
+    documents: [document],
+    generatedEntries: [],
+    sourceRightsRows: [{ ...clearRow, can_embed_full_text: "Unclear" }],
+  });
+  assert.notEqual(incomplete.entries[0].sourceStatus.status, "clear");
 });

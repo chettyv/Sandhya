@@ -200,12 +200,22 @@ export function compareApprovedEntries(documents, generatedEntries) {
   return [...new Set(issues)];
 }
 
-export function buildRuntimeManifest({ documents, generatedEntries, audioSlugs = new Set() }) {
+export function buildRuntimeManifest({
+  documents,
+  generatedEntries,
+  audioSlugs = new Set(),
+  sourceRightsRows = [],
+}) {
   const generatedBySlug = new Map(generatedEntries.map((entry) => [entry.slug, entry]));
   const entries = [...documents]
     .sort((a, b) => String(a.runtime.slug ?? "").localeCompare(String(b.runtime.slug ?? "")))
     .map((document) =>
-      buildRuntimeEntry(document, generatedBySlug.get(document.runtime.slug), audioSlugs),
+      buildRuntimeEntry(
+        document,
+        generatedBySlug.get(document.runtime.slug),
+        audioSlugs,
+        sourceRightsRows,
+      ),
     );
   const recommendations = Object.fromEntries(
     ["ready", "translate", "record-audio", "review-data", "hold"].map((status) => [
@@ -231,7 +241,7 @@ export function serializeManifest(manifest) {
   return `${JSON.stringify(manifest, null, 2)}\n`;
 }
 
-function buildRuntimeEntry(document, generatedEntry, audioSlugs) {
+function buildRuntimeEntry(document, generatedEntry, audioSlugs, sourceRightsRows) {
   const runtime = document.runtime ?? {};
   const issues = validateRuntimeDocument(document);
   const placeholderMarkers = collectMarkers(runtime);
@@ -239,18 +249,12 @@ function buildRuntimeEntry(document, generatedEntry, audioSlugs) {
     ...runtime,
     source: `${document.frontmatter.copyright_status ?? ""} ${runtime.source ?? ""}`,
   });
-  const sourceUrl = document.frontmatter.source_url;
   const sourceReference = runtime.source;
-  const sourceStatus = {
-    sourceUrl: typeof sourceUrl === "string" && /^https?:\/\//.test(sourceUrl),
-    reference: typeof sourceReference === "string" && sourceReference.trim().length > 0,
-    status:
-      typeof sourceUrl === "string" && /^https?:\/\//.test(sourceUrl) && sourceReference?.trim()
-        ? /pending|review/i.test(String(document.frontmatter.copyright_status ?? ""))
-          ? "pending-review"
-          : "clear"
-        : "missing",
-  };
+  const sourceStatus = evaluateSourceStatus({
+    frontmatter: document.frontmatter,
+    sourceReference,
+    sourceRightsRows,
+  });
   const languageCodes = new Set(["en"]);
   for (const field of ["translations", "meanings"]) {
     for (const language of Object.keys(runtime[field] ?? {})) languageCodes.add(language);
@@ -341,6 +345,51 @@ function isSupportedLanguageCode(language) {
   return /^[a-z]{2}$/.test(language) && SUPPORTED_LANGUAGE_CODES.includes(language);
 }
 
+export function evaluateSourceStatus({ frontmatter = {}, sourceReference, sourceRightsRows = [] }) {
+  const sourceUrl = frontmatter.source_url;
+  const sourceUrlValid = isHttpUrl(sourceUrl);
+  const referenceValid = typeof sourceReference === "string" && Boolean(sourceReference.trim());
+  const trackerRow = sourceRightsRows.find(
+    (row) => isHttpUrl(row?.source_url) && normalizeSourceUrl(row.source_url) === normalizeSourceUrl(sourceUrl),
+  );
+  const approval = {
+    trackerRow: Boolean(trackerRow),
+    status: /^(approved|production_ready)$/i.test(String(trackerRow?.status ?? "").trim()),
+    canStore: /^yes$/i.test(String(trackerRow?.can_store ?? "").trim()),
+    canShowExcerpts: /^yes$/i.test(String(trackerRow?.can_show_excerpts ?? "").trim()),
+    canEmbedFullText: /^yes$/i.test(String(trackerRow?.can_embed_full_text ?? "").trim()),
+    canUseForRag: /^yes,?\s*can ingest$/i.test(String(trackerRow?.can_use_for_rag ?? "").trim()),
+    permissionNotNeeded: /^no\b/i.test(String(trackerRow?.permission_needed ?? "").trim()),
+    reviewRecorded: Boolean(String(trackerRow?.review_needed ?? "").trim()),
+  };
+  const rightsClear = Object.values(approval).every(Boolean);
+  return {
+    sourceUrl: sourceUrlValid,
+    reference: referenceValid,
+    trackerRow: trackerRow?.work_id ?? null,
+    approval,
+    status: sourceUrlValid && referenceValid && rightsClear ? "clear" : trackerRow ? "pending-review" : "missing",
+  };
+}
+
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return (url.protocol === "http:" || url.protocol === "https:") && Boolean(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+function normalizeSourceUrl(value) {
+  try {
+    const url = new URL(value);
+    return `${url.protocol}//${url.hostname.toLowerCase()}${url.pathname.replace(/\/+$/, "")}${url.search}`;
+  } catch {
+    return String(value ?? "").trim().toLowerCase();
+  }
+}
+
 function collectMarkers(value) {
   const strings = [];
   const visit = (item) => {
@@ -399,6 +448,47 @@ function collectAudioSlugs(root) {
   return slugs;
 }
 
+export function parseCsvRecords(source) {
+  const records = [];
+  let row = [];
+  let cell = "";
+  let quoted = false;
+  for (let index = 0; index < source.length; index += 1) {
+    const character = source[index];
+    if (quoted) {
+      if (character === '"' && source[index + 1] === '"') {
+        cell += '"';
+        index += 1;
+      } else if (character === '"') quoted = false;
+      else cell += character;
+    } else if (character === '"') quoted = true;
+    else if (character === ",") {
+      row.push(cell);
+      cell = "";
+    } else if (character === "\n") {
+      row.push(cell.replace(/\r$/, ""));
+      records.push(row);
+      row = [];
+      cell = "";
+    } else cell += character;
+  }
+  if (quoted) throw new Error("source-rights CSV contains an unclosed quoted field");
+  if (cell || row.length > 0) {
+    row.push(cell.replace(/\r$/, ""));
+    records.push(row);
+  }
+  if (records.length === 0) return [];
+  const [header, ...data] = records;
+  return data
+    .filter((values) => values.some(Boolean))
+    .map((values) => Object.fromEntries(header.map((column, index) => [column, values[index] ?? ""])));
+}
+
+export function writeRuntimeManifest({ manifestPath, serialized, issues = [] }) {
+  if (issues.length > 0) throw new Error(issues.join("\n"));
+  writeFileSync(manifestPath, serialized);
+}
+
 async function main() {
   const checkOnly = process.argv.includes("--check");
   const write = process.argv.includes("--write");
@@ -408,23 +498,28 @@ async function main() {
   const contentDir = join(root, "content", "shlokas");
   const bankPath = join(root, "apps", "mobile", "src", "data", "shlokaBank.json");
   const manifestPath = join(root, "docs", "content", "runtime-content-manifest.json");
+  const sourceRightsPath = join(root, "docs", "source_inventory_template.csv");
   const tools = await import(
     pathToFileURL(join(root, "packages", "content-tools", "dist", "index.js")).href
   );
+  const documentIssues = [];
   const documents = listShlokaFiles(contentDir).map((file) => {
     const source = readFileSync(join(contentDir, file), "utf8");
     const validationIssues = tools.validateMarkdownDocument(source, file);
-    if (validationIssues.length > 0) fail(validationIssues.join("\n"));
+    documentIssues.push(...validationIssues);
     return parseShlokaMarkdown(source, file);
   });
   const generatedEntries = JSON.parse(readFileSync(bankPath, "utf8"));
   const comparisonIssues = compareApprovedEntries(documents, generatedEntries);
-  if (comparisonIssues.length > 0) fail(comparisonIssues.join("\n"));
+  const validationIssues = [...documentIssues, ...comparisonIssues];
+  if (validationIssues.length > 0) fail(validationIssues.join("\n"));
+  const sourceRightsRows = parseCsvRecords(readFileSync(sourceRightsPath, "utf8"));
 
   const manifest = buildRuntimeManifest({
     documents,
     generatedEntries,
     audioSlugs: collectAudioSlugs(root),
+    sourceRightsRows,
   });
   const serialized = serializeManifest(manifest);
   if (checkOnly) {
@@ -435,7 +530,7 @@ async function main() {
       );
     console.log(`runtime content manifest is up to date (${manifest.entries.length} entries)`);
   } else {
-    writeFileSync(manifestPath, serialized);
+    writeRuntimeManifest({ manifestPath, serialized });
     console.log(
       `wrote runtime content manifest (${manifest.entries.length} entries) -> ${manifestPath}`,
     );
@@ -443,9 +538,14 @@ async function main() {
 }
 
 function fail(message) {
-  console.error(message);
-  process.exitCode = 1;
+  throw new Error(message);
 }
 
-if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href)
-  await main();
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  try {
+    await main();
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : error);
+    process.exitCode = 1;
+  }
+}
