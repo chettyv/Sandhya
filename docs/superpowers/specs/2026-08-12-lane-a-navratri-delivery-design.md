@@ -8,7 +8,7 @@
 
 ## Outcome
 
-Lane A will deliver a reviewable, rights-cleared content package for *Navratri: Nine Nights*: nine dated sessions, pronunciation and audio recording materials, a defensible festival-date reference, five web pages in total, six short-form video packages, and an arrival-action ledger. Application code, packages, Supabase, deployment, payment, and publishing infrastructure remain Stream B territory.
+Lane A will deliver a reviewable, rights-cleared content package for _Navratri: Nine Nights_: nine dated sessions, pronunciation and audio recording materials, a defensible festival-date reference, five web pages in total, six short-form video packages, and an arrival-action ledger. Application code, packages, Supabase, deployment, payment, and publishing infrastructure remain Stream B territory.
 
 The work is not complete merely when files exist. Every quotation must have a source and named translator, every session must pass the frozen six-section contract, variation must be substantive rather than boilerplate, and all claims of review, recording, publication, posting, outreach, or arrival must be backed by evidence.
 
@@ -23,7 +23,7 @@ This is preferred over two alternatives:
 1. **Outline-first with provisional quotations** is faster initially but risks rewriting all pronunciation, meaning, audio, and citations when a source fails review.
 2. **Quote-free sessions** avoid the rights issue but fail the frozen `challenge_session` requirement that every session contain a five-label shloka block.
 
-The likely translation candidate is Manmatha Nath Dutt's 1896 *Markandeya Puranam* extract covering the Devi Mahatmya, but it remains a candidate until publication, jurisdiction, OCR, section-boundary, and attribution evidence are recorded in the tracker. No modern online translation or SanskritDocuments transcription will be copied into the paid challenge without permission.
+The likely translation candidate is Manmatha Nath Dutt's 1896 _Markandeya Puranam_ extract covering the Devi Mahatmya, but it remains a candidate until publication, jurisdiction, OCR, section-boundary, and attribution evidence are recorded in the tracker. No modern online translation or SanskritDocuments transcription will be copied into the paid challenge without permission.
 
 ## Content architecture
 

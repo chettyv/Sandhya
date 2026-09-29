@@ -1,12 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 
-import { parseShlokaMarkdown } from "./verify-runtime-content.mjs";
 import {
   buildTranslationManifest,
   TRANSLATION_MANIFEST_COLUMNS,
   validateTranslationRows,
 } from "./build-translation-manifest.mjs";
+import { parseShlokaMarkdown } from "./verify-runtime-content.mjs";
 
 function markdown({ hindiVerse = "", hindiProse = "", localeLabel = "hi" } = {}) {
   return `---

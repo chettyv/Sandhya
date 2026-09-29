@@ -446,7 +446,19 @@ provider, rights, or store gate.
 Before calling a later release candidate technically ready, run these from a
 clean checkout using Node 22.x and the pinned pnpm version (`pnpm@11.0.8`):
 
+On Windows, select the pinned runtime before installing dependencies. With
+`nvm-windows`, run `nvm use 22`; with `fnm`, run `fnm use 22`. Then verify
+`node --version` prints `v22.x` before running `corepack enable` and
+`corepack prepare pnpm@11.0.8 --activate`. Do not use a Node 24 runtime for
+this matrix: it is outside the repository engine range and can make the
+Expo config loader and package-manager checks report misleading results.
+
 ```powershell
+nvm use 22
+corepack enable
+corepack prepare pnpm@11.0.8 --activate
+node --version
+pnpm --version
 pnpm install --frozen-lockfile
 node scripts/verify-workspace-lock.mjs
 pnpm --filter @sandhya/content-tools build

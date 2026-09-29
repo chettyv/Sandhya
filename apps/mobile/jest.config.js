@@ -33,7 +33,9 @@ const TRANSFORM = [
 module.exports = {
   preset: "jest-expo/ios",
   rootDir: __dirname,
-  testMatch: ["<rootDir>/**/*.smoke.test.tsx"],
+  // Keep this relative to rootDir. The <rootDir> token is normalized with
+  // mixed Windows separators and can prevent Jest from discovering the file.
+  testMatch: ["**/*.smoke.test.tsx"],
   setupFiles: ["<rootDir>/jest.setup.js"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",

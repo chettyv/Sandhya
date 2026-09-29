@@ -174,7 +174,12 @@ for (const [label, source, patterns] of [
     // still that it is disabled while finishing and exposes that to a11y.
     "onboarding reminder failure handling",
     onboarding + onboardingResultStep + onboardingFlowButton,
-    ["finishing", "Reminder not enabled", "disabled={finishing}", "accessibilityState={{ disabled }}"],
+    [
+      "finishing",
+      "Reminder not enabled",
+      "disabled={finishing}",
+      "accessibilityState={{ disabled }}",
+    ],
   ],
   [
     "legal release disclosure",

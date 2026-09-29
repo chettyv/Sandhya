@@ -96,11 +96,7 @@ describe("every route renders on iOS", () => {
     const failures: string[] = [];
     for (const { path, anchor } of ROUTES) {
       await act(async () => {
-        // Double assertion: with Expo's generated typed routes (local dev) a plain
-        // string is not assignable to Href, but CI never generates .expo/types, so
-        // there `path as never` trips no-unnecessary-type-assertion. Going through
-        // `unknown` type-checks and lints identically in both environments.
-        router.push(path as unknown as never);
+        router.push(path);
       });
       try {
         await waitFor(() => expect(screen.getAllByText(anchor).length).toBeGreaterThan(0), {

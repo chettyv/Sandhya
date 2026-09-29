@@ -350,7 +350,9 @@ export function evaluateSourceStatus({ frontmatter = {}, sourceReference, source
   const sourceUrlValid = isHttpUrl(sourceUrl);
   const referenceValid = typeof sourceReference === "string" && Boolean(sourceReference.trim());
   const trackerRow = sourceRightsRows.find(
-    (row) => isHttpUrl(row?.source_url) && normalizeSourceUrl(row.source_url) === normalizeSourceUrl(sourceUrl),
+    (row) =>
+      isHttpUrl(row?.source_url) &&
+      normalizeSourceUrl(row.source_url) === normalizeSourceUrl(sourceUrl),
   );
   const approval = {
     trackerRow: Boolean(trackerRow),
@@ -368,7 +370,12 @@ export function evaluateSourceStatus({ frontmatter = {}, sourceReference, source
     reference: referenceValid,
     trackerRow: trackerRow?.work_id ?? null,
     approval,
-    status: sourceUrlValid && referenceValid && rightsClear ? "clear" : trackerRow ? "pending-review" : "missing",
+    status:
+      sourceUrlValid && referenceValid && rightsClear
+        ? "clear"
+        : trackerRow
+          ? "pending-review"
+          : "missing",
   };
 }
 
@@ -386,7 +393,9 @@ function normalizeSourceUrl(value) {
     const url = new URL(value);
     return `${url.protocol}//${url.hostname.toLowerCase()}${url.pathname.replace(/\/+$/, "")}${url.search}`;
   } catch {
-    return String(value ?? "").trim().toLowerCase();
+    return String(value ?? "")
+      .trim()
+      .toLowerCase();
   }
 }
 
@@ -481,7 +490,9 @@ export function parseCsvRecords(source) {
   const [header, ...data] = records;
   return data
     .filter((values) => values.some(Boolean))
-    .map((values) => Object.fromEntries(header.map((column, index) => [column, values[index] ?? ""])));
+    .map((values) =>
+      Object.fromEntries(header.map((column, index) => [column, values[index] ?? ""])),
+    );
 }
 
 export function writeRuntimeManifest({ manifestPath, serialized, issues = [] }) {

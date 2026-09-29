@@ -3,10 +3,7 @@ import { spawnSync } from "node:child_process";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 
-import {
-  resolveEasProjectId,
-  verifyMobileLaunchConfig,
-} from "./verify-mobile-launch-config.mjs";
+import { resolveEasProjectId, verifyMobileLaunchConfig } from "./verify-mobile-launch-config.mjs";
 
 const scriptPath = fileURLToPath(new URL("./verify-mobile-launch-config.mjs", import.meta.url));
 const publicConfigNames = [

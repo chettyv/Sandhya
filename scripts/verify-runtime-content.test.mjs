@@ -116,7 +116,12 @@ test("does not write a manifest when validation has failed", () => {
 
   try {
     assert.throws(
-      () => writeRuntimeManifest({ manifestPath, serialized: '{"unsafe":true}\n', issues: ["invalid source"] }),
+      () =>
+        writeRuntimeManifest({
+          manifestPath,
+          serialized: '{"unsafe":true}\n',
+          issues: ["invalid source"],
+        }),
       /invalid source/,
     );
     assert.equal(existsSync(manifestPath), false);
