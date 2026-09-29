@@ -21,7 +21,7 @@ vi.mock("./secureStorage", () => ({
 vi.mock("./notifications", () => ({ configureDailyReminder: vi.fn() }));
 vi.mock("./supabase", () => ({ supabase: supabaseMock }));
 
-const { saveJournalEntry } = await import("./account");
+const { loadSavedItemsAfterSync, saveJournalEntry } = await import("./account");
 const { useAppStore } = await import("../store/useAppStore");
 const { readLocalJournal } = await import("./localJournalStorage");
 
@@ -65,5 +65,19 @@ describe("account state lifecycle", () => {
     expect(
       (await readLocalJournal("11111111-1111-1111-1111-111111111111")).map((item) => item.text),
     ).toEqual(["Keep this locally"]);
+  });
+
+  it("does not load a remote saved snapshot when uploading local saves fails", async () => {
+    const select = vi.fn();
+    const upsert = vi.fn().mockResolvedValue({ error: new Error("saved-items upload failed") });
+    supabaseMock.from.mockReturnValue({ upsert, select });
+
+    const result = await loadSavedItemsAfterSync([
+      { itemId: "11111111-1111-1111-1111-111111111111", itemType: "concept" },
+    ]);
+
+    expect(result).toBeNull();
+    expect(upsert).toHaveBeenCalledOnce();
+    expect(select).not.toHaveBeenCalled();
   });
 });

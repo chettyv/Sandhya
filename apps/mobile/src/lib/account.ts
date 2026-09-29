@@ -131,8 +131,12 @@ export async function loadSavedItems(): Promise<SavedItem[]> {
 }
 
 /** Upload UUID-backed guest saves when the user signs in. */
-export async function syncLocalSavedItems(items: SavedItem[]): Promise<void> {
+export async function syncLocalSavedItems(
+  items: SavedItem[],
+  expectedUserId?: string,
+): Promise<void> {
   const userId = await currentUserId();
+  if (expectedUserId && expectedUserId !== userId) throw new Error("Account changed during sync.");
   const pending = items.filter((item) => UUID_PATTERN.test(item.itemId));
   if (!pending.length) return;
   const { error } = await supabase!.from("saved_items").upsert(
@@ -144,6 +148,20 @@ export async function syncLocalSavedItems(items: SavedItem[]): Promise<void> {
     { onConflict: "user_id,item_type,item_id", ignoreDuplicates: true },
   );
   if (error) throw error;
+}
+
+/** Return a remote snapshot only after the local saves have uploaded successfully. */
+export async function loadSavedItemsAfterSync(
+  items: SavedItem[],
+  expectedUserId?: string,
+): Promise<SavedItem[] | null> {
+  try {
+    await syncLocalSavedItems(items, expectedUserId);
+    if (expectedUserId && (await currentUserId()) !== expectedUserId) return null;
+    return await loadSavedItems();
+  } catch {
+    return null;
+  }
 }
 
 export async function submitFeedback(
@@ -212,17 +230,18 @@ function uniqueSuffix(): string {
 
 let localJournalSyncInFlight: Promise<void> | null = null;
 
-export function syncLocalJournalEntries(): Promise<void> {
+export function syncLocalJournalEntries(expectedUserId?: string): Promise<void> {
   if (localJournalSyncInFlight) return localJournalSyncInFlight;
-  localJournalSyncInFlight = syncLocalJournalEntriesInternal().finally(() => {
+  localJournalSyncInFlight = syncLocalJournalEntriesInternal(expectedUserId).finally(() => {
     localJournalSyncInFlight = null;
   });
   return localJournalSyncInFlight;
 }
 
-async function syncLocalJournalEntriesInternal(): Promise<void> {
+async function syncLocalJournalEntriesInternal(expectedUserId?: string): Promise<void> {
   const userId = await currentUserId().catch(() => null);
   if (!userId) return;
+  if (expectedUserId && expectedUserId !== userId) return;
   const scopedEntries = await Promise.all([
     readLocalJournal(GUEST_JOURNAL_SCOPE),
     readLocalJournal(userId),
@@ -263,6 +282,7 @@ async function syncLocalJournalEntriesInternal(): Promise<void> {
       [...new Set(pending.map((item) => item.date))].map((date) => recordActivityDay(date)),
     );
   }
+  if (expectedUserId && (await currentUserId().catch(() => null)) !== expectedUserId) return;
   await updateLocalJournal(GUEST_JOURNAL_SCOPE, (entries) =>
     entries.filter((item) => !handledIds.has(item.id)),
   );

@@ -14,11 +14,11 @@ import {
   loadActivityDates,
   loadPracticeCompletionKeys,
   loadProfile,
-  loadSavedItems,
-  syncLocalSavedItems,
+  loadSavedItemsAfterSync,
   syncLocalJournalEntries,
   updateProfile,
 } from "@/lib/account";
+import { createAccountHydrationGuard, type AccountHydrationContext } from "@/lib/accountHydration";
 import {
   configureDailyReminder,
   getInitialNotificationRoute,
@@ -81,6 +81,9 @@ export default function RootLayout() {
     const client = supabase;
     if (!client) return;
     let mounted = true;
+    const hydrationGuard = createAccountHydrationGuard();
+    const isCurrent = (context: AccountHydrationContext) =>
+      mounted && hydrationGuard.isCurrent(context);
     // The server profile, applied to the store. Routing answers (household
     // practices, language) are only applied when the server actually has a
     // value, so a guest's local choices survive a sign-in to a blank profile
@@ -106,52 +109,60 @@ export default function RootLayout() {
     // store to rehydrate first: zustand's rehydrate replaces state with the
     // on-disk copy, so anything applied before it would be overwritten.
     const loadAccountState = async (
+      context: AccountHydrationContext,
       profileLoader: () => Promise<Awaited<ReturnType<typeof loadProfile>>>,
     ) => {
       await waitForStoreHydration();
+      if (!isCurrent(context)) return;
       void profileLoader()
         .then((profile) => {
-          if (mounted && profile) applyProfile(profile);
+          if (isCurrent(context) && profile) applyProfile(profile);
         })
         .catch(() => undefined);
       void loadActivityDates()
         .then((keys) => {
-          if (mounted) setCompletedDateKeys(keys);
+          if (isCurrent(context)) setCompletedDateKeys(keys);
         })
         .catch(() => undefined);
       void loadPracticeCompletionKeys()
         .then((ids) => {
-          if (mounted) setCompletedPracticeIds(ids);
+          if (isCurrent(context)) setCompletedPracticeIds(ids);
         })
         .catch(() => undefined);
-      void syncLocalJournalEntries().catch(() => undefined);
+      void syncLocalJournalEntries(context.userId ?? undefined).catch(() => undefined);
     };
-    const hydrateSavedItems = async () => {
+    const hydrateSavedItems = async (context: AccountHydrationContext) => {
       await waitForStoreHydration();
+      if (!isCurrent(context) || !context.userId) return;
       const state = useAppStore.getState();
-      await syncLocalSavedItems(
+      const items = await loadSavedItemsAfterSync(
         state.savedIds.flatMap((itemId) => {
           const itemType = state.savedItemTypes[itemId];
           return itemType ? [{ itemId, itemType }] : [];
         }),
-      ).catch(() => undefined);
-      const items = await loadSavedItems();
-      if (mounted) replaceSavedItems(items);
+        context.userId,
+      );
+      if (items && isCurrent(context)) replaceSavedItems(items);
     };
-    void loadAccountState(loadProfile);
     void client.auth
       .getSession()
       .then(async ({ data }) => {
+        const context = hydrationGuard.begin(data.session?.user.id ?? null);
         if (!data.session) queryClient.removeQueries({ queryKey: ["curated-content"] });
-        if (data.session) void hydrateSavedItems().catch(() => undefined);
         void queryClient.invalidateQueries({ queryKey: ["subscription-status"] });
-        if (!data.session) return configurePurchases(undefined);
-        await waitForStoreHydration();
-        await syncGuestPreferences();
-        return configurePurchases(data.session.user.id);
+        if (data.session) {
+          await waitForStoreHydration();
+          if (!isCurrent(context)) return;
+          await syncGuestPreferences();
+          if (!isCurrent(context)) return;
+          void hydrateSavedItems(context).catch(() => undefined);
+        }
+        void loadAccountState(context, loadProfile);
+        return configurePurchases(data.session?.user.id);
       })
       .catch(() => undefined);
     const { data: listener } = client.auth.onAuthStateChange((event, session) => {
+      const context = hydrationGuard.begin(session?.user.id ?? null);
       if (event === "SIGNED_OUT") {
         track("auth_signed_out");
         clearAccountScopedState();
@@ -169,11 +180,11 @@ export default function RootLayout() {
         queryClient.removeQueries({ queryKey: ["saved-messages"] });
         void queryClient.invalidateQueries({ queryKey: ["subscription-status"] });
       }
-      void loadAccountState(async () => {
+      void loadAccountState(context, async () => {
         if (event === "SIGNED_IN") await syncGuestPreferences().catch(() => undefined);
         return loadProfile();
       });
-      if (event === "SIGNED_IN") void hydrateSavedItems().catch(() => undefined);
+      if (event === "SIGNED_IN") void hydrateSavedItems(context).catch(() => undefined);
       void configurePurchases(session?.user.id).catch(() => undefined);
     });
     return () => {
