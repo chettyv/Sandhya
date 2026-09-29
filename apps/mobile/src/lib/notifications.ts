@@ -1,6 +1,8 @@
+import { type NotificationRoute } from "./notificationRouting";
+
 export type ReminderResult = { enabled: boolean; remoteRegistered: boolean; reason?: string };
 export type FestivalReminder = { id: string; name: string; date: string };
-export type NotificationRoute = { type?: string; festivalId?: string };
+export type { NotificationRoute } from "./notificationRouting";
 
 export async function configureDailyReminder(
   enabled: boolean,

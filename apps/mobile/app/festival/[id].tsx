@@ -33,7 +33,8 @@ const RECKONING_LABEL = {
 } as const;
 
 export default function FestivalDetailScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id: rawId } = useLocalSearchParams<{ id?: string | string[] }>();
+  const id = Array.isArray(rawId) ? rawId[0] : rawId;
   const { data: content, isFetching } = useCuratedContent();
   const festivals = content.festivals;
   const requestedFestival = festivals.find((item) => item.id === id);

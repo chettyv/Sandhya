@@ -19,6 +19,7 @@ import {
   updateProfile,
 } from "@/lib/account";
 import { createAccountHydrationGuard, type AccountHydrationContext } from "@/lib/accountHydration";
+import type { NotificationRoute } from "@/lib/notificationRouting";
 import {
   configureDailyReminder,
   getInitialNotificationRoute,
@@ -58,10 +59,8 @@ export default function RootLayout() {
   const reminderTime = useAppStore((state) => state.reminderTime);
   const lastNotificationRoute = useRef<{ key: string; at: number } | null>(null);
   const routeNotification = useCallback(
-    (route: { type?: string; festivalId?: string }) => {
-      if (route.type !== "daily_reflection" && route.type !== "festival") return;
-      if (route.type === "festival" && !route.festivalId) return;
-      const key = `${route.type}:${route.festivalId ?? ""}`;
+    (route: NotificationRoute) => {
+      const key = route.type === "festival" ? `${route.type}:${route.festivalId}` : route.type;
       const now = Date.now();
       if (
         lastNotificationRoute.current?.key === key &&
@@ -70,7 +69,7 @@ export default function RootLayout() {
         return;
       lastNotificationRoute.current = { key, at: now };
       if (route.type === "daily_reflection") router.push("/(tabs)");
-      else router.push(`/festival/${route.festivalId}`);
+      else router.push({ pathname: "/festival/[id]", params: { id: route.festivalId } });
     },
     [router],
   );
