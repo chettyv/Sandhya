@@ -59,12 +59,12 @@ export default function SubscriptionScreen() {
         <View className="flex-1 items-center justify-center px-8">
           <Ionicons name="heart-outline" size={40} color={colors.saffron} />
           <Text className="mt-4 text-center text-xl font-semibold text-ink">
-            Everything is free right now
+            Plus is not available in this build
           </Text>
           <Text className="mt-3 text-center text-[15px] leading-6 text-muted">
-            The full library, daily shloka, practices, and festival guides are all open while
-            Sandhya is in its early free period. If a paid tier ever arrives, nothing you rely on
-            today will be taken away without clear notice.
+            Sandhya’s core pilot keeps the library, daily shloka, practices, and festival guides
+            open. Purchases are held back until the finite challenge, commercial rights, and store
+            verification gates are complete.
           </Text>
           <Pressable
             accessibilityRole="button"

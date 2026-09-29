@@ -6,6 +6,7 @@ import { ActivityIndicator, Alert, Pressable, Text, TextInput, View } from "reac
 import { Card, ListRow, Page, PrimaryButton, SecondaryButton } from "@/components/ui";
 import { signOut, updateProfile } from "@/lib/account";
 import { useAuthState } from "@/lib/authState";
+import { paymentsEnabled } from "@/lib/payments";
 import { contentLanguageNames } from "@/lib/shlokas";
 import { planLabel, useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
@@ -108,9 +109,11 @@ export default function ProfileScreen() {
               {subscriptionChecking ? "Checking…" : planLabel(subscription.plan)}
             </Text>
           </View>
-          <Pressable accessibilityRole="button" onPress={() => router.push("/subscription")}>
-            <Text className="font-semibold text-saffronText">Manage</Text>
-          </Pressable>
+          {paymentsEnabled ? (
+            <Pressable accessibilityRole="button" onPress={() => router.push("/subscription")}>
+              <Text className="font-semibold text-saffronText">Manage</Text>
+            </Pressable>
+          ) : null}
         </View>
       ) : (
         <PrimaryButton
@@ -119,7 +122,7 @@ export default function ProfileScreen() {
           onPress={() => router.push("/sign-in")}
         />
       )}
-      {authState !== "loading" && !signedIn ? (
+      {paymentsEnabled && authState !== "loading" && !signedIn ? (
         <Pressable
           accessibilityRole="button"
           onPress={() => router.push("/subscription")}

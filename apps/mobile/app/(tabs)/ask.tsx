@@ -20,6 +20,7 @@ import { suggestedQuestions } from "@/data/content";
 import { removeSavedItem, saveItem, submitFeedback } from "@/lib/account";
 import { AskRequestError, askDharma, type AskStage } from "@/lib/askDharma";
 import { useCopy } from "@/lib/i18n";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 import { colors, layout } from "@/theme/tokens";
@@ -64,6 +65,45 @@ function askStageLabel(stage: AskStage): string {
 }
 
 export default function AskScreen() {
+  return isFeatureAvailable("ask") ? <AskEnabledScreen /> : <AskUnavailableScreen />;
+}
+
+function AskUnavailableScreen() {
+  const router = useRouter();
+  return (
+    <SafeAreaView
+      edges={["top"]}
+      className="flex-1 bg-parchment"
+      style={{ flex: 1, backgroundColor: colors.parchment }}
+    >
+      <View className="flex-1 px-5 pt-2">
+        <TopBar
+          eyebrow="Core pilot"
+          title="Ask is not available"
+          onProfile={() => router.push("/profile")}
+        />
+        <Card className="mt-5">
+          <Text className="text-[17px] font-semibold text-ink">
+            The learning library is ready without live AI.
+          </Text>
+          <Text className="mt-2 text-[15px] leading-6 text-muted">
+            Ask is held back until the source corpus, provider configuration, and review operation
+            are ready. Your daily shloka, practices, journal, and saved items remain available.
+          </Text>
+          <Pressable
+            accessibilityRole="button"
+            onPress={() => router.back()}
+            className="mt-4 self-start rounded-full bg-saffron px-4 py-2.5"
+          >
+            <Text className="text-sm font-semibold text-black">Back to the library</Text>
+          </Pressable>
+        </Card>
+      </View>
+    </SafeAreaView>
+  );
+}
+
+function AskEnabledScreen() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const { conversationId: initialConversationId, prompt: initialPrompt } = useLocalSearchParams<{
@@ -250,7 +290,8 @@ export default function AskScreen() {
                     {mutation.error.message}
                   </Text>
                   {mutation.error instanceof AskRequestError &&
-                  mutation.error.code === "quota_exceeded" ? (
+                  mutation.error.code === "quota_exceeded" &&
+                  isFeatureAvailable("payments") ? (
                     <Pressable
                       accessibilityRole="button"
                       onPress={() => router.push("/subscription")}
@@ -258,6 +299,13 @@ export default function AskScreen() {
                     >
                       <Text className="text-sm font-semibold text-black">Explore Plus</Text>
                     </Pressable>
+                  ) : null}
+                  {mutation.error instanceof AskRequestError &&
+                  mutation.error.code === "quota_exceeded" &&
+                  !isFeatureAvailable("payments") ? (
+                    <Text className="mt-3 text-sm leading-5 text-muted">
+                      Additional questions are not available in the core pilot.
+                    </Text>
                   ) : null}
                   {mutation.error instanceof AskRequestError &&
                   mutation.error.code === "auth_required" ? (

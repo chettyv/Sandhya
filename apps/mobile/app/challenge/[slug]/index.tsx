@@ -8,6 +8,7 @@ import { localDateKey } from "@/lib/activity";
 import { useAuthState } from "@/lib/authState";
 import { useChallengePolling } from "@/lib/challengePolling";
 import { type ChallengeSessionMeta, useChallengeOverview } from "@/lib/challenges";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { purchaseChallenge } from "@/lib/subscriptions";
 import { colors } from "@/theme/tokens";
 
@@ -16,11 +17,28 @@ const MIN_VISIBLE_PARTICIPANTS = 25;
 
 export default function ChallengeOverviewScreen() {
   const { slug } = useLocalSearchParams<{ slug?: string }>();
-  const { data, isPending, isError, refetch } = useChallengeOverview(slug);
+  const challengeAvailable = isFeatureAvailable("challenge");
+  const { data, isPending, isError, refetch } = useChallengeOverview(
+    challengeAvailable ? slug : undefined,
+  );
   const authState = useAuthState();
   const refreshChallenge = useCallback(() => {
     void refetch();
   }, [refetch]);
+
+  if (!challengeAvailable) {
+    return (
+      <Page>
+        <EmptyState
+          icon="moon-outline"
+          title="Challenge unavailable"
+          body="The finite challenge is not enabled in this core build. The daily library remains open."
+          action="Go back"
+          onAction={() => router.back()}
+        />
+      </Page>
+    );
+  }
 
   if (isPending) {
     return (

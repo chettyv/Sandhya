@@ -4,6 +4,7 @@ import type { ComponentProps } from "react";
 import { Platform, StyleSheet } from "react-native";
 
 import { useCopy } from "@/lib/i18n";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { colors, layout } from "@/theme/tokens";
 
 type IconName = ComponentProps<typeof Ionicons>["name"];
@@ -22,6 +23,7 @@ function TabIcon({
 
 export default function TabLayout() {
   const t = useCopy();
+  const askAvailable = isFeatureAvailable("ask");
   return (
     <Tabs
       screenOptions={{
@@ -61,19 +63,21 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="ask"
-        options={{
-          title: t("chat"),
-          tabBarIcon: ({ color, focused }) => (
-            <TabIcon
-              name={focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"}
-              color={color}
-              focused={focused}
-            />
-          ),
-        }}
-      />
+      {askAvailable ? (
+        <Tabs.Screen
+          name="ask"
+          options={{
+            title: t("chat"),
+            tabBarIcon: ({ color, focused }) => (
+              <TabIcon
+                name={focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"}
+                color={color}
+                focused={focused}
+              />
+            ),
+          }}
+        />
+      ) : null}
       <Tabs.Screen
         name="explore"
         options={{

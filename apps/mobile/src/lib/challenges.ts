@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { localDateKey } from "./activity";
+import { isFeatureAvailable } from "./launchProfile";
 import { supabase } from "./supabase";
 
 export type ChallengeSummary = {
@@ -62,6 +63,7 @@ export type ChallengeSessionResult =
   | { status: "ok"; session: ChallengeSessionDetail };
 
 export async function fetchFeaturedChallenge(): Promise<ChallengeSummary | null> {
+  if (!isFeatureAvailable("challenge")) return null;
   if (!supabase) return null;
   const { data, error } = await supabase
     .from("challenges")
