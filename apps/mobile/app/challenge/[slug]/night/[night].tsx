@@ -9,7 +9,9 @@ import {
   View,
 } from "react-native";
 
+import { AudioAvailability } from "@/components/AudioAvailability";
 import { Card, EmptyState, Page, PrimaryButton } from "@/components/ui";
+import { resolveChallengeAudio } from "@/lib/audio";
 import {
   addDays,
   type ShlokaBlock,
@@ -39,6 +41,9 @@ export default function ChallengeNightScreen() {
   const offsetsRef = useRef<Partial<Record<NightSection["key"], number>>>({});
 
   const session = data?.status === "ok" ? data.session : null;
+  const audioAsset = session
+    ? resolveChallengeAudio(session.audioPath, session.audioSlowPath, "clear")
+    : null;
   const sections = useMemo(() => (session ? nightSections(session.content) : []), [session]);
 
   if (!validNight) {
@@ -181,6 +186,7 @@ export default function ChallengeNightScreen() {
       </View>
 
       <View onLayout={recordOffset("shloka")}>
+        <AudioAvailability asset={audioAsset} label="Tonight's pronunciation audio" />
         {session.content.shloka.map((block, index) => (
           <ShlokaCard key={index} block={block} endowed={index === 0} />
         ))}
