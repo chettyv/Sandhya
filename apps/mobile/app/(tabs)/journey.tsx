@@ -8,6 +8,7 @@ import { Card, ListRow, Page, SectionHeader, TopBar } from "@/components/ui";
 import { calculateCurrentStreak, loadActivityDates } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
@@ -20,6 +21,7 @@ export default function JourneyScreen() {
   const completedPracticeIds = useAppStore((state) => state.completedPracticeIds);
   const completedDateKeys = useAppStore((state) => state.completedDateKeys);
   const displayName = useAppStore((state) => state.displayName);
+  const askAvailable = isFeatureAvailable("ask");
   const [activityDates, setActivityDates] = useState<string[]>([]);
 
   useEffect(() => {
@@ -134,12 +136,14 @@ export default function JourneyScreen() {
           subtitle="Private reflections and prompts"
           onPress={() => router.push("/journal")}
         />
-        <ListRow
-          icon="chatbubbles-outline"
-          title="Conversation history"
-          subtitle="Your private Ask Dharma questions"
-          onPress={() => router.push("/conversations")}
-        />
+        {askAvailable ? (
+          <ListRow
+            icon="chatbubbles-outline"
+            title="Conversation history"
+            subtitle="Your private source-grounded questions"
+            onPress={() => router.push("/conversations")}
+          />
+        ) : null}
         <ListRow
           icon="time-outline"
           title="Practice history"

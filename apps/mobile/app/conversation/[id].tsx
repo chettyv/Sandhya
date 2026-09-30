@@ -1,12 +1,13 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { useLocalSearchParams, useRouter } from "expo-router";
+import { Redirect, useLocalSearchParams, useRouter } from "expo-router";
 import { ActivityIndicator, FlatList, Pressable, Text, View } from "react-native";
 
 import { Card, EmptyState, LoadingState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { removeSavedItem, saveItem } from "@/lib/account";
 import { useAuthState } from "@/lib/authState";
 import { loadConversationMessages } from "@/lib/conversations";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
 
@@ -15,15 +16,18 @@ export default function ConversationDetailScreen() {
   const router = useRouter();
   const queryClient = useQueryClient();
   const authState = useAuthState();
+  const askAvailable = isFeatureAvailable("ask");
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
   const messages = useQuery({
     queryKey: ["conversation-messages", id],
     queryFn: () => loadConversationMessages(id ?? ""),
-    enabled: Boolean(id) && authState === "signed_in",
+    enabled: askAvailable && Boolean(id) && authState === "signed_in",
     staleTime: 30_000,
     initialData: [],
   });
+
+  if (!askAvailable) return <Redirect href="/(tabs)/journey" />;
 
   if (authState === "loading")
     return (

@@ -14,6 +14,7 @@ import {
 } from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { supabase } from "@/lib/supabase";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
@@ -33,6 +34,7 @@ export default function SacredTextDetailScreen() {
   const router = useRouter();
   const { id } = useLocalSearchParams<{ id: string }>();
   const { data: content, isFetching } = useCuratedContent();
+  const askAvailable = isFeatureAvailable("ask");
   const text = content.texts.find((item) => item.id === id);
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
@@ -138,25 +140,27 @@ export default function SacredTextDetailScreen() {
         </Card>
       )}
 
-      <Pressable
-        accessibilityRole="button"
-        onPress={() =>
-          router.push({
-            pathname: "/(tabs)/ask",
-            params: { prompt: `How do different Hindu traditions understand ${text.title}?` },
-          })
-        }
-        className="mt-5 flex-row items-center gap-3 rounded-card border border-line bg-surface p-4"
-      >
-        <Ionicons name="sparkles-outline" size={22} color={colors.saffron} />
-        <View className="flex-1">
-          <Text className="font-semibold text-ink">Ask about this text</Text>
-          <Text className="mt-1 text-sm leading-5 text-muted">
-            Compare interpretations using the grounded source library.
-          </Text>
-        </View>
-        <Ionicons name="chevron-forward" size={18} color={colors.muted} />
-      </Pressable>
+      {askAvailable ? (
+        <Pressable
+          accessibilityRole="button"
+          onPress={() =>
+            router.push({
+              pathname: "/(tabs)/ask",
+              params: { prompt: `How do different Hindu traditions understand ${text.title}?` },
+            })
+          }
+          className="mt-5 flex-row items-center gap-3 rounded-card border border-line bg-surface p-4"
+        >
+          <Ionicons name="sparkles-outline" size={22} color={colors.saffron} />
+          <View className="flex-1">
+            <Text className="font-semibold text-ink">Ask about this text</Text>
+            <Text className="mt-1 text-sm leading-5 text-muted">
+              Compare interpretations using the grounded source library.
+            </Text>
+          </View>
+          <Ionicons name="chevron-forward" size={18} color={colors.muted} />
+        </Pressable>
+      ) : null}
       <View className="mt-4">
         <SecondaryButton
           label={savedIds.includes(text.id) ? "Remove from saved" : "Save text"}

@@ -37,7 +37,7 @@ function askErrorTitle(error: unknown): string {
     case "quota_exceeded":
       return "You have used today’s free questions";
     case "auth_required":
-      return "Sign in to ask Dharma";
+      return "Sign in to ask a source-grounded question";
     case "rate_limited":
       return "Please slow down for a moment";
     case "monthly_budget_exceeded":

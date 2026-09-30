@@ -6,18 +6,20 @@ import { Card, EmptyState, LoadingState, Page } from "@/components/ui";
 import { useAuthState } from "@/lib/authState";
 import { useCuratedContent } from "@/lib/content";
 import { loadSavedMessages } from "@/lib/conversations";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { ConceptRow } from "@/screens/saved/ConceptRow";
 import { useAppStore } from "@/store/useAppStore";
 
 export default function SavedScreen() {
   const router = useRouter();
   const authState = useAuthState();
+  const askAvailable = isFeatureAvailable("ask");
   const savedIds = useAppStore((state) => state.savedIds);
   const { data: content } = useCuratedContent();
   const savedMessages = useQuery({
     queryKey: ["saved-messages"],
     queryFn: loadSavedMessages,
-    enabled: authState === "signed_in",
+    enabled: askAvailable && authState === "signed_in",
     staleTime: 30_000,
     initialData: [],
   });
@@ -77,18 +79,21 @@ export default function SavedScreen() {
         icon: "book-outline" as const,
         route: `/text/${item.id}` as const,
       })),
-    ...savedMessages.data.map((message) => ({
+    ...(askAvailable ? savedMessages.data : []).map((message) => ({
       id: message.id,
-      title: "Saved Ask Dharma answer",
+      title: "Saved grounded answer",
       subtitle: message.summary ?? message.content,
       icon: "sparkles-outline" as const,
       route: `/conversation/${message.conversationId}` as const,
     })),
   ];
 
-  const remoteError = authState === "signed_in" && savedMessages.isError;
+  const remoteError = askAvailable && authState === "signed_in" && savedMessages.isError;
   const remoteLoading =
-    authState === "signed_in" && savedMessages.isFetching && !savedMessages.data.length;
+    askAvailable &&
+    authState === "signed_in" &&
+    savedMessages.isFetching &&
+    !savedMessages.data.length;
   return (
     <Page scroll={false}>
       <FlatList
@@ -97,10 +102,10 @@ export default function SavedScreen() {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 8 }}
         ListHeaderComponent={
-          remoteError ? (
+          askAvailable && remoteError ? (
             <Card className="mb-4 bg-roseSoft">
               <Text className="font-semibold text-ink">
-                Saved Ask answers are temporarily unavailable
+                Saved grounded answers are temporarily unavailable
               </Text>
               <Text className="mt-1 text-sm leading-5 text-muted">
                 Your other saved items remain available. Check your connection and try again.
@@ -132,7 +137,7 @@ export default function SavedScreen() {
             <EmptyState
               icon="bookmark-outline"
               title="Nothing saved yet"
-              body="Save a reflection, concept, deity, sacred text, festival, practice, or Ask Dharma answer and it will wait here for you."
+              body="Save a reflection, concept, deity, sacred text, festival, or practice and it will wait here for you."
               action="Explore the library"
               onAction={() => router.replace("/(tabs)/explore")}
             />

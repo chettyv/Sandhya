@@ -20,7 +20,7 @@ const en = {
   reflect: "Reflect",
   begin: "Begin",
   learnMore: "Learn more",
-  askDharma: "Ask Dharma",
+  askDharma: "Grounded Q&A",
   askPlaceholder: "Ask about a teaching, practice, or tradition…",
   groundedNotice: "Answers are grounded in retrieved sources and may note different traditions.",
   browseBy: "Browse by",

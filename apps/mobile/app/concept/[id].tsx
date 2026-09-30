@@ -13,6 +13,7 @@ import {
 } from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
 
@@ -20,6 +21,7 @@ export default function ConceptDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
   const { data: content, isFetching } = useCuratedContent();
+  const askAvailable = isFeatureAvailable("ask");
   const concepts = content.concepts;
   const requestedConcept = concepts.find((item) => item.id === id);
   const concept = requestedConcept ?? concepts[0];
@@ -67,26 +69,32 @@ export default function ConceptDetailScreen() {
         </Card>
       ) : null}
 
-      <Text className="mb-3 mt-8 text-xl font-semibold text-ink">Explore with care</Text>
-      <Card>
-        <Text className="text-sm leading-6 text-muted">
-          Ask for source-grounded examples, or compare how a concept appears in different schools.
-          Answers will only cite passages returned by the source library.
-        </Text>
-      </Card>
+      {askAvailable ? (
+        <>
+          <Text className="mb-3 mt-8 text-xl font-semibold text-ink">Explore with care</Text>
+          <Card>
+            <Text className="text-sm leading-6 text-muted">
+              Ask for source-grounded examples, or compare how a concept appears in different
+              schools. Answers will only cite passages returned by the source library.
+            </Text>
+          </Card>
+        </>
+      ) : null}
       <View className="mt-5 gap-3">
-        <PrimaryButton
-          label={`Ask about ${concept.term}`}
-          icon="sparkles"
-          onPress={() =>
-            router.push({
-              pathname: "/(tabs)/ask",
-              params: {
-                prompt: `How is ${concept.term} understood in different Hindu traditions?`,
-              },
-            })
-          }
-        />
+        {askAvailable ? (
+          <PrimaryButton
+            label={`Ask about ${concept.term}`}
+            icon="sparkles"
+            onPress={() =>
+              router.push({
+                pathname: "/(tabs)/ask",
+                params: {
+                  prompt: `How is ${concept.term} understood in different Hindu traditions?`,
+                },
+              })
+            }
+          />
+        ) : null}
         <SecondaryButton
           label={saved ? "Remove from saved" : "Save concept"}
           icon={saved ? "bookmark" : "bookmark-outline"}

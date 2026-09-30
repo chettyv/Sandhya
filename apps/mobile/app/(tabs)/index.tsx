@@ -14,6 +14,7 @@ import { calculateCurrentStreak, localDateKey, removeSavedItem, saveItem } from 
 import { useFeaturedChallenge } from "@/lib/challenges";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { paymentsEnabled } from "@/lib/payments";
 import {
   dailyPrayer,
@@ -59,6 +60,7 @@ export default function HomeScreen() {
   const { data: content } = contentQuery;
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
+  const askAvailable = isFeatureAvailable("ask");
   const todayKey = localDateKey();
   const week = useMemo(() => buildWeek(), [todayKey]);
   const dateCircleSize = Math.min(
@@ -302,34 +304,36 @@ export default function HomeScreen() {
         </Card>
       )}
 
-      <LinearGradient
-        colors={["#B7663E", "#7A2F2A"]}
-        start={{ x: 0, y: 0 }}
-        end={{ x: 1, y: 0 }}
-        style={styles.askStrip}
-      >
-        <Pressable
-          accessibilityRole="button"
-          onPress={() =>
-            router.push({
-              pathname: "/(tabs)/ask",
-              params: { prompt: dailyReflection.prompt },
-            })
-          }
-          className="flex-row items-center gap-3"
+      {askAvailable ? (
+        <LinearGradient
+          colors={["#B7663E", "#7A2F2A"]}
+          start={{ x: 0, y: 0 }}
+          end={{ x: 1, y: 0 }}
+          style={styles.askStrip}
         >
-          <Ionicons name="create-outline" size={28} color={colors.white} />
-          <View className="min-w-0 flex-1">
-            <Text className="text-[12px] font-bold uppercase text-white">
-              Personalized reflection • 3 min
-            </Text>
-            <Text numberOfLines={1} className="mt-1 text-sm text-[#F7E8D8]">
-              {dailyReflection.prompt}
-            </Text>
-          </View>
-          <Ionicons name="chevron-down" size={24} color={colors.white} />
-        </Pressable>
-      </LinearGradient>
+          <Pressable
+            accessibilityRole="button"
+            onPress={() =>
+              router.push({
+                pathname: "/(tabs)/ask",
+                params: { prompt: dailyReflection.prompt },
+              })
+            }
+            className="flex-row items-center gap-3"
+          >
+            <Ionicons name="create-outline" size={28} color={colors.white} />
+            <View className="min-w-0 flex-1">
+              <Text className="text-[12px] font-bold uppercase text-white">
+                Personalized reflection • 3 min
+              </Text>
+              <Text numberOfLines={1} className="mt-1 text-sm text-[#F7E8D8]">
+                {dailyReflection.prompt}
+              </Text>
+            </View>
+            <Ionicons name="chevron-down" size={24} color={colors.white} />
+          </Pressable>
+        </LinearGradient>
+      ) : null}
 
       <SectionHeader
         title={t("upcoming")}

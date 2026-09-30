@@ -6,7 +6,7 @@ Production-oriented Expo + React Native frontend for iOS, Android, and web previ
 
 - **Home** — daily reflection, a gentle practice, journal prompt, upcoming festival, and learning shortcuts
 - **Calendar** — browsable festival calendar with explicit location/tradition caveats
-- **Ask** — structured, source-grounded Ask Dharma experience backed by the Supabase `ask` Edge Function, with streaming retrieval/generation status and a JSON fallback
+- **Ask** — structured, source-grounded Q&A experience backed by the Supabase `ask` Edge Function, with streaming retrieval/generation status and a JSON fallback
 - **Explore** — sacred-text catalog, concepts, deities, practice guides, festivals, and search
 - **Journey** — saved items, private journal, practice continuity, and account access
 
@@ -53,13 +53,13 @@ the Supabase connection, RevenueCat platform keys, or native notification/build
 packages are missing. Local web preview and non-production development profiles
 remain available with the fallback catalog.
 
-Without the public Supabase values, the fallback curated frontend remains browsable; sign-in and Ask Dharma display clear connection guidance instead of fabricated answers. With Supabase configured, the home, calendar, explore, detail, saved, journal, profile, subscription-status, and Ask flows read/write through the authenticated backend where supported.
+Without the public Supabase values, the fallback curated frontend remains browsable; sign-in and grounded Q&A display clear connection guidance instead of fabricated answers. With Supabase configured, the home, calendar, explore, detail, saved, journal, profile, subscription-status, and Ask flows read/write through the authenticated backend where supported.
 
 The main learning tabs disclose whether the catalog is fully connected, partially connected, or using the offline app-authored fallback so missing live content is not presented as a complete source library.
 
 ## Store and notification setup
 
-The app keeps the free tier server-enforced at five Ask Dharma messages per day. Plus entitlement state is read from `subscription_status`, which is updated by the RevenueCat webhook. Configure RevenueCat products, public iOS/Android SDK keys, the webhook signing secret, the server-only `REVENUECAT_API_KEY` (used to reconcile restore-to-another-account transfers), and the Supabase Edge Functions before enabling store checkout in a development build.
+The app keeps the free tier server-enforced at five grounded questions per day. Plus entitlement state is read from `subscription_status`, which is updated by the RevenueCat webhook. Configure RevenueCat products, public iOS/Android SDK keys, the webhook signing secret, the server-only `REVENUECAT_API_KEY` (used to reconcile restore-to-another-account transfers), and the Supabase Edge Functions before enabling store checkout in a development build.
 
 Daily reflection delivery also needs an Expo push token from a native development/production build, the `device_push_tokens` migration, `register-push-token`, the scheduled `send-daily-reflections` function, and `EXPO_ACCESS_TOKEN`. Festival reminders are local, one-time notifications scheduled from a festival detail page. Do not test remote push claims in Expo Go on Android SDK 53+.
 

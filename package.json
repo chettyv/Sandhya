@@ -30,6 +30,7 @@
     "backend:scheduler-check": "node scripts/verify-scheduler-contract.mjs",
     "backend:push-token-check": "node --experimental-transform-types scripts/verify-push-token-flow.mjs",
     "backend:schema-check": "node scripts/verify-database-contract.mjs",
+    "verify:technical-launch": "node scripts/verify-technical-launch.mjs",
     "backend:smoke:live": "node scripts/account-live-smoke.mjs",
     "backend:account-delete-smoke:live": "node scripts/account-delete-live-smoke.mjs",
     "backend:billing-smoke:live": "node scripts/revenuecat-sandbox-live-smoke.mjs",

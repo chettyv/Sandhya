@@ -34,7 +34,7 @@ const benefits = [
   ],
   [
     "sparkles-outline",
-    "More grounded Ask Dharma conversations",
+    "More grounded Q&A conversations",
     "Free includes five grounded questions each day; Plus removes the daily cap, subject to fair-use safeguards.",
   ],
   [
@@ -52,6 +52,16 @@ export default function SubscriptionScreen() {
   const [options, setOptions] = useState<PurchaseOption[]>([]);
   const [busy, setBusy] = useState(false);
   const signedIn = authState === "signed_in";
+
+  useEffect(() => {
+    if (!signedIn) {
+      setOptions([]);
+      return;
+    }
+    void getPurchaseOptions()
+      .then(setOptions)
+      .catch(() => setOptions([]));
+  }, [signedIn]);
 
   if (!paymentsEnabled) {
     return (
@@ -82,15 +92,6 @@ export default function SubscriptionScreen() {
     Platform.OS === "web"
       ? "Purchases are available in the iOS and Android app. Use the mobile app to subscribe or restore access."
       : "The RevenueCat public keys and App Store / Play product IDs must be configured before purchases can be enabled.";
-  useEffect(() => {
-    if (!signedIn) {
-      setOptions([]);
-      return;
-    }
-    void getPurchaseOptions()
-      .then(setOptions)
-      .catch(() => setOptions([]));
-  }, [signedIn]);
   const startPurchase = async (plan: "annual" | "monthly" | "lifetime") => {
     if (!signedIn) {
       Alert.alert(

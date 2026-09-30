@@ -76,7 +76,7 @@ describe("curated mobile seed content", () => {
     ).toContain("Never leave a flame unattended");
   });
 
-  it("offers several distinct Ask Dharma entry points", () => {
+  it("offers several distinct grounded-question entry points", () => {
     expect(suggestedQuestions.length).toBeGreaterThanOrEqual(4);
     expect(new Set(suggestedQuestions).size).toBe(suggestedQuestions.length);
   });
