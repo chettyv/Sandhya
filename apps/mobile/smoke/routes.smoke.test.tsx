@@ -24,8 +24,8 @@ const ROUTES: { path: string; anchor: RegExp }[] = [
   { path: "/journey", anchor: /Your journey/ },
   { path: "/settings", anchor: /Verses shown|Redo the setup questions|Appearance/ },
   { path: "/profile", anchor: /Profile/ },
-  { path: "/saved", anchor: /Saved/ },
-  { path: "/journal", anchor: /Journal/ },
+  { path: "/saved", anchor: /Nothing saved yet/ },
+  { path: "/journal", anchor: /A quiet page is waiting/ },
   { path: "/practice-history", anchor: /practice/i },
   { path: "/shlokas", anchor: /Every verse carries its pronunciation/ },
   { path: "/read", anchor: /Read continuously, verse by verse/ },
@@ -84,7 +84,8 @@ function healthProblems(): string[] {
 
 describe("every route renders on iOS", () => {
   it("boots into the Today tab, then every route draws its content", async () => {
-    renderRouter("./app", { initialUrl: "/" });
+    const navigation = renderRouter("./app", { initialUrl: "/" });
+    await navigation;
     await waitFor(() => expect(screen.getByText(/Today's Journey/)).toBeTruthy(), {
       timeout: TIMEOUT,
     });
@@ -99,6 +100,9 @@ describe("every route renders on iOS", () => {
         router.push(path);
       });
       try {
+        await waitFor(() => expect(navigation.getPathname()).toBe(path), {
+          timeout: TIMEOUT,
+        });
         await waitFor(() => expect(screen.getAllByText(anchor).length).toBeGreaterThan(0), {
           timeout: TIMEOUT,
         });

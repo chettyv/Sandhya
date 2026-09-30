@@ -63,21 +63,20 @@ export default function TabLayout() {
           ),
         }}
       />
-      {askAvailable ? (
-        <Tabs.Screen
-          name="ask"
-          options={{
-            title: t("chat"),
-            tabBarIcon: ({ color, focused }) => (
-              <TabIcon
-                name={focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"}
-                color={color}
-                focused={focused}
-              />
-            ),
-          }}
-        />
-      ) : null}
+      <Tabs.Screen
+        name="ask"
+        options={{
+          href: askAvailable ? undefined : null,
+          title: t("chat"),
+          tabBarIcon: ({ color, focused }) => (
+            <TabIcon
+              name={focused ? "chatbubble-ellipses" : "chatbubble-ellipses-outline"}
+              color={color}
+              focused={focused}
+            />
+          ),
+        }}
+      />
       <Tabs.Screen
         name="explore"
         options={{
