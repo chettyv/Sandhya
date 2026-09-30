@@ -24,7 +24,8 @@ values. `--allow-toolchain-mismatch` is diagnostic-only and cannot support a
 launch claim.
 
 Recorded source-safe run on 30 September 2026: coordinator branch
-`codex/launch-readiness`, base `58fdd07`, Node `v22.23.3`, pnpm `11.0.8`.
+`codex/launch-readiness`, base `58fdd07`, coordinator commit
+`92f653c46ab796393e8ff415337dc190e4933e39`, Node `v22.23.3`, pnpm `11.0.8`.
 All source-safe checks passed. This is evidence for the source tree only; it is
 not signed-build, physical-device, live-backend, rights, audio, or store
 evidence.

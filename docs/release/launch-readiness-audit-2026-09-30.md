@@ -30,6 +30,7 @@ The exact coordinator checkout is:
 branch:   codex/launch-readiness
 worktree: C:\Users\vaibh\.codex\worktrees\launch-readiness\Sandhya
 base:     58fdd07f62cd27159c93800f4bc84581290bfe7e
+commit:   92f653c46ab796393e8ff415337dc190e4933e39
 ```
 
 The main checkout and the existing `codex/next-wave` worktree were not edited.
@@ -71,33 +72,36 @@ ordering issue in the subscription screen.
 
 All of these branches remain present and their worktrees remain intact.
 
-| Branch                            | HEAD                                  | Relationship to Wave 2        | Finding                                                      |
-| --------------------------------- | ------------------------------------- | ----------------------------- | ------------------------------------------------------------ |
-| `codex/launch-readiness`          | `58fdd07` + local coordinator changes | Coordinator base              | Active audit/work branch                                     |
-| `codex/next-wave`                 | `58fdd07`                             | Same as Wave 2                | Existing worktree preserved and untouched                    |
-| `codex/c5-notifications`          | `492c07f`                             | Behind Wave 2                 | Contains the old untracked notification test artifact        |
-| `codex/c6-backend`                | `492c07f`                             | Behind Wave 2                 | No unique commits beyond baseline                            |
-| `codex/d3-audio`                  | `492c07f`                             | Behind Wave 2                 | No unique commits beyond baseline                            |
-| `codex/integration-review`        | `492c07f`                             | Behind Wave 2                 | Integration base only                                        |
-| `codex/content-readiness`         | `73d3f2b`                             | Ancestor already integrated   | Runtime/translation readiness work is in Wave 2              |
-| `codex/mobile-stability`          | `327b6bc`                             | Ancestor already integrated   | Lifecycle and launch UX work is in Wave 2                    |
-| `codex/production-config`         | `3880b07`                             | Ancestor already integrated   | Launch configuration work is in Wave 2                       |
-| `codex/closeout-smoke-fix`        | `a9ad898`                             | Separate older smoke-fix line | Superseded; its diff removes substantial Wave 2 safeguards   |
-| `codex/corpus-translation-launch` | `7702444`                             | Six commits ahead of Wave 2   | Content foundation/register branch; not launch-ready content |
-| `codex/lane-a-navratri`           | `a9f2a821`                            | Separate challenge worktree   | Preserved; no coordinator changes applied                    |
-| `main`                            | `0a361b1`                             | Technical-contract baseline   | Dirty with user-owned design/audit files; untouched          |
+| Branch                            | HEAD                                  | Relationship to Wave 2        | Finding                                                    |
+| --------------------------------- | ------------------------------------- | ----------------------------- | ---------------------------------------------------------- |
+| `codex/launch-readiness`          | `58fdd07` + local coordinator changes | Coordinator base              | Active audit/work branch                                   |
+| `codex/next-wave`                 | `58fdd07`                             | Same as Wave 2                | Existing worktree preserved and untouched                  |
+| `codex/c5-notifications`          | `492c07f`                             | Behind Wave 2                 | Contains the old untracked notification test artifact      |
+| `codex/c6-backend`                | `492c07f`                             | Behind Wave 2                 | No unique commits beyond baseline                          |
+| `codex/d3-audio`                  | `492c07f`                             | Behind Wave 2                 | No unique commits beyond baseline                          |
+| `codex/integration-review`        | `492c07f`                             | Behind Wave 2                 | Integration base only                                      |
+| `codex/content-readiness`         | `73d3f2b`                             | Ancestor already integrated   | Runtime/translation readiness work is in Wave 2            |
+| `codex/mobile-stability`          | `327b6bc`                             | Ancestor already integrated   | Lifecycle and launch UX work is in Wave 2                  |
+| `codex/production-config`         | `3880b07`                             | Ancestor already integrated   | Launch configuration work is in Wave 2                     |
+| `codex/closeout-smoke-fix`        | `a9ad898`                             | Separate older smoke-fix line | Superseded; its diff removes substantial Wave 2 safeguards |
+| `codex/corpus-translation-launch` | `69b110b`                             | Seven commits ahead of Wave 2 | Content foundation/review branch; not launch-ready content |
+| `codex/lane-a-navratri`           | `a9f2a821`                            | Separate challenge worktree   | Preserved; no coordinator changes applied                  |
+| `main`                            | `0a361b1`                             | Technical-contract baseline   | Dirty with user-owned design/audit files; untouched        |
 
 ## 5. Branch archaeology findings
 
 The only material branch divergence beyond the coordinator base is the corpus
 branch and the older closeout-smoke-fix branch.
 
-`codex/corpus-translation-launch` adds canonical witness and editorial
-decision machinery, 1,869 witness rows, rejection data, and detailed corpus /
-translation plans. It is valuable planning infrastructure, but it does not
-turn the source tracker into a rights-cleared corpus, does not supply named
-translation reviewers, and does not supply audio. It should not be presented
-as launch content without a content-owner review and explicit rights decisions.
+`codex/corpus-translation-launch` currently ends at `69b110b`. It adds
+canonical witness and editorial-decision machinery, 1,869 witness rows,
+rejection data, detailed corpus/translation plans, a 186-row glossary scaffold,
+locale style guides, and a 22,428-key durable translation-review register.
+The review register is structurally useful but contains only `draft` and
+`pending` rows; it does not supply named human-approved translations, turn the
+source tracker into a rights-cleared corpus, or supply audio. It should not be
+presented as launch content without a content-owner review and explicit rights
+decisions. It remains unmerged into the coordinator branch.
 
 `codex/closeout-smoke-fix` is not a safe merge candidate from this base: its
 diff removes the launch profile, audio, challenge, notification, backend body
@@ -129,6 +133,36 @@ Changes made in this worktree:
 
 No content schema, RAG interface, Edge Function request/response shape, source
 rights record, audio record, migration, or generated corpus was changed.
+
+Exact files changed in implementation commit `92f653c`:
+
+```text
+apps/mobile/README.md
+apps/mobile/app/(tabs)/ask.tsx
+apps/mobile/app/(tabs)/explore.tsx
+apps/mobile/app/(tabs)/index.tsx
+apps/mobile/app/(tabs)/journey.tsx
+apps/mobile/app/concept/[id].tsx
+apps/mobile/app/conversation/[id].tsx
+apps/mobile/app/conversations.tsx
+apps/mobile/app/deity/[id].tsx
+apps/mobile/app/legal.tsx
+apps/mobile/app/saved.tsx
+apps/mobile/app/subscription.tsx
+apps/mobile/app/text/[id].tsx
+apps/mobile/src/data/content.test.ts
+apps/mobile/src/lib/i18n.ts
+docs/release/launch-readiness-audit-2026-09-30.md
+docs/release/technical-launch-checklist.md
+package.json
+scripts/verify-account-flow.mjs
+scripts/verify-account-flow.test.mjs
+scripts/verify-technical-launch.mjs
+scripts/verify-technical-launch.test.mjs
+```
+
+The later documentation amendment commit updates only the two files under
+`docs/release/` with the final commit and live corpus-branch evidence.
 
 ## 7. Architecture and launch profile
 
@@ -343,8 +377,11 @@ so no language has a reviewed row.
 | `mr`   |  30 needs-review / 1,839 pending |  30 needs-review / 1,839 pending |
 | `ta`   |  30 needs-review / 1,839 pending |  30 needs-review / 1,839 pending |
 
-The manifest records text presence, not human approval. No translation or
-glossary coverage should be marketed as complete.
+The manifest records text presence, not human approval. The unmerged corpus
+branch adds a separate 22,428-key register (1,869 slugs × six locales × two
+content kinds); its current status counts are 3,648 `draft` and 18,780
+`pending`, with zero `source-reviewed`, `native-reviewed`, or `approved` rows.
+No translation or glossary coverage should be marketed as complete.
 
 ## 25. Audio readiness
 
@@ -356,8 +393,9 @@ This gate is hard-blocked.
 
 ## 26. Rights and provenance readiness
 
-The authoritative tracker currently has 431 rows, not the stale 432 count in
-some earlier notes. Status counts are:
+The authoritative tracker currently has 431 data rows (432 physical CSV lines
+including the header); some earlier notes call the header-inclusive line count
+the number of rows. Status counts are:
 
 ```text
 approved=1
@@ -411,7 +449,9 @@ configuration correctness is not store approval.
 
 ## 30. Test evidence
 
-The final source-safe verifier run on Node 22.23.3 / pnpm 11.0.8 passed:
+The final source-safe verifier run on the tree committed as
+`92f653c46ab796393e8ff415337dc190e4933e39`, using Node 22.23.3 / pnpm
+11.0.8, passed:
 
 - frozen install and workspace lock check;
 - content-tools build, shloka bank check, content validation;
@@ -450,8 +490,8 @@ Non-blocking but real warnings:
 
 - route smoke emits overlapping `act()`/unwrapped-update warnings;
 - Expo Go warns that remote Android push requires a development build;
-- the tracker/docs disagree on 431 versus 432 source rows and need one
-  authoritative count.
+- the tracker/docs use 431 data rows versus 432 header-inclusive CSV lines and
+  need one authoritative presentation.
 
 ## 32. Incomplete and intentionally cut features
 
