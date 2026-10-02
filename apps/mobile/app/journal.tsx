@@ -1,5 +1,5 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Alert,
   FlatList,
@@ -13,6 +13,7 @@ import {
 
 import { Card, EmptyState, LoadingState, Page, PrimaryButton } from "@/components/ui";
 import { deleteJournalEntry, saveJournalEntry, syncLocalJournalEntries } from "@/lib/account";
+import { createAccountHydrationGuard, type AccountHydrationContext } from "@/lib/accountHydration";
 import { readLocalJournal, GUEST_JOURNAL_SCOPE } from "@/lib/localJournalStorage";
 import { supabase } from "@/lib/supabase";
 import { colors } from "@/theme/tokens";
@@ -29,34 +30,57 @@ export default function JournalScreen() {
   const [loadState, setLoadState] = useState<"loading" | "ready" | "stale" | "error">("loading");
   const [reloadKey, setReloadKey] = useState(0);
 
+  const hydration = useRef(createAccountHydrationGuard());
+  const accountContext = useRef<AccountHydrationContext | null>(null);
+
   useEffect(() => {
     let active = true;
-    void (async () => {
+    let observedAuthEvent = false;
+    let controller: AbortController | undefined;
+    const guard = hydration.current;
+
+    const loadAccount = async (userId: string | null) => {
+      const changedAccount = accountContext.current?.userId !== userId;
+      const context = guard.begin(userId);
+      accountContext.current = context;
+      controller?.abort();
+      const requestController = new AbortController();
+      controller = requestController;
+      const isCurrent = () => active && guard.isCurrent(context);
+      if (changedAccount) {
+        setDraft("");
+        setMood("Thoughtful");
+        setComposing(false);
+        setEntries([]);
+      }
+      setLoadState("loading");
       try {
-        const session = supabase ? (await supabase.auth.getSession()).data.session : null;
-        const localEntries = session
-          ? [
-              ...(await readLocalJournal(GUEST_JOURNAL_SCOPE)),
-              ...(await readLocalJournal(session.user.id)),
-            ]
+        const localEntries = userId
+          ? [...(await readLocalJournal(GUEST_JOURNAL_SCOPE)), ...(await readLocalJournal(userId))]
           : await readLocalJournal(GUEST_JOURNAL_SCOPE);
-        if (active) setEntries(localEntries);
-        if (!supabase || !session) {
-          if (active) setLoadState("ready");
+        if (!isCurrent()) return;
+        setEntries(localEntries);
+        if (!supabase || !userId) {
+          setLoadState("ready");
           return;
         }
-        await syncLocalJournalEntries().catch(() => undefined);
+        await syncLocalJournalEntries(userId).catch(() => undefined);
+        if (!isCurrent()) return;
         const remainingLocalEntries = [
           ...(await readLocalJournal(GUEST_JOURNAL_SCOPE)),
-          ...(await readLocalJournal(session.user.id)),
+          ...(await readLocalJournal(userId)),
         ];
+        if (!isCurrent()) return;
         const { data, error } = await supabase
           .from("journal_entries")
           .select("id, entry, mood, date")
+          .eq("user_id", userId)
           .order("date", { ascending: false })
-          .order("created_at", { ascending: false });
+          .order("created_at", { ascending: false })
+          .abortSignal(requestController.signal);
+        if (!isCurrent()) return;
         if (error) {
-          if (active) setLoadState(localEntries.length ? "stale" : "error");
+          setLoadState(localEntries.length ? "stale" : "error");
           return;
         }
         const rows = (data ?? []) as unknown as JournalRow[];
@@ -67,19 +91,34 @@ export default function JournalScreen() {
           date: item.date,
         }));
         const remoteKeys = new Set(remoteEntries.map((item) => `${item.date}:${item.text}`));
-        if (active) {
-          setEntries([
-            ...remoteEntries,
-            ...remainingLocalEntries.filter((item) => !remoteKeys.has(`${item.date}:${item.text}`)),
-          ]);
-          setLoadState("ready");
-        }
+        setEntries([
+          ...remoteEntries,
+          ...remainingLocalEntries.filter((item) => !remoteKeys.has(`${item.date}:${item.text}`)),
+        ]);
+        setLoadState("ready");
       } catch {
-        if (active) setLoadState("error");
+        if (isCurrent()) setLoadState("error");
+      }
+    };
+    const { data } = supabase?.auth.onAuthStateChange((_event, session) => {
+      observedAuthEvent = true;
+      const userId = session?.user.id ?? null;
+      if (active && accountContext.current?.userId !== userId) void loadAccount(userId);
+    }) ?? { data: null };
+    void (async () => {
+      try {
+        const session = supabase ? (await supabase.auth.getSession()).data.session : null;
+        if (active && !observedAuthEvent) await loadAccount(session?.user.id ?? null);
+      } catch {
+        if (active && !observedAuthEvent) setLoadState("error");
       }
     })();
     return () => {
       active = false;
+      controller?.abort();
+      data?.subscription.unsubscribe();
+      guard.begin(null);
+      accountContext.current = null;
     };
   }, [reloadKey]);
 
@@ -89,29 +128,44 @@ export default function JournalScreen() {
   };
 
   const addEntry = () => {
-    if (!draft.trim()) return;
+    const context = accountContext.current;
+    if (!draft.trim() || !context) return;
     const entry = draft.trim();
-    void saveJournalEntry(entry, mood)
+    void saveJournalEntry(entry, mood, context.userId)
       .then((result) => {
+        if (!hydration.current.isCurrent(context)) return;
         setEntries((items) => [{ id: result.id, text: entry, mood, date: result.date }, ...items]);
         if (!result.synced)
           Alert.alert("Saved on this device", "Sign in to sync this journal entry across devices.");
       })
-      .catch(() => Alert.alert("Could not save journal entry", "Please try again."));
+      .catch(() => {
+        if (hydration.current.isCurrent(context))
+          Alert.alert("Could not save journal entry", "Please try again.");
+      });
     setDraft("");
     setComposing(false);
   };
 
   const removeEntry = (entry: Entry) => {
+    const context = accountContext.current;
+    if (!context) return;
     Alert.alert("Delete this entry?", "This cannot be undone.", [
       { text: "Cancel", style: "cancel" },
       {
         text: "Delete",
         style: "destructive",
-        onPress: () =>
-          void deleteJournalEntry(entry.id)
-            .then(() => setEntries((items) => items.filter((item) => item.id !== entry.id)))
-            .catch(() => Alert.alert("Could not delete entry", "Please try again.")),
+        onPress: () => {
+          if (!hydration.current.isCurrent(context)) return;
+          void deleteJournalEntry(entry.id, context.userId)
+            .then(() => {
+              if (hydration.current.isCurrent(context))
+                setEntries((items) => items.filter((item) => item.id !== entry.id));
+            })
+            .catch(() => {
+              if (hydration.current.isCurrent(context))
+                Alert.alert("Could not delete entry", "Please try again.");
+            });
+        },
       },
     ]);
   };

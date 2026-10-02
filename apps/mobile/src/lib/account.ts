@@ -184,6 +184,7 @@ export type JournalEntryResult = { id: string; date: string; synced: boolean };
 export async function saveJournalEntry(
   entry: string,
   mood = "Thoughtful",
+  expectedUserId?: string | null,
 ): Promise<JournalEntryResult> {
   const text = entry.trim();
   if (!text) throw new Error("A journal entry cannot be empty.");
@@ -196,8 +197,10 @@ export async function saveJournalEntry(
     date: localDateKey(),
   };
   const userId = await currentUserId().catch(() => null);
-  const journalScope = userId ?? GUEST_JOURNAL_SCOPE;
-  if (userId) {
+  // Keep an in-flight draft in its original account scope if auth changed.
+  const ownerId = expectedUserId === undefined ? userId : expectedUserId;
+  const journalScope = ownerId ?? GUEST_JOURNAL_SCOPE;
+  if (userId && userId === ownerId) {
     const { data, error } = await supabase!
       .from("journal_entries")
       .insert({ user_id: userId, entry: text, mood })
@@ -289,13 +292,18 @@ async function syncLocalJournalEntriesInternal(expectedUserId?: string): Promise
   await updateLocalJournal(userId, (entries) => entries.filter((item) => !handledIds.has(item.id)));
 }
 
-export async function deleteJournalEntry(entryId: string): Promise<void> {
+export async function deleteJournalEntry(
+  entryId: string,
+  expectedUserId?: string | null,
+): Promise<void> {
+  const userId = await currentUserId().catch(() => null);
+  if (expectedUserId !== undefined && expectedUserId !== userId)
+    throw new Error("The journal account changed.");
   if (entryId.startsWith("local-")) {
-    const userId = await currentUserId().catch(() => null);
     await removeLocalJournalEntry(entryId, [GUEST_JOURNAL_SCOPE, userId ?? "guest"]);
     return;
   }
-  const userId = await currentUserId();
+  if (!userId) throw new Error("Please sign in before deleting this entry.");
   const { error } = await supabase!
     .from("journal_entries")
     .delete()

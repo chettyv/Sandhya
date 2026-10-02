@@ -21,7 +21,7 @@ vi.mock("./secureStorage", () => ({
 vi.mock("./notifications", () => ({ configureDailyReminder: vi.fn() }));
 vi.mock("./supabase", () => ({ supabase: supabaseMock }));
 
-const { loadSavedItemsAfterSync, saveJournalEntry } = await import("./account");
+const { deleteJournalEntry, loadSavedItemsAfterSync, saveJournalEntry } = await import("./account");
 const { useAppStore } = await import("../store/useAppStore");
 const { readLocalJournal } = await import("./localJournalStorage");
 
@@ -79,5 +79,24 @@ describe("account state lifecycle", () => {
     expect(result).toBeNull();
     expect(upsert).toHaveBeenCalledOnce();
     expect(select).not.toHaveBeenCalled();
+  });
+
+  it("keeps a delayed save in the original account instead of the new account", async () => {
+    const originalUser = "22222222-2222-2222-2222-222222222222";
+    const result = await saveJournalEntry("Original account draft", "Peaceful", originalUser);
+
+    expect(result.synced).toBe(false);
+    expect(supabaseMock.from).not.toHaveBeenCalled();
+    expect((await readLocalJournal(originalUser)).map((item) => item.text)).toEqual([
+      "Original account draft",
+    ]);
+    expect(await readLocalJournal("11111111-1111-1111-1111-111111111111")).toEqual([]);
+  });
+
+  it("rejects deletion when the initiating account has changed", async () => {
+    await expect(
+      deleteJournalEntry("entry-from-original-account", "22222222-2222-2222-2222-222222222222"),
+    ).rejects.toThrow("The journal account changed.");
+    expect(supabaseMock.from).not.toHaveBeenCalled();
   });
 });
