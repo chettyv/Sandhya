@@ -19,8 +19,11 @@ migrated, or modified, and no corpus was re-embedded.
 
 - Removed apps/admin: seven files and its build/typecheck/test entry points.
   Protected backend admin APIs and their audit/authorization checks remain.
+  Cached admin build output was moved to ignored .cache/retired-admin-build-2026-10-02
+  rather than discarded.
 - Replaced the subscription storefront with a short free-library notice for stale
-  links. Removed profile promotion links and monthly/annual/lifetime purchase
+  links. Removed profile, Today, Explore, and deferred Ask promotion links,
+  obsolete restore instructions, and monthly/annual/lifetime purchase
   and offering helpers. Existing
   entitlement and webhook compatibility remain for backend records; one-off
   challenge payment adapters remain deferred.
@@ -128,11 +131,19 @@ Toolchain: Node 22.23.3, repository-pinned pnpm 11.0.8. Relevant checks were run
 before each substantial code batch; the full integrated baseline passed before
 cleanup.
 
-The final source gate is being recorded on the cleaned candidate. Its checks are:
-frozen install, workspace lock, content-tools build, generated shloka bank,
-content validation, runtime and translation manifests, script contract tests,
-Prettier, root typecheck/ESLint, route smoke, workspace tests/builds, backend
-checks, and Secretlint. Final result must be recorded before completion.
+**Passed:** pnpm verify:technical-launch, with all 19 reported checks green:
+pinned toolchain, frozen install, workspace lock, content-tools build, generated
+shloka bank, content validation, runtime manifest, translation manifest build and
+verification, script contract tests, Prettier, root typecheck/ESLint, route smoke,
+workspace tests/builds, backend checks, Secretlint, and runtime readiness safety.
+The report correctly leaves the external/device gates pending.
+
+The final UI deletions were additionally checked with mobile typecheck, root
+ESLint, and the full three-file/ten-scenario smoke suite. Workspace build passed
+with those edits. Local logs are preserved in .git/prelaunch-verified.log,
+.git/final-lint.log, .git/final-route-smoke.log, and .git/final-format.log;
+they are ignored verification artifacts. The later evidence commit changes
+only documentation.
 
 Separately verified: 144 mobile unit tests across 18 files; all eight journal
 account-switch regression scenarios; 117 RAG unit tests across 12 files;
