@@ -1,157 +1,81 @@
 # Sandhya
 
-An AI-powered companion for Hindu learning and daily practice. Mobile (iOS + Android) app backed by a RAG pipeline that grounds every AI answer in a curated, properly-licensed corpus of scripture, commentary, and curated content.
+A free daily learning and practice app built with Expo, React Native, TypeScript,
+and Supabase. The core release includes onboarding, daily verses and reflections,
+scripture reading, practices, qualified festival guides, saved items, a private
+journal, and account settings. The bundled library works offline.
 
-The product is non-sectarian by design (surfaces variation across traditions rather than picking one), refuses to act as guru / priest / doctor / therapist / lawyer (safety gate), and leans on hand-written static content for the everyday surface — AI is the fallback, not the default.
+Live AI and challenge purchases are deferred and default off. Subscriptions and
+the admin frontend have been retired. The static arrival website is built
+separately and remains unhosted.
 
-The current product, MVP, branch, and release summary is in [`CURRENT_SUMMARY.md`](CURRENT_SUMMARY.md).
-The authoritative architecture, schema, RAG design, and milestone reference remains
-[`docs/sandhya_build_reference.docx`](docs/sandhya_build_reference.docx).
+[CURRENT_SUMMARY.md](CURRENT_SUMMARY.md) is the current product and release status.
+[02-plan.md](02-plan.md) records the product decisions;
+[docs/technical-launch-contract.md](docs/technical-launch-contract.md) defines
+release acceptance. The architecture/schema reference is
+[docs/sandhya_build_reference.docx](docs/sandhya_build_reference.docx).
 
-## Stack (fixed for v1)
+## Repository
 
-| Layer          | Tool                                                                                       |
-| -------------- | ------------------------------------------------------------------------------------------ |
-| Mobile         | Expo + React Native + TypeScript (Expo Router, Tamagui or NativeWind)                      |
-| Backend        | Supabase (Postgres + Auth + Storage + Edge Functions)                                      |
-| Vector store   | Supabase pgvector                                                                          |
-| LLM            | Backend-only swappable provider (DeepSeek default; OpenAI-compatible / Anthropic optional) |
-| Embeddings     | OpenAI `text-embedding-3-small` (1536-dim)                                                 |
-| State (mobile) | TanStack Query + Zustand                                                                   |
-| Payments       | RevenueCat                                                                                 |
-| Push           | Expo Notifications                                                                         |
-| Analytics      | PostHog                                                                                    |
-| Errors         | Sentry                                                                                     |
-| Builds         | EAS Build + EAS Submit                                                                     |
+| Directory              | Purpose                                                         |
+| ---------------------- | --------------------------------------------------------------- |
+| apps/mobile            | Expo consumer app for iOS, Android, and web                     |
+| apps/web               | Static arrival pages from reviewed content/web Markdown         |
+| packages/content-tools | Content validation and generators                               |
+| packages/shared-types  | Backend and RAG contracts                                       |
+| packages/rag-pipeline  | Deferred AI pipeline and corpus maintenance                     |
+| supabase               | Edge Functions, migration history, and operational instructions |
+| content                | Editorial source files and challenge definitions                |
+| docs                   | Product decisions, source-rights records, and release evidence  |
 
-Hard rules: no LLM calls from the client, no LangChain in v1, no separate vector DB, RLS on every user-scoped table, structured-JSON output only.
+## Develop
 
-## Repo layout
+Use Node 22.x (`.nvmrc`) and pnpm 11.0.8 (`packageManager`).
 
-```
-Sandhya/
-├── apps/
-│   ├── mobile/             # Expo consumer app (iOS, Android, web)
-│   ├── web/                # Static arrival site built from content/web markdown
-│   └── admin/              # Static admin moderation/content console
-├── packages/
-│   ├── shared-types/       # Cross-package TS types (RAG schema, API contracts)
-│   ├── rag-pipeline/       # The RAG pipeline (library + CLI)
-│   └── content-tools/      # Content ingestion utilities
-├── supabase/
-│   ├── migrations/         # SQL migrations
-│   └── functions/          # Edge Functions
-├── content/                # Source corpus (Markdown), filled by PO
-├── .github/workflows/      # CI
-├── package.json            # Workspace root
-├── pnpm-workspace.yaml
-└── tsconfig.base.json
-```
-
-## Quickstart (run the app now)
-
-```bash
-pnpm install
+```sh
+pnpm install --frozen-lockfile
 pnpm --filter @sandhya/mobile start
+# Or use the browser:
+pnpm --filter @sandhya/mobile web
 ```
 
-Scan the QR with Expo Go on your phone ([full guide](docs/testing-in-expo-go.md)), or press `w` for the web build. The `start` script forces Expo Go mode (`expo start --go`); a bare `npx expo start` defaults to development-build mode because `expo-dev-client` is installed, and its QR cannot be opened by a phone that has no development build. The app is pinned to Expo SDK 54 — the last SDK the App Store build of Expo Go runs ([details](apps/mobile/README.md#run-locally)). The app runs fully offline on the bundled catalog; add `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` to `.env` for auth + live data.
+The start script uses Expo Go. For a custom native development build, use
+`pnpm --filter @sandhya/mobile start:dev-client`. See
+[apps/mobile/README.md](apps/mobile/README.md) for platform setup.
 
-## Prerequisites
+Offline browsing needs no keys. For live auth/sync, put the public Supabase
+configuration in `apps/mobile/.env`, or provide it in the process/EAS environment.
+Use [.env.example](.env.example) as the configuration reference. Keep server
+credentials in the backend environment; never copy them into public variables.
 
-- **Node 22 LTS** — pinned in `.nvmrc`. The package.json `engines.node` is `>=22.0.0 <23`.
-- **pnpm 11** — pinned in `package.json` `packageManager`. Install with `winget install pnpm.pnpm` (Windows), `brew install pnpm` (macOS), or `npm i -g pnpm@11`.
-- **git** with line-ending mode set sensibly (`core.autocrlf=input` on Windows is fine).
+## Verify
 
-Optional tooling:
-
-- Supabase CLI (`npm i -g supabase`)
-- Expo CLI (bundled with the `apps/mobile` install)
-- A static-site host for `apps/admin/dist/` (Vercel, Cloudflare Pages, or equivalent)
-- EAS CLI (`npm i -g eas-cli`)
-
-## Setup
-
-```bash
-# 1. Clone
-git clone <repo-url> sandhya
-cd sandhya
-
-# 2. Install deps for every workspace
-pnpm install
-
-# 3. Copy and fill the env file
-cp .env.example .env
-# Edit .env — see comments in the file for what each var means.
-
-# 4. Run the standard checks
-pnpm typecheck
-pnpm lint
-pnpm test
+```sh
+pnpm verify:technical-launch # Local source/build gate; includes frozen install
+pnpm typecheck              # Workspace TypeScript
+pnpm lint                   # Repository ESLint
+pnpm test                   # Meaningful workspace unit/integration tests
+pnpm --filter @sandhya/mobile test:smoke # Real route rendering, core/full profiles
+pnpm build                  # Packages, mobile web export, static arrival website
+pnpm backend:source-check   # Backend source contracts without builds/live writes
+pnpm format:check           # Prettier
+pnpm secrets:scan           # Secretlint
 ```
 
-Husky hooks are installed automatically by the `prepare` script that runs after `pnpm install`. They run `lint-staged` on staged files at pre-commit and run `commitlint` on the commit message.
+Husky checks staged files and Conventional Commit messages. See
+[CONTRIBUTING.md](CONTRIBUTING.md). Content generation and maintenance commands
+remain in package.json; migration and deployment procedures live in
+[supabase/README.md](supabase/README.md). The launch gate never deploys, applies
+production migrations, calls live smoke endpoints, or re-embeds content.
 
-## Common commands
+## Release
 
-```bash
-pnpm build          # Build every workspace
-pnpm typecheck      # Typecheck every workspace
-pnpm lint           # ESLint across the repo
-pnpm format         # Prettier write
-pnpm format:check   # Full Prettier check
-pnpm format:check:changed # Changed-file check used by CI
-pnpm test           # Vitest in every workspace
-pnpm secrets:scan   # secretlint over the whole repo (also runs on staged files pre-commit)
-
-# Per-package, e.g.:
-pnpm --filter @sandhya/shared-types build
-pnpm --filter @sandhya/rag-pipeline test
-```
-
-## Environment variables
-
-See `.env.example`. Every variable is documented inline. Two ground rules:
-
-1. **Anything without an `EXPO_PUBLIC_` prefix is server-only.** It must never be imported from `apps/mobile`. Doing so leaks the value into the app bundle.
-2. **`EXPO_PUBLIC_*` is visible to anyone with the binary.** Only public keys (Supabase anon, RevenueCat public, PostHog, Sentry DSN) go there.
-
-## Current product status
-
-✅ Built in the current product slice:
-
-- pnpm monorepo with Node 22 / pnpm 11 pinning
-- TypeScript strict (`tsconfig.base.json`)
-- ESLint (flat config) + Prettier shared configs
-- Husky + lint-staged + commitlint (Conventional Commits)
-- Vitest wired into every real package (`pnpm test` runs with `--passWithNoTests`)
-- Compiling `shared-types`, `rag-pipeline`, and `content-tools` packages
-- Expo mobile app with onboarding, home, calendar, explore (including deity entries), Ask Dharma,
-  conversation history, festival reminders, journal, saved items, account settings, legal copy,
-  and subscription paywall UX
-- Supabase-authenticated conversations, server-enforced free quota, RevenueCat
-  webhook state, premium-content RLS, push-token registration, and daily delivery
-- Curated-content fallback for local browsing plus production table adapters
-- Dependency-free admin console for OTP sign-in, feedback review, and allowlisted
-  curated-content CRUD through protected Edge Functions
-- GitHub Actions CI: typecheck, lint, format check, test, commitlint
-- Documented `.env.example`
-
-⏳ Still required before public store launch:
-
-- Run Supabase migrations and populate only licensed, reviewed production content
-- Create RevenueCat products/entitlements and configure App Store / Play Store
-  credentials, webhook signing, the server-only subscriber API key for transfer
-  reconciliation, and public SDK keys
-- Install declared native packages with a network-enabled `pnpm install`, create
-  an EAS development build, and test purchases and push delivery on physical devices
-- Add production support/privacy URLs, mobile analytics/error DSNs, backend
-  telemetry secrets, and store metadata. The mobile telemetry adapter is opt-in,
-  emits only anonymous lifecycle/error events, and excludes prompts, answers,
-  tokens, emails, and user IDs.
-- Configure and host the admin console, then assign the admin role only to approved
-  operators; continue editorial, theological, regional, and safety review
+Local checks can pass while release prerequisites remain open. Track the exact
+candidate in [docs/release/technical-launch-checklist.md](docs/release/technical-launch-checklist.md).
+The [cleanup report](docs/release/prelaunch-cleanup-2026-10-02.md) records the
+branch consolidation, removals, verification, and remaining blockers.
 
 ## License
 
-UNLICENSED. All rights reserved. Source content licensing is tracked per-source in the corpus metadata (see `content/README.md`).
+UNLICENSED. Source rights are recorded in
+[docs/SOURCES-AND-ATTRIBUTION.md](docs/SOURCES-AND-ATTRIBUTION.md) and the source tracker.

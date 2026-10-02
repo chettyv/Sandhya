@@ -3,9 +3,9 @@
 **Started:** 12 August 2026. Maintained by the build agent; updated at the end of every work cycle.
 Inputs: `01-review.md` (repo root), `02-plan.md` v3 (repo root), `CURRENT_SUMMARY.md`, and direct verification of the code and Git state on 18 Aug 2026.
 
-## CURRENT STATE — 18 AUGUST 2026
+## HISTORICAL STATE — 18 AUGUST 2026
 
-This dated block is the source of truth for the present handoff. The cycle notes below are historical records and retain the numbers and decisions that were true when each cycle closed.
+For the present handoff, use CURRENT_SUMMARY.md. This dated block records the August handoff. The cycle notes below are historical records and retain the numbers and decisions that were true when each cycle closed.
 
 ### Done and verified
 

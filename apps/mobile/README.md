@@ -1,79 +1,65 @@
 # Sandhya mobile
 
-Production-oriented Expo + React Native frontend for iOS, Android, and web preview.
+Expo SDK 54, React Native 0.81.5, Expo Router, NativeWind, TanStack Query,
+Zustand, and Supabase. The free core profile includes Today, reading, practices,
+Calendar, Explore, Journey, saved items, journal, onboarding, and account settings.
+Live AI and the unpublished finite challenge are deferred. Subscriptions are retired.
 
-## App structure
+## Local development
 
-- **Home** — daily reflection, a gentle practice, journal prompt, upcoming festival, and learning shortcuts
-- **Calendar** — browsable festival calendar with explicit location/tradition caveats
-- **Ask** — structured, source-grounded Q&A experience backed by the Supabase `ask` Edge Function, with streaming retrieval/generation status and a JSON fallback
-- **Explore** — sacred-text catalog, concepts, deities, practice guides, festivals, and search
-- **Journey** — saved items, private journal, practice continuity, and account access
+Run from the repository root with Node 22.x and pnpm 11.0.8:
 
-Supporting routes cover onboarding, reflection, festival, concept, deity, guided-practice details, practice history, profile, settings, saved items, conversation history, journal, subscription status, account-data export, and Supabase email/password, magic-link, and social authentication with password recovery.
-
-## Run locally
-
-From the repository root:
-
-```bash
-pnpm --filter @sandhya/mobile start
-pnpm --filter @sandhya/mobile android
-pnpm --filter @sandhya/mobile ios
+```sh
+pnpm install --frozen-lockfile
+pnpm --filter @sandhya/mobile start # Expo Go
 pnpm --filter @sandhya/mobile web
+pnpm --filter @sandhya/mobile start:dev-client # Custom native development build
 ```
 
-`start`, `android` and `ios` run in **Expo Go mode** (`expo start --go`), so the QR code opens directly in Expo Go when scanned with the iPhone Camera app. Because `expo-dev-client` is installed, a bare `npx expo start` defaults to development-build mode and prints a `sandhya://` QR that a phone without a development build cannot open — use the scripts above, or press `s` in the terminal to switch.
+Android and iOS scripts also select Expo Go. The development client is needed
+for native purchase and remote notification testing; use the profiles in eas.json.
+The iOS simulator requires macOS. Keep the SDK pinned while preparing this release.
 
-The app is pinned to **Expo SDK 54**: the App Store build of Expo Go stops at SDK 54 (newer SDKs need the builds from <https://expo.dev/go>). Do not bump `expo` without also deciding how the phone will run it. Check the phone's SDK in Expo Go → profile tab if the project refuses to load.
+## Configuration
 
-For native purchase and push testing, create a development build with the included `eas.json` and run `pnpm --filter @sandhya/mobile start:dev-client`; Expo Go is only suitable for the web/local UI loop, not real store purchases or Android remote push.
+Offline browsing works without credentials. For auth and account sync, provide
+public Supabase values in apps/mobile/.env or the process/EAS environment.
+The root [.env.example](../../.env.example) lists the variables; Expo loads
+local environment files from this app's directory.
 
-## Environment
+Production configuration requires the Supabase URL/anon key, EAS project ID,
+support email, and public Privacy/Terms URLs. RevenueCat platform keys are required
+only when payments are explicitly enabled. The core profile leaves payment SDK
+initialization off. Server secrets belong only in the backend environment.
 
-Copy the relevant public values into the root `.env` or an Expo-compatible local environment file:
+Public feature flags are read with explicit process.env.EXPO*PUBLIC*\* references
+so Expo can inline them into the bundle. Do not pass process.env wholesale to a
+runtime feature parser. Backend policy independently controls live APIs.
 
-```text
-EXPO_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
-EXPO_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
-EXPO_PUBLIC_EAS_PROJECT_ID=your-eas-project-id
-EXPO_PUBLIC_SUPPORT_EMAIL=
-EXPO_PUBLIC_PRIVACY_URL=
-EXPO_PUBLIC_TERMS_URL=
-EXPO_PUBLIC_REVENUECAT_API_KEY_IOS=your-public-ios-sdk-key
-EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID=your-public-android-sdk-key
-```
+## Native services
 
-These values are safe for the client only when Supabase RLS and Edge Function authentication are configured correctly. Never expose the service-role key or any LLM key.
+Daily reminders use expo-notifications. Remote delivery needs a native build,
+authenticated device-token registration, the scheduled backend sender, and its
+server configuration. Festival guides without a verified local date cannot schedule
+reminders. Notification routing must be checked on signed devices.
 
-Set the support email and public Privacy/Terms URLs before any store submission; the blank values above intentionally keep an unconfigured build from promising unreachable support or legal pages.
+The historical subscription entitlement schema and webhook remain for compatibility.
+A future finite challenge uses one-off RevenueCat products named
+sandhya*challenge*<slug-with-underscores>. Complete its publication and sandbox
+purchase/restore gates before enabling checkout. No subscription storefront remains.
 
-The EAS `production` profile fails configuration when any of those public values,
-the Supabase connection, RevenueCat platform keys, or native notification/build
-packages are missing. Local web preview and non-production development profiles
-remain available with the fallback catalog.
+## Verification
 
-Without the public Supabase values, the fallback curated frontend remains browsable; sign-in and grounded Q&A display clear connection guidance instead of fabricated answers. With Supabase configured, the home, calendar, explore, detail, saved, journal, profile, subscription-status, and Ask flows read/write through the authenticated backend where supported.
-
-The main learning tabs disclose whether the catalog is fully connected, partially connected, or using the offline app-authored fallback so missing live content is not presented as a complete source library.
-
-## Store and notification setup
-
-The app keeps the free tier server-enforced at five grounded questions per day. Plus entitlement state is read from `subscription_status`, which is updated by the RevenueCat webhook. Configure RevenueCat products, public iOS/Android SDK keys, the webhook signing secret, the server-only `REVENUECAT_API_KEY` (used to reconcile restore-to-another-account transfers), and the Supabase Edge Functions before enabling store checkout in a development build.
-
-Daily reflection delivery also needs an Expo push token from a native development/production build, the `device_push_tokens` migration, `register-push-token`, the scheduled `send-daily-reflections` function, and `EXPO_ACCESS_TOKEN`. Festival reminders are local, one-time notifications scheduled from a festival detail page. Do not test remote push claims in Expo Go on Android SDK 53+.
-
-The native packages are declared in `apps/mobile/package.json`: `expo-dev-client` for development builds, `expo-notifications` for reminders/push tokens, and `react-native-purchases` for store checkout. Install them from the repository root before creating a native build, then run `pnpm install` so the lockfile and workspace are in sync. The web adapter remains deliberately inert; native builds use remote delivery when the authenticated token registration succeeds and an on-device scheduled reminder as a fallback.
-
-RevenueCat also needs matching monthly, annual, and lifetime products attached to a current offering, with the `plus_monthly`, `plus_annual`, or `lifetime` product naming convention used by the webhook. Configure the webhook signing secret and point it at the deployed `revenuecat-webhook` function. Store product identifiers and prices come from RevenueCat; they are not hard-coded into the app.
-
-## Quality checks
-
-```bash
-node scripts/verify-content-catalog.mjs
+```sh
 pnpm --filter @sandhya/mobile typecheck
-pnpm --filter @sandhya/mobile lint
-pnpm --filter @sandhya/mobile build
+pnpm --filter @sandhya/mobile test
+pnpm --filter @sandhya/mobile test:smoke
+pnpm --filter @sandhya/mobile build # Production web export
+pnpm verify:technical-launch # Full repository source/build gate
 ```
 
-The data in `src/data/content.ts` and `src/data/appAuthoredCatalog.ts` is a safe presentation fallback: 50 concept introductions, 20 practice guides, 21 festival explainers, and 30 rotating reflections. These entries are original educational copy, not scripture quotations or a substitute for source review. Festival guides without a verified date are intentionally read-only; they cannot schedule a reminder. Authored preview dates are also synchronized into the generated Supabase catalog migration, while production calendar coverage still requires reviewed, location-aware calculations or precomputed dates. All source-linked content must pass the repository licensing tracker.
+The bundled bank has 661 units. App-authored fallback explanations include
+50 concepts, 20 practices, 21 festivals, and 30 reflections. These explanations
+are original educational copy; content readiness, reviewed translations, human audio,
+and live/device evidence remain recorded in the
+[release checklist](../../docs/release/technical-launch-checklist.md).

@@ -2,7 +2,7 @@
 
 This checklist is the release evidence companion to
 [`docs/technical-launch-contract.md`](../technical-launch-contract.md). It
-belongs to the coordinator worktree and must be updated with dated evidence,
+must be updated with dated evidence,
 the commit, build profile, device/OS, network condition, and owner. A green
 source-safe run is not a substitute for signed-build or physical-device
 evidence.
@@ -23,12 +23,11 @@ migrations, re-embeds the corpus, submits a store build, or prints environment
 values. `--allow-toolchain-mismatch` is diagnostic-only and cannot support a
 launch claim.
 
-Recorded source-safe run on 30 September 2026: coordinator branch
-`codex/launch-readiness`, base `58fdd07`, coordinator commit
-`92f653c46ab796393e8ff415337dc190e4933e39`, Node `v22.23.3`, pnpm `11.0.8`.
-All source-safe checks passed. This is evidence for the source tree only; it is
-not signed-build, physical-device, live-backend, rights, audio, or store
-evidence.
+The 2 October 2026 cleanup consolidates the source tree on main. Exact cleanup
+commits, local checks, browser evidence, and outstanding release prerequisites
+are recorded in [the cleanup report](prelaunch-cleanup-2026-10-02.md).
+This is source/build evidence; signed native builds and live/device checks
+remain pending.
 
 ## Content and provenance
 
@@ -40,7 +39,7 @@ evidence.
 | Quotes                       | Named translator and source displayed with every quoted verse.                                                                                    | Must re-check on release candidate                           | Content/data    |
 | Festivals                    | Reckoning, observing community, computed location, source, and disagreements displayed for every published date.                                  | Must re-check on release candidate                           | Content/data    |
 | Tradition/regional variation | Actual variation fields render; no single tradition is presented as universal.                                                                    | Must re-check on release candidate                           | Product/content |
-| Rights tracker               | Every source row has translator, URL, copyright, storage, excerpt, and embedding decisions before corpus use.                                     | Blocked: 431 rows, 1 approved                                | Content/data    |
+| Rights tracker               | Every source row has translator, URL, copyright, storage, excerpt, and embedding decisions before corpus use.                                     | Blocked: 432 rows, 1 approved                                | Content/data    |
 
 ## Mobile and native evidence
 
@@ -78,7 +77,7 @@ These checks are intentionally not run by `pnpm verify:technical-launch`:
 
 Scoped AI remains disabled for the Navratri pilot. The live participation
 counter remains dark. No production migration, deployment, store submission,
-corpus re-embedding, or branch deletion is authorized by this checklist.
+or corpus re-embedding is authorized by this checklist.
 
 ## Release decision
 
