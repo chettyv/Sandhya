@@ -77,12 +77,16 @@ Additional fixes in this cleanup:
   confirmations. A draft whose save outlives the originating account is retained
   only in that account's local scope. Same-user token refresh keeps the draft.
 - The feature parser passed process.env wholesale into client code. Expo's
-  static replacement needs direct EXPO*PUBLIC*\* references; the app now supplies
+  static replacement needs direct `EXPO_PUBLIC_*` references; the app now supplies
   them explicitly.
 - A free production build incorrectly required payment keys. Payment keys are
   now conditional on enabled checkout, with production validation tests.
 - Root ESLint traversed a nested detached worktree, producing 177 irrelevant
   errors. Worktree artifacts are excluded from lint and Metro source watching.
+- The completion audit reproduced a free-core history bug: completing a formerly
+  premium practice worked, but its history entry disappeared. History now uses
+  the same free-core availability rule as the learning screens. A real router
+  test completes all five steps and confirms the practice remains in history.
 
 ## Recoverable Git history
 
@@ -95,8 +99,12 @@ Additional fixes in this cleanup:
 | e417842                                  | Removed the redundant JavaScript tokenizer                           |
 | 1286aa7 / cleanup-before-docs-2026-10-02 | Retired admin workspace, redundant checks, scripts, dependencies     |
 | 2dab731                                  | Journal account isolation and meaningful regression tests            |
-| Final documentation commit               | Current setup/status/report and stale-reference cleanup              |
-| cleanup-complete-2026-10-02              | Final verified main snapshot                                         |
+| 2ffac37                                  | Required Expo runtime retained; prose-only catalog assertion removed |
+| 72770b2 and 5808121                      | Retired subscription promotions and obsolete restore copy            |
+| 17b38b1 and 8b27d12                      | Current setup/status/report and verification evidence                |
+| cleanup-complete-2026-10-02              | Original verified cleanup checkpoint                                 |
+| 1a2742a                                  | Free-core practice completion remains visible in history             |
+| cleanup-audited-2026-10-02               | Final completion-audit snapshot                                      |
 
 The stale reports are recoverable from the checkpoint history. No useful history
 was squashed or rewritten.
@@ -139,11 +147,31 @@ workspace tests/builds, backend checks, Secretlint, and runtime readiness safety
 The report correctly leaves the external/device gates pending.
 
 The final UI deletions were additionally checked with mobile typecheck, root
-ESLint, and the full three-file/ten-scenario smoke suite. Workspace build passed
-with those edits. Local logs are preserved in .git/prelaunch-verified.log,
+ESLint, and the full three-file/eleven-scenario smoke suite. The completion audit
+reran all 19 checks against the updated source, including the history fix; every
+check passed. Its log is .git/prelaunch-completion-audit.log. Workspace build passed
+with those edits. Earlier logs are preserved in .git/prelaunch-verified.log,
 .git/final-lint.log, .git/final-route-smoke.log, and .git/final-format.log;
 they are ignored verification artifacts. The later evidence commit changes
 only documentation.
+
+## Completion audit against the supplied prompt
+
+| Prompt requirements                                               | Evidence and disposition                                                                                                                                                                                |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1: understand the repository                                      | Current setup/plan, workspace configs, app routes/state/data adapters, backend source contracts, and branch history inspected.                                                                          |
+| 2–2A: checkpoints and data preservation                           | Base/integrated/final tags and small verified commits; source data and migration history preserved; no live database operations.                                                                        |
+| 3: branches and PRs                                               | Main contains the selected launch fixes; obsolete refs archived; remaining uncommitted and unique work identified above; open PR search and remote branch listing checked.                              |
+| 4–6, 8–11, 16: simplify code, dependencies, scripts, docs, guards | Removed surfaces and duplicate systems listed above; current tracked tree and stale-reference searches checked; real content/access/account guards preserved.                                           |
+| 7: useful tests                                                   | Removed low-value source/prose assertions; retained behavior/data/backend tests; journal and practice-history failures reproduced before their fixes.                                                   |
+| 12–13: real product and blockers                                  | Browser guest onboarding/navigation/save/reopen verified; real-router account/history tests, production web export, and backend contracts pass. Native/live prerequisites remain explicitly unverified. |
+| 14–15: scope and proportionality                                  | No new framework, monitoring platform, generic audit project, or live deployment; existing product correctness gates retained.                                                                          |
+| 17–19: edits, final state, and final inspection                   | Logical committed batches, clean canonical main, current source/build checks, and a final inspection that caught and fixed the history inconsistency.                                                   |
+| 20: final report                                                  | This report records changes, counts, consolidation, functional fixes, recoverable history, branches, verification, concrete blockers, and deferred work.                                                |
+
+The cleanup objective is distinct from the public-release prerequisites the
+prompt explicitly asks the final report to identify. Those prerequisites are
+reported below; they are not silently counted as passing local verification.
 
 Separately verified: 144 mobile unit tests across 18 files; all eight journal
 account-switch regression scenarios; 117 RAG unit tests across 12 files;
@@ -153,6 +181,9 @@ Browser evidence: local production web preview, onboarding's Set up later path,
 Today with no Chat tab in the core profile, Journey → Journal, guest save, and
 persistence after reopening, and the useful retired subscription-link notice. Screenshot: .git/guest-journal-proof.jpg (local
 ignored verification artifact). No live account or external database was used.
+The completion audit also completed the five-step evening practice in the
+production browser preview, reopened practice history, and verified the entry
+persisted. Screenshot: .git/core-practice-history-proof.jpg.
 
 Final scans checked authored runtime files for the forbidden competitor name,
 unfinished markers, duplicate versions, and stale references to deleted files.
