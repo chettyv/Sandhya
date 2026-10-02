@@ -17,7 +17,7 @@ if (!sourceOnly && (!existsSync(tsc) || !existsSync(vitest))) {
 if (!sourceOnly) {
   run(tsc, ["-p", "packages/shared-types/tsconfig.json", "--noEmit"]);
   run(tsc, ["-p", "packages/rag-pipeline/tsconfig.json", "--noEmit"]);
-  run(vitest, ["run", "--passWithNoTests", "--pool=threads", "--maxWorkers=1", "--minWorkers=1"], {
+  run(vitest, ["run", "--pool=threads", "--maxWorkers=1", "--minWorkers=1"], {
     cwd: join(root, "packages", "rag-pipeline"),
   });
   run(tsc, [

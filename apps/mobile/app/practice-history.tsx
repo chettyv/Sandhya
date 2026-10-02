@@ -3,6 +3,7 @@ import { useRouter } from "expo-router";
 import { PracticeRow } from "@/components/PracticeRow";
 import { EmptyState, Page } from "@/components/ui";
 import { useCuratedContent } from "@/lib/content";
+import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { useAppStore } from "@/store/useAppStore";
 
@@ -13,7 +14,8 @@ export default function PracticeHistoryScreen() {
   const { data: subscription } = useSubscription();
   const completed = content.practices.filter(
     (practice) =>
-      completedIds.includes(practice.id) && (subscription.plan !== "free" || !practice.isPremium),
+      completedIds.includes(practice.id) &&
+      (!paymentsEnabled || subscription.plan !== "free" || !practice.isPremium),
   );
 
   return (
