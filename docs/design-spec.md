@@ -10,21 +10,22 @@ Codifies the visual language already in the app (`apps/mobile/src/theme/tokens.t
 
 ## Colour
 
-Dark-first single theme (matches the existing app; a light theme is not in scope). Palette from `tokens.ts`:
+Warm light single theme (matches the current app; a dark theme is not in scope for this launch). The visual direction is calm and colourful through restrained semantic accents, not saturated decoration. Palette from `tokens.ts`:
 
 | Role                    | Token                | Value   |
 | ----------------------- | -------------------- | ------- |
-| Background              | parchment            | #080807 |
-| Surface / card          | paper (`bg-surface`) | #12110F |
-| Primary text            | ink                  | #F7F2E8 |
-| Secondary text          | muted                | #A9A29A |
-| Primary action / accent | saffron              | #FFC928 |
-| Secondary accent        | plum                 | #D6C8E6 |
-| Positive / calm         | sage                 | #89B8A1 |
-| Danger / error          | rose                 | #EA8C7F |
-| Hairlines               | line                 | #302C25 |
+| Background              | parchment            | #FCF8EF |
+| Surface / card          | paper (`bg-surface`) | #FFFFFF |
+| Secondary surface       | sand                 | #F4E9DA |
+| Primary text            | ink                  | #2A211B |
+| Secondary text          | muted                | #7A6A5D |
+| Primary action / accent | saffron              | #D97824 |
+| Secondary accent        | plum                 | #7F6278 |
+| Positive / calm         | sage                 | #6D8C71 |
+| Danger / error          | rose                 | #B94735 |
+| Hairlines               | line                 | #E8DCCB |
 
-Contrast: ink on parchment 15.9:1, muted on paper 7.2:1, black on saffron 13.5:1 — all AA+ (verified with WCAG relative-luminance math). Never place saffron text on paper below 17pt semibold (4.6:1 — passes AA large only).
+Text-safe accent tokens are `saffronText` (`#A04F17`), `sageText` (`#4F6E54`), and `roseText` (`#A33A2A`). Ink on parchment is 14.9:1, muted on paper is 5.2:1, saffronText on paper is 5.8:1, and black on saffron is 6.7:1 (WCAG relative-luminance calculations). Use raw sage and raw saffron as fills/icons where appropriate; use the text-safe tokens for small text. Do not introduce a second theme or a new accent palette without an explicit product decision.
 
 ## Spacing, radius, elevation
 
