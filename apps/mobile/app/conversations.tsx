@@ -1,23 +1,27 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { useQuery } from "@tanstack/react-query";
-import { useRouter } from "expo-router";
+import { Redirect, useRouter } from "expo-router";
 import { ActivityIndicator, Pressable, Text, View } from "react-native";
 
 import { EmptyState, Page } from "@/components/ui";
 import { useAuthState } from "@/lib/authState";
 import { loadConversations } from "@/lib/conversations";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { colors } from "@/theme/tokens";
 
 export default function ConversationsScreen() {
   const router = useRouter();
   const authState = useAuthState();
+  const askAvailable = isFeatureAvailable("ask");
   const conversations = useQuery({
     queryKey: ["conversations"],
     queryFn: loadConversations,
-    enabled: authState === "signed_in",
+    enabled: askAvailable && authState === "signed_in",
     staleTime: 30_000,
     initialData: [],
   });
+
+  if (!askAvailable) return <Redirect href="/(tabs)/journey" />;
 
   if (authState === "loading")
     return (
@@ -96,8 +100,8 @@ export default function ConversationsScreen() {
         <EmptyState
           icon="chatbubbles-outline"
           title="No conversations yet"
-          body="Ask Dharma a grounded question and your private conversation will appear here."
-          action="Ask Dharma"
+          body="Ask a source-grounded question and your private conversation will appear here."
+          action="Ask a question"
           onAction={() => router.replace("/(tabs)/ask")}
         />
       )}

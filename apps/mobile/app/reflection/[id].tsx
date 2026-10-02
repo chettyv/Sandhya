@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 import { PremiumGate } from "@/components/PremiumGate";
-import { Card, EmptyState, Page, Pill, PrimaryButton } from "@/components/ui";
+import { Card, EmptyState, LoadingState, Page, Pill, PrimaryButton } from "@/components/ui";
 import { saveJournalEntry, syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import { paymentsEnabled } from "@/lib/payments";
@@ -28,9 +28,15 @@ export default function ReflectionDetailScreen() {
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
   const completeToday = useAppStore((state) => state.completeToday);
-  const { data: content } = useCuratedContent();
+  const { data: content, isFetching } = useCuratedContent();
   const requestedReflection = content.dailyReflections.find((item) => item.id === id);
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
+  if (!requestedReflection && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading reflection…" />
+      </Page>
+    );
   if (!requestedReflection)
     return (
       <Page>

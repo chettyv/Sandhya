@@ -1,5 +1,6 @@
 import { reportBackendError } from "../_shared/observability.ts";
 import { fetchWithTimeout } from "../_shared/http.ts";
+import { readBodyWithLimit, RequestBodyTooLargeError } from "../_shared/read-body.ts";
 
 export {};
 
@@ -29,7 +30,7 @@ const HANDLED_EVENTS = new Set([
   "TRANSFER",
 ]);
 const CHALLENGE_PRODUCT_PREFIX = "sandhya_challenge_";
-const MAX_REQUEST_BODY_CHARS = 256_000;
+const MAX_REQUEST_BODY_BYTES = 256_000;
 const UUID_PATTERN = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
 class WebhookAuthenticationError extends Error {}
@@ -41,14 +42,9 @@ Deno.serve(async (request) => {
   let claimedProcessingToken: string | null = null;
   let billingEnvironment: { url: string; key: string; allowSandbox: boolean } | null = null;
   try {
-    const contentLength = Number(request.headers.get("content-length"));
-    if (Number.isFinite(contentLength) && contentLength > MAX_REQUEST_BODY_CHARS) {
-      return jsonResponse({ error: "Request body is too large.", code: "request_too_large" }, 413);
-    }
-    const rawBody = await request.text();
-    if (rawBody.length > MAX_REQUEST_BODY_CHARS) {
-      return jsonResponse({ error: "Request body is too large.", code: "request_too_large" }, 413);
-    }
+    const rawBody = new TextDecoder().decode(
+      await readBodyWithLimit(request, MAX_REQUEST_BODY_BYTES),
+    );
     await verifyWebhook(request.headers.get("x-revenuecat-webhook-signature"), rawBody);
     let payload: { event?: Record<string, unknown> };
     try {
@@ -295,6 +291,9 @@ Deno.serve(async (request) => {
     await markBillingEventProcessed(env, event.id, claim.processingToken);
     return jsonResponse({ received: true }, 200);
   } catch (error) {
+    if (error instanceof RequestBodyTooLargeError) {
+      return jsonResponse({ error: "Request body is too large.", code: "request_too_large" }, 413);
+    }
     if (error instanceof WebhookAuthenticationError) {
       return jsonResponse({ error: "Unauthorized", code: "unauthorized" }, 401);
     }

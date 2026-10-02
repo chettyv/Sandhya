@@ -3,8 +3,10 @@ import { router, useLocalSearchParams } from "expo-router";
 import { useEffect } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
 
+import { AudioAvailability } from "@/components/AudioAvailability";
 import { Card, EmptyState, Page, SecondaryButton } from "@/components/ui";
 import { VerseLines } from "@/components/VerseLines";
+import { resolveShlokaAudio } from "@/lib/audio";
 import {
   chapterKey,
   getShloka,
@@ -22,6 +24,7 @@ export default function ShlokaDetailScreen() {
   const contentLanguage = useAppStore((state) => state.contentLanguage);
   const scriptPreference = useAppStore((state) => state.scriptPreference);
   const shloka = getShloka(slug);
+  const audioAsset = shloka ? resolveShlokaAudio(shloka.slug, "clear") : null;
   // Word-by-word gloss and prose meanings are bundled separately from the
   // verse itself and fetched the first time any verse page opens.
   const { data: details, isPending: detailsPending } = useQuery({
@@ -60,6 +63,8 @@ export default function ShlokaDetailScreen() {
         </Text>
         <Text className="mt-3 text-xs leading-5 text-muted">{readableSource(shloka.source)}</Text>
       </Card>
+
+      <AudioAvailability asset={audioAsset} />
 
       {detailsPending ? (
         <View className="mt-6 items-center py-6">

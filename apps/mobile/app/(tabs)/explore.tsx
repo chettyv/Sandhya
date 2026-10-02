@@ -9,6 +9,7 @@ import { PracticeRow } from "@/components/PracticeRow";
 import { Page, SectionHeader, TopBar } from "@/components/ui";
 import { useCuratedContent } from "@/lib/content";
 import { useCopy } from "@/lib/i18n";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { paymentsEnabled } from "@/lib/payments";
 import { useSubscription } from "@/lib/subscriptions";
 import { colors } from "@/theme/tokens";
@@ -22,6 +23,7 @@ export default function ExploreScreen() {
   const [filter, setFilter] = useState<Filter>("All");
   const { data: content } = useCuratedContent();
   const { concepts, deities, festivals, practices, texts } = content;
+  const askAvailable = isFeatureAvailable("ask");
   const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
   const isPlus = !paymentsEnabled || subscription.plan !== "free";
   const availablePractices = isPlus ? practices : practices.filter((item) => !item.isPremium);
@@ -289,7 +291,11 @@ export default function ExploreScreen() {
         <View className="items-center py-16">
           <Ionicons name="search-outline" size={32} color={colors.muted} />
           <Text className="mt-4 text-lg font-semibold text-ink">No results yet</Text>
-          <Text className="mt-1 text-sm text-muted">Try a broader term or ask Dharma.</Text>
+          <Text className="mt-1 text-sm text-muted">
+            {askAvailable
+              ? "Try a broader term or use source-grounded questions."
+              : "Try a broader term."}
+          </Text>
         </View>
       ) : null}
     </Page>

@@ -113,7 +113,7 @@ for (const [label, source, patterns] of [
   [
     "saved answers screen",
     saved,
-    ["loadSavedMessages", 'queryKey: ["saved-messages"]', "Saved Ask Dharma answer"],
+    ["loadSavedMessages", 'queryKey: ["saved-messages"]', "Saved grounded answer"],
   ],
   [
     "saved answers loader",
@@ -122,7 +122,7 @@ for (const [label, source, patterns] of [
   ],
   ["saved answers controls", ask, ["removeSavedItem", 'queryKey: ["saved-messages"]']],
   [
-    "bounded Ask Dharma network request",
+    "bounded source-grounded network request",
     askClient,
     [
       "ASK_REQUEST_TIMEOUT_MS",
@@ -141,7 +141,11 @@ for (const [label, source, patterns] of [
   ["profile auth refresh", profileScreen, ["useAuthState", "authState"]],
   ["settings auth refresh", settingsScreen, ["useAuthState", "authState"]],
   ["shared auth state", authState, ["useAuthState", "signed_in", "signed_out"]],
-  ["guest-safe saved answers", savedScreen, ["useAuthState", 'enabled: authState === "signed_in"']],
+  [
+    "guest-safe saved answers",
+    savedScreen,
+    ["useAuthState", 'enabled: askAvailable && authState === "signed_in"'],
+  ],
   [
     "conversation auth error states",
     conversationsScreen + conversationDetail,
@@ -174,7 +178,12 @@ for (const [label, source, patterns] of [
     // still that it is disabled while finishing and exposes that to a11y.
     "onboarding reminder failure handling",
     onboarding + onboardingResultStep + onboardingFlowButton,
-    ["finishing", "Reminder not enabled", "disabled={finishing}", "accessibilityState={{ disabled }}"],
+    [
+      "finishing",
+      "Reminder not enabled",
+      "disabled={finishing}",
+      "accessibilityState={{ disabled }}",
+    ],
   ],
   [
     "legal release disclosure",

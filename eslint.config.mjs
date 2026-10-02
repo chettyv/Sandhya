@@ -18,6 +18,8 @@ export default tseslint.config(
       "**/coverage/**",
       "**/.expo/**",
       "**/.next/**",
+      "**/.cache/**",
+      "**/.worktrees/**",
       "**/ios/**",
       "**/android/**",
       "supabase/.branches/**",

@@ -34,7 +34,7 @@ const benefits = [
   ],
   [
     "sparkles-outline",
-    "More grounded Ask Dharma conversations",
+    "More grounded Q&A conversations",
     "Free includes five grounded questions each day; Plus removes the daily cap, subject to fair-use safeguards.",
   ],
   [
@@ -53,18 +53,28 @@ export default function SubscriptionScreen() {
   const [busy, setBusy] = useState(false);
   const signedIn = authState === "signed_in";
 
+  useEffect(() => {
+    if (!signedIn) {
+      setOptions([]);
+      return;
+    }
+    void getPurchaseOptions()
+      .then(setOptions)
+      .catch(() => setOptions([]));
+  }, [signedIn]);
+
   if (!paymentsEnabled) {
     return (
       <SafeAreaView edges={["bottom"]} className="flex-1 bg-parchment">
         <View className="flex-1 items-center justify-center px-8">
           <Ionicons name="heart-outline" size={40} color={colors.saffron} />
           <Text className="mt-4 text-center text-xl font-semibold text-ink">
-            Everything is free right now
+            Plus is not available in this build
           </Text>
           <Text className="mt-3 text-center text-[15px] leading-6 text-muted">
-            The full library, daily shloka, practices, and festival guides are all open while
-            Sandhya is in its early free period. If a paid tier ever arrives, nothing you rely on
-            today will be taken away without clear notice.
+            Sandhya’s core pilot keeps the library, daily shloka, practices, and festival guides
+            open. Purchases are held back until the finite challenge, commercial rights, and store
+            verification gates are complete.
           </Text>
           <Pressable
             accessibilityRole="button"
@@ -82,15 +92,6 @@ export default function SubscriptionScreen() {
     Platform.OS === "web"
       ? "Purchases are available in the iOS and Android app. Use the mobile app to subscribe or restore access."
       : "The RevenueCat public keys and App Store / Play product IDs must be configured before purchases can be enabled.";
-  useEffect(() => {
-    if (!signedIn) {
-      setOptions([]);
-      return;
-    }
-    void getPurchaseOptions()
-      .then(setOptions)
-      .catch(() => setOptions([]));
-  }, [signedIn]);
   const startPurchase = async (plan: "annual" | "monthly" | "lifetime") => {
     if (!signedIn) {
       Alert.alert(

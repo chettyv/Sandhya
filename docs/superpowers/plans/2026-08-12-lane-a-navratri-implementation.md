@@ -27,12 +27,14 @@
 ### Task 1: Clear and freeze the quotation source set
 
 **Files:**
+
 - Modify: `docs/source_inventory_template.csv`
 - Create: `docs/navratri-2026/source-clearance.md`
 - Create: `docs/navratri-2026/quotation-ledger.csv`
 
 **Interfaces:**
-- Consumes: the Internet Archive scan of Manmatha Nath Dutt's 1896 *Markandeya Puranam* and an item-specific Sanskrit witness.
+
+- Consumes: the Internet Archive scan of Manmatha Nath Dutt's 1896 _Markandeya Puranam_ and an item-specific Sanskrit witness.
 - Produces: nine ledger rows with exact source identifiers, text, translation, rights, proofing, and intended night.
 
 - [ ] **Step 1: Record primary-source rights evidence**
@@ -74,11 +76,13 @@
 ### Task 2: Freeze the nine-night editorial outline and reviewer packet
 
 **Files:**
+
 - Create: `docs/navratri-2026/session-outline.md`
 - Create: `docs/navratri-2026/reviewer-brief.md`
 - Create: `docs/navratri-2026/review-log.csv`
 
 **Interfaces:**
+
 - Consumes: `quotation-ledger.csv`.
 - Produces: one approved editorial brief used identically by all session writers and the human reviewer.
 
@@ -120,11 +124,13 @@
 ### Task 3: Draft nights 1-3 for Joint Gate 1
 
 **Files:**
+
 - Create: `content/challenges/navratri-2026/night-01.md`
 - Create: `content/challenges/navratri-2026/night-02.md`
 - Create: `content/challenges/navratri-2026/night-03.md`
 
 **Interfaces:**
+
 - Consumes: Tasks 1-2 ledgers and the existing `_template.md`.
 - Produces: three complete `draft` sessions for the early Stream B render handoff.
 
@@ -160,11 +166,13 @@
 ### Task 4: Draft nights 4-6
 
 **Files:**
+
 - Create: `content/challenges/navratri-2026/night-04.md`
 - Create: `content/challenges/navratri-2026/night-05.md`
 - Create: `content/challenges/navratri-2026/night-06.md`
 
 **Interfaces:**
+
 - Consumes: Tasks 1-2.
 - Produces: three more complete `draft` sessions.
 
@@ -190,11 +198,13 @@
 ### Task 5: Draft nights 7-9
 
 **Files:**
+
 - Create: `content/challenges/navratri-2026/night-07.md`
 - Create: `content/challenges/navratri-2026/night-08.md`
 - Create: `content/challenges/navratri-2026/night-09.md`
 
 **Interfaces:**
+
 - Consumes: Tasks 1-2.
 - Produces: the complete nine-session draft set.
 
@@ -220,10 +230,12 @@
 ### Task 6: Prepare and complete the human content review
 
 **Files:**
+
 - Modify: `docs/navratri-2026/review-log.csv`
 - Modify after actual review: `content/challenges/navratri-2026/night-01.md` through `night-09.md`
 
 **Interfaces:**
+
 - Consumes: all nine drafts and reviewer brief.
 - Produces: nine approved sessions with attributable review evidence.
 
@@ -259,6 +271,7 @@
 ### Task 7: Produce the audio recording package
 
 **Files:**
+
 - Create: `content/audio/navratri-2026/README.md`
 - Create: `content/audio/navratri-2026/manifest.csv`
 - Create: `content/audio/navratri-2026/night-01-script.md` through `night-09-script.md`
@@ -266,6 +279,7 @@
 - Add after real recording: `content/audio/navratri-2026/night-01-slow.wav` through `night-09-slow.wav`
 
 **Interfaces:**
+
 - Consumes: approved session quotation text.
 - Produces: eighteen reviewed human recordings and a manifest Stream B can ingest.
 
@@ -304,12 +318,14 @@
 ### Task 8: Build the qualified festival-date table and two pages
 
 **Files:**
+
 - Create: `docs/navratri-2026/festival-date-evidence.md`
 - Create: `content/festivals/2026-london.csv`
 - Create: `content/web/navratri-dates-2026-london.md`
 - Create: `content/web/diwali-date-2026-london.md`
 
 **Interfaces:**
+
 - Consumes: location-specific primary panchang evidence.
 - Produces: a machine-readable table and two reader-facing explanations of convention and disagreement.
 
@@ -347,12 +363,14 @@
 ### Task 9: Freeze the three explanatory pages for A5
 
 **Files:**
+
 - Modify: `content/web/what-can-i-eat-during-navratri.md`
 - Modify: `content/web/how-to-do-lakshmi-puja-at-home.md`
 - Modify: `content/web/what-to-say-when-lighting-a-diya.md`
 - Create: `docs/navratri-2026/web-publication-ledger.csv`
 
 **Interfaces:**
+
 - Consumes: three existing founder-approved drafts from the Section 5 query list.
 - Produces: three reviewed A5 pages plus two A4 pages tracked as a five-page publication set.
 
@@ -381,6 +399,7 @@
 ### Task 10: Create six short-form video packages
 
 **Files:**
+
 - Create: `content/video/navratri-2026/README.md`
 - Create: `content/video/navratri-2026/manifest.csv`
 - Create: `content/video/navratri-2026/01-nine-forms-one-convention.md`
@@ -391,6 +410,7 @@
 - Create: `content/video/navratri-2026/06-siddhidatri-what-completion-means.md`
 
 **Interfaces:**
+
 - Consumes: approved session and web-page claims.
 - Produces: six 30-60 second packages ready for a human to film and post.
 
@@ -419,12 +439,14 @@
 ### Task 11: Prepare and execute the 30-action arrival test
 
 **Files:**
+
 - Create: `docs/navratri-2026/arrival-plan.md`
 - Create: `docs/navratri-2026/community-rules.md`
 - Create: `docs/navratri-2026/arrival-ledger.csv`
 - Create: `docs/navratri-2026/outreach-copy.md`
 
 **Interfaces:**
+
 - Consumes: five web pages, challenge link, and six video packages.
 - Produces: 30 discrete, attributable actions across search, festival spike, warm network, and short-form video.
 
@@ -461,10 +483,12 @@
 ### Task 12: Run the A1-A8 completion audit
 
 **Files:**
+
 - Create: `docs/navratri-2026/completion-audit.md`
 - Modify: `docs/03-progress.md`
 
 **Interfaces:**
+
 - Consumes: every artifact and external evidence from Tasks 1-11.
 - Produces: a requirement-by-requirement proof record; it does not redefine incomplete items as complete.
 

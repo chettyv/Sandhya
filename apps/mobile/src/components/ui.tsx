@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import * as Haptics from "expo-haptics";
 import type { ComponentProps, ReactNode } from "react";
 import {
+  ActivityIndicator,
   Platform,
   Pressable,
   ScrollView,
@@ -305,6 +306,20 @@ export function EmptyState({
         {body}
       </Text>
       {action && onAction ? <PrimaryButton label={action} onPress={onAction} /> : null}
+    </View>
+  );
+}
+
+export function LoadingState({ label = "Loading…" }: { label?: string }) {
+  return (
+    <View
+      accessibilityRole="progressbar"
+      accessibilityLabel={label}
+      accessibilityLiveRegion="polite"
+      className="items-center rounded-card border border-line bg-surface px-6 py-12"
+    >
+      <ActivityIndicator color={colors.saffron} />
+      <Text className="mt-3 text-sm text-muted">{label}</Text>
     </View>
   );
 }

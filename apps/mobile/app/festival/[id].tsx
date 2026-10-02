@@ -4,7 +4,15 @@ import { useEffect, useState } from "react";
 import { ActivityIndicator, Alert, Text, View } from "react-native";
 
 import { PremiumGate } from "@/components/PremiumGate";
-import { Card, EmptyState, Page, Pill, PrimaryButton, SecondaryButton } from "@/components/ui";
+import {
+  Card,
+  EmptyState,
+  LoadingState,
+  Page,
+  Pill,
+  PrimaryButton,
+  SecondaryButton,
+} from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
 import {
@@ -25,8 +33,9 @@ const RECKONING_LABEL = {
 } as const;
 
 export default function FestivalDetailScreen() {
-  const { id } = useLocalSearchParams<{ id: string }>();
-  const { data: content } = useCuratedContent();
+  const { id: rawId } = useLocalSearchParams<{ id?: string | string[] }>();
+  const id = Array.isArray(rawId) ? rawId[0] : rawId;
+  const { data: content, isFetching } = useCuratedContent();
   const festivals = content.festivals;
   const requestedFestival = festivals.find((item) => item.id === id);
   const festival = requestedFestival ?? festivals[0];
@@ -75,6 +84,12 @@ export default function FestivalDetailScreen() {
     }
   };
 
+  if (!requestedFestival && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading festival…" />
+      </Page>
+    );
   if (!requestedFestival || !festival)
     return (
       <Page>

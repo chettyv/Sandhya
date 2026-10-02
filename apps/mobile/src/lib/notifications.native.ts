@@ -3,6 +3,7 @@ import * as Notifications from "expo-notifications";
 import * as SecureStore from "expo-secure-store";
 import { Platform } from "react-native";
 
+import { parseNotificationRoute, type NotificationRoute } from "./notificationRouting";
 import { supabase } from "./supabase";
 
 const PUSH_TOKEN_KEY = "sandhya-expo-push-token";
@@ -19,7 +20,7 @@ Notifications.setNotificationHandler({
 
 export type ReminderResult = { enabled: boolean; remoteRegistered: boolean; reason?: string };
 export type FestivalReminder = { id: string; name: string; date: string };
-export type NotificationRoute = { type?: string; festivalId?: string };
+export type { NotificationRoute } from "./notificationRouting";
 
 export async function configureDailyReminder(
   enabled: boolean,
@@ -250,14 +251,8 @@ export function subscribeToNotificationResponses(
   listener: (route: NotificationRoute) => void,
 ): () => void {
   const subscription = Notifications.addNotificationResponseReceivedListener((response) => {
-    const data = response.notification.request.content.data as {
-      type?: unknown;
-      festivalId?: unknown;
-    };
-    listener({
-      type: typeof data.type === "string" ? data.type : undefined,
-      festivalId: typeof data.festivalId === "string" ? data.festivalId : undefined,
-    });
+    const route = parseNotificationRoute(response.notification.request.content.data);
+    if (route) listener(route);
   });
   return () => subscription.remove();
 }
@@ -266,12 +261,5 @@ export async function getInitialNotificationRoute(): Promise<NotificationRoute |
   const response = await Notifications.getLastNotificationResponseAsync();
   if (!response) return null;
   await Notifications.clearLastNotificationResponseAsync().catch(() => undefined);
-  const data = response.notification.request.content.data as {
-    type?: unknown;
-    festivalId?: unknown;
-  };
-  return {
-    type: typeof data.type === "string" ? data.type : undefined,
-    festivalId: typeof data.festivalId === "string" ? data.festivalId : undefined,
-  };
+  return parseNotificationRoute(response.notification.request.content.data);
 }

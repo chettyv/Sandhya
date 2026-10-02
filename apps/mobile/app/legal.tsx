@@ -65,19 +65,19 @@ export default function LegalScreen() {
           your account from Settings. Deletion removes synced account data and cannot be undone.
           Deleting an account does not cancel an Apple or Google subscription.
         </Section>
-        <Section title="Ask Dharma">
-          Ask Dharma uses a source-retrieval and language-model pipeline. Answers can be incomplete
-          or wrong, and traditions may differ. The app should show only sources actually retrieved
-          for an answer. Do not use it for medical, legal, financial, crisis, or emergency
-          decisions.
+        <Section title="Source-grounded questions">
+          Source-grounded questions use a source-retrieval and language-model pipeline. Answers can
+          be incomplete or wrong, and traditions may differ. The app should show only sources
+          actually retrieved for an answer. Do not use it for medical, legal, financial, crisis, or
+          emergency decisions.
         </Section>
         <Section title="How answers are handled">
           Questions are sent to our authenticated backend so the app can enforce safety checks,
           usage limits, source permissions, and account history without exposing model credentials
-          in the app. We do not use journal entries as a source for Ask Dharma. Optional anonymous
-          diagnostics are disabled by default and can be enabled or disabled in Settings; when
-          enabled, they are redacted and should not contain your question, answer, journal text,
-          email, user ID, or authentication token.
+          in the app. We do not use journal entries as a source for source-grounded questions.
+          Optional anonymous diagnostics are disabled by default and can be enabled or disabled in
+          Settings; when enabled, they are redacted and should not contain your question, answer,
+          journal text, email, user ID, or authentication token.
         </Section>
         <Section title="Subscriptions">
           Paid access is handled by the applicable app store and RevenueCat. Cancellation, renewal,

@@ -47,3 +47,10 @@ jest.mock("@/lib/secureStorage", () => ({
 // No backend in the smoke run: the app must render from its bundled library.
 delete process.env.EXPO_PUBLIC_SUPABASE_URL;
 delete process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
+
+// The render-level route inventory covers the full screen graph, including
+// Ask. Production EAS profiles remain core-only; launch-profile behavior is
+// covered separately by the launch-profile unit and configuration tests.
+process.env.EXPO_PUBLIC_LAUNCH_PROFILE = "full";
+process.env.EXPO_PUBLIC_AI_READY = "true";
+process.env.EXPO_PUBLIC_PAYMENTS_ENABLED = "true";

@@ -2,20 +2,36 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { Text, View } from "react-native";
 
-import { Card, EmptyState, Page, Pill, PrimaryButton, SecondaryButton } from "@/components/ui";
+import {
+  Card,
+  EmptyState,
+  LoadingState,
+  Page,
+  Pill,
+  PrimaryButton,
+  SecondaryButton,
+} from "@/components/ui";
 import { syncSavedItem } from "@/lib/account";
 import { useCuratedContent } from "@/lib/content";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { useAppStore } from "@/store/useAppStore";
 import { colors } from "@/theme/tokens";
 
 export default function DeityDetailScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const router = useRouter();
-  const { data: content } = useCuratedContent();
+  const { data: content, isFetching } = useCuratedContent();
+  const askAvailable = isFeatureAvailable("ask");
   const requestedDeity = content.deities.find((item) => item.id === id);
   const savedIds = useAppStore((state) => state.savedIds);
   const toggleSaved = useAppStore((state) => state.toggleSaved);
 
+  if (!requestedDeity && isFetching)
+    return (
+      <Page>
+        <LoadingState label="Loading deity…" />
+      </Page>
+    );
   if (!requestedDeity)
     return (
       <Page>
@@ -74,26 +90,32 @@ export default function DeityDetailScreen() {
         </Card>
       ) : null}
 
-      <Text className="mb-3 mt-8 text-xl font-semibold text-ink">Keep exploring</Text>
-      <Card>
-        <Text className="text-sm leading-6 text-muted">
-          Ask for source-grounded stories, practices, or comparisons. Sandhya will identify the
-          tradition and cite only passages returned by the source library.
-        </Text>
-      </Card>
+      {askAvailable ? (
+        <>
+          <Text className="mb-3 mt-8 text-xl font-semibold text-ink">Keep exploring</Text>
+          <Card>
+            <Text className="text-sm leading-6 text-muted">
+              Ask for source-grounded stories, practices, or comparisons. Sandhya will identify the
+              tradition and cite only passages returned by the source library.
+            </Text>
+          </Card>
+        </>
+      ) : null}
       <View className="mt-5 gap-3">
-        <PrimaryButton
-          label={`Ask about ${requestedDeity.name}`}
-          icon="sparkles"
-          onPress={() =>
-            router.push({
-              pathname: "/(tabs)/ask",
-              params: {
-                prompt: `How is ${requestedDeity.name} understood across Hindu traditions and communities?`,
-              },
-            })
-          }
-        />
+        {askAvailable ? (
+          <PrimaryButton
+            label={`Ask about ${requestedDeity.name}`}
+            icon="sparkles"
+            onPress={() =>
+              router.push({
+                pathname: "/(tabs)/ask",
+                params: {
+                  prompt: `How is ${requestedDeity.name} understood across Hindu traditions and communities?`,
+                },
+              })
+            }
+          />
+        ) : null}
         <SecondaryButton
           label={saved ? "Remove from saved" : "Save deity"}
           icon={saved ? "bookmark" : "bookmark-outline"}

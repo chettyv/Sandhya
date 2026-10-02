@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 
 import { localDateKey } from "./activity";
+import { isFeatureAvailable } from "./launchProfile";
 import { supabase } from "./supabase";
 
 export type ChallengeSummary = {
@@ -62,6 +63,7 @@ export type ChallengeSessionResult =
   | { status: "ok"; session: ChallengeSessionDetail };
 
 export async function fetchFeaturedChallenge(): Promise<ChallengeSummary | null> {
+  if (!isFeatureAvailable("challenge")) return null;
   if (!supabase) return null;
   const { data, error } = await supabase
     .from("challenges")
@@ -143,14 +145,28 @@ export async function fetchChallengeSession(
 
 export async function completeChallengeNight(challengeId: string, night: number): Promise<boolean> {
   if (!supabase) return false;
-  const { data: userData } = await supabase.auth.getUser();
-  const userId = userData.user?.id;
-  if (!userId) return false;
-  const { error } = await supabase
-    .from("challenge_night_completions")
-    .insert({ challenge_id: challengeId, user_id: userId, night });
-  // A duplicate insert means the night is already recorded — that is success.
-  return !error || error.code === "23505";
+  const { data, error } = (await supabase.rpc("complete_challenge_night", {
+    p_challenge_id: challengeId,
+    p_night: night,
+  })) as unknown as { data: unknown; error: { message?: string } | null };
+  if (error) throw new Error(error.message ?? "Challenge completion failed");
+  if (data === null || typeof data !== "object") {
+    throw new Error("Challenge completion returned an invalid response");
+  }
+
+  const status = (data as Record<string, unknown>).status;
+  if (status === "completed" || status === "already_completed") return true;
+  if (
+    status === "auth_required" ||
+    status === "not_joined" ||
+    status === "not_found" ||
+    status === "locked" ||
+    status === "invalid_request" ||
+    status === "unavailable"
+  ) {
+    return false;
+  }
+  throw new Error("Challenge completion returned an unknown status");
 }
 
 export function useFeaturedChallenge() {

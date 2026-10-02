@@ -27,3 +27,6 @@ supabase/migrations/migration_checklist.md
 apps/mobile/src/data/shlokaBank.json
 apps/mobile/src/data/shlokaBank.core.json
 apps/mobile/src/data/shlokaBank.details.json
+
+# Deterministic machine-generated output is formatted by its generator.
+docs/content/runtime-content-manifest.json

@@ -1,23 +1,25 @@
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "expo-router";
-import { Pressable, Text } from "react-native";
+import { FlatList, Pressable, Text } from "react-native";
 
-import { Card, EmptyState, Page } from "@/components/ui";
+import { Card, EmptyState, LoadingState, Page } from "@/components/ui";
 import { useAuthState } from "@/lib/authState";
 import { useCuratedContent } from "@/lib/content";
 import { loadSavedMessages } from "@/lib/conversations";
+import { isFeatureAvailable } from "@/lib/launchProfile";
 import { ConceptRow } from "@/screens/saved/ConceptRow";
 import { useAppStore } from "@/store/useAppStore";
 
 export default function SavedScreen() {
   const router = useRouter();
   const authState = useAuthState();
+  const askAvailable = isFeatureAvailable("ask");
   const savedIds = useAppStore((state) => state.savedIds);
   const { data: content } = useCuratedContent();
   const savedMessages = useQuery({
     queryKey: ["saved-messages"],
     queryFn: loadSavedMessages,
-    enabled: authState === "signed_in",
+    enabled: askAvailable && authState === "signed_in",
     staleTime: 30_000,
     initialData: [],
   });
@@ -77,47 +79,71 @@ export default function SavedScreen() {
         icon: "book-outline" as const,
         route: `/text/${item.id}` as const,
       })),
-    ...savedMessages.data.map((message) => ({
+    ...(askAvailable ? savedMessages.data : []).map((message) => ({
       id: message.id,
-      title: "Saved Ask Dharma answer",
+      title: "Saved grounded answer",
       subtitle: message.summary ?? message.content,
       icon: "sparkles-outline" as const,
       route: `/conversation/${message.conversationId}` as const,
     })),
   ];
 
+  const remoteError = askAvailable && authState === "signed_in" && savedMessages.isError;
+  const remoteLoading =
+    askAvailable &&
+    authState === "signed_in" &&
+    savedMessages.isFetching &&
+    !savedMessages.data.length;
   return (
-    <Page>
-      {authState === "signed_in" && savedMessages.isError ? (
-        <Card className="mb-4 bg-roseSoft">
-          <Text className="font-semibold text-ink">
-            Saved Ask answers are temporarily unavailable
-          </Text>
-          <Text className="mt-1 text-sm leading-5 text-muted">
-            Your other saved items remain available. Check your connection and try again.
-          </Text>
-          <Pressable
-            accessibilityRole="button"
-            onPress={() => void savedMessages.refetch()}
-            className="mt-3 self-start rounded-full bg-surface2 px-4 py-2.5"
-          >
-            <Text className="text-sm font-semibold text-plum">Try again</Text>
-          </Pressable>
-        </Card>
-      ) : null}
-      {items.length ? (
-        items.map((item) => (
-          <ConceptRow key={item.id} {...item} onPress={() => router.push(item.route)} />
-        ))
-      ) : (
-        <EmptyState
-          icon="bookmark-outline"
-          title="Nothing saved yet"
-          body="Save a reflection, concept, deity, sacred text, festival, practice, or Ask Dharma answer and it will wait here for you."
-          action="Explore the library"
-          onAction={() => router.replace("/(tabs)/explore")}
-        />
-      )}
+    <Page scroll={false}>
+      <FlatList
+        data={items}
+        keyExtractor={(item) => `${item.id}-${item.subtitle}`}
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={{ paddingBottom: 8 }}
+        ListHeaderComponent={
+          askAvailable && remoteError ? (
+            <Card className="mb-4 bg-roseSoft">
+              <Text className="font-semibold text-ink">
+                Saved grounded answers are temporarily unavailable
+              </Text>
+              <Text className="mt-1 text-sm leading-5 text-muted">
+                Your other saved items remain available. Check your connection and try again.
+              </Text>
+              <Pressable
+                accessibilityRole="button"
+                accessibilityLabel="Retry loading saved answers"
+                onPress={() => void savedMessages.refetch()}
+                className="mt-3 self-start rounded-full bg-surface2 px-4 py-2.5"
+              >
+                <Text className="text-sm font-semibold text-plum">Try again</Text>
+              </Pressable>
+            </Card>
+          ) : null
+        }
+        renderItem={({ item }) => <ConceptRow {...item} onPress={() => router.push(item.route)} />}
+        ListEmptyComponent={
+          remoteLoading ? (
+            <LoadingState label="Loading your saved answers…" />
+          ) : remoteError ? (
+            <EmptyState
+              icon="cloud-offline-outline"
+              title="Saved items are unavailable"
+              body="We couldn't load your saved items. Check your connection and try again."
+              action="Try again"
+              onAction={() => void savedMessages.refetch()}
+            />
+          ) : (
+            <EmptyState
+              icon="bookmark-outline"
+              title="Nothing saved yet"
+              body="Save a reflection, concept, deity, sacred text, festival, or practice and it will wait here for you."
+              action="Explore the library"
+              onAction={() => router.replace("/(tabs)/explore")}
+            />
+          )
+        }
+      />
     </Page>
   );
 }
