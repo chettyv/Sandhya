@@ -42,11 +42,14 @@ export function verifyMobileLaunchConfig(env = {}, profile = "development") {
 
   const missing = [];
   const invalid = [];
+  const paymentsEnabled = env.EXPO_PUBLIC_PAYMENTS_ENABLED?.trim().toLowerCase() === "true";
 
   for (const name of PUBLIC_MOBILE_CONFIG) {
     const value = env[name];
     if (isMissingOrPlaceholder(value)) {
-      missing.push(name);
+      if (paymentsEnabled || (name !== REVENUECAT_IOS_KEY && name !== REVENUECAT_ANDROID_KEY)) {
+        missing.push(name);
+      }
       continue;
     }
 

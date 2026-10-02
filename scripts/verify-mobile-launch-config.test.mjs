@@ -18,6 +18,7 @@ const publicConfigNames = [
 ];
 
 const validProductionEnv = {
+  EXPO_PUBLIC_PAYMENTS_ENABLED: "true",
   EXPO_PUBLIC_SUPABASE_URL: "https://sandhya-prod.supabase.co",
   EXPO_PUBLIC_SUPABASE_ANON_KEY:
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJvbGUiOiJhbm9uIn0.signature",
@@ -43,7 +44,7 @@ test("development accepts documented placeholders for offline work", () => {
 
   assert.deepEqual(result, {
     ok: true,
-    missing: publicConfigNames,
+    missing: publicConfigNames.filter((name) => !name.includes("REVENUECAT")),
     invalid: [],
   });
 });
@@ -52,7 +53,7 @@ test("preview reports omitted public values without blocking the offline core", 
   const result = verifyMobileLaunchConfig({}, "preview");
 
   assert.equal(result.ok, true);
-  assert.deepEqual(result.missing, publicConfigNames);
+  assert.deepEqual(result.missing, publicConfigNames.filter((name) => !name.includes("REVENUECAT")));
   assert.deepEqual(result.invalid, []);
 });
 
@@ -60,7 +61,7 @@ test("production rejects missing public launch configuration", () => {
   const result = verifyMobileLaunchConfig({}, "production");
 
   assert.equal(result.ok, false);
-  assert.deepEqual(result.missing, publicConfigNames);
+  assert.deepEqual(result.missing, publicConfigNames.filter((name) => !name.includes("REVENUECAT")));
   assert.deepEqual(result.invalid, []);
 });
 
@@ -90,6 +91,18 @@ test("production accepts complete public configuration", () => {
     missing: [],
     invalid: [],
   });
+});
+
+test("free production builds do not require payment keys; paid builds require both", () => {
+  const env = { ...validProductionEnv, EXPO_PUBLIC_PAYMENTS_ENABLED: "false" };
+  delete env.EXPO_PUBLIC_REVENUECAT_API_KEY_IOS;
+  delete env.EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID;
+  assert.equal(verifyMobileLaunchConfig(env, "production").ok, true);
+  env.EXPO_PUBLIC_PAYMENTS_ENABLED = "true";
+  assert.deepEqual(verifyMobileLaunchConfig(env, "production").missing, [
+    "EXPO_PUBLIC_REVENUECAT_API_KEY_IOS",
+    "EXPO_PUBLIC_REVENUECAT_API_KEY_ANDROID",
+  ]);
 });
 
 test("production rejects a Supabase service-role JWT in the public anon-key slot", () => {

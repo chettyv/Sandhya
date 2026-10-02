@@ -1,3 +1,6 @@
+import { useQuery } from "@tanstack/react-query";
+
+import { useAuthState } from "./authState";
 import { supabase } from "./supabase";
 
 export type Plan = "free" | "plus_monthly" | "plus_annual" | "lifetime";
@@ -8,6 +11,22 @@ export type SubscriptionStatus = {
 };
 
 export const freeStatus: SubscriptionStatus = { plan: "free", status: "free", expiresAt: null };
+
+export function useSubscription() {
+  const authState = useAuthState();
+  const query = useQuery({
+    queryKey: ["subscription-status"],
+    queryFn: fetchSubscription,
+    enabled: authState === "signed_in",
+    staleTime: 60_000,
+  });
+  return {
+    ...query,
+    data: authState === "signed_in" ? (query.data ?? freeStatus) : freeStatus,
+    isChecking:
+      authState === "loading" || (authState === "signed_in" && query.isPending && query.isFetching),
+  };
+}
 
 export async function fetchSubscription(): Promise<SubscriptionStatus> {
   if (!supabase) return freeStatus;

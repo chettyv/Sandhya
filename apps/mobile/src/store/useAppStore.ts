@@ -54,8 +54,6 @@ type AppState = {
   setContentLanguage: (language: string) => void;
   setDisplayName: (name: string) => void;
   replaceSavedItems: (items: SavedItem[]) => void;
-  /** @deprecated Use replaceSavedItems for remote snapshots. */
-  setSavedItems: (items: SavedItem[]) => void;
   setCompletedPracticeIds: (ids: string[]) => void;
   setCompletedDateKeys: (keys: string[]) => void;
   clearAccountScopedState: () => void;
@@ -144,7 +142,6 @@ export const useAppStore = create<AppState>()(
       setContentLanguage: (contentLanguage) => set({ contentLanguage }),
       setDisplayName: (displayName) => set({ displayName }),
       replaceSavedItems: (items) => set(savedItemsState(items)),
-      setSavedItems: (items) => set(savedItemsState(items)),
       setCompletedPracticeIds: (ids) =>
         set((state) => ({
           completedPracticeIds: [...new Set([...state.completedPracticeIds, ...ids])],

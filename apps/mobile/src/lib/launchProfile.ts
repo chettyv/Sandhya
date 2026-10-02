@@ -1,6 +1,15 @@
 export type LaunchProfile = "core" | "full";
 export type LaunchFeature = "ask" | "payments" | "challenge";
 
+// Expo inlines only direct process.env.EXPO_PUBLIC_* references in client bundles.
+function publicFeatureConfig() {
+  return {
+    EXPO_PUBLIC_LAUNCH_PROFILE: process.env.EXPO_PUBLIC_LAUNCH_PROFILE,
+    EXPO_PUBLIC_AI_READY: process.env.EXPO_PUBLIC_AI_READY,
+    EXPO_PUBLIC_PAYMENTS_ENABLED: process.env.EXPO_PUBLIC_PAYMENTS_ENABLED,
+  };
+}
+
 /**
  * This is a build-time visibility switch, not an authorization boundary.
  * Provider credentials and quotas remain server-side. A full profile is only
@@ -15,7 +24,7 @@ export function getLaunchProfile(env: Record<string, string | undefined>): Launc
 
 export function isFeatureAvailable(
   feature: LaunchFeature,
-  env: Record<string, string | undefined> = process.env,
+  env: Record<string, string | undefined> = publicFeatureConfig(),
 ): boolean {
   const profile = getLaunchProfile(env);
   const paymentsEnabled = isTrue(env.EXPO_PUBLIC_PAYMENTS_ENABLED);
@@ -24,7 +33,7 @@ export function isFeatureAvailable(
   return paymentsEnabled;
 }
 
-export const launchProfile = getLaunchProfile(process.env);
+export const launchProfile = getLaunchProfile(publicFeatureConfig());
 
 function isTrue(value: string | undefined): boolean {
   return value?.trim().toLowerCase() === "true";

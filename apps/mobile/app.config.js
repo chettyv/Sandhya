@@ -49,7 +49,9 @@ if (isProductionBuild) {
   const missingNativePackages = [
     !fs.existsSync(notificationsPackage) && "expo-notifications",
     !fs.existsSync(devClientPackage) && "expo-dev-client",
-    !fs.existsSync(purchasesPackage) && "react-native-purchases",
+    process.env.EXPO_PUBLIC_PAYMENTS_ENABLED === "true" &&
+      !fs.existsSync(purchasesPackage) &&
+      "react-native-purchases",
   ].filter(Boolean);
   if (missingNativePackages.length) {
     throw new Error(

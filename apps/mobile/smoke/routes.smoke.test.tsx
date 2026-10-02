@@ -41,6 +41,7 @@ const ROUTES: { path: string; anchor: RegExp }[] = [
   },
   { path: "/text/00000000-0000-0000-0000-000000000101", anchor: /Bhagavad Gita/ },
   { path: "/legal", anchor: /Privacy/ },
+  { path: "/subscription", anchor: /Subscriptions are not available/ },
   { path: "/sign-in", anchor: /Sign in|Welcome/i },
 ];
 
