@@ -53,7 +53,10 @@ test("preview reports omitted public values without blocking the offline core", 
   const result = verifyMobileLaunchConfig({}, "preview");
 
   assert.equal(result.ok, true);
-  assert.deepEqual(result.missing, publicConfigNames.filter((name) => !name.includes("REVENUECAT")));
+  assert.deepEqual(
+    result.missing,
+    publicConfigNames.filter((name) => !name.includes("REVENUECAT")),
+  );
   assert.deepEqual(result.invalid, []);
 });
 
@@ -61,7 +64,10 @@ test("production rejects missing public launch configuration", () => {
   const result = verifyMobileLaunchConfig({}, "production");
 
   assert.equal(result.ok, false);
-  assert.deepEqual(result.missing, publicConfigNames.filter((name) => !name.includes("REVENUECAT")));
+  assert.deepEqual(
+    result.missing,
+    publicConfigNames.filter((name) => !name.includes("REVENUECAT")),
+  );
   assert.deepEqual(result.invalid, []);
 });
 

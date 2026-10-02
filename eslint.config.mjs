@@ -105,15 +105,6 @@ export default tseslint.config(
     },
   },
 
-  // This checked-in JavaScript mirror is intentionally kept beside the
-  // TypeScript tokenizer source for source-only audits. Its sibling .ts file
-  // is the typechecked implementation, so do not force this mirror through a
-  // TypeScript project that excludes duplicate .js/.ts basenames.
-  {
-    files: ["packages/rag-pipeline/src/token-count.js"],
-    ...tseslint.configs.disableTypeChecked,
-  },
-
   // Supabase Edge Functions are compiled by the Deno runtime. The repository
   // keeps a minimal local shim for syntax/source validation, but it cannot
   // model Deno's full Request/Response/env and npm: module types well enough

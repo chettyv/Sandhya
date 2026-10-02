@@ -193,11 +193,7 @@ for (const [label, source, patterns] of [
   [
     "native purchase initialization",
     nativeSubscriptions,
-    [
-      "ensureConfigured",
-      "restorePurchases",
-      "configuredUserId",
-    ],
+    ["ensureConfigured", "restorePurchases", "configuredUserId"],
   ],
   [
     "shared subscription auth boundary",

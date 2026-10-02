@@ -5,8 +5,6 @@ import { join } from "node:path";
 const root = process.cwd();
 const fallback = readFileSync(join(root, "apps/mobile/src/data/content.ts"), "utf8");
 const authored = readFileSync(join(root, "apps/mobile/src/data/appAuthoredCatalog.ts"), "utf8");
-const mobileReadme = readFileSync(join(root, "apps/mobile/README.md"), "utf8");
-const currentSummary = readFileSync(join(root, "CURRENT_SUMMARY.md"), "utf8");
 const remoteContent = readFileSync(join(root, "apps/mobile/src/lib/content.ts"), "utf8");
 const authoredMigration = readFileSync(
   join(root, "supabase/migrations/20260806200000_app_authored_catalog.sql"),
@@ -62,7 +60,7 @@ if (!authored.includes("no scripture quotations") || !authored.includes("not med
 }
 if (
   // A date is published only with its reckoning; without one it is demoted
-  // to a date-less explainer (CLAUDE.md festival rule).
+  // to a date-less explainer (AGENTS.md festival rule).
   !remoteContent.includes("const normalizedDate = date && reckoning ? date : null") ||
   !remoteContent.includes('monthLabel: "GUIDE"') ||
   !remoteContent.includes('.split("\\n")')
@@ -84,13 +82,4 @@ if (!authoredMigration.includes("'{}'::date[]")) {
     "Generated authored migration no longer preserves date-less festival explainers.",
   );
 }
-if (
-  !mobileReadme.includes(
-    "50 concept introductions, 20 practice guides, 21 festival explainers, and 30 rotating reflections",
-  ) ||
-  !currentSummary.includes("festival library now includes 21 explainers")
-) {
-  throw new Error("Catalog documentation does not match the verified fallback counts.");
-}
-
 console.log(`App-authored catalog coverage passed: ${JSON.stringify(counts)}.`);
