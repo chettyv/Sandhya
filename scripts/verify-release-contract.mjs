@@ -182,7 +182,7 @@ for (const requiredBillingSmokeContract of [
   }
 }
 
-for (const browserOrMobileRoot of ["apps/mobile", "apps/admin"]) {
+for (const browserOrMobileRoot of ["apps/mobile", "apps/web"]) {
   const source = readTreeText(browserOrMobileRoot);
   if (source.includes("SUPABASE_SERVICE_ROLE_KEY")) {
     fail(`${browserOrMobileRoot} contains a service-role key reference.`);
@@ -237,6 +237,12 @@ function readTreeText(relativePath) {
     }
     if (entry.isDirectory()) {
       for (const child of readdirSync(current, { withFileTypes: true })) {
+        if (
+          child.isDirectory() &&
+          /^(?:node_modules|dist(?:-.*)?|build|coverage|ios|android|\..*)$/.test(child.name)
+        )
+          continue;
+        if (child.isSymbolicLink()) continue;
         stack.push(join(current, child.name));
       }
       continue;

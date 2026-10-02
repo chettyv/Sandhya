@@ -22,11 +22,8 @@
   "scripts": {
     "build": "tsc -b",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run --passWithNoTests",
+    "test": "vitest run",
     "clean": "rimraf dist *.tsbuildinfo"
-  },
-  "dependencies": {
-    "@sandhya/shared-types": "workspace:*"
   },
   "devDependencies": {
     "rimraf": "^6.0.1",

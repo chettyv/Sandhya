@@ -26,12 +26,6 @@ importers:
       '@types/node':
         specifier: ^22.10.0
         version: 22.19.19
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.18.0
-        version: 8.59.3(@typescript-eslint/parser@8.59.3(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
-      '@typescript-eslint/parser':
-        specifier: ^8.18.0
-        version: 8.59.3(eslint@9.39.4(jiti@2.6.1))(typescript@5.9.3)
       eslint:
         specifier: ^9.17.0
         version: 9.39.4(jiti@2.6.1)
@@ -50,15 +44,9 @@ importers:
       lint-staged:
         specifier: ^15.2.11
         version: 15.5.2
-      metro-runtime:
-        specifier: 0.83.3
-        version: 0.83.3
       prettier:
         specifier: ^3.4.2
         version: 3.8.3
-      rimraf:
-        specifier: ^6.0.1
-        version: 6.1.3
       secretlint:
         specifier: ^13.0.0
         version: 13.0.0
@@ -71,8 +59,6 @@ importers:
       vitest:
         specifier: ^2.1.8
         version: 2.1.9(@types/node@22.19.19)(jsdom@20.0.3)(lightningcss@1.33.0)(terser@5.49.1)
-
-  apps/admin: {}
 
   apps/mobile:
     dependencies:
@@ -214,10 +200,6 @@ importers:
         version: 15.0.12
 
   packages/content-tools:
-    dependencies:
-      '@sandhya/shared-types':
-        specifier: workspace:*
-        version: link:../shared-types
     devDependencies:
       rimraf:
         specifier: ^6.0.1
@@ -256,9 +238,6 @@ importers:
       typescript:
         specifier: ^5.7.2
         version: 5.9.3
-      vitest:
-        specifier: ^2.1.8
-        version: 2.1.9(@types/node@22.19.19)(jsdom@20.0.3)(lightningcss@1.33.0)(terser@5.49.1)
 
 packages:
 

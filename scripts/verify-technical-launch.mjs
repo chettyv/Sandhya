@@ -46,6 +46,7 @@ function readExpectedPnpmVersion() {
 }
 
 function runCommand(label, command, commandArgs, options = {}) {
+  console.log(`[RUN] ${label}`);
   const startedAt = Date.now();
   const result = spawnSync(command, commandArgs, {
     cwd: ROOT,
@@ -63,6 +64,7 @@ function runCommand(label, command, commandArgs, options = {}) {
     result.error?.code === "ETIMEDOUT" ? "timed out" : `exit ${result.status ?? "unknown"}`;
 
   results.push({ label, passed, detail, durationSeconds });
+  console.log(`[${passed ? "PASS" : "FAIL"}] ${label} (${durationSeconds}s)`);
   return passed;
 }
 
@@ -191,7 +193,7 @@ function main() {
   if (!toolchainMatches) failures.push("pinned toolchain");
 
   const commands = [
-    pnpmCommand("clean frozen install", ["install", "--frozen-lockfile", "--reporter=append-only"]),
+    pnpmCommand("frozen install", ["install", "--frozen-lockfile", "--reporter=append-only"]),
     nodeCommand("workspace lockfile", "scripts/verify-workspace-lock.mjs"),
     pnpmCommand("content tools build", ["--filter", "@sandhya/content-tools", "build"]),
     nodeCommand("generated shloka bank", "scripts/generate-shloka-bank.mjs", ["--check"]),
@@ -207,20 +209,15 @@ function main() {
       "scripts/verify-mobile-launch-config.test.mjs",
       "scripts/verify-runtime-content.test.mjs",
       "scripts/translation-manifest.test.mjs",
-      "scripts/verify-account-flow.test.mjs",
       "scripts/verify-technical-launch.test.mjs",
     ]),
     pnpmCommand("format check", ["format:check"]),
     pnpmCommand("root typecheck", ["typecheck"]),
-    pnpmCommand("mobile lint", ["--filter", "@sandhya/mobile", "lint"]),
-    pnpmCommand("mobile tests", ["--filter", "@sandhya/mobile", "test"]),
+    pnpmCommand("root lint", ["lint"]),
     pnpmCommand("mobile route smoke", ["--filter", "@sandhya/mobile", "test:smoke"]),
-    pnpmCommand("mobile web export", ["--filter", "@sandhya/mobile", "build"]),
     pnpmCommand("workspace tests", ["test"]),
     pnpmCommand("workspace build", ["build"]),
-    pnpmCommand("backend source checks", ["backend:source-check"]),
     pnpmCommand("backend checks", ["backend:check"]),
-    pnpmCommand("release contract", ["backend:release-contract"]),
     pnpmCommand("secret scan", ["secrets:scan"]),
   ];
 

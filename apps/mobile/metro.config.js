@@ -11,6 +11,7 @@ const config = getDefaultConfig(__dirname);
 // other apps, Supabase, and git internals. Patterns accept both separators.
 const blockList = [
   /[\\/]\.git[\\/]/,
+  /[\\/]\.worktrees[\\/]/,
   /[\\/]content[\\/]/,
   /[\\/]docs[\\/]/,
   /[\\/]supabase[\\/]/,

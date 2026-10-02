@@ -74,7 +74,6 @@ export default tseslint.config(
     files: [
       "**/*.config.{js,mjs,cjs,ts}",
       "scripts/**/*.{js,mjs,cjs,ts}",
-      "apps/admin/**/*.{js,mjs,cjs}",
       "apps/web/build.mjs",
       // jest-expo smoke harness: CommonJS setup files evaluated by Jest itself.
       "apps/mobile/jest.*.js",
@@ -138,14 +137,6 @@ export default tseslint.config(
         project: "./apps/mobile/tsconfig.json",
         tsconfigRootDir: import.meta.dirname,
       },
-      globals: { ...globals.browser, ...globals.es2022 },
-    },
-  },
-
-  // Static admin console: browser APIs are intentional and use the shared lint project.
-  {
-    files: ["apps/admin/**/*.ts"],
-    languageOptions: {
       globals: { ...globals.browser, ...globals.es2022 },
     },
   },

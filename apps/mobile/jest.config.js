@@ -33,6 +33,7 @@ const TRANSFORM = [
 module.exports = {
   preset: "jest-expo/ios",
   rootDir: __dirname,
+  maxWorkers: 2,
   // Keep this relative to rootDir. The <rootDir> token is normalized with
   // mixed Windows separators and can prevent Jest from discovering the file.
   testMatch: ["**/*.smoke.test.tsx"],

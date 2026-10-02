@@ -4,8 +4,9 @@ import { readFileSync } from "node:fs";
 const root = new URL("..", import.meta.url);
 const lockfile = readFileSync(new URL("pnpm-lock.yaml", root), "utf8");
 const workspacePackages = [
-  "apps/admin",
+  ".",
   "apps/mobile",
+  "apps/web",
   "packages/content-tools",
   "packages/rag-pipeline",
   "packages/shared-types",
