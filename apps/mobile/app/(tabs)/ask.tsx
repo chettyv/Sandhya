@@ -290,19 +290,7 @@ function AskEnabledScreen() {
                     {mutation.error.message}
                   </Text>
                   {mutation.error instanceof AskRequestError &&
-                  mutation.error.code === "quota_exceeded" &&
-                  isFeatureAvailable("payments") ? (
-                    <Pressable
-                      accessibilityRole="button"
-                      onPress={() => router.push("/subscription")}
-                      className="mt-3 self-start rounded-full bg-saffron px-4 py-2"
-                    >
-                      <Text className="text-sm font-semibold text-black">Explore Plus</Text>
-                    </Pressable>
-                  ) : null}
-                  {mutation.error instanceof AskRequestError &&
-                  mutation.error.code === "quota_exceeded" &&
-                  !isFeatureAvailable("payments") ? (
+                  mutation.error.code === "quota_exceeded" ? (
                     <Text className="mt-3 text-sm leading-5 text-muted">
                       Additional questions are not available in the core pilot.
                     </Text>

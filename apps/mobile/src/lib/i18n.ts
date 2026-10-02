@@ -50,6 +50,10 @@ const en = {
   appearance: "Appearance",
   privacy: "Privacy and data",
   support: "Help and feedback",
+  guideUnavailable: "This guide is unavailable",
+  guideUnavailableBody:
+    "This guide is not available in this release. You can continue exploring the free daily library.",
+  browseLibrary: "Browse the library",
   subscriptionUnavailable: "Subscriptions are not available",
   freeLibraryNotice: "Sandhya’s daily library, reading, and practices are free to use.",
   backToApp: "Back to the app",

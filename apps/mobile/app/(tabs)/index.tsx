@@ -58,7 +58,7 @@ export default function HomeScreen() {
   const startingProfile = useStartingProfile();
   const contentQuery = useCuratedContent();
   const { data: content } = contentQuery;
-  const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
+  const { data: subscription } = useSubscription();
   const { concepts, dailyReflection, festivals, practices } = content;
   const askAvailable = isFeatureAvailable("ask");
   const todayKey = localDateKey();
@@ -200,23 +200,6 @@ export default function HomeScreen() {
             </Pressable>
           </View>
         </Card>
-      ) : null}
-
-      {paymentsEnabled && subscription.plan === "free" && !subscriptionChecking ? (
-        <Pressable
-          accessibilityRole="button"
-          onPress={() => router.push("/subscription")}
-          className="mb-2 flex-row items-center gap-3 rounded-card border border-saffron bg-warm p-4"
-        >
-          <Ionicons name="sparkles-outline" size={23} color={colors.saffron} />
-          <View className="min-w-0 flex-1">
-            <Text className="font-semibold text-ink">Go deeper with Sandhya Plus</Text>
-            <Text className="mt-1 text-sm leading-5 text-muted">
-              Unlock more guided practices and keep asking grounded questions.
-            </Text>
-          </View>
-          <Ionicons name="chevron-forward" size={18} color={colors.saffron} />
-        </Pressable>
       ) : null}
 
       <FeaturedChallengeCard />

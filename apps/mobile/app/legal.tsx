@@ -79,13 +79,6 @@ export default function LegalScreen() {
           Settings; when enabled, they are redacted and should not contain your question, answer,
           journal text, email, user ID, or authentication token.
         </Section>
-        <Section title="Subscriptions">
-          Paid access is handled by the applicable app store and RevenueCat. Cancellation, renewal,
-          billing, and refunds follow the store account and its policies. A Plus entitlement is
-          granted only after the verified subscription state reaches the backend. The exact price,
-          billing period, renewal terms, and available plans are shown by the store before you
-          confirm a purchase. Restore purchases from the Plus screen after signing in.
-        </Section>
         <Section title="Content and licensing">
           Scripture, commentary, translation, folklore, and app-authored guidance are separate
           categories. Content is included only after source, translator, licence, storage, excerpt,

@@ -24,7 +24,7 @@ export default function ExploreScreen() {
   const { data: content } = useCuratedContent();
   const { concepts, deities, festivals, practices, texts } = content;
   const askAvailable = isFeatureAvailable("ask");
-  const { data: subscription, isChecking: subscriptionChecking } = useSubscription();
+  const { data: subscription } = useSubscription();
   const isPlus = !paymentsEnabled || subscription.plan !== "free";
   const availablePractices = isPlus ? practices : practices.filter((item) => !item.isPremium);
   const availableFestivals = isPlus ? festivals : festivals.filter((item) => !item.isPremium);
@@ -266,20 +266,6 @@ export default function ExploreScreen() {
             />
           ))}
         </>
-      ) : null}
-
-      {!isPlus && !subscriptionChecking ? (
-        <Pressable
-          accessibilityRole="button"
-          onPress={() => router.push("/subscription")}
-          className="mt-6 rounded-card border border-saffron bg-warm p-4"
-        >
-          <Text className="font-semibold text-ink">Go deeper with Plus</Text>
-          <Text className="mt-1 text-sm leading-5 text-muted">
-            More practice guides, festival explainers, and grounded questions are available to
-            subscribers.
-          </Text>
-        </Pressable>
       ) : null}
 
       {search &&
