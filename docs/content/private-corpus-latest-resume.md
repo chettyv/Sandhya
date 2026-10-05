@@ -1,5 +1,7 @@
 # Latest private corpus resume notes — 5 October 2026
 
+**Newest PC handoff:** read [private-corpus-pc-handoff.md](private-corpus-pc-handoff.md) after replaying the twelve releases below. A thirteenth supplement preserves35 newer page images and current snapshots. Caryāpāda9's boundary is now PDF445–454 and10's is455–460; neither is transcribed/imported. Chapter11 begins461 and inspection reaches465. The detailed pending frontier supersedes the older "ending unestablished" notes for9 below. Database counts remain unchanged.
+
 Read this after `private-corpus-handoff.md`. The latest chapter captures are Caryāpāda7–8, followed by the **chapter8 source-title correction01** below. Restore all twelve private releases in dependency order. Earlier sections retain their historical values.
 
 ## Current source-title correction01
