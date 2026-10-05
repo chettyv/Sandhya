@@ -1,0 +1,101 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya04-06",
+  "tag": "private-corpus-2026-10-05-carya04-06",
+  "complete": true,
+  "manifest_sha256": "5ddca9415af644ba68bf97be86563a7e9eedb4309ad571056cab70567c72f580",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612481979,
+      "bytes": 7386065,
+      "digest": "sha256:56b6fea84112a69598cd50a62a2cc0e72a756b90e94983eac7934fe9d3784c98"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612482073,
+      "bytes": 12934,
+      "digest": "sha256:62268555ff2d89b98c3503dd3fc5434e7622a847a1a180bdde98e32c9c0b87d1"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612482100,
+      "bytes": 1033,
+      "digest": "sha256:5ddca9415af644ba68bf97be86563a7e9eedb4309ad571056cab70567c72f580"
+    }
+  ],
+  "checked_at": "2026-10-05T12:16:10.350400+00:00",
+  "archive_files": 60,
+  "source_bytes": 8125103,
+  "archive_bytes": 7386065,
+  "archive_files_verified": 60,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_actual_English_bodies": 3,
+  "new_stored_characters": 15512,
+  "new_inspected_English_source_pages": 20,
+  "new_source_groups": 18,
+  "chapters4_6_no_observed_whole_English_group_omission": true,
+  "chapter4_English_fifth_Sanskrit_fourth_disagreement_retained": true,
+  "chapter6_source_directed_displaced_closing_page_retained": true,
+  "chapter6_page_reading_order": [423, 424, 425, 426, 427, 428, 429, 430, 422],
+  "fidelity_not_certified": true,
+  "current_database_totals": {
+    "text_bodies": 1238193,
+    "documents": 12488,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_bytes": 9783201792,
+  "current_database_sha256": "61ae1125f3bf6dc430d311fda8cbdbb4e55202f44ce03885773ec9e03d03e871",
+  "current_combined_verification": {
+    "source_captures": 24,
+    "Kriyapada": {
+      "chapters": 18,
+      "stored_characters": 161664,
+      "inspected_source_pages": 207,
+      "source_groups": 171
+    },
+    "Caryapada": {
+      "chapters": 6,
+      "stored_characters": 37264,
+      "inspected_source_pages": 47,
+      "English_source_pages": 45,
+      "source_groups": 42,
+      "apparent_missing_handwritten388_beginning_unresolved": true,
+      "chapter2_English7_8_missing": true,
+      "chapters3_6_no_observed_group_omission": true,
+      "chapter4_English_fifth_Sanskrit_fourth_disagreement_retained": true,
+      "chapter6_displaced_closing_page_retained_with_source_instruction": true,
+      "fidelity_not_certified": true
+    },
+    "stored_characters": 198928,
+    "inspected_source_pages": 254,
+    "source_groups": 213,
+    "original_PDF_BLOB_round_trip": true,
+    "source_asset_id": 117,
+    "preview_hashes_valid": true,
+    "foreign_keys_valid": true
+  },
+  "exact_file_body_import_metadata_and_FTS": true,
+  "idempotent_append_rerun_no_duplicates": true,
+  "database_replay_required": true,
+  "scope": "Existing human English with provisional corrections, unfinished words, chapter4 colophon discrepancy and chapter6 source-directed page reorder retained. Earlier omissions and source gaps remain. Not a new translation or complete corpus.",
+  "goal_complete": false,
+  "next_recovery": "Caryapada7 Sivacarya-acaravidhih, openingPDF431/handwritten427; pages431–434 inspected, ending unestablished, no body imported; inspect435 onward",
+  "current_file_coverage": {
+    "source_files": 93838,
+    "source_bytes": 41087165362,
+    "private_releases": 10,
+    "unarchived_source_paths": 0,
+    "candidate_non_database_files_rehashed": 6,
+    "historical_chapter1_16_report_exact_bytes_preserved_in_resume_snapshot": true,
+    "mutable_current_state_delivery": [
+      "corpus.sqlite: frozen baseline plus verified body replay",
+      "database-receipt.json: regenerated locally by newest refresher",
+      "acquisition-scope-checkpoint.json: updated by versioned refreshers",
+      "continuation-checkpoint.md, private-corpus/README.md, remaining-actual-text-gaps.md: updated by newest refresher"
+    ],
+    "runtime_caches_nested_git_and_secret_env_excluded": true,
+    "limitation": "Path/size/time inventory and hashes of changed non-database candidates, building on sealed archive verification; not a fresh complete hash of every40GB source byte. SQLite layout and regenerated timestamps can differ after replay."
+  }
+}

@@ -18,7 +18,7 @@ All18 Kriyāpāda and six Caryāpāda captures passed exact raw-file/body/import
 
 Current private database: **1,238,193 bodies**, **12,488 documents**, **171 PDF assets**, **9,783,201,792 bytes**. Local SHA256: `61ae1125f3bf6dc430d311fda8cbdbb4e55202f44ce03885773ec9e03d03e871`. Counts overlap editions and granularities; they do not prove a complete canon.
 
-The [Caryāpāda4–6 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya04-06) contains60 new body/evidence/script/preview files, including chapter7 opening evidence. After all preceding updates, run:
+The [Caryāpāda4–6 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya04-06) contains60 new body/evidence/script/preview files, including chapter7 opening evidence. All three remote asset checksums passed. A fresh authenticated download and decompression verified all60 individual file hashes; the committed receipt is `private-corpus-carya04-06-transfer.json`. After all preceding updates, run:
 
 ```powershell
 python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya04-06 --directory content/_staging/transfer/private-corpus-2026-10-05-carya04-06 --manifest-sha256 5ddca9415af644ba68bf97be86563a7e9eedb4309ad571056cab70567c72f580
@@ -33,6 +33,12 @@ python "$corpusRoot/refresh_kirana_carya06_checkpoint.py"
 Stop on errors; preserve older sealed evidence and receipts. Regenerate the local receipt after replay and verify exact body/metadata/FTS as well as physical hashes. Do not rerun imported evidence recorders or older checkpoint writers against expanded state. Earlier sections below are historical.
 
 Next recovery: **Caryāpāda7, Śivācārya-ācāravidhih**, PDF **431**, handwritten **427**. Opening and followingPDF432–434 inspected, through source group8(b)–10; ending unestablished and no body imported. Read `kirana-handwriting-source-map/carya07-opening-evidence.json`; inspectPDF435 onward to establish the boundary before capture. Caryāpāda7–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader ledger gaps remain open. Goal remains active.
+
+The final transfer inventory accounts for **93,838 source files** across **ten private releases**, with **zero unarchived source paths**. It checked paths, sizes and modification times and rehashed six changed non-database candidates, building on prior archive verification. The older chapter1–16 report matches its archived resume snapshot exactly. Replay and the newest refresher reconstruct the expanded database, ledger and current working notes; regenerated timestamps and SQLite layout may differ. Credentials and reproducible runtime caches are excluded.
+
+## Prompt for the other PC
+
+> Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore all ten private releases through Caryāpāda4–6 in dependency order and replay their imports and latest verification/refresher commands. Read the current gap ledger. Resume Kiraṇa Caryāpāda7 at PDF431/handwritten427; pages431–434 inspected, ending unestablished and no body imported. Inspect435 onward. Preserve earlier missing English groups and uncertainties, chapter4 English fifth/Sanskrit fourth discrepancy and chapter6 displaced closing page. Prioritize actual existing English bodies and preserve other languages. Do not generate translations, embeddings, audio or app content, publish the corpus, or claim full completeness.
 
 ## Previous addition: Caryāpāda2–3
 
@@ -211,6 +217,6 @@ The remaining substantial Kiraṇa acquisition work is Kriyāpāda **13–18**, 
 
 Read the newest top section of the restored `continuation-checkpoint.md`, `private-corpus/remaining-actual-text-gaps.md` and `private-corpus/acquisition-scope-checkpoint.json` after applying the body update. Older notes are historical. **Do not run the old checkpoint writers that assume only nine Kriyāpāda captures.** The new `refresh_post_handoff_checkpoint.py` handles the current state and preserves the frozen receipt.
 
-## Prompt for the other PC
+## Historical prompt after chapters14–16
 
 > Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore the base and supplements through chapters14–16, replaying their imports and latest verification/checkpoint commands. Read the current gap ledger. Resume Kiraṇa Kriyāpāda17 Grahayāgavidhih at PDF367/handwritten364; establish the ending and capture existing English with explicit uncertainty before importing. Prioritize actual existing English bodies and preserve other languages. Do not generate translations, embeddings, audio or app content, publish the corpus, or claim full completeness.
