@@ -4,6 +4,8 @@ The private corpus database currently contains **1,238,198 bodies, 12,493 docume
 
 **Newest body update:** restore and replay chapter10 as the fifteenth release after all fourteen preceding releases. Use [the current instructions](private-corpus-latest-resume.md) and its chapter10 verifier/refresher last. Next chapter11 opensPDF461, inspected through465; inspect466 onward to establish its ending. Older chapter9–10 pending notes below are historical.
 
+Chapter10's ten files passed uploaded checksums and fresh authenticated download/decompression. The [latest completion receipt](private-corpus-carya10-transfer.json) accounts for93,946 source files across fifteen releases, with no unarchived source paths. All earlier counts below are historical.
+
 **Newest body update:** after the thirteen releases described below, restore and replay [Caryāpāda9](private-corpus-latest-resume.md) as the fourteenth release. Use its new verifier/refresher last. The historical chapter9 frontier in the PC supplement is now superseded. Next collection is chapter10, PDF455–460.
 
 The chapter9 update passed all uploaded asset hashes and a fresh authenticated download/decompression of all nine files. The [new completion receipt](private-corpus-carya09-transfer.json) accounts for93,936 source files across fourteen releases, with no unarchived source paths. Earlier transfer counts below describe the preceding PC snapshot.

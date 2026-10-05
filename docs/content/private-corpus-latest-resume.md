@@ -20,6 +20,8 @@ Stop on errors. Preserve frozen releases and older imported evidence. Do not rer
 
 **Next:** Caryāpāda11, **Acarya varjyavarjya vidhih**, opens **PDF461/handwritten457**. Full pages461–465 inspected; ending unestablished, no body imported. Read `kirana-handwriting-source-map/carya11-opening-evidence.json`, then inspect **466 onward** to establish the boundary and review enlarged English crops before capture. Caryāpāda11–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader ledger gaps remain. Sections below retain historical checkpoint values.
 
+**Chapter10 transfer verified:** all three uploaded asset checksums matched, and a fresh authenticated download/decompression verified all ten individual files. The [completion receipt](private-corpus-carya10-transfer.json) records **93,946 source files across fifteen private releases, zero unarchived source paths**. This path/size/time inventory hashes changed non-database candidates and builds on sealed archive checks; it does not freshly hash all41GB. Current database and mutable notes are delivered by verified replay/refresher, which freshly hashed the expanded database. Runtime caches, Git metadata and credentials are excluded.
+
 ## Latest addition: Caryāpāda9
 
 Chapter9 **Gocaravidhih** is now stored as document **12492**, body **1238197**: **8,237 characters**, eight groups, ten English source pages **445–454**. Source ending29½; Sanskrit ninth colophon453 and English ninth colophon454. Opening1 address is inferred; English continues onto unnumbered448 and454. Provisional names, corrected labels, uncertain article, source grammar and empty/deleted glosses are explicit. No whole English group omission was observed; diplomatic and Sanskrit fidelity remain uncertified.

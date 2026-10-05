@@ -1,0 +1,100 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya10",
+  "tag": "private-corpus-2026-10-05-carya10",
+  "complete": true,
+  "manifest_sha256": "e27b128473d322ebba6c748961b9f143792855ee1086b63265f52aa48bbd894f",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612632746,
+      "bytes": 23238,
+      "digest": "sha256:308a03db633081fa44e89dbdacb77854d7b5f1b63fe39d3e79e895f308c16ba3"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612632789,
+      "bytes": 2143,
+      "digest": "sha256:2da441e625b2b7dba2cefd25da43d8c4ad1a9729861ca02f37c8c8c52cc088f4"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612632809,
+      "bytes": 957,
+      "digest": "sha256:e27b128473d322ebba6c748961b9f143792855ee1086b63265f52aa48bbd894f"
+    }
+  ],
+  "checked_at": "2026-10-05T13:17:24.063662+00:00",
+  "archive_files": 10,
+  "source_bytes": 100113,
+  "archive_bytes": 23238,
+  "archive_files_verified": 10,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 1,
+  "document_id": 12493,
+  "body_id": 1238198,
+  "stored_characters": 5757,
+  "source_groups": 6,
+  "PDF_pages": [455, 456, 457, 458, 459, 460],
+  "complete_diplomatic_transcription": false,
+  "fidelity_not_certified": true,
+  "exact_file_body_import_metadata_and_FTS": true,
+  "original_source_PDF_BLOB_verified": true,
+  "foreign_keys_valid": true,
+  "idempotent_repeat_import_no_duplicates": true,
+  "database_replay_required": true,
+  "goal_complete": false,
+  "next_recovery": "Caryapada11 Acarya varjyavarjya vidhih opensPDF461/handwritten457, inspected through465, ending unestablished and no body imported; inspect466 onward.",
+  "current_database_totals": {
+    "text_bodies": 1238198,
+    "documents": 12493,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "9b5a54e9ce18a82818f503e52d2a3536d2d5196cc08141d439fb183a7fe3ac6b",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 93946,
+    "source_bytes": 41101580783,
+    "private_releases": 15,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "25b53d65e053f48bd1034e8320dde6a105732971cbb1c1b9f11e19685743547e",
+        "delivery": "new chapter10 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "6eabcfe480907f79fa8243a52acf348fd3c722fe08579170a71169d58886f738",
+        "delivery": "new chapter10 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "f339232c83c7fc0bab3bf25cfb04e729906edbc89f119ad9485ff3a8aa6c42aa",
+        "delivery": "new chapter10 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "4be2113ffd32fb65e5d9f3483e565f7ccf64bd24c040ba368619a38f8f770978",
+        "delivery": "new chapter10 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "b23ec2bfd88a9bce501203599d053b0a824143c4bec6764b81e743f76738688b",
+        "delivery": "new chapter10 replay/refresher"
+      }
+    ],
+    "database_freshly_hashed_by_current_refresher": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256 from current refresher; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  }
+}
