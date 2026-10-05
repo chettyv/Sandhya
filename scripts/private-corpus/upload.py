@@ -29,10 +29,16 @@ def main():
     parser.add_argument("--directory", type=Path, default=TRANSFER)
     parser.add_argument("--tag", default=TAG)
     parser.add_argument("--watch-pack", action="store_true", help="Upload sealed parts while packing is still running.")
+    parser.add_argument("--part", type=int, help="Upload one sealed part; keep the release draft.")
+    parser.add_argument("--prepare-release", action="store_true", help="Resolve the canonical draft before starting parallel workers.")
     args = parser.parse_args()
     directory = args.directory.resolve()
     manifest_path = directory / "manifest.json"
     def pending_files():
+        if args.part:
+            path = directory / f"corpus.tar.zst.part-{args.part:04d}"
+            yield {"name": path.name, "bytes": path.stat().st_size, "sha256": sha256_file(path)}
+            return
         offered = set()
         while args.watch_pack and not manifest_path.exists():
             # The packer closes each part before opening the next. Never read its active last part.
@@ -50,8 +56,24 @@ def main():
                "sha256": sha256_file(manifest_path)}
     session = github_session()
     base = f"https://api.github.com/repos/{REPOSITORY}"
-    response = session.get(f"{base}/releases/tags/{quote(args.tag, safe='')}", timeout=60)
-    if response.status_code == 404:
+    reference_path = directory / "release-reference.json"
+    release = None
+    if reference_path.exists():
+        reference = json.loads(reference_path.read_text(encoding="utf-8"))
+        if reference["tag"] != args.tag:
+            raise RuntimeError("Local release reference has a different tag.")
+        release = checked_json(session.get(f"{base}/releases/{reference['id']}", timeout=60))
+    else:
+        response = session.get(f"{base}/releases/tags/{quote(args.tag, safe='')}", timeout=60)
+        if response.status_code == 404:
+            # Draft tags are absent from the tag endpoint; list authenticated draft releases.
+            drafts = checked_json(session.get(f"{base}/releases", params={"per_page": 100}, timeout=60))
+            matches = [row for row in drafts if row["tag_name"] == args.tag]
+            if matches:
+                release = min(matches, key=lambda row: (row["created_at"], row["id"]))
+        else:
+            release = checked_json(response)
+    if release is None:
         commit = subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip()
         remote = subprocess.check_output(["git", "ls-remote", "origin", "refs/heads/main"], text=True).split()[0]
         if commit != remote:
@@ -61,8 +83,13 @@ def main():
             "name": "Private scripture corpus handoff — 5 October 2026",
             "body": "Private acquisition checkpoint, including the SQLite corpus, source scans, extractions, scripts and evidence. Read docs/content/private-corpus-handoff.md in the repository and use scripts/private-corpus/restore.py. All parts and individual files have SHA256 checks. Collection is incomplete; known gaps are preserved. No application import or publication clearance is implied."
         }, timeout=60))
-    else:
-        release = checked_json(response)
+    if release["tag_name"] != args.tag:
+        raise RuntimeError("Remote release has an unexpected tag.")
+    if not reference_path.exists():
+        reference_path.write_text(json.dumps({"tag": args.tag, "id": release["id"]}) + "\n", encoding="utf-8")
+    if args.prepare_release:
+        print(json.dumps({"release_id": release["id"], "draft": release["draft"]}), flush=True)
+        return
     assets = {}
     page = 1
     while True:
@@ -82,6 +109,12 @@ def main():
         if path.stat().st_size != item["bytes"] or sha256_file(path) != item["sha256"]:
             raise RuntimeError(f"Local asset changed: {item['name']}")
         asset = assets.get(item["name"])
+        if asset is not None and asset.get("state") == "starter":
+            # Remove only this transfer's unfinished upload stub, never completed data.
+            response = session.delete(f"{base}/releases/assets/{asset['id']}", timeout=60)
+            if response.status_code != 204:
+                raise RuntimeError("Could not clear an unfinished upload stub.")
+            asset = None
         if asset is None:
             print(f"Starting upload {item['name']} ({item['bytes']:,} bytes)", flush=True)
             for attempt in range(1, 4):
@@ -113,8 +146,12 @@ def main():
         verified_by_name[item["name"]] = record
         assets[item["name"]] = asset
         print(f"Verified remote SHA256: {item['name']}", flush=True)
-        (directory / "upload-receipt.json").write_text(json.dumps({"release": release["html_url"], "tag": args.tag,
+        receipt_name = f"upload-part-{args.part:04d}-receipt.json" if args.part else "upload-receipt.json"
+        (directory / receipt_name).write_text(json.dumps({"release": release["html_url"], "tag": args.tag,
             "complete": False, "verified_assets": verified}, indent=2) + "\n", encoding="utf-8")
+    if args.part:
+        print(json.dumps({"part": args.part, "remote_sha256_verified": True}), flush=True)
+        return
     release = checked_json(session.patch(f"{base}/releases/{release['id']}", json={"draft": False}, timeout=60))
     receipt = {"release": release["html_url"], "tag": args.tag, "complete": True,
                "manifest_sha256": sha256_file(manifest_path), "verified_assets": verified}

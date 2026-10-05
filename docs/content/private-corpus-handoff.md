@@ -68,7 +68,9 @@ Collection jobs were stopped at this checkpoint. Transfer packaging/upload jobs 
 ```powershell
 python scripts/private-corpus/pack.py
 git push origin main
-python scripts/private-corpus/upload.py
+python scripts/private-corpus/upload_parallel.py
 ```
 
-Packing refuses a non-empty output directory and never changes source files. Uploading resumes by release asset name, verifies GitHub's remote SHA256 for every asset and only publishes the private release after the entire set passes. Preserve the local archive until the committed transfer receipt confirms success. No force push is used.
+Packing refuses a non-empty output directory and never changes source files. Uploading resumes by release asset name, verifies GitHub's remote SHA256 for every asset and only publishes the private release after the entire set passes. The parallel coordinator resolves and saves one draft-release ID before starting workers, because the tag endpoint does not return drafts. Preserve the local archive until the committed transfer receipt confirms success. No force push is used.
+
+Transfer validation: focused tests passed for split-archive round trips, Unicode/CRLF byte preservation, corrupted-file rejection, unsafe-path rejection and protection of changed local files. The repository's `lint-staged` formatting and secret checks passed. The Git Bash hook could not find the installed `pnpm` command, so the same checks were run through its installed Node entry point before committing. No application code changed in this handoff.
