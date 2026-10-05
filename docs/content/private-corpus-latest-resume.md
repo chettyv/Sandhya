@@ -12,7 +12,7 @@ Exact raw-file/body/import/metadata/FTS, original PDF asset117 BLOB, preview has
 
 Current private database: **1,238,188 bodies**, **12,483 documents**, **171 PDF assets**,9,782,632,448 bytes. Local SHA256: `69d4404edc82b91957bf33ab23fcbfa4705cfdeb9642ce28f7d7df2197ec9995`. Counts overlap editions/granularities and do not prove a complete canon.
 
-The [Caryāpāda1 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya01) contains33 new body/evidence/script/preview files. After preceding updates, run:
+The [Caryāpāda1 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya01) contains33 new body/evidence/script/preview files. All three uploaded asset checksums passed. A fresh authenticated download and decompression verified all33 individual file checksums. The committed receipt is `private-corpus-carya01-transfer.json`. After preceding updates, run:
 
 ```powershell
 python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya01 --directory content/_staging/transfer/private-corpus-2026-10-05-carya01 --manifest-sha256 a928a3f54c2f9c537646d41a0c3567827a4b457740c0e96d23d355e4e1469187
@@ -23,6 +23,8 @@ python "$corpusRoot/refresh_kirana_carya01_checkpoint.py"
 ```
 
 Stop on errors and preserve frozen receipts and sealed releases. Do not rerun evidence recorders after import, or older checkpoint writers against the expanded state. Regenerate the local receipt after replay; physical SQLite hashes can vary by runtime, so verify exact body/metadata/FTS too. Earlier checkpoints below are historical.
+
+The final transfer inventory accounts for **93,742 source files** across the eight private releases, with **zero unarchived source paths**. The expanded database and current working notes are reconstructed by the verified append/refresher commands. The historical chapter1–16 report's exact current bytes are preserved in the resume snapshot. This inventory compared paths, sizes and modification times, hashing six changed non-database candidates; it builds on the earlier complete archive checks rather than claiming a fresh hash of all40GB. Runtime caches, environments and credentials are excluded.
 
 Next recovery: **Caryāpāda2, Sarasvatīpūjāvidhih**, PDF **400**, handwritten **396**. Its opening is inspected; ending unestablished and no body imported. Caryāpāda2–27, Yogapāda1–7, Ramakaṇṭha7–12, source-English omissions/uncertainties and broader ledger gaps remain open. The collection goal remains active.
 

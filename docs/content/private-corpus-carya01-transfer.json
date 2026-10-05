@@ -1,0 +1,94 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya01",
+  "tag": "private-corpus-2026-10-05-carya01",
+  "complete": true,
+  "manifest_sha256": "a928a3f54c2f9c537646d41a0c3567827a4b457740c0e96d23d355e4e1469187",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612383974,
+      "bytes": 5904838,
+      "digest": "sha256:6572167d4ba34b4becabbd02806dfc003ce396535c26c0036490633e62980cd3"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612384040,
+      "bytes": 7046,
+      "digest": "sha256:ac1e34e2d9374c71e1e06da768357f2625d33638b461a3ac48b046f447347d1d"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612384073,
+      "bytes": 963,
+      "digest": "sha256:a928a3f54c2f9c537646d41a0c3567827a4b457740c0e96d23d355e4e1469187"
+    }
+  ],
+  "checked_at": "2026-10-05T11:37:21.502750+00:00",
+  "archive_files": 33,
+  "source_bytes": 6593586,
+  "archive_bytes": 5904838,
+  "archive_files_verified": 33,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_actual_English_bodies": 1,
+  "new_stored_characters": 11924,
+  "new_inspected_source_pages": 16,
+  "new_English_source_pages": 14,
+  "new_source_groups": 14,
+  "source_gap_unresolved": true,
+  "full_English_chapter": false,
+  "current_database_totals": {
+    "text_bodies": 1238188,
+    "documents": 12483,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_bytes": 9782632448,
+  "current_database_sha256": "69d4404edc82b91957bf33ab23fcbfa4705cfdeb9642ce28f7d7df2197ec9995",
+  "current_combined_verification": {
+    "source_captures": 19,
+    "Kriyapada": {
+      "chapters": 18,
+      "stored_characters": 161664,
+      "inspected_source_pages": 207,
+      "source_groups": 171
+    },
+    "Caryapada": {
+      "chapters": 1,
+      "stored_characters": 11924,
+      "inspected_source_pages": 16,
+      "English_source_pages": 14,
+      "source_groups": 14,
+      "source_visible_numbered_group_headings": 12,
+      "apparent_missing_handwritten388_beginning_unresolved": true,
+      "full_English_chapter": false
+    },
+    "stored_characters": 173588,
+    "inspected_source_pages": 223,
+    "source_groups": 185,
+    "original_PDF_BLOB_round_trip": true,
+    "preview_hashes_valid": true,
+    "foreign_keys_valid": true
+  },
+  "exact_file_body_import_metadata_and_FTS": true,
+  "idempotent_append_rerun_no_duplicates": true,
+  "current_file_coverage": {
+    "source_files": 93742,
+    "unarchived_files": [],
+    "candidate_non_database_hashes_checked": 6,
+    "changes_delivered_by_verified_replay": [
+      "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+      "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+      "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+      "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+      "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+      "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md"
+    ],
+    "historical_report_exact_bytes_preserved_in_resume_snapshot": true,
+    "method": "Manifest path coverage; size and modification-time comparison, hashing non-database candidates. Current DB has prior full checksum and body replay verification; prior full archive verification retained. Not a new full rehash of all source bytes. Runtime caches, environments and credentials excluded."
+  },
+  "database_replay_required": true,
+  "scope": "Surviving existing human English, with apparent missing handwritten388 beginning and uncertain readings. Not a complete chapter or a linguistic fidelity certification.",
+  "goal_complete": false,
+  "next_recovery": "Caryapada2 Sarasvatipujavidhih, PDF400/handwritten396; opening inspected, ending unestablished, no body imported"
+}
