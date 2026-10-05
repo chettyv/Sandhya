@@ -1,5 +1,7 @@
 # Private corpus handoff — 5 October 2026
 
+**Newest imported body:** Caryāpāda9 is stored; restore and replay its fourteenth-release update after the thirteen earlier releases. Read the first section of [private-corpus-latest-resume.md](private-corpus-latest-resume.md). Next capture is chapter10, PDF455–460; older chapter9 pending notes below are historical.
+
 **Latest cross-PC instructions:** [private-corpus-pc-handoff.md](private-corpus-pc-handoff.md) adds a thirteenth private supplement with pending source images and precise resume notes. Replay the twelve earlier releases described here and in the latest resume notes first. Caryāpāda9–10 have inspected boundaries but no imported bodies; the database remains at the chapter8 correction01 checkpoint.
 
 The user requested that all current work be pushed with notes so collection can continue on another PC. The repository is private: `chettyv/Sandhya`. Application code and documentation travel through Git; the much larger private source collection travels through the repository's private release assets. Do not add the database or raw scans to ordinary Git history.

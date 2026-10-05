@@ -1,5 +1,25 @@
 # Latest private corpus resume notes — 5 October 2026
 
+## Latest addition: Caryāpāda9
+
+Chapter9 **Gocaravidhih** is now stored as document **12492**, body **1238197**: **8,237 characters**, eight groups, ten English source pages **445–454**. Source ending29½; Sanskrit ninth colophon453 and English ninth colophon454. Opening1 address is inferred; English continues onto unnumbered448 and454. Provisional names, corrected labels, uncertain article, source grammar and empty/deleted glosses are explicit. No whole English group omission was observed; diplomatic and Sanskrit fidelity remain uncertified.
+
+All18 Kriyāpāda and nine Caryāpāda preferred captures passed exact raw-file/body/import/metadata/FTS, original PDF BLOB, preview hashes and foreign-key checks. Repeat chapter9 import added no duplicate. Combined **220,128 characters, 278 inspected pages and 236 groups**. Current database: **1,238,197 bodies, 12,492 documents and 171 PDF assets**,9,783,201,792 bytes; SHA256 `8bd834dcd37958aaf559f5aa660eea4149a8ddab0513238df0fc270d4e0977ff`. Earlier omissions and source anomalies remain. Chapter8 correction01 stays preferred and its original capture is preserved.
+
+Restore the thirteen preceding releases, including the PC preview handoff, before the [chapter9 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya09). Its nine files contain the exact body, evidence, append/verification/refresher scripts and report; the PDF445–455 pages/crops are in earlier releases. The local archive verified all nine files. Then run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya09 --directory content/_staging/transfer/private-corpus-2026-10-05-carya09 --manifest-sha256 0e94e0f7b5c9ddfd24320a98ccc53f36badba8efdf67b8c616406cf1a1115bde
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya09.py" --chapter 9
+python "$corpusRoot/verify_kirana_carya09_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya09_checkpoint.py"
+```
+
+Stop on errors. Preserve older sealed files; do not rerun imported recorders or older checkpoint writers on expanded state. Replay/refresher reconstructs current mutable notes and the database; timestamps and SQLite layout can differ across machines.
+
+**Next:** Caryāpāda10, Vratesvarayagavidhih, **PDF455–460**, ending15½. Full pages inspected; inspect the six enlarged crops before capture. Right-edge clips and a corrected phrase remain unresolved. Chapter11 opens461, inspected through465, ending unestablished; inspect466 afterward. Neither10 nor11 is imported. The thirteen-release frontier notes are historical for chapter9, superseded by this section. Collection remains incomplete.
+
 **Newest PC handoff:** read [private-corpus-pc-handoff.md](private-corpus-pc-handoff.md) after replaying the twelve releases below. A thirteenth supplement preserves35 newer page images and current snapshots. Caryāpāda9's boundary is now PDF445–454 and10's is455–460; neither is transcribed/imported. Chapter11 begins461 and inspection reaches465. The detailed pending frontier supersedes the older "ending unestablished" notes for9 below. Database counts remain unchanged.
 
 Read this after `private-corpus-handoff.md`. The latest chapter captures are Caryāpāda7–8, followed by the **chapter8 source-title correction01** below. Restore all twelve private releases in dependency order. Earlier sections retain their historical values.
