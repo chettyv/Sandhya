@@ -4,7 +4,7 @@ The user requested that all current work be pushed with notes so collection can 
 
 **Transfer complete.** All 60 archive parts and both manifests passed GitHub's remote SHA256/size checks. Real authenticated downloads of both manifests and the final data part also passed through the same helper used by the restore command. The private release is [private-corpus-2026-10-05](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05). The committed `private-corpus-transfer.json` contains the verified completion receipt and expected manifest checksum. This completes the transfer of collected work; the scripture collection itself still has the gaps below.
 
-**Latest resume point:** chapters 10–16 were subsequently captured and imported. Read [private-corpus-latest-resume.md](private-corpus-latest-resume.md), applying the 10–12 update below, then its chapter13 and14–16 update instructions. The next collection chapter is Kriyāpāda17, source PDF page367. The frozen base and older supplements remain unchanged.
+**Latest resume point:** chapters 10–16 were subsequently captured and imported. Read [private-corpus-latest-resume.md](private-corpus-latest-resume.md), applying the 10–12 update below, then its chapter13 and14–16 updates and final resume supplement. The next collection chapter is Kriyāpāda17, source PDF page367. Chapters17–18 have since been inspected; their boundaries, unresolved readings and twelve newer reading crops are preserved in the resume supplement, but neither English body is imported. The frozen base and older supplements remain unchanged.
 
 ## Restore on the other PC
 
@@ -57,7 +57,7 @@ Read these restored files first, in order:
 
 After restoring, paste this into a new chat on the other PC:
 
-> Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore the base and supplements through chapters14–16, replay actual body imports and run the latest verification/checkpoint scripts. Read the current gap ledger before collecting. Prioritize actual existing English scripture bodies and preserve other languages. Resume with Kiraṇa Kriyāpāda chapter 17, source PDF page 367. Preserve source omissions, uncertain readings and exact byte/hash evidence. Do not generate translations, embeddings, audio or app content, publish the corpus, or claim full completeness.
+> Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore the base and supplements through chapters14–16 plus the final resume supplement, replay actual body imports and run the latest verification/checkpoint scripts. Read the current gap ledger and restored `handoff-2026-10-05-frontier/collection-frontier.md` before collecting. Prioritize actual existing English scripture bodies and preserve other languages. Resume by capturing Kiraṇa Kriyāpāda17–18, source PDF367–383; these pages were inspected but their English has not been imported. Preserve source omissions, uncertain readings and exact byte/hash evidence. Do not generate translations, embeddings, audio or app content, publish the corpus, or claim full completeness.
 
 The private SQLite database contains actual scripture bodies, rather than just links. Its path is `content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite`.
 

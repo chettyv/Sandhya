@@ -2,6 +2,18 @@
 
 Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds actual existing English for **Kriyāpāda chapters 14–16**. Restore the base, preview supplement, 10–12 update, chapter13 update and latest update in order, replaying their append commands.
 
+## Current stopping point for another PC
+
+After applying all body updates below, also restore the [resume supplement](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-resume). It contains twelve newer reading images, the frozen database receipt, explicit work-in-progress notes and separate snapshots of the latest checkpoint files. Chapters17–18 have been inspected but **have no imported English bodies**. This supplement adds no database rows and requires no append command.
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-resume --directory content/_staging/transfer/private-corpus-2026-10-05-resume --manifest-sha256 8a1101875ddb7a4f70854d63439edead52a46a2b82f13826c34dc98a12e95b69
+```
+
+Read the restored `content/_staging/raw/english/source-review-2026-10-02/handoff-2026-10-05-frontier/collection-frontier.md` next. It records chapter17's PDF367–372 boundary, chapter18's PDF373–383 boundary and explicit end of Kriyāpāda, unresolved readings, and the next Caryāpāda opening at PDF384. First transcribe and import the existing English for17–18; the inspected images are not stored scripture bodies. Preserve earlier omissions and chapter9's summaries.
+
+Checkpoint snapshots are archived under `handoff-2026-10-05-frontier/checkpoint-snapshot/` so restore never overwrites your working database or regenerated notes. Keep them as evidence; use the chapter16 refresher after the preceding database replay to produce current working notes. The next collector should update the ledger when creating the actual17–18 captures. Full corpus acquisition remains unfinished.
+
 ## Latest addition: chapters 14–16
 
 | Chapter | Source title    | PDF pages | Final label | Document | Stored characters |
