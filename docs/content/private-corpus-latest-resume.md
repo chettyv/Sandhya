@@ -8,7 +8,7 @@ A closer source review found that chapter8's opening English title onPDF437 says
 
 The current26 chapter captures total **211,891 characters**, **268 inspected pages** and **228 source groups**. Chapters7–8's preferred versions total **12,963 characters**. Current database: **1,238,196 bodies**, **12,491 documents**, **171 PDF assets**,9,783,201,792 bytes; local SHA256 `89802e15491716b10d73fab9dbc5edeebde25337e91ac5b657423a8804841e9f`. The additional body is a corrected version, not new coverage. Exact storage/metadata/FTS, source BLOB, preview hashes, original capture retention and foreign-key checks passed. Repeating the correction import added no duplicate. Earlier omissions and uncertainties remain; no fidelity certification.
 
-The [title correction update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya08-title-correction01) contains eight additive files. Restore and replay the initial7–8 update below first, then:
+The [title correction update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya08-title-correction01) contains eight additive files. All three uploaded asset hashes passed. A fresh authenticated download and decompression verified all eight individual file hashes; the committed receipt is `private-corpus-carya08-title-correction01-transfer.json`. Restore and replay the initial7–8 update below first, then:
 
 ```powershell
 python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya08-title-correction01 --directory content/_staging/transfer/private-corpus-2026-10-05-carya08-title-correction01 --manifest-sha256 82cf7a0c50f3c359636a61e44fe3ff5b431c046b41680538a8ec0f8cccf093a2
@@ -19,6 +19,8 @@ python "$corpusRoot/refresh_kirana_carya08_correction01_checkpoint.py"
 ```
 
 Stop on errors. Preserve frozen releases and imported evidence. The newest verifier prefers the corrected chapter8 and checks that the original capture remains intact. Current notes and the local database receipt are regenerated after replay; timestamps and SQLite layout can differ across machines. Next collection remains **Caryāpāda9, PDF445/handwritten441**; opening and446 inspected, ending unestablished, no body imported; inspect447 onward.
+
+The final inventory accounts for **93,886 source files** across **twelve private releases**, with **zero unarchived source paths**. It compares paths, sizes and timestamps and rehashes six changed non-database candidates, building on sealed archive verification. The old chapter1–16 report matches the archived resume snapshot exactly. Replay/refresher commands reconstruct the expanded database, ledger and current notes; generated timestamps and SQLite layout may differ. Runtime caches, nested Git metadata and credentials are excluded.
 
 ## Prompt for the other PC
 
