@@ -1,5 +1,7 @@
 # Private corpus handoff — 5 October 2026
 
+**Newest body checkpoint:** Caryāpāda12 surviving English is imported with an apparent local handwritten473 gap and partial unnumbered fragment retained. Follow [the current cross-PC instructions](private-corpus-continue-on-other-pc.md) for all eighteen releases and chapter12 replay/verifier/refresher. Next recovery is chapter13,PDF481; inspect483 onward. Collection remains incomplete; earlier resume points below are historical.
+
 **Newest body checkpoint:** Caryāpāda11 surviving English is imported, with local scan gaps and unfinished closing retained. Follow [the current cross-PC instructions](private-corpus-continue-on-other-pc.md) for all seventeen releases and chapter11 replay/verifier/refresher. Next recovery is chapter12,PDF471; inspect473 onward. The corpus remains incomplete. Older chapter11 frontier notes below are historical.
 
 **Current cross-PC entry point:** [continue-on-other-PC instructions](private-corpus-continue-on-other-pc.md) lists all sixteen private releases and the precise unfinished chapter11 frontier. Restore/replay through chapter10, then the new image/note supplement. The database is unchanged; chapter11 has no imported body. Older resume points below are historical.

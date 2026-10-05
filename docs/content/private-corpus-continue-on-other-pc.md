@@ -2,7 +2,7 @@
 
 The current work is backed up to the private `chettyv/Sandhya` repository. Git contains the scripts and notes; the large database, source scans, extracted text and previews are in private GitHub release assets. Cloning Git alone does not download the corpus.
 
-The latest imported text is Kiraṇa Caryāpāda chapter 11’s surviving English: document12494/body1238199,8,947characters/ten groups. The database contains **1,238,199 text bodies, 12,494 documents and 171 PDF assets**. Those counts include overlapping editions and passages; the corpus remains incomplete. Chapter11’s apparent scan gaps and unfinished ending remain explicit.
+The latest imported text is Kiraṇa Caryāpāda chapter12’s surviving English: document12495/body1238200,7,599characters/nine groups or fragments. The database contains **1,238,200text bodies,12,495documents and171PDFassets**. Counts overlap editions/passages; the corpus remains incomplete. Chapter12’s apparent handwritten473 local gap and partial unnumbered English are explicit.
 
 ## Restore
 
@@ -61,14 +61,28 @@ Use chapter11’s verifier/refresher last. Do not rerun older checkpoint writers
 
 **Chapter11 backup verified:** all three uploaded asset checksums matched, and a fresh authenticated download/decompression verified all ten individual files. The [current completion receipt](private-corpus-carya11-transfer.json) accounts for **93,980 source files across seventeen private releases, zero unarchived source paths**. The current database hash comes from the chapter11 refresher's fresh hash. The inventory compares paths/sizes/timestamps and hashes changed non-database candidates, building on earlier archive checks; it does not freshly hash all41GB. Current mutable notes and database are reconstructed by replay/refresher. Earlier sixteen-release counts describe the preceding frontier handoff.
 
+## Eighteenth release: chapter12 body update
+
+After all seventeen preceding releases and chapter11 replay, restore [the chapter12 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya12). Its30 files contain surviving English, source/boundary evidence, append/verifier/refresher scripts,30-capture report,20 source images/crops and chapter13 opening evidence.
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya12 --directory content/_staging/transfer/private-corpus-2026-10-05-carya12 --manifest-sha256 5070e4ebe95ee636318ae3735aa13cd4de1ef75651a90e1a83899fdba4f7ca92
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya12.py" --chapter 12
+python "$corpusRoot/verify_kirana_carya12_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya12_checkpoint.py"
+```
+
+Run chapter12’s verifier/refresher last. Exact raw-file/body/import/metadata/FTS, source PDF BLOB, preview hashes and foreign-key checks passed for all30 preferred captures; a repeat chapter12 import added no duplicate. Current database SHA256 `8ea030c1dabde22943bc3ce8d9add78297b1149a8ecbd4519722f311e64d4920`,9,783,201,792bytes. Cross-machine SQLite layout/timestamps may differ; exact stored body/metadata and verification results are authoritative. These checks establish storage integrity, not translation fidelity or whole scripture completeness. Earlier SHA values and handoff counts above belong to their historical checkpoints.
+
 ## Exact resume point
 
-Caryāpāda11, **Acarya varjyavarjya vidhih**, spans surviving PDF pages461–470. All full pages461–472 and ten enlarged English crops461–470 have been inspected. The final source heading is24–27½; Sanskrit eleventh colophon470. English ends mid-sentence and has no English closing colophon in that sequence. The ten surviving English groups are now stored; earlier frontier snapshots describing them as pending are historical.
+Caryāpāda13 **Mahapatakadi prayascitta vidhih** opens **PDF481/handwritten480**. Full481–482 have been inspected; its ending is unestablished and no body is imported. Read `kirana-handwriting-source-map/carya13-opening-evidence.json`, then inspect483 onward to locate its ending and review enlarged English crops before capture.
 
-Handwritten462 appears absent between PDF465/466; English12–14(a) is absent locally. Handwritten468 appears absent between PDF470/471, with the chapter11 ending unfinished. These are apparent local scan/placement gaps: do not claim those pages are absent from the entire original PDF without checking for displacement. Do not invent their text. **After PDF465, the handwritten page number is no longer PDF minus4.** Use the explicit mapping and provisional-word notes in the archived frontier.
+Chapter12 is stored fromPDF471–480,final23½,Sanskrit twelfth colophon479 and English twelfth colophon480. Handwritten473 appears absent betweenPDF474/475; the surviving English475 is unnumbered with unresolved verse address/missing beginning or extent between6–7 and12. Keep that fragment and gap explicit. Apparent handwritten462/468 gaps and chapter11’s unfinished English closing remain unresolved as well. These are local sequence gaps, not proof that missing pages are absent from the whole original761-pagePDF. Use explicit handwritten maps and check displacement when feasible; invent no text.
 
-Next, continue chapter12, **Asauca Vidhih**, from PDF471/handwritten469;472 has been inspected and its ending is unestablished. Read `kirana-handwriting-source-map/carya12-opening-evidence.json`, then inspect473 onward. Retain chapter11’s apparent local gaps; their placement elsewhere in the full original PDF remains unresolved. Keep broader missing texts recorded in `private-corpus/remaining-actual-text-gaps.md`.
+Keep source corrections, quantities, spellings/grammar and historical caste/food/ritual-pollution claims as attributed quotation, not universal present-day practice or health guidance. Retain other source anomalies and the broader ledger in `private-corpus/remaining-actual-text-gaps.md`.
 
 ## Paste into the new chat
 
-> Continue private scripture collection from docs/content/private-corpus-continue-on-other-pc.md. Restore all seventeen releases in dependency order and replay imports through Caryāpāda11. Run verify_kirana_carya11_checkpoint.py and refresh_kirana_carya11_checkpoint.py last. Work as one unified project; earlier StreamA/B boundaries were superseded. Prefer chapter8 title correction01, retain its original audit capture, and preserve all earlier source anomalies. Chapter11’s ten surviving English groups are imported with apparent handwritten462/468 gaps, missing12–14(a), incomplete ending and provisional words explicit; use the nonconstant handwritten map. Resume Caryāpāda12 Asauca Vidhih atPDF471/handwritten469,471–472 inspected and ending unestablished; inspect473 onward. Capture actual existing English and keep other languages, verify storage/evidence and privately back up each delta. No generated translations, embeddings, audio, app import or publication. The user authorized collection, tool installation and private GitHub backup. The corpus remains incomplete.
+> Continue private scripture collection from docs/content/private-corpus-continue-on-other-pc.md. Restore all eighteen releases in dependency order, replay imports through Caryāpāda12, and run verify_kirana_carya12_checkpoint.py and refresh_kirana_carya12_checkpoint.py last. Work as one unified project; earlier StreamA/B boundaries were superseded. Prefer chapter8 title correction01 and retain its original audit capture. Preserve earlier omissions/anomalies, chapter11’s apparent handwritten462/468 gaps/unfinished closing, and chapter12’s apparent handwritten473 gap/partial unnumbered English475 with unresolved address/missing extent. Resume Caryāpāda13 Mahapatakadi prayascitta vidhih fromPDF481/handwritten480;481–482 inspected, ending unestablished and no body imported. Inspect483 onward, capture actual existing English, retain other languages, verify stored body/metadata/FTS/source evidence and privately back up each delta. No generated translations, embeddings, audio, app import or publication. The user authorized collection, tool installation and private GitHub backup. The corpus remains incomplete.
