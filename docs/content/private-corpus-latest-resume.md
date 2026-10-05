@@ -22,7 +22,9 @@ Stop on errors. Do not rerun the source recorder after import. Versioned scripts
 
 Next recovery is **Kriyāpāda14, Ganayāgavidhih**, starting PDF **350**, handwritten **347**. Its opening is inspected; its ending remains unestablished and no chapter14 body is imported. Remaining Kiraṇa work includes Kriyāpāda14–18, Caryāpāda1–27, Yogapāda1–7, Ramakaṇṭha commentary7–12 and recorded source omissions/uncertain readings. Broader gaps remain in the ledger. Existing other languages are preserved. The goal remains active.
 
-The following10–12 checkpoint is historical; its release stays unchanged.
+All three uploaded asset hashes passed verification, followed by a fresh authenticated download, decompression and checksum check of all thirteen archived files. The completion receipt is `private-corpus-kriya13-transfer.json`.
+
+The following 10–12 checkpoint is historical; its release stays unchanged.
 
 ## Actual new bodies
 

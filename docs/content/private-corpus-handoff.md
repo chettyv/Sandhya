@@ -57,7 +57,7 @@ Read these restored files first, in order:
 
 After restoring, paste this into a new chat on the other PC:
 
-> Continue private scripture collection from `docs/content/private-corpus-handoff.md`. Work on Sandhya as one unified project; prior Stream A/B ownership assignments do not apply to this task. Read the restored continuation checkpoint, current gap ledger and acquisition scope before collecting. Prioritize actual existing English scripture bodies, preserve existing other languages, and store actual text in the private corpus database. Do not generate new translations, embeddings, audio or app content, and do not publish the corpus. Resume with Kiraṇa Kriyāpāda chapter 10, source PDF page 306. Preserve source omissions, uncertain readings and exact byte/hash evidence. Do not claim the whole corpus is complete.
+> Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work on Sandhya as one unified project; prior Stream A/B assignments do not apply. Restore the base and all supplements, replay the actual body imports and run the latest verification/checkpoint scripts. Read the current gap ledger before collecting. Prioritize actual existing English scripture bodies and preserve other languages. Resume with Kiraṇa Kriyāpāda chapter 14, source PDF page 350. Preserve source omissions, uncertain readings and exact byte/hash evidence. Do not generate translations, embeddings, audio or app content, publish the corpus, or claim full completeness.
 
 The private SQLite database contains actual scripture bodies, rather than just links. Its path is `content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite`.
 

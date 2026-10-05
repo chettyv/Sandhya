@@ -1,0 +1,57 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-kriya13",
+  "tag": "private-corpus-2026-10-05-kriya13",
+  "complete": true,
+  "manifest_sha256": "0a2a18b5de0117cf281c78e265db65b505ddbd4991695d55703bab1101af124e",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612234220,
+      "bytes": 846800,
+      "digest": "sha256:33f040edb814131d55c42265cb87ed20d74b26173af575cc80366db41951a5ed"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612234255,
+      "bytes": 2789,
+      "digest": "sha256:42cd9cce43059ad7d7210bcff618a7c36f7662cbc9d329e312154d9650f5cffe"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612234269,
+      "bytes": 896,
+      "digest": "sha256:0a2a18b5de0117cf281c78e265db65b505ddbd4991695d55703bab1101af124e"
+    }
+  ],
+  "verified_at": "2026-10-05T10:27:29.411935+00:00",
+  "archive_files": 13,
+  "source_bytes": 922816,
+  "archive_bytes": 846800,
+  "archive_files_verified": 13,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_chapters": [13],
+  "new_actual_English_bodies": 1,
+  "new_stored_characters": 6743,
+  "new_inspected_source_pages": 10,
+  "new_source_verse_groups": 8,
+  "current_database_totals": {
+    "text_bodies": 1238182,
+    "documents": 12477,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803
+  },
+  "current_Kriyapada_verification": {
+    "chapters": 13,
+    "stored_characters": 135345,
+    "inspected_source_pages": 173,
+    "English_source_groups": 140,
+    "exact_file_body_import_metadata_and_FTS": true,
+    "source_asset117_BLOB_round_trip": true,
+    "foreign_keys_valid": true,
+    "idempotent_append_rerun_no_duplicates": true
+  },
+  "database_replay_required": true,
+  "scope": "Existing human English capture with explicit uncertainty; not complete corpus or linguistic fidelity certification",
+  "goal_complete": false,
+  "next_recovery": "Kriyapada14 Ganayagavidhih, PDF350/handwritten347; ending not yet established"
+}
