@@ -1,5 +1,25 @@
 # Latest private corpus resume notes — 5 October 2026
 
+## Latest addition: Caryāpāda10
+
+Chapter10 **Vratesvarayagavidhih** is stored as document **12493**, body **1238198**: **5,757 characters**, six groups, six English source pages **455–460**. Source ending15½ and both tenth colophons460. Group2–4 heading/Sanskrit is on455, corresponding English on456. Three incomplete right-edge fragments on457, a faint word ending on459, uncertain corrected fragments on460, faint insertion and stray wording remain explicitly marked. Production annotations requesting diagrams, mantra explanations and mudra examples remain in metadata. No whole English group omission observed; diplomatic and Sanskrit fidelity uncertified.
+
+The28 preferred Kriyāpāda/Caryāpāda captures passed exact raw-file/body/import/metadata/FTS, source PDF BLOB, preview hashes and foreign-key checks. A repeat import added no duplicate. Combined **225,885 characters, 284 inspected pages and 242 groups**. Current database: **1,238,198 bodies, 12,493 documents, 171 PDF assets**,9,783,201,792 bytes; SHA256 `9b5a54e9ce18a82818f503e52d2a3536d2d5196cc08141d439fb183a7fe3ac6b`. Earlier source omissions/anomalies remain, including chapter7 clipping; chapter8 correction01 remains preferred and original capture is preserved.
+
+Restore the fourteen preceding releases through the PC preview handoff and chapter9 before the [chapter10 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya10). Its ten files contain body/evidence, append/verification/refresher scripts, report and chapter11 opening evidence. Source previews are already in preceding releases. All ten files passed local archive verification. Then run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya10 --directory content/_staging/transfer/private-corpus-2026-10-05-carya10 --manifest-sha256 e27b128473d322ebba6c748961b9f143792855ee1086b63265f52aa48bbd894f
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya10.py" --chapter 10
+python "$corpusRoot/verify_kirana_carya10_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya10_checkpoint.py"
+```
+
+Stop on errors. Preserve frozen releases and older imported evidence. Do not rerun imported recorders or older checkpoint writers on expanded state. Regenerated timestamps/SQLite layout may differ across machines; verify exact stored text and metadata.
+
+**Next:** Caryāpāda11, **Acarya varjyavarjya vidhih**, opens **PDF461/handwritten457**. Full pages461–465 inspected; ending unestablished, no body imported. Read `kirana-handwriting-source-map/carya11-opening-evidence.json`, then inspect **466 onward** to establish the boundary and review enlarged English crops before capture. Caryāpāda11–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader ledger gaps remain. Sections below retain historical checkpoint values.
+
 ## Latest addition: Caryāpāda9
 
 Chapter9 **Gocaravidhih** is now stored as document **12492**, body **1238197**: **8,237 characters**, eight groups, ten English source pages **445–454**. Source ending29½; Sanskrit ninth colophon453 and English ninth colophon454. Opening1 address is inferred; English continues onto unnumbered448 and454. Provisional names, corrected labels, uncertain article, source grammar and empty/deleted glosses are explicit. No whole English group omission was observed; diplomatic and Sanskrit fidelity remain uncertified.

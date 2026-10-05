@@ -1,5 +1,7 @@
 # Private corpus handoff — 5 October 2026
 
+**Newest imported body:** Caryāpāda10 is stored; restore/replay its fifteenth-release update after the preceding fourteen releases. Use [the latest resume instructions](private-corpus-latest-resume.md) and chapter10 verifier/refresher last. Next collection is chapter11 fromPDF461, inspected through465; establish its ending by inspecting466 onward.
+
 **Newest imported body:** Caryāpāda9 is stored; restore and replay its fourteenth-release update after the thirteen earlier releases. Read the first section of [private-corpus-latest-resume.md](private-corpus-latest-resume.md). Next capture is chapter10, PDF455–460; older chapter9 pending notes below are historical.
 
 **Latest cross-PC instructions:** [private-corpus-pc-handoff.md](private-corpus-pc-handoff.md) adds a thirteenth private supplement with pending source images and precise resume notes. Replay the twelve earlier releases described here and in the latest resume notes first. Caryāpāda9–10 have inspected boundaries but no imported bodies; the database remains at the chapter8 correction01 checkpoint.
