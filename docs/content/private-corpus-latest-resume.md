@@ -1,8 +1,32 @@
 # Latest private corpus resume notes — 5 October 2026
 
+Read this after `private-corpus-handoff.md`. The latest chapter captures are Caryāpāda7–8, followed by the **chapter8 source-title correction01** below. Restore all twelve private releases in dependency order. Earlier sections retain their historical values.
+
+## Current source-title correction01
+
+A closer source review found that chapter8's opening English title onPDF437 says **religion life**. The first capture had normalized this to **religious life**. An additive corrected capture restores the source wording: document **12491**, body **1238196**, **7,143 characters**. Original document12490/body1238195 and its sealed files remain as an audit version. Prefer the corrected chapter8 version; this adds no scripture chapter or source coverage.
+
+The current26 chapter captures total **211,891 characters**, **268 inspected pages** and **228 source groups**. Chapters7–8's preferred versions total **12,963 characters**. Current database: **1,238,196 bodies**, **12,491 documents**, **171 PDF assets**,9,783,201,792 bytes; local SHA256 `89802e15491716b10d73fab9dbc5edeebde25337e91ac5b657423a8804841e9f`. The additional body is a corrected version, not new coverage. Exact storage/metadata/FTS, source BLOB, preview hashes, original capture retention and foreign-key checks passed. Repeating the correction import added no duplicate. Earlier omissions and uncertainties remain; no fidelity certification.
+
+The [title correction update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya08-title-correction01) contains eight additive files. Restore and replay the initial7–8 update below first, then:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya08-title-correction01 --directory content/_staging/transfer/private-corpus-2026-10-05-carya08-title-correction01 --manifest-sha256 82cf7a0c50f3c359636a61e44fe3ff5b431c046b41680538a8ec0f8cccf093a2
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya08_correction01.py" --chapter 8
+python "$corpusRoot/verify_kirana_carya08_correction01_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya08_correction01_checkpoint.py"
+```
+
+Stop on errors. Preserve frozen releases and imported evidence. The newest verifier prefers the corrected chapter8 and checks that the original capture remains intact. Current notes and the local database receipt are regenerated after replay; timestamps and SQLite layout can differ across machines. Next collection remains **Caryāpāda9, PDF445/handwritten441**; opening and446 inspected, ending unestablished, no body imported; inspect447 onward.
+
+## Prompt for the other PC
+
+> Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore all twelve private releases through Caryāpāda7–8 and chapter8 title correction01 in dependency order, replay their imports, then run the newest correction-aware verification/refresher. Prefer corrected chapter8 doc12491/body1238196; original capture is preserved for audit. Read the current gap ledger. Resume Kiraṇa Caryāpāda9 atPDF445/handwritten441; opening and446 inspected, ending unestablished and no body imported; inspect447 onward. Preserve earlier omissions, uncertainties, chapter4 ordinal mismatch, chapter6 displaced ending and chapter7 clipped/unfinished words. Prioritize actual existing English bodies and preserve other languages. Do not generate translations, embeddings, audio or app content, publish the corpus or claim full completeness.
+
 Read this after `private-corpus-handoff.md`. Latest existing-English capture is **Caryāpāda7–8**. Restore all preceding base and supplements through4–6 before this update. Older sections below are historical.
 
-## Latest addition: Caryāpāda7–8
+## Initial Caryāpāda7–8 capture before the title correction
 
 | Chapter | Title                 | Source PDF pages | Document / body | Stored characters | Source ending                                    |
 | ------- | --------------------- | ---------------- | --------------- | ----------------: | ------------------------------------------------ |
@@ -15,7 +39,7 @@ All18 Kriyāpāda and eight Caryāpāda captures passed exact raw-file/body/impo
 
 Current private database: **1,238,195 bodies**, **12,490 documents**, **171 PDF assets**, **9,783,201,792 bytes**. Local SHA256: `e6e4a06265f065e484a32e44ec58790aa5fab5c7784e85bb57b2dad4733db915`. Overlapping editions and granularities prevent interpreting those counts as unique verses or complete works.
 
-The [Caryāpāda7–8 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya07-08) contains40 new body/evidence/script/preview files, including chapter9 opening evidence. After all preceding updates, run:
+The [Caryāpāda7–8 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya07-08) contains40 new body/evidence/script/preview files, including chapter9 opening evidence. All three uploaded asset hashes passed, and a fresh authenticated download and decompression verified all40 individual file hashes. The committed completion receipt is `private-corpus-carya07-08-transfer.json`. After all preceding updates, run:
 
 ```powershell
 python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya07-08 --directory content/_staging/transfer/private-corpus-2026-10-05-carya07-08 --manifest-sha256 0f3de566b4679cb9baf83e35d81398a8362c5f32a81224db985b8d8fb1b3fedd
@@ -30,7 +54,7 @@ Stop on errors; preserve frozen receipts and older sealed releases. Regenerate t
 
 Next recovery: **Caryāpāda9, Gocaravidhih**, PDF **445**, handwritten **441**. Opening and following446 inspected; ending unestablished and no body imported. Read `kirana-handwriting-source-map/carya09-opening-evidence.json`, then inspect447 onward. Caryāpāda9–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader gaps remain open. Goal remains active.
 
-## Prompt for the other PC
+## Historical prompt through the initial7–8 capture
 
 > Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore all eleven private releases through Caryāpāda7–8 in dependency order, replay their body imports, then run the latest verification/refresher. Read the current gap ledger. Resume Kiraṇa Caryāpāda9 atPDF445/handwritten441; opening and446 inspected, ending unestablished and no body imported; inspect447 onward. Preserve earlier omissions and uncertainty, chapter4 ordinal mismatch, chapter6 displaced ending and chapter7 clipped/unfinished words. Prioritize actual existing English bodies and preserve other languages. Do not generate translations, embeddings, audio or app content, publish the corpus or claim full completeness.
 

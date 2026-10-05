@@ -1,0 +1,87 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya07-08",
+  "tag": "private-corpus-2026-10-05-carya07-08",
+  "complete": true,
+  "manifest_sha256": "0f3de566b4679cb9baf83e35d81398a8362c5f32a81224db985b8d8fb1b3fedd",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612524724,
+      "bytes": 5302024,
+      "digest": "sha256:7184c1872c2e7d9592171c1134ee08fa44511141b9bb4394abc1a7d7947fd9c3"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612524839,
+      "bytes": 8593,
+      "digest": "sha256:842a2a7c460e47f68c93a8352e5b9f0bc2f1b31c38af4379c065bde8b0f4fe9b"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612524859,
+      "bytes": 989,
+      "digest": "sha256:0f3de566b4679cb9baf83e35d81398a8362c5f32a81224db985b8d8fb1b3fedd"
+    }
+  ],
+  "checked_at": "2026-10-05T12:32:15.257760+00:00",
+  "archive_files": 40,
+  "source_bytes": 5963456,
+  "archive_bytes": 5302024,
+  "archive_files_verified": 40,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_actual_English_bodies": 2,
+  "new_stored_characters": 12964,
+  "new_inspected_English_source_pages": 14,
+  "new_source_groups": 15,
+  "chapters7_8_no_observed_whole_English_group_omission": true,
+  "chapter7_unfinished_and_source_right_edge_clipped_words_retained": true,
+  "chapter7_clause_relocation_arrow_unresolved": true,
+  "chapter8_opening1_3_address_inferred": true,
+  "chapter8_English4_7_continues_at_top_of439": true,
+  "fidelity_not_certified": true,
+  "current_database_totals": {
+    "text_bodies": 1238195,
+    "documents": 12490,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_bytes": 9783201792,
+  "current_database_sha256": "e6e4a06265f065e484a32e44ec58790aa5fab5c7784e85bb57b2dad4733db915",
+  "current_combined_verification": {
+    "source_captures": 26,
+    "Kriyapada": {
+      "chapters": 18,
+      "stored_characters": 161664,
+      "inspected_source_pages": 207,
+      "source_groups": 171
+    },
+    "Caryapada": {
+      "chapters": 8,
+      "stored_characters": 50228,
+      "inspected_source_pages": 61,
+      "English_source_pages": 59,
+      "source_groups": 57,
+      "apparent_missing_handwritten388_beginning_unresolved": true,
+      "chapter2_English7_8_missing": true,
+      "chapters3_8_no_observed_whole_group_omission": true,
+      "chapter7_right_edge_clipped_words_retained": true,
+      "chapter4_English_fifth_Sanskrit_fourth_disagreement_retained": true,
+      "chapter6_displaced_closing_page_retained_with_source_instruction": true,
+      "fidelity_not_certified": true
+    },
+    "stored_characters": 211892,
+    "inspected_source_pages": 268,
+    "source_groups": 228,
+    "original_PDF_BLOB_round_trip": true,
+    "source_asset_id": 117,
+    "preview_hashes_valid": true,
+    "foreign_keys_valid": true
+  },
+  "exact_file_body_import_metadata_and_FTS": true,
+  "idempotent_append_rerun_no_duplicates": true,
+  "database_replay_required": true,
+  "scope": "Existing human English7–8 with unfinished/clipped source words, provisional corrections and historical classifications/claims explicitly attributed. Earlier omissions and source anomalies remain. Not a new translation or complete corpus.",
+  "goal_complete": false,
+  "next_recovery": "Caryapada9 Gocaravidhih, PDF445/handwritten441; opening and446 inspected, ending unestablished, no body imported; inspect447 onward."
+}
