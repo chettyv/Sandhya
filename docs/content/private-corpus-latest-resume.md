@@ -12,7 +12,7 @@ All18 Kriyāpāda captures and Caryāpāda1–3 passed exact raw-file/body/impor
 
 Current private database: **1,238,190 bodies**, **12,485 documents**, **171 PDF assets**,9,782,632,448 bytes. Local SHA256: `9b174a708f6ffb4a0f6543c4282ffea93685a4661340ffde4b6278fce2785983`. Counts overlap editions and granularities; they do not prove a complete canon.
 
-The [Caryāpāda2–3 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya02-03) contains36 new body/evidence/script/preview files. After all preceding updates, run:
+The [Caryāpāda2–3 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya02-03) contains36 new body/evidence/script/preview files. All three remote asset checksums passed. A fresh authenticated download and decompression verified all36 individual file hashes; the receipt is `private-corpus-carya02-03-transfer.json`. After all preceding updates, run:
 
 ```powershell
 python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya02-03 --directory content/_staging/transfer/private-corpus-2026-10-05-carya02-03 --manifest-sha256 31797ade19aeeeffa41ae4dfdbc4eaba13b02ba2433409c1dd1fb18089148e1a

@@ -1,0 +1,80 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya02-03",
+  "tag": "private-corpus-2026-10-05-carya02-03",
+  "complete": true,
+  "manifest_sha256": "31797ade19aeeeffa41ae4dfdbc4eaba13b02ba2433409c1dd1fb18089148e1a",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612424803,
+      "bytes": 4291498,
+      "digest": "sha256:159c387f2c55d16b66131a5bb527a4ccb3d9bb235d614d8bc8e4d0603a7aa5e7"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612424898,
+      "bytes": 7745,
+      "digest": "sha256:1222fc7d30ec542a84da88dddedf5e69a4b1804f14a2e8720f212bd58821366b"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612424925,
+      "bytes": 985,
+      "digest": "sha256:31797ade19aeeeffa41ae4dfdbc4eaba13b02ba2433409c1dd1fb18089148e1a"
+    }
+  ],
+  "checked_at": "2026-10-05T11:51:58.147578+00:00",
+  "archive_files": 36,
+  "source_bytes": 4697403,
+  "archive_bytes": 4291498,
+  "archive_files_verified": 36,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_actual_English_bodies": 2,
+  "new_stored_characters": 9828,
+  "new_inspected_English_source_pages": 11,
+  "new_source_groups": 10,
+  "chapter2_English7_8_missing": true,
+  "chapter3_no_observed_English_group_omission": true,
+  "fidelity_not_certified": true,
+  "current_database_totals": {
+    "text_bodies": 1238190,
+    "documents": 12485,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_bytes": 9782632448,
+  "current_database_sha256": "9b174a708f6ffb4a0f6543c4282ffea93685a4661340ffde4b6278fce2785983",
+  "current_combined_verification": {
+    "source_captures": 21,
+    "Kriyapada": {
+      "chapters": 18,
+      "stored_characters": 161664,
+      "inspected_source_pages": 207,
+      "source_groups": 171
+    },
+    "Caryapada": {
+      "chapters": 3,
+      "stored_characters": 21752,
+      "inspected_source_pages": 27,
+      "English_source_pages": 25,
+      "source_groups": 24,
+      "apparent_missing_handwritten388_beginning_unresolved": true,
+      "chapter2_English7_8_missing": true,
+      "chapter3_no_observed_group_omission": true,
+      "fidelity_not_certified": true
+    },
+    "stored_characters": 183416,
+    "inspected_source_pages": 234,
+    "source_groups": 195,
+    "original_PDF_BLOB_round_trip": true,
+    "preview_hashes_valid": true,
+    "foreign_keys_valid": true
+  },
+  "exact_file_body_import_metadata_and_FTS": true,
+  "idempotent_append_rerun_no_duplicates": true,
+  "database_replay_required": true,
+  "scope": "Existing human English with missing chapter2 English7–8, provisional corrections and source classifications/claims explicitly attributed. Earlier omissions and Caryapada1 source gap remain. Not a new translation or complete corpus.",
+  "goal_complete": false,
+  "next_recovery": "Caryapada4 Mrtyunjayapujavidhih, PDF411/handwritten407; opening and following412 inspected, ending unestablished, no body imported"
+}
