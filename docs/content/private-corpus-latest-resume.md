@@ -1,5 +1,25 @@
 # Latest private corpus resume notes — 5 October 2026
 
+## Current checkpoint: Caryāpāda11 surviving English
+
+Chapter11 **Acarya varjyavarjya vidhih** is stored as document **12494**, body **1238199**: **8,947 characters**, ten surviving English groups on **PDF461–470**. Final source heading24–27½ and Sanskrit eleventh colophon470. English stops at `do not putforth`; no English closing colophon is supplied. Apparent handwritten462/468 gaps accompany missing English12–14(a) and an incomplete closing. These gaps are local to this physical sequence; displaced pages elsewhere in the original PDF remain unsearched/unresolved. Uncertain corrected words, unfinished word endings and source grammar are explicit. The handwritten map changes after465; do not use PDF minus4. No full chapter or fidelity certification.
+
+All29 preferred captures passed exact raw-file/body/import/metadata/FTS, source PDF BLOB, page-image hashes and foreign-key checks. Repeat chapter11 import added no duplicate. Combined **234,832 characters, 294 inspected pages, 252 groups**. Current database: **1,238,199 bodies, 12,494 documents, 171 PDF assets**,9,783,201,792bytes; SHA256 `a54d429e95e51f540aa2ed493eca5103278ad0d85afe6579daa12aee48ebc484`. Earlier omissions and source anomalies remain; chapter8 correction01 stays preferred.
+
+Restore all sixteen preceding releases through the chapter11 image frontier before [the chapter11 body update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya11). Its ten body/evidence/script/report/frontier files passed local archive verification; previews are in preceding releases. Then:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya11 --directory content/_staging/transfer/private-corpus-2026-10-05-carya11 --manifest-sha256 11258327e29acb2094f40ef8527193f9f33ca32abddf690694e4ce4134baec9c
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya11.py" --chapter 11
+python "$corpusRoot/verify_kirana_carya11_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya11_checkpoint.py"
+```
+
+Stop on errors. Preserve earlier sealed files and frozen receipts. Do not rerun imported recorders or older checkpoint writers on the expanded database. Exact body/metadata comparisons take precedence over cross-machine SQLite layout and regenerated timestamps.
+
+**Next:** Caryāpāda12 **Asauca Vidhih** opens **PDF471/handwritten469**;471–472 inspected, ending unestablished. Read `kirana-handwriting-source-map/carya12-opening-evidence.json`; inspect473 onward. Chapter11 gaps, Caryāpāda12–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader ledger gaps remain. All following checkpoint counts and pending chapter11 statements are historical.
+
 **Latest cross-PC handoff:** start with [continue-on-other-PC instructions](private-corpus-continue-on-other-pc.md). A sixteenth supplement preserves18 newer chapter11 images, detailed unfinished-work notes and five separate checkpoint snapshots. No new body or database change. Chapter11 is now bounded to survivingPDF461–470; apparent handwritten462/468 gaps and the unfinished English ending remain unresolved. All enlarged crops have been inspected. Capture the ten surviving groups next; chapter12 opens471. Older frontier statements below are historical.
 
 ## Latest addition: Caryāpāda10
