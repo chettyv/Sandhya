@@ -59,6 +59,8 @@ python "$corpusRoot/refresh_kirana_carya11_checkpoint.py"
 
 Use chapter11’s verifier/refresher last. Do not rerun older checkpoint writers against expanded state. All29 preferred captures passed exact file/body/import/metadata/FTS, source PDF BLOB, preview hashes and foreign-key checks; a repeat chapter11 import added no duplicate. These checks establish storage integrity, not translation fidelity or full scripture completeness.
 
+**Chapter11 backup verified:** all three uploaded asset checksums matched, and a fresh authenticated download/decompression verified all ten individual files. The [current completion receipt](private-corpus-carya11-transfer.json) accounts for **93,980 source files across seventeen private releases, zero unarchived source paths**. The current database hash comes from the chapter11 refresher's fresh hash. The inventory compares paths/sizes/timestamps and hashes changed non-database candidates, building on earlier archive checks; it does not freshly hash all41GB. Current mutable notes and database are reconstructed by replay/refresher. Earlier sixteen-release counts describe the preceding frontier handoff.
+
 ## Exact resume point
 
 Caryāpāda11, **Acarya varjyavarjya vidhih**, spans surviving PDF pages461–470. All full pages461–472 and ten enlarged English crops461–470 have been inspected. The final source heading is24–27½; Sanskrit eleventh colophon470. English ends mid-sentence and has no English closing colophon in that sequence. The ten surviving English groups are now stored; earlier frontier snapshots describing them as pending are historical.

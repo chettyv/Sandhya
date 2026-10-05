@@ -20,6 +20,8 @@ Stop on errors. Preserve earlier sealed files and frozen receipts. Do not rerun 
 
 **Next:** Caryāpāda12 **Asauca Vidhih** opens **PDF471/handwritten469**;471–472 inspected, ending unestablished. Read `kirana-handwriting-source-map/carya12-opening-evidence.json`; inspect473 onward. Chapter11 gaps, Caryāpāda12–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader ledger gaps remain. All following checkpoint counts and pending chapter11 statements are historical.
 
+**Chapter11 transfer verified:** all three uploaded asset hashes matched; a fresh authenticated download/decompression verified all ten individual files. The [completion receipt](private-corpus-carya11-transfer.json) accounts for93,980 source files across seventeen releases, with zero unarchived source paths. Current database/mutable notes travel through verified replay/refresher; the database was freshly hashed by the chapter11 refresher. The inventory builds on sealed archive checks and hashes changed non-database candidates, rather than freshly hashing the full collection. Credentials and reproducible runtime caches are excluded.
+
 **Latest cross-PC handoff:** start with [continue-on-other-PC instructions](private-corpus-continue-on-other-pc.md). A sixteenth supplement preserves18 newer chapter11 images, detailed unfinished-work notes and five separate checkpoint snapshots. No new body or database change. Chapter11 is now bounded to survivingPDF461–470; apparent handwritten462/468 gaps and the unfinished English ending remain unresolved. All enlarged crops have been inspected. Capture the ten surviving groups next; chapter12 opens471. Older frontier statements below are historical.
 
 ## Latest addition: Caryāpāda10
