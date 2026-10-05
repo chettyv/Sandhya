@@ -1,5 +1,21 @@
 # Continue collection on another PC — 5 October 2026
 
+## Nineteenth release: unfinished chapter 13 reading
+
+This is the newest handoff. The database is unchanged at **1,238,200 text bodies, 12,495 documents and 171 PDF assets**, with Caryāpāda12 as the latest imported chapter. Chapter 13 has no sealed transcription or imported body. Earlier resume points below are historical.
+
+After restoring the eighteen preceding releases and replaying imports through chapter 12, restore [the chapter 13 reading supplement](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya13-frontier):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya13-frontier --directory content/_staging/transfer/private-corpus-2026-10-05-carya13-frontier --manifest-sha256 93405b8baf137df9eca664328a416da3aaec0d6ed22691e9e0f1c46e54aaf3f9
+```
+
+Its **26 files** preserve eighteen newer previews, detailed unfinished-work notes, five separate exact checkpoint snapshots and two rendering helpers. Keep snapshots separate; do not overwrite regenerated current notes. Read `content/_staging/raw/english/source-review-2026-10-02/handoff-2026-10-05-carya13-frontier/collection-frontier.md`.
+
+Chapter 13's surviving sequence is **PDF481–489**, with Sanskrit thirteenth colophon on 488 and English thirteenth colophon on 489; chapter 14 opens on 490. Full pages 481–490 and enlarged crops 481–486 were inspected. **Next inspect enlarged crops 487–489 and full page 491.** Preserve apparent local handwritten 482/486 gaps, alternate numbering on PDF485, unfinished English on 482/485, provisional readings and source corrections. Possible displacement elsewhere in the original PDF remains unresolved; do not claim a complete chapter or certified translation fidelity.
+
+The supplement adds no scripture bodies or database changes. Corpus collection remains incomplete. Git carries scripts and notes; private release assets carry the large corpus. Cloning Git alone does not download the database.
+
 **Current checkpoint:** chapter12 surviving English is stored as document12495/body1238200,7,599characters/nine groups or fragments/PDF471–480. Apparent handwritten473 local gap and unnumbered English475 address/missing extent remain unresolved. Restore/replay all eighteen releases throughchapter12 and run its newest verifier/refresher last. Current database1,238,200bodies/12,495documents/171PDFassets. Use [the consolidated instructions](private-corpus-continue-on-other-pc.md). Nextchapter13 opens481,482 inspected; inspect483 onward. Older chapter12 pending states below are historical.
 
 **Current checkpoint:** chapter11's surviving English is now imported as document12494/body1238199,8,947characters/ten groups/PDF461–470. Its apparent handwritten462/468 gaps, missing12–14(a) and incomplete ending remain explicit. Restore all seventeen releases, replay chapter11, then run its newest verifier/refresher. Use [the consolidated instructions](private-corpus-continue-on-other-pc.md). Current database:1,238,199bodies/12,494documents/171PDFassets. Nextchapter12 opens471,472 inspected; inspect473 onward. Older pending chapter11 statements below are historical.

@@ -1,5 +1,21 @@
 # Private corpus handoff — 5 October 2026
 
+## Nineteenth release: unfinished chapter 13 reading
+
+This is the newest handoff. The database is unchanged at **1,238,200 text bodies, 12,495 documents and 171 PDF assets**, with Caryāpāda12 as the latest imported chapter. Chapter 13 has no sealed transcription or imported body. Earlier resume points below are historical.
+
+After restoring the eighteen preceding releases and replaying imports through chapter 12, restore [the chapter 13 reading supplement](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya13-frontier):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya13-frontier --directory content/_staging/transfer/private-corpus-2026-10-05-carya13-frontier --manifest-sha256 93405b8baf137df9eca664328a416da3aaec0d6ed22691e9e0f1c46e54aaf3f9
+```
+
+Its **26 files** preserve eighteen newer previews, detailed unfinished-work notes, five separate exact checkpoint snapshots and two rendering helpers. Keep snapshots separate; do not overwrite regenerated current notes. Read `content/_staging/raw/english/source-review-2026-10-02/handoff-2026-10-05-carya13-frontier/collection-frontier.md`.
+
+Chapter 13's surviving sequence is **PDF481–489**, with Sanskrit thirteenth colophon on 488 and English thirteenth colophon on 489; chapter 14 opens on 490. Full pages 481–490 and enlarged crops 481–486 were inspected. **Next inspect enlarged crops 487–489 and full page 491.** Preserve apparent local handwritten 482/486 gaps, alternate numbering on PDF485, unfinished English on 482/485, provisional readings and source corrections. Possible displacement elsewhere in the original PDF remains unresolved; do not claim a complete chapter or certified translation fidelity.
+
+The supplement adds no scripture bodies or database changes. Corpus collection remains incomplete. Git carries scripts and notes; private release assets carry the large corpus. Cloning Git alone does not download the database.
+
 **Newest body checkpoint:** Caryāpāda12 surviving English is imported with an apparent local handwritten473 gap and partial unnumbered fragment retained. Follow [the current cross-PC instructions](private-corpus-continue-on-other-pc.md) for all eighteen releases and chapter12 replay/verifier/refresher. Next recovery is chapter13,PDF481; inspect483 onward. Collection remains incomplete; earlier resume points below are historical.
 
 **Newest body checkpoint:** Caryāpāda11 surviving English is imported, with local scan gaps and unfinished closing retained. Follow [the current cross-PC instructions](private-corpus-continue-on-other-pc.md) for all seventeen releases and chapter11 replay/verifier/refresher. Next recovery is chapter12,PDF471; inspect473 onward. The corpus remains incomplete. Older chapter11 frontier notes below are historical.

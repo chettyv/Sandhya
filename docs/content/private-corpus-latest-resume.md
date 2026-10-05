@@ -1,5 +1,21 @@
 # Latest private corpus resume notes — 5 October 2026
 
+## Nineteenth release: unfinished chapter 13 reading
+
+This is the newest handoff. The database is unchanged at **1,238,200 text bodies, 12,495 documents and 171 PDF assets**, with Caryāpāda12 as the latest imported chapter. Chapter 13 has no sealed transcription or imported body. Earlier resume points below are historical.
+
+After restoring the eighteen preceding releases and replaying imports through chapter 12, restore [the chapter 13 reading supplement](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya13-frontier):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya13-frontier --directory content/_staging/transfer/private-corpus-2026-10-05-carya13-frontier --manifest-sha256 93405b8baf137df9eca664328a416da3aaec0d6ed22691e9e0f1c46e54aaf3f9
+```
+
+Its **26 files** preserve eighteen newer previews, detailed unfinished-work notes, five separate exact checkpoint snapshots and two rendering helpers. Keep snapshots separate; do not overwrite regenerated current notes. Read `content/_staging/raw/english/source-review-2026-10-02/handoff-2026-10-05-carya13-frontier/collection-frontier.md`.
+
+Chapter 13's surviving sequence is **PDF481–489**, with Sanskrit thirteenth colophon on 488 and English thirteenth colophon on 489; chapter 14 opens on 490. Full pages 481–490 and enlarged crops 481–486 were inspected. **Next inspect enlarged crops 487–489 and full page 491.** Preserve apparent local handwritten 482/486 gaps, alternate numbering on PDF485, unfinished English on 482/485, provisional readings and source corrections. Possible displacement elsewhere in the original PDF remains unresolved; do not claim a complete chapter or certified translation fidelity.
+
+The supplement adds no scripture bodies or database changes. Corpus collection remains incomplete. Git carries scripts and notes; private release assets carry the large corpus. Cloning Git alone does not download the database.
+
 ## Current checkpoint: Caryāpāda12 surviving English
 
 Chapter 12 **Asauca Vidhih** is stored as document **12495**, body **1238200**: **7,599 characters**, nine surviving groups or fragments, and ten English source pages **471–480**. The final source heading is 23½; the Sanskrit twelfth colophon is on 479 and the English twelfth colophon on 480. Handwritten page 473 appears absent between PDF pages 474 and 475. The unnumbered English fragment on 475 survives, but its address and missing beginning or extent between groups 6–7 and 12 remain unresolved. Displacement elsewhere in the entire PDF remains unsearched. Source grammar, corrected or uncertain words, quantities and contradictory food or caste prescriptions are retained as attributed quotation. This is not a full chapter or fidelity certification.
