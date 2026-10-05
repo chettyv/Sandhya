@@ -15,7 +15,8 @@ if (!sourceOnly && (!existsSync(tsc) || !existsSync(vitest))) {
 }
 
 if (!sourceOnly) {
-  run(tsc, ["-p", "packages/shared-types/tsconfig.json", "--noEmit"]);
+  // RAG resolves shared-types through its dist declarations, absent in a fresh checkout.
+  run(tsc, ["-b", "packages/shared-types/tsconfig.json"]);
   run(tsc, ["-p", "packages/rag-pipeline/tsconfig.json", "--noEmit"]);
   run(vitest, ["run", "--pool=threads", "--maxWorkers=1", "--minWorkers=1"], {
     cwd: join(root, "packages", "rag-pipeline"),
