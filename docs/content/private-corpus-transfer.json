@@ -1,0 +1,11 @@
+{
+  "repository": "chettyv/Sandhya",
+  "tag": "private-corpus-2026-10-05",
+  "complete": false,
+  "state": "Packing and upload in progress; pull main again for the verified completion receipt.",
+  "database_sha256": "53c623871d22e8e470ec4b44c9875098a4f38960951cbc6c88c3b1cbafb16302",
+  "database_bytes": 9782632448,
+  "text_bodies": 1238178,
+  "documents": 12473,
+  "PDF_assets": 171
+}

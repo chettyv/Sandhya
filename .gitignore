@@ -70,3 +70,5 @@ content/_staging/prepared/
 
 # Raw staged sources stay on disk / external storage, not in git (plan v2 Phase 0)
 content/_staging/raw/
+content/_staging/transfer/
+scripts/private-corpus/__pycache__/
