@@ -1,0 +1,57 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-kriya14-16",
+  "tag": "private-corpus-2026-10-05-kriya14-16",
+  "complete": true,
+  "manifest_sha256": "b5195994734f00640c0d2a8249a3f8b3453b944194bb3c63f12e0e1db39c3813",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612261197,
+      "bytes": 2704589,
+      "digest": "sha256:ca709b216a60fc974456e3de82d60d03a0990d4751d53aa88d8b09c7e3396c1a"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612261228,
+      "bytes": 6649,
+      "digest": "sha256:e65b657a4a22459332fd58d8921cb73526329e617b5f82f0c4893c3a2c124b84"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612261250,
+      "bytes": 902,
+      "digest": "sha256:b5195994734f00640c0d2a8249a3f8b3453b944194bb3c63f12e0e1db39c3813"
+    }
+  ],
+  "verified_at": "2026-10-05T10:40:47.679013+00:00",
+  "archive_files": 30,
+  "source_bytes": 3106070,
+  "archive_bytes": 2704589,
+  "archive_files_verified": 30,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_chapters": [14, 15, 16],
+  "new_actual_English_bodies": 3,
+  "new_stored_characters": 12646,
+  "new_inspected_source_pages": 17,
+  "new_source_verse_groups": 16,
+  "current_database_totals": {
+    "text_bodies": 1238185,
+    "documents": 12480,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803
+  },
+  "current_Kriyapada_verification": {
+    "chapters": 16,
+    "stored_characters": 147991,
+    "inspected_source_pages": 190,
+    "English_source_groups": 156,
+    "exact_file_body_import_metadata_and_FTS": true,
+    "source_asset117_BLOB_round_trip": true,
+    "foreign_keys_valid": true,
+    "idempotent_append_rerun_no_duplicates": true
+  },
+  "database_replay_required": true,
+  "scope": "Existing human English captures with explicit uncertainty; not complete corpus or linguistic fidelity certification",
+  "goal_complete": false,
+  "next_recovery": "Kriyapada17 Grahayagavidhih, PDF367/handwritten364; ending not yet established"
+}

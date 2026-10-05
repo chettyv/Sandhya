@@ -28,6 +28,8 @@ python "$corpusRoot/verify_kirana_checkpoint16.py"
 python "$corpusRoot/refresh_kirana_checkpoint16.py"
 ```
 
+All three uploaded asset hashes passed verification, followed by a fresh authenticated download, decompression and checksum verification of all thirty archived files. The complete receipt is `private-corpus-kriya14-16-transfer.json`.
+
 Stop on errors. Regenerate the local receipt after replay; physical SQLite hashes can vary by runtime, so verify the exact body/metadata/FTS checks too. Preserve the frozen receipts. Do not rerun older checkpoint writers against this expanded state or rerun imported evidence recorders.
 
 Next recovery: **Kriyāpāda17, Grahayāgavidhih**, PDF **367**, handwritten **364**. Its opening is inspected; ending unestablished and no chapter17 body imported. Remaining work includes Kriyāpāda17–18, Caryāpāda1–27, Yogapāda1–7, Ramakaṇṭha7–12, source omissions/uncertainties and broader ledger gaps. The goal remains active.
