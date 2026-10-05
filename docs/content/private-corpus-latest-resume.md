@@ -1,8 +1,33 @@
 # Latest private corpus resume notes — 5 October 2026
 
-Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds **Caryāpāda1's surviving existing English**. Restore the base, preview supplement,10–12, chapter13,14–16, resume and17–18 updates before applying Caryāpāda1, replaying body append commands in order.
+Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds **Caryāpāda2–3's surviving existing English**. Restore the base, preview supplement,10–12, chapter13,14–16, resume,17–18 and Caryāpāda1 updates before applying2–3, replaying body append commands in order.
 
-## Latest addition: Caryāpāda1, partial source capture
+## Latest addition: Caryāpāda2–3
+
+Chapter2, **Sarasvatīpūjāvidhih**, is document **12484**, body **1238189**: **5,446 characters**, six English groups across PDF **400–405**, handwritten396–401. Sanskrit ends16½ with the second-chapter colophon onPDF404; English continuesPDF405. **English7–8 is absent in this inspected sequence:** Sanskrit7–8 appears onPDF402 andPDF403 starts9. No missing translation was generated. The English terms `pitah` and `erikarana` remain provisional; source `asta-mantra`, awkward grammar and supernatural claims remain attributed quotation.
+
+Chapter3, **Bhikṣāṭanavidhih**, is document **12485**, body **1238190**: **4,382 characters**, four English groups across PDF **406–410**, handwritten402–406. It reaches12 and the third-chapter English colophon onPDF410. No English group omission was observed in these pages; word readings and the revised `emerges himself out as a conqueror` clause remain provisional. Historical classifications and longevity claims are quoted source text, with no authored practice guidance. Neither capture certifies full diplomatic or Sanskrit fidelity.
+
+All18 Kriyāpāda captures and Caryāpāda1–3 passed exact raw-file/body/import/metadata/FTS, original PDF asset117 BLOB, preview hashes and foreign-key checks. Repeat imports added no duplicates. Combined **183,416 characters**, **234 inspected source pages**, **195 groups**; the new2–3 captures add **9,828 characters**, eleven pages and ten groups. Earlier omissions, chapter9 summaries, Caryāpāda1's apparent handwritten388 missing beginning and uncertainties remain.
+
+Current private database: **1,238,190 bodies**, **12,485 documents**, **171 PDF assets**,9,782,632,448 bytes. Local SHA256: `9b174a708f6ffb4a0f6543c4282ffea93685a4661340ffde4b6278fce2785983`. Counts overlap editions and granularities; they do not prove a complete canon.
+
+The [Caryāpāda2–3 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya02-03) contains36 new body/evidence/script/preview files. After all preceding updates, run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya02-03 --directory content/_staging/transfer/private-corpus-2026-10-05-carya02-03 --manifest-sha256 31797ade19aeeeffa41ae4dfdbc4eaba13b02ba2433409c1dd1fb18089148e1a
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya02_03.py" --chapter 2
+python "$corpusRoot/append_kirana_source_carya02_03.py" --chapter 3
+python "$corpusRoot/verify_kirana_carya03_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya03_checkpoint.py"
+```
+
+Stop on errors; preserve older sealed evidence and receipts. Regenerate the local receipt after replay, verifying actual body/metadata/FTS as well as physical hashes. Do not rerun imported evidence recorders or older checkpoint writers against the expanded state. Earlier sections below are historical.
+
+Next recovery: **Caryāpāda4, Mṛtyuñjayapūjāvidhih**, PDF **411**, handwritten **407**. Opening and followingPDF412 inspected; ending unestablished and no body imported. Caryāpāda4–27, Yogapāda1–7, Ramakaṇṭha7–12, source-English omissions/uncertainties and broader ledger gaps remain open. Goal remains active.
+
+## Previous addition: Caryāpāda1, partial source capture
 
 Chapter1, **Samayācāravidhi-paṭalaḥ**, is document **12483**, body **1238188**: **11,924 stored characters**, **14 source groups**, including an unnumbered partial continuation. All **16** PDF pages **384–399** were inspected; **14** contain English, with copyrightPDF388 and continuation-titlePDF389 excluded from scripture text. The English ends at source label **41**, with the first-chapter colophon onPDF399. The next chapter startsPDF400/handwritten396.
 
