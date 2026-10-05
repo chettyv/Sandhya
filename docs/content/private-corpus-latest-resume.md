@@ -1,8 +1,36 @@
 # Latest private corpus resume notes — 5 October 2026
 
-Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds actual existing English for **Kriyāpāda chapters 14–16**. Restore the base, preview supplement, 10–12 update, chapter13 update and latest update in order, replaying their append commands.
+Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds actual existing English for **Kriyāpāda chapters17–18**. Restore the base, preview supplement,10–12 update, chapter13 update,14–16 update and resume supplement before applying17–18, replaying body append commands in order.
 
-## Current stopping point for another PC
+## Latest addition: chapters17–18
+
+| Chapter | Source title             | PDF pages | Final label | Document | Stored characters |
+| ------- | ------------------------ | --------- | ----------- | -------- | ----------------: |
+| 17      | Grahayāgavidhih          | 367–372   | 15½         | 12481    |             4,349 |
+| 18      | Brahmāṃsādilakṣaṇavidhih | 373–383   | 32          | 12482    |             9,324 |
+
+These are two existing human English bodies, **13,673 characters**, **17 inspected pages**, **15 source groups** and both English colophons. PDF383 explicitly states “Here ends the Kriyapada.” Unfinished `libera`/`appearan`, uncertain `kumda`/`pimda` group-name readings and unresolved source marks remain explicit. Spelling, grammar, corrections and historical classifications are preserved as source quotation. No new translation was made. Full diplomatic transcription, Indic typography and Sanskrit fidelity remain unverified.
+
+All **18** Kriyāpāda captures passed exact file/body/import/metadata/FTS, original asset117 PDF BLOB and foreign-key checks; the new preview hashes also passed. Repeating17–18 added no duplicate. Cumulative totals: **161,664 stored characters**, **207 inspected pages**, **171 source groups**. Chapter9 still contains summaries/selected translations, and chapter1/4 omissions and earlier uncertainties remain open. The section ending does not prove complete verse-by-verse English.
+
+Current private database: **1,238,187 bodies**, **12,482 documents**, **171 PDF assets**,9,782,632,448 bytes. Local SHA256: `3703e9c99d4dc4c588008f85132f2027747fdd2302b476ab888ebaec53d214d0`. Overlapping editions and granularities prevent treating those counts as unique verses or a complete canon.
+
+The [17–18 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-kriya17-18) contains17 new body/evidence/script/detail-crop files, about0.35 MB compressed. Manifest SHA256: `e038b87597410b45bc23cb2af73f352e90d3429e07eecb15cbe5679e38b791e6`. After preceding updates, run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-kriya17-18 --directory content/_staging/transfer/private-corpus-2026-10-05-kriya17-18 --manifest-sha256 e038b87597410b45bc23cb2af73f352e90d3429e07eecb15cbe5679e38b791e6
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_chapter17_18.py" --chapter 17
+python "$corpusRoot/append_kirana_source_chapter17_18.py" --chapter 18
+python "$corpusRoot/verify_kirana_checkpoint18.py"
+python "$corpusRoot/refresh_kirana_checkpoint18.py"
+```
+
+Stop on errors. Preserve frozen receipts and older release files. Do not rerun imported evidence recorders or older checkpoint writers against the expanded database. Locally regenerate the receipt after replay; physical SQLite hashes can vary by runtime, so exact body/metadata/FTS checks matter too. The earlier resume frontier and snapshots below are historical.
+
+Next recovery: **Caryāpāda1, Samayācāravidhi-paṭalaḥ**, beginning PDF **384**, handwritten **381**. Its opening is inspected; ending unestablished and no Caryāpāda1 body imported. Caryāpāda1–27, Yogapāda1–7, Ramakaṇṭha commentary7–12, earlier source-English omissions/uncertainties and the broader ledger gaps remain open. The collection goal remains active.
+
+## Previous stopping point before17–18
 
 After applying all body updates below, also restore the [resume supplement](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-resume). It contains twelve newer reading images, the frozen database receipt, explicit work-in-progress notes and separate snapshots of the latest checkpoint files. Chapters17–18 have been inspected but **have no imported English bodies**. This supplement adds no database rows and requires no append command.
 
@@ -16,7 +44,7 @@ Checkpoint snapshots are archived under `handoff-2026-10-05-frontier/checkpoint-
 
 **Resume transfer verified:** all three uploaded asset hashes passed, followed by a fresh authenticated download, decompression and checksum check of all21 archived files (about3.5 MB compressed). The completion and current-file coverage receipt is `private-corpus-resume-transfer.json`. The six releases together cover the collected source tree; current database changes travel through verified body replay and mutable checkpoint notes also have exact separate snapshots. Runtime caches, nested Git directories and secret environment files are excluded. The database verification was rerun successfully before the final handoff.
 
-## Latest addition: chapters 14–16
+## Previous addition: chapters14–16
 
 | Chapter | Source title    | PDF pages | Final label | Document | Stored characters |
 | ------- | --------------- | --------- | ----------- | -------- | ----------------: |
