@@ -1,0 +1,57 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-kriya10-12",
+  "tag": "private-corpus-2026-10-05-kriya10-12",
+  "complete": true,
+  "manifest_sha256": "e3f24c8257bbf81f512a6765425044714867430e354bfed76b532e6223a82235",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612190898,
+      "bytes": 1695853,
+      "digest": "sha256:1eb78aa063b921dd5cdbcd0b2e8bffa36326140dfcdf0f0c64cdd2b8313cd915"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612190942,
+      "bytes": 6379,
+      "digest": "sha256:0b21aced66d54fbaec74c07b7856b774a74d2fb33481de85c95c69cc504266c7"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612190977,
+      "bytes": 1096,
+      "digest": "sha256:e3f24c8257bbf81f512a6765425044714867430e354bfed76b532e6223a82235"
+    }
+  ],
+  "verified_at": "2026-10-05T10:09:35.845878+00:00",
+  "archive_files": 29,
+  "source_bytes": 1853889,
+  "archive_bytes": 1695853,
+  "archive_files_verified": 29,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_chapters": [10, 11, 12],
+  "new_actual_English_bodies": 3,
+  "new_stored_characters": 24086,
+  "new_inspected_source_pages": 34,
+  "new_source_verse_groups": 26,
+  "current_database_totals": {
+    "text_bodies": 1238181,
+    "documents": 12476,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803
+  },
+  "current_Kriyapada_verification": {
+    "chapters": 12,
+    "stored_characters": 128602,
+    "inspected_source_pages": 163,
+    "English_source_groups": 132,
+    "exact_file_body_import_metadata_and_FTS": true,
+    "source_asset117_BLOB_round_trip": true,
+    "foreign_keys_valid": true,
+    "idempotent_append_rerun_no_duplicates": true
+  },
+  "database_replay_required": true,
+  "scope": "Existing human English captures with explicit uncertainty; not complete corpus or linguistic fidelity certification",
+  "goal_complete": false,
+  "next_recovery": "Kriyapada13Astrayagavidhih,PDF340/handwritten337; ending not yet established"
+}

@@ -4,7 +4,7 @@ The user requested that all current work be pushed with notes so collection can 
 
 **Transfer complete.** All 60 archive parts and both manifests passed GitHub's remote SHA256/size checks. Real authenticated downloads of both manifests and the final data part also passed through the same helper used by the restore command. The private release is [private-corpus-2026-10-05](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05). The committed `private-corpus-transfer.json` contains the verified completion receipt and expected manifest checksum. This completes the transfer of collected work; the scripture collection itself still has the gaps below.
 
-**Latest resume point:** read [private-corpus-latest-resume.md](private-corpus-latest-resume.md) for the chapter-10 boundary and visual inspection performed after this frozen snapshot. No new chapter body was imported. The supplement instructions below preserve the later preview images.
+**Latest resume point:** chapters 10–12 were subsequently captured and imported. Read [private-corpus-latest-resume.md](private-corpus-latest-resume.md) and apply the small body update below after restoring the frozen corpus and previews. The next collection chapter is Kriyāpāda 13, source PDF page 340.
 
 ## Restore on the other PC
 
@@ -23,6 +23,22 @@ python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-preview
 ```
 
 The supplement is a separate [private release](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-preview-supplement). Its receipt is `docs/content/private-corpus-preview-transfer.json`. The existing 93,525 source files had no detected changes or deletions: all sizes matched, and files modified after the main archive timestamp were also hash-checked. The supplement adds previews only; it does not change the frozen database. All 74 archived preview hashes and all three uploaded asset hashes were verified.
+
+Finally, restore the [Kriyāpāda 10–12 body update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-kriya10-12), then append its existing English to the private database. This update is about 1.7 MB compressed and contains 29 text/evidence/script/crop files; it avoids downloading another entire database. Its receipt is `docs/content/private-corpus-kriya10-12-transfer.json`.
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-kriya10-12 --directory content/_staging/transfer/private-corpus-2026-10-05-kriya10-12 --manifest-sha256 e3f24c8257bbf81f512a6765425044714867430e354bfed76b532e6223a82235
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_chapter.py" --chapter 10
+python "$corpusRoot/append_kirana_source_chapter.py" --chapter 11
+python "$corpusRoot/append_kirana_source_chapter.py" --chapter 12
+python "$corpusRoot/verify_kirana_current_checkpoint.py"
+python "$corpusRoot/refresh_post_handoff_checkpoint.py"
+```
+
+Stop if a command reports an error. The append commands accept identical existing imports and refuse a changed imported file. They passed a rerun with no duplicate bodies added. Verification checks actual database text, metadata, FTS, source PDF bytes and foreign keys. The checkpoint refresher hashes the current database, preserves the frozen receipt and updates the local notes/ledger. Do not rerun the evidence recorder scripts after import. Full scripture coverage and linguistic fidelity are still incomplete.
+
+These steps restore a fresh PC from the frozen baseline. If you already restored that baseline, skip its download and apply only missing supplements. After appending bodies or collecting more material, do not restore the frozen database over the working database: the restore command intentionally rejects that overwrite.
 
 The restore command downloads the release `private-corpus-2026-10-05`, checks its manifest against the committed transfer receipt, verifies every downloaded part, then reconstructs and hashes every source file. It checks the restored database's counts and acquisition checksum. Existing identical files are accepted; changed files are preserved and cause the restore to stop. Rerunning resumes from already verified downloads and files. GitHub credentials remain in memory and are never included in the archive.
 
