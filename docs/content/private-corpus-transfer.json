@@ -1,11 +1,397 @@
 {
-  "repository": "chettyv/Sandhya",
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05",
   "tag": "private-corpus-2026-10-05",
-  "complete": false,
-  "state": "Packing and upload in progress; pull main again for the verified completion receipt.",
+  "complete": true,
+  "manifest_sha256": "5f3a7878c8b2ea282ae298d29058eeeb73de2d4d451e076b7c38213b44c14d05",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 611938120,
+      "bytes": 536870912,
+      "digest": "sha256:3e0b02419722a42c778affebcfaee3ed88c8e11826fd3d1efdd0d4e9b6b1b0de"
+    },
+    {
+      "name": "corpus.tar.zst.part-0002",
+      "id": 611943605,
+      "bytes": 536870912,
+      "digest": "sha256:f9f5f29e22939216d67447120367779132aa0697bb79edc51179bdcaa35c2b3c"
+    },
+    {
+      "name": "corpus.tar.zst.part-0003",
+      "id": 611960995,
+      "bytes": 536870912,
+      "digest": "sha256:19fcfa84a20619db1d2ee626e879dec5a23efbc61f3220db0ba3e399a9e71a5a"
+    },
+    {
+      "name": "corpus.tar.zst.part-0004",
+      "id": 611961400,
+      "bytes": 536870912,
+      "digest": "sha256:402b359dcf7341f3de7a75acbb3031a37c68c20f045e7d21c111fcf24535ad20"
+    },
+    {
+      "name": "corpus.tar.zst.part-0005",
+      "id": 611961394,
+      "bytes": 536870912,
+      "digest": "sha256:c512f2c41343bc38ae46ee4b6cceaec5cc2e710e7631f10b050d50b406afd08d"
+    },
+    {
+      "name": "corpus.tar.zst.part-0006",
+      "id": 611967263,
+      "bytes": 536870912,
+      "digest": "sha256:493b60c863e7b42c6c47b0f80649baea088c7259712ef00ed5be9b3aa4303590"
+    },
+    {
+      "name": "corpus.tar.zst.part-0007",
+      "id": 611967409,
+      "bytes": 536870912,
+      "digest": "sha256:1db053121afb86bb6d0eadbc2b675940843b8698a7b94b9510845c6434d53bdd"
+    },
+    {
+      "name": "corpus.tar.zst.part-0008",
+      "id": 611967570,
+      "bytes": 536870912,
+      "digest": "sha256:baf07cab94d40e7f0500c192115ada0f0ba5c9ff150d8282cb0a58b11c377207"
+    },
+    {
+      "name": "corpus.tar.zst.part-0009",
+      "id": 611974680,
+      "bytes": 536870912,
+      "digest": "sha256:9fc02552a849cc3c3bc8ab2b571c423f7f586e600de954ff22f4f1de15437346"
+    },
+    {
+      "name": "corpus.tar.zst.part-0010",
+      "id": 611974865,
+      "bytes": 536870912,
+      "digest": "sha256:1e607d362f8d00b4b3f130b5ae74567edf20d8626f0d34835662b2057e78ae4f"
+    },
+    {
+      "name": "corpus.tar.zst.part-0011",
+      "id": 611975056,
+      "bytes": 536870912,
+      "digest": "sha256:ac7c9820b173cb21ce626aac9c00731a8d195cd38955f87455844feccc3471a5"
+    },
+    {
+      "name": "corpus.tar.zst.part-0012",
+      "id": 611981031,
+      "bytes": 536870912,
+      "digest": "sha256:ca7b08a2f69a793f627de9d2a8fd9a1890d30dd6b92f13b69db7150b91fa8fa7"
+    },
+    {
+      "name": "corpus.tar.zst.part-0013",
+      "id": 611981432,
+      "bytes": 536870912,
+      "digest": "sha256:f5134201507b569d89de322c5593b93e15f0fa330e956066c8c50a22fc6997e4"
+    },
+    {
+      "name": "corpus.tar.zst.part-0014",
+      "id": 611981645,
+      "bytes": 536870912,
+      "digest": "sha256:934fd761904442d0ad2e9f83215420f0f7629ddc29eb5ce405825fbe26d28885"
+    },
+    {
+      "name": "corpus.tar.zst.part-0015",
+      "id": 611994462,
+      "bytes": 536870912,
+      "digest": "sha256:c299134541c4414fe3ac78bed7b6b207306d836164ad4f7613bb7597e42e754c"
+    },
+    {
+      "name": "corpus.tar.zst.part-0016",
+      "id": 611994468,
+      "bytes": 536870912,
+      "digest": "sha256:729068c150a0f3a2faccef9a7926cc88eb0afbad4d408cfacf2cdad7ec330ea0"
+    },
+    {
+      "name": "corpus.tar.zst.part-0017",
+      "id": 611995012,
+      "bytes": 536870912,
+      "digest": "sha256:16697c5b173b237ce3a30b2de40d4397221445d9b74a994ff9fcf03133970f9b"
+    },
+    {
+      "name": "corpus.tar.zst.part-0018",
+      "id": 612005023,
+      "bytes": 536870912,
+      "digest": "sha256:b0da8fbd9649aa1c713042f65053d277a2925c4b64177f0fcae9929534c1af9a"
+    },
+    {
+      "name": "corpus.tar.zst.part-0019",
+      "id": 612005022,
+      "bytes": 536870912,
+      "digest": "sha256:5f6b03d077691584ef4d94d716f315d99e9a80c8b79a2f180811874930496755"
+    },
+    {
+      "name": "corpus.tar.zst.part-0020",
+      "id": 612006314,
+      "bytes": 536870912,
+      "digest": "sha256:acd336bb81851748aacccde38a19d7f1dc31df1a0d65dbf6f419c6b6c3555b60"
+    },
+    {
+      "name": "corpus.tar.zst.part-0021",
+      "id": 612012569,
+      "bytes": 536870912,
+      "digest": "sha256:5131d681b947d5952e22fe4a621d2e10d762c4fac0f2f1f57e23e23891191834"
+    },
+    {
+      "name": "corpus.tar.zst.part-0022",
+      "id": 612012572,
+      "bytes": 536870912,
+      "digest": "sha256:1e9398c94412bc80dea9b2429d9ecf335a0b0fad1f723e1db5281e8ee157545a"
+    },
+    {
+      "name": "corpus.tar.zst.part-0023",
+      "id": 612013521,
+      "bytes": 536870912,
+      "digest": "sha256:63fa4d216c35d7c937f689b9cafe3ca677b85bad545ee9e7caded635967f0c27"
+    },
+    {
+      "name": "corpus.tar.zst.part-0024",
+      "id": 612020766,
+      "bytes": 536870912,
+      "digest": "sha256:4798c465ad8ac25e209b9405b1cd3978935a3f4acdcb6e8fca9fd0740c6f5eef"
+    },
+    {
+      "name": "corpus.tar.zst.part-0025",
+      "id": 612020767,
+      "bytes": 536870912,
+      "digest": "sha256:7ed372fb155a5eda235c1e362e08a77f0f0a94138df45b1791fca6196075779c"
+    },
+    {
+      "name": "corpus.tar.zst.part-0026",
+      "id": 612021872,
+      "bytes": 536870912,
+      "digest": "sha256:eb9a4e7b336609c303bfcd4cced1da09a8cd57e67752aba6504cb135f81e5d0c"
+    },
+    {
+      "name": "corpus.tar.zst.part-0027",
+      "id": 612027563,
+      "bytes": 536870912,
+      "digest": "sha256:71764c0b8cff1c4e8e7c4bf1152859d4dc52864dd767f8332da39c24f3bf4541"
+    },
+    {
+      "name": "corpus.tar.zst.part-0028",
+      "id": 612027558,
+      "bytes": 536870912,
+      "digest": "sha256:8ae5f49a247e1e218883b98fe509952bd05132563343bfc93a5ccf5f1561c959"
+    },
+    {
+      "name": "corpus.tar.zst.part-0029",
+      "id": 612027867,
+      "bytes": 536870912,
+      "digest": "sha256:6c79f38e5c5ca2572d70a4aa76055cbf58d2772783700e4c4609715016913298"
+    },
+    {
+      "name": "corpus.tar.zst.part-0030",
+      "id": 612034526,
+      "bytes": 536870912,
+      "digest": "sha256:e35237dd2de05ef4cf3633bc062f8b02e32dba07e9c2c85eeb19d8d08907b8a0"
+    },
+    {
+      "name": "corpus.tar.zst.part-0031",
+      "id": 612034528,
+      "bytes": 536870912,
+      "digest": "sha256:627f6a6f33d9087ba3bba55cf5e6483903afa82808152ed8cc5a79a70e314513"
+    },
+    {
+      "name": "corpus.tar.zst.part-0032",
+      "id": 612034727,
+      "bytes": 536870912,
+      "digest": "sha256:1910b54b78340f05fad9399289d38453272b5b4996c1569dc3cccf102d7f0e11"
+    },
+    {
+      "name": "corpus.tar.zst.part-0033",
+      "id": 612040775,
+      "bytes": 536870912,
+      "digest": "sha256:4b4fbc2f049970c624c98f57f472fa484d4191753ea18b5f96d1e63795d0eb3a"
+    },
+    {
+      "name": "corpus.tar.zst.part-0034",
+      "id": 612040941,
+      "bytes": 536870912,
+      "digest": "sha256:d93ff56e6825899335301c495e0f99cf85be4cf5e52961724173b935a1a4492c"
+    },
+    {
+      "name": "corpus.tar.zst.part-0035",
+      "id": 612041151,
+      "bytes": 536870912,
+      "digest": "sha256:aeebb0e9a6a0025656b3b0a008df983222048c0f98a517d893f9d5eb5edc0b4e"
+    },
+    {
+      "name": "corpus.tar.zst.part-0036",
+      "id": 612049352,
+      "bytes": 536870912,
+      "digest": "sha256:9ab441bb46d22632dd2ffe50aa32d956e6e000cfcf3d3e6fde583798d16f7ce1"
+    },
+    {
+      "name": "corpus.tar.zst.part-0037",
+      "id": 612049551,
+      "bytes": 536870912,
+      "digest": "sha256:6ff9029a197177b539973f83b9cd35e35f17c751a22d90073bb0664ebb85c196"
+    },
+    {
+      "name": "corpus.tar.zst.part-0038",
+      "id": 612049554,
+      "bytes": 536870912,
+      "digest": "sha256:e68ca48f66acc59f7ceb156f4f700ac94a4198686ceca0ae5ad8ac473c769680"
+    },
+    {
+      "name": "corpus.tar.zst.part-0039",
+      "id": 612056272,
+      "bytes": 536870912,
+      "digest": "sha256:f23d6b4aa8014b5eaa78483e5f9ac2d4d821544c2976bc2d5f3ef4d2a4e57198"
+    },
+    {
+      "name": "corpus.tar.zst.part-0040",
+      "id": 612056429,
+      "bytes": 536870912,
+      "digest": "sha256:7b6a6d98a4f746b4df1307adfdd7aeb563e58a06a0e4c69ce588391954d82a57"
+    },
+    {
+      "name": "corpus.tar.zst.part-0041",
+      "id": 612056428,
+      "bytes": 536870912,
+      "digest": "sha256:41dcea97a064da9c7f85cc461e203f6f7c4df2d3ad585fe8f015f9f275b7b69b"
+    },
+    {
+      "name": "corpus.tar.zst.part-0042",
+      "id": 612062459,
+      "bytes": 536870912,
+      "digest": "sha256:ede6bbe72921c683e0417e69d4f162cdb9954d1a90c8bdce47cc3be44e7417ec"
+    },
+    {
+      "name": "corpus.tar.zst.part-0043",
+      "id": 612062461,
+      "bytes": 536870912,
+      "digest": "sha256:ed1ee5e9a517cc85d97f11e97ed3effe9802a052d0320d4147d59a4c9f43c1f0"
+    },
+    {
+      "name": "corpus.tar.zst.part-0044",
+      "id": 612062659,
+      "bytes": 536870912,
+      "digest": "sha256:929f0c3ed43e3b90ce2d0d809efd5753c6e625a7f324d52f26d816262a52307c"
+    },
+    {
+      "name": "corpus.tar.zst.part-0045",
+      "id": 612068853,
+      "bytes": 536870912,
+      "digest": "sha256:7317cded9f78e6320dfa75d5ca6cd5d9def989dc5de2f379452ba2eb39d7864f"
+    },
+    {
+      "name": "corpus.tar.zst.part-0046",
+      "id": 612068856,
+      "bytes": 536870912,
+      "digest": "sha256:154a7f2a7877ac9acf388f42fc923f17f6dde5c659e0c669da6cb124cd809134"
+    },
+    {
+      "name": "corpus.tar.zst.part-0047",
+      "id": 612068854,
+      "bytes": 536870912,
+      "digest": "sha256:1668a05eec4f20d37364da81bb30ff52d9f1f9f0482acb4f91c5bbc9cbfc6560"
+    },
+    {
+      "name": "corpus.tar.zst.part-0048",
+      "id": 612075592,
+      "bytes": 536870912,
+      "digest": "sha256:faabe3e10ff69670236044c2cb01c3bb816286606d3303afa16319ff0202e91e"
+    },
+    {
+      "name": "corpus.tar.zst.part-0049",
+      "id": 612075590,
+      "bytes": 536870912,
+      "digest": "sha256:380c961546875d165d47d053fb71498e96441c156807e9ba4da8106054c4679b"
+    },
+    {
+      "name": "corpus.tar.zst.part-0050",
+      "id": 612075721,
+      "bytes": 536870912,
+      "digest": "sha256:47892f9c8c6a1b19e36511bfabcde8febd1288fa9786a2108c4f4d0c489f544a"
+    },
+    {
+      "name": "corpus.tar.zst.part-0051",
+      "id": 612081816,
+      "bytes": 536870912,
+      "digest": "sha256:9606fa22c3085f0f13ad333766a5581973cbe9046a55234b745c21d4bde6443e"
+    },
+    {
+      "name": "corpus.tar.zst.part-0052",
+      "id": 612081951,
+      "bytes": 536870912,
+      "digest": "sha256:1881ba937750f35b1ff95da60042faac83923b2308e2d0e2e73d5efe9d4bfa00"
+    },
+    {
+      "name": "corpus.tar.zst.part-0053",
+      "id": 612081950,
+      "bytes": 536870912,
+      "digest": "sha256:d2f0ef4689a38df63b8d505b984ccd38b061abad0862aa1d86fbe20ccf965889"
+    },
+    {
+      "name": "corpus.tar.zst.part-0054",
+      "id": 612088293,
+      "bytes": 536870912,
+      "digest": "sha256:aedd5d28a568619e8e824d28fe97d3a0c85dd1e4fcd7c0644e291cda727af2a1"
+    },
+    {
+      "name": "corpus.tar.zst.part-0055",
+      "id": 612088447,
+      "bytes": 536870912,
+      "digest": "sha256:8f76dc2a26ec4fc3d83d7d2540ee80686c0ada6da86e9a305e69ba15ee98b149"
+    },
+    {
+      "name": "corpus.tar.zst.part-0056",
+      "id": 612088451,
+      "bytes": 536870912,
+      "digest": "sha256:bd6c9f8f1015c9fff7ace3a8a0a85a398d2093052add772168427058ec16a793"
+    },
+    {
+      "name": "corpus.tar.zst.part-0057",
+      "id": 612094898,
+      "bytes": 536870912,
+      "digest": "sha256:f1533b8fe18e9459b600019b87864862838ccaaa3853c7adc0f283697db36168"
+    },
+    {
+      "name": "corpus.tar.zst.part-0058",
+      "id": 612095039,
+      "bytes": 536870912,
+      "digest": "sha256:580c335b0073c4e54fba075cd34bd15b1eb98d92446922044879c926456e90e0"
+    },
+    {
+      "name": "corpus.tar.zst.part-0059",
+      "id": 612095043,
+      "bytes": 536870912,
+      "digest": "sha256:5d79c1214d17bda0a0a46d6598cb477288000e99a33a0a6877dbfb3034cd1fcf"
+    },
+    {
+      "name": "corpus.tar.zst.part-0060",
+      "id": 612101033,
+      "bytes": 240271178,
+      "digest": "sha256:5fd9d9a4af51c20b514900baf32f791e943e823ff065362d14d5c17d9b59b8bc"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612105035,
+      "bytes": 20739278,
+      "digest": "sha256:6ca9e319e67b7b91285bd5e009a4ddc52ed3401e08ba403fa9112c02fab9a323"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612105254,
+      "bytes": 13162,
+      "digest": "sha256:5f3a7878c8b2ea282ae298d29058eeeb73de2d4d451e076b7c38213b44c14d05"
+    }
+  ],
+  "repository": "chettyv/Sandhya",
+  "verified_at": "2026-10-05T09:31:28.859749+00:00",
+  "collection_complete": false,
+  "source_files": 93525,
+  "source_bytes": 41044795013,
+  "archive_bytes": 31915654986,
   "database_sha256": "53c623871d22e8e470ec4b44c9875098a4f38960951cbc6c88c3b1cbafb16302",
   "database_bytes": 9782632448,
-  "text_bodies": 1238178,
-  "documents": 12473,
-  "PDF_assets": 171
+  "database_totals": {
+    "text_bodies": 1238178,
+    "documents": 12473,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "full_archive_verification": "private-corpus-archive-verification.json",
+  "remote_download_verification": "private-corpus-remote-download-verification.json"
 }

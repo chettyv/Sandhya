@@ -1,0 +1,23 @@
+{
+  "verified_at": "2026-10-05T09:29:33.470422+00:00",
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05",
+  "assets": [
+    {
+      "name": "manifest.json",
+      "bytes": 13162,
+      "sha256": "5f3a7878c8b2ea282ae298d29058eeeb73de2d4d451e076b7c38213b44c14d05"
+    },
+    {
+      "name": "files.jsonl",
+      "bytes": 20739278,
+      "sha256": "6ca9e319e67b7b91285bd5e009a4ddc52ed3401e08ba403fa9112c02fab9a323"
+    },
+    {
+      "name": "corpus.tar.zst.part-0060",
+      "bytes": 240271178,
+      "sha256": "5fd9d9a4af51c20b514900baf32f791e943e823ff065362d14d5c17d9b59b8bc"
+    }
+  ],
+  "method": "Real authenticated downloads through the same helper used by restore.py; exact bytes and SHA256 checked against the frozen manifest.",
+  "repository_private": true
+}
