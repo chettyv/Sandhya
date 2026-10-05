@@ -4,6 +4,8 @@ The user requested that all current work be pushed with notes so collection can 
 
 **Transfer complete.** All 60 archive parts and both manifests passed GitHub's remote SHA256/size checks. Real authenticated downloads of both manifests and the final data part also passed through the same helper used by the restore command. The private release is [private-corpus-2026-10-05](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05). The committed `private-corpus-transfer.json` contains the verified completion receipt and expected manifest checksum. This completes the transfer of collected work; the scripture collection itself still has the gaps below.
 
+**Latest resume point:** read [private-corpus-latest-resume.md](private-corpus-latest-resume.md) for the chapter-10 boundary and visual inspection performed after this frozen snapshot. No new chapter body was imported. The supplement instructions below preserve the later preview images.
+
 ## Restore on the other PC
 
 Sign into the same GitHub account using Git Credential Manager. Clone this private repository, or pull its `main` branch. Install Python 3.10 or newer and run these commands from the repository directory (on Windows, use `py` instead of `python` if necessary):
@@ -13,6 +15,14 @@ git pull --ff-only origin main
 python -m pip install -r scripts/private-corpus/requirements.txt
 python scripts/private-corpus/restore.py
 ```
+
+Then restore the verified preview supplement, which contains the 74 images generated after the main snapshot (about 11 MB compressed):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-preview-supplement --directory content/_staging/transfer/private-corpus-2026-10-05-preview-supplement --manifest-sha256 92d82884f4b5826d7d14d2ed2d4dc312734a440279d96ae3083636737402aac4
+```
+
+The supplement is a separate [private release](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-preview-supplement). Its receipt is `docs/content/private-corpus-preview-transfer.json`. The existing 93,525 source files had no detected changes or deletions: all sizes matched, and files modified after the main archive timestamp were also hash-checked. The supplement adds previews only; it does not change the frozen database. All 74 archived preview hashes and all three uploaded asset hashes were verified.
 
 The restore command downloads the release `private-corpus-2026-10-05`, checks its manifest against the committed transfer receipt, verifies every downloaded part, then reconstructs and hashes every source file. It checks the restored database's counts and acquisition checksum. Existing identical files are accepted; changed files are preserved and cause the restore to stop. Rerunning resumes from already verified downloads and files. GitHub credentials remain in memory and are never included in the archive.
 
@@ -60,7 +70,7 @@ Kiraṇa Āgama is the current concrete recovery task. Original source: `himalay
 - Vidyāpāda English chapters 1–12 are present across the Goodall and Sabharathnam editions. Ramakaṇṭha commentary 7–12 remains missing.
 - Kriyāpāda existing English chapters 1–8 and chapter 9's existing summaries/selected translations were stored as documents 12465–12473. Latest focused checks passed for exact file/body/metadata/import checksums, FTS text, the original PDF BLOB and foreign keys.
 - Chapter 9 is **not a complete detailed English verse translation**. Its translator explicitly declines that in the source. The English `69(b)` versus Sanskrit `64(b)` address discrepancy remains recorded. Chapter 1 lacks English 3(b)–5; chapter 4 has a clipped English odour-list continuation. Do not fill these by inventing text.
-- **Next: Kriyāpāda chapter 10, Dīkṣāpaṭalaḥ**, beginning scan PDF page **306**, handwritten page **303**. The opening was inspected; no chapter-10 body has been imported, and its ending boundary has not been determined. Existing preview JPEGs extend through PDF page 320.
+- **At this frozen snapshot:** Kriyāpāda chapter 10, Dīkṣāpaṭalaḥ, began scan PDF page **306**, handwritten page **303**. Its ending had not yet been determined and previews extended through page 320. **Later inspection located the ending on PDF page 330 and generated previews through page 390**, preserved in the supplement. No chapter-10 body has been imported. Read `private-corpus-latest-resume.md` for the precise next inspection steps.
 - Still open: Kriyāpāda 10–18, Caryāpāda 1–27, Yogapāda 1–7, the recorded English omissions and later commentary.
 
 Handwriting OCR trials with small/base TrOCR made substantive errors and were rejected. Their output was not imported. Continue source inspection and faithful transcription of the existing English, or acquire a reliable typed edition; do not treat failed OCR as verified scripture. Recorder scripts for already imported chapters refuse to rewrite them. Preserve CRLF-sensitive hashes and metadata-only repair audits.

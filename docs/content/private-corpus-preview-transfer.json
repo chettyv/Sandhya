@@ -1,0 +1,39 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-preview-supplement",
+  "tag": "private-corpus-2026-10-05-preview-supplement",
+  "complete": true,
+  "manifest_sha256": "92d82884f4b5826d7d14d2ed2d4dc312734a440279d96ae3083636737402aac4",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612138194,
+      "bytes": 10805805,
+      "digest": "sha256:1a9132e3f7382d19f836233541bdebbdf11876266edd37ef8743c20072adad75"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612138394,
+      "bytes": 15150,
+      "digest": "sha256:866ee74999298195bc634a5a4e9681ecc152a0f5e43b2c1283403b401ad0e2fd"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612138425,
+      "bytes": 803,
+      "digest": "sha256:92d82884f4b5826d7d14d2ed2d4dc312734a440279d96ae3083636737402aac4"
+    }
+  ],
+  "files": 74,
+  "source_bytes": 12101658,
+  "archive_bytes": 10805805,
+  "scope": "Derived Kirana preview images only; database and previously archived files unchanged.",
+  "verified_at": "2026-10-05T09:45:54.156669+00:00",
+  "archive_files_verified": 74,
+  "authenticated_remote_download_and_archive_verification": true,
+  "base_snapshot_audit": {
+    "new_files": 74,
+    "changed_files": 0,
+    "missing_files": 0,
+    "method": "All existing sizes compared to the frozen file manifest; files newer than its creation timestamp also hash-checked."
+  }
+}
