@@ -1,8 +1,40 @@
 # Latest private corpus resume notes — 5 October 2026
 
-Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds **Caryāpāda2–3's surviving existing English**. Restore the base, preview supplement,10–12, chapter13,14–16, resume,17–18 and Caryāpāda1 updates before applying2–3, replaying body append commands in order.
+Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds **Caryāpāda4–6's surviving existing English**. Restore the base, preview supplement,10–12, chapter13,14–16, resume,17–18, Caryāpāda1 and2–3 updates before applying4–6, replaying body append commands in order.
 
-## Latest addition: Caryāpāda2–3
+## Latest addition: Caryāpāda4–6
+
+| Chapter | Source title         | PDF pages | Document / body | Stored characters | Source ending                                          |
+| ------- | -------------------- | --------- | --------------- | ----------------: | ------------------------------------------------------ |
+| 4       | Mṛtyuñjayapūjāvidhih | 411–416   | 12486 / 1238191 |             4,617 | 12½; Sanskrit fourth, English fifth                    |
+| 5       | Anadhyāyavidhih      | 417–421   | 12487 / 1238192 |             3,961 | 10; fifth-chapter English colophon                     |
+| 6       | Pavitrārohaṇavidhih  | 422–430   | 12488 / 1238193 |             6,934 | 20; closing English and sixth colophon on displaced422 |
+
+The new captures add **15,512 characters**, **18 groups** and **20 English source pages**. No whole English group omission was observed in these bounded chapters; unfinished words and uncertain corrections remain. Chapter4's English colophon explicitly says **fifth**, while Sanskrit says **fourth** on the samePDF416; both readings are retained. Source words beginning `man` and `medic` onPDF412 remain unfinished/uncertain. Chapter6's final `pla` is unfinished onPDF430 and has not been completed by invention.
+
+**Chapter6 page order:** PDF422/handwritten418 contains closing English and the sixth-chapter colophon before its openingPDF423. It also explicitly says **This page should be placed after426**. The capture reads PDF423–430/handwritten419–426, thenPDF422. The final source group uses explicit page list **430,422**, with its unnumbered closing-paragraph association marked as inferred from the placement note and colophon. The original PDF retains its physical order. Historical medical, ritual, timing and classification claims are attributed source quotation; no practice guide, new translation or computed festival date was generated. Diplomatic transcription and Sanskrit fidelity remain uncertified.
+
+All18 Kriyāpāda and six Caryāpāda captures passed exact raw-file/body/import/metadata/FTS, original PDF asset117 BLOB, preview hash and foreign-key checks; repeat imports added no duplicates. Combined **198,928 characters**, **254 inspected source pages**, **213 groups**. Earlier Kriyāpāda omissions, chapter9 summaries, Caryāpāda1's apparent handwritten388 missing beginning, chapter2 English7–8 omission and uncertainties remain.
+
+Current private database: **1,238,193 bodies**, **12,488 documents**, **171 PDF assets**, **9,783,201,792 bytes**. Local SHA256: `61ae1125f3bf6dc430d311fda8cbdbb4e55202f44ce03885773ec9e03d03e871`. Counts overlap editions and granularities; they do not prove a complete canon.
+
+The [Caryāpāda4–6 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya04-06) contains60 new body/evidence/script/preview files, including chapter7 opening evidence. After all preceding updates, run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya04-06 --directory content/_staging/transfer/private-corpus-2026-10-05-carya04-06 --manifest-sha256 5ddca9415af644ba68bf97be86563a7e9eedb4309ad571056cab70567c72f580
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya04_06.py" --chapter 4
+python "$corpusRoot/append_kirana_source_carya04_06.py" --chapter 5
+python "$corpusRoot/append_kirana_source_carya04_06.py" --chapter 6
+python "$corpusRoot/verify_kirana_carya06_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya06_checkpoint.py"
+```
+
+Stop on errors; preserve older sealed evidence and receipts. Regenerate the local receipt after replay and verify exact body/metadata/FTS as well as physical hashes. Do not rerun imported evidence recorders or older checkpoint writers against expanded state. Earlier sections below are historical.
+
+Next recovery: **Caryāpāda7, Śivācārya-ācāravidhih**, PDF **431**, handwritten **427**. Opening and followingPDF432–434 inspected, through source group8(b)–10; ending unestablished and no body imported. Read `kirana-handwriting-source-map/carya07-opening-evidence.json`; inspectPDF435 onward to establish the boundary before capture. Caryāpāda7–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader ledger gaps remain open. Goal remains active.
+
+## Previous addition: Caryāpāda2–3
 
 Chapter2, **Sarasvatīpūjāvidhih**, is document **12484**, body **1238189**: **5,446 characters**, six English groups across PDF **400–405**, handwritten396–401. Sanskrit ends16½ with the second-chapter colophon onPDF404; English continuesPDF405. **English7–8 is absent in this inspected sequence:** Sanskrit7–8 appears onPDF402 andPDF403 starts9. No missing translation was generated. The English terms `pitah` and `erikarana` remain provisional; source `asta-mantra`, awkward grammar and supernatural claims remain attributed quotation.
 
