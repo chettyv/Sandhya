@@ -1,0 +1,91 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya11-frontier",
+  "tag": "private-corpus-2026-10-05-carya11-frontier",
+  "complete": true,
+  "manifest_sha256": "97c6253a66b53898cea239164d1ef0759a7290231ba5a4c6a87ca116840d6964",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 613340803,
+      "bytes": 3770894,
+      "digest": "sha256:4c2dee67766890ef684644a54204dcf39c753fedf400a6b70c4650594f2a557e"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 613340895,
+      "bytes": 5327,
+      "digest": "sha256:8aaeb2a0efadae95ed550138fa727813d22ecc21c499d25c6aa4a2104129cb37"
+    },
+    {
+      "name": "manifest.json",
+      "id": 613340919,
+      "bytes": 921,
+      "digest": "sha256:97c6253a66b53898cea239164d1ef0759a7290231ba5a4c6a87ca116840d6964"
+    }
+  ],
+  "checked_at": "2026-10-05T18:24:45.879593+00:00",
+  "archive_files": 24,
+  "source_bytes": 4299309,
+  "archive_bytes": 3770894,
+  "archive_files_verified": 24,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 0,
+  "new_preview_images": 18,
+  "current_note_snapshots": 5,
+  "database_replay_required": true,
+  "goal_complete": false,
+  "next_recovery": "Caryapada11 survivingPDF461–470, ten inspected English groups; no body imported. Apparent handwritten462/468 gaps, local English12–14(a) omission and incomplete English ending remain unresolved. Use explicit handwritten map and reading notes; chapter12 opens471, inspect473 onward.",
+  "current_database_totals": {
+    "text_bodies": 1238198,
+    "documents": 12493,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "9b5a54e9ce18a82818f503e52d2a3536d2d5196cc08141d439fb183a7fe3ac6b",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 93970,
+    "source_bytes": 41105880092,
+    "private_releases": 16,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "25b53d65e053f48bd1034e8320dde6a105732971cbb1c1b9f11e19685743547e",
+        "delivery": "chapter10 replay/refresher and separate exact snapshot in frontier supplement"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "6eabcfe480907f79fa8243a52acf348fd3c722fe08579170a71169d58886f738",
+        "delivery": "chapter10 replay/refresher and separate exact snapshot in frontier supplement"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "f339232c83c7fc0bab3bf25cfb04e729906edbc89f119ad9485ff3a8aa6c42aa",
+        "delivery": "chapter10 replay/refresher and separate exact snapshot in frontier supplement"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "4be2113ffd32fb65e5d9f3483e565f7ccf64bd24c040ba368619a38f8f770978",
+        "delivery": "chapter10 replay/refresher and separate exact snapshot in frontier supplement"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "b23ec2bfd88a9bce501203599d053b0a824143c4bec6764b81e743f76738688b",
+        "delivery": "chapter10 replay/refresher and separate exact snapshot in frontier supplement"
+      }
+    ],
+    "database_hash_rechecked_for_handoff": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256 for this handoff; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  }
+}
