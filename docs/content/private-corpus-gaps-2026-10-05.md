@@ -1,6 +1,6 @@
 # Remaining actual-text gaps
 
-Latest checkpoint: Kiraṇa Kriyāpāda1–13 existing English captures are now stored, with chapter9 summaries and the recorded uncertainties/omissions preserved. Chapter13 adds6,743 characters from PDF340–349, eight source groups through25. Exact storage/search/source-PDF checks passed for all13 captures. Kriyāpāda14–18 and later pādas remain open. See `private-corpus-latest-resume.md`; the detailed older inventory below is historical where it names an earlier chapter boundary.
+Latest checkpoint: Kiraṇa Kriyāpāda1–16 existing English captures are stored, with chapter9 summaries and recorded uncertainties/omissions preserved. Chapters14–16 add12,646 characters from PDF350–366, sixteen groups ending10½/20/11. Exact storage/search/source-PDF checks passed for all16 captures. Kriyāpāda17–18 and later pādas remain open. See `private-corpus-latest-resume.md`; the detailed older inventory below is historical where it names an earlier boundary.
 
 This is a private collection. Source bodies and full PDF bytes are stored in corpus.sqlite. A title, link, summary, index, or English introduction does not count as the underlying scripture.
 
