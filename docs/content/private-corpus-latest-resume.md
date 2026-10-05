@@ -1,5 +1,41 @@
 # Latest private corpus resume notes — 5 October 2026
 
+Read this after `private-corpus-handoff.md`. Latest existing-English capture is **Caryāpāda7–8**. Restore all preceding base and supplements through4–6 before this update. Older sections below are historical.
+
+## Latest addition: Caryāpāda7–8
+
+| Chapter | Title                 | Source PDF pages | Document / body | Stored characters | Source ending                                    |
+| ------- | --------------------- | ---------------- | --------------- | ----------------: | ------------------------------------------------ |
+| 7       | Śivācārya-ācāravidhih | 431–436          | 12489 / 1238194 |             5,820 | 15; seventh English and Sanskrit colophons on436 |
+| 8       | Āśrama-ācāryavidhih   | 437–444          | 12490 / 1238195 |             7,144 | 22½; eighth English and Sanskrit colophons on444 |
+
+These two captures add **12,964 characters**, **15 source groups** and **14 inspected English pages**. Chapter7 has unfinished wording on431 and clipped right-edge words on436; visible fragments and uncertainty markers are retained, with no invented completion. Its relocation arrow and several corrected/Indic words remain provisional. Chapter8's opening1–3 address is inferred; English4–7 continues at the top of439 before8–9. Source duplicate `to`, an unmatched parenthesis and corrected wording are preserved. Historical caste, initiation and life-stage prescriptions are attributed source quotation, with no new translation or authored practice guide. Neither capture certifies diplomatic or Sanskrit fidelity.
+
+All18 Kriyāpāda and eight Caryāpāda captures passed exact raw-file/body/import/metadata/FTS, original source PDF asset117 BLOB, preview hashes and foreign-key checks. Repeat imports added no duplicates. Combined **211,892 characters**, **268 inspected source pages**, **228 groups**. Earlier omissions, summaries, apparent missing Caryāpāda1 handwritten388 beginning, chapter2 English7–8 omission, chapter4 ordinal mismatch, chapter6 displaced ending and uncertainties remain.
+
+Current private database: **1,238,195 bodies**, **12,490 documents**, **171 PDF assets**, **9,783,201,792 bytes**. Local SHA256: `e6e4a06265f065e484a32e44ec58790aa5fab5c7784e85bb57b2dad4733db915`. Overlapping editions and granularities prevent interpreting those counts as unique verses or complete works.
+
+The [Caryāpāda7–8 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya07-08) contains40 new body/evidence/script/preview files, including chapter9 opening evidence. After all preceding updates, run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya07-08 --directory content/_staging/transfer/private-corpus-2026-10-05-carya07-08 --manifest-sha256 0f3de566b4679cb9baf83e35d81398a8362c5f32a81224db985b8d8fb1b3fedd
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya07_08.py" --chapter 7
+python "$corpusRoot/append_kirana_source_carya07_08.py" --chapter 8
+python "$corpusRoot/verify_kirana_carya08_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya08_checkpoint.py"
+```
+
+Stop on errors; preserve frozen receipts and older sealed releases. Regenerate the local receipt after replay; SQLite layout and regenerated timestamps can differ across machines. Do not rerun imported evidence recorders or older checkpoint writers against expanded state.
+
+Next recovery: **Caryāpāda9, Gocaravidhih**, PDF **445**, handwritten **441**. Opening and following446 inspected; ending unestablished and no body imported. Read `kirana-handwriting-source-map/carya09-opening-evidence.json`, then inspect447 onward. Caryāpāda9–27, Yogapāda1–7, Ramakaṇṭha7–12 and broader gaps remain open. Goal remains active.
+
+## Prompt for the other PC
+
+> Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore all eleven private releases through Caryāpāda7–8 in dependency order, replay their body imports, then run the latest verification/refresher. Read the current gap ledger. Resume Kiraṇa Caryāpāda9 atPDF445/handwritten441; opening and446 inspected, ending unestablished and no body imported; inspect447 onward. Preserve earlier omissions and uncertainty, chapter4 ordinal mismatch, chapter6 displaced ending and chapter7 clipped/unfinished words. Prioritize actual existing English bodies and preserve other languages. Do not generate translations, embeddings, audio or app content, publish the corpus or claim full completeness.
+
+## Historical checkpoint through chapters4–6
+
 Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds **Caryāpāda4–6's surviving existing English**. Restore the base, preview supplement,10–12, chapter13,14–16, resume,17–18, Caryāpāda1 and2–3 updates before applying4–6, replaying body append commands in order.
 
 ## Latest addition: Caryāpāda4–6
@@ -36,7 +72,7 @@ Next recovery: **Caryāpāda7, Śivācārya-ācāravidhih**, PDF **431**, handwr
 
 The final transfer inventory accounts for **93,838 source files** across **ten private releases**, with **zero unarchived source paths**. It checked paths, sizes and modification times and rehashed six changed non-database candidates, building on prior archive verification. The older chapter1–16 report matches its archived resume snapshot exactly. Replay and the newest refresher reconstruct the expanded database, ledger and current working notes; regenerated timestamps and SQLite layout may differ. Credentials and reproducible runtime caches are excluded.
 
-## Prompt for the other PC
+## Historical prompt through chapters4–6
 
 > Continue private scripture collection from `docs/content/private-corpus-handoff.md` and `docs/content/private-corpus-latest-resume.md`. Work as one unified project; prior Stream A/B assignments do not apply. Restore all ten private releases through Caryāpāda4–6 in dependency order and replay their imports and latest verification/refresher commands. Read the current gap ledger. Resume Kiraṇa Caryāpāda7 at PDF431/handwritten427; pages431–434 inspected, ending unestablished and no body imported. Inspect435 onward. Preserve earlier missing English groups and uncertainties, chapter4 English fifth/Sanskrit fourth discrepancy and chapter6 displaced closing page. Prioritize actual existing English bodies and preserve other languages. Do not generate translations, embeddings, audio or app content, publish the corpus, or claim full completeness.
 
