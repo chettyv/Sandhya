@@ -1,0 +1,61 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-kriya17-18",
+  "tag": "private-corpus-2026-10-05-kriya17-18",
+  "complete": true,
+  "manifest_sha256": "e038b87597410b45bc23cb2af73f352e90d3429e07eecb15cbe5679e38b791e6",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612337184,
+      "bytes": 352345,
+      "digest": "sha256:19f6f4e9a1d63e3b99e2ca11cd15fe2049745b7e309dfa0f79b951b861388d73"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612337193,
+      "bytes": 3719,
+      "digest": "sha256:48104b02ccffb97cf243de837932ba3fac4669eccc61863bf29b553deb3acc91"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612337216,
+      "bytes": 945,
+      "digest": "sha256:e038b87597410b45bc23cb2af73f352e90d3429e07eecb15cbe5679e38b791e6"
+    }
+  ],
+  "archive_files": 17,
+  "source_bytes": 430119,
+  "archive_bytes": 352345,
+  "archive_files_verified": 17,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_chapters": [17, 18],
+  "new_actual_English_bodies": 2,
+  "new_stored_characters": 13673,
+  "new_inspected_source_pages": 17,
+  "new_source_verse_groups": 15,
+  "new_detail_crops": 4,
+  "current_database_totals": {
+    "text_bodies": 1238187,
+    "documents": 12482,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803
+  },
+  "current_database_bytes": 9782632448,
+  "current_database_sha256": "3703e9c99d4dc4c588008f85132f2027747fdd2302b476ab888ebaec53d214d0",
+  "current_Kriyapada_verification": {
+    "chapters": 18,
+    "stored_characters": 161664,
+    "inspected_source_pages": 207,
+    "English_source_groups": 171,
+    "exact_file_body_import_metadata_and_FTS": true,
+    "source_asset117_BLOB_round_trip": true,
+    "new_preview_hashes_valid": true,
+    "foreign_keys_valid": true,
+    "idempotent_append_rerun_no_duplicates": true
+  },
+  "database_replay_required": true,
+  "source_Kriyapada_ending_explicit": true,
+  "scope": "Existing human English with explicit uncertainties; chapter1/4 omissions and chapter9 summaries retained. Not complete scripture corpus or linguistic fidelity certification.",
+  "goal_complete": false,
+  "next_recovery": "Caryapada1 Samayacaravidhi-patalah, PDF384/handwritten381; opening inspected, ending unestablished, no body imported"
+}

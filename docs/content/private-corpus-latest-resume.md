@@ -28,6 +28,8 @@ python "$corpusRoot/refresh_kirana_checkpoint18.py"
 
 Stop on errors. Preserve frozen receipts and older release files. Do not rerun imported evidence recorders or older checkpoint writers against the expanded database. Locally regenerate the receipt after replay; physical SQLite hashes can vary by runtime, so exact body/metadata/FTS checks matter too. The earlier resume frontier and snapshots below are historical.
 
+All three uploaded asset hashes passed verification, followed by a fresh authenticated download, decompression and checksum check of all17 archived files. The completed transfer receipt is `private-corpus-kriya17-18-transfer.json`.
+
 Next recovery: **Caryāpāda1, Samayācāravidhi-paṭalaḥ**, beginning PDF **384**, handwritten **381**. Its opening is inspected; ending unestablished and no Caryāpāda1 body imported. Caryāpāda1–27, Yogapāda1–7, Ramakaṇṭha commentary7–12, earlier source-English omissions/uncertainties and the broader ledger gaps remain open. The collection goal remains active.
 
 ## Previous stopping point before17–18
