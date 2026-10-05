@@ -4,7 +4,7 @@ The user requested that all current work be pushed with notes so collection can 
 
 **Transfer complete.** All 60 archive parts and both manifests passed GitHub's remote SHA256/size checks. Real authenticated downloads of both manifests and the final data part also passed through the same helper used by the restore command. The private release is [private-corpus-2026-10-05](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05). The committed `private-corpus-transfer.json` contains the verified completion receipt and expected manifest checksum. This completes the transfer of collected work; the scripture collection itself still has the gaps below.
 
-**Latest resume point:** chapters 10–12 were subsequently captured and imported. Read [private-corpus-latest-resume.md](private-corpus-latest-resume.md) and apply the small body update below after restoring the frozen corpus and previews. The next collection chapter is Kriyāpāda 13, source PDF page 340.
+**Latest resume point:** chapters10–13 were subsequently captured and imported. Read [private-corpus-latest-resume.md](private-corpus-latest-resume.md) and apply the10–12 update below, followed by its chapter13 update instructions. The next collection chapter is Kriyāpāda14, source PDF page350. The frozen base and older supplements remain unchanged.
 
 ## Restore on the other PC
 
