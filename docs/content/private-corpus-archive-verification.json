@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-10-05T09:00:54.075663+00:00",
+  "exit_code": 0,
+  "files": 93525,
+  "source_bytes": 41044795013,
+  "archive_bytes": 31915654986,
+  "parts": 60,
+  "manifest_sha256": "5f3a7878c8b2ea282ae298d29058eeeb73de2d4d451e076b7c38213b44c14d05",
+  "checks": [
+    "All split-part byte sizes and SHA256 hashes",
+    "All archived file byte sizes and SHA256 hashes after full streaming decompression",
+    "Exact file-set equality with individual-file manifest",
+    "Database file SHA256 and bytes match the acquisition receipt",
+    "Read-only SQLite body/document/PDF-asset counts match the frozen receipt"
+  ],
+  "database_counts": {
+    "text_bodies": 1238178,
+    "documents": 12473,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "scope": "Archive and database storage integrity; per-work source omissions, OCR and translation-fidelity limitations remain. Remote upload completion is tracked separately."
+}

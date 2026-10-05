@@ -1,0 +1,112 @@
+Review Sandhya as one unified project. The previous Stream A / Stream B assignments and file-ownership boundaries no longer apply.
+
+Perform a thorough, read-only audit of the corpus: completeness, accuracy, translations, religious nuance, sourcing, licensing, and usefulness. Give an honest assessment of how good it actually is and what must improve before publication.
+
+Audio is entirely out of scope. Written Sanskrit, IAST, and pronunciation guidance remain in scope.
+
+Read AGENTS.md, 02-plan.md, docs/05-competitors.md, and sandhya_build_reference.docx. The build reference is authoritative when documents conflict. Assess against the current pilot requirements, distinguishing them from future ambitions.
+
+You may inspect the entire repository, including content, generators, bundled data, database migrations, and rendering code, to understand what users actually receive. Do not edit files, regenerate content, change schemas, or implement fixes. Deliver the report in chat.
+
+1. Establish what exists
+
+Inventory the corpus and source-rights tracker. Identify content types, counts, traditions represented, source texts, translators, languages, and approval status.
+
+Distinguish:
+- Content present in the repository.
+- Content actually exposed to users.
+- Content cleared for publication.
+- Content cleared for embedding or retrieval.
+- Drafts, placeholders, duplicates, and inaccessible references.
+
+Do not count a tracker row as usable content unless the corresponding material and required rights are present.
+
+2. Assess completeness
+
+Compare the corpus with the documented pilot requirements:
+- Are all required days, sessions, sections, verses, explanations, and practices present?
+- Does each item contain its required metadata and source information?
+- Are there gaps in progression, context, definitions, or instructions?
+- Can beginners understand and use each session without unexplained prerequisites?
+- Are relevant traditions or alternative interpretations missing?
+- Is coverage substantive, or inflated by repetition and boilerplate?
+
+Respect the established challenge_session structure. Do not recommend schema expansion merely for convenience.
+
+3. Assess accuracy and religious nuance
+
+Check scripture references, verse numbering, Sanskrit text, attribution, terminology, deity descriptions, practice instructions, and factual claims.
+
+Separate scripture, commentary, folklore, common practice, and editorial advice. Flag cases where these categories are blurred.
+
+Identify universal claims about “what Hindus do” that require qualification by sampradāya, region, observing community, or family practice. Check whether alternative readings are represented accurately and respectfully.
+
+For every published festival date, verify the reckoning (amānta or pūrṇimānta), observing community where relevant, timing location, and source. Report disagreements between sources explicitly.
+
+Verify uncertain or specialist claims using primary or authoritative sources. Do not invent references or treat model recollection as verification.
+
+4. Review translation quality carefully
+
+For each translated verse or passage, examine:
+- Alignment between the source text and translation.
+- Omissions, additions, mistranslations, and misleading simplifications.
+- Handling of important Sanskrit terms and ambiguous words.
+- Whether interpretive additions are identified as interpretation.
+- Whether a tradition-specific reading is presented as universal.
+- English clarity, naturalness, consistency, and suitability for beginners.
+- Consistency between the translation, explanation, and suggested practice.
+- Attribution to the named translator and edition.
+
+Distinguish an exact attributed translation, adapted translation, paraphrase, and original explanation. Flag content that silently moves between these categories.
+
+Check Devanagari, IAST, and written pronunciation guidance for consistency. Verify that shloka documents include the five required labels: Devanagari / IAST / Say it / Meaning / Source, with a named translator and source.
+
+Do not judge fidelity from English fluency alone. Where Sanskrit accuracy or the source edition cannot be confidently verified, mark the finding as unresolved.
+
+5. Audit sources and rights
+
+Trace quotations and translations to their actual sources. Check the tracker for translator, source URL, copyright status, storage rights, excerpt rights, and embedding rights.
+
+Flag missing, ambiguous, contradictory, or unsupported permissions. Public availability is not evidence of permission. Distinguish factual verification from rights clearance, and do not present uncertain legal conclusions as settled.
+
+6. Evaluate editorial and learning quality
+
+Assess whether the corpus is coherent, engaging, respectful, and useful:
+- Is the sequence purposeful?
+- Are explanations concrete and comprehensible?
+- Are practices feasible and sufficiently explained?
+- Does repetition reinforce learning or merely pad the corpus?
+- Are claims proportionate to their evidence?
+- Does the content avoid guru-like authority, unsupported promises, and medical or therapeutic claims?
+- What would a knowledgeable practitioner notice, and what would confuse a beginner?
+
+Identify strong items as well as weak ones, citing examples.
+
+7. Check delivery integrity
+
+Trace representative content from source files through generated artifacts to the user-facing presentation.
+
+Identify missing, stale, truncated, mismatched, or incorrectly rendered content. Check whether translator attribution, sources, festival conventions, and tradition variations survive this process.
+
+Keep the assessment focused on corpus quality and delivery. Do not turn it into a general application review or propose re-enabling AI features cut from the pilot.
+
+Audit method
+
+Review every in-scope content item where feasible. If sampling is necessary, disclose exactly what was reviewed, how the sample was selected, and what remains unchecked. Never describe a sampled review as exhaustive.
+
+Use file paths, line numbers where available, content IDs, verse references, and supporting source links. Distinguish confirmed errors, probable concerns, editorial preferences, and unresolved questions.
+
+Do not infer corpus quality from whether validators pass. Structural validity and substantive correctness are separate.
+
+Deliver:
+
+A. A candid overall verdict: how good is the corpus, and is it ready for the pilot?
+B. A coverage table showing what exists, what is required, what is missing, and what is publishable.
+C. A translation assessment with specific strong and weak examples.
+D. A prioritized findings table:
+   severity | file/content ID | evidence | user impact | recommended correction | confidence
+E. Publication blockers, separated from improvements that can wait.
+F. The highest-value next actions.
+G. Audit limitations and anything requiring a Sanskrit scholar, tradition-specific reviewer, or rights clarification.
+
+Use “ready,” “ready after specified fixes,” or “not ready” as the final readiness verdict. Explain the evidence behind it. Avoid vague praise, unsupported numerical scores, and recommendations outside the pilot scope.

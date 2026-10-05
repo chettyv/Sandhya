@@ -14,6 +14,8 @@ python scripts/private-corpus/restore.py
 
 The restore command downloads the release `private-corpus-2026-10-05`, checks its manifest against the committed transfer receipt, verifies every downloaded part, then reconstructs and hashes every source file. It checks the restored database's counts and acquisition checksum. Existing identical files are accepted; changed files are preserved and cause the restore to stop. Rerunning resumes from already verified downloads and files. GitHub credentials remain in memory and are never included in the archive.
 
+The collection environment was Python 3.12.14 on Windows AMD64; observed package versions are in `docs/content/private-corpus-collection-environment.json`. The requirements above are sufficient for transfer. Install additional packages only when the next collection script needs them. The source-page renderer uses PyMuPDF (working version 1.28.2); existing JPEG previews through PDF page 320 can be reused immediately. OCR binaries and failed handwriting model environments are not included.
+
 Allow roughly 85 GB of free disk space for the compressed downloads, restored collection and working room. The download cache is under `content/_staging/transfer/private-corpus-2026-10-05/`. After a successful restore it can be removed to reclaim space. Keep the restored `content/_staging/raw/` tree: it contains the actual database, scans, source extractions, scripts and evidence.
 
 Read these restored files first, in order:
@@ -24,6 +26,10 @@ Read these restored files first, in order:
 4. `content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md` — database queries and limitations.
 
 ## Frozen collection state
+
+After restoring, paste this into a new chat on the other PC:
+
+> Continue private scripture collection from `docs/content/private-corpus-handoff.md`. Work on Sandhya as one unified project; prior Stream A/B ownership assignments do not apply to this task. Read the restored continuation checkpoint, current gap ledger and acquisition scope before collecting. Prioritize actual existing English scripture bodies, preserve existing other languages, and store actual text in the private corpus database. Do not generate new translations, embeddings, audio or app content, and do not publish the corpus. Resume with Kiraṇa Kriyāpāda chapter 10, source PDF page 306. Preserve source omissions, uncertain readings and exact byte/hash evidence. Do not claim the whole corpus is complete.
 
 The private SQLite database contains actual scripture bodies, rather than just links. Its path is `content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite`.
 
@@ -36,6 +42,10 @@ The private SQLite database contains actual scripture bodies, rather than just l
 | SQLite file bytes                | 9,782,632,448 |
 
 Database SHA256: `53c623871d22e8e470ec4b44c9875098a4f38960951cbc6c88c3b1cbafb16302`.
+
+The frozen transfer contains **93,525 files**, totaling **41,044,795,013 source/evidence bytes**. Its compressed archive is **31,915,654,986 bytes**, split into **60 parts**. Two additional release assets hold the archive manifest and individual-file checksum manifest.
+
+Full archive verification passed: every part and every decompressed file matched its size and SHA256; the database matched its acquisition receipt and its read-only body/document/PDF-asset counts. The evidence is `docs/content/private-corpus-archive-verification.json`. Historical absolute paths in source receipts remain provenance; use the repo-relative paths above on the new PC. Storage integrity does not certify every source's OCR, translation fidelity or completeness.
 
 Counts overlap sources, editions, page/chapter/verse granularity and collector headers. They do not represent unique verses or a complete Hindu canon. English has priority; existing Hindi, Sanskrit, French, Italian, Bengali and Tamil source material is preserved. No new translations, embeddings, application import or publication were performed during collection.
 
@@ -60,6 +70,8 @@ The installed `bugsum/vedic-shastra-api` has no supplied scripture dataset: the 
 ## Continuation authorization and boundaries
 
 The user's pasted attachment explicitly superseded Stream A/B ownership boundaries. Later instructions authorized collecting actual existing texts, keeping other languages, installing tools and pushing this handoff. This collection remains private and incomplete. The repository's publication/content safeguards still apply if app content is authored or released later. Do not re-enable cut pilot features or treat this archive as publication/embedding clearance. Do not contact source owners or incur paid API costs without a specific need and authorization.
+
+The original pasted audit request is preserved in `docs/content/original-corpus-audit-request.txt`, so the old PC's `.codex/attachments/` path is unnecessary. Its original read-only audit scope was superseded by the user's later collection and push requests; preserve the distinction when resuming.
 
 Collection jobs were stopped at this checkpoint. Transfer packaging/upload jobs are separate; the committed `private-corpus-transfer.json` records whether all release assets were verified. Read its `complete` field before assuming the other PC can restore everything.
 

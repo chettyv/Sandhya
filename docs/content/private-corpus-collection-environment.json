@@ -1,0 +1,17 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows",
+  "architecture": "AMD64",
+  "packages": {
+    "beautifulsoup4": "4.15.0",
+    "lxml": "6.1.1",
+    "numpy": "2.3.5",
+    "pillow": "12.3.0",
+    "pymupdf": "1.28.2",
+    "pypdfium2": "5.13.0",
+    "requests": "2.34.2",
+    "tesserocr": "2.10.0",
+    "zstandard": "0.25.0"
+  },
+  "scope": "Observed collection/transfer environment; install only packages needed by the next script. Handwriting model runtimes and caches are excluded from transfer."
+}
