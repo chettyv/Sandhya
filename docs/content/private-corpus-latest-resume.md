@@ -1,8 +1,32 @@
 # Latest private corpus resume notes — 5 October 2026
 
-Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds actual existing English for **Kriyāpāda chapters17–18**. Restore the base, preview supplement,10–12 update, chapter13 update,14–16 update and resume supplement before applying17–18, replaying body append commands in order.
+Read this after `private-corpus-handoff.md`. All older archives remain frozen. The latest update adds **Caryāpāda1's surviving existing English**. Restore the base, preview supplement,10–12, chapter13,14–16, resume and17–18 updates before applying Caryāpāda1, replaying body append commands in order.
 
-## Latest addition: chapters17–18
+## Latest addition: Caryāpāda1, partial source capture
+
+Chapter1, **Samayācāravidhi-paṭalaḥ**, is document **12483**, body **1238188**: **11,924 stored characters**, **14 source groups**, including an unnumbered partial continuation. All **16** PDF pages **384–399** were inspected; **14** contain English, with copyrightPDF388 and continuation-titlePDF389 excluded from scripture text. The English ends at source label **41**, with the first-chapter colophon onPDF399. The next chapter startsPDF400/handwritten396.
+
+**A source gap remains:** PDF392 is handwritten387; PDF393 is handwritten389 and begins with an unnumbered continuation. The beginning and expected intervening20–23 heading are absent in this observed sequence. A misplaced page or numbering error elsewhere has not been ruled out. No missing text or certain verse address was invented. The PDF/handwritten offset changes across front matter and the numbering gap; use the explicit page map. Unfinished `tooth-brus`, `mad`, `engag`, uncertain readings/corrections and the unclosed colophon are marked. Source grammar, classifications, quantities and historical prescriptions are retained as quotation, with no new translation or authored practice guide. This is **not a complete English chapter** or linguistic fidelity certification.
+
+Exact raw-file/body/import/metadata/FTS, original PDF asset117 BLOB, preview hashes and foreign-key checks passed for all18 Kriyāpāda captures plus Caryāpāda1. A repeat import added no duplicate. Combined capture totals: **173,588 characters**, **223 inspected source pages**, **185 groups**. Earlier Kriyāpāda omissions, chapter9 summaries and uncertainties remain.
+
+Current private database: **1,238,188 bodies**, **12,483 documents**, **171 PDF assets**,9,782,632,448 bytes. Local SHA256: `69d4404edc82b91957bf33ab23fcbfa4705cfdeb9642ce28f7d7df2197ec9995`. Counts overlap editions/granularities and do not prove a complete canon.
+
+The [Caryāpāda1 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya01) contains33 new body/evidence/script/preview files. After preceding updates, run:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya01 --directory content/_staging/transfer/private-corpus-2026-10-05-carya01 --manifest-sha256 a928a3f54c2f9c537646d41a0c3567827a4b457740c0e96d23d355e4e1469187
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya01.py" --chapter 1
+python "$corpusRoot/verify_kirana_carya01_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya01_checkpoint.py"
+```
+
+Stop on errors and preserve frozen receipts and sealed releases. Do not rerun evidence recorders after import, or older checkpoint writers against the expanded state. Regenerate the local receipt after replay; physical SQLite hashes can vary by runtime, so verify exact body/metadata/FTS too. Earlier checkpoints below are historical.
+
+Next recovery: **Caryāpāda2, Sarasvatīpūjāvidhih**, PDF **400**, handwritten **396**. Its opening is inspected; ending unestablished and no body imported. Caryāpāda2–27, Yogapāda1–7, Ramakaṇṭha7–12, source-English omissions/uncertainties and broader ledger gaps remain open. The collection goal remains active.
+
+## Previous addition: chapters17–18
 
 | Chapter | Source title             | PDF pages | Final label | Document | Stored characters |
 | ------- | ------------------------ | --------- | ----------- | -------- | ----------------: |
