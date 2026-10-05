@@ -1,0 +1,101 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya13-frontier",
+  "tag": "private-corpus-2026-10-05-carya13-frontier",
+  "complete": true,
+  "manifest_sha256": "93405b8baf137df9eca664328a416da3aaec0d6ed22691e9e0f1c46e54aaf3f9",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 613417337,
+      "bytes": 3541242,
+      "digest": "sha256:8d22fa0628638facf48b980f066a522d853ad3740589d4958fecf020edb921ec"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 613417424,
+      "bytes": 5736,
+      "digest": "sha256:17d40e54c102f3f93dbc895ae6f8e27fe2af641a513e64edfdfce018260f35bc"
+    },
+    {
+      "name": "manifest.json",
+      "id": 613417465,
+      "bytes": 935,
+      "digest": "sha256:93405b8baf137df9eca664328a416da3aaec0d6ed22691e9e0f1c46e54aaf3f9"
+    }
+  ],
+  "checked_at": "2026-10-05T18:59:34.411808+00:00",
+  "archive_files": 26,
+  "source_bytes": 4081725,
+  "archive_bytes": 3541242,
+  "archive_files_verified": 26,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 0,
+  "database_unchanged": true,
+  "database_replay_required_for_preceding_releases": true,
+  "goal_complete": false,
+  "new_preview_images": 18,
+  "full_pages_inspected": [481, 482, 483, 484, 485, 486, 487, 488, 489, 490],
+  "enlarged_crops_inspected": [481, 482, 483, 484, 485, 486],
+  "rendered_but_uninspected": [
+    "page-491.jpg",
+    "page-487-carya13-reading.jpg",
+    "page-488-carya13-reading.jpg",
+    "page-489-carya13-reading.jpg"
+  ],
+  "next_recovery": "Inspect enlarged487–489 and full491. Chapter13 surviving sequence481–489, closing489, chapter14 opens490. No chapter13 body sealed/imported. Preserve apparent local handwritten482/486 gaps, alternate numbering485, incomplete English482/485 and earlier anomalies.",
+  "current_database_totals": {
+    "text_bodies": 1238200,
+    "documents": 12495,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "8ea030c1dabde22943bc3ce8d9add78297b1149a8ecbd4519722f311e64d4920",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 94036,
+    "source_bytes": 41114435230,
+    "private_releases": 19,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "a43dc2a48ebcaa1c7f0db8785f15dc41764f155e7e20ea3f60bb33f5fe049539",
+        "delivery": "chapter12 replay/refresher plus exact separate snapshot in chapter13 frontier"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "de33f5b2dbc6f713b272653b6298b309fa9bcafc91e0bdc9356f377e5cbf28c4",
+        "delivery": "chapter12 replay/refresher plus exact separate snapshot in chapter13 frontier"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "62bcdda68f5b08b8e9c78f7ccff462be2dd333105a6533a682a5690b1b16d26f",
+        "delivery": "chapter12 replay/refresher plus exact separate snapshot in chapter13 frontier"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "632c3adccb9c1e03219fd947d2e4582db8a6a2bf0444333a907e117baa7c489f",
+        "delivery": "chapter12 replay/refresher plus exact separate snapshot in chapter13 frontier"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "241215039e264bbc0d5f138b7e3ead2ee2e559d3c3cdffc92d6ae748866ec718",
+        "delivery": "chapter12 replay/refresher plus exact separate snapshot in chapter13 frontier"
+      }
+    ],
+    "database_freshly_hashed_during_this_handoff": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256 during this handoff; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  },
+  "all19_releases_remote_asset_metadata_rechecked": true,
+  "remote_assets_metadata_verified": 116
+}
