@@ -90,7 +90,7 @@ def download(session, asset, path, expected=None):
     print(f"Downloaded and verified: {path.name}", flush=True)
 
 
-def extract(manifest, directory, destination):
+def extract(manifest, directory, destination, verify_only=False):
     prefix = manifest["source_prefix"]
     records = {}
     with open(directory / manifest["file_manifest"]["name"], encoding="utf-8") as stream:
@@ -114,10 +114,11 @@ def extract(manifest, directory, destination):
                     if member.size != row["bytes"]:
                         raise RuntimeError("Archive member size mismatch.")
                     target = safe_target(destination, prefix, member.name)
-                    exists = target.exists()
-                    if exists and (not target.is_file() or target.stat().st_size != row["bytes"] or sha256_file(target) != row["sha256"]):
+                    exists = True if verify_only else target.exists()
+                    if not verify_only and exists and (not target.is_file() or target.stat().st_size != row["bytes"] or sha256_file(target) != row["sha256"]):
                         raise RuntimeError(f"Refusing to overwrite changed file: {target}")
-                    target.parent.mkdir(parents=True, exist_ok=True)
+                    if not verify_only:
+                        target.parent.mkdir(parents=True, exist_ok=True)
                     temporary = None
                     output = None
                     if not exists:
@@ -146,7 +147,8 @@ def extract(manifest, directory, destination):
                             temporary.unlink()
                     restored.add(member.name)
                     if time.monotonic() - last >= 15:
-                        print(f"Restored and hashed {len(restored):,}/{len(records):,} files", flush=True)
+                        label = "Verified archive" if verify_only else "Restored and hashed"
+                        print(f"{label}: {len(restored):,}/{len(records):,} files", flush=True)
                         last = time.monotonic()
     if restored != set(records):
         raise RuntimeError("Archive is incomplete.")
@@ -174,6 +176,7 @@ def main():
     parser.add_argument("--tag", default=TAG)
     parser.add_argument("--manifest", type=Path, help="Use an already-downloaded local archive instead of GitHub.")
     parser.add_argument("--manifest-sha256")
+    parser.add_argument("--verify-only", action="store_true", help="Read and hash the entire archive without writing source files.")
     args = parser.parse_args()
     directory = args.directory.resolve()
     directory.mkdir(parents=True, exist_ok=True)
@@ -215,8 +218,9 @@ def main():
             download(session, assets[item["name"]], path, item)
         if path.stat().st_size != item["bytes"] or sha256_file(path) != item["sha256"]:
             raise RuntimeError(f"Archive asset verification failed: {item['name']}")
-    count = extract(manifest, directory, args.destination.resolve())
-    print(f"Restore complete: {count:,} individually verified files. Read the continuation checkpoint before collecting.", flush=True)
+    count = extract(manifest, directory, args.destination.resolve(), verify_only=args.verify_only)
+    action = "Archive verification" if args.verify_only else "Restore"
+    print(f"{action} complete: {count:,} individually verified files. Read the continuation checkpoint before collecting.", flush=True)
 
 
 if __name__ == "__main__":

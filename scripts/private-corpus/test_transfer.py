@@ -37,6 +37,8 @@ class TransferTests(unittest.TestCase):
                     stream.write(json.dumps({"path": name, "bytes": len(content),
                                              "sha256": hashlib.sha256(content).hexdigest()}) + "\n")
             self.assertGreater(len(writer.parts), 1)
+            self.assertEqual(extract(manifest, archive_dir, destination, verify_only=True), len(contents))
+            self.assertEqual(list(destination.iterdir()), [])
             self.assertEqual(extract(manifest, archive_dir, destination), len(contents))
             for name, content in contents.items():
                 self.assertEqual((destination / name).read_bytes(), content)
