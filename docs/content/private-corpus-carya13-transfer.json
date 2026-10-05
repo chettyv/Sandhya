@@ -1,0 +1,106 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya13",
+  "tag": "private-corpus-2026-10-05-carya13",
+  "complete": true,
+  "manifest_sha256": "467922e7c2f2335d0e4f86ca4f56953e3c8b6ccf0f24b3570d16c1ab2c008747",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 613436589,
+      "bytes": 29045,
+      "digest": "sha256:4fcd588d6a9def889cee5f07082efa5ecaa7cd3c00d288027ba82fca1aa0d501"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 613436605,
+      "bytes": 2146,
+      "digest": "sha256:f3d838a5be4ef0c36c1faee40c382143b44d359ee9a347ef7087ab730c52c94f"
+    },
+    {
+      "name": "manifest.json",
+      "id": 613436628,
+      "bytes": 1038,
+      "digest": "sha256:467922e7c2f2335d0e4f86ca4f56953e3c8b6ccf0f24b3570d16c1ab2c008747"
+    }
+  ],
+  "checked_at": "2026-10-05T19:08:53.501099+00:00",
+  "archive_files": 10,
+  "source_bytes": 136163,
+  "archive_bytes": 29045,
+  "archive_files_verified": 10,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 1,
+  "document_id": 12496,
+  "body_id": 1238201,
+  "stored_characters": 8409,
+  "source_groups": 7,
+  "PDF_pages": [481, 482, 483, 484, 485, 486, 487, 488, 489],
+  "complete_diplomatic_transcription": false,
+  "fidelity_not_certified": true,
+  "exact_file_body_import_metadata_and_FTS": true,
+  "original_source_PDF_BLOB_verified": true,
+  "foreign_keys_valid": true,
+  "idempotent_repeat_import_no_duplicates": true,
+  "database_replay_required": true,
+  "goal_complete": false,
+  "new_preview_images": 0,
+  "previews_in_preceding_releases": true,
+  "apparent_handwritten482_486_local_gaps_unresolved": true,
+  "alternate_numbering485_486_retained": true,
+  "internal_incomplete_English_continuation_retained": true,
+  "English_final_colophon_present": true,
+  "next_recovery": "Caryapada14 opensPDF490/handwritten491;490–491 inspected, ending unestablished. Visible Indic heading endsVIDI with completeness uncertain. Inspect492 onward before capture. Earlier and chapter13 gaps unresolved.",
+  "current_database_totals": {
+    "text_bodies": 1238201,
+    "documents": 12496,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "c7af52dcf99eb87acc759994992d6fe639ca13c77787bfc10b7add2f7f7f0701",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 94046,
+    "source_bytes": 41114579129,
+    "private_releases": 20,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "367d2454294b978fd1861298bfb4477ef5837415ffeaff371c398c9c026812f2",
+        "delivery": "chapter13 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "88b57202e35df2360cb2b9bd87f23cfe100c5639288ff2e778a6898a2e47c688",
+        "delivery": "chapter13 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "e0d4a6aab0145c19729b6df39dafff5757e1c736677da0f05723084be901c5f6",
+        "delivery": "chapter13 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "23e954b6c1cc66d6c7a765375fbf9c6415c19f8a1dbb7f5423d3a13dde503f66",
+        "delivery": "chapter13 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "418d9a75a12c6c1dc11e86a24cb201fe79fbd922177cd34ca841151f91a17a01",
+        "delivery": "chapter13 replay/refresher"
+      }
+    ],
+    "database_freshly_hashed_by_current_refresher": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256 from current refresher; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  }
+}
