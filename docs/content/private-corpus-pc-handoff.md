@@ -1,5 +1,7 @@
 # Continue collection on another PC — 5 October 2026
 
+**Newest handoff:** use [the consolidated instructions and new-chat prompt](private-corpus-continue-on-other-pc.md). Restore all sixteen releases, replaying imports through chapter10. The final supplement preserves18 newer chapter11 images and unfinished-work notes; no chapter11 body is imported. Chapter11's surviving sequence isPDF461–470, with apparent handwritten462/468 gaps and an incomplete English ending. All ten enlarged crops are inspected. Chapter12 opens471. This supersedes older frontier and fifteen-release prompts below.
+
 The private corpus database currently contains **1,238,198 bodies, 12,493 documents and 171 PDF assets**. It remains incomplete. The latest imported scripture is Caryāpāda10. Chapter8's additive source-title correction01 remains preferred; chapter11 has no body imported.
 
 **Newest body update:** restore and replay chapter10 as the fifteenth release after all fourteen preceding releases. Use [the current instructions](private-corpus-latest-resume.md) and its chapter10 verifier/refresher last. Next chapter11 opensPDF461, inspected through465; inspect466 onward to establish its ending. Older chapter9–10 pending notes below are historical.

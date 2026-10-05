@@ -1,5 +1,7 @@
 # Latest private corpus resume notes — 5 October 2026
 
+**Latest cross-PC handoff:** start with [continue-on-other-PC instructions](private-corpus-continue-on-other-pc.md). A sixteenth supplement preserves18 newer chapter11 images, detailed unfinished-work notes and five separate checkpoint snapshots. No new body or database change. Chapter11 is now bounded to survivingPDF461–470; apparent handwritten462/468 gaps and the unfinished English ending remain unresolved. All enlarged crops have been inspected. Capture the ten surviving groups next; chapter12 opens471. Older frontier statements below are historical.
+
 ## Latest addition: Caryāpāda10
 
 Chapter10 **Vratesvarayagavidhih** is stored as document **12493**, body **1238198**: **5,757 characters**, six groups, six English source pages **455–460**. Source ending15½ and both tenth colophons460. Group2–4 heading/Sanskrit is on455, corresponding English on456. Three incomplete right-edge fragments on457, a faint word ending on459, uncertain corrected fragments on460, faint insertion and stray wording remain explicitly marked. Production annotations requesting diagrams, mantra explanations and mudra examples remain in metadata. No whole English group omission observed; diplomatic and Sanskrit fidelity uncertified.
