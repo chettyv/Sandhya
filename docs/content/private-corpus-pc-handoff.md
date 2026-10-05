@@ -4,6 +4,8 @@ The private corpus database currently contains **1,238,197 bodies, 12,492 docume
 
 **Newest body update:** after the thirteen releases described below, restore and replay [Caryāpāda9](private-corpus-latest-resume.md) as the fourteenth release. Use its new verifier/refresher last. The historical chapter9 frontier in the PC supplement is now superseded. Next collection is chapter10, PDF455–460.
 
+The chapter9 update passed all uploaded asset hashes and a fresh authenticated download/decompression of all nine files. The [new completion receipt](private-corpus-carya09-transfer.json) accounts for93,936 source files across fourteen releases, with no unarchived source paths. Earlier transfer counts below describe the preceding PC snapshot.
+
 Clone or pull `chettyv/Sandhya`, then follow [the base handoff](private-corpus-handoff.md) and [the ordered updates](private-corpus-latest-resume.md). Restore all twelve earlier private releases and replay their append commands in order. Run the newest correction-aware verification and checkpoint refresher. Do not restore the frozen database over an expanded working database.
 
 Finally restore the [PC handoff supplement](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-pc-handoff):
