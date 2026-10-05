@@ -2,7 +2,7 @@
 
 The current work is backed up to the private `chettyv/Sandhya` repository. Git contains the scripts and notes; the large database, source scans, extracted text and previews are in private GitHub release assets. Cloning Git alone does not download the corpus.
 
-The latest imported text is Kiraṇa Caryāpāda chapter12’s surviving English: document12495/body1238200,7,599characters/nine groups or fragments. The database contains **1,238,200text bodies,12,495documents and171PDFassets**. Counts overlap editions/passages; the corpus remains incomplete. Chapter12’s apparent handwritten473 local gap and partial unnumbered English are explicit.
+The latest imported text is Kiraṇa Caryāpāda chapter 12’s surviving English: document 12495, body 1238200, with 7,599 stored characters across nine groups or fragments. The database contains **1,238,200 text bodies, 12,495 documents and 171 PDF assets**. Counts overlap editions and passages; the corpus remains incomplete. Chapter 12’s apparent local gap at handwritten page 473 and partial unnumbered English remain explicit.
 
 ## Restore
 
@@ -74,6 +74,8 @@ python "$corpusRoot/refresh_kirana_carya12_checkpoint.py"
 ```
 
 Run chapter12’s verifier/refresher last. Exact raw-file/body/import/metadata/FTS, source PDF BLOB, preview hashes and foreign-key checks passed for all30 preferred captures; a repeat chapter12 import added no duplicate. Current database SHA256 `8ea030c1dabde22943bc3ce8d9add78297b1149a8ecbd4519722f311e64d4920`,9,783,201,792bytes. Cross-machine SQLite layout/timestamps may differ; exact stored body/metadata and verification results are authoritative. These checks establish storage integrity, not translation fidelity or whole scripture completeness. Earlier SHA values and handoff counts above belong to their historical checkpoints.
+
+**Chapter 12 backup verified:** all three uploaded asset hashes matched, and a fresh authenticated download/decompression verified all 30 individual files. The [current completion receipt](private-corpus-carya12-transfer.json) accounts for **94,010 source files across eighteen private releases, zero unarchived source paths**. Current database and mutable notes travel through verified replay/refresher. The database was freshly hashed by the chapter 12 refresher. The inventory compares paths, sizes and timestamps and hashes changed non-database candidates; it builds on prior archive verification rather than freshly hashing the full collection. Credentials and reproducible runtime caches are excluded.
 
 ## Exact resume point
 

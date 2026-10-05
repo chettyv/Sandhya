@@ -1,0 +1,103 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya12",
+  "tag": "private-corpus-2026-10-05-carya12",
+  "complete": true,
+  "manifest_sha256": "5070e4ebe95ee636318ae3735aa13cd4de1ef75651a90e1a83899fdba4f7ca92",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 613391909,
+      "bytes": 3748010,
+      "digest": "sha256:66ad9d49730697b0e273cbbb6343f293d465e7dd0a674fbc42302e357cb0c10c"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 613391984,
+      "bytes": 6384,
+      "digest": "sha256:5cd152083353ecf6e833af8f32cbcc70ce94839d5929e0079f39b3fa6deeb4f5"
+    },
+    {
+      "name": "manifest.json",
+      "id": 613392019,
+      "bytes": 1009,
+      "digest": "sha256:5070e4ebe95ee636318ae3735aa13cd4de1ef75651a90e1a83899fdba4f7ca92"
+    }
+  ],
+  "checked_at": "2026-10-05T18:47:28.098695+00:00",
+  "archive_files": 30,
+  "source_bytes": 4345859,
+  "archive_bytes": 3748010,
+  "archive_files_verified": 30,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 1,
+  "document_id": 12495,
+  "body_id": 1238200,
+  "stored_characters": 7599,
+  "source_groups": 9,
+  "PDF_pages": [471, 472, 473, 474, 475, 476, 477, 478, 479, 480],
+  "complete_diplomatic_transcription": false,
+  "fidelity_not_certified": true,
+  "exact_file_body_import_metadata_and_FTS": true,
+  "original_source_PDF_BLOB_verified": true,
+  "foreign_keys_valid": true,
+  "idempotent_repeat_import_no_duplicates": true,
+  "database_replay_required": true,
+  "goal_complete": false,
+  "new_preview_images": 20,
+  "source_partial_unnumbered_fragment_address_unresolved": true,
+  "apparent_handwritten473_local_gap_unresolved": true,
+  "next_recovery": "Caryapada13 Mahapatakadi prayascitta vidhih opensPDF481/handwritten480;481–482 inspected, ending unestablished. Inspect483 onward. Earlier and chapter12 source gaps unresolved.",
+  "current_database_totals": {
+    "text_bodies": 1238200,
+    "documents": 12495,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "8ea030c1dabde22943bc3ce8d9add78297b1149a8ecbd4519722f311e64d4920",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 94010,
+    "source_bytes": 41110353505,
+    "private_releases": 18,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "a43dc2a48ebcaa1c7f0db8785f15dc41764f155e7e20ea3f60bb33f5fe049539",
+        "delivery": "new chapter12 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "de33f5b2dbc6f713b272653b6298b309fa9bcafc91e0bdc9356f377e5cbf28c4",
+        "delivery": "new chapter12 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "62bcdda68f5b08b8e9c78f7ccff462be2dd333105a6533a682a5690b1b16d26f",
+        "delivery": "new chapter12 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "632c3adccb9c1e03219fd947d2e4582db8a6a2bf0444333a907e117baa7c489f",
+        "delivery": "new chapter12 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "241215039e264bbc0d5f138b7e3ead2ee2e559d3c3cdffc92d6ae748866ec718",
+        "delivery": "new chapter12 replay/refresher"
+      }
+    ],
+    "database_freshly_hashed_by_current_refresher": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256 from current refresher; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  }
+}
