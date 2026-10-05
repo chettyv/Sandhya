@@ -1,0 +1,82 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-resume",
+  "tag": "private-corpus-2026-10-05-resume",
+  "complete": true,
+  "manifest_sha256": "8a1101875ddb7a4f70854d63439edead52a46a2b82f13826c34dc98a12e95b69",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612297988,
+      "bytes": 3497710,
+      "digest": "sha256:85a8452005d0961cbcd538fcd0cfeb00b3527393661b29c6c1b2db1384229f98"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612298041,
+      "bytes": 4810,
+      "digest": "sha256:2d972ded6d970f61fc73fadd784fd50290e230a16c9132e3d166786eba32310f"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612298068,
+      "bytes": 906,
+      "digest": "sha256:8a1101875ddb7a4f70854d63439edead52a46a2b82f13826c34dc98a12e95b69"
+    }
+  ],
+  "archive_files": 21,
+  "source_bytes": 3936796,
+  "archive_bytes": 3497710,
+  "archive_files_verified": 21,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_actual_English_bodies": 0,
+  "new_reading_images": 12,
+  "current_database_totals": {
+    "text_bodies": 1238185,
+    "documents": 12480,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "1ca98ea36a31d8e8bd379e02f21f3c5db2c793724e54df257bfbf52e575c4c06",
+  "current_file_coverage": {
+    "source_files": 93692,
+    "candidate_files_rehashed": 173,
+    "missing_source_files": 0,
+    "changes_delivered_by_replay_or_separate_snapshot": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "delivery": "exact current bytes in separate checkpoint snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "delivery": "exact current bytes in separate checkpoint snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "delivery": "exact current bytes in separate checkpoint snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen base plus identical-source verified body replay",
+        "current_sha256": "1ca98ea36a31d8e8bd379e02f21f3c5db2c793724e54df257bfbf52e575c4c06"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "delivery": "exact current bytes in separate checkpoint snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "delivery": "exact current bytes in separate checkpoint snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "delivery": "exact current bytes in separate checkpoint snapshot"
+      }
+    ],
+    "runtime_caches_nested_git_and_secret_env_excluded": true
+  },
+  "scope": "All collected source work saved across six private releases; scripture acquisition incomplete",
+  "goal_complete": false,
+  "next_recovery": "Transcribe and import inspected Kriyapada17-18 PDF367-383; then Caryapada1 starts PDF384",
+  "database_replay_required_for_preceding_updates": true
+}
