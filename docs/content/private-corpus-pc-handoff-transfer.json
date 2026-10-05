@@ -1,0 +1,91 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-pc-handoff",
+  "tag": "private-corpus-2026-10-05-pc-handoff",
+  "complete": true,
+  "manifest_sha256": "09b8f08474aa08ccf41f49673aeb1a04fdea12b2b1eb55c46006563f102902c6",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 612573291,
+      "bytes": 7208509,
+      "digest": "sha256:f94fe37ae7e23255abf3594dcff1e90b13c2d72fa80bd58f536ff7bc295c8ad2"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 612573389,
+      "bytes": 8792,
+      "digest": "sha256:b7f23fc99331608e6243f6c458b13c0d09f8e06bceed3ce048511b1a4fabef42"
+    },
+    {
+      "name": "manifest.json",
+      "id": 612573413,
+      "bytes": 876,
+      "digest": "sha256:09b8f08474aa08ccf41f49673aeb1a04fdea12b2b1eb55c46006563f102902c6"
+    }
+  ],
+  "checked_at": "2026-10-05T12:55:19.756619+00:00",
+  "archive_files": 41,
+  "source_bytes": 8097856,
+  "archive_bytes": 7208509,
+  "archive_files_verified": 41,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 0,
+  "new_preview_images": 35,
+  "current_note_snapshots": 5,
+  "database_replay_required": true,
+  "goal_complete": false,
+  "next_recovery": "Caryapada9 PDF445–454 and10 PDF455–460 inspected, no bodies imported; chapter10 enlarged crops need inspection. Chapter11 begins461, inspected through465, ending unestablished; inspect466 afterward.",
+  "current_database_totals": {
+    "text_bodies": 1238196,
+    "documents": 12491,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "89802e15491716b10d73fab9dbc5edeebde25337e91ac5b657423a8804841e9f",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 93927,
+    "source_bytes": 41101375032,
+    "private_releases": 13,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "e6938571babba59805e3dae2a32fabdde19ebf0c5d2f2382fb8656f3e87de946",
+        "delivery": "replay/refresher and separate exact current snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "51aa684a3f5d4bbb876d0f86e094478ccb813c6347b92eff832c1e5239d7c51a",
+        "delivery": "replay/refresher and separate exact current snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "92d0e5d2c5b084ddb50ae0e5c780ede5fd7baf4ba74312d10e741ea6d6c4535a",
+        "delivery": "replay/refresher and separate exact current snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "5606db535fab6386cee86e58d9aabcfe361e216be40b41c5fd3db2dece4428f6",
+        "delivery": "replay/refresher and separate exact current snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "cd3a298618eed20637085a4f02837383bfdad6d354944c82eb599c4b636568fc",
+        "delivery": "replay/refresher and separate exact current snapshot"
+      }
+    ],
+    "database_hash_rechecked": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  }
+}

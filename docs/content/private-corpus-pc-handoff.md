@@ -14,15 +14,15 @@ This adds **41 files**:35 newer source-page images/crops, a detailed pending-wor
 
 The frontier is more advanced than the older release notes:
 
-| Pending chapter | Source PDF pages | State |
-| --- | --- | --- |
-| Caryāpāda9, Gocaravidhih | 445–454 | Boundary and all ten enlarged reading crops inspected; eight groups ending29½. Transcription, uncertainty checks and import remain. |
-| Caryāpāda10, Vratesvarayagavidhih | 455–460 | Boundary and full pages inspected; six groups ending15½. Six enlarged crops rendered but still need inspection. Clipped words and a correction remain unresolved. |
-| Caryāpāda11, Acarya varjyavarjya vidhih | 461 onward | Full pages461–465 inspected; ending unestablished. Inspect466 next after completing9–10. |
+| Pending chapter                         | Source PDF pages | State                                                                                                                                                             |
+| --------------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Caryāpāda9, Gocaravidhih                | 445–454          | Boundary and all ten enlarged reading crops inspected; eight groups ending29½. Transcription, uncertainty checks and import remain.                               |
+| Caryāpāda10, Vratesvarayagavidhih       | 455–460          | Boundary and full pages inspected; six groups ending15½. Six enlarged crops rendered but still need inspection. Clipped words and a correction remain unresolved. |
+| Caryāpāda11, Acarya varjyavarjya vidhih | 461 onward       | Full pages461–465 inspected; ending unestablished. Inspect466 next after completing9–10.                                                                          |
 
 Keep original source grammar, unresolved Indic readings, corrections and clipped fragments explicit. Do not invent completions or generate translations. Earlier omissions, summaries, chapter4 ordinal discrepancy, chapter6 displaced ending and chapter7 clipped/unfinished words remain recorded.
 
-The new archive passed local decompression and all41 individual-file hashes before upload. The completion receipt will record authenticated remote download verification. The full source inventory now has **93,927 files** and **41,101,375,032 bytes**. Database and mutable working notes are reconstructed from the frozen baseline plus verified replay/refresher commands; archive counts are not unique scripture counts.
+**Transfer verified.** All three GitHub asset checksums matched. A fresh authenticated download and decompression verified all41 individual files. The [completion receipt](private-corpus-pc-handoff-transfer.json) records the checks and the final inventory: **93,927 source files** across **thirteen private releases**, with **zero unarchived source paths**. The database SHA256 was rechecked and matches the current receipt. The inventory compares paths, sizes and timestamps and hashes changed candidates; it does not freshly hash all41GB. Database and mutable working notes are reconstructed from the frozen baseline plus verified replay/refresher commands; archive counts are not unique scripture counts. Credentials and reproducible runtime caches are excluded.
 
 ## Paste into the new chat
 
