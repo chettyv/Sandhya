@@ -22,10 +22,20 @@ Chapter18 group2–4 remains unobserved locally. A folio-header OCR candidate tr
 
 Chapter19 opensPDF529/handwritten531;full529–531 inspected,ending unestablished. An apparent local handwritten533 gap before current534 remains unresolved. Next inspect532 onward and enlarged English crops. The acquisition goal remains active while the private destination decision is pending.
 
-## Latest local progress: chapter19 imported
+## Historical local progress: chapter19 imported
 
 Chapter19’s surviving existing English onPDF529–534 is stored as document12502/body1238207,6,108characters,five groups. The local database has1,238,207bodies,12,502documents and171PDFassets;9,783,201,792bytes,SHA256 `4f1e3a7a936087f473317d261f2234d506744ef80ec14176bb7440c779cdfca3`. All37preferred captures passed storage/search/source checks;repeat import was idempotent. The local21-file archive passed individual-file verification;manifest SHA256 `c3c0ca7a940e46dc9266f198d43082e543ed5773371010eff5a9611c9b0bc14f`. See [the local receipt](private-corpus-carya19-local-transfer.json).
 
 Chapter19’s apparent local handwritten533 gap and unnumbered531 continuation address/missing beginning/extent remain unresolved. Source corrections,word ending and grammar are explicit. No fullPDFabsence or independent fidelity claim. Chapters17–19 archives have not been uploaded;published checkpoint remains16/24releases. The private-destination choice remains pending. Older17/18database values above are historical.
 
 Next collectchapter20,openingPDF535/handwritten538,ending unestablished;inspect536onward. Preserve exactchapter18checkpoint snapshots separately under `content/_staging/transfer/carya18-checkpoint-before19/`. No background acquisition job is running after this local checkpoint.
+
+## Latest local progress: chapter20 imported
+
+An authenticated visibility recheck still returnedHTTP200/private:false for `chettyv/Sandhya`. The pending choice remains unanswered;no public corpus upload or visibility change was made. Latest published checkpoint remainschapter16/24releases. Chapters17–20 deltas are local only.
+
+Chapter20 is stored as document12503/body1238208,12,873characters,twelve groups,fifteenEnglishpages535–549. The local database has1,238,208bodies,12,503documents and171PDFassets;9,783,201,792bytes,SHA256 `0c4b518883786a667e3420bd318126c27cf0e102fd97798b5e8b1bdb543b6387`. All38preferred captures passed storage/search/source checks and repeat import was idempotent. Its44-file local archive passed individual-file verification;manifest SHA256 `0d1868c005e758fe9b7dea5b56177e1272ea0175b9c4b01aa48546bc8ee285dd`. See [the local receipt](private-corpus-carya20-local-transfer.json).
+
+The apparent local handwritten552 gap and partial closing continuation remain unresolved;no wholePDFabsence claim. Corrected headings,quantities,unfinished word ending and source grammar are explicit. English twentieth colophon is on549;Sanskrit closing not observed locally. The Agama gap-table row is reconciled with the structured ledger through20. Earlier17–19database values above are historical.
+
+Next collectchapter21,openingPDF551/handwritten554;full551–553 inspected,ending unestablished. Inspect554 onward. Exactchapter19snapshots are separate under `content/_staging/transfer/carya19-checkpoint-before20/`. No background acquisition job is running after this checkpoint.

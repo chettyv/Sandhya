@@ -1,0 +1,39 @@
+{
+  "checked_at": "2026-10-06T09:24:05.833903+00:00",
+  "tag": "private-corpus-2026-10-06-carya20",
+  "status": "local_verified_private_destination_pending",
+  "uploaded": false,
+  "remote_download_verified": false,
+  "local_archive_files_verified": 44,
+  "source_bytes": 6489137,
+  "archive_bytes": 5693193,
+  "manifest_sha256": "0d1868c005e758fe9b7dea5b56177e1272ea0175b9c4b01aa48546bc8ee285dd",
+  "document_id": 12503,
+  "body_id": 1238208,
+  "stored_characters": 12873,
+  "source_groups": 12,
+  "PDF_pages": [535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549],
+  "cross_page_joins": [
+    [539, 540],
+    [543, 544],
+    [545, 546],
+    [547, 548]
+  ],
+  "apparent_local_missing_handwritten_number": 552,
+  "closing_continuation_beginning_final_address_and_extent_unresolved": true,
+  "full_PDF_absence_established": false,
+  "source_word_ending_PDF_page": 541,
+  "source_corrected_headings_and_quantities_uncertainty_retained": true,
+  "Sanskrit_colophon_observed_in_bounded_sequence": false,
+  "English_colophon_PDF_page": 549,
+  "Agama_table_matches_structured_current_gap_ledger": true,
+  "independent_fidelity_certified": false,
+  "goal_complete": false,
+  "current_totals": {
+    "text_bodies": 1238208,
+    "documents": 12503,
+    "PDF_assets": 171
+  },
+  "database_sha256": "0c4b518883786a667e3420bd318126c27cf0e102fd97798b5e8b1bdb543b6387",
+  "latest_published_checkpoint": "chapter16 across24 releases"
+}

@@ -2,11 +2,33 @@
 
 ## Backup pending: repository is currently public
 
-**Chapters17–19 are imported and verified locally. Their sealed archives have not been uploaded.** GitHub reports `chettyv/Sandhya` as public; the uploader stopped at its private-destination guard before creating the chapter17 release. An unauthenticated check also found the repository and existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
+**Chapters17–20 are imported and verified locally. Their sealed archives have not been uploaded.** GitHub reports `chettyv/Sandhya` as public; the uploader stopped at its private-destination guard before creating the chapter17 release. An unauthenticated check also found the repository and existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
 
-The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration requires the private-destination check to pass. Resolve repository privacy and publish all three prepared deltas before attempting their remote restore commands. Earlier “private release” wording is historical; it does not describe current visibility. No visibility change or public corpus upload has been made by this task while the destination choice is pending.
+The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration requires the private-destination check to pass. Resolve repository privacy and publish all four prepared deltas before attempting their remote restore commands. Earlier “private release” wording is historical; it does not describe current visibility. No visibility change or public corpus upload has been made by this task while the destination choice is pending.
 
-## Current local checkpoint: chapter19 imported; backup27 pending
+## Current local checkpoint: chapter20 imported; backup28 pending
+
+Kiraṇa Caryāpāda20’s surviving existing English on guruvratas is stored as document **12503**, body **1238208**: **12,873 characters**, twelve groups and fifteen English pages **535–549**. Four groups continue across539–540,543–544,545–546 and547–548. The last visible numbered group is33–37(a);the closing English on549 begins mid-phrase after an apparent handwritten552 gap. Its missing beginning,final verse address,extent and possible displacement elsewhere remain unresolved. The English twentieth colophon is on549;no Sanskrit twentieth colophon was observed in this bounded sequence. Copyright page550 is not scripture;chapter21 opens551. Corrected headings,uncertain quantities/terms,unfinished word ending on541,empty glosses and source grammar remain explicit. No generated translation or independent fidelity certification.
+
+All **38 preferred captures** passed exact file/body/import/metadata/FTS,original sourcePDFBLOB,preview hashes and foreign-key checks: **305,101 stored characters,373 inspected chapter pages and319 groups**. Repeating chapter20’s import added no duplicate. The current local database has **1,238,208 bodies,12,503 documents and171 PDF assets**,9,783,201,792 bytes; SHA256 `0c4b518883786a667e3420bd318126c27cf0e102fd97798b5e8b1bdb543b6387`. Counts overlap editions/passages;the corpus remains incomplete. The main Agama gap-table row now agrees with the structured ledger:Kriyāpāda1–18 andCaryāpāda1–20 surviving captures are present with their omissions retained;Caryāpāda21–27,Yogapāda1–7,Ramakantha7–12 and all earlier gaps remain open.
+
+The chapter20 local archive passed verification for **44 individual files**,6,489,137 source bytes and5,693,193 compressed bytes;manifest SHA256 `0d1868c005e758fe9b7dea5b56177e1272ea0175b9c4b01aa48546bc8ee285dd`. It includes body/evidence/scripts/reports,34new previews/crops andchapter21 opening evidence. See [the local archive receipt](private-corpus-carya20-local-transfer.json). **Chapters17–20 are local-only unpublished deltas.** GitHub was rechecked and still reports the destination public;the private guard remains enabled. Published restore checkpoint remainschapter16/24releases. Git carries these notes,not the pending corpus archives.
+
+**Only after actual publication to the approved private destination**,restore24 earlier releases and the chapter17/18/19 deltas,thenchapter20:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-06-carya20 --directory content/_staging/transfer/private-corpus-2026-10-06-carya20 --manifest-sha256 0d1868c005e758fe9b7dea5b56177e1272ea0175b9c4b01aa48546bc8ee285dd
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya20.py" --chapter 20
+python "$corpusRoot/verify_kirana_carya20_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya20_checkpoint.py"
+```
+
+Stop on errors;run the newest verifier/refresher last. Never rerun sealed recorders or older writers over expanded state. Exact body/metadata/FTS verification is authoritative acrossPCs;refresh the local receipt. Chapter19 snapshots are preserved separately under `content/_staging/transfer/carya19-checkpoint-before20/`. Older backup finalizers need adaptation to the expanded database/inventory. Source ritual,magical and health/purity assertions remain historical quotation.
+
+**Next:** Caryāpāda21 **Avyaktalingalaksana vidhih** opensPDF551/handwritten554. Full551–553 are inspected;ending unestablished. Group2–3 is on552;4–7 on553 continues. Inspect554 onward,thenenlargedEnglish crops. Read `kirana-handwriting-source-map/carya21-opening-evidence.json`. Keep20’s apparent552 gap/partial closing and all earlier gaps open. Following chapter19 values are historical.
+
+## Historical local checkpoint: chapter19 imported; backup27 pending
 
 Kiraṇa Caryāpāda19’s surviving existing English on sadhaka vratas is stored as document **12502**, body **1238207**: **6,108 characters**, five groups and six English pages **529–534**. The Sanskrit nineteenth colophon is on533 and the English one on534; final14–17½ continues533–534. The local handwritten sequence jumps532→534. The unnumbered English onPDF531 may be a partial5–9 continuation; its missing beginning,address,extent and possible displacement elsewhere remain unresolved. No whole-PDF absence has been established. Source corrections,provisional word ending on533,empty glosses,unmatched parenthesis and comparison grammar are explicit. No generated translation or independent fidelity certification.
 
