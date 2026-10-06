@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-10-06T09:06:13.760285+00:00",
+  "tag": "private-corpus-2026-10-06-carya18",
+  "status": "local_verified_private_destination_pending",
+  "uploaded": false,
+  "remote_download_verified": false,
+  "local_archive_files_verified": 18,
+  "source_bytes": 1360601,
+  "archive_bytes": 1082894,
+  "manifest_sha256": "4b4a30e132b94dcaa91ead3f0d420443b859f9e55e141f47a4940361febb80a0",
+  "document_id": 12501,
+  "body_id": 1238206,
+  "stored_characters": 3356,
+  "PDF_pages": [526, 527, 528],
+  "local_unobserved_English_groups": ["2-4"],
+  "full_PDF_absence_established": false,
+  "OCR_folio_calibration_passed": false,
+  "goal_complete": false,
+  "current_totals": {
+    "text_bodies": 1238206,
+    "documents": 12501,
+    "PDF_assets": 171
+  },
+  "database_sha256": "2dd98a851b5be525ad936064c16ce701f5a8ed5371135a30340c5de7f3803f3d",
+  "latest_published_checkpoint": "chapter16 across24 releases"
+}

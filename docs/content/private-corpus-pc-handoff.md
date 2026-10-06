@@ -2,11 +2,33 @@
 
 ## Backup pending: repository is currently public
 
-**Chapter17 is imported and verified locally, but its corpus archive has not been uploaded.** GitHub now reports `chettyv/Sandhya` as public; the uploader’s private-destination guard stopped before creating the chapter17 release. An unauthenticated check also found the repository and the existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
+**Chapters17 and18 are imported and verified locally. Their sealed archives have not been uploaded.** GitHub reports `chettyv/Sandhya` as public; the uploader stopped at its private-destination guard before creating the chapter17 release. An unauthenticated check also found the repository and existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
 
-The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration also requires the private-destination check to pass; resolve repository privacy first. The chapter17 restore commands below describe a prepared update and must wait until its actual publication to an approved private destination. Earlier “private release” wording is historical, not a statement of current visibility. A private-destination choice is pending; no public corpus upload or repository visibility change has been made by this task.
+The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration requires the private-destination check to pass. Resolve repository privacy and publish both prepared deltas before attempting their remote restore commands. Earlier “private release” wording is historical; it does not describe current visibility. No visibility change or public corpus upload has been made by this task while the destination choice is pending.
 
-## Current checkpoint: chapter 17 imported (release 25)
+## Current local checkpoint: chapter18 imported; backup26 pending
+
+Kiraṇa Caryāpāda18’s surviving existing English on observing Śaiva vratas is stored as document **12501**, body **1238206**: **3,356 characters**, two groups and three English pages **526–528**. The Sanskrit eighteenth colophon is on527 and the English one on528. Group5–8½ continues527–528. **Group2–4 is unobserved in this local sequence**, with an apparent handwritten528 gap. Possible displacement elsewhere in the761-pagePDF is unresolved. A header OCR trial recognized only one of three known folios and failed calibration; it did not search the fullPDF and cannot establish absence. Source corrections, uncertain insertions, spelling, grammar and empty gloss parentheses remain explicit. No generated translation or independent fidelity certification.
+
+All **36 preferred captures** passed exact file/body/import/metadata/FTS, original source PDF BLOB, preview hashes and foreign-key checks: **286,120 stored characters,352 inspected chapter pages and302 groups**. The repeated chapter18 import added no duplicate. The database contains **1,238,206 bodies,12,501 documents and171 PDF assets**,9,783,201,792 bytes; SHA256 `2dd98a851b5be525ad936064c16ce701f5a8ed5371135a30340c5de7f3803f3d`. Counts overlap editions/passages; the corpus remains incomplete and earlier gaps remain.
+
+The local chapter18 archive has **18 individually verified files**,1,360,601 source bytes and1,082,894 compressed bytes; manifest SHA256 `4b4a30e132b94dcaa91ead3f0d420443b859f9e55e141f47a4940361febb80a0`. It includes the body/evidence/scripts/reports,seven new previews/crops,the failed calibration report and chapter19 opening evidence. It is **local only**, with no remote release or download verification. See [the local archive receipt](private-corpus-carya18-local-transfer.json). Chapter17’s local25-file archive is also awaiting upload. Neither is available from Git alone.
+
+**After both deltas are actually published to the approved private destination**, restore the24 earlier releases and the chapter17 delta, then chapter18. The following commands are conditional instructions, not evidence of publication:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-06-carya18 --directory content/_staging/transfer/private-corpus-2026-10-06-carya18 --manifest-sha256 4b4a30e132b94dcaa91ead3f0d420443b859f9e55e141f47a4940361febb80a0
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya18.py" --chapter 18
+python "$corpusRoot/verify_kirana_carya18_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya18_checkpoint.py"
+```
+
+Stop on any error. Replay imports in order; run the newest verifier/refresher last. Never rerun sealed recorders or older checkpoint writers over expanded state. Cross-machine SQLite physical hashes can differ; exact body/metadata/FTS verification and a freshly generated local receipt establish the restored state. Separate historical snapshots from current notes. The prepared chapter17 finalizer expects an older database/inventory and must be adapted before use against chapter18 state.
+
+**Next:** Caryāpāda19 **Sadhakavratacarana vidhih** opensPDF529/handwritten531. Full529–531 are inspected; the ending is unestablished. PDF530 has group2–4, and531 has unnumbered English continuation with older531/current534 numbering. An apparent local handwritten533 gap and continuation extent remain unresolved. Inspect532 onward, then enlarged English crops; keep chapter18’s missing2–4 open. Read `kirana-handwriting-source-map/carya19-opening-evidence.json` and the actual-text gap ledger. All following chapter17 checkpoint values are historical.
+
+## Historical local checkpoint: chapter17 imported; backup25 pending
 
 Kiraṇa Caryāpāda17’s existing English on daily aberrations and atonements is stored as document **12500**, body **1238205**: **6,990 characters**, seven groups and seven English pages **519–525**. The final group is15–17; both seventeenth closing labels are on525. English continues523–524. Corrected headings10(b)–11(a)/11(b)–14 remain provisional. Four unfinished/provisional word endings on524/525 and the source’s clarification note on521 are explicit; the precise truncation mechanism is unresolved. No missing whole English group was observed locally. Source grammar, quantities and historical disease/remedy claims remain attributed quotation, not medical fact or health advice. No independent diplomatic transcription or Sanskrit fidelity certification.
 
