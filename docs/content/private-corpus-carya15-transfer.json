@@ -1,0 +1,108 @@
+{
+  "release": "https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-06-carya15",
+  "tag": "private-corpus-2026-10-06-carya15",
+  "complete": true,
+  "manifest_sha256": "28a25dd32b0ca37b99d757c948ca1326974670ced6ef77084a3a1b78e051b215",
+  "verified_assets": [
+    {
+      "name": "corpus.tar.zst.part-0001",
+      "id": 614933464,
+      "bytes": 34095,
+      "digest": "sha256:e3fb04b8808a1f37b43e4817ff0d2e1ec37ae68ee08b97e68d32af0a493f44e4"
+    },
+    {
+      "name": "files.jsonl",
+      "id": 614933494,
+      "bytes": 2147,
+      "digest": "sha256:64c20193877fd2f7bc15a3231652e6f7284b31bd582efb66f68546726226d9d1"
+    },
+    {
+      "name": "manifest.json",
+      "id": 614933533,
+      "bytes": 1111,
+      "digest": "sha256:28a25dd32b0ca37b99d757c948ca1326974670ced6ef77084a3a1b78e051b215"
+    }
+  ],
+  "archive_files": 10,
+  "archive_files_verified": 10,
+  "authenticated_remote_download_and_archive_verification": true,
+  "new_scripture_bodies": 1,
+  "document_id": 12498,
+  "body_id": 1238203,
+  "stored_characters": 12512,
+  "source_groups": 12,
+  "PDF_pages": [497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511],
+  "complete_diplomatic_transcription": false,
+  "fidelity_not_certified": true,
+  "exact_file_body_import_metadata_and_FTS": true,
+  "original_source_PDF_BLOB_verified": true,
+  "foreign_keys_valid": true,
+  "idempotent_repeat_import_no_duplicates": true,
+  "database_replay_required": true,
+  "goal_complete": false,
+  "new_preview_images": 0,
+  "observed_whole_English_group_omissions": 0,
+  "source_corrected_word_and_Indic_readings_provisional": true,
+  "source_unmatched_parenthesis_retained": true,
+  "source_Tamil_gloss_untranscribed_PDF_page": 506,
+  "source_incomplete_clause_grammar_PDF_page": 508,
+  "canceled_bed_size_draft_PDF_page": 510,
+  "final_bed_size_English_PDF_page": 511,
+  "next_recovery": "Caryapada16 Ucchistasparsa vidhih opensPDF512/handwritten513;full512–513 inspected, ending unestablished. Inspect514 onward and enlarged English crops. Earlier source gaps unresolved.",
+  "checked_at": "2026-10-06T08:20:25.746823+00:00",
+  "source_bytes": 157355,
+  "archive_bytes": 34095,
+  "current_database_totals": {
+    "text_bodies": 1238203,
+    "documents": 12498,
+    "PDF_assets": 171,
+    "PDF_bytes_stored": 6936025803,
+    "limit": "Overlapping source bodies, editions and granularities; not unique verses or complete works"
+  },
+  "current_database_sha256": "684e35a765aa01d860046e2bce40be837afb787a553510a49e4ed3b897d39cb7",
+  "current_database_bytes": 9783201792,
+  "current_file_coverage": {
+    "source_files": 94120,
+    "source_bytes": 41124141297,
+    "private_releases": 23,
+    "unarchived_source_paths": 0,
+    "changed_current_state": [
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/continuation-checkpoint.md",
+        "sha256": "0baaf57d9c63fb994e3ddf61e1159a14555f801cdd4c3c8b0b6d35b9f6715e1a",
+        "delivery": "chapter15 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/kirana-handwriting-source-map/kriya-01-16-current-verification.json",
+        "sha256": "83743944c679d6056cffef38105d64271ba3bc3898f5f553db937810da09f7ba",
+        "delivery": "exact bytes in earlier resume snapshot"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/acquisition-scope-checkpoint.json",
+        "sha256": "572fa4de9619a1d03b5d41034b6fafcc86f72cc37d44b24d6a91f2a3039241c6",
+        "delivery": "chapter15 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/corpus.sqlite",
+        "delivery": "frozen baseline plus verified replay"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/database-receipt.json",
+        "sha256": "c8b103364ddfdefd9986a9c0362fa98ed4d3b628a7a7cf4cb8a83b4f6eedc72e",
+        "delivery": "chapter15 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/README.md",
+        "sha256": "9f6d7da900fb7b13b7c8bda35271e33f80bb58508f67f165e6da4fae1a8f8f9d",
+        "delivery": "chapter15 replay/refresher"
+      },
+      {
+        "path": "content/_staging/raw/english/source-review-2026-10-02/private-corpus/remaining-actual-text-gaps.md",
+        "sha256": "538845078db66df3d391cf3a6e084de86cda11f9f17f57d889576a84f4b4bcc5",
+        "delivery": "chapter15 replay/refresher"
+      }
+    ],
+    "database_freshly_hashed_by_current_refresher": true,
+    "limitation": "Path/size/time inventory, hashes of changed non-database candidates and fresh database SHA256 from current refresher; not a fresh hash of all41GB. Earlier archives individually verified. Runtime caches, Git metadata and secret env excluded."
+  }
+}
