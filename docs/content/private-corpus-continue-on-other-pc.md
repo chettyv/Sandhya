@@ -2,11 +2,33 @@
 
 ## Backup pending: repository is currently public
 
-**Chapters17 and18 are imported and verified locally. Their sealed archives have not been uploaded.** GitHub reports `chettyv/Sandhya` as public; the uploader stopped at its private-destination guard before creating the chapter17 release. An unauthenticated check also found the repository and existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
+**Chapters17–19 are imported and verified locally. Their sealed archives have not been uploaded.** GitHub reports `chettyv/Sandhya` as public; the uploader stopped at its private-destination guard before creating the chapter17 release. An unauthenticated check also found the repository and existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
 
-The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration requires the private-destination check to pass. Resolve repository privacy and publish both prepared deltas before attempting their remote restore commands. Earlier “private release” wording is historical; it does not describe current visibility. No visibility change or public corpus upload has been made by this task while the destination choice is pending.
+The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration requires the private-destination check to pass. Resolve repository privacy and publish all three prepared deltas before attempting their remote restore commands. Earlier “private release” wording is historical; it does not describe current visibility. No visibility change or public corpus upload has been made by this task while the destination choice is pending.
 
-## Current local checkpoint: chapter18 imported; backup26 pending
+## Current local checkpoint: chapter19 imported; backup27 pending
+
+Kiraṇa Caryāpāda19’s surviving existing English on sadhaka vratas is stored as document **12502**, body **1238207**: **6,108 characters**, five groups and six English pages **529–534**. The Sanskrit nineteenth colophon is on533 and the English one on534; final14–17½ continues533–534. The local handwritten sequence jumps532→534. The unnumbered English onPDF531 may be a partial5–9 continuation; its missing beginning,address,extent and possible displacement elsewhere remain unresolved. No whole-PDF absence has been established. Source corrections,provisional word ending on533,empty glosses,unmatched parenthesis and comparison grammar are explicit. No generated translation or independent fidelity certification.
+
+All **37 preferred captures** passed exact file/body/import/metadata/FTS,original sourcePDFBLOB,preview hashes and foreign-key checks: **292,228 stored characters,358 inspected chapter pages and307 groups**. The repeated chapter19 import added no duplicate. The current local database has **1,238,207 bodies,12,502 documents and171 PDF assets**,9,783,201,792 bytes; SHA256 `4f1e3a7a936087f473317d261f2234d506744ef80ec14176bb7440c779cdfca3`. These counts overlap editions/passages; the corpus remains incomplete and earlier gaps remain.
+
+The local chapter19 archive passed verification for **21 individual files**,2,600,007 source bytes and2,245,451 compressed bytes; manifest SHA256 `c3c0ca7a940e46dc9266f198d43082e543ed5773371010eff5a9611c9b0bc14f`. Its body/evidence/scripts/reports,eleven new previews/crops and chapter20 opening evidence are **local only**. See [the local archive receipt](private-corpus-carya19-local-transfer.json). Chapters17–19 remain unpublished pending an approved private destination. The latest published checkpoint remains chapter16/24releases; notes pushed to Git do not carry these corpus deltas.
+
+**Only after actual private publication**,restore24 earlier releases and the chapter17/18 deltas,thenchapter19:
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-06-carya19 --directory content/_staging/transfer/private-corpus-2026-10-06-carya19 --manifest-sha256 c3c0ca7a940e46dc9266f198d43082e543ed5773371010eff5a9611c9b0bc14f
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya19.py" --chapter 19
+python "$corpusRoot/verify_kirana_carya19_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya19_checkpoint.py"
+```
+
+Stop on errors;run the newest verifier/refresher last. Never rerun sealed recorders or older checkpoint writers over expanded state. Exact body/metadata/FTS verification is authoritative acrossPCs;refresh the local database receipt. Chapter18 checkpoint snapshots are separate under `content/_staging/transfer/carya18-checkpoint-before19/`. Older backup finalizers need adaptation to the expanded database/inventory.
+
+**Next:** Caryāpāda20 **Guruvratacarana vidhih** opensPDF535/handwritten538. Full535 is inspected;ending unestablished. Inspect536 onward,thenenlargedEnglish crops. Read `kirana-handwriting-source-map/carya20-opening-evidence.json`. Keep19’s apparent533 gap/partial continuation,18’s missing2–4 and all earlier gaps open. Following chapter18 values are historical.
+
+## Historical local checkpoint: chapter18 imported; backup26 pending
 
 Kiraṇa Caryāpāda18’s surviving existing English on observing Śaiva vratas is stored as document **12501**, body **1238206**: **3,356 characters**, two groups and three English pages **526–528**. The Sanskrit eighteenth colophon is on527 and the English one on528. Group5–8½ continues527–528. **Group2–4 is unobserved in this local sequence**, with an apparent handwritten528 gap. Possible displacement elsewhere in the761-pagePDF is unresolved. A header OCR trial recognized only one of three known folios and failed calibration; it did not search the fullPDF and cannot establish absence. Source corrections, uncertain insertions, spelling, grammar and empty gloss parentheses remain explicit. No generated translation or independent fidelity certification.
 
