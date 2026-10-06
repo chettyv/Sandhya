@@ -1,5 +1,21 @@
 # Continue the private corpus on another PC
 
+## Latest handoff: unfinished chapter 15 reading (release 22)
+
+The database is unchanged through Kiraṇa Caryāpāda14: **1,238,202 text bodies,12,497 documents and171 PDF assets**. Chapter15 has no sealed transcription or imported body. The corpus remains incomplete; counts overlap editions and passages. Earlier resume points below are historical.
+
+Restore all21 earlier releases in the dependency order below and replay imports through chapter14, running `verify_kirana_carya14_checkpoint.py` and `refresh_kirana_carya14_checkpoint.py` last. Then restore [the chapter15 reading handoff](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-05-carya15-frontier):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-05-carya15-frontier --directory content/_staging/transfer/private-corpus-2026-10-05-carya15-frontier --manifest-sha256 9805aca33782331a1ab8554f5da9e93b5da093c561506dae43e7b573b1dac9c2
+```
+
+The40 additive files preserve30 newer previews, detailed unfinished reading notes, five exact chapter14 checkpoint snapshots and four rendering helpers. Read `content/_staging/raw/english/source-review-2026-10-02/handoff-2026-10-05-carya15-frontier/collection-frontier.md`. Keep snapshots separate from current notes; do not copy them over regenerated state or blindly rerun rendering helpers.
+
+**Resume:** chapter15 spansPDF497–511, final group33–35, both fifteenth colophons on511. Chapter16 opens512; its ending is unestablished. Full497–513 and enlarged497–508 have been inspected. **Next inspect enlarged509–511**, plus recheck the second tree name on504. The enlarged509–511 images are rendered but uninspected. Twelve surviving English groups include cross-page continuations499–500,501–502 and508–509. Preserve source corrections, uncertain Indic terms, the untranscribed Tamil gloss on506, source grammar/quantities and canceled bed-size trial510. Do not claim diplomatic completeness or Sanskrit fidelity.
+
+No new scripture body or database change is included in this release. All earlier actual-text gaps remain. Git carries scripts and notes; private release assets carry the large corpus. Cloning Git alone does not download the database.
+
 The current work is backed up to the private `chettyv/Sandhya` repository. Git contains the scripts and notes; the large database, source scans, extracted text and previews are in private GitHub release assets. Cloning Git alone does not download the corpus.
 
 The latest imported text is Kiraṇa Caryāpāda chapter14’s existing English. The database contains **1,238,202 text bodies, 12,497 documents and 171 PDF assets**. Counts overlap editions and passages; the corpus remains incomplete. Use the newest checkpoint below; older counts and pending-work statements are historical.
@@ -141,10 +157,8 @@ Run chapter12’s verifier/refresher last. Exact raw-file/body/import/metadata/F
 
 ## Exact resume point
 
-Chapter14's existing English is imported, with uncertain corrected headings/terms, title endingVIDI, source grammar/quantities and unmatched parenthesis explicit. Chapter15 Acaryadisnana bhojana vidhih opensPDF497/handwritten498;497–498 inspected, ending unestablished. Read `kirana-handwriting-source-map/carya15-opening-evidence.json`; inspect499 onward and enlarged English crops before capture.
-
-Preserve all earlier source anomalies and gaps, including chapter11's apparent handwritten462/468 gaps and unfinished English closing, chapter12's apparent handwritten473 gap and unnumbered partial English, and chapter13's apparent handwritten482/486 gaps, alternate numbering485/486 and incomplete internal continuation. Missing extent/address and possible displacement elsewhere in the whole761-pagePDF remain unresolved. Retain other languages already collected. Source caste/food/fasting/ritual prescriptions are attributed quotation, not universal practice or health guidance. The broader ledger remains `private-corpus/remaining-actual-text-gaps.md`.
+Read the latest22nd release above. Chapter15 existing English is not sealed or imported. Inspect enlarged509–511 and recheck504's second tree name, then follow the detailed40-file handoff note. Full497–513 and enlarged497–508 were inspected; do not infer inspection for later crops. The database is complete only through the stated collected checkpoint, not the whole scripture corpus. Preserve all earlier anomalies and actual-text gaps.
 
 ## Paste into the new chat
 
-> Continue private scripture collection from docs/content/private-corpus-continue-on-other-pc.md. Restore all twenty-one private releases in dependency order, replay imports through Caryāpāda14, and run verify_kirana_carya14_checkpoint.py and refresh_kirana_carya14_checkpoint.py last. Prefer chapter8 correction01 and retain the original audit capture. Chapter14 is imported as document12497/body1238202; preserve uncertain titleVIDI/group headings/terms, source quantities/grammar and unmatched parenthesis, plus all earlier source gaps and anomalies. Resume chapter15 Acaryadisnana bhojana vidhih fromPDF497/handwritten498;497–498 inspected, ending unestablished. Read carya15-opening-evidence.json, inspect499 onward, then enlarged English crops before capture. Work as one unified project; earlier Stream A/B boundaries were superseded. Capture actual existing English, retain other languages, verify exact stored bodies/metadata/FTS/source evidence and privately back up each delta. No generated translations, embeddings, audio, app import or publication. Collection, tool installation and private GitHub backup are authorized. The corpus remains incomplete.
+> Continue private scripture collection from docs/content/private-corpus-continue-on-other-pc.md. Restore all22 private releases in dependency order, replay imports through Caryāpāda14, and run verify_kirana_carya14_checkpoint.py and refresh_kirana_carya14_checkpoint.py last. Read handoff-2026-10-05-carya15-frontier/collection-frontier.md. Chapter15 has no sealed body/import yet; spansPDF497–511, final33–35 and both15th colophons511. Full497–513 and enlarged497–508 inspected; next inspect enlarged509–511 and recheck504 second tree name. Capture12 surviving English groups with three cross-page continuations, corrections/provisional Indic terms, explicit Tamil-gloss omission506 and canceled/moved trial510. Prefer chapter8 correction01, retain its original audit capture and preserve all earlier source gaps. Chapter16 opens512, ending unestablished; inspect514 onward after15. Work as one unified project; earlier Stream A/B boundaries were superseded. Capture actual existing English and retain collected other languages; verify exact body/metadata/FTS/source evidence and privately back up each delta. No generated translation, embeddings, audio, app import/publication or owner contact. Collection, tool installation and private GitHub backup are authorized. Corpus remains incomplete.
