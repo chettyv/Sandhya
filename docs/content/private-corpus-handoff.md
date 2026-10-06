@@ -1,6 +1,26 @@
 # Private corpus handoff — 5 October 2026
 
-## Current checkpoint: chapter 16 imported (release 24)
+## Current checkpoint: chapter 17 imported (release 25)
+
+Kiraṇa Caryāpāda17’s existing English on daily aberrations and atonements is stored as document **12500**, body **1238205**: **6,990 characters**, seven groups and seven English pages **519–525**. The final group is15–17; both seventeenth closing labels are on525. English continues523–524. Corrected headings10(b)–11(a)/11(b)–14 remain provisional. Four unfinished/provisional word endings on524/525 and the source’s clarification note on521 are explicit; the precise truncation mechanism is unresolved. No missing whole English group was observed locally. Source grammar, quantities and historical disease/remedy claims remain attributed quotation, not medical fact or health advice. No independent diplomatic transcription or Sanskrit fidelity certification.
+
+All **35 preferred captures** passed exact file/body/import/metadata/FTS, original source PDF BLOB, preview hashes and foreign-key checks: **282,764 stored characters,349 inspected chapter pages and300 groups**. Repeating chapter17’s import added no duplicate. The database now contains **1,238,205 bodies,12,500 documents and171 PDF assets**, 9,783,201,792 bytes; SHA256 `1c7aae36d0b110024e55aa36e070698ccb7757368e90bd0287b8facaf0aeec73`. Counts overlap editions and passages; the corpus remains incomplete. All earlier source gaps/anomalies remain; chapter8 correction01 is preferred with its original audit capture retained.
+
+Restore all24 preceding releases in dependency order and replay through chapter16. Then restore [the chapter17 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-06-carya17):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-06-carya17 --directory content/_staging/transfer/private-corpus-2026-10-06-carya17 --manifest-sha256 af595646753d44cf5039397b7d399c202fb83c22b2dcace9374d830e74b4e171
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya17.py" --chapter 17
+python "$corpusRoot/verify_kirana_carya17_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya17_checkpoint.py"
+```
+
+The25 files contain the actual English body, bounded source/boundary evidence, recorder/append/verifier/refresher scripts, verification reports, fifteen new previews/crops and chapter18 opening evidence. Run chapter17’s verifier/refresher last; stop on any error. Never rerun imported recorders or older checkpoint writers over expanded state. Cross-machine SQLite physical layout/timestamps may differ; exact body/metadata/FTS and verifier results are authoritative. Keep historical snapshots separate from regenerated current notes.
+
+**Next:** Caryāpāda18 **Saivavratacarana vidhih** opens **PDF526/handwritten527**. Full526–527 are inspected; the ending is unestablished. PDF527 bears handwritten529 and group5–8½. There is an apparent local handwritten528 gap, with group2–4 unobserved in these two opening pages; missing extent or possible displacement elsewhere remains unresolved. Read `kirana-handwriting-source-map/carya18-opening-evidence.json`, inspect528 onward, then enlarged English crops. Do not infer absence from the entire761-pagePDF from this opening. All following chapter17-pending statements and earlier database values describe historical states. The broader actual-text gap ledger remains `private-corpus/remaining-actual-text-gaps.md`.
+
+## Historical checkpoint: chapter 16 imported (release 24)
 
 Kiraṇa Caryāpāda16’s existing English on ritual defilement and material purification is stored as document **12499**, body **1238204**: **6,542 characters**, six groups and seven English pages **512–518**. The final group is13–17; the Sanskrit sixteenth closing label is on517 and the English one is on518. The final English paragraph continues517–518; sheet518 bears both older514 and current519. No missing whole English group was observed locally. Corrections, uncertain words/Indic terms, source spelling and grammar are explicit, including `counch-shell`, `divinical`, `krccha yoga` and `This the chapter`. No independent diplomatic transcription or Sanskrit fidelity certification.
 
