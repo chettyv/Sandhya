@@ -1,6 +1,26 @@
 # Continue collection on another PC — 5 October 2026
 
-## Current checkpoint: chapter 15 imported (release 23)
+## Current checkpoint: chapter 16 imported (release 24)
+
+Kiraṇa Caryāpāda16’s existing English on ritual defilement and material purification is stored as document **12499**, body **1238204**: **6,542 characters**, six groups and seven English pages **512–518**. The final group is13–17; the Sanskrit sixteenth closing label is on517 and the English one is on518. The final English paragraph continues517–518; sheet518 bears both older514 and current519. No missing whole English group was observed locally. Corrections, uncertain words/Indic terms, source spelling and grammar are explicit, including `counch-shell`, `divinical`, `krccha yoga` and `This the chapter`. No independent diplomatic transcription or Sanskrit fidelity certification.
+
+All **34 preferred captures** passed exact file/body/import/metadata/FTS, original source PDF BLOB, preview hashes and foreign-key checks: **275,774 stored characters,342 inspected chapter pages and293 groups**. Repeating chapter16’s import added no duplicate. The database now contains **1,238,204 bodies,12,499 documents and171 PDF assets**, 9,783,201,792 bytes; SHA256 `2529db7fd63c525b089448aa09405e7b7f80c7090232e5575e5ea273d54a4be9`. Counts overlap editions and passages; the corpus remains incomplete. Earlier gaps/anomalies remain, and chapter8 correction01 is preferred with its original audit capture retained. Historical caste, ritual, fasting and purification prescriptions remain attributed source quotations, not universal practice or hygiene/health advice.
+
+Restore all23 preceding releases in dependency order and replay through chapter15. Then restore [the chapter16 update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-06-carya16):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-06-carya16 --directory content/_staging/transfer/private-corpus-2026-10-06-carya16 --manifest-sha256 98ed077ce1a228458e807c0f46d806b73a483404540c94c47fd36022d801574d
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya16.py" --chapter 16
+python "$corpusRoot/verify_kirana_carya16_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya16_checkpoint.py"
+```
+
+The24 files contain the actual English body, bounded source/boundary evidence, recorder/append/verifier/refresher scripts, verification reports, fourteen new previews/crops and chapter17 opening evidence. Run chapter16’s verifier/refresher last; stop on any error. Never rerun imported recorders or older checkpoint writers over expanded state. Cross-machine SQLite physical layout/timestamps may differ; exact body/metadata/FTS and verifier results are authoritative. Keep historical snapshots separate from regenerated current notes.
+
+**Next:** Caryāpāda17 **Nityahani-prayascitta vidhih** opens **PDF519/handwritten520**. Full519–520 are inspected; the ending is unestablished. Read `kirana-handwriting-source-map/carya17-opening-evidence.json`, inspect521 onward, then enlarged English crops before capture. All following chapter16-pending statements and earlier database values describe historical states. The broader actual-text gap ledger remains `private-corpus/remaining-actual-text-gaps.md`.
+
+## Historical checkpoint: chapter 15 imported (release 23)
 
 Kiraṇa Caryāpāda15’s existing English on preceptor/initiate bath, food and resting is stored as document **12498**, body **1238203**: **12,512 characters**, twelve groups and fifteen English pages **497–511**. Both fifteenth closing labels are on511, final group33–35. Three paragraphs continue across page pairs499–500,501–502 and508–509. No missing whole English group was observed locally. Corrections, uncertain words/Indic terms, unmatched punctuation and incomplete source clause grammar are explicit. The Tamil gloss beside bottle-gourd on506 remains untranscribed and preserved in the scan. The canceled bed-size draft on510 is not duplicated. No independent diplomatic transcription or Sanskrit fidelity certification.
 
