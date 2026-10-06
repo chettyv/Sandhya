@@ -1,6 +1,26 @@
 # Private corpus handoff — 5 October 2026
 
-## Latest handoff: unfinished chapter 15 reading (release 22)
+## Current checkpoint: chapter 15 imported (release 23)
+
+Kiraṇa Caryāpāda15’s existing English on preceptor/initiate bath, food and resting is stored as document **12498**, body **1238203**: **12,512 characters**, twelve groups and fifteen English pages **497–511**. Both fifteenth closing labels are on511, final group33–35. Three paragraphs continue across page pairs499–500,501–502 and508–509. No missing whole English group was observed locally. Corrections, uncertain words/Indic terms, unmatched punctuation and incomplete source clause grammar are explicit. The Tamil gloss beside bottle-gourd on506 remains untranscribed and preserved in the scan. The canceled bed-size draft on510 is not duplicated. No independent diplomatic transcription or Sanskrit fidelity certification.
+
+All **33 preferred captures** passed exact file/body/import/metadata/FTS, original source PDF BLOB, preview hashes and foreign-key checks: **269,232 stored characters,335 inspected chapter pages and287 groups**. Repeating chapter15’s import added no duplicate. The database now contains **1,238,203 bodies,12,498 documents and171 PDF assets**, 9,783,201,792 bytes; SHA256 `684e35a765aa01d860046e2bce40be837afb787a553510a49e4ed3b897d39cb7`. Counts overlap editions and passages; the corpus remains incomplete. Earlier gaps/anomalies remain, and chapter8 correction01 is preferred with its original audit capture retained. Historical source prescriptions are attributed quotation, not universal practice or health guidance.
+
+Restore all22 preceding releases in dependency order and replay through chapter14; the chapter15 reading supplement has no import. Then restore [the chapter15 body update](https://github.com/chettyv/Sandhya/releases/tag/private-corpus-2026-10-06-carya15):
+
+```powershell
+python scripts/private-corpus/restore.py --tag private-corpus-2026-10-06-carya15 --directory content/_staging/transfer/private-corpus-2026-10-06-carya15 --manifest-sha256 28a25dd32b0ca37b99d757c948ca1326974670ced6ef77084a3a1b78e051b215
+$corpusRoot = 'content/_staging/raw/english/source-review-2026-10-02'
+python "$corpusRoot/append_kirana_source_carya15.py" --chapter 15
+python "$corpusRoot/verify_kirana_carya15_checkpoint.py"
+python "$corpusRoot/refresh_kirana_carya15_checkpoint.py"
+```
+
+The10 files contain the actual English body, bounded source/boundary evidence, recorder/append/verifier/refresher scripts, verification reports and chapter16 opening evidence. All page images are already in earlier releases. Run chapter15’s verifier/refresher last; stop on any error. Never rerun imported recorders or older checkpoint writers over expanded state. Cross-machine SQLite physical layout/timestamps may differ; exact body/metadata/FTS and verifier results are authoritative. Keep historical snapshots separate from regenerated current notes.
+
+**Next:** Caryāpāda16 **Ucchistasparsa vidhih** opens **PDF512/handwritten513**. Full512–513 are inspected; the ending is unestablished. Read `kirana-handwriting-source-map/carya16-opening-evidence.json`, inspect514 onward, then enlarged English crops before capture. All following unfinished chapter15 statements and earlier database values describe historical states. The broader actual-text gap ledger remains `private-corpus/remaining-actual-text-gaps.md`.
+
+## Historical handoff: unfinished chapter 15 reading (release 22)
 
 The database is unchanged through Kiraṇa Caryāpāda14: **1,238,202 text bodies,12,497 documents and171 PDF assets**. Chapter15 has no sealed transcription or imported body. The corpus remains incomplete; counts overlap editions and passages. Earlier resume points below are historical.
 
