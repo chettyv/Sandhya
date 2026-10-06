@@ -4,7 +4,7 @@
 
 **Chapter17 is imported and verified locally, but its corpus archive has not been uploaded.** GitHub now reports `chettyv/Sandhya` as public; the uploader’s private-destination guard stopped before creating the chapter17 release. An unauthenticated check also found the repository and the existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
 
-The latest published restore checkpoint is **chapter16 across24 releases**. The chapter17 restore commands below describe a prepared update and must wait until its actual publication to an approved private destination. Earlier “private release” wording is historical, not a statement of current visibility. A private-destination choice is pending; no public corpus upload or repository visibility change has been made by this task.
+The latest published restore checkpoint is **chapter16 across24 releases**. Automated restoration also requires the private-destination check to pass; resolve repository privacy first. The chapter17 restore commands below describe a prepared update and must wait until its actual publication to an approved private destination. Earlier “private release” wording is historical, not a statement of current visibility. A private-destination choice is pending; no public corpus upload or repository visibility change has been made by this task.
 
 ## Current checkpoint: chapter 17 imported (release 25)
 
