@@ -1,5 +1,11 @@
 # Latest private corpus resume notes — 5 October 2026
 
+## Backup pending: repository is currently public
+
+**Chapter17 is imported and verified locally, but its corpus archive has not been uploaded.** GitHub now reports `chettyv/Sandhya` as public; the uploader’s private-destination guard stopped before creating the chapter17 release. An unauthenticated check also found the repository and the existing chapter16 release accessible. See [the visibility and pending-backup record](private-corpus-backup-visibility-2026-10-06.md).
+
+The latest published restore checkpoint is **chapter16 across24 releases**. The chapter17 restore commands below describe a prepared update and must wait until its actual publication to an approved private destination. Earlier “private release” wording is historical, not a statement of current visibility. A private-destination choice is pending; no public corpus upload or repository visibility change has been made by this task.
+
 ## Current checkpoint: chapter 17 imported (release 25)
 
 Kiraṇa Caryāpāda17’s existing English on daily aberrations and atonements is stored as document **12500**, body **1238205**: **6,990 characters**, seven groups and seven English pages **519–525**. The final group is15–17; both seventeenth closing labels are on525. English continues523–524. Corrected headings10(b)–11(a)/11(b)–14 remain provisional. Four unfinished/provisional word endings on524/525 and the source’s clarification note on521 are explicit; the precise truncation mechanism is unresolved. No missing whole English group was observed locally. Source grammar, quantities and historical disease/remedy claims remain attributed quotation, not medical fact or health advice. No independent diplomatic transcription or Sanskrit fidelity certification.
